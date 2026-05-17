@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國立臺灣科技大學 企業管理系 專任師資</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #00509e;
+            --accent-color: #f0f4f8;
+            --text-color: #333;
+            --border-radius: 12px;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .professor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .professor-card {
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .professor-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+        .professor-card h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.4rem;
+        }
+        .title {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: rgba(0, 80, 158, 0.08);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .info-row {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            margin-right: 5px;
+        }
+        .research {
+            background-color: var(--accent-color);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        .research-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #ffd700;
+            color: #333;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-bottom-left-radius: 12px;
+        }
+        .source {
+            margin-top: 40px;
+            text-align: center;
+            color: #888;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 15px; }
+            .professor-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>國立臺灣科技大學 企業管理系 專任師資</h1>
+        
+        <div class="professor-grid">
+            
+            <div class="professor-card">
+                <h2>吳克振</h2>
+                <div class="title">教授</div>
+                <div class="info-row"><span class="info-label">研究室:</span> MA-512</div>
+                <div class="info-row"><span class="info-label">電話:</span> 02-2737-6751</div>
+                <div class="info-row"><span class="info-label">Email:</span> ccwu@mail.ntust.edu.tw</div>
+                <div class="info-row"><span class="info-label">學歷:</span> 美國加州柏克萊大學作業研究博士</div>
+                <div class="research">
+                    <span class="research-title">研究範疇</span>
+                    品牌管理、行銷與人工智慧、策略性行銷
+                </div>
+            </div>
+
+            <div class="professor-card">
+                <h2>欒斌</h2>
+                <div class="title">教授 (全球前2%頂尖科學家, 113年教育部師鐸獎)</div>
+                <div class="info-row"><span class="info-label">研究室:</span> T2-408-4</div>
+                <div class="info-row"><span class="info-label">電話:</span> 02-2737-6754</div>
+                <div class="info-row"><span class="info-label">Email:</span> luarn@mail.ntust.edu.tw</div>
+                <div class="info-row"><span class="info-label">學歷:</span> 美國威斯康辛大學工業工程博士</div>
+                <div class="research">
+                    <span class="research-title">研究範疇</span>
+                    電子商務、網路行銷、區塊鏈應用、Web 3.0
+                </div>
+            </div>
+
+            <div class="professor-card">
+                <h2>張順教</h2>
+                <div class="title">教授</div>
+                <div class="info-row"><span class="info-label">研究室:</span> MA-511</div>
+                <div class="info-row"><span class="info-label">電話:</span> 02-2730-1004</div>
+                <div class="info-row"><span class="info-label">Email:</span> hlyun56@gmail.com</div>
+                <div class="info-row"><span class="info-label">學歷:</span> PhD in Economics, State University of New York at Stony Brook</div>
+                <div class="research">
+                    <span class="research-title">研究範疇</span>
+                    高科技產業與人工智慧分析、賽局理論、個體計量應用
+                </div>
+            </div>
+
+            <div class="professor-card">
+                <h2>葉穎蓉</h2>
+                <div class="title">教授, 國際長</div>
+                <div class="info-row"><span class="info-label">研究室:</span> MA-510</div>
+                <div class="info-row"><span class="info-label">電話:</span> 02-2737-6738</div>
+                <div class="info-row"><span class="info-label">Email:</span> yyeh@mail.ntust.edu.tw</div>
+                <div class="info-row"><span class="info-label">學歷:</span> PhD in Industrial Management, University of Wisconsin, Madison, US</div>
+                <div class="research">
+                    <span class="research-title">研究範疇</span>
+                    Human Resources Management, Organizational Behavior, Work-life balance
+                </div>
+            </div>
+
+            <div class="professor-card">
+                <h2>張譯尹</h2>
+                <div class="title">特聘教授 (全球前2%頂尖科學家)</div>
+                <div class="info-row"><span class="info-label">研究室:</span> MA-517</div>
+                <div class="info-row"><span class="info-label">電話:</span> 02-2737-6507</div>
+                <div class="info-row"><span class="info-label">Email:</span> y.chang@mail.ntust.edu.tw</div>
+                <div class="info-row"><span class="info-label">學歷:</span> 英國 Loughborough University 博士</div>
+                <div class="research">
+                    <span class="research-title">研究範疇</span>
+                    跨文化行銷管理研究、語言字詞分析、人工智慧、量化分析、國際人力資源管理、跨國型企業知識轉移與創新管理
+                </div>
+            </div>
+
+            <div class="professor-card">
+                <h2>盛麗慧</h2>
+                <div class="title">教授 (全球前2%頂尖科學家)</div>
+                <div class="info-row"><span class="info-label">研究室:</span> MA-515</div>
+                <div class="info-row"><span class="info-label">電話:</span> 02-2730-3285</div>
+                <div class="info-row"><span class="info-label">Email:</span> msheng@mail.ntust.edu.tw</div>
+                <div class="info-row"><span class="info-label">學歷:</span> 美國明尼蘇達大學博士</div>
+                <div class="research">
+                    <span class="research-title">研究範疇</span>
+                    Future marketing, Omni Science/Presence, Global marketing innovation, International marketing, High-tech marketing, Consumer behavior, Digital marketing, Circular marketing economy
+                </div>
+            </div>
+
+            <div class="professor-card">
+                <h2>曾盛恕</h2>
+                <div class="title">教授</div>
+                <div class="info-row"><span class="info-label">研究室:</span> MA-513</div>
+                <div class="info-row"><span class="info-label">電話:</span> 02-2737-6748</div>
+                <div class="info-row"><span class="info-label">Email:</span> tsang@mail.ntust.edu.tw</div>
+                <div class="info-row"><span class="info-label">學歷:</span> PhD in Public Policy and Management, Carnegie Mellon University, US</div>
+                <div class="research">
+                    <span class="research-title">研究範疇</span>
+                    零售策略與創新、服務創新、商業數據分析與應用、科技創新創業
+                </div>
+            </div>
+
+            <div class="professor-card">
+                <h2>陳崇文</h2>
+                <div class="title">教授</div>
+                <div class="info-row"><span class="info-label">研究室:</span> MA-516</div>
+                <div class="info-row"><span class="info-label">電話:</span> 02-2737-6752</div>
+                <div class="info-row"><span class="info-label">Email:</span> cwchen@mail.ntust.edu.tw</div>
+                <div class="info-row"><span class="info-label">學歷:</span> 美國華盛頓州立大學企業管理博士</div>
+                <div class="research">
+                    <span class="research-title">研究範疇</span>
+                    組織理論、策略理論、跨文化管理
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="source">
+            資料來源：台科大企管系官方網站 (ba.ntust.edu.tw)<br>
+            報告生成時間：2026-05-18
+        </div>
+    </div>
+</body>
+</html>
