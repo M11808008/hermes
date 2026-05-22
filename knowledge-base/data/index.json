@@ -167,6 +167,36 @@
     "markdown": "articles/2026/05/2026-05-22-multi-token-prediction-qwen.md"
   },
   {
+    "title": "OpenAI Codex 團隊成員分享：11 個技巧，教你把 Codex 用到極致",
+    "date": "2026-05-22",
+    "source": "電腦王阿達 / KOC",
+    "author": "Rocky",
+    "type": "article",
+    "topics": [
+      "OpenAI Codex",
+      "agentic workflow",
+      "durable threads",
+      "skills",
+      "browser automation",
+      "shared memory"
+    ],
+    "use": [
+      "to-learn",
+      "course-reference",
+      "workflow-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.koc.com.tw/archives/643417",
+      "https://www.koc.com.tw/archives/643417"
+    ],
+    "excerpt": "這篇 KOC 文章整理 OpenAI Codex 團隊成員分享的 11 個進階使用技巧，重點不只是讓 Codex 寫程式，而是把它當成能保存脈絡、接受即時修正、排隊處理任務、操作瀏覽器/電腦、使用 Skills、自動化排程並透過 Shared Memory 延續工作的代理型助理。",
+    "slug": "2026-05-22-openai-codex-11-tips-koc",
+    "html": "articles/2026-05-22-openai-codex-11-tips-koc.html",
+    "markdown": "articles/2026/05/2026-05-22-openai-codex-11-tips-koc.md"
+  },
+  {
     "title": "作者原本對「Hermes Agent + 本地 LLM」沒什麼興趣，原因有兩個 —",
     "date": "2026-05-22",
     "source": "Threads",
