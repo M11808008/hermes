@@ -60,6 +60,35 @@
     "markdown": "articles/2026/05/2026-05-22-ai-meme-collector-line-workflow.md"
   },
   {
+    "title": "Claude Code 沒裝 MCP Server，就像買 Tesla 還用腳踩",
+    "date": "2026-05-22",
+    "source": "Facebook Reel",
+    "author": "David Ooi",
+    "type": "video",
+    "topics": [
+      "Claude Code",
+      "MCP",
+      "MCP server",
+      "AI coding agents",
+      "developer workflow"
+    ],
+    "use": [
+      "to-learn",
+      "workflow-reference",
+      "course-reference"
+    ],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1BGC2BEPZ1/?mibextid=wwXIfr",
+      "https://www.facebook.com/david.ooi.353/videos/1002188575591502/"
+    ],
+    "excerpt": "這則 Facebook Reel 用一句很鮮明的比喻提醒：「用 Claude Code 沒裝 MCP server，等於買了 Tesla 還在用腳踩」，核心觀點是 Claude Code 若沒有接上 MCP servers，就無法充分使用外部工具、資料源與工作流能力。",
+    "slug": "2026-05-22-claude-code-mcp-server-tesla-analogy",
+    "html": "articles/2026-05-22-claude-code-mcp-server-tesla-analogy.html",
+    "markdown": "articles/2026/05/2026-05-22-claude-code-mcp-server-tesla-analogy.md"
+  },
+  {
     "title": "Claude Code Plugin 與 Usage Tracker 工具觀察",
     "date": "2026-05-22",
     "source": "Threads 與 GitHub 過往整理",
