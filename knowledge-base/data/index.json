@@ -29,6 +29,37 @@
     "markdown": "articles/2026/05/2026-05-22-agent-tools-map-giga-tseng.md"
   },
   {
+    "title": "AI 梗圖收藏器：用 LINE 上傳圖片，自動命名、標籤、入庫與搜尋",
+    "date": "2026-05-22",
+    "source": "Facebook",
+    "author": "146小隻小資女",
+    "type": "post",
+    "topics": [
+      "LINE automation",
+      "AI image tagging",
+      "meme database",
+      "workflow design",
+      "Google Apps Script",
+      "Cloudinary",
+      "Google Sheets"
+    ],
+    "use": [
+      "to-learn",
+      "workflow-reference",
+      "course-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1CfFV6CxMW/?mibextid=wwXIfr",
+      "https://www.facebook.com/61561070948235/posts/122224914404369031/"
+    ],
+    "excerpt": "這則 Facebook 貼文展示一個「AI 梗圖收藏器」工作流：把梗圖傳到 LINE 後，由 AI 根據圖片文字與情境自動命名、建立標籤、存進資料庫，之後可用關鍵字搜尋取回，重點在於把日常痛點轉成可重複使用的 AI 自動化流程。",
+    "slug": "2026-05-22-ai-meme-collector-line-workflow",
+    "html": "articles/2026-05-22-ai-meme-collector-line-workflow.html",
+    "markdown": "articles/2026/05/2026-05-22-ai-meme-collector-line-workflow.md"
+  },
+  {
     "title": "Claude Code Plugin 與 Usage Tracker 工具觀察",
     "date": "2026-05-22",
     "source": "Threads 與 GitHub 過往整理",
