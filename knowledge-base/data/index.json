@@ -115,6 +115,37 @@
     "markdown": "articles/2026/05/2026-05-22-codex-facebook-group-buying-lead-list-automation.md"
   },
   {
+    "title": "Google Gemma 4 直接操控 iPhone：本地 AI Agent 時代開始",
+    "date": "2026-05-22",
+    "source": "Threads",
+    "author": "Kufu 酷服｜AI 智能客服平台",
+    "type": "post",
+    "topics": [
+      "Google Gemma 4",
+      "on-device agent",
+      "local AI",
+      "iPhone automation",
+      "edge AI",
+      "Argent Agent Framework",
+      "computer use"
+    ],
+    "use": [
+      "to-learn",
+      "workflow-reference",
+      "course-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DYodD0fDk-x?xmt=AQG0N8jLGT_nLuCyRgPJBMCnuKnTYDaQtmN1sY4SwTYgQYNtwMM8WZAmxbZtKsVJuAUDfxGh-w&slof=1",
+      "https://www.threads.com/@kufutw/post/DYodD0fDk-x"
+    ],
+    "excerpt": "這則 Threads 串文介紹 Google 展示 Gemma 4 E4B 搭配 Argent Agent Framework，可在本地端直接操作 iOS Simulator，完成 App 導航、點擊、滑動與輸入，代表 AI Agent 正從雲端聊天工具走向手機內的 on-device 數位助手。",
+    "slug": "2026-05-22-google-gemma-4-on-device-agent-iphone",
+    "html": "articles/2026-05-22-google-gemma-4-on-device-agent-iphone.html",
+    "markdown": "articles/2026/05/2026-05-22-google-gemma-4-on-device-agent-iphone.md"
+  },
+  {
     "title": "Harness Engineering — 讓便宜模型做出高價值工作",
     "date": "2026-05-22",
     "source": "Facebook 影片過往整理",
