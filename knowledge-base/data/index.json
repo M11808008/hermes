@@ -30,6 +30,38 @@
     "markdown": "articles/2026/05/2026-05-23-claude-for-open-source-program.md"
   },
   {
+    "title": "Codex 與 ChatGPT 深度整合、Gemini Spark 桌面應用：AI Agent 競爭升溫",
+    "date": "2026-05-23",
+    "source": "Threads",
+    "author": "阿石 OMP",
+    "type": "post",
+    "topics": [
+      "OpenAI Codex",
+      "ChatGPT",
+      "Gemini Spark",
+      "AI Agent",
+      "browser automation",
+      "office automation",
+      "Claude Code",
+      "Claude CoWork"
+    ],
+    "use": [
+      "to-learn",
+      "trend-watch",
+      "workflow-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@ar.shek/post/DYmwQgpDTED?xmt=AQG09L3Wa23AXn8and5255OXmwZwl2OGy1XbN5r1wj2J7wlrbwyZxcgAXQ3x2GmbBEmdiAgeOw&slof=1",
+      "https://www.threads.com/@ar.shek/post/DYmwQgpDTED"
+    ],
+    "excerpt": "阿石 OMP 的 Threads 貼文指出，OpenAI Codex 正往 ChatGPT 深度整合與瀏覽器/電腦操作能力前進，Google Gemini 也將推出 Spark 桌面應用程式，代表 AI Agent 競爭從「會聊天」進入「能操作工具、瀏覽器與 API」的新階段。",
+    "slug": "2026-05-23-codex-chatgpt-gemini-spark-ai-agent-competition",
+    "html": "articles/2026-05-23-codex-chatgpt-gemini-spark-ai-agent-competition.html",
+    "markdown": "articles/2026/05/2026-05-23-codex-chatgpt-gemini-spark-ai-agent-competition.md"
+  },
+  {
     "title": "Smart4A Hermes Agent 完整指南：安裝、記憶、技能與 Session 隔離",
     "date": "2026-05-23",
     "source": "Smart4A",
