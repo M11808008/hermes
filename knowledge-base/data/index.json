@@ -30,6 +30,37 @@
     "markdown": "articles/2026/05/2026-05-23-claude-for-open-source-program.md"
   },
   {
+    "title": "Smart4A Hermes Agent 完整指南：安裝、記憶、技能與 Session 隔離",
+    "date": "2026-05-23",
+    "source": "Smart4A",
+    "author": "Smart4A",
+    "type": "article",
+    "topics": [
+      "Hermes Agent",
+      "Smart4A",
+      "AI agents",
+      "agent memory",
+      "skills",
+      "session isolation",
+      "local LLM"
+    ],
+    "use": [
+      "to-learn",
+      "course-reference",
+      "workflow-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://hermes.smart4a.tw/",
+      "https://hermes.smart4a.tw/"
+    ],
+    "excerpt": "Smart4A 的 Hermes Agent 中文完整指南整理了 Hermes Agent 的定位、安裝平台、2026 版本重點、自進化機制、記憶系統、Skill 文件與跨平台 Session 隔離，適合作為中文教學與導入 Hermes Agent 的快速參考。",
+    "slug": "2026-05-23-hermes-agent-smart4a-setup-guide",
+    "html": "articles/2026-05-23-hermes-agent-smart4a-setup-guide.html",
+    "markdown": "articles/2026/05/2026-05-23-hermes-agent-smart4a-setup-guide.md"
+  },
+  {
     "title": "IG API 申請與自動發文：用 Claude Code 跑完環境設定與發佈腳本",
     "date": "2026-05-23",
     "source": "Facebook / Claude Taiwan",
