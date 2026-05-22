@@ -30,6 +30,36 @@
     "markdown": "articles/2026/05/2026-05-23-claude-for-open-source-program.md"
   },
   {
+    "title": "IG API 申請與自動發文：用 Claude Code 跑完環境設定與發佈腳本",
+    "date": "2026-05-23",
+    "source": "Facebook / Claude Taiwan",
+    "author": "王士麟",
+    "type": "post",
+    "topics": [
+      "Instagram API",
+      "Meta App",
+      "Claude Code",
+      "social automation",
+      "API workflow",
+      "auto posting"
+    ],
+    "use": [
+      "to-learn",
+      "workflow-reference",
+      "course-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1BEhXy6JCx/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/1224997379198346/posts/1303545124676904/?mibextid=wwXIfr"
+    ],
+    "excerpt": "這則 Claude Taiwan 貼文分享「IG API 申請 + 自動發文完整流程」，重點是先完成 Meta / Instagram 官方 API 權限申請，再把 prompt 丟給 Claude Code，讓 Agent 自動跑完環境設定與發佈腳本。",
+    "slug": "2026-05-23-instagram-api-claude-code-auto-posting-workflow",
+    "html": "articles/2026-05-23-instagram-api-claude-code-auto-posting-workflow.html",
+    "markdown": "articles/2026/05/2026-05-23-instagram-api-claude-code-auto-posting-workflow.md"
+  },
+  {
     "title": "Agent 工具地圖 — 從個人工作代理到開發者工作台",
     "date": "2026-05-22",
     "source": "Facebook",
