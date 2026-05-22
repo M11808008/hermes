@@ -1,5 +1,35 @@
 [
   {
+    "title": "Claude for Open Source：OSS 維護者可申請 6 個月 Claude Max",
+    "date": "2026-05-23",
+    "source": "Claude / Anthropic",
+    "author": "Anthropic",
+    "type": "article",
+    "topics": [
+      "Claude",
+      "Anthropic",
+      "open source",
+      "OSS maintainers",
+      "Claude Max",
+      "developer tools"
+    ],
+    "use": [
+      "to-learn",
+      "resource-reference",
+      "opportunity-tracking"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://claude.com/contact-sales/claude-for-oss",
+      "https://claude.com/contact-sales/claude-for-oss"
+    ],
+    "excerpt": "Anthropic 推出 Claude for Open Source Program，符合資格的開源維護者與貢獻者可申請 6 個月免費 Claude Max 20x，用來感謝與支持 OSS 生態系的核心貢獻者。",
+    "slug": "2026-05-23-claude-for-open-source-program",
+    "html": "articles/2026-05-23-claude-for-open-source-program.html",
+    "markdown": "articles/2026/05/2026-05-23-claude-for-open-source-program.md"
+  },
+  {
     "title": "Agent 工具地圖 — 從個人工作代理到開發者工作台",
     "date": "2026-05-22",
     "source": "Facebook",
