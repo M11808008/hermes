@@ -56,6 +56,34 @@
     "markdown": "articles/2026/05/2026-05-22-claude-code-plugin-and-usage-tracker.md"
   },
   {
+    "title": "Codex 自動化 Facebook 團購關鍵字名單整理",
+    "date": "2026-05-22",
+    "source": "Facebook Reel",
+    "author": "Enzo Tseng",
+    "type": "video",
+    "topics": [
+      "OpenAI Codex",
+      "browser automation",
+      "sales prospecting",
+      "Facebook search",
+      "Excel automation"
+    ],
+    "use": [
+      "to-learn",
+      "workflow-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1GiyfqPWpr/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2598951037173014/"
+    ],
+    "excerpt": "這則 Facebook Reel 示範直接請 OpenAI Codex 打開 Facebook，搜尋貼文中含有「團購」關鍵字的內容，並把發文者帳號整理到 Excel，同時排除重複帳號，約三分鐘完成一份可用的陌生開發名單。",
+    "slug": "2026-05-22-codex-facebook-group-buying-lead-list-automation",
+    "html": "articles/2026-05-22-codex-facebook-group-buying-lead-list-automation.html",
+    "markdown": "articles/2026/05/2026-05-22-codex-facebook-group-buying-lead-list-automation.md"
+  },
+  {
     "title": "Harness Engineering — 讓便宜模型做出高價值工作",
     "date": "2026-05-22",
     "source": "Facebook 影片過往整理",
