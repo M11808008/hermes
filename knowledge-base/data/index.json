@@ -397,29 +397,6 @@
     "markdown": "articles/2026/05/2026-05-20-我已打開這個-chatgpt-分享連結.md"
   },
   {
-    "title": "我已打開這個頁面 —",
-    "date": "2026-05-20",
-    "source": "gemini.google",
-    "author": "",
-    "type": "archived-link",
-    "topics": [
-      "education",
-      "course-idea"
-    ],
-    "use": [
-      "reference"
-    ],
-    "importance": "medium",
-    "status": "archived",
-    "links": [
-      "https://gemini.google/students/"
-    ],
-    "excerpt": "我已打開這個頁面：",
-    "slug": "2026-05-20-我已打開這個頁面",
-    "html": "articles/2026-05-20-我已打開這個頁面.html",
-    "markdown": "articles/2026/05/2026-05-20-我已打開這個頁面.md"
-  },
-  {
     "title": "Hermes升級更新嘍",
     "date": "2026-05-20",
     "source": "Threads",
