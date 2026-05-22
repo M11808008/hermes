@@ -91,6 +91,36 @@
     "markdown": "articles/2026/05/2026-05-23-instagram-api-claude-code-auto-posting-workflow.md"
   },
   {
+    "title": "清大學生可用 Office 365 帳號免費使用 Microsoft Copilot 與 GPT 5.5",
+    "date": "2026-05-23",
+    "source": "Threads",
+    "author": "國立清華大學學生會",
+    "type": "post",
+    "topics": [
+      "Microsoft Copilot",
+      "Office 365",
+      "GPT 5.5",
+      "education AI",
+      "university resources",
+      "AI assistants"
+    ],
+    "use": [
+      "to-learn",
+      "resource-reference",
+      "course-reference"
+    ],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@nthu_sa/post/DYn3gtXE_4w?xmt=AQG0HtfasdyksFz9GLKgWz5yU3o9-X4qMAwXsj-X7aqcHRmG-ijGGP1YUyES0r5FgRAtrPvL&slof=1",
+      "https://www.threads.com/@nthu_sa/post/DYn3gtXE_4w"
+    ],
+    "excerpt": "這則 Threads 貼文提醒清大學生可向計通中心申請 Office 365 帳號，進而免費使用 Microsoft Copilot 中的 GPT 5.5 等模型，以及與 Word、Excel、PowerPoint、掃描、聽寫、擷取等 Microsoft 生態工具整合的 AI 功能。",
+    "slug": "2026-05-23-nthu-office-365-copilot-gpt-55",
+    "html": "articles/2026-05-23-nthu-office-365-copilot-gpt-55.html",
+    "markdown": "articles/2026/05/2026-05-23-nthu-office-365-copilot-gpt-55.md"
+  },
+  {
     "title": "Agent 工具地圖 — 從個人工作代理到開發者工作台",
     "date": "2026-05-22",
     "source": "Facebook",
