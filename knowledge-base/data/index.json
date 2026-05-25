@@ -1,5 +1,37 @@
 [
   {
+    "title": "Mac mini 16GB 本地 VLM 實測：Ollama Qwen3-VL-8B-Instruct 可行且效果佳",
+    "date": "2026-05-25",
+    "source": "Facebook / OpenClaw 中文社群",
+    "author": "KC Wong",
+    "type": "post",
+    "topics": [
+      "local-vlm",
+      "Ollama",
+      "Qwen3-VL",
+      "Mac mini",
+      "vision model",
+      "local-llm",
+      "OpenRouter",
+      "MLX"
+    ],
+    "use": [
+      "to-learn",
+      "model-benchmark",
+      "hardware-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1H2sHCGwHW/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/3238547836318385/posts/3355208874652280/?mibextid=wwXIfr"
+    ],
+    "excerpt": "KC Wong 在 OpenClaw 中文社群分享 Mac mini 16GB 跑本地 VLM 的實測結果：在多個 9B 以下 vision model 中，Ollama Qwen3-VL-8B-Instruct 約使用 6GB RAM，中文辨識與圖像描述表現最佳，成為入門本地 Vision 功能的可行選擇。",
+    "slug": "2026-05-25-mac-mini-16gb-local-vlm-qwen3-vl-8b",
+    "html": "articles/2026-05-25-mac-mini-16gb-local-vlm-qwen3-vl-8b.html",
+    "markdown": "articles/2026/05/2026-05-25-mac-mini-16gb-local-vlm-qwen3-vl-8b.md"
+  },
+  {
     "title": "Claude for Open Source：OSS 維護者可申請 6 個月 Claude Max",
     "date": "2026-05-23",
     "source": "Claude / Anthropic",
