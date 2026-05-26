@@ -1,5 +1,39 @@
 [
   {
+    "title": "德國貝希特斯加登鷹巢 Kehlsteinhaus：歷史、交通與參觀重點",
+    "date": "2026-05-26",
+    "source": "官方資料整理 / Berchtesgaden / DB Regio Bus Bayern / Kehlsteinhaus",
+    "author": "",
+    "type": "travel-note",
+    "topics": [
+      "Germany",
+      "Berchtesgaden",
+      "Kehlsteinhaus",
+      "Eagle's Nest",
+      "Nazi history",
+      "travel-logistics",
+      "alpine-viewpoint"
+    ],
+    "use": [
+      "travel-reference",
+      "history-context",
+      "itinerary-planning"
+    ],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.berchtesgaden.de/en/gastro/das-kehlsteinhaus-eagles-nest",
+      "https://www.kehlsteinhaus.de/english/",
+      "https://www.dbregiobus-bayern.de/angebot/freizeitbusse/rvo-rva/eagles-nest",
+      "https://www.berchtesgaden.de/en/gastro/das-kehlsteinhaus-eagles-nest",
+      "https://www.kehlsteinhaus.de/english/"
+    ],
+    "excerpt": "Kehlsteinhaus，英文常稱 Eagle's Nest、中文常譯「鷹巢」，位於德國巴伐利亞貝希特斯加登上方海拔 1,834 公尺處；它是納粹政權於 1937/38 年興建的山頂代表性建築，如今以歷史警示、山景展望、巴士與 124 公尺電梯體驗，以及山頂餐廳形式對外開放。",
+    "slug": "2026-05-26-kehlsteinhaus-eagles-nest-berchtesgaden",
+    "html": "articles/2026-05-26-kehlsteinhaus-eagles-nest-berchtesgaden.html",
+    "markdown": "articles/2026/05/2026-05-26-kehlsteinhaus-eagles-nest-berchtesgaden.md"
+  },
+  {
     "title": "Mac mini 16GB 本地 VLM 實測：Ollama Qwen3-VL-8B-Instruct 可行且效果佳",
     "date": "2026-05-25",
     "source": "Facebook / OpenClaw 中文社群",
