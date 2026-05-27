@@ -1,5 +1,102 @@
 [
   {
+    "title": "企業級 AI 客服系統：LINE + Supabase + React 開源方案",
+    "date": "2026-05-27",
+    "source": "GitHub",
+    "author": "scorpioliu0953",
+    "type": "repo",
+    "topics": [
+      "AI customer service",
+      "LINE chatbot",
+      "Supabase",
+      "React",
+      "OpenAI GPT",
+      "Google Gemini",
+      "knowledge base",
+      "Netlify",
+      "human handoff",
+      "open source"
+    ],
+    "use": [
+      "to-learn",
+      "workflow-reference",
+      "project-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/scorpioliu0953/ai_customer_service",
+      "https://github.com/scorpioliu0953/ai_customer_service"
+    ],
+    "excerpt": "scorpioliu0953 在 GitHub 開源了一個企業級 AI 客服系統，支援 LINE 接入、GPT-5 / Gemini 3 模型、PDF 知識庫上傳與真人客服轉接，已獲 8 顆星、40 次 Fork，可透過 Netlify 一鍵部署。",
+    "slug": "2026-05-27-ai-customer-service-line-supabase-react",
+    "html": "articles/2026-05-27-ai-customer-service-line-supabase-react.html",
+    "markdown": "articles/2026/05/2026-05-27-ai-customer-service-line-supabase-react.md"
+  },
+  {
+    "title": "GitHub Maigret：用一個用戶名搜尋全網社群帳號",
+    "date": "2026-05-27",
+    "source": "Facebook / AI-GitHub-實驗室",
+    "author": "AI-GitHub-實驗室",
+    "type": "reel",
+    "topics": [
+      "username search",
+      "OSINT",
+      "GitHub maigret",
+      "account discovery",
+      "social media",
+      "cybersecurity",
+      "digital footprint"
+    ],
+    "use": [
+      "to-learn",
+      "tool-watch",
+      "security-awareness"
+    ],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/17MvJPKr3a/?mibextid=wwXIfr",
+      "https://www.facebook.com/61564554357864/videos/github-maigret-一個用戶名-搜索全網社群帳號/2064600211139934/"
+    ],
+    "excerpt": "Facebook Reel 介紹 GitHub Maigret 工具：只要輸入一個用戶名，就能自動搜尋該名稱在全網各平台（GitHub、Twitter、Instagram、Facebook 等數百個網站）是否有註冊帳號，適用於 OSINT 數位足跡調查與帳號安全審計。",
+    "slug": "2026-05-27-github-maigret-username-osint-search",
+    "html": "articles/2026-05-27-github-maigret-username-osint-search.html",
+    "markdown": "articles/2026/05/2026-05-27-github-maigret-username-osint-search.md"
+  },
+  {
+    "title": "美團 LongCat-Video 數位分身開源：MIT 免費但需高規 GPU",
+    "date": "2026-05-27",
+    "source": "Threads",
+    "author": "一人一公司研究所",
+    "type": "post",
+    "topics": [
+      "digital avatar",
+      "LongCat-Video",
+      "video generation",
+      "open source",
+      "MIT license",
+      "Meituan",
+      "AI video",
+      "HuggingFace"
+    ],
+    "use": [
+      "to-learn",
+      "tool-watch",
+      "workflow-reference"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@fennyhsu1936/post/DYyvkH4ESlq",
+      "https://www.threads.com/@fennyhsu1936/post/DYyvkH4ESlq"
+    ],
+    "excerpt": "美團 LongCat 團隊低調開源了 LongCat-Video，MIT 授權可免費商用，支援上傳照片＋音檔生成 AI 數位人說話影片，但硬體需求極高（需 2 張 A100 等級 GPU，VRAM 40–80GB），一般電腦無法負擔，建議透過 HuggingFace 免費 Space 先行體驗。",
+    "slug": "2026-05-27-meituan-longcat-video-digital-avatar-open-source",
+    "html": "articles/2026-05-27-meituan-longcat-video-digital-avatar-open-source.html",
+    "markdown": "articles/2026/05/2026-05-27-meituan-longcat-video-digital-avatar-open-source.md"
+  },
+  {
     "title": "德國貝希特斯加登鷹巢 Kehlsteinhaus：歷史、交通與參觀重點",
     "date": "2026-05-26",
     "source": "官方資料整理 / Berchtesgaden / DB Regio Bus Bayern / Kehlsteinhaus",
