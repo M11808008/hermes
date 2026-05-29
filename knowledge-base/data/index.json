@@ -1,5 +1,21 @@
 [
   {
+    "title": "OpenGenie AI Stack — 自託管 AI 基礎設施，幾分鐘即可部署（MIT License）",
+    "date": "2026-05-28",
+    "source": "https://tigerai-taiwan.github.io/OpenGenie-AI-Stack/",
+    "author": "",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [],
+    "excerpt": "# OpenGenie AI Stack — 自託管 AI 基礎設施，幾分鐘即可部署 **來源：** [TigerAI Taiwan · GitHub Pages](https://tigerai-taiwan.github.io/OpenGenie-AI-Stack/) · MIT License --- ## 專案",
+    "slug": "2026-05-28-opengenie-ai-stack-self-hosted-infrastructure",
+    "html": "articles/2026-05-28-opengenie-ai-stack-self-hosted-infrastructure.html",
+    "markdown": "articles/2026/05/2026-05-28-opengenie-ai-stack-self-hosted-infrastructure.md"
+  },
+  {
     "title": "企業級 AI 客服系統：LINE + Supabase + React 開源方案",
     "date": "2026-05-27",
     "source": "GitHub",
