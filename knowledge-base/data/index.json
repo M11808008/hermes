@@ -22,6 +22,33 @@
     "markdown": "articles/2026/06/2026-06-03-gemini-omni-avatar-digital-double-video.md"
   },
   {
+    "title": "Hermes Agent 實機部署筆記｜Mac Mini、Tailscale、Telegram Gateway 與遠端維護",
+    "date": "2026-06-03",
+    "source": "https://www.threads.com/@a1740942002/post/DZHEeajkehY",
+    "author": "Threads@a1740942002",
+    "type": "article",
+    "topics": [
+      "Hermes Agent",
+      "AI Agent/自動化",
+      "開發與程式",
+      "Mac Mini",
+      "Tailscale",
+      "Telegram",
+      "Claude"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@a1740942002/post/DZHEeajkehY?xmt=AQG0e1e2NIyfDSEGImTQUA090LlpbFnczumQfVCfoRza0btrBNM1JjARENGqLQXjcTbm87w80w&slof=1",
+      "https://www.threads.com/@a1740942002/post/DZHEeajkehY"
+    ],
+    "excerpt": "這篇 Threads 是一份偏實戰的 Hermes Agent 自架部署筆記，重點不是功能介紹，而是如何讓 Hermes 在一台 Mac Mini 上穩定常駐、可遠端維護、可用既有 Claude / Codex 訂閱，並把 Gateway 與手機救援路徑設計好。",
+    "slug": "2026-06-03-hermes-agent-mac-mini-tailscale-setup-notes",
+    "html": "articles/2026-06-03-hermes-agent-mac-mini-tailscale-setup-notes.html",
+    "markdown": "articles/2026/06/2026-06-03-hermes-agent-mac-mini-tailscale-setup-notes.md"
+  },
+  {
     "title": "Hermes Agent 官方桌面版推出｜支援 Mac、Windows、Linux 與 OpenClaw 遷移",
     "date": "2026-06-02",
     "source": "https://www.threads.com/@govin999999/post/DZFjR77mAcM",
