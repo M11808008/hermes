@@ -49,6 +49,34 @@
     "markdown": "articles/2026/06/2026-06-03-hermes-agent-mac-mini-tailscale-setup-notes.md"
   },
   {
+    "title": "Microsoft MAI-Voice-2｜支援情緒控制與短音訊語音提示的新一代 AI 語音模型",
+    "date": "2026-06-03",
+    "source": "https://www.threads.com/@kufutw/post/DZHgOoVFlZl",
+    "author": "Threads@kufutw",
+    "type": "article",
+    "topics": [
+      "AI 語音",
+      "Microsoft AI",
+      "MAI-Voice-2",
+      "語音克隆",
+      "情緒控制",
+      "Azure Foundry",
+      "多媒體與內容"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DZHgOoVFlZl?xmt=AQG0N5bQ3koL-XUX9SdY81D4ofThILlDpmku-TPQPJPzNnEy9rdIFgcDNDz84kiUkX4OdHIHIQ&slof=1",
+      "https://www.threads.com/@kufutw/post/DZHgOoVFlZl",
+      "https://microsoft.ai/news/mai-voice-2expressive-speech-in-10-languages/"
+    ],
+    "excerpt": "微軟推出 MAI-Voice-2，主打更自然的文字轉語音、情緒標籤控制、5–60 秒 reference audio 的 zero-shot voice prompting，以及長內容中穩定維持說話者身份，適合客服、助理、內容朗讀與無障礙語音體驗。",
+    "slug": "2026-06-03-microsoft-mai-voice-2-expressive-voice-model",
+    "html": "articles/2026-06-03-microsoft-mai-voice-2-expressive-voice-model.html",
+    "markdown": "articles/2026/06/2026-06-03-microsoft-mai-voice-2-expressive-voice-model.md"
+  },
+  {
     "title": "OmniVoice Studio｜本地開源 ElevenLabs 替代方案，支援語音克隆、配音與聽寫",
     "date": "2026-06-03",
     "source": "https://www.threads.com/@alextathoho/post/DZHJyHYkSYN",
@@ -77,6 +105,36 @@
     "slug": "2026-06-03-omnivoice-studio-local-voice-cloning-elevenlabs-alternative",
     "html": "articles/2026-06-03-omnivoice-studio-local-voice-cloning-elevenlabs-alternative.html",
     "markdown": "articles/2026/06/2026-06-03-omnivoice-studio-local-voice-cloning-elevenlabs-alternative.md"
+  },
+  {
+    "title": "open-slide｜為 AI Agent 設計的開源簡報框架，可用自然語言生成 React 簡報",
+    "date": "2026-06-03",
+    "source": "https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr",
+    "author": "Threads@spedmix2025",
+    "type": "article",
+    "topics": [
+      "AI 簡報",
+      "open-slide",
+      "AI Agent/自動化",
+      "開發與程式",
+      "教育與課程",
+      "Vercel",
+      "React",
+      "Antigravity"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr?xmt=AQG0yOS1qMGga01Ppo9Dv8hwbQJyRwg6bAVtOHtFnMyUnW1Wf4eu_oKdYCxJF9EVALoDX_cchQ&slof=1",
+      "https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr",
+      "https://github.com/1weiho/open-slide",
+      "https://open-slide-deck-xi.vercel.app"
+    ],
+    "excerpt": "open-slide 是一個為 AI coding agent 設計的開源簡報框架，讓使用者用自然語言描述主題與風格，再由 Agent 生成 React 簡報；它負責固定畫布、縮放、導覽、present mode、熱更新與匯出，特別適合教學、課程與 AI 輔助簡報製作。",
+    "slug": "2026-06-03-open-slide-agent-native-presentation-framework",
+    "html": "articles/2026-06-03-open-slide-agent-native-presentation-framework.html",
+    "markdown": "articles/2026/06/2026-06-03-open-slide-agent-native-presentation-framework.md"
   },
   {
     "title": "Hermes Agent 官方桌面版推出｜支援 Mac、Windows、Linux 與 OpenClaw 遷移",

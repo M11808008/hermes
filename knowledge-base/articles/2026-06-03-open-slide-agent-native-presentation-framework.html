@@ -1,0 +1,95 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>open-slide｜為 AI Agent 設計的開源簡報框架，可用自然語言生成 React 簡報</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>open-slide｜為 AI Agent 設計的開源簡報框架，可用自然語言生成 React 簡報</h1><h1>open-slide｜為 AI Agent 設計的開源簡報框架，可用自然語言生成 React 簡報</h1>
+<p>來源：Threads@spedmix2025；專案：1weiho/open-slide</p>
+<h1>一句話摘要</h1>
+<p>open-slide 是一個為 AI coding agent 設計的開源簡報框架，讓使用者用自然語言描述主題與風格，再由 Agent 生成 React 簡報；它負責固定畫布、縮放、導覽、present mode、熱更新與匯出，特別適合教學、課程與 AI 輔助簡報製作。</p>
+<h1>Threads 貼文重點</h1>
+<p>作者分享自己使用 open-slide 製作「國一統計圖表」簡報的經驗，認為它是目前用過最方便的簡報方式，亮點包括：</p>
+<ul>
+<li>可以修改</li>
+<li>內建精美的粉筆動態效果</li>
+<li>可以匯出 PDF</li>
+<li>可透過 Vercel 發布成永久免費的網頁版簡報連結</li>
+<li>不需要程式基礎，也可把 GitHub 專案網址交給 Antigravity，請它協助製作與部署</li>
+<li>作者表示 Codex 理論上也可以跑，但在他的電腦上 Antigravity 較快</li>
+</ul>
+<h1>GitHub 專案資訊</h1>
+<p>open-slide 官方描述是：A slide framework built for agents.</p>
+<p>它的核心概念是：Slides are visual code. Agents are great at writing code.</p>
+<p>也就是把簡報視為視覺化程式碼，讓 Claude Code、Codex、Cursor、Antigravity 等 coding agent 負責寫 React，而 open-slide 提供穩定的簡報 runtime。</p>
+<p>截至擷取時，GitHub 約有：</p>
+<ul>
+<li>4.6k stars</li>
+<li>316 forks</li>
+<li>MIT License</li>
+<li>技術主體為 TypeScript / React</li>
+</ul>
+<h1>核心能力整理</h1>
+<p>| 能力 | 說明 |</p>
+<p>|---|---|</p>
+<p>| Agent-native authoring | 可用自然語言要求 Agent 建立整份簡報 |</p>
+<p>| React slide pages | 每頁都是任意 React component，而不是受限 DSL |</p>
+<p>| 固定畫布 | 每頁渲染為 1920 × 1080 canvas，適合穩定輸出簡報比例 |</p>
+<p>| Built-in skills | 內建 /create-slide、/slide-authoring 等技能，協助代理規劃與寫作 |</p>
+<p>| In-browser inspector | 可點選元素加註修改意見，再讓 Agent 套用 comments |</p>
+<p>| Assets manager | 管理圖片、影片、字體，並整合 svgl logo 搜尋 |</p>
+<p>| Present mode | 支援全螢幕播放、鍵盤導覽、presenter mode、speaker notes 與 timer |</p>
+<p>| 匯出 | 可輸出自包含 static HTML 或 print-ready PDF |</p>
+<p>| 部署友善 | 可部署到 Vercel、Cloudflare Pages、Netlify、Zeabur 等靜態站 |</p>
+<h1>使用方式</h1>
+<p>官方 quickstart：</p>
+<p>```bash</p>
+<p>npx @open-slide/cli init my-slide</p>
+<p>cd my-slide</p>
+<p>pnpm dev</p>
+<p>```</p>
+<p>貼文作者的實務流程則更適合非工程背景使用者：</p>
+<ul>
+<li>把 open-slide GitHub 網址丟給 Antigravity。</li>
+<li>直接描述想做的簡報主題，例如「國一統計圖表」。</li>
+<li>讓 Agent 生成簡報與程式碼。</li>
+<li>需要時再要求 Agent 修改內容或樣式。</li>
+<li>發布到 Vercel，取得可分享的網頁版簡報連結。</li>
+<li>需要交付或列印時匯出 PDF。</li>
+</ul>
+<h1>為什麼值得收藏</h1>
+<h2>1. AI 簡報不再只是 PowerPoint 外掛</h2>
+<p>open-slide 的路線不是把 AI 包進 PowerPoint，而是把簡報變成可由 Agent 編寫、版本管理、部署與匯出的 web artifact。這讓簡報具備：</p>
+<ul>
+<li>程式碼可控性</li>
+<li>GitHub 版本管理</li>
+<li>網頁部署能力</li>
+<li>可互動與可動畫的設計空間</li>
+<li>可由 Agent 反覆修改的工作流</li>
+</ul>
+<h2>2. 對教育場景很實用</h2>
+<p>作者用「國一統計圖表」做示範，這點很值得收錄。教育簡報常見需求是：</p>
+<ul>
+<li>要美觀但可快速改</li>
+<li>要能輸出 PDF</li>
+<li>要能分享網頁連結</li>
+<li>要能把抽象概念視覺化</li>
+<li>教師不一定具備前端背景</li>
+</ul>
+<p>open-slide + AI Agent 的組合，剛好可把「教師描述教學目標」轉成「可呈現的互動式簡報」。</p>
+<h2>3. 和 Luarn-Pin 的知識庫、課程網頁工作流相容</h2>
+<p>這類工具可延伸到：</p>
+<ul>
+<li>AI 課程簡報</li>
+<li>教學活動投影片</li>
+<li>報告型 web deck</li>
+<li>可發布的課程 landing / slide hybrid</li>
+<li>用 GitHub Pages 或 Vercel 存放的可重複使用簡報模板</li>
+</ul>
+<h1>注意事項</h1>
+<ul>
+<li>open-slide 是程式碼型簡報框架，仍需 Node.js / pnpm / Vercel / GitHub 等基本環境。</li>
+<li>非工程使用者可透過 Antigravity、Claude Code、Codex 或 Cursor 代勞，但仍要留意部署權限與 GitHub 帳號設定。</li>
+<li>因每頁是 React component，彈性很高，但也代表維護方式更接近前端專案，而不是傳統 PPT 檔案。</li>
+<li>若需要交給完全不熟網頁環境的人共同編輯，仍需評估協作門檻。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr" target="_blank" rel="noopener">https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr</a></li>
+<li>作者示範成品：<a href="https://open-slide-deck-xi.vercel.app" target="_blank" rel="noopener">https://open-slide-deck-xi.vercel.app</a></li>
+<li>GitHub 專案：<a href="https://github.com/1weiho/open-slide" target="_blank" rel="noopener">https://github.com/1weiho/open-slide</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-03 · https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr · article</div><h3>標籤</h3><span class="tag">AI 簡報</span><span class="tag">open-slide</span><span class="tag">AI Agent/自動化</span><span class="tag">開發與程式</span><span class="tag">教育與課程</span><span class="tag">Vercel</span><span class="tag">React</span><span class="tag">Antigravity</span><h3>原始連結</h3><p><a href="https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr?xmt=AQG0yOS1qMGga01Ppo9Dv8hwbQJyRwg6bAVtOHtFnMyUnW1Wf4eu_oKdYCxJF9EVALoDX_cchQ&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr?xmt=AQG0yOS1qMGga01Ppo9Dv8hwbQJyRwg6bAVtOHtFnMyUnW1Wf4eu_oKdYCxJF9EVALoDX_cchQ&amp;slof=1</a></p><p><a href="https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr" target="_blank" rel="noopener">https://www.threads.com/@spedmix2025/post/DZHbBrgj4dr</a></p><p><a href="https://github.com/1weiho/open-slide" target="_blank" rel="noopener">https://github.com/1weiho/open-slide</a></p><p><a href="https://open-slide-deck-xi.vercel.app" target="_blank" rel="noopener">https://open-slide-deck-xi.vercel.app</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
