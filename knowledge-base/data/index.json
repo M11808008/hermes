@@ -137,6 +137,36 @@
     "markdown": "articles/2026/06/2026-06-03-open-slide-agent-native-presentation-framework.md"
   },
   {
+    "title": "OpenAI Codex for every role｜角色插件、Sites 與 Annotations 讓 Codex 走向全職位工作流平台",
+    "date": "2026-06-03",
+    "source": "https://www.threads.com/@resen168/post/DZH8PUOiTXx",
+    "author": "Threads@resen168",
+    "type": "article",
+    "topics": [
+      "OpenAI Codex",
+      "AI Agent/自動化",
+      "工作流自動化",
+      "Sites",
+      "Annotations",
+      "插件生態",
+      "商業與生產力",
+      "開發與程式"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@resen168/post/DZH8PUOiTXx?xmt=AQG00y45lMZ55-SQ0NW2NyUrB2P26cLPVx1bl1wrMdFSzJsfPlv9SaKMYSA4Gb6iM2XwNWbj&slof=1",
+      "https://www.threads.com/@resen168/post/DZH8PUOiTXx",
+      "https://openai.com/index/codex-for-every-role-tool-workflow/",
+      "https://github.com/openai/role-based-plugins"
+    ],
+    "excerpt": "OpenAI 將 Codex 從工程任務代理擴展成跨職能工作流平台：透過角色專屬 plugins 串接資料、設計、銷售與投資工具；透過 Sites 產生可分享的互動式網站與輕量 App；透過 annotations 讓使用者精準標註局部內容並要求 Codex 修改。",
+    "slug": "2026-06-03-openai-codex-every-role-sites-annotations",
+    "html": "articles/2026-06-03-openai-codex-every-role-sites-annotations.html",
+    "markdown": "articles/2026/06/2026-06-03-openai-codex-every-role-sites-annotations.md"
+  },
+  {
     "title": "Hermes Agent 官方桌面版推出｜支援 Mac、Windows、Linux 與 OpenClaw 遷移",
     "date": "2026-06-02",
     "source": "https://www.threads.com/@govin999999/post/DZFjR77mAcM",
