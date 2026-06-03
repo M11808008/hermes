@@ -22,6 +22,38 @@
     "markdown": "articles/2026/06/2026-06-03-gemini-omni-avatar-digital-double-video.md"
   },
   {
+    "title": "Google AI Pro / Ultra｜每月可領 Gemini API 折抵金，Pro 10 美元、Ultra 最高 100 美元",
+    "date": "2026-06-03",
+    "source": "https://www.koc.com.tw/archives/644845",
+    "author": "電腦王阿達 Rocky",
+    "type": "article",
+    "topics": [
+      "Gemini API",
+      "Google AI Pro",
+      "Google AI Ultra",
+      "Google Developer Program",
+      "Google Cloud",
+      "API 額度",
+      "Hermes Agent",
+      "AI 開發工具",
+      "模型與平台",
+      "AI Agent/自動化"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.koc.com.tw/archives/644845",
+      "https://www.koc.com.tw/archives/644845",
+      "https://me.developers.google.com",
+      "https://developers.google.com/program"
+    ],
+    "excerpt": "Google AI Pro 與 Google AI Ultra 訂閱用戶可以到 Google Developer Program 領取每月 Google Cloud 折抵金，這筆額度可用於 Google AI Studio / Gemini API 等開發測試，對常用 Gemini 模型跑 Hermes Agent、Agent workflow 或 AI prototype 的人很實用。",
+    "slug": "2026-06-03-google-ai-pro-ultra-gemini-api-monthly-cloud-credits",
+    "html": "articles/2026-06-03-google-ai-pro-ultra-gemini-api-monthly-cloud-credits.html",
+    "markdown": "articles/2026/06/2026-06-03-google-ai-pro-ultra-gemini-api-monthly-cloud-credits.md"
+  },
+  {
     "title": "Hermes Agent 實機部署筆記｜Mac Mini、Tailscale、Telegram Gateway 與遠端維護",
     "date": "2026-06-03",
     "source": "https://www.threads.com/@a1740942002/post/DZHEeajkehY",
