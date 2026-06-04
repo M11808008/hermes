@@ -1,0 +1,83 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Miso TTS 8B / Miso One｜開源情感語音模型與即時語音 Agent 基礎設施</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Miso TTS 8B / Miso One｜開源情感語音模型與即時語音 Agent 基礎設施</h1><h1>Miso TTS 8B / Miso One｜開源情感語音模型與即時語音 Agent 基礎設施</h1>
+<p>來源：Threads@kufutw；官方資料：Miso Labs blog、Hugging Face、GitHub</p>
+<h1>一句話摘要</h1>
+<p>Miso Labs 發布 Miso TTS 8B（社群貼文稱 Miso One），主打更有情緒起伏的語音生成、低延遲互動與開源權重；它值得收藏的重點，是開源 TTS 正在從「把字念出來」走向「可用於即時語音 Agent 的情緒化對話層」。</p>
+<h1>Threads 貼文重點</h1>
+<p>Threads 貼文指出：</p>
+<ul>
+<li>Miso Labs 發布 Miso One，定位為情感表現很強的語音模型之一。</li>
+<li>模型規模為 80 億參數（8B），屬於 Text-to-Speech（TTS）模型。</li>
+<li>特色不只是朗讀文字，而是模擬人類說話的情緒起伏、語氣變化與情感表達。</li>
+<li>貼文宣稱語音延遲約 110 毫秒，會讓 AI 助理、客服、虛擬角色、即時翻譯與語音 Agent 更接近真人對話。</li>
+<li>Miso Labs 將模型權重開源；API 服務仍在準備中。</li>
+</ul>
+<h1>官方與開源資料補充</h1>
+<h2>1. 官方名稱與定位</h2>
+<p>Miso Labs 官方 blog 與 Hugging Face / GitHub 使用的名稱是「Miso TTS 8B」。官方描述它是 8-billion-parameter transformer model，權重開放於 Hugging Face，API access coming soon。</p>
+<p>官方摘要：Achieving state-of-the-art emotive speech and dialogue generation with a hierarchical RVQ transformer.</p>
+<h2>2. 架構</h2>
+<p>GitHub README 說明，Miso TTS 8B 是受 Sesame CSM 架構啟發的 text-to-dialogue RVQ Transformer：</p>
+<ul>
+<li>使用 Llama 3.2-style backbone。</li>
+<li>另有較小的 autoregressive audio decoder。</li>
+<li>生成 Mimi audio codes。</li>
+<li>支援文字與 optional audio context，也就是可用提示音訊做聲音延續／voice continuation。</li>
+</ul>
+<p>模型摘要：</p>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Model | Miso TTS 8B |</p>
+<p>| Organization | Miso Labs |</p>
+<p>| Task | Text-to-speech |</p>
+<p>| Architecture | RVQ Transformer / Sesame-style CSM |</p>
+<p>| Backbone | llama-8B |</p>
+<p>| Audio decoder | llama-300M |</p>
+<p>| Audio tokenizer | Mimi |</p>
+<p>| Audio codebooks | 32 |</p>
+<p>| Max sequence length | 2,048 |</p>
+<p>| Languages | English only |</p>
+<h2>3. 本地部署與使用</h2>
+<p>GitHub 提供本地推論方式：</p>
+<ul>
+<li>以 uv 或 pip 建立 Python 3.10 環境。</li>
+<li>clone `<a href="https://github.com/MisoLabsAI/MisoTTS.git`。" target="_blank" rel="noopener">https://github.com/MisoLabsAI/MisoTTS.git`。</a></li>
+<li>執行 `run_misotts.py`，預設會從 Hugging Face 下載 `MisoLabs/MisoTTS`。</li>
+<li>可輸出 `full-conversation.wav` 或自訂生成的語音檔。</li>
+</ul>
+<p>README 也提供 Python API 範例，可用 `load_miso_8b` 載入模型，再以 `generator.generate()` 生成語音。</p>
+<h2>4. 安全與限制</h2>
+<p>官方 README 特別提醒：</p>
+<ul>
+<li>不應用於冒充他人、欺騙性音訊、詐欺或有害內容。</li>
+<li>生成音訊預設帶有浮水印。</li>
+<li>若部署到其他應用，應使用自己的 private watermark key 並保密。</li>
+<li>目前語言支援是 English only，中文或多語言能力不應直接假設可用。</li>
+</ul>
+<h1>為什麼值得收藏</h1>
+<h2>1. 開源語音模型正在補上「情感層」</h2>
+<p>過去許多 TTS 可讀、可聽，但缺少停頓、猶豫、興奮、悲傷等人類語音細節。Miso TTS 8B 的定位正是補足這個缺口，讓開源語音模型更接近產品級 voice agent 的需求。</p>
+<h2>2. 對客服與語音 Agent 很關鍵</h2>
+<p>欒帥關注的 AI 客服、LINE / Web 互動助理、課程導覽與數位分身，都需要「低延遲 + 自然語氣」。若語音回應延遲太高，即使模型內容正確，也會讓使用者感覺卡頓、像機器。</p>
+<h2>3. 開源權重帶來自架與資料掌控可能</h2>
+<p>若模型能穩定本地部署，企業可在較私密的環境中生成語音，降低把音訊資料送到第三方 API 的顧慮。對客服、教育、醫療、金融等場景，這會是重要差異。</p>
+<h1>可用應用情境</h1>
+<ul>
+<li>AI 客服語音回覆：讓客服 Agent 不只文字回答，也能即時說話。</li>
+<li>課程與知識庫導覽：把 AI 學習雷達文章轉成自然語音摘要。</li>
+<li>角色型數位分身：搭配 Avatar / 影片模型，形成有聲角色。</li>
+<li>即時翻譯與陪練：若未來多語言支援成熟，可用於語言學習與會話練習。</li>
+<li>私有部署語音工具：對敏感資料場景，可評估本地或內網部署。</li>
+</ul>
+<h1>實作提醒</h1>
+<ul>
+<li>「110 毫秒延遲」目前主要來自社群與二手報導宣稱；實際端到端體驗仍需依硬體、推論設定、串流架構與產品整合測試。</li>
+<li>官方 README 標示目前 English only，若要用在中文客服或中文課程，需要額外驗證。</li>
+<li>語音 cloning / continuation 有高度濫用風險，若導入產品應加上同意機制、浮水印、告知與審核流程。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@kufutw/post/DZKOUmlH6R2" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZKOUmlH6R2</a></li>
+<li>Miso Labs 官方 blog：<a href="https://www.misolabs.ai/blog/miso-tts-8b" target="_blank" rel="noopener">https://www.misolabs.ai/blog/miso-tts-8b</a></li>
+<li>Hugging Face：<a href="https://huggingface.co/MisoLabs/MisoTTS" target="_blank" rel="noopener">https://huggingface.co/MisoLabs/MisoTTS</a></li>
+<li>GitHub：<a href="https://github.com/MisoLabsAI/MisoTTS" target="_blank" rel="noopener">https://github.com/MisoLabsAI/MisoTTS</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-04 · https://www.threads.com/@kufutw/post/DZKOUmlH6R2 · article</div><h3>標籤</h3><span class="tag">Miso TTS 8B</span><span class="tag">Miso One</span><span class="tag">AI 語音</span><span class="tag">Text-to-Speech</span><span class="tag">開源模型</span><span class="tag">Voice Agent</span><span class="tag">多媒體與內容</span><span class="tag">模型與平台</span><h3>原始連結</h3><p><a href="https://www.threads.com/@kufutw/post/DZKOUmlH6R2?xmt=AQG0_vZQjmtnJxXil4VQKz8LrDtPr-3a_gJaEDyOMQZGG4bw0S7zbUeTYEbrLLvPp1ireHjrXA&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZKOUmlH6R2?xmt=AQG0_vZQjmtnJxXil4VQKz8LrDtPr-3a_gJaEDyOMQZGG4bw0S7zbUeTYEbrLLvPp1ireHjrXA&amp;slof=1</a></p><p><a href="https://www.threads.com/@kufutw/post/DZKOUmlH6R2" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZKOUmlH6R2</a></p><p><a href="https://www.misolabs.ai/blog/miso-tts-8b" target="_blank" rel="noopener">https://www.misolabs.ai/blog/miso-tts-8b</a></p><p><a href="https://huggingface.co/MisoLabs/MisoTTS" target="_blank" rel="noopener">https://huggingface.co/MisoLabs/MisoTTS</a></p><p><a href="https://github.com/MisoLabsAI/MisoTTS" target="_blank" rel="noopener">https://github.com/MisoLabsAI/MisoTTS</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

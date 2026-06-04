@@ -28,6 +28,37 @@
     "markdown": "articles/2026/06/2026-06-04-chatgpt-instagram-growth-prompt-system.md"
   },
   {
+    "title": "Miso TTS 8B / Miso One｜開源情感語音模型與即時語音 Agent 基礎設施",
+    "date": "2026-06-04",
+    "source": "https://www.threads.com/@kufutw/post/DZKOUmlH6R2",
+    "author": "Threads@kufutw",
+    "type": "article",
+    "topics": [
+      "Miso TTS 8B",
+      "Miso One",
+      "AI 語音",
+      "Text-to-Speech",
+      "開源模型",
+      "Voice Agent",
+      "多媒體與內容",
+      "模型與平台"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DZKOUmlH6R2?xmt=AQG0_vZQjmtnJxXil4VQKz8LrDtPr-3a_gJaEDyOMQZGG4bw0S7zbUeTYEbrLLvPp1ireHjrXA&slof=1",
+      "https://www.threads.com/@kufutw/post/DZKOUmlH6R2",
+      "https://www.misolabs.ai/blog/miso-tts-8b",
+      "https://huggingface.co/MisoLabs/MisoTTS",
+      "https://github.com/MisoLabsAI/MisoTTS"
+    ],
+    "excerpt": "Miso Labs 發布 Miso TTS 8B（社群貼文稱 Miso One），主打更有情緒起伏的語音生成、低延遲互動與開源權重；它值得收藏的重點，是開源 TTS 正在從「把字念出來」走向「可用於即時語音 Agent 的情緒化對話層」。",
+    "slug": "2026-06-04-miso-tts-8b-open-source-emotive-voice-model",
+    "html": "articles/2026-06-04-miso-tts-8b-open-source-emotive-voice-model.html",
+    "markdown": "articles/2026/06/2026-06-04-miso-tts-8b-open-source-emotive-voice-model.md"
+  },
+  {
     "title": "Gemini Omni Avatar：用數位分身製作不露臉影片",
     "date": "2026-06-03",
     "source": "https://www.threads.com/@prompt_case/post/DZEJj5eDQQP",
