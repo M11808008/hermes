@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Open-LLM-VTuber｜會說話、看畫面、做表情的開源 Live2D AI 虛擬夥伴</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Open-LLM-VTuber｜會說話、看畫面、做表情的開源 Live2D AI 虛擬夥伴</h1><h1>Open-LLM-VTuber｜會說話、看畫面、做表情的開源 Live2D AI 虛擬夥伴</h1>
+<p>來源：Threads@0xspeter；官方資料：Open-LLM-VTuber GitHub 與文件</p>
+<h1>一句話摘要</h1>
+<p>Open-LLM-VTuber 把 LLM、語音辨識、TTS、視覺感知、工具呼叫與 Live2D Avatar 串成一個可本地運作的 AI 虛擬夥伴；它代表 AI 介面正從「打字聊天框」走向「有聲音、有表情、能看畫面、能陪伴工作」的角色型互動層。</p>
+<h1>Threads 貼文重點</h1>
+<p>貼文將 Open-LLM-VTuber 形容為一個很有未來感的 GitHub 開源專案：</p>
+<ul>
+<li>可以跟使用者說話。</li>
+<li>可以看畫面。</li>
+<li>可以做表情。</li>
+<li>可以用 Live2D 角色出現在螢幕上。</li>
+<li>不是單純聊天機器人，而是把 LLM、語音辨識、TTS、Live2D、鏡頭、螢幕與截圖等能力整合在一起。</li>
+<li>想像方向不只 AI 女友或桌寵，而是未來 AI 介面可能變成有聲音、有表情、有個性、能陪工作與生活的虛擬角色。</li>
+</ul>
+<h1>官方專案補充</h1>
+<p>GitHub 官方描述：Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D talking face running locally across platforms.</p>
+<p>截至擷取時，GitHub API 顯示：</p>
+<ul>
+<li>Repository：Open-LLM-VTuber/Open-LLM-VTuber</li>
+<li>語言：Python</li>
+<li>Stars：約 9.3k</li>
+<li>Forks：約 1.1k</li>
+<li>建立時間：2023-11-24</li>
+<li>最近推送：2026-05-15</li>
+</ul>
+<h1>主要能力</h1>
+<h2>1. 跨平台與本地離線</h2>
+<p>README 說明專案支援 Windows、macOS、Linux，可選擇本地模型、雲端 API、CPU、NVIDIA / 非 NVIDIA GPU，部分元件也支援 macOS GPU 加速。官方也強調可完全離線運作，對隱私與本地部署有吸引力。</p>
+<h2>2. 語音互動與打斷</h2>
+<p>專案定位是 hands-free voice interaction，不只是輸入文字。它支援語音對話，也支援 voice interruption，讓使用者可以自然打斷 AI 回答，降低一般語音助理「講完一長串才能回應」的不自然感。</p>
+<h2>3. 視覺感知</h2>
+<p>官方文件提到視覺感知能力，包含 camera、screen recording、screenshots。這讓 AI 角色可以看見使用者或螢幕內容，從純文字助理變成更接近桌面工作陪伴者。</p>
+<h2>4. Live2D 角色與桌寵模式</h2>
+<p>Open-LLM-VTuber 支援 Live2D Avatar、表情映射、觸摸回饋，也有 desktop client 與透明背景桌寵模式。使用者可以讓角色以小助手方式常駐螢幕。</p>
+<h2>5. 模組化模型後端</h2>
+<p>README 列出多種可替換模組：</p>
+<ul>
+<li>LLM：Ollama、OpenAI-compatible API、Gemini、Claude、Mistral、DeepSeek、Zhipu AI、GGUF、LM Studio、vLLM 等。</li>
+<li>ASR：sherpa-onnx、FunASR、Faster-Whisper、Whisper.cpp、Whisper、Groq Whisper、Azure ASR 等。</li>
+<li>TTS：sherpa-onnx、pyttsx3、MeloTTS、Coqui-TTS、GPTSoVITS、Bark、CosyVoice、Edge TTS、Fish Audio、Azure TTS 等。</li>
+</ul>
+<p>這代表它更像「AI 角色互動框架」，而不是綁死某一個模型供應商的聊天工具。</p>
+<h1>為什麼值得收藏</h1>
+<h2>1. AI 介面的下一步：角色化、多模態、常駐</h2>
+<p>文字聊天框適合問答，但不一定適合陪伴式工作流。Open-LLM-VTuber 的價值在於把 AI 變成可看、可聽、可說、可表情化的角色，適合長時間陪伴、導覽、直播、教育與客服場景。</p>
+<h2>2. 對 Hermes / AI 學習雷達的啟發</h2>
+<p>這類專案可成為「知識庫入口」的新介面：</p>
+<ul>
+<li>用 Live2D 角色導覽 AI 學習雷達。</li>
+<li>讓角色以語音回答知識庫內容。</li>
+<li>讓角色看螢幕，協助解釋目前頁面或工具。</li>
+<li>在課程、展覽、博物館、導覽機或網站中做互動式 AI 解說員。</li>
+</ul>
+<h2>3. 對 AI 客服與品牌人格很有潛力</h2>
+<p>如果客服 Agent 有穩定角色、聲音與表情，就不只是 FAQ 機器人，而能變成品牌的互動化人格。對 Kufu 類客服平台、課程銷售頁、品牌社群經營，都有可借鏡方向。</p>
+<h1>實作與風險提醒</h1>
+<ul>
+<li>若要遠端存取麥克風，README 提醒前端麥克風需 HTTPS 或 localhost 的 secure context；跨裝置使用時要配置 HTTPS / reverse proxy。</li>
+<li>專案仍在活躍開發，README 提到 v2.0 正在重寫與規劃；若要正式部署，需留意版本變動。</li>
+<li>v1.0.0 有 breaking changes，舊版本更新可能需要重新部署。</li>
+<li>Live2D sample models 不完全受專案 MIT 授權涵蓋，商業使用時要確認 Live2D Inc. 的素材授權。</li>
+<li>若角色具備鏡頭、螢幕與語音能力，產品化時必須清楚告知資料擷取範圍與隱私設定。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@0xspeter/post/DZKlqWXGAJW" target="_blank" rel="noopener">https://www.threads.com/@0xspeter/post/DZKlqWXGAJW</a></li>
+<li>GitHub：<a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber" target="_blank" rel="noopener">https://github.com/Open-LLM-VTuber/Open-LLM-VTuber</a></li>
+<li>Quick Start：<a href="https://open-llm-vtuber.github.io/docs/quick-start" target="_blank" rel="noopener">https://open-llm-vtuber.github.io/docs/quick-start</a></li>
+<li>Project Overview：<a href="https://docs.llmvtuber.com/en/docs/intro/" target="_blank" rel="noopener">https://docs.llmvtuber.com/en/docs/intro/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-04 · https://www.threads.com/@0xspeter/post/DZKlqWXGAJW · article</div><h3>標籤</h3><span class="tag">Open-LLM-VTuber</span><span class="tag">Live2D</span><span class="tag">AI Agent/自動化</span><span class="tag">Voice Agent</span><span class="tag">多模態 AI</span><span class="tag">開源專案</span><span class="tag">多媒體與內容</span><span class="tag">開發與程式</span><h3>原始連結</h3><p><a href="https://www.threads.com/@0xspeter/post/DZKlqWXGAJW?xmt=AQG0TEQ_yBZ6sv0hjR9SbPTMsKyfkdQkVKKLKF0vDcSXxa0okQVefllvkgTbZQfsF7Sbg1zL&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@0xspeter/post/DZKlqWXGAJW?xmt=AQG0TEQ_yBZ6sv0hjR9SbPTMsKyfkdQkVKKLKF0vDcSXxa0okQVefllvkgTbZQfsF7Sbg1zL&amp;slof=1</a></p><p><a href="https://www.threads.com/@0xspeter/post/DZKlqWXGAJW" target="_blank" rel="noopener">https://www.threads.com/@0xspeter/post/DZKlqWXGAJW</a></p><p><a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber" target="_blank" rel="noopener">https://github.com/Open-LLM-VTuber/Open-LLM-VTuber</a></p><p><a href="https://open-llm-vtuber.github.io/docs/quick-start" target="_blank" rel="noopener">https://open-llm-vtuber.github.io/docs/quick-start</a></p><p><a href="https://docs.llmvtuber.com/en/docs/intro/" target="_blank" rel="noopener">https://docs.llmvtuber.com/en/docs/intro/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

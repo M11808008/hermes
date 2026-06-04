@@ -59,6 +59,37 @@
     "markdown": "articles/2026/06/2026-06-04-miso-tts-8b-open-source-emotive-voice-model.md"
   },
   {
+    "title": "Open-LLM-VTuber｜會說話、看畫面、做表情的開源 Live2D AI 虛擬夥伴",
+    "date": "2026-06-04",
+    "source": "https://www.threads.com/@0xspeter/post/DZKlqWXGAJW",
+    "author": "Threads@0xspeter",
+    "type": "article",
+    "topics": [
+      "Open-LLM-VTuber",
+      "Live2D",
+      "AI Agent/自動化",
+      "Voice Agent",
+      "多模態 AI",
+      "開源專案",
+      "多媒體與內容",
+      "開發與程式"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@0xspeter/post/DZKlqWXGAJW?xmt=AQG0TEQ_yBZ6sv0hjR9SbPTMsKyfkdQkVKKLKF0vDcSXxa0okQVefllvkgTbZQfsF7Sbg1zL&slof=1",
+      "https://www.threads.com/@0xspeter/post/DZKlqWXGAJW",
+      "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+      "https://open-llm-vtuber.github.io/docs/quick-start",
+      "https://docs.llmvtuber.com/en/docs/intro/"
+    ],
+    "excerpt": "Open-LLM-VTuber 把 LLM、語音辨識、TTS、視覺感知、工具呼叫與 Live2D Avatar 串成一個可本地運作的 AI 虛擬夥伴；它代表 AI 介面正從「打字聊天框」走向「有聲音、有表情、能看畫面、能陪伴工作」的角色型互動層。",
+    "slug": "2026-06-04-open-llm-vtuber-live2d-ai-companion",
+    "html": "articles/2026-06-04-open-llm-vtuber-live2d-ai-companion.html",
+    "markdown": "articles/2026/06/2026-06-04-open-llm-vtuber-live2d-ai-companion.md"
+  },
+  {
     "title": "Gemini Omni Avatar：用數位分身製作不露臉影片",
     "date": "2026-06-03",
     "source": "https://www.threads.com/@prompt_case/post/DZEJj5eDQQP",
