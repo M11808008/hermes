@@ -1,5 +1,67 @@
 [
   {
+    "title": "CKLive 手勢追蹤接入 Flux｜用手指位置與 pinch gesture 即時控制生成影像",
+    "date": "2026-06-05",
+    "source": "https://www.instagram.com/reel/DZCn7wHopoz/",
+    "author": "_cklive_",
+    "type": "article",
+    "topics": [
+      "CKLive",
+      "Flux",
+      "Realtime Generation",
+      "Creative AI",
+      "Generative AI",
+      "Hand Tracking",
+      "Gesture Control",
+      "Live Art",
+      "RTX 5090"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DZCn7wHopoz/",
+      "https://www.instagram.com/reel/DZCn7wHopoz/",
+      "https://www.instagram.com/reel/DZCn7wHopoz/"
+    ],
+    "excerpt": "CKLive 把手部追蹤變成生成式影像 pipeline 的即時控制訊號：系統會連續追蹤手指位置，並用 pinch gesture 觸發可自訂的動作，讓創作者能用手勢直接控制 Flux 生成流程。",
+    "slug": "2026-06-05-cklive-hand-tracking-flux-realtime-generative-ai",
+    "html": "articles/2026-06-05-cklive-hand-tracking-flux-realtime-generative-ai.html",
+    "markdown": "articles/2026/06/2026-06-05-cklive-hand-tracking-flux-realtime-generative-ai.md"
+  },
+  {
+    "title": "DEIMv2-Wholebody49｜以單一物件偵測架構統一人體偵測、姿態估計與實例分割",
+    "date": "2026-06-05",
+    "source": "https://www.instagram.com/p/DY-CvYnmNxl/",
+    "author": "aicouncillor / PINTO0309",
+    "type": "article",
+    "topics": [
+      "DEIMv2",
+      "Wholebody49",
+      "Computer Vision",
+      "Object Detection",
+      "Pose Estimation",
+      "Instance Segmentation",
+      "Edge AI",
+      "Real-time AI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/p/DY-CvYnmNxl/",
+      "https://github.com/PINTO0309/PINTO_model_zoo/tree/main/488_DEIMv2-Wholebody49",
+      "https://www.instagram.com/p/DY-CvYnmNxl/",
+      "https://github.com/PINTO0309/PINTO_model_zoo/tree/main/488_DEIMv2-Wholebody49",
+      "https://github.com/PINTO0309/DEIMv2",
+      "https://github.com/Intellindust-AI-Lab/DEIMv2"
+    ],
+    "excerpt": "DEIMv2-Wholebody49 把人體偵測、姿態/部位估計、實例分割與部分屬性分類壓進同一個物件偵測式輸出流程，嘗試用一次推論完成過去常由多個模型或多段 pipeline 處理的即時人體理解任務。",
+    "slug": "2026-06-05-deimv2-wholebody49-unified-computer-vision-model",
+    "html": "articles/2026-06-05-deimv2-wholebody49-unified-computer-vision-model.html",
+    "markdown": "articles/2026/06/2026-06-05-deimv2-wholebody49-unified-computer-vision-model.md"
+  },
+  {
     "title": "豆包付費版預告流失 600 萬用戶｜中國 AI Agent 商業化與算力成本壓力",
     "date": "2026-06-05",
     "source": "https://www.facebook.com/photo.php?fbid=1505153661409896&set=a.714334230491847&type=3",

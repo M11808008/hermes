@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>DEIMv2-Wholebody49｜以單一物件偵測架構統一人體偵測、姿態估計與實例分割</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>DEIMv2-Wholebody49｜以單一物件偵測架構統一人體偵測、姿態估計與實例分割</h1><h1>DEIMv2-Wholebody49｜以單一物件偵測架構統一人體偵測、姿態估計與實例分割</h1>
+<p>來源：Instagram 貼文 `aicouncillor` 分享 DEIMv2-Wholebody49，並以 PINTO0309/PINTO_model_zoo 的 `488_DEIMv2-Wholebody49` README、classes 與下載資訊補充技術細節。</p>
+<h1>一句話摘要</h1>
+<p>DEIMv2-Wholebody49 把人體偵測、姿態/部位估計、實例分割與部分屬性分類壓進同一個物件偵測式輸出流程，嘗試用一次推論完成過去常由多個模型或多段 pipeline 處理的即時人體理解任務。</p>
+<h1>核心重點</h1>
+<ul>
+<li>任務整合：Object Detection、Pose Estimation / body-part estimation、Instance Segmentation。</li>
+<li>類別數：共 49 類，涵蓋 body、adult/child、male/female、輪椅/拐杖使用者、head、face、眼鼻口耳、肩膀、手肘、手腕、手、腹部、髖、膝、踝、腳、bone 等。</li>
+<li>頭部方向：支援 front、right-front、right-side、right-back、back、left-back、left-side、left-front 等八方向分類。</li>
+<li>架構思想：作者強調沒有使用 Pose Estimation architecture，也沒有用人體關節 keypoint 資料訓練，而是以物件偵測架構估計肩、肘、膝等關節/部位。</li>
+<li>推論策略：以 one-shot inference 取得多種人體資訊，避免強行串接多個架構，以追求更高推論效能與更低訓練成本。</li>
+<li>實務取向：訓練資料加入 photometric noise、失真與作者重標註資料，目標是強化對 motion blur、Gaussian noise、contrast noise、backlighting、halation 等真實影像條件的耐受性。</li>
+</ul>
+<h1>為什麼值得觀察</h1>
+<h2>1. 「偵測器即通用人體理解器」的路線</h2>
+<p>一般姿態估計會把 skeleton keypoints 視為獨立任務；DEIMv2-Wholebody49 的有趣之處，是把身體部位、關節位置、頭部方向與遮擋區域估計，都轉成類似物件偵測的任務。這代表在某些邊緣部署或即時視覺場景中，未必需要把 detection、pose、segmentation 拆成多模型 pipeline。</p>
+<h2>2. 對即時互動與邊緣 AI 友善</h2>
+<p>Instagram 貼文提到即時推論速度約 14ms/frame；PINTO0309 的 README 也明確把 real-world video、edge devices、single ancient GPU real-time inference 列為驗證方向。若穩定性足夠，這類模型可用在互動裝置、展演、監控輔助、機器人感知或低延遲創作工具。</p>
+<h2>3. 真實世界資料比 mAP 更重要</h2>
+<p>作者在 README 中寫下「Don&#x27;t be ruled by the curse of mAP.」重點不是追逐標準資料集分數，而是透過失真、雜訊、遮擋、魚眼鏡頭、擁擠場景、縮放變異、左右交叉等情境測試實用性。這對產品化視覺模型尤其重要：實際部署時，影像品質往往比 benchmark 更混亂。</p>
+<h1>技術細節摘錄</h1>
+<ul>
+<li>資料來源包含 COCO-Hand 與 CD-COCO，並加入作者自建/重標註資料；作者表示不計畫公開自有資料集。</li>
+<li>README 提到曾在 ONNX 推論 demo 的 post-processing 發現並修正 sigmoid 執行時機 bug；模型本身不一定有問題。</li>
+<li>作者測試過 S 與 N 變體，但未達預期準確度，因此不推薦。</li>
+<li>GitHub 目錄提供 `download.sh`，模型資源由 Wasabi S3 下載。</li>
+<li>相關 upstream / fork：Intellindust-AI-Lab/DEIMv2 與 PINTO0309/DEIMv2。</li>
+</ul>
+<h1>欒帥可延伸觀察</h1>
+<ul>
+<li>若 AI 學習雷達未來要做即時互動 demo，可把這類 unified vision model 視為「一個低延遲感知層」，再把輸出接到生成影像、投影互動、教學互動或智慧空間應用。</li>
+<li>與 MediaPipe、YOLO-pose、SAM 類工具相比，DEIMv2-Wholebody49 的差異在於「統一輸出與重實務場景」，可作為邊緣部署候選，但仍需自己測試穩定性。</li>
+<li>這類模型也提醒：資料標註策略與真實世界失真設計，可能比單純換更大模型更影響產品可用性。</li>
+</ul>
+<h1>風險與限制</h1>
+<ul>
+<li>作者明確指出訓練 pipeline 曾有 bug，最終權重並非保存於最佳 mAP 狀態。</li>
+<li>自有資料集不公開，外部難以完整重現訓練流程。</li>
+<li>README 說標準資料集與作者資料集差異大，精準比較 accuracy 並不容易。</li>
+<li>Instagram 展示與 demo 不能取代正式產品評測；若要採用，仍需在目標攝影機、解析度、光線與硬體上實測。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Instagram 原貼文：<a href="https://www.instagram.com/p/DY-CvYnmNxl/" target="_blank" rel="noopener">https://www.instagram.com/p/DY-CvYnmNxl/</a></li>
+<li>PINTO model zoo： <a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/488_DEIMv2-Wholebody49" target="_blank" rel="noopener">https://github.com/PINTO0309/PINTO_model_zoo/tree/main/488_DEIMv2-Wholebody49</a></li>
+<li>PINTO0309/DEIMv2： <a href="https://github.com/PINTO0309/DEIMv2" target="_blank" rel="noopener">https://github.com/PINTO0309/DEIMv2</a></li>
+<li>Intellindust-AI-Lab/DEIMv2： <a href="https://github.com/Intellindust-AI-Lab/DEIMv2" target="_blank" rel="noopener">https://github.com/Intellindust-AI-Lab/DEIMv2</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-05 · https://www.instagram.com/p/DY-CvYnmNxl/ · article</div><h3>標籤</h3><span class="tag">DEIMv2</span><span class="tag">Wholebody49</span><span class="tag">Computer Vision</span><span class="tag">Object Detection</span><span class="tag">Pose Estimation</span><span class="tag">Instance Segmentation</span><span class="tag">Edge AI</span><span class="tag">Real-time AI</span><h3>原始連結</h3><p><a href="https://www.instagram.com/p/DY-CvYnmNxl/" target="_blank" rel="noopener">https://www.instagram.com/p/DY-CvYnmNxl/</a></p><p><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/488_DEIMv2-Wholebody49" target="_blank" rel="noopener">https://github.com/PINTO0309/PINTO_model_zoo/tree/main/488_DEIMv2-Wholebody49</a></p><p><a href="https://www.instagram.com/p/DY-CvYnmNxl/" target="_blank" rel="noopener">https://www.instagram.com/p/DY-CvYnmNxl/</a></p><p><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/488_DEIMv2-Wholebody49" target="_blank" rel="noopener">https://github.com/PINTO0309/PINTO_model_zoo/tree/main/488_DEIMv2-Wholebody49</a></p><p><a href="https://github.com/PINTO0309/DEIMv2" target="_blank" rel="noopener">https://github.com/PINTO0309/DEIMv2</a></p><p><a href="https://github.com/Intellindust-AI-Lab/DEIMv2" target="_blank" rel="noopener">https://github.com/Intellindust-AI-Lab/DEIMv2</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
