@@ -1,0 +1,52 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Train LLM From Scratch｜用 PyTorch 從零訓練 Transformer 與後訓練流程的開源教材</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Train LLM From Scratch｜用 PyTorch 從零訓練 Transformer 與後訓練流程的開源教材</h1><h1>Train LLM From Scratch｜用 PyTorch 從零訓練 Transformer 與後訓練流程的開源教材</h1>
+<p>來源：Facebook Reel 介紹 GitHub 專案 `FareedKhan-dev/train-llm-from-scratch`；此筆歸檔以 Facebook caption 作為發現來源，並以 GitHub README / GitHub API 補充較耐久的技術資訊。</p>
+<h1>一句話摘要</h1>
+<p>`Train LLM From Scratch` 是一個 MIT 授權的 PyTorch 教學型 repo，從資料下載、Pile 資料前處理、Transformer 結構實作、訓練、文字生成，到 SFT / Reward Model / PPO / DPO / GRPO 後訓練流程，提供「理解 LLM 訓練全鏈路」的可讀範例。</p>
+<h1>核心重點</h1>
+<ul>
+<li>專案定位：不是直接提供可產品化的大模型，而是用純 PyTorch 實作 LLM 訓練流程，讓開發者理解 Transformer 與訓練管線。</li>
+<li>架構來源：以 `Attention is All You Need` 的 Transformer 思想為基礎，實作 embedding、attention、MLP、Transformer block 與最終模型。</li>
+<li>資料流程：使用 The Pile / pile-uncopyrighted 類型資料，包含下載、Zstandard 解壓、tokenization、HDF5 前處理與 train / validation 切分。</li>
+<li>實作內容：包含訓練 script、文字生成 script、config、data loader、model modules，以及後訓練相關 `src/post_training`。</li>
+<li>後訓練擴充：README 宣稱新增 Base → SFT → Reward Model → PPO / DPO → GRPO 的 from-scratch alignment suite，並使用 Alpaca、Dolly、Anthropic HH-RLHF、UltraFeedback、GSM8K 等公開資料集。</li>
+<li>Repo 狀態：GitHub API 顯示此 repo 約 4.2k stars、MIT License、主要語言 Python，並提供文件站 `fareedkhan-dev.github.io/train-llm-from-scratch/`。</li>
+</ul>
+<h1>為什麼值得收藏</h1>
+<h2>1. 適合作為「LLM 訓練課程地圖」</h2>
+<p>多數 LLM 教學只講 Transformer 或只講 fine-tuning；這個 repo 把資料、模型、訓練、生成、後訓練分成可追蹤的資料夾與 script，適合用來做課程大綱、讀書會或工作坊的路線圖。</p>
+<h2>2. 可用來拆解「從零訓練」的真實成本</h2>
+<p>Facebook caption 提到單 GPU 訓練與百萬/十億參數模型；README 進一步補充 GPU 記憶體與不同模型大小的可行性比較。這對課程設計很有用：可以把「13M 小模型可跑通流程」與「billion-scale 需要硬體/資料/時間」清楚切開，避免學員誤以為 from-scratch 等於低成本訓練出可商用 LLM。</p>
+<h2>3. 後訓練內容有助於銜接現代 LLM 對齊概念</h2>
+<p>README 目前已把 SFT、Reward Model、PPO、DPO、GRPO / RLVR 放進專案敘述。即使不直接採用它的程式碼，也可作為「對齊訓練術語與 pipeline」的參考架構。</p>
+<h1>技術資料摘錄</h1>
+<p>| 面向 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Repo | `FareedKhan-dev/train-llm-from-scratch` |</p>
+<p>| 授權 | MIT License |</p>
+<p>| 主要語言 | Python / PyTorch |</p>
+<p>| 基礎模型 | Transformer from scratch |</p>
+<p>| 訓練資料 | The Pile / pile-uncopyrighted 相關流程 |</p>
+<p>| 教學配置 | README 建議先跑 13M 參數等級的小模型，理解訓練與生成流程 |</p>
+<p>| 後訓練 | SFT、Reward Model、PPO、DPO、GRPO / RLVR |</p>
+<p>| 文件站 | `<a href="https://fareedkhan-dev.github.io/train-llm-from-scratch/`" target="_blank" rel="noopener">https://fareedkhan-dev.github.io/train-llm-from-scratch/`</a> |</p>
+<h1>欒帥可延伸應用</h1>
+<ul>
+<li>可放進 AI 學習雷達的「LLM 訓練入門教材」清單，作為從 Transformer 實作到 alignment pipeline 的實作型參考。</li>
+<li>若要設計「人機協作 / AI literacy」進階課程，可用它示範：模型不是只有 prompt engineering，背後還有資料、tokenizer、training loop、checkpoint、evaluation 與 post-training。</li>
+<li>若要做本機實驗，建議先以小模型 / smoke config 驗證流程，而不是一開始挑戰十億參數訓練。</li>
+<li>可搭配 Karpathy nanoGPT、llm.c、Hugging Face transformers fine-tuning 教材，形成「從底層理解 → 工具化訓練 → 部署/評估」的學習階梯。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>Facebook Reel caption 稱「nearly 1000 stars」已過時；GitHub API 目前顯示約 4.2k stars，實際數字會持續變動。</li>
+<li>Repo 宣稱可單 GPU 訓練百萬或十億參數模型，但可行性高度取決於 GPU VRAM、資料量、batch size、context length、dtype、optimizer state 與是否使用 DDP / memory-saving 技術。</li>
+<li>教學 repo 不等於可直接產出高品質商用 LLM；它的主要價值在於理解流程與建立實驗基礎。</li>
+<li>若要在課程或產品中引用，仍需實測安裝、資料下載、CUDA / PyTorch 版本與訓練時間。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Facebook Reel 原始分享：<a href="https://www.facebook.com/reel/2772654329755522" target="_blank" rel="noopener">https://www.facebook.com/reel/2772654329755522</a></li>
+<li>GitHub Repo：<a href="https://github.com/FareedKhan-dev/train-llm-from-scratch" target="_blank" rel="noopener">https://github.com/FareedKhan-dev/train-llm-from-scratch</a></li>
+<li>專案文件站：<a href="https://fareedkhan-dev.github.io/train-llm-from-scratch/" target="_blank" rel="noopener">https://fareedkhan-dev.github.io/train-llm-from-scratch/</a></li>
+<li>Attention is All You Need：<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">https://arxiv.org/abs/1706.03762</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-06 · https://www.facebook.com/reel/2772654329755522 · article</div><h3>標籤</h3><span class="tag">LLM Training</span><span class="tag">PyTorch</span><span class="tag">Transformer</span><span class="tag">From Scratch</span><span class="tag">Open Source</span><span class="tag">GitHub</span><span class="tag">Post Training</span><span class="tag">AI Education</span><h3>原始連結</h3><p><a href="https://www.facebook.com/reel/2772654329755522" target="_blank" rel="noopener">https://www.facebook.com/reel/2772654329755522</a></p><p><a href="https://github.com/FareedKhan-dev/train-llm-from-scratch" target="_blank" rel="noopener">https://github.com/FareedKhan-dev/train-llm-from-scratch</a></p><p><a href="https://www.facebook.com/reel/2772654329755522" target="_blank" rel="noopener">https://www.facebook.com/reel/2772654329755522</a></p><p><a href="https://github.com/FareedKhan-dev/train-llm-from-scratch" target="_blank" rel="noopener">https://github.com/FareedKhan-dev/train-llm-from-scratch</a></p><p><a href="https://fareedkhan-dev.github.io/train-llm-from-scratch/" target="_blank" rel="noopener">https://fareedkhan-dev.github.io/train-llm-from-scratch/</a></p><p><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">https://arxiv.org/abs/1706.03762</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

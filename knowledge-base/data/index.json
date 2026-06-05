@@ -30,6 +30,38 @@
     "markdown": "articles/2026/06/2026-06-06-shuanglian-jia-xiang-wei-dumpling-shepherds-purse.md"
   },
   {
+    "title": "Train LLM From Scratch｜用 PyTorch 從零訓練 Transformer 與後訓練流程的開源教材",
+    "date": "2026-06-06",
+    "source": "https://www.facebook.com/reel/2772654329755522",
+    "author": "Dann Paker - LeadGen & AI / FareedKhan-dev",
+    "type": "article",
+    "topics": [
+      "LLM Training",
+      "PyTorch",
+      "Transformer",
+      "From Scratch",
+      "Open Source",
+      "GitHub",
+      "Post Training",
+      "AI Education"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/2772654329755522",
+      "https://github.com/FareedKhan-dev/train-llm-from-scratch",
+      "https://www.facebook.com/reel/2772654329755522",
+      "https://github.com/FareedKhan-dev/train-llm-from-scratch",
+      "https://fareedkhan-dev.github.io/train-llm-from-scratch/",
+      "https://arxiv.org/abs/1706.03762"
+    ],
+    "excerpt": "`Train LLM From Scratch` 是一個 MIT 授權的 PyTorch 教學型 repo，從資料下載、Pile 資料前處理、Transformer 結構實作、訓練、文字生成，到 SFT / Reward Model / PPO / DPO / GRPO 後訓練流程，提供「理解 LLM 訓練全鏈路」的可讀範例。",
+    "slug": "2026-06-06-train-llm-from-scratch-pytorch-open-source-repo",
+    "html": "articles/2026-06-06-train-llm-from-scratch-pytorch-open-source-repo.html",
+    "markdown": "articles/2026/06/2026-06-06-train-llm-from-scratch-pytorch-open-source-repo.md"
+  },
+  {
     "title": "鳥對上食物外送無人機｜低空配送的野生動物與安全風險",
     "date": "2026-06-05",
     "source": "https://www.instagram.com/reel/DX7C05ONTHK/",
