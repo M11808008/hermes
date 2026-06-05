@@ -1,5 +1,36 @@
 [
   {
+    "title": "鳥對上食物外送無人機｜低空配送的野生動物與安全風險",
+    "date": "2026-06-05",
+    "source": "https://www.instagram.com/reel/DX7C05ONTHK/",
+    "author": "Evan Era / evanrosenman",
+    "type": "article",
+    "topics": [
+      "Instagram",
+      "Drone Delivery",
+      "Food Delivery",
+      "無人機配送",
+      "低空經濟",
+      "機器人/自動化",
+      "風險管理",
+      "野生動物",
+      "多媒體與內容"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DX7C05ONTHK/",
+      "https://www.instagram.com/evanrosenman/reel/DX7C05ONTHK/",
+      "https://www.instagram.com/reel/DX7C05ONTHK/",
+      "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    ],
+    "excerpt": "一支鳥靠近吊掛食物袋的外送無人機，讓「無人機配送」從科技展示變成真實世界風險題：低空航線不只要避開建物與人，也要處理鳥類、噪音、包裹吊掛、社區接受度與監管責任。",
+    "slug": "2026-06-05-bird-versus-food-delivery-drone-low-altitude-risk",
+    "html": "articles/2026-06-05-bird-versus-food-delivery-drone-low-altitude-risk.html",
+    "markdown": "articles/2026/06/2026-06-05-bird-versus-food-delivery-drone-low-altitude-risk.md"
+  },
+  {
     "title": "CKLive 手勢追蹤接入 Flux｜用手指位置與 pinch gesture 即時控制生成影像",
     "date": "2026-06-05",
     "source": "https://www.instagram.com/reel/DZCn7wHopoz/",
