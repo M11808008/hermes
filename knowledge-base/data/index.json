@@ -1,5 +1,37 @@
 [
   {
+    "title": "Claude 簡報官方配色與模板 Skill｜泛科學院教學整理",
+    "date": "2026-06-06",
+    "source": "https://www.facebook.com/reel/1373896177905329",
+    "author": "泛科學院 / Anthropic",
+    "type": "article",
+    "topics": [
+      "Claude",
+      "Claude Skills",
+      "簡報生成",
+      "PowerPoint",
+      "PPTX",
+      "設計系統",
+      "AI 工作流",
+      "泛科學院"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1HAXaqkhq7/?mibextid=wwXIfr",
+      "https://www.youtube.com/watch?v=7xlQkLXeR6Q",
+      "https://www.facebook.com/reel/1373896177905329",
+      "https://www.youtube.com/watch?v=7xlQkLXeR6Q",
+      "https://github.com/anthropics/skills/blob/main/skills/pptx/SKILL.md",
+      "https://raw.githubusercontent.com/anthropics/skills/main/skills/pptx/SKILL.md"
+    ],
+    "excerpt": "Claude 的官方 pptx Skill 不是只能做陽春投影片；它內建 10 套可直接點名使用的設計配色、8 組英文字型配對與版面設計原則。若再把公司既有 PPT 模板分析後生成自訂 Skill，就能把品牌配色、版型、Logo 位置與中文字型規則固定下來。",
+    "slug": "2026-06-06-claude-pptx-official-color-palettes-pansci",
+    "html": "articles/2026-06-06-claude-pptx-official-color-palettes-pansci.html",
+    "markdown": "articles/2026/06/2026-06-06-claude-pptx-official-color-palettes-pansci.md"
+  },
+  {
     "title": "雙連家鄉味水餃｜薺菜水餃與現包巷弄小吃",
     "date": "2026-06-06",
     "source": "https://achu.tw/jia-xiang-wei-dumpling/",
