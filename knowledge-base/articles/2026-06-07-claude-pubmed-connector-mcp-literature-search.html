@@ -1,0 +1,57 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude PubMed Connector｜用 MCP 連接文獻資料庫，讓 Claude 搜尋與整理生醫文獻</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claude PubMed Connector｜用 MCP 連接文獻資料庫，讓 Claude 搜尋與整理生醫文獻</h1><h1>Claude PubMed Connector｜用 MCP 連接文獻資料庫，讓 Claude 搜尋與整理生醫文獻</h1>
+<p>來源：Facebook Reel 展示「用 Claude 連接 PubMed 找相關文獻」；此筆歸檔以 Reel caption 作為發現來源，並以 Claude 官方 PubMed Connector 說明與 PubMed / MCP 相關資料補齊可長期使用的操作脈絡。</p>
+<h1>一句話摘要</h1>
+<p>Claude 的 PubMed Connector 讓 Claude 透過 MCP 直接查詢 PubMed / PubMed Central 文獻資料，可搜尋論文、讀取摘要與中繼資料、取得可用全文，適合用在研究主題探索、文獻脈絡整理、實驗室 paper reading 與提案前的 novelty 檢查。</p>
+<h1>Facebook Reel 捕捉到的重點</h1>
+<ul>
+<li>Reel 標題：用 Claude 連接 PubMed 找相關文獻。</li>
+<li>Caption 重點：連接文獻資料庫 MCP，把實驗室要讀的文獻交給 Claude，整理知識重點與脈絡。</li>
+<li>互動訊號：Facebook Open Graph 顯示約 5.4 萬次觀看、388 個心情、190 次分享；數字會持續變動，僅作為當下熱度參考。</li>
+</ul>
+<h1>官方功能重點</h1>
+<p>Claude Support 對 PubMed Connector 的說明指出，它可讓 Claude 存取美國國家醫學圖書館維護的 PubMed，涵蓋超過 3,600 萬筆生物醫學文獻引用資料。可用能力包含：</p>
+<ul>
+<li>用關鍵字、作者、期刊或進階查詢語法搜尋研究文章。</li>
+<li>取得文章中繼資料：摘要、作者、出版日期、引用資訊與全文連結。</li>
+<li>在可用時存取 PubMed Central 的全文文章。</li>
+<li>尋找 NCBI 資料庫中的相關文章。</li>
+<li>將 citation 對應到 PMID，協助引用查核。</li>
+<li>在 PMID、PMC ID、DOI 等識別碼之間轉換。</li>
+</ul>
+<h1>設定方式整理</h1>
+<p>| 使用情境 | 入口 | 注意事項 |</p>
+<p>|---|---|---|</p>
+<p>| 個人 Claude 使用者 | Settings &gt; Connectors &gt; PubMed &gt; Connect | 適合無程式設定的研究者直接使用 |</p>
+<p>| Team / Enterprise | Admin settings &gt; Connectors &gt; Browse connectors &gt; PubMed &gt; Add to your team | 需組織擁有者權限 |</p>
+<p>| Claude Code | `/plugin marketplace add anthropics/life-sciences`，再 `/plugin install pubmed@life-sciences`，重啟後用 `/mcp` 驗證 | 適合把文獻搜尋接進 coding / research workspace |</p>
+<p>| Messages API | `mcp_servers` 指向 `<a href="https://pubmed.mcp.claude.com/mcp`，並使用" target="_blank" rel="noopener">https://pubmed.mcp.claude.com/mcp`，並使用</a> `mcp_toolset` | 需 Anthropic API key 與 `mcp-client-2025-11-20` beta header |</p>
+<h1>欒帥可延伸應用</h1>
+<h2>1. 課程與研究工作坊</h2>
+<p>可設計成「AI 輔助文獻回顧」單元：讓學員從自然語言問題開始，請 Claude 先形成 PubMed 查詢策略，再整理摘要、研究族群、方法、主要結果與限制。</p>
+<h2>2. 實驗室 paper reading 加速器</h2>
+<p>把要讀的 paper topic、gene、disease、method 或 proposal idea 丟給 Claude，讓它先建立文獻地圖；人類再回到原文確認細節，而不是直接信任模型摘要。</p>
+<h2>3. Novelty / applicability 初篩</h2>
+<p>在寫提案或課程案例前，可以請 Claude 搜尋近期研究，快速回答：「這個題目是否已有相近研究？」「主要方法分支是什麼？」「哪些 paper 需要精讀？」</p>
+<h2>4. MCP 概念示範案例</h2>
+<p>這是一個很適合教 MCP 的例子：MCP 不是只接本機檔案或 GitHub，也能把權威資料庫變成 AI 可調用工具；重點在於「模型 + 可驗證外部資料源」的組合。</p>
+<h1>建議提示詞</h1>
+<ul>
+<li>請用 PubMed 搜尋近三年關於「immunotherapy for melanoma resistance」的研究，整理成研究主題地圖，列出每篇的 PMID、方法、主要發現與限制。</li>
+<li>我正在準備一個 CRISPR gene editing in cancer therapy 的提案，請先搜尋近期 review 與 clinical study，幫我分成基礎機制、臨床應用、風險與未解問題。</li>
+<li>請找出與這篇 paper 相關的後續研究，並標記哪些是 review、哪些是 original research、哪些有 PMC 全文。</li>
+</ul>
+<h1>使用限制與查核原則</h1>
+<ul>
+<li>Claude 整理的文獻摘要不能替代原文閱讀；重要引用仍需回到 PubMed、期刊頁或 DOI 原文核對。</li>
+<li>PubMed Connector 能查詢與整理，但「研究品質判斷」仍需人類確認樣本數、實驗設計、統計方法與利益衝突。</li>
+<li>可取得全文不代表可自由重製內容；教學或出版引用仍需遵守期刊與授權規範。</li>
+<li>Facebook Reel 只提供短示範脈絡；具體設定與 API 用法以 Claude 官方文件為準。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Facebook Reel 原始分享：<a href="https://www.facebook.com/reel/949036564815130" target="_blank" rel="noopener">https://www.facebook.com/reel/949036564815130</a></li>
+<li>Facebook canonical video：<a href="https://www.facebook.com/bboyanlee/videos/%E7%94%A8-claude-%E9%80%A3%E6%8E%A5-pubmed-%E6%89%BE%E7%9B%B8%E9%97%9C%E6%96%87%E7%8D%BB%E9%80%A3%E6%8E%A5%E6%96%87%E7%8D%BB%E8%B3%87%E6%96%99%E5%BA%AB-mcp%E6%8A%8A%E5%AF%A6%E9%A9%97%E5%AE%A4%E8%A6%81%E4%BD%A0%E8%AE%80%E7%9A%84%E6%96%87%E7%8D%BB%E7%B5%A6-claude%E7%90%86%E6%B8%85%E4%B8%80%E4%B8%8B%E7%9F%A5%E8%AD%98%E9%87%8D%E9%BB%9E%E8%84%88%E7%B5%A1/949036564815130/" target="_blank" rel="noopener">https://www.facebook.com/bboyanlee/videos/%E7%94%A8-claude-%E9%80%A3%E6%8E%A5-pubmed-%E6%89%BE%E7%9B%B8%E9%97%9C%E6%96%87%E7%8D%BB%E9%80%A3%E6%8E%A5%E6%96%87%E7%8D%BB%E8%B3%87%E6%96%99%E5%BA%AB-mcp%E6%8A%8A%E5%AF%A6%E9%A9%97%E5%AE%A4%E8%A6%81%E4%BD%A0%E8%AE%80%E7%9A%84%E6%96%87%E7%8D%BB%E7%B5%A6-claude%E7%90%86%E6%B8%85%E4%B8%80%E4%B8%8B%E7%9F%A5%E8%AD%98%E9%87%8D%E9%BB%9E%E8%84%88%E7%B5%A1/949036564815130/</a></li>
+<li>Claude 官方說明：Using the PubMed Connector in Claude：<a href="https://support.claude.com/en/articles/12614801-using-the-pubmed-connector-in-claude" target="_blank" rel="noopener">https://support.claude.com/en/articles/12614801-using-the-pubmed-connector-in-claude</a></li>
+<li>PubMed：<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/</a></li>
+<li>開源參考：openpharma-org/pubmed-mcp：<a href="https://github.com/openpharma-org/pubmed-mcp" target="_blank" rel="noopener">https://github.com/openpharma-org/pubmed-mcp</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-07 · https://www.facebook.com/reel/949036564815130 · article</div><h3>標籤</h3><span class="tag">Claude</span><span class="tag">MCP</span><span class="tag">PubMed</span><span class="tag">Biomedical Research</span><span class="tag">Literature Review</span><span class="tag">Research Workflow</span><span class="tag">AI Agent</span><span class="tag">Knowledge Work</span><h3>原始連結</h3><p><a href="https://www.facebook.com/reel/949036564815130" target="_blank" rel="noopener">https://www.facebook.com/reel/949036564815130</a></p><p><a href="https://support.claude.com/en/articles/12614801-using-the-pubmed-connector-in-claude" target="_blank" rel="noopener">https://support.claude.com/en/articles/12614801-using-the-pubmed-connector-in-claude</a></p><p><a href="https://www.facebook.com/reel/949036564815130" target="_blank" rel="noopener">https://www.facebook.com/reel/949036564815130</a></p><p><a href="https://www.facebook.com/bboyanlee/videos/%E7%94%A8-claude-%E9%80%A3%E6%8E%A5-pubmed-%E6%89%BE%E7%9B%B8%E9%97%9C%E6%96%87%E7%8D%BB%E9%80%A3%E6%8E%A5%E6%96%87%E7%8D%BB%E8%B3%87%E6%96%99%E5%BA%AB-mcp%E6%8A%8A%E5%AF%A6%E9%A9%97%E5%AE%A4%E8%A6%81%E4%BD%A0%E8%AE%80%E7%9A%84%E6%96%87%E7%8D%BB%E7%B5%A6-claude%E7%90%86%E6%B8%85%E4%B8%80%E4%B8%8B%E7%9F%A5%E8%AD%98%E9%87%8D%E9%BB%9E%E8%84%88%E7%B5%A1/949036564815130/" target="_blank" rel="noopener">https://www.facebook.com/bboyanlee/videos/%E7%94%A8-claude-%E9%80%A3%E6%8E%A5-pubmed-%E6%89%BE%E7%9B%B8%E9%97%9C%E6%96%87%E7%8D%BB%E9%80%A3%E6%8E%A5%E6%96%87%E7%8D%BB%E8%B3%87%E6%96%99%E5%BA%AB-mcp%E6%8A%8A%E5%AF%A6%E9%A9%97%E5%AE%A4%E8%A6%81%E4%BD%A0%E8%AE%80%E7%9A%84%E6%96%87%E7%8D%BB%E7%B5%A6-claude%E7%90%86%E6%B8%85%E4%B8%80%E4%B8%8B%E7%9F%A5%E8%AD%98%E9%87%8D%E9%BB%9E%E8%84%88%E7%B5%A1/949036564815130/</a></p><p><a href="https://support.claude.com/en/articles/12614801-using-the-pubmed-connector-in-claude" target="_blank" rel="noopener">https://support.claude.com/en/articles/12614801-using-the-pubmed-connector-in-claude</a></p><p><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/</a></p><p><a href="https://github.com/openpharma-org/pubmed-mcp" target="_blank" rel="noopener">https://github.com/openpharma-org/pubmed-mcp</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

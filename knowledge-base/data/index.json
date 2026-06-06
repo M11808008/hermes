@@ -1,5 +1,38 @@
 [
   {
+    "title": "Claude PubMed Connector｜用 MCP 連接文獻資料庫，讓 Claude 搜尋與整理生醫文獻",
+    "date": "2026-06-07",
+    "source": "https://www.facebook.com/reel/949036564815130",
+    "author": "李安 / Claude Support",
+    "type": "article",
+    "topics": [
+      "Claude",
+      "MCP",
+      "PubMed",
+      "Biomedical Research",
+      "Literature Review",
+      "Research Workflow",
+      "AI Agent",
+      "Knowledge Work"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/949036564815130",
+      "https://support.claude.com/en/articles/12614801-using-the-pubmed-connector-in-claude",
+      "https://www.facebook.com/reel/949036564815130",
+      "https://www.facebook.com/bboyanlee/videos/%E7%94%A8-claude-%E9%80%A3%E6%8E%A5-pubmed-%E6%89%BE%E7%9B%B8%E9%97%9C%E6%96%87%E7%8D%BB%E9%80%A3%E6%8E%A5%E6%96%87%E7%8D%BB%E8%B3%87%E6%96%99%E5%BA%AB-mcp%E6%8A%8A%E5%AF%A6%E9%A9%97%E5%AE%A4%E8%A6%81%E4%BD%A0%E8%AE%80%E7%9A%84%E6%96%87%E7%8D%BB%E7%B5%A6-claude%E7%90%86%E6%B8%85%E4%B8%80%E4%B8%8B%E7%9F%A5%E8%AD%98%E9%87%8D%E9%BB%9E%E8%84%88%E7%B5%A1/949036564815130/",
+      "https://support.claude.com/en/articles/12614801-using-the-pubmed-connector-in-claude",
+      "https://pubmed.ncbi.nlm.nih.gov/",
+      "https://github.com/openpharma-org/pubmed-mcp"
+    ],
+    "excerpt": "Claude 的 PubMed Connector 讓 Claude 透過 MCP 直接查詢 PubMed / PubMed Central 文獻資料，可搜尋論文、讀取摘要與中繼資料、取得可用全文，適合用在研究主題探索、文獻脈絡整理、實驗室 paper reading 與提案前的 novelty 檢查。",
+    "slug": "2026-06-07-claude-pubmed-connector-mcp-literature-search",
+    "html": "articles/2026-06-07-claude-pubmed-connector-mcp-literature-search.html",
+    "markdown": "articles/2026/06/2026-06-07-claude-pubmed-connector-mcp-literature-search.md"
+  },
+  {
     "title": "Claude 簡報官方配色與模板 Skill｜泛科學院教學整理",
     "date": "2026-06-06",
     "source": "https://www.facebook.com/reel/1373896177905329",
