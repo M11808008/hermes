@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude Code × LibTV｜一句話自動生成 15 秒手機廣告的 AI Agent 工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claude Code × LibTV｜一句話自動生成 15 秒手機廣告的 AI Agent 工作流</h1><h1>Claude Code × LibTV｜一句話自動生成 15 秒手機廣告的 AI Agent 工作流</h1>
+<p>來源：Threads 貼文示範把 Claude Code、Hao0321 開源 skill 與自己的 LibTV 串接後，只輸入一句「幫我做一支 15 秒手機廣告」，AI 就自動完成分鏡、生成與出片。此筆以 Threads 為發現來源，並以 `libtv-labs/libtv-skills` README / GitHub API 補充可重複實作的技術脈絡。</p>
+<h1>一句話摘要</h1>
+<p>這則案例的價值不只是「AI 生成影片」，而是把 Claude Code 變成創意總控，透過 Agent Skill 呼叫 LibTV 的生圖/生影片能力，自動拆解廣告任務、產生分鏡 prompt、送出生成、查詢進度並取得成片結果。</p>
+<h1>社群貼文重點</h1>
+<ul>
+<li>作者表示接上 Hao0321 大大的開源 AI 生成 skill，並串接自己的 LibTV。</li>
+<li>只向 Claude Code 下了一句：「幫我做一支 15 秒手機廣告。」</li>
+<li>AI 自動跑完分鏡、生成、出片；作者形容自己只是旁邊看。</li>
+<li>作者提出的關鍵問題：以前一支廣告需要團隊忙好幾天，現在一句話、幾分鐘；這是創作者超能力，還是飯碗警鐘？</li>
+<li>Threads 顯示貼文約 2 小時前發布，瀏覽約 185 次，屬於早期實作分享。</li>
+</ul>
+<h1>作者附上的 15 秒手機廣告 prompt</h1>
+<p>| 段落 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Style | Apple-style premium product film, ultra-clean cinematic commercial, Sony Venice cinema camera, macro product photography, hyperreal CGI, dramatic studio lighting, 4K UHD, glossy reflective surfaces, minimalist aesthetic |</p>
+<p>| Duration | 15 seconds |</p>
+<p>| Scene | A sleek flagship smartphone with brushed titanium frame, edge-to-edge display and triple-lens camera, in a dark seamless studio void lit by a single soft blue-to-violet gradient |</p>
+<h2>Shot 1：00:00–00:04</h2>
+<ul>
+<li>Visuals：Macro tracking shot，手機漂浮並在黑色攝影棚空間中緩慢旋轉，rim light 掃過鈦金屬邊框。</li>
+<li>Action：手機慢慢旋轉，露出側面輪廓。</li>
+<li>Details：金屬反光滑過、塵埃在光束中漂浮、深黑背景。</li>
+<li>Atmosphere：Premium、mysterious、anticipation。</li>
+</ul>
+<h2>Shot 2：00:04–00:08</h2>
+<ul>
+<li>Visuals：Extreme macro push-in 到三鏡頭模組，100mm macro lens，淺景深，鏡片鍍膜呈現藍紫色折射。</li>
+<li>Action：鏡頭推近三鏡頭。</li>
+<li>Details：精密加工金屬環、玻璃反光、霧面背板微紋理。</li>
+<li>Atmosphere：Engineering precision、luxury。</li>
+</ul>
+<h2>Shot 3：00:08–00:12</h2>
+<ul>
+<li>Visuals：螢幕亮起，edge-to-edge display 顯示鮮豔流體色彩桌布，35mm 正面鏡頭。</li>
+<li>Action：螢幕點亮。</li>
+<li>Details：光暈映在周圍黑暗中，玻璃反射，鮮明色彩對比。</li>
+<li>Atmosphere：Awakening、vibrant、alive。</li>
+</ul>
+<h2>Shot 4：00:12–00:15</h2>
+<ul>
+<li>Visuals：Hero shot，手機直立面向鏡頭、置中漂浮，乾淨漸層背景變亮，保留大量 negative space。</li>
+<li>Action：手機停在 hero pose。</li>
+<li>Details：完美對稱、下方柔和反射、高級光暈。</li>
+<li>Atmosphere：Iconic、confident、brand climax。</li>
+</ul>
+<h1>技術脈絡：LibTV Skill 是什麼</h1>
+<p>`libtv-labs/libtv-skills` README 說明，這是一組面向 AI Agent 的 Skills，透過 LibLib.tv / LibTV OpenAPI 提供 AI 生圖、生影片等 AIGC 能力。Agent 可以建立會話、發送創作指令、查詢生成進度，並下載最終圖片或影片結果。</p>
+<p>| 面向 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Repo | `libtv-labs/libtv-skills` |</p>
+<p>| 授權 | MIT License |</p>
+<p>| Skill | `libtv-skill` |</p>
+<p>| 能力 | 建立會話、發送生圖/生影片訊息、上傳檔案、查詢進展、批量下載結果 |</p>
+<p>| 安裝 | `npx skills add libtv-labs/libtv-skills --skill libtv-skill` |</p>
+<p>| 必要環境變數 | `LIBTV_ACCESS_KEY` |</p>
+<p>| Agent 規格 | README 稱遵循 OpenClaw 技能規範，可被支援該規範的 AI Agent 平台識別和調用 |</p>
+<h1>為什麼值得收藏</h1>
+<h2>1. 這是「影片工具」轉成「Agent 可調用能力」的典型案例</h2>
+<p>傳統影片工具通常需要人進 GUI、調參數、排時間線；這個案例展示的是另一種結構：Claude Code 負責理解任務與拆工作，LibTV skill 負責把自然語言創作任務丟給生成平台，再用腳本查詢與下載結果。也就是把影片生成變成可編排的 API workflow。</p>
+<h2>2. Prompt 本身就是可教學的分鏡模板</h2>
+<p>作者附上的 prompt 很適合拆成課程素材：Style / Duration / Scene / Shots / Visuals / Action / Details / Atmosphere。這套結構能幫學員理解「好看的 AI 影片不是只有一句 prompt」，而是需要鏡頭、節奏、材質、光線、情緒與品牌語言。</p>
+<h2>3. 創作角色正在從手工執行轉向導演與系統設計</h2>
+<p>這個例子不代表人類創作者不重要，而是角色轉移：人需要定義品牌、審美、敘事、限制與檢核標準；AI Agent 負責把可描述的流程大量執行。對廣告、課程、社群短影音、產品 demo 來說，這會大幅降低原型成本。</p>
+<h1>欒帥可延伸應用</h1>
+<ul>
+<li>課程 demo：用同一個分鏡模板，讓學員改成「課程招生 15 秒廣告」、「AI 工作坊短宣傳」、「NCCU 課程形象片」。</li>
+<li>知識庫分類：可歸到「AI Agent / 自動化」、「多媒體與內容」、「Claude Code」三類，作為 agentic creative workflow 範例。</li>
+<li>實作研究：若要本機複製，先驗證 `libtv-skills` 安裝、`LIBTV_ACCESS_KEY`、會話建立、進度查詢與下載結果，不要先追求完整商業片品質。</li>
+<li>品質控管：建議建立評分表，例如品牌一致性、鏡頭連貫、產品外觀穩定、文字/logo 是否錯誤、是否侵權或過度仿 Apple 風格。</li>
+</ul>
+<h1>風險與注意事項</h1>
+<ul>
+<li>商業使用前要注意品牌風格相似度；「Apple-style」適合做美學參考，但正式客戶稿應避免誤導或侵犯品牌識別。</li>
+<li>生成影片可能有產品細節漂移、鏡頭連續性、logo/文字錯誤、比例不穩等問題，仍需人類 review。</li>
+<li>若影片素材含真實產品、商標、人物肖像或客戶資料，需確認授權與平台資料處理方式。</li>
+<li>Threads 貼文未提供完整執行環境、模型、成本、生成耗時與成片檔案，因此此筆歸檔把它視為 workflow 案例，而不是可直接保證相同結果的教學。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Threads 原始貼文：<a href="https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk" target="_blank" rel="noopener">https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk</a></li>
+<li>LibTV Skills GitHub：<a href="https://github.com/libtv-labs/libtv-skills" target="_blank" rel="noopener">https://github.com/libtv-labs/libtv-skills</a></li>
+<li>LibTV Skills README：<a href="https://raw.githubusercontent.com/libtv-labs/libtv-skills/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/libtv-labs/libtv-skills/main/README.md</a></li>
+<li>LibLib.tv / LibTV：<a href="https://www.liblib.tv" target="_blank" rel="noopener">https://www.liblib.tv</a></li>
+<li>Hao0321 GitHub 參考：<a href="https://github.com/Hao0321/claude-skill-social-post" target="_blank" rel="noopener">https://github.com/Hao0321/claude-skill-social-post</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-06 · https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk · article</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">LibTV</span><span class="tag">AI Agent</span><span class="tag">AI Video</span><span class="tag">AI Advertising</span><span class="tag">AI Automation</span><span class="tag">Agent Skills</span><span class="tag">OpenClaw</span><span class="tag">Creative Workflow</span><h3>原始連結</h3><p><a href="https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk" target="_blank" rel="noopener">https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk</a></p><p><a href="https://github.com/libtv-labs/libtv-skills" target="_blank" rel="noopener">https://github.com/libtv-labs/libtv-skills</a></p><p><a href="https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk" target="_blank" rel="noopener">https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk</a></p><p><a href="https://github.com/libtv-labs/libtv-skills" target="_blank" rel="noopener">https://github.com/libtv-labs/libtv-skills</a></p><p><a href="https://raw.githubusercontent.com/libtv-labs/libtv-skills/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/libtv-labs/libtv-skills/main/README.md</a></p><p><a href="https://www.liblib.tv" target="_blank" rel="noopener">https://www.liblib.tv</a></p><p><a href="https://github.com/Hao0321/claude-skill-social-post" target="_blank" rel="noopener">https://github.com/Hao0321/claude-skill-social-post</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

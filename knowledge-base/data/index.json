@@ -33,6 +33,40 @@
     "markdown": "articles/2026/06/2026-06-07-claude-pubmed-connector-mcp-literature-search.md"
   },
   {
+    "title": "Claude Code × LibTV｜一句話自動生成 15 秒手機廣告的 AI Agent 工作流",
+    "date": "2026-06-06",
+    "source": "https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk",
+    "author": "貓貓滿屋（@vava_ai_artist） / libtv-labs",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "LibTV",
+      "AI Agent",
+      "AI Video",
+      "AI Advertising",
+      "AI Automation",
+      "Agent Skills",
+      "OpenClaw",
+      "Creative Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk",
+      "https://github.com/libtv-labs/libtv-skills",
+      "https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk",
+      "https://github.com/libtv-labs/libtv-skills",
+      "https://raw.githubusercontent.com/libtv-labs/libtv-skills/main/README.md",
+      "https://www.liblib.tv",
+      "https://github.com/Hao0321/claude-skill-social-post"
+    ],
+    "excerpt": "這則案例的價值不只是「AI 生成影片」，而是把 Claude Code 變成創意總控，透過 Agent Skill 呼叫 LibTV 的生圖/生影片能力，自動拆解廣告任務、產生分鏡 prompt、送出生成、查詢進度並取得成片結果。",
+    "slug": "2026-06-06-claude-code-libtv-ai-advertisement-workflow",
+    "html": "articles/2026-06-06-claude-code-libtv-ai-advertisement-workflow.html",
+    "markdown": "articles/2026/06/2026-06-06-claude-code-libtv-ai-advertisement-workflow.md"
+  },
+  {
     "title": "Claude 簡報官方配色與模板 Skill｜泛科學院教學整理",
     "date": "2026-06-06",
     "source": "https://www.facebook.com/reel/1373896177905329",
