@@ -1,5 +1,41 @@
 [
   {
+    "title": "NVIDIA LocateAnything-3B 本機視覺定位測試｜OCR、物件偵測與 Promptable Grounding 觀察",
+    "date": "2026-06-08",
+    "source": "line-user-upload",
+    "author": "欒帥 Luarn-Pin",
+    "type": "article",
+    "topics": [
+      "AI",
+      "視覺模型",
+      "NVIDIA",
+      "LocateAnything",
+      "Vision-Language Model",
+      "Object Detection",
+      "OCR",
+      "Visual Grounding",
+      "Local AI",
+      "GPU",
+      "實測筆記"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "line://image-cache/locateanything-3b-test",
+      "https://huggingface.co/nvidia/LocateAnything-3B",
+      "https://huggingface.co/nvidia/LocateAnything-3B",
+      "https://huggingface.co/spaces/nvidia/LocateAnything",
+      "https://github.com/NVlabs/Eagle/tree/main/Embodied",
+      "https://research.nvidia.com/labs/lpr/locate-anything/",
+      "https://arxiv.org/abs/2605.27365"
+    ],
+    "excerpt": "LocateAnything-3B 比傳統 YOLO 更像「可用文字指定目標的通用視覺定位模型」：可以做 object detection、OCR text localization、GUI grounding、pointing 等任務；但本機實測權重約 7.5GB、載入後約吃 16.5GB VRAM，slow 模式在 RTX 5090 上約 2.4 秒，精準場景可用，即時高頻辨識仍需審慎評估。",
+    "slug": "2026-06-08-nvidia-locateanything-3b-local-visual-grounding-test",
+    "html": "articles/2026-06-08-nvidia-locateanything-3b-local-visual-grounding-test.html",
+    "markdown": "articles/2026/06/2026-06-08-nvidia-locateanything-3b-local-visual-grounding-test.md"
+  },
+  {
     "title": "大阪難波かに銀｜たらば蟹・本ズワイ蟹食べ飲み放題與訂位攻略",
     "date": "2026-06-08",
     "source": "https://www.facebook.com/share/r/1VDnkA5xPn/",
