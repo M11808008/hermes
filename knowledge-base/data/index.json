@@ -1,5 +1,44 @@
 [
   {
+    "title": "無 GPU 迷你電腦自架 AI 語音｜MOSS-TTS-Nano、FastAPI 常駐與 Telegram 語音回報流程",
+    "date": "2026-06-08",
+    "source": "line-user-upload",
+    "author": "欒帥 Luarn-Pin",
+    "type": "article",
+    "topics": [
+      "AI",
+      "TTS",
+      "語音合成",
+      "本地 AI",
+      "Local AI",
+      "CPU Inference",
+      "ONNX Runtime",
+      "FastAPI",
+      "Telegram Bot",
+      "OpenClaw",
+      "ffmpeg",
+      "MOSS-TTS-Nano",
+      "非同步助理"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "line://text-and-image/moss-tts-nano-cpu-local-voice-assistant",
+      "https://github.com/OpenMOSS/MOSS-TTS-Nano",
+      "https://github.com/OpenMOSS/MOSS-TTS-Nano",
+      "https://github.com/OpenMOSS/MOSS-TTS-Nano/blob/main/README_zh.md",
+      "https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano",
+      "https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX",
+      "https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX",
+      "https://openmoss.github.io/MOSS-TTS-Nano-Demo/"
+    ],
+    "excerpt": "在無 GPU 的迷你電腦上做本地 AI 語音，關鍵不是追求電話級即時對話，而是用 MOSS-TTS-Nano / ONNX Runtime 降低硬體門檻、用 FastAPI 常駐模型消除 20–30 秒載入延遲、用 ffmpeg 轉成通訊平台支援格式，最後把它定位成「非同步語音助理」：接任務、背景執行、完成後用語音回報。",
+    "slug": "2026-06-08-moss-tts-nano-cpu-local-voice-assistant-openclaw",
+    "html": "articles/2026-06-08-moss-tts-nano-cpu-local-voice-assistant-openclaw.html",
+    "markdown": "articles/2026/06/2026-06-08-moss-tts-nano-cpu-local-voice-assistant-openclaw.md"
+  },
+  {
     "title": "NVIDIA LocateAnything-3B 本機視覺定位測試｜OCR、物件偵測與 Promptable Grounding 觀察",
     "date": "2026-06-08",
     "source": "line-user-upload",

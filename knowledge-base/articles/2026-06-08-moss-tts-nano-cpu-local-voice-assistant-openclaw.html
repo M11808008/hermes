@@ -1,0 +1,72 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>無 GPU 迷你電腦自架 AI 語音｜MOSS-TTS-Nano、FastAPI 常駐與 Telegram 語音回報流程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>無 GPU 迷你電腦自架 AI 語音｜MOSS-TTS-Nano、FastAPI 常駐與 Telegram 語音回報流程</h1><h1>無 GPU 迷你電腦自架 AI 語音｜MOSS-TTS-Nano、FastAPI 常駐與 Telegram 語音回報流程</h1>
+<p>來源：欒帥分享的 LINE 文字攻略與資訊圖，主題是用數千元等級 N200 迷你電腦、純 CPU、零 GPU 成本，讓「龍蝦 / OpenClaw」把文字合成語音並透過 Telegram 發送語音訊息。官方 MOSS-TTS-Nano README 顯示，MOSS-TTS-Nano 是 MOSI.AI 與 OpenMOSS 團隊開源的多語言微型語音生成模型，約 0.1B 參數，可直接在 CPU 上運行；2026-04-17 釋出的 ONNX CPU 版本移除 PyTorch 推理依賴，並保留音色克隆工作流。</p>
+<h1>一句話摘要</h1>
+<p>在無 GPU 的迷你電腦上做本地 AI 語音，關鍵不是追求電話級即時對話，而是用 MOSS-TTS-Nano / ONNX Runtime 降低硬體門檻、用 FastAPI 常駐模型消除 20–30 秒載入延遲、用 ffmpeg 轉成通訊平台支援格式，最後把它定位成「非同步語音助理」：接任務、背景執行、完成後用語音回報。</p>
+<h1>架構重點</h1>
+<p>| 層級 | 選擇 | 用意 |</p>
+<p>|---|---|---|</p>
+<p>| TTS 模型 | MOSS-TTS-Nano | 輕量、多語言、CPU 友善，支援中英文與自備音檔聲線 |</p>
+<p>| 推理後端 | ONNX Runtime CPU | 避免 PyTorch 推理依賴，適合 N200 / 低功耗主機 |</p>
+<p>| 服務方式 | FastAPI 常駐 | 模型始終待命於記憶體，避免每次生成重載入模型 |</p>
+<p>| 音訊轉碼 | ffmpeg | WAV 轉為目標平台可接受格式，例如 Telegram voice 的 OGG/Opus |</p>
+<p>| 發送端 | Telegram Bot / 平台 API | 文字輸入後由腳本完成合成、轉碼、發送 |</p>
+<p>| 使用情境 | 非同步語音回報 | 適合任務完成通知，不適合秒問秒答串流對話 |</p>
+<h1>欒帥分享的實測數據</h1>
+<p>| 項目 | 實測觀察 |</p>
+<p>|---|---|</p>
+<p>| 硬體 | N200 迷你電腦，無獨立 GPU |</p>
+<p>| TTS 合成速度 | 約 1.6 字元/秒 |</p>
+<p>| 37 字語音 TTS 合成 | 約 42 秒 |</p>
+<p>| OGG 轉換 | 約 1 秒 |</p>
+<p>| Telegram 傳送 | 約 2 秒 |</p>
+<p>| 總耗時 | 約 45 秒 |</p>
+<p>| 判斷 | 可以做語音回報，不適合即時串流對話 |</p>
+<h1>FastAPI 常駐的核心價值</h1>
+<p>傳統腳本若每次收到文字才載入模型，初始化可能額外耗掉 20–30 秒。對純 CPU TTS 來說，這段時間非常昂貴。</p>
+<p>較好的模式是：</p>
+<ul>
+<li>啟動 FastAPI TTS server。</li>
+<li>服務啟動時載入模型與 tokenizer / audio tokenizer。</li>
+<li>模型常駐記憶體。</li>
+<li>外部 Python 腳本收到文字後，送 HTTP request 給 TTS server。</li>
+<li>server 直接產生 WAV，再交由腳本轉碼與發送。</li>
+</ul>
+<p>這個設計把「模型初始化」從每次任務成本移到服務啟動成本，對聊天機器人與背景助理尤其重要。</p>
+<h1>Telegram / LINE / 其他平台的音訊格式提醒</h1>
+<p>Telegram 原生語音訊息通常要 OGG/Opus，因此合成出的 WAV 需要先用 ffmpeg 轉碼。若改接 LINE、Discord、網頁播放器或其他通訊平台，不要直接照抄 Telegram 參數，應先確認平台接受的 audio MIME type、取樣率、檔案大小與語音泡泡規格。</p>
+<p>這篇攻略可抽象成一條穩定管線：</p>
+<p>```text</p>
+<p>文字 → TTS HTTP API → WAV → ffmpeg 轉碼 → 平台 API 發送 → 語音回報</p>
+<p>```</p>
+<h1>適合與不適合的場景</h1>
+<h2>適合</h2>
+<ul>
+<li>任務完成後用語音摘要回報。</li>
+<li>長任務、背景任務、排程任務的狀態通知。</li>
+<li>不想盯螢幕時，用語音聽 AI 回報結果。</li>
+<li>本地優先、低成本、無 GPU 的個人助理實驗。</li>
+<li>OpenClaw / Telegram Bot / Hermes 類 agent 的語音輸出模組。</li>
+</ul>
+<h2>不適合</h2>
+<ul>
+<li>像電話一樣即時雙向語音對話。</li>
+<li>每句都需要秒級回應的客服場景。</li>
+<li>很長篇文字一次合成且要求快速完成。</li>
+<li>對聲音品質、情緒控制、多人對話切換有高商用品質要求的場景。</li>
+</ul>
+<h1>對 Luarn-Pin 的可用延伸</h1>
+<ul>
+<li>把 TTS 當成「非同步任務完成鈴聲」，不是即時對話介面。</li>
+<li>長回覆仍保留文字版，語音只播重點摘要，避免 CPU 合成時間過長。</li>
+<li>Hermes / OpenClaw 類 agent 可做成雙通道：LINE / Telegram 先回短文字，背景合成語音後再補語音檔。</li>
+<li>若部署在 Mac 或更強 CPU，可把同一架構平移，只需調整 ONNX Runtime、ffmpeg 參數與平台發送 API。</li>
+<li>若未來要支援 LINE 語音，需先確認 LINE_PUBLIC_URL 與可公開下載的 HTTPS 音訊 URL，因 LINE Messaging API 對 media delivery 有公開 URL 需求。</li>
+</ul>
+<h1>官方資料補充</h1>
+<ul>
+<li>OpenMOSS/MOSS-TTS-Nano GitHub：模型定位為多語言 tiny speech generation model，約 0.1B 參數，可在 CPU 無 GPU 環境運行。</li>
+<li>ONNX CPU 版本：官方 2026-04-17 更新指出推理階段不依賴 PyTorch，搭配 MOSS-TTS-Nano-100M-ONNX 與 MOSS-Audio-Tokenizer-Nano-ONNX。</li>
+<li>MOSS-TTS-Nano-Reader：官方同時提到瀏覽器插件版本可在瀏覽器內直接運行模型，代表此類輕量 TTS 有走向端側 / edge deployment 的潛力。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>欒帥分享的 1.6 字元/秒與 37 字約 45 秒是特定 N200 迷你電腦與該流程的實測值；不同 CPU、記憶體、ONNX Runtime 設定、文字長度、語音參考檔與音訊參數都會影響速度。官方 README 提到 CPU 友善與 ONNX CPU 版本，但實際延遲仍需以部署主機測試為準。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-08 · line-user-upload · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">TTS</span><span class="tag">語音合成</span><span class="tag">本地 AI</span><span class="tag">Local AI</span><span class="tag">CPU Inference</span><span class="tag">ONNX Runtime</span><span class="tag">FastAPI</span><span class="tag">Telegram Bot</span><span class="tag">OpenClaw</span><span class="tag">ffmpeg</span><span class="tag">MOSS-TTS-Nano</span><span class="tag">非同步助理</span><h3>原始連結</h3><p><a href="line://text-and-image/moss-tts-nano-cpu-local-voice-assistant" target="_blank" rel="noopener">line://text-and-image/moss-tts-nano-cpu-local-voice-assistant</a></p><p><a href="https://github.com/OpenMOSS/MOSS-TTS-Nano" target="_blank" rel="noopener">https://github.com/OpenMOSS/MOSS-TTS-Nano</a></p><p><a href="https://github.com/OpenMOSS/MOSS-TTS-Nano" target="_blank" rel="noopener">https://github.com/OpenMOSS/MOSS-TTS-Nano</a></p><p><a href="https://github.com/OpenMOSS/MOSS-TTS-Nano/blob/main/README_zh.md" target="_blank" rel="noopener">https://github.com/OpenMOSS/MOSS-TTS-Nano/blob/main/README_zh.md</a></p><p><a href="https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano" target="_blank" rel="noopener">https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano</a></p><p><a href="https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX" target="_blank" rel="noopener">https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX</a></p><p><a href="https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX" target="_blank" rel="noopener">https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX</a></p><p><a href="https://openmoss.github.io/MOSS-TTS-Nano-Demo/" target="_blank" rel="noopener">https://openmoss.github.io/MOSS-TTS-Nano-Demo/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
