@@ -66,6 +66,42 @@
     "markdown": "articles/2026/06/2026-06-07-deutsche-bahn-delay-travel-rights-patreon.md"
   },
   {
+    "title": "真正有用的 AI Chatbot 至少四層｜從 Facebook Reel 延伸出的企業聊天機器人架構檢核",
+    "date": "2026-06-07",
+    "source": "https://www.facebook.com/reel/959455887012372",
+    "author": "David Ooi",
+    "type": "article",
+    "topics": [
+      "AI Chatbot",
+      "Chatbot",
+      "AI Agent",
+      "Automation",
+      "RAG",
+      "Tool Use",
+      "MCP",
+      "企業導入",
+      "工作流自動化"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1FprbkVgZ1/",
+      "https://www.facebook.com/reel/959455887012372",
+      "https://www.facebook.com/reel/959455887012372",
+      "https://www.facebook.com/share/v/1FprbkVgZ1/",
+      "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview",
+      "https://platform.openai.com/docs/guides/function-calling",
+      "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
+      "https://docs.anthropic.com/en/docs/agents-and-tools/mcp",
+      "https://learn.microsoft.com/en-us/azure/foundry/responsible-use-of-ai-overview"
+    ],
+    "excerpt": "不要把企業 AI chatbot 做成「一個聊天框接一個模型」；真正能幫公司省錢的 chatbot，至少要同時設計介面層、知識/RAG 層、工具/工作流層，以及治理/評估層。",
+    "slug": "2026-06-07-useful-ai-chatbot-four-layer-architecture-facebook-reel",
+    "html": "articles/2026-06-07-useful-ai-chatbot-four-layer-architecture-facebook-reel.html",
+    "markdown": "articles/2026/06/2026-06-07-useful-ai-chatbot-four-layer-architecture-facebook-reel.md"
+  },
+  {
     "title": "Claude Code × LibTV｜一句話自動生成 15 秒手機廣告的 AI Agent 工作流",
     "date": "2026-06-06",
     "source": "https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk",
