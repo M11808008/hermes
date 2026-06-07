@@ -33,6 +33,39 @@
     "markdown": "articles/2026/06/2026-06-07-claude-pubmed-connector-mcp-literature-search.md"
   },
   {
+    "title": "德鐵 DB 延誤不用怕｜5 個把延誤缺點轉成旅遊福利的實用規則",
+    "date": "2026-06-07",
+    "source": "https://www.patreon.com/posts/db-yan-wu-bu-pa-160285347",
+    "author": "Egalbox 德語學習誌",
+    "type": "article",
+    "topics": [
+      "德國旅行",
+      "德國鐵路",
+      "Deutsche Bahn",
+      "DB",
+      "旅遊攻略",
+      "交通",
+      "旅客權益",
+      "生活資料"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.patreon.com/posts/db-yan-wu-bu-pa-160285347",
+      "https://www.patreon.com/posts/db-yan-wu-bu-pa-160285347",
+      "https://www.patreon.com/posts/db-yan-wu-bu-pa-160285347",
+      "https://www.bahn.de/faq/zugbindung-aufgehoben-bedeutung",
+      "https://www.bahn.de/faq/wann-darf-ich-ein-taxi-nutzen",
+      "https://www.bahn.de/faq/pk/service/buchung/fahrgastrechte",
+      "https://www.bahn.de/faq/pk/angebot/regionale-angebote/deutschland-ticket/fahrgastrechte"
+    ],
+    "excerpt": "在德國搭 DB，不要只把延誤當災難：只要把慢車與高鐵買成同一張聯程票、掌握 20 分鐘解除車次限制、善用中途停留、深夜斷鏈時計程車報銷，以及精算一等座價差，就能把 DB 的不穩定轉成更有彈性的旅行策略。",
+    "slug": "2026-06-07-deutsche-bahn-delay-travel-rights-patreon",
+    "html": "articles/2026-06-07-deutsche-bahn-delay-travel-rights-patreon.html",
+    "markdown": "articles/2026/06/2026-06-07-deutsche-bahn-delay-travel-rights-patreon.md"
+  },
+  {
     "title": "Claude Code × LibTV｜一句話自動生成 15 秒手機廣告的 AI Agent 工作流",
     "date": "2026-06-06",
     "source": "https://www.threads.com/@vava_ai_artist/post/DZQK1seE-Lk",
