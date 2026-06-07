@@ -1,5 +1,44 @@
 [
   {
+    "title": "Google Veo 3 免費額度整理｜Opal、Flow、Gemini 三路徑與 440 支影片說法核對",
+    "date": "2026-06-08",
+    "source": "line-user-text",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI影片",
+      "Google",
+      "Veo",
+      "Veo3",
+      "Gemini",
+      "Google Flow",
+      "Google Opal",
+      "免費額度",
+      "生成式AI",
+      "生活資料"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "line://user-shared-video/veo-3-free-quota",
+      "https://deepmind.google/models/veo/",
+      "https://deepmind.google/models/veo/",
+      "https://aistudio.google.com/models/veo-3",
+      "https://labs.google/fx/tools/flow",
+      "https://support.google.com/flow/answer/16526234",
+      "https://labs.google/opal",
+      "https://developers.google.com/opal",
+      "https://developers.googleblog.com/introducing-opal/",
+      "https://support.google.com/googleone/answer/16287445"
+    ],
+    "excerpt": "「每月 440 支 Veo 3 影片」的算法大致是：Opal 10/天 × 30 = 300，加 Gemini 3/天 × 30 = 90，再加 Flow 50/月 = 50，合計 440；但這是社群整理的額度推算法，不等於 Google 官方承諾。實際可用量會受到地區、帳號、Google AI 方案、Flow credits、模型版本、生成成本與風控限制影響。",
+    "slug": "2026-06-08-google-veo-3-free-quota-opal-flow-gemini-guide",
+    "html": "articles/2026-06-08-google-veo-3-free-quota-opal-flow-gemini-guide.html",
+    "markdown": "articles/2026/06/2026-06-08-google-veo-3-free-quota-opal-flow-gemini-guide.md"
+  },
+  {
     "title": "無 GPU 迷你電腦自架 AI 語音｜MOSS-TTS-Nano、FastAPI 常駐與 Telegram 語音回報流程",
     "date": "2026-06-08",
     "source": "line-user-upload",
