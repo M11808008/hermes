@@ -1,0 +1,159 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 建站工作流｜從 PRD、設計、技術架構到 Git 部署的一次完成流程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI 建站工作流｜從 PRD、設計、技術架構到 Git 部署的一次完成流程</h1><h1>AI 建站工作流｜從 PRD、設計、技術架構到 Git 部署的一次完成流程</h1>
+<p>來源：AIharrylee Facebook Reel。影片標題為「0407 2026 AI 建站流程：從想法到網站一次完成无回复.mp4」，主張現在建立網站不再需要傳統繁瑣流程，可以用 AI 串起 PRD、設計、技術架構、實際開發、程式碼掃描、Git 整合與部署。</p>
+<h1>一句話摘要</h1>
+<p>這支 Reel 的核心不是單一工具，而是一條「AI 產品開發管線」：先讓 AI 把想法轉成 PRD 與設計/技術規格，再用 v0 / Lovable / Bolt.new 這類 AI builder 產生可運行網站，最後接 GitHub、code review、code scanning 與部署流程，讓創業原型或公司網站快速從概念走到上線。</p>
+<h1>Reel 擷取資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Reel ID | 2041866110095456 |</p>
+<p>| 作者 | AIharrylee |</p>
+<p>| 發布日期 | 2026-04-07 |</p>
+<p>| 影片長度 | 約 50 秒 |</p>
+<p>| 觀看數 | 約 23,362（擷取時） |</p>
+<p>| 原文描述 | 透過 AI 可從 PRD、設計文件、技術架構到實際開發一次完成，並結合程式碼掃描與 Git 整合 |</p>
+<p>| Hashtags | #AI建站 #網站開發 #AI工具 #科技創作 #數位創業 #程式開發 #AI生產力 #網站設計 #創業工具 #科技趨勢 |</p>
+<h1>AI 建站流程拆解</h1>
+<p>| 階段 | 產物 | AI 可以做什麼 | 檢查重點 |</p>
+<p>|---|---|---|---|</p>
+<p>| 1. 想法整理 | Problem statement / one-liner | 把粗略想法轉成目標用戶、痛點、價值主張 | 不要只寫功能；先定義誰會用、為什麼需要 |</p>
+<p>| 2. PRD | Product Requirements Document | 產生功能列表、使用者故事、驗收標準、限制條件 | PRD 要有優先級、非功能需求、例外情境 |</p>
+<p>| 3. 設計文件 | UX flow / wireframe / UI spec | 產生頁面架構、互動流程、文案、component list | 檢查手機版、空狀態、錯誤狀態、loading 狀態 |</p>
+<p>| 4. 技術架構 | Tech spec / data model / API plan | 建議框架、資料庫、API、部署方式、權限模型 | 避免 AI 過度設計；先求可交付 MVP |</p>
+<p>| 5. AI 開發 | 前端/後端程式碼 | 用 v0、Lovable、Bolt.new、Cursor、Claude Code 等生成與迭代 | 每次改動要小步 commit，可跑起來才算完成 |</p>
+<p>| 6. 程式碼掃描 | Code review / CodeQL / secret scanning | 自動檢查安全、品質、lint、型別、依賴風險 | AI 生成碼很容易藏憑證、權限漏洞、未處理錯誤 |</p>
+<p>| 7. Git 整合 | Repo / branch / PR | 推到 GitHub、產生 PR、用 Copilot code review 或 CI 檢查 | 保留 diff、review comments、rollback 方案 |</p>
+<p>| 8. 部署 | Preview / production URL | Vercel/Netlify/Cloudflare Pages 等快速部署 | 設定環境變數、網域、監控與回復策略 |</p>
+<h1>可用工具定位</h1>
+<h2>v0 by Vercel</h2>
+<p>v0 的官方定位是用 AI 建 full-stack web apps，搜尋結果與官方頁都強調可連接 GitHub、推送程式碼到 repository，並與 Vercel 的 preview/deploy 流程高度整合。</p>
+<p>適合：</p>
+<ul>
+<li>React / Next.js / Tailwind 類型網站</li>
+<li>Landing page、dashboard、SaaS prototype</li>
+<li>想快速取得高質感 UI 並部署到 Vercel</li>
+</ul>
+<h2>Lovable</h2>
+<p>Lovable 是 AI app builder，官方文件明確提供 GitHub integration。連到 GitHub 後可備份程式碼、協作、使用 pull requests、branches 與 code reviews。</p>
+<p>適合：</p>
+<ul>
+<li>快速產出完整 app 原型</li>
+<li>非工程背景產品人想先做 MVP</li>
+<li>需要把 AI 生成結果交給工程師接手維護</li>
+</ul>
+<h2>Bolt.new</h2>
+<p>Bolt.new 強調瀏覽器內 full-stack 開發，結合 AI 與 StackBlitz WebContainers，可 prompt、run、edit、deploy full-stack web applications。它適合快速跑起 Node/前端專案，而不是只有靜態 UI 圖。</p>
+<p>適合：</p>
+<ul>
+<li>要立刻在瀏覽器內跑起前後端 prototype</li>
+<li>想用 prompt 迭代功能並即時測試</li>
+<li>要教學、demo、hackathon 快速交付</li>
+</ul>
+<h2>GitHub Copilot code review / code scanning</h2>
+<p>GitHub 官方文件指出 Copilot code review 可對 PR 中的程式碼變更提供回饋；code scanning / Copilot Autofix 則可協助處理安全警示，但官方也提醒 AI 建議需要人工審查與測試。</p>
+<p>適合：</p>
+<ul>
+<li>PR 自動 review</li>
+<li>找出明顯 bug、品質問題、安全風險</li>
+<li>搭配 CodeQL、secret scanning、CI 測試建立最低安全網</li>
+</ul>
+<h1>欒帥可用的高品質建站 SOP</h1>
+<h2>Step 1：先寫一頁式產品簡報</h2>
+<p>```text</p>
+<p>產品名稱：</p>
+<p>目標使用者：</p>
+<p>使用情境：</p>
+<p>核心痛點：</p>
+<p>三個最重要功能：</p>
+<p>不做什麼：</p>
+<p>成功指標：</p>
+<p>```</p>
+<h2>Step 2：請 AI 產 PRD</h2>
+<p>Prompt 範例：</p>
+<p>```text</p>
+<p>請把以下產品想法整理成可交給 AI builder 和工程師使用的 PRD。</p>
+<p>請包含：目標用戶、核心 user stories、MVP 範圍、功能優先級、資料模型、頁面列表、驗收標準、非功能需求、風險與不做項目。</p>
+<p>```</p>
+<h2>Step 3：把 PRD 轉成設計與技術規格</h2>
+<p>輸出至少要有：</p>
+<ul>
+<li>sitemap</li>
+<li>user flow</li>
+<li>component list</li>
+<li>page-by-page UI spec</li>
+<li>data schema</li>
+<li>API routes</li>
+<li>auth / permission rules</li>
+<li>deployment target</li>
+</ul>
+<h2>Step 4：交給 AI builder 產第一版</h2>
+<p>根據需求選工具：</p>
+<p>| 需求 | 優先工具 |</p>
+<p>|---|---|</p>
+<p>| 高質感前端與 Vercel 部署 | v0 |</p>
+<p>| 快速完整 app / no-code MVP | Lovable |</p>
+<p>| 需要瀏覽器內跑 full-stack | Bolt.new |</p>
+<p>| 要精修既有 repo | Cursor / Claude Code / Codex |</p>
+<h2>Step 5：GitHub 化</h2>
+<p>不要只留在 AI builder 裡，至少要做到：</p>
+<ul>
+<li>建 GitHub repo。</li>
+<li>每個功能分 branch。</li>
+<li>透過 PR 合併。</li>
+<li>啟用基本 CI / lint / typecheck。</li>
+<li>啟用 secret scanning / dependency alerts / code scanning。</li>
+<li>部署 preview URL。</li>
+</ul>
+<h2>Step 6：上線前檢查</h2>
+<p>| 類別 | 檢查 |</p>
+<p>|---|---|</p>
+<p>| 功能 | 核心流程可完整跑完 |</p>
+<p>| RWD | 手機、平板、桌面都能用 |</p>
+<p>| 表單 | 必填、錯誤訊息、防重送 |</p>
+<p>| 安全 | 沒有 hardcoded secrets、API key 不暴露前端 |</p>
+<p>| SEO | title、description、OG image |</p>
+<p>| 效能 | 首屏載入、圖片壓縮 |</p>
+<p>| 分析 | GA / Plausible / Vercel Analytics |</p>
+<p>| 回復 | 有 rollback / previous deployment |</p>
+<h1>關鍵判斷：AI 建站不是省掉流程，而是壓縮流程</h1>
+<p>這支 Reel 容易被誤解成「AI 直接幫你把網站做完」。更精準的理解是：AI 把原本跨產品、設計、工程、QA、DevOps 的流程壓縮到一個可快速迭代的工作台，但每一層仍需要驗證。</p>
+<p>最常見的失敗點：</p>
+<ul>
+<li>沒有 PRD，直接 prompt 生成，導致功能散亂。</li>
+<li>AI 生成漂亮 UI，但資料模型與權限設計不可用。</li>
+<li>沒接 GitHub，版本不可追蹤。</li>
+<li>沒有 code scanning，API key 或權限漏洞外洩。</li>
+<li>沒有測試，demo 可以跑，上線就壞。</li>
+</ul>
+<h1>欒帥可直接複用的工作流模板</h1>
+<p>```text</p>
+<p>Idea → PRD → UX Flow → UI Spec → Tech Spec → AI Builder Draft → Local/Preview Test → GitHub PR → Code Review/Scanning → Vercel Preview → Production Deploy → Analytics/Feedback → Iteration</p>
+<p>```</p>
+<h1>適合使用情境</h1>
+<p>| 情境 | 適合程度 | 理由 |</p>
+<p>|---|---|---|</p>
+<p>| 課程 landing page | 高 | 內容與 UI 可快速生成，部署簡單 |</p>
+<p>| 活動報名頁 | 高 | 表單、名單、通知可快速串接，但注意個資與權限 |</p>
+<p>| SaaS MVP | 中高 | 可先做 prototype，正式上線需補安全/測試/架構 |</p>
+<p>| 公司官網 | 高 | PRD + design spec + v0/Vercel 很適合 |</p>
+<p>| 複雜企業系統 | 中低 | AI 可輔助規格與局部開發，但需完整工程治理 |</p>
+<p>| 金流/醫療/高風險系統 | 低 | 不能只靠 AI builder，需嚴格審計與合規 |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>Reel 內容偏概念介紹，未指定單一工具或實際 demo 細節；本文以官方工具頁補充形成可操作流程。</li>
+<li>v0、Lovable、Bolt.new、GitHub Copilot 等工具功能與價格會快速變動，實作前需看最新官方文件。</li>
+<li>AI 生成程式碼仍需人工 review、測試與資安檢查，尤其是 auth、資料庫規則、API key、付款與個資。</li>
+<li>產品/公司網站若要正式公開，仍需檢查法律條款、隱私權政策、Cookie、SEO、無障礙與品牌一致性。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Facebook Reel：<a href="https://www.facebook.com/reel/2041866110095456" target="_blank" rel="noopener">https://www.facebook.com/reel/2041866110095456</a></li>
+<li>分享來源：<a href="https://www.facebook.com/share/r/1DKBxW2tu7/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1DKBxW2tu7/?mibextid=wwXIfr</a></li>
+<li>v0 by Vercel：<a href="https://v0.app/" target="_blank" rel="noopener">https://v0.app/</a></li>
+<li>Vercel v0 announcement：<a href="https://vercel.com/blog/introducing-the-new-v0" target="_blank" rel="noopener">https://vercel.com/blog/introducing-the-new-v0</a></li>
+<li>Lovable GitHub integration：<a href="https://docs.lovable.dev/integrations/github" target="_blank" rel="noopener">https://docs.lovable.dev/integrations/github</a></li>
+<li>Lovable：<a href="https://lovable.dev/" target="_blank" rel="noopener">https://lovable.dev/</a></li>
+<li>Bolt.new：<a href="https://bolt.new/" target="_blank" rel="noopener">https://bolt.new/</a></li>
+<li>Bolt.new GitHub：<a href="https://github.com/stackblitz/bolt.new" target="_blank" rel="noopener">https://github.com/stackblitz/bolt.new</a></li>
+<li>GitHub Copilot code review：<a href="https://docs.github.com/en/copilot/concepts/agents/code-review" target="_blank" rel="noopener">https://docs.github.com/en/copilot/concepts/agents/code-review</a></li>
+<li>Copilot Autofix / code scanning：<a href="https://docs.github.com/en/code-security/responsible-use/responsible-use-autofix-code-scanning" target="_blank" rel="noopener">https://docs.github.com/en/code-security/responsible-use/responsible-use-autofix-code-scanning</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-08 · https://www.facebook.com/share/r/1DKBxW2tu7/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI建站</span><span class="tag">網站開發</span><span class="tag">Vibe Coding</span><span class="tag">PRD</span><span class="tag">Product Design</span><span class="tag">GitHub</span><span class="tag">Code Review</span><span class="tag">Code Scanning</span><span class="tag">Vercel</span><span class="tag">創業工具</span><h3>原始連結</h3><p><a href="https://www.facebook.com/reel/2041866110095456" target="_blank" rel="noopener">https://www.facebook.com/reel/2041866110095456</a></p><p><a href="https://v0.app/" target="_blank" rel="noopener">https://v0.app/</a></p><p><a href="https://www.facebook.com/share/r/1DKBxW2tu7/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1DKBxW2tu7/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/2041866110095456" target="_blank" rel="noopener">https://www.facebook.com/reel/2041866110095456</a></p><p><a href="https://v0.app/" target="_blank" rel="noopener">https://v0.app/</a></p><p><a href="https://vercel.com/blog/introducing-the-new-v0" target="_blank" rel="noopener">https://vercel.com/blog/introducing-the-new-v0</a></p><p><a href="https://docs.lovable.dev/integrations/github" target="_blank" rel="noopener">https://docs.lovable.dev/integrations/github</a></p><p><a href="https://lovable.dev/" target="_blank" rel="noopener">https://lovable.dev/</a></p><p><a href="https://bolt.new/" target="_blank" rel="noopener">https://bolt.new/</a></p><p><a href="https://github.com/stackblitz/bolt.new" target="_blank" rel="noopener">https://github.com/stackblitz/bolt.new</a></p><p><a href="https://docs.github.com/en/copilot/concepts/agents/code-review" target="_blank" rel="noopener">https://docs.github.com/en/copilot/concepts/agents/code-review</a></p><p><a href="https://docs.github.com/en/code-security/responsible-use/responsible-use-autofix-code-scanning" target="_blank" rel="noopener">https://docs.github.com/en/code-security/responsible-use/responsible-use-autofix-code-scanning</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -1,5 +1,46 @@
 [
   {
+    "title": "AI 建站工作流｜從 PRD、設計、技術架構到 Git 部署的一次完成流程",
+    "date": "2026-06-08",
+    "source": "https://www.facebook.com/share/r/1DKBxW2tu7/?mibextid=wwXIfr",
+    "author": "AIharrylee",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI建站",
+      "網站開發",
+      "Vibe Coding",
+      "PRD",
+      "Product Design",
+      "GitHub",
+      "Code Review",
+      "Code Scanning",
+      "Vercel",
+      "創業工具"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/2041866110095456",
+      "https://v0.app/",
+      "https://www.facebook.com/share/r/1DKBxW2tu7/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2041866110095456",
+      "https://v0.app/",
+      "https://vercel.com/blog/introducing-the-new-v0",
+      "https://docs.lovable.dev/integrations/github",
+      "https://lovable.dev/",
+      "https://bolt.new/",
+      "https://github.com/stackblitz/bolt.new",
+      "https://docs.github.com/en/copilot/concepts/agents/code-review",
+      "https://docs.github.com/en/code-security/responsible-use/responsible-use-autofix-code-scanning"
+    ],
+    "excerpt": "這支 Reel 的核心不是單一工具，而是一條「AI 產品開發管線」：先讓 AI 把想法轉成 PRD 與設計/技術規格，再用 v0 / Lovable / Bolt.new 這類 AI builder 產生可運行網站，最後接 GitHub、code review、code scanning 與部署流程，讓創業原型或公司網站快速從概念走到上線。",
+    "slug": "2026-06-08-ai-website-building-prd-design-git-workflow-facebook-reel",
+    "html": "articles/2026-06-08-ai-website-building-prd-design-git-workflow-facebook-reel.html",
+    "markdown": "articles/2026/06/2026-06-08-ai-website-building-prd-design-git-workflow-facebook-reel.md"
+  },
+  {
     "title": "Google Veo 3 免費額度整理｜Opal、Flow、Gemini 三路徑與 440 支影片說法核對",
     "date": "2026-06-08",
     "source": "line-user-text",
