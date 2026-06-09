@@ -1,5 +1,40 @@
 [
   {
+    "title": "NotebookLM 升級為代理式研究夥伴｜Gemini 3.5、Antigravity、雲端電腦與多格式輸出",
+    "date": "2026-06-09",
+    "source": "threads",
+    "author": "prompt_case",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Google",
+      "NotebookLM",
+      "Gemini",
+      "Gemini3.5",
+      "Antigravity",
+      "AI Agent",
+      "研究工作流",
+      "RAG",
+      "生產力",
+      "文件自動化"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/DZWSfOwjUii",
+      "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/",
+      "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/",
+      "https://www.threads.com/@prompt_case/post/DZWSfOwjUii",
+      "https://www.cnet.com/tech/services-and-software/notebooklm-big-upgrade-better-research/",
+      "https://arstechnica.com/ai/2026/06/gemini-3-5-and-antigravity-come-to-google-notebooklm/"
+    ],
+    "excerpt": "NotebookLM 正在從來源問答工具升級成代理式研究工作台：底層導入 Gemini 3.5 與 Antigravity，每本 Notebook 配備可寫碼、跑分析的安全雲端電腦，並能把來源脈絡輸出成 PDF、DOCX、Markdown、圖表、圖片、CSV、JSON、XLSX、PPTX 等可編輯成果；但首波主要開放給 Google AI Ultra 與 Workspace 企業進階用戶。",
+    "slug": "2026-06-09-notebooklm-gemini-3-5-antigravity-agentic-research",
+    "html": "articles/2026-06-09-notebooklm-gemini-3-5-antigravity-agentic-research.html",
+    "markdown": "articles/2026/06/2026-06-09-notebooklm-gemini-3-5-antigravity-agentic-research.md"
+  },
+  {
     "title": "AI 建站工作流｜從 PRD、設計、技術架構到 Git 部署的一次完成流程",
     "date": "2026-06-08",
     "source": "https://www.facebook.com/share/r/1DKBxW2tu7/?mibextid=wwXIfr",
