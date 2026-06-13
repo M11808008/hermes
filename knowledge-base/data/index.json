@@ -113,6 +113,40 @@
     "markdown": "articles/2026/06/2026-06-13-flixbus-portugal-spain-new-routes-facebook-travel.md"
   },
   {
+    "title": "GordenSuperPPTSkills｜GPT 圖片簡報轉可編輯 PPTX 的 AI Skill 工作流",
+    "date": "2026-06-13",
+    "source": "https://www.threads.com/@govin999999/post/DZZCVd6kU7n",
+    "author": "Govin.AI / GordenSun",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI簡報",
+      "PPT",
+      "PowerPoint",
+      "GPT",
+      "Codex",
+      "AI Agent",
+      "可編輯簡報",
+      "圖像轉文件",
+      "生產力",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@govin999999/post/DZZCVd6kU7n",
+      "https://github.com/GordenSun/GordenSuperPPTSkills",
+      "https://www.threads.com/@govin999999/post/DZZCVd6kU7n",
+      "https://github.com/GordenSun/GordenSuperPPTSkills",
+      "https://raw.githubusercontent.com/GordenSun/GordenSuperPPTSkills/main/README.md"
+    ],
+    "excerpt": "GordenSuperPPTSkills 的核心不是傳統模板套版，而是「先讓 GPT 產生高美感圖片投影片，再用視覺解析把背景、骨架、圖標/裝飾、文字按座標重建成可編輯 PPTX」；它很適合追求設計感與後續可修改性的簡報流程，但目前 README 明確標示僅限 Codex 使用，且圖片轉可編輯 PPTX 會消耗較多 Plus / 推理額度。",
+    "slug": "2026-06-13-gorden-super-ppt-skills-image-to-editable-pptx-threads",
+    "html": "articles/2026-06-13-gorden-super-ppt-skills-image-to-editable-pptx-threads.html",
+    "markdown": "articles/2026/06/2026-06-13-gorden-super-ppt-skills-image-to-editable-pptx-threads.md"
+  },
+  {
     "title": "NotebookLM 升級為代理式研究夥伴｜Gemini 3.5、Antigravity、雲端電腦與多格式輸出",
     "date": "2026-06-09",
     "source": "threads",
