@@ -1,0 +1,94 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cursor Agent + MediaPipe｜用自然語言打造 webcam 手勢濾鏡互動 demo</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Cursor Agent + MediaPipe｜用自然語言打造 webcam 手勢濾鏡互動 demo</h1><h1>Cursor Agent + MediaPipe｜用自然語言打造 webcam 手勢濾鏡互動 demo</h1>
+<p>來源為 ui.ananya 的 Facebook 影片。影片 caption 直接公開三段 prompt，展示如何用 Cursor Agent 從零生成一個 webcam 互動濾鏡 demo：用 MediaPipe Hands 追蹤食指白點，從 21 個 hand landmarks 判斷 fist、peace sign、index finger、open hand，再把不同手勢映射成 dither、VHS chromatic aberration、spotlight、water ripple 等視覺效果。</p>
+<h1>一句話摘要</h1>
+<p>這是一個很好的「Vibe Coding 進階範例」：不是只叫 AI 做靜態網頁，而是把瀏覽器 webcam、MediaPipe 即時手部追蹤、手勢分類、Canvas/影像濾鏡與互動映射拆成連續 prompt，讓 Cursor Agent 逐步寫出可跑的互動作品。</p>
+<h1>原影片重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 平台 | Facebook video / Reel |</p>
+<p>| 分享者 | ui.ananya |</p>
+<p>| 影片 ID | 938668432317954 |</p>
+<p>| 擷取時互動 | 約 1,290 萬次觀看、23 萬個心情 |</p>
+<p>| 工具主張 | Cursor Agent 可依自然語言 prompt 產生完整 demo code，並自行修錯 |</p>
+<p>| 技術關鍵字 | webcam、MediaPipe Hands、21 landmarks、gesture detection、visual filters |</p>
+<p>| 判讀 | 對 prototyping 很有價值；但 production 仍需程式審查、瀏覽器權限、安全與效能測試 |</p>
+<h1>原始 prompts</h1>
+<p>| Prompt | 內容 | 對應功能 |</p>
+<p>|---|---|---|</p>
+<p>| 1 | open my webcam fullscreen and use MediaPipe hands to track a white dot on my index fingertip | 開啟 webcam、全螢幕顯示、MediaPipe 手部追蹤、食指點位視覺化 |</p>
+<p>| 2 | detect hand gestures: fist, peace sign, index finger, open hand from the 21 landmarks and map each one to a visual filter on the webcam feed | 從 21 個手部 landmarks 推論手勢，並連接視覺濾鏡 |</p>
+<p>| 3 | map gestures to filters — fist: dither, peace sign: VHS with chromatic aberration, pointing finger: spotlight, open hand: water ripple | 建立 gesture-to-effect 對照表 |</p>
+<h1>官方資料交叉驗證</h1>
+<p>| 主題 | 官方來源 | 已驗證資訊 |</p>
+<p>|---|---|---|</p>
+<p>| Cursor Agent | Cursor Docs：Agent overview / Agent mode | Agent 可處理 autonomous coding tasks、code editing、terminal commands；適合用於多檔案程式生成與迭代 |</p>
+<p>| MediaPipe Hand Landmarker | Google AI Edge：Hand landmarks detection for Web | Web 版可透過 `@mediapipe/tasks-vision` 使用；輸出 21 個 hand landmarks，含 x、y、z 座標 |</p>
+<p>| MediaPipe Gesture Recognizer | Google AI Edge：Gesture recognition for Web | 可即時辨識手勢，並輸出 recognized gesture results 與 detected hands 的 landmarks |</p>
+<p>| Web demo 可行性 | MediaPipe Web docs | JavaScript / browser demo 是官方支持路徑之一，適合 webcam + Canvas 類互動原型 |</p>
+<h1>技術架構拆解</h1>
+<p>| Layer | 角色 | 實作要點 |</p>
+<p>|---|---|---|</p>
+<p>| Camera input | 取得即時 webcam stream | `getUserMedia` 權限、全螢幕顯示、鏡像處理 |</p>
+<p>| Hand tracking | 偵測手掌與手指點位 | MediaPipe Hand Landmarker / Gesture Recognizer |</p>
+<p>| Landmark logic | 從 21 landmarks 推論手勢 | 可用距離、角度、指尖/關節相對位置判斷，也可用官方 Gesture Recognizer |</p>
+<p>| Gesture mapping | 把手勢轉成狀態 | fist、peace、pointing、open hand 對應不同 filter |</p>
+<p>| Visual effects | 即時影像濾鏡 | Canvas shader、pixel processing、CSS filter 或 WebGL |</p>
+<p>| Agent workflow | 自然語言迭代 | 每次只加一個效果，讓 Cursor Agent 小步修正 |</p>
+<h1>為什麼值得收藏</h1>
+<ul>
+<li>**prompt 本身可直接複用**：三段 prompt 很清楚，可作為課程示範或工作坊範本。</li>
+<li>**示範 AI coding agent 的正確用法**：不是一次要求「做完整產品」，而是逐步加功能。</li>
+<li>**適合教學**：學生可看到自然語言 → webcam → hand tracking → gesture → creative filter 的完整轉換。</li>
+<li>**有產品原型價值**：可延伸為展場互動、直播濾鏡、兒童創作工具、手勢控制簡報或無障礙介面。</li>
+<li>**可連到欒帥的 AI 課程設計**：非常適合放在「人機協作／Vibe Coding／AI 生成互動作品」單元。</li>
+</ul>
+<h1>可複用的開發步驟</h1>
+<p>| 步驟 | 建議 prompt 方向 |</p>
+<p>|---|---|</p>
+<p>| 1. 建立最小可跑 demo | 只要求打開 webcam 並顯示畫面，不要先加特效 |</p>
+<p>| 2. 加 MediaPipe | 要求載入 `@mediapipe/tasks-vision`，在畫面上標出 21 landmarks |</p>
+<p>| 3. 驗證食指追蹤 | 只追蹤 index fingertip，畫白點或軌跡 |</p>
+<p>| 4. 加手勢分類 | 先做 open hand / fist 二分類，再加 peace / pointing |</p>
+<p>| 5. 加濾鏡 | 每次只加一種 effect，確認 FPS 與畫面穩定 |</p>
+<p>| 6. 做 UI 控制 | 加上 debug panel，顯示目前 gesture、confidence、FPS |</p>
+<p>| 7. 優化安全與隱私 | webcam 不上傳、local-only、加權限提示與停止按鈕 |</p>
+<h1>實務限制</h1>
+<ul>
+<li>**零程式知識不等於零審查**：Cursor 可能能生成 demo，但仍需要有人檢查攝影機權限、套件來源、瀏覽器相容性與錯誤處理。</li>
+<li>**手勢辨識受光線與鏡頭影響**：低光、手部遮擋、背景雜訊都會讓 landmarks 不穩。</li>
+<li>**濾鏡效能可能吃 CPU/GPU**：Canvas pixel-level processing、VHS、water ripple 若未優化，手機或舊電腦會掉幀。</li>
+<li>**自訂手勢規則容易 brittle**：直接用 21 landmarks 寫規則可快速 demo，但要產品化通常需更完整測試。</li>
+<li>**Agent 生成 code 可能引入不必要依賴**：需避免加入過重套件或不明 CDN。</li>
+</ul>
+<h1>安全檢查清單</h1>
+<ul>
+<li>**webcam 權限**：明確顯示是否正在使用攝影機，提供停止鏡頭按鈕。</li>
+<li>**影像不上傳**：若是 local demo，確認 webcam frame 不被送到第三方 API。</li>
+<li>**CDN / npm 套件審查**：只使用官方或可信來源，例如 Google MediaPipe 官方 package。</li>
+<li>**Cursor Agent 權限**：若讓 Agent 執行 terminal command，需檢查 install script、postinstall、網路請求與檔案變更。</li>
+<li>**避免敏感場景**：不要在含個資、公司機密、未成年人影像的場景下未經同意錄製或分析。</li>
+<li>**部署前檢查**：公開 demo 前移除 API key、debug log、截圖與測試資料。</li>
+</ul>
+<h1>欒帥可延伸應用</h1>
+<ul>
+<li>**AI 工作坊 demo**：讓學員用三段 prompt 做出可玩的 webcam 互動濾鏡，理解 AI coding agent 的迭代方式。</li>
+<li>**課程首頁互動元件**：用手勢觸發不同課程模組視覺效果，做成展場/招生 demo。</li>
+<li>**簡報控制器**：將 pointing / open hand / fist 映射成下一頁、上一頁、雷射筆、暫停。</li>
+<li>**知識庫視覺實驗**：把 gesture filter 做成「AI 學習雷達」互動案例文章，展示 AI 生成前端互動作品。</li>
+<li>**無障礙探索**：測試用簡單手勢代替鍵盤/滑鼠操作，但需加入誤觸防護。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>Facebook 影片證明「這組 prompt 能被作者用 Cursor Agent 做出 demo」，但不等於任何人都能在所有環境一次成功。</li>
+<li>Cursor Agent 的輸出品質會受模型、專案初始狀態、依賴版本與使用者是否能讀懂錯誤訊息影響。</li>
+<li>MediaPipe 21 landmarks 與 Gesture Recognizer 官方可行，但自訂 fist / peace / pointing / open hand 的規則仍需測試與調參。</li>
+<li>社群 caption 的「Zero code knowledge needed」適合描述入門門檻降低；若要部署成可靠產品，仍需要工程審查。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Facebook 原影片：ui.ananya，Prompts I used to build this。</li>
+<li>Cursor Docs：Agent overview。</li>
+<li>Cursor Docs：Agent mode。</li>
+<li>Google AI Edge：MediaPipe Hand Landmarker for Web。</li>
+<li>Google AI Edge：MediaPipe Gesture Recognizer for Web。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-13 · https://www.facebook.com/share/v/1Cv2nr1Dhh/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Cursor</span><span class="tag">Cursor Agent</span><span class="tag">MediaPipe</span><span class="tag">Hand Tracking</span><span class="tag">Gesture Recognition</span><span class="tag">Vibe Coding</span><span class="tag">Computer Vision</span><span class="tag">Web Demo</span><span class="tag">Creative Coding</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/v/1Cv2nr1Dhh/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/1Cv2nr1Dhh/?mibextid=wwXIfr</a></p><p><a href="https://cursor.com/docs/agent/overview" target="_blank" rel="noopener">https://cursor.com/docs/agent/overview</a></p><p><a href="https://www.facebook.com/reel/938668432317954/" target="_blank" rel="noopener">https://www.facebook.com/reel/938668432317954/</a></p><p><a href="https://cursor.com/docs/agent/overview" target="_blank" rel="noopener">https://cursor.com/docs/agent/overview</a></p><p><a href="https://cursor.com/help/ai-features/agent" target="_blank" rel="noopener">https://cursor.com/help/ai-features/agent</a></p><p><a href="https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker/web_js" target="_blank" rel="noopener">https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker/web_js</a></p><p><a href="https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer/web_js" target="_blank" rel="noopener">https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer/web_js</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

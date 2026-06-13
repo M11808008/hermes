@@ -34,6 +34,41 @@
     "markdown": "articles/2026/06/2026-06-13-claude-line-assistant-colab-no-code-threads.md"
   },
   {
+    "title": "Cursor Agent + MediaPipe｜用自然語言打造 webcam 手勢濾鏡互動 demo",
+    "date": "2026-06-13",
+    "source": "https://www.facebook.com/share/v/1Cv2nr1Dhh/?mibextid=wwXIfr",
+    "author": "ui.ananya / Cursor / Google MediaPipe",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Cursor",
+      "Cursor Agent",
+      "MediaPipe",
+      "Hand Tracking",
+      "Gesture Recognition",
+      "Vibe Coding",
+      "Computer Vision",
+      "Web Demo",
+      "Creative Coding"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1Cv2nr1Dhh/?mibextid=wwXIfr",
+      "https://cursor.com/docs/agent/overview",
+      "https://www.facebook.com/reel/938668432317954/",
+      "https://cursor.com/docs/agent/overview",
+      "https://cursor.com/help/ai-features/agent",
+      "https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker/web_js",
+      "https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer/web_js"
+    ],
+    "excerpt": "這是一個很好的「Vibe Coding 進階範例」：不是只叫 AI 做靜態網頁，而是把瀏覽器 webcam、MediaPipe 即時手部追蹤、手勢分類、Canvas/影像濾鏡與互動映射拆成連續 prompt，讓 Cursor Agent 逐步寫出可跑的互動作品。",
+    "slug": "2026-06-13-cursor-agent-mediapipe-webcam-gesture-filters-facebook-video",
+    "html": "articles/2026-06-13-cursor-agent-mediapipe-webcam-gesture-filters-facebook-video.html",
+    "markdown": "articles/2026/06/2026-06-13-cursor-agent-mediapipe-webcam-gesture-filters-facebook-video.md"
+  },
+  {
     "title": "Deep Research Agent｜Hermes/ECC 學術文獻回顧 Skill 與零幻覺檢核流程",
     "date": "2026-06-13",
     "source": "https://www.threads.com/@tommy_dedelanda/post/DZX6c5yklmC",
