@@ -1,0 +1,79 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gemini 3.5 Live Translate｜低延遲語音對語音即時翻譯與 SynthID 浮水印</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Gemini 3.5 Live Translate｜低延遲語音對語音即時翻譯與 SynthID 浮水印</h1><h1>Gemini 3.5 Live Translate｜低延遲語音對語音即時翻譯與 SynthID 浮水印</h1>
+<p>來源為吃貨瑞森 Resen Chen 在 Threads 分享 Google Gemini 3.5 Live Translate 的體驗與官方連結。貼文把它描述為「邊聽邊說」的即時翻譯模型：不像傳統系統要等一句話講完再翻譯，而是接近同步輸出另一種語言，並嘗試保留語氣、語速與情緒。本文以 Google 官方 The Keyword 部落格與 Gemini API 文件交叉整理，保留技術與應用重點。</p>
+<h1>一句話摘要</h1>
+<p>Gemini 3.5 Live Translate 是 Google 2026-06 發表的低延遲 audio-to-audio 即時翻譯模型，支援 70+ 語言，輸入為語音，輸出可包含翻譯語音與逐字稿；它將進入 Gemini Live API / Google AI Studio、Google Translate App、Google Meet 企業私測，並對模型生成音訊加上 SynthID 不可感知浮水印。</p>
+<h1>原貼文重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 平台 | Threads |</p>
+<p>| 作者 | 吃貨瑞森 Resen Chen（@resen168） |</p>
+<p>| 貼文時間 | 約 2026-06-11（擷取時顯示 2 天前） |</p>
+<p>| 觀看數 | 約 2,451 次瀏覽（擷取時） |</p>
+<p>| 模型代號 | gemini-3.5-live-translate-preview |</p>
+<p>| 社群主張 | 接近零秒差、保留聲線/語調、適合耳機旅遊對話 |</p>
+<p>| 官方來源 | Google Blog、Gemini API docs、Google AI X 貼文 |</p>
+<h1>Google 官方確認資訊</h1>
+<p>| 項目 | 官方資訊 |</p>
+<p>|---|---|</p>
+<p>| 發表日期 | 2026-06-09 |</p>
+<p>| 官方定位 | Google 最新 audio model，用於 live speech-to-speech translation |</p>
+<p>| 語言支援 | 70+ languages |</p>
+<p>| 模型特性 | speech streamed processing、low latency、natural voice output、noise robustness |</p>
+<p>| 開發者 | Gemini Live API 與 Google AI Studio public preview |</p>
+<p>| Google Meet | 企業版 private preview，之後擴大推出 |</p>
+<p>| Google Translate | Android / iOS 全球推出；支援耳機與 Android phone earpiece listening mode |</p>
+<p>| 安全標記 | 生成音訊以 SynthID 加上不可感知浮水印 |</p>
+<h1>技術判讀</h1>
+<p>| 技術點 | 代表意義 | 實務注意 |</p>
+<p>|---|---|---|</p>
+<p>| Audio-to-audio | 不只是先轉文字再翻譯，而是面向語音輸入/語音輸出的端到端體驗 | 文件仍顯示可輸出 text transcript，實作上可保留逐字稿做審核 |</p>
+<p>| Streaming translation | 邊接收語音邊產生翻譯 | 仍可能落後講者幾秒；不是物理上的完全零延遲 |</p>
+<p>| Tone mirroring | Google Translate App 可鏡像說話者語氣 | 情緒保留很有用，但也可能帶來聲音仿冒與身份混淆風險 |</p>
+<p>| Multilingual inputs | 官方稱可處理多語輸入，不需手動設定 | 混語、口音、噪音環境仍需實測 |</p>
+<p>| SynthID watermark | 生成音訊內嵌不可感知浮水印 | 有助於 AI 音訊可偵測，但不是完整防偽系統 |</p>
+<p>| Live API | 開發者可建立翻譯 app、會議、課程、直播、客服等應用 | API 成本、延遲、串流媒體基礎設施是主要門檻 |</p>
+<h1>Gemini API 模型文件重點</h1>
+<p>| 欄位 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Model code | gemini-3.5-live-translate-preview |</p>
+<p>| Supported data types | Input：Audio speech；Output：Audio translated speech and Text transcript |</p>
+<p>| Token limits | Input 131,072；Output 65,536 |</p>
+<p>| Capabilities | Audio generation supported；Live API supported |</p>
+<p>| Not supported | Batch API、caching、code execution、file search、function calling、Google Maps grounding、image generation、search grounding、structured outputs、thinking、URL context |</p>
+<p>| Latest update | June 2026；文件 last updated 2026-06-09 UTC |</p>
+<p>| Knowledge cutoff | January 2025 |</p>
+<h1>主要應用場景</h1>
+<p>| 場景 | 可用方式 | 風險 / 檢查 |</p>
+<p>|---|---|---|</p>
+<p>| 旅遊對話 | 戴耳機或手機聽筒，即時聽外語翻譯 | 地名、菜名、價格、過敏原等仍要看文字或確認一次 |</p>
+<p>| 跨國會議 | Google Meet 企業版語音翻譯 | 目前是 private preview；公司隱私與錄音政策需先確認 |</p>
+<p>| 線上課程 / 講座 | 將講者語音同步轉為多語音訊 | 專有名詞、引用、數字、公式仍要搭配字幕/逐字稿 |</p>
+<p>| 客服 / 叫車 | Google Blog 提到 Grab 測試司機與旅客近即時多語溝通 | 客服承諾、醫療/法律/金流事項不可只靠即時語音翻譯 |</p>
+<p>| 開發者產品 | 透過 Live API + Agora / LiveKit / Pipecat 等串流基礎設施建 app | 需處理音訊權限、串流延遲、噪音、成本與資料保留政策 |</p>
+<h1>Google Meet 的改變</h1>
+<p>官方部落格指出，Google Meet 的 speech translation 將使用 3.5 Live Translate 改善體驗：</p>
+<ul>
+<li>語言數從原本 5 種提升到 70+。</li>
+<li>單一會議可支援 2,000+ language combinations。</li>
+<li>不再只限制為與英文互譯。</li>
+<li>介面會提供更即時的語音翻譯入口。</li>
+<li>先對部分 Google Workspace business customers private preview，再於稍後擴大推出。</li>
+</ul>
+<h1>欒帥可關注的導入方向</h1>
+<ul>
+<li>旅遊：可把它視為「跨語言即時協助」，但訂餐、交通、醫療與價格仍要看文字確認。</li>
+<li>課程/演講：如果未來開放穩定 API，可用於國際課程或雙語講座現場輔助。</li>
+<li>LINE / Hermes voice pipeline：若 Live API 成本可控，未來可設計成「語音上傳 → 即時翻譯 → 摘要歸檔」流程。</li>
+<li>企業會議：若 Google Meet 企業版推出，跨國團隊可先用小型內部會議測延遲、專有名詞與隱私政策。</li>
+<li>音訊安全：凡是能保留聲線/語調的翻譯，都應加上明確提示「這是 AI 生成翻譯音訊」，避免被誤認成原聲。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>Threads 貼文用「幾乎零秒差」描述體驗，但 Google 官方文字較精確地說明為 near real-time、low latency，且會在品質與延遲之間取捨，通常仍會落後講者幾秒。貼文提到的聲線/語調神複製也應視為早期體驗描述；不同語言、口音、噪音、設備與網路條件下效果會不同。</p>
+<p>此外，Gemini API 文件顯示此模型目前仍是 preview，且不支援 function calling、search grounding、structured outputs 等能力；因此它適合語音翻譯，不適合直接拿來做查證、工具調用或結構化研究代理。</p>
+<h1>來源與延伸閱讀</h1>
+<ul>
+<li>Threads 原貼文：<a href="https://www.threads.com/@resen168/post/DZZHcTIER_W" target="_blank" rel="noopener">https://www.threads.com/@resen168/post/DZZHcTIER_W</a></li>
+<li>Google 官方部落格：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/</a></li>
+<li>Gemini API 模型文件：<a href="https://ai.google.dev/gemini-api/docs/models/gemini-3.5-live-translate-preview" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/models/gemini-3.5-live-translate-preview</a></li>
+<li>Google AI X 貼文：<a href="https://x.com/GoogleAI/status/2064366504112505266" target="_blank" rel="noopener">https://x.com/GoogleAI/status/2064366504112505266</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-13 · https://www.threads.com/@resen168/post/DZZHcTIER_W · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Gemini</span><span class="tag">Google</span><span class="tag">即時翻譯</span><span class="tag">語音翻譯</span><span class="tag">Live API</span><span class="tag">Google Meet</span><span class="tag">Google Translate</span><span class="tag">SynthID</span><span class="tag">旅遊科技</span><span class="tag">多語會議</span><h3>原始連結</h3><p><a href="https://www.threads.com/@resen168/post/DZZHcTIER_W" target="_blank" rel="noopener">https://www.threads.com/@resen168/post/DZZHcTIER_W</a></p><p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/</a></p><p><a href="https://www.threads.com/@resen168/post/DZZHcTIER_W" target="_blank" rel="noopener">https://www.threads.com/@resen168/post/DZZHcTIER_W</a></p><p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/</a></p><p><a href="https://ai.google.dev/gemini-api/docs/models/gemini-3.5-live-translate-preview" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/models/gemini-3.5-live-translate-preview</a></p><p><a href="https://x.com/GoogleAI/status/2064366504112505266" target="_blank" rel="noopener">https://x.com/GoogleAI/status/2064366504112505266</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -113,6 +113,41 @@
     "markdown": "articles/2026/06/2026-06-13-flixbus-portugal-spain-new-routes-facebook-travel.md"
   },
   {
+    "title": "Gemini 3.5 Live Translate｜低延遲語音對語音即時翻譯與 SynthID 浮水印",
+    "date": "2026-06-13",
+    "source": "https://www.threads.com/@resen168/post/DZZHcTIER_W",
+    "author": "吃貨瑞森 Resen Chen / Google",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Gemini",
+      "Google",
+      "即時翻譯",
+      "語音翻譯",
+      "Live API",
+      "Google Meet",
+      "Google Translate",
+      "SynthID",
+      "旅遊科技",
+      "多語會議"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@resen168/post/DZZHcTIER_W",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
+      "https://www.threads.com/@resen168/post/DZZHcTIER_W",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
+      "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-live-translate-preview",
+      "https://x.com/GoogleAI/status/2064366504112505266"
+    ],
+    "excerpt": "Gemini 3.5 Live Translate 是 Google 2026-06 發表的低延遲 audio-to-audio 即時翻譯模型，支援 70+ 語言，輸入為語音，輸出可包含翻譯語音與逐字稿；它將進入 Gemini Live API / Google AI Studio、Google Translate App、Google Meet 企業私測，並對模型生成音訊加上 SynthID 不可感知浮水印。",
+    "slug": "2026-06-13-gemini-3-5-live-translate-real-time-speech-threads",
+    "html": "articles/2026-06-13-gemini-3-5-live-translate-real-time-speech-threads.html",
+    "markdown": "articles/2026/06/2026-06-13-gemini-3-5-live-translate-real-time-speech-threads.md"
+  },
+  {
     "title": "GordenSuperPPTSkills｜GPT 圖片簡報轉可編輯 PPTX 的 AI Skill 工作流",
     "date": "2026-06-13",
     "source": "https://www.threads.com/@govin999999/post/DZZCVd6kU7n",
