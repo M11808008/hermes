@@ -1,0 +1,84 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Qwen3.5-35B + Framework Desktop 128G｜本機模型協作完成簡單網站的實測觀察</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Qwen3.5-35B + Framework Desktop 128G｜本機模型協作完成簡單網站的實測觀察</h1><h1>Qwen3.5-35B + Framework Desktop 128G｜本機模型協作完成簡單網站的實測觀察</h1>
+<p>來源為林熙哲的 Facebook 圖文貼文。貼文分享在 Framework Desktop 128G 上跑 Qwen 3.5-35B 模型，實測「效果竟然這麼好」，雖然速度稍慢、偶爾會犯笨，但已經可以協作完成一個簡單網站。圖片中可見 demo 網站主題為 skipper.tw，像是台灣帆船活動與課程資訊公告平台。</p>
+<h1>一句話摘要</h1>
+<p>這則貼文的價值不在於「十萬元主機一定划算」這句感想，而在於它捕捉到一個 local-first AI coding 的轉折：128GB unified memory 等級的小型桌面機，已經足以讓 35B 級 MoE 模型在本機參與簡單網站開發；但速度、量化、上下文、工具鏈與工程審查仍然決定它能不能變成穩定工作流。</p>
+<h1>原貼文重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 平台 | Facebook photo / post |</p>
+<p>| 作者 | 林熙哲 |</p>
+<p>| 貼文時間 | 約 3 天前 |</p>
+<p>| 圖片主題 | skipper.tw 台灣帆船活動與課程資訊公告平台 mockup / demo |</p>
+<p>| 使用硬體 | Framework Desktop 128G |</p>
+<p>| 使用模型 | Qwen 3.5-35B |</p>
+<p>| 作者觀察 | 效果比預期好；速度稍慢；偶爾犯錯；已能一起完成簡單網站 |</p>
+<p>| 作者結論 | 這樣就值得花十萬元買一台 128G Unified RAM 主機 |</p>
+<p>| 留言補充 | 有人認為 3090 / 其他 Qwen 版本也可做；也有人質疑雲端月費是否更划算 |</p>
+<h1>官方與技術來源交叉驗證</h1>
+<p>| 主題 | 來源 | 可確認資訊 |</p>
+<p>|---|---|---|</p>
+<p>| Qwen3.5-35B-A3B | Qwen Hugging Face model card | 約 35B total / 3B activated；MoE；image-text-to-text；Apache-2.0；native context 262,144，宣稱可延伸到 1,010,000 tokens |</p>
+<p>| 部署相容性 | Qwen model card | 相容 Hugging Face Transformers、vLLM、SGLang、KTransformers 等；官方也提供 Qwen3.5-Flash 作為 hosted service 對應版本 |</p>
+<p>| GGUF 社群量化 | LM Studio community Hugging Face | 有 Qwen3.5-35B-A3B-GGUF 量化版本，利於 LM Studio / llama.cpp 類本機推論 |</p>
+<p>| Framework Desktop | Framework 公開資訊 / Brave Search 摘要 | Framework Desktop 使用 AMD Ryzen AI Max，最高 128GB unified LPDDR5x；可將大量記憶體分配給圖形/AI 工作負載 |</p>
+<p>| Ryzen AI Max+ 128GB | AMD 官方部落格 | AMD 指出 Ryzen AI Max+ 395 / 128GB memory 可支援大型本機模型推論；4-bit 量化 200B 參數級模型需要 128GB unified memory 等級資源 |</p>
+<h1>為什麼 128GB unified memory 重要</h1>
+<p>一般消費級 GPU 的瓶頸常常不是算力，而是 VRAM。35B、70B、120B 以上模型即使量化後，也需要足夠記憶體容納權重、KV cache、上下文與 runtime overhead。Framework Desktop / Ryzen AI Max 這類 128GB unified memory 設計，把 CPU/GPU 可用記憶體集中在同一池，讓「本機跑大模型」比傳統只有 8–24GB VRAM 的桌機更可行。</p>
+<p>但 unified memory 不等於無限制：</p>
+<ul>
+<li>頻寬通常仍低於高階資料中心 GPU。</li>
+<li>長 context 會吃大量 KV cache。</li>
+<li>MoE 模型雖然 activated parameters 較少，但總權重仍需放進記憶體。</li>
+<li>coding agent 還要額外跑編輯器、瀏覽器、dev server、terminal、索引器。</li>
+<li>速度能否接受取決於量化格式、runtime、batch、context length、GPU 分配與散熱。</li>
+</ul>
+<h1>Local-first AI coding 的實務判讀</h1>
+<p>| 面向 | 本機 128G 主機 | 雲端 API / 訂閱 |</p>
+<p>|---|---|---|</p>
+<p>| 隱私 | 程式碼與 prompt 可留在本機 | 需信任供應商與資料政策 |</p>
+<p>| 成本 | 一次性硬體支出高 | 初期低，但長期高頻使用會累積費用 |</p>
+<p>| 速度 | 35B 可用但可能慢；大模型更慢 | 通常較快，尤其 frontier model |</p>
+<p>| 可控性 | 可選模型、量化、runtime、離線使用 | 受 API、額度、模型版本與供應商限制 |</p>
+<p>| 維護 | 需要自己處理模型下載、runtime、driver | 維護成本低 |</p>
+<p>| 適合任務 | 私有程式碼、prototype、教學、長期固定工作流 | 高品質推理、快速迭代、需要最強模型時 |</p>
+<h1>對欒帥的應用價值</h1>
+<ul>
+<li>**AI 課程示範案例**：可用來討論「local AI workstation 是否值得投資」，比單純雲端工具更有判斷深度。</li>
+<li>**知識庫/網站原型**：簡單網站、資料看板、課程頁、活動平台 mockup，已是 35B 本機模型可協作的合理範圍。</li>
+<li>**私有資料開發**：若要處理未公開課程資料、內部名單、學員內容，本機模型能降低外洩風險。</li>
+<li>**硬體採購判讀**：128G unified memory 的價值在於本機大模型，而不只是一般桌機效能。</li>
+<li>**混合工作流**：可以本機模型做草稿、重構與隱私敏感任務；遇到困難推理再交給 Claude / GPT / Gemini 等雲端模型。</li>
+</ul>
+<h1>建議實作路線</h1>
+<p>| 階段 | 做法 |</p>
+<p>|---|---|</p>
+<p>| 1. 先定任務 | 不要以「跑最大模型」為目標，先定義要做網站、摘要、程式重構或資料整理 |</p>
+<p>| 2. 選本機 runtime | LM Studio / Ollama / llama.cpp / vLLM / KTransformers 依硬體與模型格式選擇 |</p>
+<p>| 3. 從量化版開始 | 先跑 GGUF 量化模型確認速度，再決定是否追求更高精度 |</p>
+<p>| 4. 加 coding agent | 把本機 OpenAI-compatible endpoint 接到 Cursor、Claude Code 類工具或 Hermes custom provider |</p>
+<p>| 5. 設計驗收 | 用瀏覽器預覽、測試、lint、git diff 驗證，不要只看模型口頭說完成 |</p>
+<p>| 6. 混合雲端 | 本機模型卡住時，用雲端高階模型做 code review 或疑難排解 |</p>
+<h1>安全與品質檢查清單</h1>
+<ul>
+<li>**不要把本機等同安全**：本機模型仍可能讀到敏感檔案；coding agent 的檔案權限要限制在專案資料夾。</li>
+<li>**Git diff 必看**：AI 改完網站後，必須檢查新增依賴、外部 CDN、API key、追蹤碼與隱私設定。</li>
+<li>**不要暴露本機服務**：LM Studio / Ollama / vLLM endpoint 若開在 `0.0.0.0`，需確認防火牆與存取控制。</li>
+<li>**模型幻覺仍存在**：作者也提到「偶爾會笨笨的」；本機模型不會因為私有部署就更可靠。</li>
+<li>**成本要算總持有成本**：硬體、電費、散熱、維護、折舊與時間成本，都要和雲端訂閱比較。</li>
+<li>**授權審查**：Qwen3.5-35B-A3B model card 標示 Apache-2.0，但實際產品化仍應檢查模型、量化版、依賴套件與素材授權。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>這是社群個人實測，不是標準 benchmark；沒有提供 tokens/sec、量化格式、runtime、context length、prompt、錯誤率等完整數據。</li>
+<li>Facebook 圖片只能確認 demo 方向與貼文觀察，不能證明整個網站已達 production-ready。</li>
+<li>「值得花十萬元」是作者主觀價值判斷；對不同人而言，雲端 API、3090/4090、Mac Studio、DGX Spark 或租用 GPU 都可能更划算。</li>
+<li>Qwen3.5-35B-A3B 是 35B total / 3B activated MoE；不能只用 3B activated 低估記憶體需求，也不能只用 35B total 高估推論成本。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Facebook 原貼文：林熙哲，Framework Desktop 128G 跑 Qwen 3.5-35B 協作完成簡單網站。</li>
+<li>Qwen Hugging Face：Qwen/Qwen3.5-35B-A3B。</li>
+<li>LM Studio community：Qwen3.5-35B-A3B-GGUF。</li>
+<li>Framework Desktop 官方頁與介紹文章。</li>
+<li>AMD 官方部落格：Ryzen AI Max+ 128GB unified memory 與本機大模型推論案例。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-13 · https://www.facebook.com/share/193jV3RqRM/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Local LLM</span><span class="tag">Qwen</span><span class="tag">Qwen3.5</span><span class="tag">Framework Desktop</span><span class="tag">128GB Unified Memory</span><span class="tag">AI Coding</span><span class="tag">Local First</span><span class="tag">網站開發</span><span class="tag">硬體</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/193jV3RqRM/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/193jV3RqRM/?mibextid=wwXIfr</a></p><p><a href="https://huggingface.co/Qwen/Qwen3.5-35B-A3B" target="_blank" rel="noopener">https://huggingface.co/Qwen/Qwen3.5-35B-A3B</a></p><p><a href="https://www.facebook.com/photo.php?fbid=28127393853514038" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=28127393853514038</a></p><p><a href="https://huggingface.co/Qwen/Qwen3.5-35B-A3B" target="_blank" rel="noopener">https://huggingface.co/Qwen/Qwen3.5-35B-A3B</a></p><p><a href="https://huggingface.co/lmstudio-community/Qwen3.5-35B-A3B-GGUF" target="_blank" rel="noopener">https://huggingface.co/lmstudio-community/Qwen3.5-35B-A3B-GGUF</a></p><p><a href="https://frame.work/desktop" target="_blank" rel="noopener">https://frame.work/desktop</a></p><p><a href="https://frame.work/blog/introducing-the-framework-desktop" target="_blank" rel="noopener">https://frame.work/blog/introducing-the-framework-desktop</a></p><p><a href="https://www.amd.com/en/blogs/2026/amd-ryzen-ai-max-ai-pcs-deliver-exceptional-intelligence.html" target="_blank" rel="noopener">https://www.amd.com/en/blogs/2026/amd-ryzen-ai-max-ai-pcs-deliver-exceptional-intelligence.html</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

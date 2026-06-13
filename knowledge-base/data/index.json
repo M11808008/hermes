@@ -361,6 +361,42 @@
     "markdown": "articles/2026/06/2026-06-13-nvidia-nemotron-3-ultra-agentic-ai-facebook-reel.md"
   },
   {
+    "title": "Qwen3.5-35B + Framework Desktop 128G｜本機模型協作完成簡單網站的實測觀察",
+    "date": "2026-06-13",
+    "source": "https://www.facebook.com/share/193jV3RqRM/?mibextid=wwXIfr",
+    "author": "林熙哲 / Qwen / Framework / AMD",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Local LLM",
+      "Qwen",
+      "Qwen3.5",
+      "Framework Desktop",
+      "128GB Unified Memory",
+      "AI Coding",
+      "Local First",
+      "網站開發",
+      "硬體"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/193jV3RqRM/?mibextid=wwXIfr",
+      "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "https://www.facebook.com/photo.php?fbid=28127393853514038",
+      "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "https://huggingface.co/lmstudio-community/Qwen3.5-35B-A3B-GGUF",
+      "https://frame.work/desktop",
+      "https://frame.work/blog/introducing-the-framework-desktop",
+      "https://www.amd.com/en/blogs/2026/amd-ryzen-ai-max-ai-pcs-deliver-exceptional-intelligence.html"
+    ],
+    "excerpt": "這則貼文的價值不在於「十萬元主機一定划算」這句感想，而在於它捕捉到一個 local-first AI coding 的轉折：128GB unified memory 等級的小型桌面機，已經足以讓 35B 級 MoE 模型在本機參與簡單網站開發；但速度、量化、上下文、工具鏈與工程審查仍然決定它能不能變成穩定工作流。",
+    "slug": "2026-06-13-qwen-3-5-35b-framework-desktop-local-website-agent-facebook",
+    "html": "articles/2026-06-13-qwen-3-5-35b-framework-desktop-local-website-agent-facebook.html",
+    "markdown": "articles/2026/06/2026-06-13-qwen-3-5-35b-framework-desktop-local-website-agent-facebook.md"
+  },
+  {
     "title": "NotebookLM 升級為代理式研究夥伴｜Gemini 3.5、Antigravity、雲端電腦與多格式輸出",
     "date": "2026-06-09",
     "source": "threads",
