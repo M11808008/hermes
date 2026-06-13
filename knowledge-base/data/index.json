@@ -1,5 +1,39 @@
 [
   {
+    "title": "Claude 變 LINE 專屬 AI 助理｜Threads 三分鐘 Colab 教學的實作判讀",
+    "date": "2026-06-13",
+    "source": "https://www.threads.com/@tom7788x/post/DZU3jQ4krJi",
+    "author": "Tom 又壬 的餐桌日常",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude",
+      "LINE",
+      "LINE Bot",
+      "Colab",
+      "AI助理",
+      "自動化",
+      "生活駭客",
+      "生產力"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@tom7788x/post/DZU3jQ4krJi",
+      "https://developers.line.biz/en/docs/messaging-api/overview/",
+      "https://www.threads.com/@tom7788x/post/DZU3jQ4krJi",
+      "https://developers.line.biz/en/docs/messaging-api/overview/",
+      "https://developers.line.biz/en/docs/messaging-api/receiving-messages/",
+      "https://platform.claude.com/docs/en/home",
+      "https://platform.claude.com/docs/en/api/messages"
+    ],
+    "excerpt": "這類「Claude + LINE + Colab」教學的核心架構通常是：LINE 使用者傳訊息到官方帳號，LINE Messaging API 以 webhook 把事件送到一個 bot server，再由該 server 呼叫 Claude Messages API 產生回覆；Colab 可以降低入門門檻，但若要長期穩定使用，仍需處理公開 HTTPS webhook、API 金鑰保護、成本、長時間運行與隱私問題。",
+    "slug": "2026-06-13-claude-line-assistant-colab-no-code-threads",
+    "html": "articles/2026-06-13-claude-line-assistant-colab-no-code-threads.html",
+    "markdown": "articles/2026/06/2026-06-13-claude-line-assistant-colab-no-code-threads.md"
+  },
+  {
     "title": "NotebookLM 升級為代理式研究夥伴｜Gemini 3.5、Antigravity、雲端電腦與多格式輸出",
     "date": "2026-06-09",
     "source": "threads",
