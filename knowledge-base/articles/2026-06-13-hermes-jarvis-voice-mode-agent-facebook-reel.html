@@ -1,0 +1,82 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hermes Jarvis｜把語音指令接進 Hermes Agent 的 Voice Mode 工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Hermes Jarvis｜把語音指令接進 Hermes Agent 的 Voice Mode 工作流</h1><h1>Hermes Jarvis｜把語音指令接進 Hermes Agent 的 Voice Mode 工作流</h1>
+<p>來源為 Aiexplained 的 Facebook Reel。貼文宣稱「China just dropped an update nobody is talking about」，主題是 Hermes Jarvis：使用者只要開口說話，就能讓 Hermes 幫忙打開 Google，像真人個人助理一樣操作電腦。本文把 Reel 視為社群發現來源，並以 Hermes Agent 官方 Voice Mode、Use Voice Mode 與 Voice &amp; TTS 文件交叉驗證。</p>
+<h1>一句話摘要</h1>
+<p>所謂「Hermes Jarvis」比較精確的技術理解，是把語音輸入（STT）與語音輸出（TTS）接到 Hermes Agent 的一般工具調用流程：使用者講一句話，Hermes 先轉成文字，再由 Agent 判斷是否需要開瀏覽器、讀檔、查網頁、執行腳本或回覆語音。它不是魔法式的獨立 Jarvis，而是「Voice Mode + Hermes 工具系統 + 權限控管」的語音操作層。</p>
+<h1>原 Reel 重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 平台 | Facebook Reel |</p>
+<p>| 分享者 | Aiexplained |</p>
+<p>| Reel ID | 1423250109561147 |</p>
+<p>| 擷取時互動 | 約 2,512 次觀看、29 個心情 |</p>
+<p>| 社群主張 | Hermes Jarvis 可讓忙碌、不想打字的人用語音控制 AI 助理 |</p>
+<p>| 範例指令 | Speak out loud；ask it to open Google；it does it instantly |</p>
+<p>| Hashtags | #China #HermesJarvis #AgentOS #Google #Hermes #Jarvis |</p>
+<p>| 判讀 | 語音操作方向成立，但「real-life Jarvis」是行銷比喻；正式功能應對照 Hermes Voice Mode / TTS 文件 |</p>
+<h1>官方功能對照</h1>
+<p>| 功能 | Hermes 官方文件資訊 | 對 Reel 的解讀 |</p>
+<p>|---|---|---|</p>
+<p>| CLI 互動語音 | 啟動 Hermes 後用 `/voice on`，按 `Ctrl+B` 錄音，靜音偵測後自動送出 | 「開口講話」在 CLI 中是 push-to-talk / continuous loop，不是一定有 wake word |</p>
+<p>| 語音轉文字 STT | 支援 local faster-whisper、Groq Whisper、OpenAI Whisper、Mistral、xAI 等 | 使用者語音會先變成文字，再進入一般 Agent 流程 |</p>
+<p>| 文字轉語音 TTS | 支援 Edge TTS、ElevenLabs、OpenAI、MiniMax、Mistral、Gemini、xAI、NeuTTS、KittenTTS、Piper 等 | Hermes 可用語音回覆，不一定需要付費 provider；Edge / local TTS 可低成本開始 |</p>
+<p>| Telegram / Discord | 可在 Telegram、Discord 發送 spoken audio；Discord 也支援 voice channel bot | Reel 若指「像助理說話」，官方確實支援跨平台語音體驗 |</p>
+<p>| 開啟 Google / 操作電腦 | Hermes 有 browser / computer-use / terminal 等工具，但需啟用與授權 | 語音只是輸入層；真正操作由工具權限與安全策略決定 |</p>
+<h1>實際工作流</h1>
+<ul>
+<li>使用者在 CLI、Telegram、Discord 或語音通道中輸入語音。</li>
+<li>STT 將語音轉成文字，例如「打開 Google，幫我搜尋 MiniMax M3」。</li>
+<li>Hermes Agent 收到文字後，像一般聊天一樣決定是否調用工具。</li>
+<li>若工具可用，可能開瀏覽器、查網頁、讀資料、整理結果或執行腳本。</li>
+<li>回覆文字後，若 TTS 開啟，Hermes 再把答案轉成語音。</li>
+<li>若是 CLI voice loop，可持續對話，不必每次重新打字。</li>
+</ul>
+<h1>設定與元件拆解</h1>
+<p>| 元件 | 低摩擦選擇 | 進階選擇 | 注意事項 |</p>
+<p>|---|---|---|---|</p>
+<p>| STT | local faster-whisper | Groq / OpenAI / Mistral / xAI | local 最保護隱私但吃本機資源；雲端 STT 需注意資料外送 |</p>
+<p>| TTS | Edge TTS | ElevenLabs / OpenAI / MiniMax / NeuTTS | Edge 免費且夠用；高品質聲音或本機聲音需額外配置 |</p>
+<p>| CLI 操作 | `/voice on` + `Ctrl+B` | continuous loop / TUI | 不是預設 wake word；需明確錄音觸發 |</p>
+<p>| Messaging | Telegram / Discord voice replies | Discord voice channel bot | LINE 語音體驗需看平台 adapter 與 public URL/media delivery 設定 |</p>
+<p>| 工具執行 | browser / web / file / terminal | computer-use / MCP / cron | 任何會改檔、發布、轉帳、刪除資料的工具都要加確認 |</p>
+<h1>對欒帥的實用價值</h1>
+<ul>
+<li>**知識庫口述歸檔**：可以用語音說「把這篇文章歸檔到 AI 學習雷達，補官方來源」，降低手機端輸入成本。</li>
+<li>**桌面操作捷徑**：適合用語音觸發查資料、開網頁、啟動本機管理介面、產生草稿。</li>
+<li>**課程/研究助理**：走路或開會後可口述想法，讓 Hermes 整理成課程筆記、文章摘要、任務清單。</li>
+<li>**低摩擦 AgentOS 入口**：對不想打字的人，Voice Mode 是比 dashboard 更自然的入口。</li>
+<li>**但要先限定權限**：語音辨識錯誤比文字輸入更常見，不能讓它直接執行高風險命令。</li>
+</ul>
+<h1>建議導入順序</h1>
+<p>| 階段 | 做法 |</p>
+<p>|---|---|</p>
+<p>| 1. 文字先穩 | 先確認 Hermes 一般文字指令、工具與模型都正常 |</p>
+<p>| 2. 開 STT | 安裝/設定 faster-whisper 或雲端 STT，先測短語音轉文字準確度 |</p>
+<p>| 3. 開 TTS | 用 Edge TTS 或現有 provider 讓回覆可朗讀 |</p>
+<p>| 4. 限定工具 | 只開 web/search/browser 這類低風險工具，先做查詢與整理 |</p>
+<p>| 5. 加確認 | 對 terminal、檔案寫入、部署、發訊息等行為加確認與審計 |</p>
+<p>| 6. 建固定短語 | 為常用流程建立固定語音模板，例如「歸檔這個連結」「開知識庫管理介面」 |</p>
+<h1>安全檢查清單</h1>
+<ul>
+<li>**語音誤辨識防護**：高風險動作前重述指令並要求確認，例如「你要我刪除/部署/發送，是否確認？」</li>
+<li>**工具白名單**：Voice Mode 初期只允許查詢、摘要、開網頁，不直接允許刪檔、轉帳、發送大量訊息。</li>
+<li>**憑證隔離**：API key、token、SSH key 不得被語音讀出或放入 prompt；使用 `.env` / secret manager。</li>
+<li>**環境聲音風險**：背景聲、旁人說話、影片聲音都可能被收進 STT；私人環境再使用敏感指令。</li>
+<li>**審計紀錄**：記錄語音轉文字結果、工具調用、檔案變更與發布行為，方便回溯。</li>
+<li>**平台限制**：LINE/Telegram/Discord 對音訊格式與公開 URL 有不同限制，語音回覆需確認 gateway media delivery。</li>
+<li>**成本上限**：雲端 STT/TTS、長回覆朗讀、多輪自動化都會增加成本，需設定使用習慣與上限。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>Reel 中的「real-life Jarvis」是宣傳比喻，不代表 Hermes 已內建完整鋼鐵人式 wake word、螢幕理解、全桌面控制與無風險自動操作。</li>
+<li>官方功能名稱主要是 **Voice Mode** 與 **Voice &amp; TTS**；「Hermes Jarvis」較像社群/教學包裝用語。</li>
+<li>「Ask it to open Google」取決於使用者是否啟用 browser/computer-use 工具與操作環境，不是單靠語音模式就保證可做。</li>
+<li>對工作機或含個資資料的電腦，語音 Agent 的權限要比文字 Agent 更保守。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Facebook Reel：Aiexplained，China just dropped an update nobody is talking about。</li>
+<li>Hermes Agent 官方文件：Voice Mode。</li>
+<li>Hermes Agent 官方文件：Use Voice Mode with Hermes。</li>
+<li>Hermes Agent 官方文件：Voice &amp; TTS。</li>
+<li>Hermes Agent 官方首頁與 CLI reference。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-13 · https://www.facebook.com/share/r/1DPoZawTLV/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Hermes Agent</span><span class="tag">Hermes Jarvis</span><span class="tag">Voice Mode</span><span class="tag">語音助理</span><span class="tag">STT</span><span class="tag">TTS</span><span class="tag">AgentOS</span><span class="tag">自動化</span><span class="tag">電腦操作</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/r/1DPoZawTLV/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1DPoZawTLV/?mibextid=wwXIfr</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode</a></p><p><a href="https://www.facebook.com/reel/1423250109561147" target="_blank" rel="noopener">https://www.facebook.com/reel/1423250109561147</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/guides/use-voice-mode-with-hermes" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/guides/use-voice-mode-with-hermes</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/tts" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/tts</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

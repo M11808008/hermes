@@ -216,6 +216,41 @@
     "markdown": "articles/2026/06/2026-06-13-gorden-super-ppt-skills-image-to-editable-pptx-threads.md"
   },
   {
+    "title": "Hermes Jarvis｜把語音指令接進 Hermes Agent 的 Voice Mode 工作流",
+    "date": "2026-06-13",
+    "source": "https://www.facebook.com/share/r/1DPoZawTLV/?mibextid=wwXIfr",
+    "author": "Aiexplained / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Hermes Agent",
+      "Hermes Jarvis",
+      "Voice Mode",
+      "語音助理",
+      "STT",
+      "TTS",
+      "AgentOS",
+      "自動化",
+      "電腦操作"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1DPoZawTLV/?mibextid=wwXIfr",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode",
+      "https://www.facebook.com/reel/1423250109561147",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode",
+      "https://hermes-agent.nousresearch.com/docs/guides/use-voice-mode-with-hermes",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/tts",
+      "https://hermes-agent.nousresearch.com/docs/"
+    ],
+    "excerpt": "所謂「Hermes Jarvis」比較精確的技術理解，是把語音輸入（STT）與語音輸出（TTS）接到 Hermes Agent 的一般工具調用流程：使用者講一句話，Hermes 先轉成文字，再由 Agent 判斷是否需要開瀏覽器、讀檔、查網頁、執行腳本或回覆語音。它不是魔法式的獨立 Jarvis，而是「Voice Mode + Hermes 工具系統 + 權限控管」的語音操作層。",
+    "slug": "2026-06-13-hermes-jarvis-voice-mode-agent-facebook-reel",
+    "html": "articles/2026-06-13-hermes-jarvis-voice-mode-agent-facebook-reel.html",
+    "markdown": "articles/2026/06/2026-06-13-hermes-jarvis-voice-mode-agent-facebook-reel.md"
+  },
+  {
     "title": "MiniMax M3 + Hermes｜1M Context 多模態模型與 AI 影片 Agent 工作流",
     "date": "2026-06-13",
     "source": "https://www.facebook.com/share/r/1EwSFSZ9Ee/?mibextid=wwXIfr",
