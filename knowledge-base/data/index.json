@@ -216,6 +216,43 @@
     "markdown": "articles/2026/06/2026-06-13-gorden-super-ppt-skills-image-to-editable-pptx-threads.md"
   },
   {
+    "title": "MiniMax M3 + Hermes｜1M Context 多模態模型與 AI 影片 Agent 工作流",
+    "date": "2026-06-13",
+    "source": "https://www.facebook.com/share/r/1EwSFSZ9Ee/?mibextid=wwXIfr",
+    "author": "Julian Goldie / MiniMax",
+    "type": "article",
+    "topics": [
+      "AI",
+      "MiniMax",
+      "MiniMax M3",
+      "Hermes Agent",
+      "AI Agent",
+      "AI Video",
+      "多模態模型",
+      "Long Context",
+      "Local LLM",
+      "自動化"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1EwSFSZ9Ee/?mibextid=wwXIfr",
+      "https://www.minimax.io/blog/minimax-m3",
+      "https://www.facebook.com/reel/4593936167529599",
+      "https://www.minimax.io/blog/minimax-m3",
+      "https://www.minimax.io/models/text/m3",
+      "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+      "https://github.com/MiniMax-AI/MiniMax-M3",
+      "https://platform.minimax.io/docs/token-plan/hermes-agent",
+      "https://platform.minimax.io/docs/guides/local-deploy"
+    ],
+    "excerpt": "MiniMax M3 是 MiniMax 針對 coding、agentic tasks、長上下文與原生多模態推出的 M 系列模型，官方與 Hugging Face 顯示它支援 1M context，約 428B 參數、約 23B activated parameters，採用 MiniMax Sparse Attention（MSA），並可透過 MiniMax API、Hugging Face、本地 serving 框架與 Hermes Agent 類工具接入；但「影片 Agent」不是模型單獨完成，而是模型 + Hermes 編排 + 影片生成/剪輯工具/API 的工作流成果。",
+    "slug": "2026-06-13-minimax-m3-hermes-ai-video-agent-facebook-reel",
+    "html": "articles/2026-06-13-minimax-m3-hermes-ai-video-agent-facebook-reel.html",
+    "markdown": "articles/2026/06/2026-06-13-minimax-m3-hermes-ai-video-agent-facebook-reel.md"
+  },
+  {
     "title": "NVIDIA Nemotron 3 Ultra｜550B 開放權重模型與長任務 Agent 工作流",
     "date": "2026-06-13",
     "source": "https://www.facebook.com/share/r/18kYt2N3T3/?mibextid=wwXIfr",
