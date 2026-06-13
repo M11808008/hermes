@@ -183,6 +183,42 @@
     "markdown": "articles/2026/06/2026-06-13-gorden-super-ppt-skills-image-to-editable-pptx-threads.md"
   },
   {
+    "title": "NVIDIA Nemotron 3 Ultra｜550B 開放權重模型與長任務 Agent 工作流",
+    "date": "2026-06-13",
+    "source": "https://www.facebook.com/share/r/18kYt2N3T3/?mibextid=wwXIfr",
+    "author": "Aiexplained / NVIDIA",
+    "type": "article",
+    "topics": [
+      "AI",
+      "NVIDIA",
+      "Nemotron",
+      "Agentic AI",
+      "開放權重模型",
+      "MoE",
+      "Long Context",
+      "Hermes Agent",
+      "Claude",
+      "OpenClaw"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/18kYt2N3T3/?mibextid=wwXIfr",
+      "https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/",
+      "https://www.facebook.com/reel/1351349103756737",
+      "https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/",
+      "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+      "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+      "https://developer.nvidia.com/nemotron",
+      "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+    ],
+    "excerpt": "Nemotron 3 Ultra 是 NVIDIA Nemotron 3 家族最大的開放模型，官方描述為 550B total、55B active 的 Mixture-of-Experts hybrid Mamba-Transformer 模型，支援最長 1M tokens context，定位於高準確度推理、長任務 Agent、多步工具調用與企業級自動化；但實務上需要高階推理基礎設施或雲端服務，不能把它簡化成「零成本本機助手」。",
+    "slug": "2026-06-13-nvidia-nemotron-3-ultra-agentic-ai-facebook-reel",
+    "html": "articles/2026-06-13-nvidia-nemotron-3-ultra-agentic-ai-facebook-reel.html",
+    "markdown": "articles/2026/06/2026-06-13-nvidia-nemotron-3-ultra-agentic-ai-facebook-reel.md"
+  },
+  {
     "title": "NotebookLM 升級為代理式研究夥伴｜Gemini 3.5、Antigravity、雲端電腦與多格式輸出",
     "date": "2026-06-09",
     "source": "threads",
