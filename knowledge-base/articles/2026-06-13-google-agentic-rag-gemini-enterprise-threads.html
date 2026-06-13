@@ -1,0 +1,96 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Google Agentic RAG｜Gemini Enterprise 的多代理檢索與 Sufficient Context Agent</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Google Agentic RAG｜Gemini Enterprise 的多代理檢索與 Sufficient Context Agent</h1><h1>Google Agentic RAG｜Gemini Enterprise 的多代理檢索與 Sufficient Context Agent</h1>
+<p>來源為 Govin.AI 在 Threads 分享 Google Research 文章〈Unlocking dependable responses with Gemini Enterprise Agent Platform’s Agentic RAG〉。原貼文主要貼出官方研究連結；本文以 Google Research 原文與 Google Cloud Gemini Enterprise Agent Platform 文件交叉整理，保留對企業知識庫、內部文件問答與 AI Agent 實作最有價值的重點。</p>
+<h1>一句話摘要</h1>
+<p>Google 的 Agentic RAG 不是只把文件丟進向量資料庫，而是把企業檢索拆成多代理流程：Orchestrator 判斷任務、Planner 規劃資料路徑、Query Rewriter 拆解查詢、Search Fanout 跨來源搜尋，最後由 Sufficient Context Agent 檢查「證據是否足夠」；若不足，系統會帶著具體缺口回頭再搜，降低 RAG 幻覺與「找不到但其實資料存在」的問題。</p>
+<h1>原貼文與官方來源</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 分享者 | Govin.AI（@govin999999） |</p>
+<p>| 平台 | Threads |</p>
+<p>| 貼文內容 | Google Research 官方文章連結 |</p>
+<p>| 官方文章日期 | 2026-06-05 |</p>
+<p>| 作者 | Cyrus Rashtchian、Da-Cheng Juan，Google Research |</p>
+<p>| 技術主題 | Gemini Enterprise Agent Platform-hosted Cross-Corpus Retrieval powered by Agentic RAG |</p>
+<p>| 狀態 | Google Research 稱此功能已在 Gemini Enterprise Agent Platform 以 public preview 提供 |</p>
+<h1>這篇文章解決什麼問題</h1>
+<p>傳統單步 RAG 適合「問題和答案在同一批文件內」的情境，但企業查詢常常是 multi-source、multi-hop：</p>
+<ul>
+<li>問「Project X 用的 server 規格」時，第一份文件只寫 server ID，真正規格在另一個資料庫。</li>
+<li>問病人的出院藥物、飲食限制與過敏反應時，資料可能分散在藥局紀錄、營養紀錄、臨床筆記。</li>
+<li>問財務與時程狀態時，需要同時查 finance database 與 project management logs。</li>
+</ul>
+<p>如果系統只做一次檢索，很容易得到局部答案、錯誤的「找不到」，或在缺證據時硬猜。Google 的重點是讓 RAG 具備「知道自己證據不足，並繼續找」的能力。</p>
+<h1>多代理架構拆解</h1>
+<p>| 角色 | 功能 | 實務價值 |</p>
+<p>|---|---|---|</p>
+<p>| Orchestrator / Root Agent | 判斷問題是否為多步任務，並把工作分派給子代理 | 避免所有問題都用同一條檢索 pipeline 粗暴處理 |</p>
+<p>| Planner Agent | 規劃需要查哪些資料來源與資料路徑 | 對跨部門資料、醫療紀錄、專案資料特別重要 |</p>
+<p>| Query Rewriter | 把複雜問題拆成多個可搜尋的小問題 | 提升檢索命中率，避免原問題太長導致 retrieval 失焦 |</p>
+<p>| Search Fanout / RAG Agent | 對多個 query 與多個 corpus 同時搜尋 | 適合企業多資料庫、分散文件庫與跨 team corpus |</p>
+<p>| Sufficient Context Agent | 檢查 snippets、草稿回答與原始問題，判斷證據是否足夠 | 是這篇文章最關鍵的研究創新，能降低幻覺與不完整回答 |</p>
+<p>| Synthesis Agent | 在證據足夠後產生最終回答 | 讓答案可追溯、可審核、可引用來源 |</p>
+<h1>Sufficient Context Agent 為什麼重要</h1>
+<p>Google 把 Sufficient Context Agent 比喻成品質檢查員。它不是只說「context 不足」，而是檢查三件事：</p>
+<ul>
+<li>**Retrieved snippets**：實際抓到的文字片段是否包含回答問題所需資訊。</li>
+<li>**Intermediate draft**：先產生粗略草稿，再檢查草稿是否被證據充分支持。</li>
+<li>**Missing pieces analysis**：具體指出缺哪一塊證據，例如「已找到藥物與飲食資訊，但缺過敏反應資料」。</li>
+</ul>
+<p>如果上下文不足，系統會輸出類似 feedback：「你找到 meds 與 diet，但漏掉 allergies，請回頭搜尋 rashes 或 adverse events。」接著 Query Rewriter 會產生新搜尋，RAG Agent 再深入搜尋被第一次忽略的文件。</p>
+<h1>五階段流程</h1>
+<p>| 階段 | 說明 |</p>
+<p>|---|---|</p>
+<p>| Phase 1：Orchestration | Root Agent 解析使用者需求，Planner 判斷需要查 Pharmacy、Nutrition、Clinical Notes 等不同來源，Query Rewriter 拆成可檢索問題 |</p>
+<p>| Phase 2：Search | RAG Agent 一次搜尋多個 query fanouts，先找出已命中的資料 |</p>
+<p>| Phase 3：Sufficient Context Check | 檢查 snippets、草稿與原問題，判斷是否缺證據 |</p>
+<p>| Phase 4：Iteration | 若缺證據，帶著具體缺口重新產生搜尋，例如再查 rashes / adverse events |</p>
+<p>| Phase 5：Synthesis | 證據足夠後，Synthesis Agent 生成乾淨、可追溯的最終回答 |</p>
+<h1>實驗與數字</h1>
+<p>| 指標 | Google Research 原文資訊 |</p>
+<p>|---|---|</p>
+<p>| 測試資料 | FramesQA，基於 FRAMES paper |</p>
+<p>| 規模 | 824 queries、2,676 PDF documents |</p>
+<p>| 對照組 | Vanilla RAG，使用 Google RAG Engine、LLM parser、re-ranker |</p>
+<p>| Agentic RAG 設定 | single-corpus 與 cross-corpus 兩種 |</p>
+<p>| Cross-corpus 干擾 | 加入 3 個 distracting datasets，Planner 必須從 4 個 corpus 選對資料來源 |</p>
+<p>| 評估方式 | LLM-as-a-judge 比對系統回答與 ground truth |</p>
+<p>| 結果 | 相較 standard RAG，factuality datasets accuracy 最高提升 34% |</p>
+<p>| Cross-corpus accuracy | Planner 從 4 個 corpus 路由時，仍可答對 90.1% 問題 |</p>
+<p>| 延遲 | single-corpus 與 cross-corpus 平均延遲差異約 3% 以內 |</p>
+<h1>對欒帥知識庫與 AI 學習雷達的啟發</h1>
+<ul>
+<li>**知識庫問答不能只做一次檢索**：AI 學習雷達未來若要做問答，應加入「是否證據足夠」的檢查，而不是直接把 top-k 結果丟給模型回答。</li>
+<li>**文章、工具、官方文件要分 corpus**：例如社群貼文、官方文件、GitHub repo、課程筆記可以分成不同資料源，由 Planner 判斷要查哪一類。</li>
+<li>**答案要帶缺口說明**：若找不到資料，應回覆「缺哪一份來源」而不是籠統說不知道。</li>
+<li>**適合做研究助理與課程助教**：學生問跨週主題、工具比較、案例延伸時，Agentic RAG 可多輪查詢課綱、講義、外部官方文件。</li>
+<li>**可做 private data RAG 的設計藍圖**：Google 的思路可借鏡到本機 Hermes / Obsidian / 靜態知識庫，不一定要完全綁 Google Cloud。</li>
+</ul>
+<h1>導入建議</h1>
+<p>| 場景 | 建議做法 |</p>
+<p>|---|---|</p>
+<p>| 小型個人知識庫 | 先加入 query rewrite、二次搜尋、來源引用，不必一開始就做完整多代理 |</p>
+<p>| 團隊內部文件問答 | 將文件依部門、專案、權限分 corpus，避免單一向量庫混雜所有內容 |</p>
+<p>| 醫療、法務、財務 | 必須加入 sufficient context 檢查與人工審核，不能讓模型在證據不足時猜測 |</p>
+<p>| 客服知識庫 | 讓系統在缺資料時回報「缺哪一類政策/文件」，同步回饋給知識庫維護流程 |</p>
+<p>| 企業導入 Google Cloud | 可評估 Gemini Enterprise Agent Platform public preview，但要確認地區、權限、資料落地與價格 |</p>
+<h1>安全與治理檢查清單</h1>
+<ul>
+<li>**資料權限**：Planner 不能讓低權限使用者透過 cross-corpus retrieval 讀到高權限資料。</li>
+<li>**來源追溯**：每個回答都要保留引用 snippets、corpus 名稱、文件 ID 與搜尋 query。</li>
+<li>**不足證據處理**：Sufficient Context Agent 應允許回答「目前證據不足」，而非無限迭代或硬猜。</li>
+<li>**成本上限**：多代理、多輪搜尋、LLM-as-judge 都會增加 token 與延遲，需設最大迭代次數。</li>
+<li>**資料遮罩**：醫療、法務、學生名單、客戶資料需先做 PII redaction 與權限隔離。</li>
+<li>**評估集**：企業應建立自己的 FramesQA 類測試集，不能只相信官方 benchmark。</li>
+<li>**審計紀錄**：保留每次 query rewrite、routing decision、retrieved snippets、final answer 以便稽核。</li>
+<li>**模型幻覺防線**：即使 Agentic RAG 提升準確率，也不能保證 100% 正確；關鍵決策需人工確認。</li>
+</ul>
+<h1>判讀</h1>
+<p>這篇 Google Research 文章的價值在於把 RAG 從「檢索後生成」推進到「帶品質檢查的研究流程」。Sufficient Context Agent 是最值得借鏡的部分：它把「缺證據」轉成可執行的下一輪搜尋指令，而不是讓模型在 top-k 結果不完整時直接回答。對企業與個人知識庫來說，這比單純換更大的 embedding model 或更長 context 更關鍵。</p>
+<p>但也要注意，Agentic RAG 不是免費午餐：架構更複雜、成本更高、延遲更長，也更需要權限控管與評估資料集。真正落地時，應先從高價值、低風險、可審核的查詢場景開始。</p>
+<h1>參考來源</h1>
+<ul>
+<li>Threads 原貼文：<a href="https://www.threads.com/@govin999999/post/DZZTenwkcoC" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/DZZTenwkcoC</a></li>
+<li>Google Research：Unlocking dependable responses with Gemini Enterprise Agent Platform’s Agentic RAG。</li>
+<li>Google Cloud Documentation：Gemini Enterprise Agent Platform。</li>
+<li>Google Cloud Documentation：Agent Platform overview。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-13 · https://www.threads.com/@govin999999/post/DZZTenwkcoC · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Google</span><span class="tag">Gemini Enterprise</span><span class="tag">Agentic RAG</span><span class="tag">RAG</span><span class="tag">多代理</span><span class="tag">Sufficient Context Agent</span><span class="tag">Cross-Corpus Retrieval</span><span class="tag">企業知識庫</span><h3>原始連結</h3><p><a href="https://www.threads.com/@govin999999/post/DZZTenwkcoC" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/DZZTenwkcoC</a></p><p><a href="https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/" target="_blank" rel="noopener">https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/</a></p><p><a href="https://www.threads.com/@govin999999/post/DZZTenwkcoC" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/DZZTenwkcoC</a></p><p><a href="https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/" target="_blank" rel="noopener">https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/</a></p><p><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform" target="_blank" rel="noopener">https://docs.cloud.google.com/gemini-enterprise-agent-platform</a></p><p><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview" target="_blank" rel="noopener">https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

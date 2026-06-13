@@ -149,6 +149,39 @@
     "markdown": "articles/2026/06/2026-06-13-gemini-3-5-live-translate-real-time-speech-threads.md"
   },
   {
+    "title": "Google Agentic RAG｜Gemini Enterprise 的多代理檢索與 Sufficient Context Agent",
+    "date": "2026-06-13",
+    "source": "https://www.threads.com/@govin999999/post/DZZTenwkcoC",
+    "author": "Govin.AI / Google Research / Google Cloud",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Google",
+      "Gemini Enterprise",
+      "Agentic RAG",
+      "RAG",
+      "多代理",
+      "Sufficient Context Agent",
+      "Cross-Corpus Retrieval",
+      "企業知識庫"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@govin999999/post/DZZTenwkcoC",
+      "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
+      "https://www.threads.com/@govin999999/post/DZZTenwkcoC",
+      "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview"
+    ],
+    "excerpt": "Google 的 Agentic RAG 不是只把文件丟進向量資料庫，而是把企業檢索拆成多代理流程：Orchestrator 判斷任務、Planner 規劃資料路徑、Query Rewriter 拆解查詢、Search Fanout 跨來源搜尋，最後由 Sufficient Context Agent 檢查「證據是否足夠」；若不足，系統會帶著具體缺口回頭再搜，降低 RAG 幻覺與「找不到但其實資料存在」的問題。",
+    "slug": "2026-06-13-google-agentic-rag-gemini-enterprise-threads",
+    "html": "articles/2026-06-13-google-agentic-rag-gemini-enterprise-threads.html",
+    "markdown": "articles/2026/06/2026-06-13-google-agentic-rag-gemini-enterprise-threads.md"
+  },
+  {
     "title": "GordenSuperPPTSkills｜GPT 圖片簡報轉可編輯 PPTX 的 AI Skill 工作流",
     "date": "2026-06-13",
     "source": "https://www.threads.com/@govin999999/post/DZZCVd6kU7n",
