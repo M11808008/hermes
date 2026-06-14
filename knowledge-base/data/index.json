@@ -36,6 +36,48 @@
     "markdown": "articles/2026/06/2026-06-14-claude-cowork-social-video-agent-blotato-facebook-reel.md"
   },
   {
+    "title": "Hermes Agent Desktop v0.16｜Wilson 威爾森實驗室桌面版完整教學與導入筆記",
+    "date": "2026-06-14",
+    "source": "https://youtu.be/iE974yYzmrU?si=COe6wWKNSSmMrtfR",
+    "author": "Wilson威爾森實驗室 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Hermes Agent",
+      "Hermes Desktop",
+      "The Surface Release",
+      "v0.16.0",
+      "桌面版",
+      "AI Agent",
+      "自動化",
+      "Cron",
+      "OpenAI Codex",
+      "Ollama",
+      "本地模型",
+      "Telegram",
+      "教學"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://youtu.be/iE974yYzmrU?si=COe6wWKNSSmMrtfR",
+      "https://www.youtube.com/watch?v=iE974yYzmrU",
+      "https://www.youtube.com/watch?v=iE974yYzmrU",
+      "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.5",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/desktop",
+      "https://hermes-agent.nousresearch.com/docs/getting-started/installation",
+      "https://hermes-agent.nousresearch.com/docs/integrations/providers",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/cron",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/web-dashboard",
+      "https://ollama.com/"
+    ],
+    "excerpt": "這支影片的價值在於把 Hermes Agent 從「工程師終端機工具」翻譯成「一般知識工作者也能操作的桌面 Agent」：使用者可透過 Hermes Desktop 安裝與聊天、切換模型、設定 API、建立每日自動化任務，並進一步串接 Ollama 本地模型。",
+    "slug": "2026-06-14-hermes-agent-desktop-v016-wilson-youtube-tutorial",
+    "html": "articles/2026-06-14-hermes-agent-desktop-v016-wilson-youtube-tutorial.html",
+    "markdown": "articles/2026/06/2026-06-14-hermes-agent-desktop-v016-wilson-youtube-tutorial.md"
+  },
+  {
     "title": "Claude 變 LINE 專屬 AI 助理｜Threads 三分鐘 Colab 教學的實作判讀",
     "date": "2026-06-13",
     "source": "https://www.threads.com/@tom7788x/post/DZU3jQ4krJi",

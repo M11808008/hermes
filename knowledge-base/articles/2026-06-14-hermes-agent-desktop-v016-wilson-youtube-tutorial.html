@@ -1,0 +1,99 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hermes Agent Desktop v0.16｜Wilson 威爾森實驗室桌面版完整教學與導入筆記</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Hermes Agent Desktop v0.16｜Wilson 威爾森實驗室桌面版完整教學與導入筆記</h1><h1>Hermes Agent Desktop v0.16｜Wilson 威爾森實驗室桌面版完整教學與導入筆記</h1>
+<p>來源為 Wilson 威爾森實驗室 YouTube 影片《不會寫程式也能用！Hermes Agent桌面版完整教學：模型串接/排程任務/實際應用》。影片主題是 Hermes Agent v0.16.0「The Surface Release」的桌面版入門教學，重點在降低原本 CLI / SSH 的進入門檻，讓一般使用者可以透過桌面 App 完成安裝、模型設定、排程任務與實際 AI 應用。</p>
+<h1>一句話摘要</h1>
+<p>這支影片的價值在於把 Hermes Agent 從「工程師終端機工具」翻譯成「一般知識工作者也能操作的桌面 Agent」：使用者可透過 Hermes Desktop 安裝與聊天、切換模型、設定 API、建立每日自動化任務，並進一步串接 Ollama 本地模型。</p>
+<h1>影片基本資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 平台 | YouTube |</p>
+<p>| 影片 ID | iE974yYzmrU |</p>
+<p>| 頻道 | Wilson威爾森實驗室 |</p>
+<p>| 發布日期 | 2026-06-10 |</p>
+<p>| 影片長度 | 約 21:59 / metadata duration PT1320S |</p>
+<p>| 擷取時互動 | 約 4,782 次觀看、165 個喜歡 |</p>
+<p>| Hashtags | #HermesAgent #桌面版 #AI工具教學 #手把手教學 #AI自動化 #Telegram #生圖 #WilsonAILab |</p>
+<p>| 字幕狀態 | YouTube 顯示未提供字幕；transcript API 回傳 transcripts disabled |</p>
+<h1>影片章節</h1>
+<p>| 時間 | 章節 |</p>
+<p>|---|---|</p>
+<p>| 00:00 | 影片開場與前言 |</p>
+<p>| 00:24 | Hermes Agent 桌面版特色與介面介紹 |</p>
+<p>| 04:02 | 軟體下載與安裝教學 |</p>
+<p>| 05:31 | 首次啟動與選擇模型訂閱方案：免費與付費說明 |</p>
+<p>| 07:23 | 偏好設定：深色模式、繁體中文與基礎環境調整 |</p>
+<p>| 11:33 | 串接自訂模型 API 教學：以 OpenAI Codex 為例 |</p>
+<p>| 13:58 | 每日自動化排程任務設定：以股市資訊監控為例 |</p>
+<p>| 14:58 | 實測應用：AI 文生圖與盤後數據圖表製作 |</p>
+<p>| 16:02 | 實測應用：自動規劃泰國七天六夜旅遊行程表 |</p>
+<p>| 18:56 | 透過 Ollama 串接本地端模型：Minimax M3 完整設定 |</p>
+<p>| 21:37 | 結語與社群資源分享 |</p>
+<h1>官方資料交叉驗證</h1>
+<p>| 影片主張 / 教學點 | 官方資料對照 | 判讀 |</p>
+<p>|---|---|---|</p>
+<p>| v0.16.0 是 The Surface Release | GitHub release 明確標示 Hermes Agent v0.16.0 / v2026.6.5，Release Date: 2026-06-05，稱為 The Surface Release | 影片版本敘述成立 |</p>
+<p>| Hermes 有真正桌面 App | 官方 release 與 Desktop docs 均說明新增 macOS / Windows / Linux native app，非單純 terminal wrapper | 桌面版是這次 release 的核心亮點 |</p>
+<p>| 桌面版與 CLI/Gateway 共用核心 | Desktop docs 說明桌面 App 使用同一個 Hermes Agent core、同一組 config、API keys、sessions、skills、memory | 適合欒帥現有 LINE/Gateway/CLI 工作流延伸，而不是另起爐灶 |</p>
+<p>| 安裝門檻降低 | Installation docs 建議 macOS/Windows 用 Hermes Desktop installer；CLI-only 仍可用 curl / PowerShell；已安裝者可跑 `hermes desktop` | 新手可先用 installer；進階者仍保留 CLI |</p>
+<p>| 模型與 provider 可切換 | Providers docs 說明可用 `hermes model` 互動切換，也可在 `.env` 設 API key；支援 Nous Portal、OpenAI Codex、Anthropic、OpenRouter、Gemini、DeepSeek、MiniMax、Ollama/OpenAI-compatible endpoint 等 | 影片中的模型串接方向成立，但各 provider 的帳號/額度需分開管理 |</p>
+<p>| 排程任務 | Cron docs 說明可用自然語言或 cron expression 建立 recurring/one-shot job，並可送回 origin chat、local files 或其他平台 | 「每日股市監控」是典型 Cron 用例，但應設定資料來源與輸出格式 |</p>
+<p>| Web 管理介面 | Web Dashboard docs 說明可用 `hermes dashboard` 在本機瀏覽器管理 config、API keys、sessions、MCP、models 等 | 桌面版與 web dashboard 都是降低 YAML/SSH 門檻的 surface |</p>
+<p>| 本地模型 | 官方 provider / custom endpoint 架構支援 OpenAI-compatible endpoints；Ollama 常見位址為 `<a href="http://127.0.0.1:11434/v1`" target="_blank" rel="noopener">http://127.0.0.1:11434/v1`</a> | 影片用 Ollama 對接本地模型合理；實際模型可用性取決於 Ollama 端模型與硬體 |</p>
+<h1>欒帥可直接採用的導入清單</h1>
+<p>| 目標 | 建議做法 | 注意事項 |</p>
+<p>|---|---|---|</p>
+<p>| 讓非工程背景使用者上手 Hermes | 以 Hermes Desktop installer 作為第一入口，再視需要介紹 CLI | 不要一開始要求他們編輯 config.yaml 或跑 SSH |</p>
+<p>| 快速設定模型 | 先走 `hermes model` 或 Desktop / Dashboard 的模型設定；若用 OpenRouter/Gemini/API key，放在 `~/.hermes/.env` | API key 不要貼進聊天或公開文件 |</p>
+<p>| 建立每日自動化任務 | 用自然語言描述：每天幾點、抓哪些資料、輸出到哪個平台、是否需要附圖 | Cron job 是 fresh session，prompt 要自包含，不要依賴當前對話記憶 |</p>
+<p>| 接 Telegram/LINE 工作流 | 讓 Hermes Gateway 持續處理訊息；排程結果可送回 origin chat 或指定平台 | 平台 token、webhook、public URL 要分開檢查 |</p>
+<p>| 本地模型實驗 | 先用 Ollama 驗證一個小模型，設定 OpenAI-compatible endpoint，再讓 Hermes 指向該 endpoint | 本地模型速度、上下文長度與工具調用能力通常不如雲端頂級模型 |</p>
+<p>| 知識庫再利用 | 讓 Desktop 讀取本機 Markdown/資料夾，協助整理、摘要、出圖或產生課程素材 | 資料夾權限要明確指定；私密資料不要自動公開部署 |</p>
+<h1>影片對欒帥的實用價值</h1>
+<ul>
+<li>**可作為 Hermes 桌面版教學入口**：適合分享給不熟 CLI 的同事、學員或合作夥伴。</li>
+<li>**可補進課程教材**：影片章節剛好涵蓋安裝、模型、排程、實例、本地模型，可變成「AI Agent 入門實作」課程單元。</li>
+<li>**可對照欒帥現有 Hermes 系統**：目前欒帥已透過 LINE 與我互動；Desktop 版可補足本機視覺化操作與檔案拖放場景。</li>
+<li>**可延伸到 AI 學習雷達自動化**：Cron、知識庫、LINE/Gateway、部署流程都能做成更易展示的桌面 demo。</li>
+<li>**可作為非工程受眾的說明素材**：標題明確主打「不會寫程式也能用」，比官方 docs 更適合入門推廣。</li>
+</ul>
+<h1>建議的實作模板</h1>
+<h2>A. 每日資料監控 Cron</h2>
+<p>| 欄位 | 建議內容 |</p>
+<p>|---|---|</p>
+<p>| 任務 | 每天收集指定市場/AI 新聞/課程報名狀態 |</p>
+<p>| 輸入來源 | 官方 API、RSS、Google Sheets、網站頁面或本機 Markdown |</p>
+<p>| 輸出 | LINE/Telegram 摘要、本機 Markdown、知識庫私有筆記 |</p>
+<p>| Prompt 原則 | 寫清楚資料來源、時間範圍、輸出格式、隱私限制與失敗時處理方式 |</p>
+<h2>B. 本地模型接入</h2>
+<p>| 步驟 | 做法 |</p>
+<p>|---|---|</p>
+<p>| 1 | 安裝 Ollama 並下載模型 |</p>
+<p>| 2 | 確認 endpoint，例如 `<a href="http://127.0.0.1:11434/v1`" target="_blank" rel="noopener">http://127.0.0.1:11434/v1`</a> |</p>
+<p>| 3 | 在 Hermes provider/custom endpoint 設定 base URL 與模型名稱 |</p>
+<p>| 4 | 先測純文字問答，再測工具調用與長文摘要 |</p>
+<p>| 5 | 把低風險任務交給本地模型，高價值推理仍保留雲端模型 |</p>
+<h2>C. 桌面版給新手的安全設定</h2>
+<ul>
+<li>先不要開 YOLO 或跳過危險命令確認。</li>
+<li>API key 只放 `.env` 或 Hermes 設定介面，不放在 prompt。</li>
+<li>寫檔、發訊息、部署、刪除資料前都要保留確認步驟。</li>
+<li>私密名單、報名表、PDF 個資資料不要公開到 GitHub Pages。</li>
+<li>若用本地模型處理敏感資料，也要注意本機檔案權限與備份。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>影片未提供可抓取字幕，因此本文以 YouTube metadata、影片描述、章節與官方文件交叉整理；沒有逐字稿級摘要。</li>
+<li>影片中的安裝畫面、UI 按鈕與訂閱方案可能會隨 Hermes 版本更新而變動，實作時仍以官方 docs / `hermes doctor` / `hermes status` 為準。</li>
+<li>OpenAI Codex、Nous Portal、Anthropic、OpenRouter、Ollama 等 provider 的可用額度與收費規則彼此不同，不應混為同一種「免費/付費」。</li>
+<li>Ollama 本地模型能否勝任 Hermes 工具調用，取決於模型能力、硬體、context length 與 OpenAI-compatible endpoint 的相容性。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>YouTube 影片： <a href="https://www.youtube.com/watch?v=iE974yYzmrU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=iE974yYzmrU</a></li>
+<li>GitHub release： <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.5" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.5</a></li>
+<li>Hermes Desktop docs： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/desktop" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/desktop</a></li>
+<li>Installation docs： <a href="https://hermes-agent.nousresearch.com/docs/getting-started/installation" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/getting-started/installation</a></li>
+<li>Providers docs： <a href="https://hermes-agent.nousresearch.com/docs/integrations/providers" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/integrations/providers</a></li>
+<li>Cron docs： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></li>
+<li>Web Dashboard docs： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/web-dashboard" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/web-dashboard</a></li>
+<li>Ollama： <a href="https://ollama.com/" target="_blank" rel="noopener">https://ollama.com/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-14 · https://youtu.be/iE974yYzmrU?si=COe6wWKNSSmMrtfR · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Hermes Agent</span><span class="tag">Hermes Desktop</span><span class="tag">The Surface Release</span><span class="tag">v0.16.0</span><span class="tag">桌面版</span><span class="tag">AI Agent</span><span class="tag">自動化</span><span class="tag">Cron</span><span class="tag">OpenAI Codex</span><span class="tag">Ollama</span><span class="tag">本地模型</span><span class="tag">Telegram</span><span class="tag">教學</span><h3>原始連結</h3><p><a href="https://youtu.be/iE974yYzmrU?si=COe6wWKNSSmMrtfR" target="_blank" rel="noopener">https://youtu.be/iE974yYzmrU?si=COe6wWKNSSmMrtfR</a></p><p><a href="https://www.youtube.com/watch?v=iE974yYzmrU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=iE974yYzmrU</a></p><p><a href="https://www.youtube.com/watch?v=iE974yYzmrU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=iE974yYzmrU</a></p><p><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.5" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.5</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/desktop" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/desktop</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/getting-started/installation" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/getting-started/installation</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/integrations/providers" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/integrations/providers</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/web-dashboard" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/web-dashboard</a></p><p><a href="https://ollama.com/" target="_blank" rel="noopener">https://ollama.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
