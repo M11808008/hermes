@@ -40,6 +40,41 @@
     "markdown": "articles/2026/06/2026-06-15-comfyui-longcat-avatar-custom-node.md"
   },
   {
+    "title": "Fomofly AI｜長影片自動剪成 Shorts、Reels 與 TikTok 的華語 AI 剪輯工具",
+    "date": "2026-06-15",
+    "source": "https://www.threads.com/@master_aiaiai/post/DZi2Zp5gK47",
+    "author": "master_aiaiai / Fomofly / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Video",
+      "短影音",
+      "影片剪輯",
+      "YouTube Shorts",
+      "Instagram Reels",
+      "TikTok",
+      "創作者工具",
+      "華語工具",
+      "內容再利用"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@master_aiaiai/post/DZi2Zp5gK47",
+      "https://www.fomofly.ai/",
+      "https://www.threads.com/@master_aiaiai/post/DZi2Zp5gK47",
+      "https://www.fomofly.ai/",
+      "https://www.fomofly.ai/pricing",
+      "https://www.fomofly.ai/about-us-chinese",
+      "https://app.fomofly.ai/upload"
+    ],
+    "excerpt": "Fomofly AI 是一個面向華語創作者的長影片轉短影音工具：上傳一支長片後，系統會自動挑選高互動片段、生成 8-10 支短片、處理字幕、版型、重構圖與風格設計；它的價值不只是剪段落，而是把「長內容」快速轉成可發布的社群短影音素材。",
+    "slug": "2026-06-15-fomofly-ai-video-editor",
+    "html": "articles/2026-06-15-fomofly-ai-video-editor.html",
+    "markdown": "articles/2026/06/2026-06-15-fomofly-ai-video-editor.md"
+  },
+  {
     "title": "Hermes Agent｜PAPAYA 27 分鐘保姆級完整架設教學與欒帥導入清單",
     "date": "2026-06-15",
     "source": "https://www.threads.com/@prompt_case/post/DZkevf4lO84",
@@ -130,6 +165,44 @@
     "slug": "2026-06-15-ilab-gpt-conjure-gpt-image-webui",
     "html": "articles/2026-06-15-ilab-gpt-conjure-gpt-image-webui.html",
     "markdown": "articles/2026/06/2026-06-15-ilab-gpt-conjure-gpt-image-webui.md"
+  },
+  {
+    "title": "StackAI 免費方案｜500 次 Agent Runs、工作流自動化、API 與 MCP 連接器",
+    "date": "2026-06-15",
+    "source": "https://www.threads.com/@govin999999/post/DZkQS2-GIO0",
+    "author": "Govin.AI / StackAI / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "StackAI",
+      "Workflow Automation",
+      "No-code AI",
+      "MCP",
+      "API",
+      "Enterprise AI",
+      "免費方案",
+      "原型驗證"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@govin999999/post/DZkQS2-GIO0",
+      "https://stackai.com/pricing",
+      "https://www.threads.com/@govin999999/post/DZkQS2-GIO0",
+      "https://stackai.com/",
+      "https://stackai.com/pricing",
+      "https://docs.stack-ai.com/",
+      "https://docs.stack-ai.com/welcome-to-stackai/overview/platform-overview",
+      "https://docs.stack-ai.com/interface-and-deployment/api-reference",
+      "https://docs.stack-ai.com/interface-and-deployment/mcp-reference",
+      "https://docs.stack-ai.com/interface-and-deployment/mcp-reference/stackai-mcp-server"
+    ],
+    "excerpt": "StackAI 是企業級 AI Agent / 工作流平台，讓使用者用視覺化 canvas 串接 LLM、知識庫、工具與企業系統，並部署成聊天介面、API、Slack / WhatsApp / SMS 或 MCP 工具；免費方案官方 pricing 顯示每月 500 runs、2 projects、1 seat，適合做小型 AI Agent 原型與流程驗證。",
+    "slug": "2026-06-15-stackai-free-tier-agent-workflow-platform",
+    "html": "articles/2026-06-15-stackai-free-tier-agent-workflow-platform.html",
+    "markdown": "articles/2026/06/2026-06-15-stackai-free-tier-agent-workflow-platform.md"
   },
   {
     "title": "Anthropic Fable 5 / Mythos 5 被美國出口管制下架｜Frontier AI 安全、政府干預與供應鏈政治",

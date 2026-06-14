@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>StackAI 免費方案｜500 次 Agent Runs、工作流自動化、API 與 MCP 連接器</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>StackAI 免費方案｜500 次 Agent Runs、工作流自動化、API 與 MCP 連接器</h1><h1>StackAI 免費方案｜500 次 Agent Runs、工作流自動化、API 與 MCP 連接器</h1>
+<p>來源為 Govin.AI 在 Threads 分享 StackAI 免費 tier。貼文指出 StackAI 目前免費額度對原型驗證相當友善：不需綁信用卡、Google 帳號登入即可使用，支援工作流自動化、API 呼叫、MCP 連接器與現成聊天介面。</p>
+<h1>一句話摘要</h1>
+<p>StackAI 是企業級 AI Agent / 工作流平台，讓使用者用視覺化 canvas 串接 LLM、知識庫、工具與企業系統，並部署成聊天介面、API、Slack / WhatsApp / SMS 或 MCP 工具；免費方案官方 pricing 顯示每月 500 runs、2 projects、1 seat，適合做小型 AI Agent 原型與流程驗證。</p>
+<h1>來源與方案資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 作者 | Govin.AI（@govin999999） |</p>
+<p>| 官方網站 | <a href="https://stackai.com/" target="_blank" rel="noopener">https://stackai.com/</a> |</p>
+<p>| 官方文件 | <a href="https://docs.stack-ai.com/" target="_blank" rel="noopener">https://docs.stack-ai.com/</a> |</p>
+<p>| 官方定義 | Enterprise platform for building, deploying, and governing AI agents |</p>
+<p>| 免費方案 | $0 / month |</p>
+<p>| 免費方案官方額度 | 500 runs per month、2 projects、1 seat、Discord community support |</p>
+<p>| 企業方案 | Custom runs、unlimited projects、custom seats、dedicated infrastructure、solution engineers、on-prem、VPC、SSO、SOC 2 / HIPAA / GDPR |</p>
+<p>| 介面部署 | ChatGPT-style interface、網站 chatbot、voice interface、Slack、WhatsApp、SMS、API、自訂 UI |</p>
+<p>| MCP | StackAI MCP Server 可讓 Claude Desktop、Cursor 等 MCP client 直接把已部署 workflow 當工具呼叫 |</p>
+<h1>關於 Threads 提到的 token 額度</h1>
+<p>原貼文提到「每天 100 萬 tokens，免費用 GPT-5.5、Grok 4.20、Kimi K2.6，每月 500 次 Agent 運行」。官方公開 pricing 頁面可確認的是「Free plan：500 runs per month、2 projects、1 seat」；token 與模型可用性可能依帳號、地區、活動、產品更新或 app 內顯示變動，需以登入後 StackAI 介面與官方方案頁為準。</p>
+<p>因此本文把 500 runs 視為已由官方 pricing 補強的資訊；每日 token 與模型清單則保留為 Threads 分享資訊，不作永久保證。</p>
+<h1>核心能力</h1>
+<p>| 能力 | 說明 |</p>
+<p>|---|---|</p>
+<p>| 視覺化 Workflow Builder | 在 canvas 上拖拉節點，串接輸入、LLM、工具、資料來源與輸出 |</p>
+<p>| Templates | 可從 Quick Start 或「Chat with Knowledge Base」等模板開始 |</p>
+<p>| Knowledge Base | 支援文件上傳、Web scraping、Google Drive 等知識來源 |</p>
+<p>| 多模態輸入輸出 | pricing compare 顯示支援 text、image、audio、video 輸入，以及 text、image、audio 輸出能力 |</p>
+<p>| API 部署 | 可將 StackAI 作為 backend process，用 API 送入 inputs、接收 results，並建立自訂 UI |</p>
+<p>| MCP Server | 將已部署 workflows 暴露成 Claude、Cursor 等 MCP client 可呼叫的工具 |</p>
+<p>| Analytics | 可追蹤 runs、users、errors、tokens consumed、execution logs |</p>
+<p>| Evaluator | 可用 CSV 批量測試 agent，並用另一個 LLM 評分輸出品質 |</p>
+<p>| Governance | 企業方案提供 access control、SSO、audit / governance、VPC / on-prem 等治理能力 |</p>
+<h1>官方文件中的產品結構</h1>
+<p>StackAI 的專案介面主要分為：</p>
+<ul>
+<li>Workflow View：主要 canvas，用節點建立 agent 工作流；包含 Save、Run、Share、Publish。</li>
+<li>Export View：選擇部署介面，例如聊天頁、網站 chatbot、voice、Slack、WhatsApp、SMS、API 或自訂 UI。</li>
+<li>Analytics View：查看 workflow 使用量、執行狀態、runtime、token 消耗、輸入與輸出 log。</li>
+<li>Manager View：管理與下載使用者對話紀錄。</li>
+<li>Evaluator View：以批量測試資料與 LLM 評分機制驗證 agent 品質。</li>
+</ul>
+<h1>適合用來做什麼</h1>
+<p>| 場景 | 用法 |</p>
+<p>|---|---|</p>
+<p>| 快速 Agent 原型 | 用免費方案測試單一任務 agent 是否可行，例如客服問答、文件萃取、資料查詢 |</p>
+<p>| 知識庫聊天 | 上傳文件或連接資料來源，建立內部問答助手 |</p>
+<p>| 工作流自動化 | 串接 Gmail、Notion、Google Drive、Slack、資料庫或 API |</p>
+<p>| API Backend | 先用 no-code workflow 驗證，再把流程用 API 接到既有產品 |</p>
+<p>| MCP 工具層 | 將 StackAI workflow 作為 Claude / Cursor 可調用的工具，降低自寫 MCP server 成本 |</p>
+<p>| 課程展示 | 示範 AI Agent 不是單一 prompt，而是資料、工具、模型、部署、觀測與治理的整體流程 |</p>
+<h1>對欒帥的實用價值</h1>
+<ul>
+<li>免費方案可作為「AI Agent 工作流課程」的低門檻展示工具，不需先架伺服器。</li>
+<li>適合快速驗證企業流程：文件問答、報名資料整理、客服 FAQ、內部知識庫助理、表單轉 API 等。</li>
+<li>API 與 MCP 讓它可接到 Hermes、Claude Desktop、Cursor 或自訂前端，適合作為 prototype backend。</li>
+<li>Analytics / Evaluator 可拿來教「Agent 上線前不是只看 demo，而要看 runs、token、錯誤率、延遲與品質評估」。</li>
+<li>若未來要企業導入，可從免費原型延伸到 SSO、VPC、on-prem、access control、合規與治理議題。</li>
+</ul>
+<h1>快速測試建議</h1>
+<ul>
+<li>建立一個 Quick Start 或 Chat with Knowledge Base 專案。</li>
+<li>上傳 1-3 份非敏感文件，測試中文問答、引用來源與回答穩定度。</li>
+<li>加入一個 API 或表單輸入節點，測試 workflow 是否能穩定輸出固定格式。</li>
+<li>發布成 chat interface，再測試 API export。</li>
+<li>若要與本機 AI assistant 整合，再研究 StackAI MCP Server，把 workflow 暴露成可呼叫工具。</li>
+<li>在 Analytics 裡記錄每次 run 的 runtime、token、錯誤與輸出品質。</li>
+</ul>
+<h1>風險與注意</h1>
+<ul>
+<li>免費額度、每日 token、可用模型與 runs 可能會改，需以官方 pricing 與登入後介面為準。</li>
+<li>不建議一開始就上傳含個資、機密或客戶資料的文件；先用公開或假資料測試。</li>
+<li>No-code workflow 很適合原型，但正式上線仍要設計版本控管、權限、成本上限、log 與 fallback。</li>
+<li>MCP / API 導出雖降低整合成本，但也要管理 API key、權限、rate limit 與工具誤用風險。</li>
+<li>企業導入時要優先確認資料保留、地區、合規、SSO、VPC / on-prem、審計與刪除政策。</li>
+</ul>
+<h1>原始 Threads 摘要</h1>
+<p>Govin.AI 分享 StackAI 免費 tier 給得大方：每天 100 萬 tokens、可用多個旗艦模型、每月 500 次 Agent 運行，不用綁信用卡，Google 登入即可；支援工作流自動化、API 呼叫、MCP 連接器與現成聊天介面，約 10 分鐘可完成設定。本文以 StackAI 官方 pricing 與 docs 補強，將可公開驗證的 free plan 與平台能力整理成知識庫條目。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-15 · https://www.threads.com/@govin999999/post/DZkQS2-GIO0 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">StackAI</span><span class="tag">Workflow Automation</span><span class="tag">No-code AI</span><span class="tag">MCP</span><span class="tag">API</span><span class="tag">Enterprise AI</span><span class="tag">免費方案</span><span class="tag">原型驗證</span><h3>原始連結</h3><p><a href="https://www.threads.com/@govin999999/post/DZkQS2-GIO0" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/DZkQS2-GIO0</a></p><p><a href="https://stackai.com/pricing" target="_blank" rel="noopener">https://stackai.com/pricing</a></p><p><a href="https://www.threads.com/@govin999999/post/DZkQS2-GIO0" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/DZkQS2-GIO0</a></p><p><a href="https://stackai.com/" target="_blank" rel="noopener">https://stackai.com/</a></p><p><a href="https://stackai.com/pricing" target="_blank" rel="noopener">https://stackai.com/pricing</a></p><p><a href="https://docs.stack-ai.com/" target="_blank" rel="noopener">https://docs.stack-ai.com/</a></p><p><a href="https://docs.stack-ai.com/welcome-to-stackai/overview/platform-overview" target="_blank" rel="noopener">https://docs.stack-ai.com/welcome-to-stackai/overview/platform-overview</a></p><p><a href="https://docs.stack-ai.com/interface-and-deployment/api-reference" target="_blank" rel="noopener">https://docs.stack-ai.com/interface-and-deployment/api-reference</a></p><p><a href="https://docs.stack-ai.com/interface-and-deployment/mcp-reference" target="_blank" rel="noopener">https://docs.stack-ai.com/interface-and-deployment/mcp-reference</a></p><p><a href="https://docs.stack-ai.com/interface-and-deployment/mcp-reference/stackai-mcp-server" target="_blank" rel="noopener">https://docs.stack-ai.com/interface-and-deployment/mcp-reference/stackai-mcp-server</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
