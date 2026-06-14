@@ -1,0 +1,77 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hermes Agent｜PAPAYA 27 分鐘保姆級完整架設教學與欒帥導入清單</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Hermes Agent｜PAPAYA 27 分鐘保姆級完整架設教學與欒帥導入清單</h1><h1>Hermes Agent｜PAPAYA 27 分鐘保姆級完整架設教學與欒帥導入清單</h1>
+<p>來源為 Prompt Case 在 Threads 分享的 PAPAYA 電腦教室 YouTube 影片《Hermes Agent 保姆級教學來了！最安全的 AI 私人助理造成 OpanClaw 大規模棄養潮，用過就回不去了！》。Threads 貼文重點指出：這支 27 分鐘教學涵蓋 Hermes Agent 多數基礎重點，包含本機與雲端 VPS 安裝、Telegram、Gmail、Google 日曆、Notion、Subagent、排程、語音、生圖/影片、系統備份與防火牆安全設定。</p>
+<h1>一句話摘要</h1>
+<p>這支影片適合當作 Hermes Agent「從零架設私人 AI 助理」的完整入口：它比單一桌面版教學更偏向端到端部署，把安裝、模型、工具串接、子代理、排程、語音、Skills、外部服務與安全維運串成一條可教學、可展示、也可轉成課程實作的路線。</p>
+<h1>來源與影片基本資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 作者 | Prompt Case（@prompt_case） |</p>
+<p>| Threads 貼文 | <a href="https://www.threads.com/@prompt_case/post/DZkevf4lO84" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DZkevf4lO84</a> |</p>
+<p>| YouTube 影片 | <a href="https://www.youtube.com/watch?v=-EivK7vpOXY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-EivK7vpOXY</a> |</p>
+<p>| 頻道 | PAPAYA 電腦教室 |</p>
+<p>| 發布日期 | 2026-06-14（YouTube metadata） |</p>
+<p>| 影片長度 | 27:30 / metadata duration PT1651S |</p>
+<p>| 擷取時互動 | YouTube 約 31,250 次觀看、1,704 個喜歡；Threads 約 1 萬次瀏覽、362 讚、33 轉發、168 分享 |</p>
+<p>| 字幕狀態 | transcript API 未取得逐字稿；本文依 YouTube description / schema metadata / Threads 內文 / Hermes 官方文件整理 |</p>
+<h1>YouTube 章節整理</h1>
+<p>| 時間 | 章節 |</p>
+<p>|---|---|</p>
+<p>| 00:00 | Hermes Agent 簡介 |</p>
+<p>| 01:41 | Hermes Agent 安裝：本機與雲端 VPS |</p>
+<p>| 05:52 | 將 Hermes 串接到 Telegram |</p>
+<p>| 09:01 | Hermes 的記憶系統 |</p>
+<p>| 11:08 | 串接 OpenRouter AI 模型 |</p>
+<p>| 12:46 | Hermes 網頁搜尋功能 |</p>
+<p>| 13:51 | Subagent（子代理） |</p>
+<p>| 14:33 | 串接 Google Workspace |</p>
+<p>| 17:15 | 設定排程 |</p>
+<p>| 17:59 | 語音模式 |</p>
+<p>| 19:05 | 建立與安裝 Skills（技能） |</p>
+<p>| 22:13 | 生成圖片和影片 |</p>
+<p>| 24:29 | 串接外部工具：Notion |</p>
+<p>| 26:23 | Hermes 備份與防火牆設定 |</p>
+<h1>對欒帥最有價值的導入路線</h1>
+<p>| 階段 | 影片主題 | 欒帥可用法 | 注意事項 |</p>
+<p>|---|---|---|---|</p>
+<p>| 1. 入門安裝 | 本機 + VPS | 可作為課程第一段：先讓學員理解本機私人助理與雲端常駐助理的差異 | 本機適合檔案與桌面任務；VPS 適合 24/7 Gateway / Cron，但要處理防火牆與備份 |</p>
+<p>| 2. 訊息入口 | Telegram 串接 | 可對照欒帥目前 LINE / Telegram Hermes 工作流，說明同一個 agent 可跨平台服務 | 平台 token、webhook/public URL、home channel 需分開驗證 |</p>
+<p>| 3. 長期上下文 | 記憶系統 | 適合展示「私人助理」不是單次聊天，而是保留偏好、環境與流程知識 | 記憶只放穩定事實；任務進度與短期狀態不應塞入長期記憶 |</p>
+<p>| 4. 模型成本控管 | OpenRouter | 可讓學員理解多模型 provider、備援與成本/品質取捨 | API key 應放環境變數或 Hermes 設定，不貼進公開文件 |</p>
+<p>| 5. 自動化擴展 | Subagent + Cron | 可做成「AI 學習雷達」示範：子代理並行研究、排程每日摘要 | Cron prompt 必須自包含，不能依賴當前聊天上下文 |</p>
+<p>| 6. 辦公整合 | Google Workspace / Notion | 適合課程展示 Gmail、Calendar、Docs、Notion 知識庫串接 | OAuth 權限與資料隱私要清楚切分；含個資資料不要公開部署 |</p>
+<p>| 7. 多模態輸出 | 生圖與影片 | 可補強教材、社群圖卡、課程宣傳素材生成流程 | 生成內容仍需人工審稿與來源標示 |</p>
+<p>| 8. 維運安全 | 備份與防火牆 | 適合把 Hermes 從玩具專案提升為可長期運作的個人 AI OS | VPS 必須限制開放埠、保存 config / skills / sessions / .env 備份 |</p>
+<h1>可轉成課程或工作坊的設計</h1>
+<ul>
+<li>第一單元：Hermes Agent 是什麼？和 ChatGPT、Claude Desktop、OpenClaw、n8n 的差異。</li>
+<li>第二單元：本機安裝與模型設定，先跑通基本聊天與工具調用。</li>
+<li>第三單元：串接 Telegram / LINE，讓 Agent 進入日常通訊入口。</li>
+<li>第四單元：建立記憶與 Skills，把個人偏好與 SOP 轉成可複用能力。</li>
+<li>第五單元：用 Subagent 做平行研究，用 Cron 做每日自動摘要。</li>
+<li>第六單元：串接 Google Workspace / Notion，完成一個實際辦公流程。</li>
+<li>第七單元：部署到 VPS，加入備份、防火牆與安全檢查。</li>
+</ul>
+<h1>和既有 Hermes 文章的分工</h1>
+<p>知識庫中已收錄 Wilson 威爾森實驗室的 Hermes Desktop v0.16 教學，那篇重點是「桌面版與低門檻操作」。本篇 PAPAYA 影片則更像「完整私人 AI 助理部署藍圖」：從本機/VPS 到訊息平台、記憶、模型、工具、排程、語音、Skills 與維運安全，適合作為較進階或完整工作坊的主教材。</p>
+<h1>判讀限制</h1>
+<ul>
+<li>YouTube transcript API 未取得逐字稿，因此本文不是逐字稿摘要，而是依 YouTube metadata、影片描述章節、Threads 內文與 Hermes 官方文件整理。</li>
+<li>影片標題中的「OpenClaw 大規模棄養潮」屬於社群/行銷語境；本文不把它視為可量化事實，只保留為影片定位背景。</li>
+<li>Hermes Agent、Desktop、Gateway、Skills、provider、語音與影片生成能力會快速更新；實作仍應以官方 docs、`hermes doctor`、`hermes status` 與目前本機設定為準。</li>
+<li>VPS、防火牆、OAuth 與 API key 涉及安全與成本，教學展示時應使用測試帳號與最小權限。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads： <a href="https://www.threads.com/@prompt_case/post/DZkevf4lO84" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DZkevf4lO84</a></li>
+<li>YouTube： <a href="https://www.youtube.com/watch?v=-EivK7vpOXY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-EivK7vpOXY</a></li>
+<li>Hermes Desktop： <a href="https://hermes-agent.nousresearch.com/desktop" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/desktop</a></li>
+<li>Hermes Docs： <a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs</a></li>
+<li>Hermes Installation： <a href="https://hermes-agent.nousresearch.com/docs/getting-started/installation" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/getting-started/installation</a></li>
+<li>Hermes Providers： <a href="https://hermes-agent.nousresearch.com/docs/integrations/providers" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/integrations/providers</a></li>
+<li>Hermes Cron： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></li>
+<li>Hermes Skills： <a href="https://hermes-agent.nousresearch.com/docs/skills" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/skills</a></li>
+<li>OpenRouter： <a href="https://openrouter.ai/" target="_blank" rel="noopener">https://openrouter.ai/</a></li>
+<li>Telegram Desktop： <a href="https://desktop.telegram.org/" target="_blank" rel="noopener">https://desktop.telegram.org/</a></li>
+<li>Google Cloud Console： <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">https://console.cloud.google.com/</a></li>
+<li>Notion Integrations： <a href="https://app.notion.com/developers/connections" target="_blank" rel="noopener">https://app.notion.com/developers/connections</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-15 · https://www.threads.com/@prompt_case/post/DZkevf4lO84 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Hermes Agent</span><span class="tag">AI Agent</span><span class="tag">PAPAYA 電腦教室</span><span class="tag">Prompt Case</span><span class="tag">YouTube</span><span class="tag">Threads</span><span class="tag">教學</span><span class="tag">Telegram</span><span class="tag">OpenRouter</span><span class="tag">Subagent</span><span class="tag">Google Workspace</span><span class="tag">Notion</span><span class="tag">Cron</span><span class="tag">Skills</span><span class="tag">語音助理</span><span class="tag">VPS</span><span class="tag">自動化</span><h3>原始連結</h3><p><a href="https://www.threads.com/@prompt_case/post/DZkevf4lO84" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DZkevf4lO84</a></p><p><a href="https://www.youtube.com/watch?v=-EivK7vpOXY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-EivK7vpOXY</a></p><p><a href="https://www.threads.com/@prompt_case/post/DZkevf4lO84" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DZkevf4lO84</a></p><p><a href="https://www.youtube.com/watch?v=-EivK7vpOXY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-EivK7vpOXY</a></p><p><a href="https://hermes-agent.nousresearch.com/desktop" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/desktop</a></p><p><a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/getting-started/installation" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/getting-started/installation</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/integrations/providers" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/integrations/providers</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/skills" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/skills</a></p><p><a href="https://openrouter.ai/" target="_blank" rel="noopener">https://openrouter.ai/</a></p><p><a href="https://desktop.telegram.org/" target="_blank" rel="noopener">https://desktop.telegram.org/</a></p><p><a href="https://console.cloud.google.com/" target="_blank" rel="noopener">https://console.cloud.google.com/</a></p><p><a href="https://app.notion.com/developers/connections" target="_blank" rel="noopener">https://app.notion.com/developers/connections</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
