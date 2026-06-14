@@ -1,5 +1,43 @@
 [
   {
+    "title": "Anthropic Fable 5 / Mythos 5 被美國出口管制下架｜Frontier AI 安全、政府干預與供應鏈政治",
+    "date": "2026-06-14",
+    "source": "https://www.facebook.com/share/p/1LBm6DdR45/",
+    "author": "Claude Taiwan / Mini Dora Cat / Anthropic / POLITICO",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Anthropic",
+      "Claude",
+      "Fable 5",
+      "Mythos 5",
+      "Frontier Model",
+      "AI Safety",
+      "Export Controls",
+      "Policy",
+      "Cybersecurity",
+      "Cloud Infrastructure"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1LBm6DdR45/",
+      "https://www.anthropic.com/news/fable-mythos-access",
+      "https://www.facebook.com/share/p/1LBm6DdR45/",
+      "https://www.politico.com/news/2026/06/13/inside-the-whirlwind-24-hours-that-led-the-white-house-to-slap-export-controls-on-anthropic-00961519",
+      "https://www.anthropic.com/news/fable-mythos-access",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://www.axios.com/2026/06/13/anthropic-amazon-white-house",
+      "https://www.businessinsider.com/anthropic-disable-mythos-fable-us-export-control-national-security-2026-6"
+    ],
+    "excerpt": "Fable 5 / Mythos 5 事件代表 frontier AI 正從「產品發布」進入「準軍民兩用技術管制」階段：模型能力、資安越獄、雲端供應鏈、外國國民存取與政府緊急召回權，會一起成為企業導入高能力 AI agent 時必須納入的治理風險。",
+    "slug": "2026-06-14-anthropic-fable-mythos-export-controls-facebook",
+    "html": "articles/2026-06-14-anthropic-fable-mythos-export-controls-facebook.html",
+    "markdown": "articles/2026/06/2026-06-14-anthropic-fable-mythos-export-controls-facebook.md"
+  },
+  {
     "title": "Claude Cowork × Blotato｜用桌面 Agent 生成並自動發布社群影片的工作流",
     "date": "2026-06-14",
     "source": "https://www.facebook.com/share/r/1BLgYSLbuN/?mibextid=wwXIfr",
