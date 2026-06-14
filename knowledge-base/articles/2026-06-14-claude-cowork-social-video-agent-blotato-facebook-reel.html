@@ -1,0 +1,68 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude Cowork × Blotato｜用桌面 Agent 生成並自動發布社群影片的工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claude Cowork × Blotato｜用桌面 Agent 生成並自動發布社群影片的工作流</h1><h1>Claude Cowork × Blotato｜用桌面 Agent 生成並自動發布社群影片的工作流</h1>
+<p>來源為 Sabrina Ramonov 的 Facebook Reel。貼文主張：留言「COWORK」即可取得免費 Claude Cowork masterclass；範例展示 Claude Cowork 能讓影片自動生成、再發布到社群，而且不需要額外影像或影片生成 credits，因為流程在本機透過 Cowork 與免費 Python 函式庫完成；最後可接 Blotato 自動發到多個社群平台。本文把 Reel 視為社群發現來源，並以 Anthropic Claude Cowork 官方頁、Blotato 官方頁與 Sabrina 的 Cowork 教學頁交叉驗證。</p>
+<h1>一句話摘要</h1>
+<p>這支 Reel 值得收進 AI 學習雷達，因為它不是單純「AI 生成影片」炫技，而是展示一個可複製的 creator-agent 架構：Claude Cowork 負責讀取本機素材、編排腳本與呼叫 Python 工具生成影片；Blotato 負責把完成內容排程並分發到 TikTok、Instagram、YouTube、Threads、Facebook 等平台。</p>
+<h1>原 Reel 重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 平台 | Facebook Reel |</p>
+<p>| 作者 | Sabrina Ramonov |</p>
+<p>| Reel ID | 1525096232343600 |</p>
+<p>| 擷取時互動 | 約 53 萬次觀看、8,384 個心情、4,736 則留言、853 次分享 |</p>
+<p>| 核心 CTA | Comment &quot;COWORK&quot; and follow me to get the free Claude Cowork masterclass |</p>
+<p>| 社群主張 | Claude Cowork makes unlimited videos posting themselves to social media |</p>
+<p>| 成本說法 | 不用特殊 image/video generation credits；使用 Cowork 與免費 Python libraries 在本機執行 |</p>
+<p>| 分發工具 | Blotato 可自動發布到社群 |</p>
+<p>| 重要澄清 | 貼文特別說明「This is Cowork, not Claude Code」 |</p>
+<h1>官方資料對照</h1>
+<p>| 主題 | 官方/穩定來源 | 對 Reel 的解讀 |</p>
+<p>|---|---|---|</p>
+<p>| Claude Cowork 定位 | Anthropic 官方稱 Cowork 是 agentic AI system for knowledge work，跑在 desktop，可連接本機檔案與應用，完成多步驟任務 | Reel 中「讓影片自己做出來」的核心是桌面 Agent 對本機檔案、應用與工具的調度 |</p>
+<p>| 與一般 Chat 差異 | Cowork 可在指定資料夾讀、改、建立檔案；一般聊天無法直接碰本機檔案 | 影片生成流程需要素材、腳本、輸出檔與排程檔，所以 Cowork 比純聊天更適合 |</p>
+<p>| 與 Claude Code 差異 | Claude Code 是開發者 CLI；Cowork 把 agentic architecture 帶到桌面 app，偏向非程式知識工作 | Reel 的「不是 Claude Code」是合理澄清：它主打桌面工作流與內容團隊，而非命令列 coding |</p>
+<p>| 權限與安全 | Cowork 需要使用者指定資料夾與 connector；重大動作預設會要求確認 | 自動發布內容前仍應保留人審，尤其品牌、廣告、個資與商業帳號 |</p>
+<p>| Blotato 定位 | Blotato 官方主打一週內容 60 秒、跨 9+ 平台發布、API/MCP、n8n/Make/Webhook 整合 | Blotato 在此流程中較像 distribution layer，不是影片生成本身 |</p>
+<h1>可行工作流拆解</h1>
+<ul>
+<li>素材準備：把品牌圖片、照片、短片、b-roll、logo、音檔與文字素材放在 Cowork 可存取的本機資料夾。</li>
+<li>腳本與分鏡：讓 Cowork 依主題產生短影音腳本、hook、畫面段落、字幕與 CTA。</li>
+<li>本機生成：透過 Python libraries 組合圖片、片段、字幕、轉場與輸出比例，產生可上傳影片。</li>
+<li>品質檢查：人工確認字幕、品牌語氣、版權、錯字、畫面節奏與平台規範。</li>
+<li>分發排程：把影片與文案交給 Blotato 或其 API/MCP/自動化整合，安排跨平台發布。</li>
+<li>迭代回饋：用平台成效資料調整 hook、模板、長度、封面與 CTA。</li>
+</ul>
+<h1>對欒帥的實用價值</h1>
+<p>| 應用場景 | 可以怎麼用 |</p>
+<p>|---|---|</p>
+<p>| AI 學習雷達短影音 | 把每日歸檔的 AI 工具重點轉成 30–60 秒教學短片，再排程發布 |</p>
+<p>| 課程行銷 | 將課程單元、講師亮點、學員成果、報名提醒自動變成多平台素材 |</p>
+<p>| 知識庫再利用 | 從既有 Markdown 筆記抽出 one-liner、三點摘要、案例與 CTA，變成影片腳本 |</p>
+<p>| 個人品牌 | 用固定視覺模板產出 LinkedIn、Threads、Instagram、YouTube Shorts 對應版本 |</p>
+<p>| 實驗流水線 | 先做本機無成本 prototype，再決定是否接付費影片模型或大量發布工具 |</p>
+<h1>建議導入順序</h1>
+<p>| 階段 | 做法 | 目的 |</p>
+<p>|---|---|---|</p>
+<p>| 1. 純本機 prototype | 只用 3–5 張圖片、字幕與背景音，讓 Python 產出一支短片 | 驗證 Cowork 能否穩定讀寫素材與輸出影片 |</p>
+<p>| 2. 固定模板 | 建立 1–2 個品牌模板：標題、字幕、logo、結尾 CTA | 避免每次從零做設計 |</p>
+<p>| 3. 人審 gate | 發布前固定輸出待審資料夾，不直接自動上架 | 降低錯字、誤導與品牌風險 |</p>
+<p>| 4. 接 Blotato | 只先接一個低風險平台測試排程 | 驗證 API、格式、封面、文案與帳號權限 |</p>
+<p>| 5. 擴到多平台 | 依平台調整比例、長度、文案與 hashtag | 避免同一素材硬貼所有平台 |</p>
+<p>| 6. 成效迭代 | 回收觀看、留言、分享、點擊資料 | 讓 Agent 依數據改 hook 與模板 |</p>
+<h1>風險與限制</h1>
+<ul>
+<li>「unlimited videos」應解讀為本機自動化理論上可大量生成，不代表沒有時間、硬體、素材、平台 API、發布配額與品質成本。</li>
+<li>免費 Python libraries 可以做字幕、剪接、排版、合成與轉檔，但若需要高品質 AI 影像、AI 影片或 voice cloning，仍可能需要額外模型或雲端服務。</li>
+<li>自動發布工具會接觸社群帳號權限；應避免讓 Agent 直接發布未審核內容。</li>
+<li>Reel 沒有展示完整程式碼、素材來源、模板細節與 Blotato 設定，因此本文只能確認架構方向，不能保證照貼文操作即可一次成功。</li>
+<li>若內容使用他人照片、影片、音樂或新聞素材，必須先處理授權與平台政策。</li>
+</ul>
+<h1>欒帥版落地建議</h1>
+<p>優先把它做成「AI 學習雷達短影音再利用」的小型流水線：從知識庫 Markdown 選一篇高價值文章，輸出 45 秒腳本、五張視覺卡、字幕檔與影片；人工確認後再交給 Blotato 或其他排程工具。這樣能把既有知識庫內容轉成社群素材，同時保留品質與品牌審核，不必一開始追求全自動大量發布。</p>
+<h1>參考來源</h1>
+<ul>
+<li>Facebook Reel： <a href="https://www.facebook.com/reel/1525096232343600" target="_blank" rel="noopener">https://www.facebook.com/reel/1525096232343600</a></li>
+<li>原分享連結： <a href="https://www.facebook.com/share/r/1BLgYSLbuN/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1BLgYSLbuN/?mibextid=wwXIfr</a></li>
+<li>Claude Cowork 官方頁： <a href="https://claude.com/product/cowork" target="_blank" rel="noopener">https://claude.com/product/cowork</a></li>
+<li>Blotato 官方頁： <a href="https://www.blotato.com/" target="_blank" rel="noopener">https://www.blotato.com/</a></li>
+<li>Sabrina Cowork masterclass 頁： <a href="https://www.sabrina.dev/p/5-insane-claude-cowork-use-cases-masterclass" target="_blank" rel="noopener">https://www.sabrina.dev/p/5-insane-claude-cowork-use-cases-masterclass</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-14 · https://www.facebook.com/share/r/1BLgYSLbuN/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Claude</span><span class="tag">Claude Cowork</span><span class="tag">Anthropic</span><span class="tag">Blotato</span><span class="tag">社群自動化</span><span class="tag">影片生成</span><span class="tag">內容工作流</span><span class="tag">Agent</span><span class="tag">Python</span><span class="tag">Creator Tools</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/r/1BLgYSLbuN/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1BLgYSLbuN/?mibextid=wwXIfr</a></p><p><a href="https://claude.com/product/cowork" target="_blank" rel="noopener">https://claude.com/product/cowork</a></p><p><a href="https://www.facebook.com/reel/1525096232343600" target="_blank" rel="noopener">https://www.facebook.com/reel/1525096232343600</a></p><p><a href="https://www.facebook.com/61563070794406/videos/comment-cowork-and-follow-me-to-get-the-free-claude-cowork-masterclassclaude-cow/1525096232343600/" target="_blank" rel="noopener">https://www.facebook.com/61563070794406/videos/comment-cowork-and-follow-me-to-get-the-free-claude-cowork-masterclassclaude-cow/1525096232343600/</a></p><p><a href="https://claude.com/product/cowork" target="_blank" rel="noopener">https://claude.com/product/cowork</a></p><p><a href="https://www.blotato.com/" target="_blank" rel="noopener">https://www.blotato.com/</a></p><p><a href="https://www.sabrina.dev/p/5-insane-claude-cowork-use-cases-masterclass" target="_blank" rel="noopener">https://www.sabrina.dev/p/5-insane-claude-cowork-use-cases-masterclass</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

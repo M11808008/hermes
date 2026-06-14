@@ -1,5 +1,41 @@
 [
   {
+    "title": "Claude Cowork × Blotato｜用桌面 Agent 生成並自動發布社群影片的工作流",
+    "date": "2026-06-14",
+    "source": "https://www.facebook.com/share/r/1BLgYSLbuN/?mibextid=wwXIfr",
+    "author": "Sabrina Ramonov / Anthropic / Blotato",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude",
+      "Claude Cowork",
+      "Anthropic",
+      "Blotato",
+      "社群自動化",
+      "影片生成",
+      "內容工作流",
+      "Agent",
+      "Python",
+      "Creator Tools"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1BLgYSLbuN/?mibextid=wwXIfr",
+      "https://claude.com/product/cowork",
+      "https://www.facebook.com/reel/1525096232343600",
+      "https://www.facebook.com/61563070794406/videos/comment-cowork-and-follow-me-to-get-the-free-claude-cowork-masterclassclaude-cow/1525096232343600/",
+      "https://claude.com/product/cowork",
+      "https://www.blotato.com/",
+      "https://www.sabrina.dev/p/5-insane-claude-cowork-use-cases-masterclass"
+    ],
+    "excerpt": "這支 Reel 值得收進 AI 學習雷達，因為它不是單純「AI 生成影片」炫技，而是展示一個可複製的 creator-agent 架構：Claude Cowork 負責讀取本機素材、編排腳本與呼叫 Python 工具生成影片；Blotato 負責把完成內容排程並分發到 TikTok、Instagram、YouTube、Threads、Facebook 等平台。",
+    "slug": "2026-06-14-claude-cowork-social-video-agent-blotato-facebook-reel",
+    "html": "articles/2026-06-14-claude-cowork-social-video-agent-blotato-facebook-reel.html",
+    "markdown": "articles/2026/06/2026-06-14-claude-cowork-social-video-agent-blotato-facebook-reel.md"
+  },
+  {
     "title": "Claude 變 LINE 專屬 AI 助理｜Threads 三分鐘 Colab 教學的實作判讀",
     "date": "2026-06-13",
     "source": "https://www.threads.com/@tom7788x/post/DZU3jQ4krJi",
