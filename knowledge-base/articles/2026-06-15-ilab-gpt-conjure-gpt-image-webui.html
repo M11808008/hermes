@@ -1,0 +1,79 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>iLab GPT Conjure｜GPT-image-2 本地 AI 生圖 WebUI 與 Codex Responses 接入</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>iLab GPT Conjure｜GPT-image-2 本地 AI 生圖 WebUI 與 Codex Responses 接入</h1><h1>iLab GPT Conjure｜GPT-image-2 本地 AI 生圖 WebUI 與 Codex Responses 接入</h1>
+<p>來源為 Govin.AI 在 Threads 宣布開源一個基於 GPT-image-2 的 AI 圖片生成 WebUI。作者表示從四月 Codex 開放 image2 生圖後開始製作，這是第一個比較完整的系統專案；目前正式開源，支援 Codex Responses 與 OpenAI 相容 API 接入，歡迎使用與 PR。</p>
+<h1>一句話摘要</h1>
+<p>iLab GPT Conjure 是把 GPT-image-2 生圖、參考圖、圖片編輯、提示詞模板、多任務佇列、公用圖庫與歷史庫包成一個本地 WebUI / CLI 的開源工作台；它對欒帥的價值在於可作為「像 ComfyUI 一樣可視化管理 GPT-image 生產流程」的輕量本機工具，而不只是單次 API 呼叫範例。</p>
+<h1>來源與專案資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 作者 | Govin.AI（@govin999999） |</p>
+<p>| GitHub repo | kadevin/ilab-gpt-conjure |</p>
+<p>| Repo 描述 | 面向 GPT-image-2 的 AI 圖片生成 WebUI 工作台，支援 Codex Responses 與 OpenAI-compatible API |</p>
+<p>| 建立時間 | 2026-06-08 |</p>
+<p>| 最新 release | v0.3.7，發布於 2026-06-14 |</p>
+<p>| 語言 / 框架 | Python / FastAPI WebUI / CLI |</p>
+<p>| Python 需求 | Python 3.11+ |</p>
+<p>| 授權 | GNU AGPLv3 |</p>
+<p>| 擷取時狀態 | 約 441 stars、55 forks、0 open issues |</p>
+<p>| Portable 包 | Windows x64、macOS Apple Silicon、macOS Intel |</p>
+<h1>核心功能</h1>
+<p>| 功能 | 說明 |</p>
+<p>|---|---|</p>
+<p>| 文生圖 / 參考圖 / 圖像編輯 | 面向 GPT-image-2 的生成與編輯工作流 |</p>
+<p>| Codex Responses | 可選用本機 Codex / ChatGPT OAuth 登入態，但 README 明確標為進階本機模式 |</p>
+<p>| OpenAI-compatible API | 推薦的穩定模式，可配置 Base URL、API Key、模型名、呼叫方式與並發上限 |</p>
+<p>| 公用圖庫 | 保存固定人物、角色設定、產品主圖、品牌素材與風格參考 |</p>
+<p>| 多類型 chip | `@` 圖庫 chip、`#` 顏色 chip、`~` 提示詞片段 chip |</p>
+<p>| 提示詞模板 | 保存長型可重用生成結構，可搜尋、分類、收藏、匯入/匯出 |</p>
+<p>| 多任務並發與本地佇列 | 左側任務列表可觀察排隊與執行中任務 |</p>
+<p>| 歷史庫 | SQLite 分頁、搜尋、篩選、縮圖、網格/列表視圖與懶載詳情 |</p>
+<p>| CLI | 支援生成、參考圖、圖像編輯、mask 與 dry-run |</p>
+<p>| 一鍵包 | Windows / macOS portable zip，內建 CPython、依賴、啟動與更新腳本 |</p>
+<h1>安裝與啟動</h1>
+<p>一般安裝：</p>
+<p>```bash</p>
+<p>git clone <a href="https://github.com/kadevin/ilab-gpt-conjure.git" target="_blank" rel="noopener">https://github.com/kadevin/ilab-gpt-conjure.git</a></p>
+<p>cd ilab-gpt-conjure</p>
+<p>python3 -m venv .venv</p>
+<p>.venv/bin/python -m pip install -r requirements-webui.txt</p>
+<p>.venv/bin/python -m uvicorn codex-image.webui.app:app --host 127.0.0.1 --port 8787 --no-access-log</p>
+<p>```</p>
+<p>啟動後瀏覽：</p>
+<p>```text</p>
+<p><a href="http://127.0.0.1:8787/" target="_blank" rel="noopener">http://127.0.0.1:8787/</a></p>
+<p>```</p>
+<p>Portable 方式：下載 v0.3.7 對應平台 zip，解壓到一般使用者目錄，Windows 雙擊 `Start WebUI Portable.bat`，macOS 雙擊 `Start WebUI Portable.command`。macOS 包未簽名，若被 Gatekeeper 攔截，可用右鍵 Open 或移除 quarantine：</p>
+<p>```bash</p>
+<p>xattr -dr com.apple.quarantine /path/to/ilab-gpt-conjure-macos-portable-arm64</p>
+<p>```</p>
+<h1>認證與安全判斷</h1>
+<p>| 模式 | 適合情境 | 風險與注意 |</p>
+<p>|---|---|---|</p>
+<p>| OpenAI-compatible API | 穩定集成、團隊使用、共享工作站、可能公開提供服務 | 需管理 API key、Base URL、模型名與成本 |</p>
+<p>| Codex / ChatGPT OAuth | 個人本機工作流、實驗性使用 | README 明確說這不是 OpenAI 官方推薦 API 集成方式；內部接口可能變更、失效，受帳號/產品/用量規則影響 |</p>
+<p>README 特別提醒不要提交 OAuth 檔案、API key、本地輸入圖、生成結果、任務 metadata、SQLite 資料庫或 debug logs。</p>
+<h1>對欒帥的實用價值</h1>
+<ul>
+<li>可作為 GPT-image 系列的本地生產工作台，適合保存角色、品牌素材、模板與歷史任務。</li>
+<li>比單次 ChatGPT 生圖更適合批次、多參考圖、多版本比較與素材庫管理。</li>
+<li>可成為 AI 課程中的「從 API 到產品化 WebUI」案例：FastAPI、CLI、portable release、SQLite 歷史庫、更新器與授權都能拆成教學點。</li>
+<li>若要在團隊或公開服務使用，要優先走 OpenAI-compatible API 模式，不要依賴個人 ChatGPT OAuth。</li>
+<li>AGPLv3 代表若修改後透過網路向使用者提供服務，需要遵守開源義務；這點在商用或內部部署前要先確認。</li>
+</ul>
+<h1>v0.3.7 版本重點</h1>
+<p>RELEASES.md 顯示 v0.3.7 已提供 Windows x64、macOS Apple Silicon、macOS Intel 三種免安裝一鍵包。此版重點集中在歷史庫大屏瀏覽、任務詳情預覽、生成頁佇列互動與一鍵包更新提醒，並修復多處前端布局、主題色、按鈕溢出與任務狀態細節。</p>
+<h1>判讀限制</h1>
+<ul>
+<li>Threads 貼文稱「GPT-image-2」，本文沿用原貼與 repo 說法；實際模型與 API 名稱、可用性、價格與權限應以 OpenAI / 供應商當前文件為準。</li>
+<li>OpenAI 官方 image generation docs 可確認 API 支援圖片生成與編輯，但平台文件內容會快速變動。</li>
+<li>Codex Responses / ChatGPT OAuth 模式屬個人本機進階玩法，不應視為穩定、官方、可公開服務的 API 整合方式。</li>
+<li>GitHub star/fork/release 狀態為擷取時資訊，後續會變動。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads： <a href="https://www.threads.com/@govin999999/post/DZjVhOcmOPD" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/DZjVhOcmOPD</a></li>
+<li>GitHub： <a href="https://github.com/kadevin/ilab-gpt-conjure" target="_blank" rel="noopener">https://github.com/kadevin/ilab-gpt-conjure</a></li>
+<li>Release v0.3.7： <a href="https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.3.7" target="_blank" rel="noopener">https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.3.7</a></li>
+<li>Releases 說明： <a href="https://github.com/kadevin/ilab-gpt-conjure/blob/main/RELEASES.md" target="_blank" rel="noopener">https://github.com/kadevin/ilab-gpt-conjure/blob/main/RELEASES.md</a></li>
+<li>OpenAI Image generation docs： <a href="https://developers.openai.com/api/docs/guides/image-generation" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/image-generation</a></li>
+<li>OpenAI Responses API reference： <a href="https://platform.openai.com/docs/api-reference/responses" target="_blank" rel="noopener">https://platform.openai.com/docs/api-reference/responses</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-15 · https://www.threads.com/@govin999999/post/DZjVhOcmOPD · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">GPT-image-2</span><span class="tag">OpenAI</span><span class="tag">Codex</span><span class="tag">Responses API</span><span class="tag">OpenAI-compatible API</span><span class="tag">生圖工具</span><span class="tag">WebUI</span><span class="tag">FastAPI</span><span class="tag">Prompt Engineering</span><span class="tag">Reference Images</span><span class="tag">開源工具</span><span class="tag">GitHub</span><span class="tag">Windows</span><span class="tag">macOS</span><span class="tag">本地工作流</span><h3>原始連結</h3><p><a href="https://www.threads.com/@govin999999/post/DZjVhOcmOPD" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/DZjVhOcmOPD</a></p><p><a href="https://github.com/kadevin/ilab-gpt-conjure" target="_blank" rel="noopener">https://github.com/kadevin/ilab-gpt-conjure</a></p><p><a href="https://www.threads.com/@govin999999/post/DZjVhOcmOPD" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/DZjVhOcmOPD</a></p><p><a href="https://github.com/kadevin/ilab-gpt-conjure" target="_blank" rel="noopener">https://github.com/kadevin/ilab-gpt-conjure</a></p><p><a href="https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.3.7" target="_blank" rel="noopener">https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.3.7</a></p><p><a href="https://github.com/kadevin/ilab-gpt-conjure/blob/main/RELEASES.md" target="_blank" rel="noopener">https://github.com/kadevin/ilab-gpt-conjure/blob/main/RELEASES.md</a></p><p><a href="https://developers.openai.com/api/docs/guides/image-generation" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/image-generation</a></p><p><a href="https://platform.openai.com/docs/api-reference/responses" target="_blank" rel="noopener">https://platform.openai.com/docs/api-reference/responses</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

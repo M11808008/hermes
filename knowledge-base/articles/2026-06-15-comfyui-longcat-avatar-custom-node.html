@@ -1,0 +1,74 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ComfyUI-LongCat-Avatar｜LongCat-Video-Avatar 1.5 的 ComfyUI 節點與 CUDA/Mac 限制</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>ComfyUI-LongCat-Avatar｜LongCat-Video-Avatar 1.5 的 ComfyUI 節點與 CUDA/Mac 限制</h1><h1>ComfyUI-LongCat-Avatar｜LongCat-Video-Avatar 1.5 的 ComfyUI 節點與 CUDA/Mac 限制</h1>
+<p>來源為 rookiestar28 在 Threads 宣布開源第 7 個 ComfyUI 節點：`LongCat-Avatar 1.5`。作者補充第一版是 CUDA-only，暫不支援 macOS 的 MPS 後端。GitHub README 進一步顯示，主線專案名為 `ComfyUI-LongCat-Avatar`，用途是把官方 LongCat-Video-Avatar 1.5 的音訊驅動人像影片生成流程包成 ComfyUI custom nodes。</p>
+<h1>一句話摘要</h1>
+<p>這個節點讓 ComfyUI 使用者能在節點式工作流中操作 LongCat-Video-Avatar 1.5，做單音訊/多音訊的人像說話影片生成；但主線仍以 NVIDIA CUDA 為核心，Apple Silicon 目前只適合追蹤 `macOS-MLX` 實驗分支，不應期待 MPS 直接可用。</p>
+<h1>來源與專案資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 原貼 | rookiestar28：今天開源第 7 個 ComfyUI 節點 LongCat-Avatar 1.5 |</p>
+<p>| GitHub repo | rookiestar28/ComfyUI-LongCat-Avatar |</p>
+<p>| Repo 描述 | ComfyUI custom nodes for LongCat Video Avatar 1.5 audio-driven human video generation |</p>
+<p>| 建立時間 | 2026-06-10 |</p>
+<p>| 最近更新 | 2026-06-14 |</p>
+<p>| 語言 / 授權 | Python / MIT License |</p>
+<p>| 擷取時狀態 | 約 19 stars、1 fork、1 open issue |</p>
+<p>| 官方基礎模型 | meituan-longcat/LongCat-Video 與 LongCat-Video-Avatar-1.5 |</p>
+<h1>支援能力整理</h1>
+<p>| 能力 | 狀態 |</p>
+<p>|---|---|</p>
+<p>| Avatar 1.5 single audio ai2v | 支援 |</p>
+<p>| Avatar 1.5 single audio at2v | sampler mode 支援，但目前 ComfyUI graph 仍需要 image socket |</p>
+<p>| Avatar 1.5 multi audio | 支援 ai2v |</p>
+<p>| 480p / 720p | 支援 |</p>
+<p>| Distill inference | Avatar 1.5 必要；README 預設 8 steps、text CFG 1.0、audio CFG 1.0 |</p>
+<p>| 單檔 DiT safetensors | 支援，放在 ComfyUI/models/diffusion-models/ |</p>
+<p>| 官方 sharded DiT | 支援 Avatar 1.5 base-model/ checkpoints |</p>
+<p>| 官方 INT8 sharded DiT | 支援 base-model-int8/ checkpoints |</p>
+<p>| 自動下載已知官方權重 | 支援部分 sharded DiT 與 shared LongCat text encoder assets |</p>
+<p>| Attention backends | auto、sdpa、flash-attn-2、flash-attn-3、xformers、sageattn；sageattn-3 保留但會 fail fast |</p>
+<p>| GGUF DiT | 尚不支援 |</p>
+<p>| Avatar 1.0 | 不在此 ComfyUI contract 支援範圍 |</p>
+<p>| CPU / MPS | 主線 CUDA-only path 不支援 |</p>
+<h1>安裝與模型檔重點</h1>
+<p>```bash</p>
+<p>cd ComfyUI/custom-nodes</p>
+<p>git clone <a href="https://github.com/rookiestar28/ComfyUI-LongCat-Avatar" target="_blank" rel="noopener">https://github.com/rookiestar28/ComfyUI-LongCat-Avatar</a></p>
+<p>cd ComfyUI-LongCat-Avatar</p>
+<p>pip install -r requirements.txt</p>
+<p>```</p>
+<p>README 強調要使用啟動 ComfyUI 的同一個 Python 環境，且預期已有相容 NVIDIA GPU、CUDA PyTorch 與 FFmpeg。`requirements.txt` 刻意不安裝 torch、torchvision、torchaudio、FlashAttention、xFormers、SageAttention 等大型或堆疊敏感套件，以免破壞既有 ComfyUI 環境。</p>
+<p>必要模型檔包括：</p>
+<ul>
+<li>`ComfyUI/models/loras/longcat-avatar-dmd-lora.safetensors`</li>
+<li>`ComfyUI/models/vae/LongCat-Video-Avatar-vae.safetensors`</li>
+<li>`ComfyUI/models/audio-encoders/whisper-large-v3.safetensors`</li>
+<li>DiT 來源三擇一：官方 sharded、官方 INT8 sharded、或單檔 `LongCat-Video-Avatar-1.5-int8.safetensors`</li>
+<li>Text encoder 可走官方 tokenizer/text-encoder 或既有 `Load CLIP` fallback</li>
+<li>`Kim-Vocal-2.onnx` 為可選 vocal separation 模型</li>
+</ul>
+<h1>官方 LongCat-Video-Avatar 1.5 背景</h1>
+<p>官方 LongCat-Video README 在 2026-05-21 宣布 LongCat-Video-Avatar-1.5：它是音訊驅動人像影片生成框架的升級版，將 Wav2Vec2 換成 Whisper-Large 以提升唇同步，強調物理合理性、時間穩定性、長影片能力、風格化領域泛化、單音訊與多音訊輸入，並透過 step distillation 加速到 8 steps。</p>
+<p>因此 ComfyUI-LongCat-Avatar 的價值不是重新訓練模型，而是把官方 Avatar 1.5 權重與推論流程轉成 ComfyUI 可組裝的節點，讓既有 ComfyUI 使用者能把 talking-avatar 生成接進自己的圖像/影片工作流。</p>
+<h1>對欒帥的實用判斷</h1>
+<ul>
+<li>若目標是 Windows / Linux + NVIDIA GPU 的 ComfyUI 影片生成工作站，這個節點值得列入測試清單。</li>
+<li>若目標是 Apple Silicon Mac，主線不適合直接期待可用；可追蹤 `macOS-MLX` 分支，但應視為實驗而非穩定方案。</li>
+<li>若要做課程示範，建議把它放在「開源 ComfyUI 影片生成節點」單元，並明確標註硬體門檻與模型檔配置。</li>
+<li>若要做長期生產，應先驗證：模型下載大小、VRAM、720p 時間、音訊品質、唇同步、長片穩定性、授權與輸出素材合規。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>Threads 貼文只提供開源訊息與 CUDA-only 限制；技術細節以 GitHub README 與官方 LongCat repo 為準。</li>
+<li>GitHub repo star/fork/open issue 數會變動；本文記錄的是擷取時狀態。</li>
+<li>macOS-MLX 分支存在，但不等於 Apple Silicon 已穩定可用；README 也要求有合適 Mac 的使用者測試並回報。</li>
+<li>模型權重、第三方轉換檔、ComfyUI 套件版本與 CUDA/attention backend 相容性會影響實際成功率。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads： <a href="https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1" target="_blank" rel="noopener">https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1</a></li>
+<li>ComfyUI-LongCat-Avatar： <a href="https://github.com/rookiestar28/ComfyUI-LongCat-Avatar" target="_blank" rel="noopener">https://github.com/rookiestar28/ComfyUI-LongCat-Avatar</a></li>
+<li>macOS-MLX branch： <a href="https://github.com/rookiestar28/ComfyUI-LongCat-Avatar/tree/macOS-MLX" target="_blank" rel="noopener">https://github.com/rookiestar28/ComfyUI-LongCat-Avatar/tree/macOS-MLX</a></li>
+<li>Official LongCat-Video： <a href="https://github.com/meituan-longcat/LongCat-Video" target="_blank" rel="noopener">https://github.com/meituan-longcat/LongCat-Video</a></li>
+<li>LongCat-Video-Avatar 1.5 Project Page： <a href="https://meigen-ai.github.io/LongCat-Video-Avatar-1.5-Page/" target="_blank" rel="noopener">https://meigen-ai.github.io/LongCat-Video-Avatar-1.5-Page/</a></li>
+<li>Avatar 1.5 weights： <a href="https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5" target="_blank" rel="noopener">https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-15 · https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">ComfyUI</span><span class="tag">LongCat</span><span class="tag">LongCat-Video-Avatar</span><span class="tag">影片生成</span><span class="tag">音訊驅動人像</span><span class="tag">Talking Avatar</span><span class="tag">CUDA</span><span class="tag">Apple Silicon</span><span class="tag">MLX</span><span class="tag">開源工具</span><span class="tag">GitHub</span><span class="tag">生成式 AI</span><h3>原始連結</h3><p><a href="https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1" target="_blank" rel="noopener">https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1</a></p><p><a href="https://github.com/rookiestar28/ComfyUI-LongCat-Avatar" target="_blank" rel="noopener">https://github.com/rookiestar28/ComfyUI-LongCat-Avatar</a></p><p><a href="https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1" target="_blank" rel="noopener">https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1</a></p><p><a href="https://github.com/rookiestar28/ComfyUI-LongCat-Avatar" target="_blank" rel="noopener">https://github.com/rookiestar28/ComfyUI-LongCat-Avatar</a></p><p><a href="https://github.com/rookiestar28/ComfyUI-LongCat-Avatar/tree/macOS-MLX" target="_blank" rel="noopener">https://github.com/rookiestar28/ComfyUI-LongCat-Avatar/tree/macOS-MLX</a></p><p><a href="https://github.com/meituan-longcat/LongCat-Video" target="_blank" rel="noopener">https://github.com/meituan-longcat/LongCat-Video</a></p><p><a href="https://meigen-ai.github.io/LongCat-Video-Avatar-1.5-Page/" target="_blank" rel="noopener">https://meigen-ai.github.io/LongCat-Video-Avatar-1.5-Page/</a></p><p><a href="https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5" target="_blank" rel="noopener">https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5</a></p><p><a href="https://huggingface.co/meituan-longcat/LongCat-Video" target="_blank" rel="noopener">https://huggingface.co/meituan-longcat/LongCat-Video</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
