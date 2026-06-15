@@ -1,0 +1,104 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Omnigent｜把 Claude Code、Codex、Pi 與自訂 Agent 串成同一層的開源 Meta-harness</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Omnigent｜把 Claude Code、Codex、Pi 與自訂 Agent 串成同一層的開源 Meta-harness</h1><h1>Omnigent｜把 Claude Code、Codex、Pi 與自訂 Agent 串成同一層的開源 Meta-harness</h1>
+<p>來源為 Keith Rumjahn 在 Threads 分享 Omnigent：一個把多個 AI agent / coding harness 串在同一個管理層的開源專案。貼文重點是 Claude Code、Codex、Pi 與自訂 agent 可以在同一個 harness 裡協作，支援 multi-agent coding、live collaboration 與自訂 control policy。</p>
+<h1>一句話摘要</h1>
+<p>Omnigent 是 Databricks 開源的「meta-harness」：它不是又一個單一 coding agent，而是架在 Claude Code、Codex、Pi、OpenAI Agents、Claude Agents SDK 與自訂 YAML agents 之上的共同層，讓多個 agent 可以被組合、治理、沙盒化、協作與跨裝置共享同一個 live session。</p>
+<h1>來源與專案資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 來源 | Keith Rumjahn（@krumjahn）分享 Omnigent |</p>
+<p>| 官方網站 | <a href="https://omnigent.ai/" target="_blank" rel="noopener">https://omnigent.ai/</a> |</p>
+<p>| GitHub repo | omnigent-ai/omnigent |</p>
+<p>| Databricks 介紹文 | Introducing Omnigent: A Meta-Harness to Combine, Control and Share Your Agents |</p>
+<p>| 官方定位 | A meta-harness for all your AI agents |</p>
+<p>| 支援對象 | Claude Code、Codex、Pi、自訂 YAML agents、OpenAI / Claude Agents SDK 等 |</p>
+<p>| 授權 | Apache-2.0；Threads 提到 MIT，但 GitHub 與 Databricks 官方文皆顯示 Apache 2.0 |</p>
+<p>| 狀態 | Alpha |</p>
+<p>| Python 需求 | Python 3.12+ |</p>
+<p>| GitHub 狀態 | 擷取時約 1,207 stars、137 forks、35 open issues |</p>
+<p>| 建立時間 | 2026-06-11 |</p>
+<h1>為什麼重要</h1>
+<p>過去使用 coding agent 的痛點是每個工具都是孤島：Claude Code、Codex、Pi、Gemini search、Slack、文件與終端都各自有上下文、權限與工作資料夾。Omnigent 的核心觀點是：未來不是只選一個 agent，而是需要一層在所有 harness 之上的共同介面，讓不同模型與 agent 能一起工作。</p>
+<p>Databricks 在官方文中稱這一層為 meta-harness，目標是處理單一 harness 停止處理的問題：composition、control、collaboration。</p>
+<h1>核心能力</h1>
+<p>| 能力 | 說明 |</p>
+<p>|---|---|</p>
+<p>| Composition | 在同一個 session 中組合 Claude Code、Codex、Pi 與自訂 agents，無需為每個 harness 重寫流程 |</p>
+<p>| Multi-agent coding | 內建 Polly 範例：像 tech lead 一樣規劃、委派 coding sub-agents 到平行 git worktrees，再交給不同 vendor 的 reviewer 審查 |</p>
+<p>| Model / harness switching | 可用 API key、Claude / ChatGPT subscription、OpenAI / Anthropic-compatible gateway、Databricks profile 等憑證切換模型 |</p>
+<p>| Live collaboration | 分享 live session URL，隊友可觀看、留言、審查檔案，甚至共同下指令 |</p>
+<p>| Multi-device access | 同一個 agent session 可在 terminal、browser、mobile、macOS desktop app 與 REST API 使用 |</p>
+<p>| Cloud sandbox | 可在本機、Modal、Daytona 等 disposable sandbox 或 server-managed host 執行 |</p>
+<p>| Contextual policies | 可依 session 狀態做動態管控，例如下載 npm package 後要人工批准才能 git push |</p>
+<p>| Cost policies | 可追蹤 session LLM cost，超過指定花費時暫停並詢問是否繼續 |</p>
+<p>| Secure OS Sandbox | 可限制檔案系統與網路存取、隱藏憑證，並由 egress proxy 在核准請求中注入 token |</p>
+<p>| Custom agents | 用 YAML 定義自己的 agent，並能用一行變更在不同 harness 間移植 |</p>
+<h1>安裝與啟動</h1>
+<p>官方 quick start 提供一行安裝：</p>
+<p>```bash</p>
+<p>curl -fsSL <a href="https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh</a> | sh</p>
+<p>```</p>
+<p>也可用 uv、pip 或 Homebrew：</p>
+<p>```bash</p>
+<p>uv tool install omnigent</p>
+<p>pip install &quot;omnigent&quot;</p>
+<p>brew install omnigent-ai/tap/omnigent</p>
+<p>```</p>
+<p>基本啟動：</p>
+<p>```bash</p>
+<p>omnigent</p>
+<p>```</p>
+<p>指定 harness：</p>
+<p>```bash</p>
+<p>omnigent claude</p>
+<p>omnigent codex</p>
+<p>omnigent run path/to/agent.yaml</p>
+<p>```</p>
+<p>啟動 local server 與 web UI：</p>
+<p>```bash</p>
+<p>omnigent server start</p>
+<p>omnigent host</p>
+<p>```</p>
+<p>預設 web UI 位於：</p>
+<p>```text</p>
+<p><a href="http://localhost:6767" target="_blank" rel="noopener">http://localhost:6767</a></p>
+<p>```</p>
+<h1>內建 agent 範例</h1>
+<p>| Agent | 說明 |</p>
+<p>|---|---|</p>
+<p>| Polly | 多 agent coding orchestrator；自己不寫 code，而是規劃、分派給 Claude Code / Codex / Pi 等 sub-agents，在平行 git worktrees 工作，再找不同 vendor reviewer 審查 |</p>
+<p>| Debby | 雙頭腦 brainstorming partner；同一問題交給 Claude 與 GPT 兩邊回答，可用 `/debate` 讓雙方互相批判後收斂 |</p>
+<h1>對欒帥的實用價值</h1>
+<ul>
+<li>非常適合觀察 2026 coding agent 的下一層抽象：從「單一 agent」走向「agent team orchestration」。</li>
+<li>可作為 AI 課程中的高階案例：Agent 工程不只 prompt，而是 harness、session、policy、sandbox、cost、collaboration 與 deployment。</li>
+<li>對欒帥既有 Codex / Claude Code 工作流有直接參考價值：Omnigent 提供一個把不同 agent 串到同一 session 的可能路徑。</li>
+<li>Polly 模式可轉成課程 demo：「規劃 agent → coding agent → reviewer agent → 人類 merge」的工程流程。</li>
+<li>Contextual policy 與 sandbox 特別值得研究，因為多 agent 協作真正困難的不是讓 agent 說話，而是誰有權執行高風險動作、誰可以覆蓋結果、誰能碰 token 與檔案。</li>
+</ul>
+<h1>與 Hermes / 本機代理工作流的關係</h1>
+<p>Omnigent 與 Hermes 的方向不同但互補：</p>
+<p>| 面向 | Omnigent | Hermes |</p>
+<p>|---|---|---|</p>
+<p>| 核心定位 | 多 agent / coding harness 的 meta-harness | 個人助理、工具調用、訊息平台、排程與知識庫自動化 |</p>
+<p>| 重點 | Claude Code、Codex、Pi 等 coding agent 的統一 session、協作與治理 | LINE / Telegram / local tools / cron / memory / skills / knowledge-base |</p>
+<p>| 最適合場景 | multi-agent coding、工程協作、agent sandbox 與 policy | 日常自動化、資料整理、部署、跨平台回覆、個人知識管理 |</p>
+<p>| 可互補處 | Omnigent 管 coding agent team；Hermes 管知識庫、訊息、部署與使用者入口 | Hermes 可記錄、整理與觸發 Omnigent 工作流結果 |</p>
+<h1>風險與注意</h1>
+<ul>
+<li>專案目前標示 alpha，開發速度快，CLI、API、policy 格式與部署方式可能變動。</li>
+<li>Threads 說 MIT 授權，但官方 GitHub / README / Databricks 文章顯示 Apache 2.0，應以官方 repo 為準。</li>
+<li>多 agent coding 對成本、token、並行任務、git worktree 與 repo 權限要求較高，不宜一開始就對重要 repo 開 YOLO 模式。</li>
+<li>若使用 subscription 模式連 Claude / ChatGPT CLI，要注意各服務條款、帳號限制與額度。</li>
+<li>多人 live collaboration 會涉及本機檔案、終端、token、網路請求與工作目錄共享，正式使用前要先配置 sandbox、policy 與權限。</li>
+</ul>
+<h1>建議測試流程</h1>
+<ul>
+<li>在非敏感 toy repo 安裝 Omnigent。</li>
+<li>先以 `omnigent codex` 或 `omnigent claude` 測試單一 agent session。</li>
+<li>啟動 `omnigent server start` 與 `omnigent host`，確認 web UI 與手機可接續同一 session。</li>
+<li>測試 Polly 範例，觀察多 agent 分工、git worktree 與 reviewer 流程。</li>
+<li>設定 policy：先限制 git push、網路、寫入範圍與 spend cap。</li>
+<li>再考慮接到真實 repo 或 team collaboration。</li>
+</ul>
+<h1>原始 Threads 摘要</h1>
+<p>貼文指出 Omnigent 將多個 AI agent 框架串在一起，Claude Code、Codex、Pi 可在同一個 harness 裡跑，支援 multi-agent coding、live collaboration 與自訂 control policy。官方資料補強後可確認：Omnigent 是 Databricks 開源的 Apache-2.0 alpha 專案，重點是 composition、control、collaboration、sandbox 與跨裝置共享 session。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-15 · https://www.threads.com/@krumjahn/post/DZlloBEmgCT · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Omnigent</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Pi</span><span class="tag">Multi-agent</span><span class="tag">Agent Harness</span><span class="tag">Meta-harness</span><span class="tag">Databricks</span><span class="tag">開源工具</span><span class="tag">Coding Agent</span><span class="tag">Sandbox</span><span class="tag">Governance</span><h3>原始連結</h3><p><a href="https://www.threads.com/@krumjahn/post/DZlloBEmgCT" target="_blank" rel="noopener">https://www.threads.com/@krumjahn/post/DZlloBEmgCT</a></p><p><a href="https://github.com/omnigent-ai/omnigent" target="_blank" rel="noopener">https://github.com/omnigent-ai/omnigent</a></p><p><a href="https://www.threads.com/@krumjahn/post/DZlloBEmgCT" target="_blank" rel="noopener">https://www.threads.com/@krumjahn/post/DZlloBEmgCT</a></p><p><a href="https://github.com/omnigent-ai/omnigent" target="_blank" rel="noopener">https://github.com/omnigent-ai/omnigent</a></p><p><a href="https://omnigent.ai/" target="_blank" rel="noopener">https://omnigent.ai/</a></p><p><a href="https://www.databricks.com/blog/introducing-omnigent-meta-harness-combine-control-and-share-your-agents" target="_blank" rel="noopener">https://www.databricks.com/blog/introducing-omnigent-meta-harness-combine-control-and-share-your-agents</a></p><p><a href="https://omnigent.ai/quickstart/install" target="_blank" rel="noopener">https://omnigent.ai/quickstart/install</a></p><p><a href="https://omnigent.ai/docs/policies/overview" target="_blank" rel="noopener">https://omnigent.ai/docs/policies/overview</a></p><p><a href="https://omnigent.ai/docs/omnibox" target="_blank" rel="noopener">https://omnigent.ai/docs/omnibox</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -167,6 +167,47 @@
     "markdown": "articles/2026/06/2026-06-15-ilab-gpt-conjure-gpt-image-webui.md"
   },
   {
+    "title": "Omnigent｜把 Claude Code、Codex、Pi 與自訂 Agent 串成同一層的開源 Meta-harness",
+    "date": "2026-06-15",
+    "source": "https://www.threads.com/@krumjahn/post/DZlloBEmgCT",
+    "author": "Keith Rumjahn / Databricks / Omnigent / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Omnigent",
+      "Claude Code",
+      "Codex",
+      "Pi",
+      "Multi-agent",
+      "Agent Harness",
+      "Meta-harness",
+      "Databricks",
+      "開源工具",
+      "Coding Agent",
+      "Sandbox",
+      "Governance"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@krumjahn/post/DZlloBEmgCT",
+      "https://github.com/omnigent-ai/omnigent",
+      "https://www.threads.com/@krumjahn/post/DZlloBEmgCT",
+      "https://github.com/omnigent-ai/omnigent",
+      "https://omnigent.ai/",
+      "https://www.databricks.com/blog/introducing-omnigent-meta-harness-combine-control-and-share-your-agents",
+      "https://omnigent.ai/quickstart/install",
+      "https://omnigent.ai/docs/policies/overview",
+      "https://omnigent.ai/docs/omnibox"
+    ],
+    "excerpt": "Omnigent 是 Databricks 開源的「meta-harness」：它不是又一個單一 coding agent，而是架在 Claude Code、Codex、Pi、OpenAI Agents、Claude Agents SDK 與自訂 YAML agents 之上的共同層，讓多個 agent 可以被組合、治理、沙盒化、協作與跨裝置共享同一個 live session。",
+    "slug": "2026-06-15-omnigent-meta-harness-ai-agents",
+    "html": "articles/2026-06-15-omnigent-meta-harness-ai-agents.html",
+    "markdown": "articles/2026/06/2026-06-15-omnigent-meta-harness-ai-agents.md"
+  },
+  {
     "title": "StackAI 免費方案｜500 次 Agent Runs、工作流自動化、API 與 MCP 連接器",
     "date": "2026-06-15",
     "source": "https://www.threads.com/@govin999999/post/DZkQS2-GIO0",
