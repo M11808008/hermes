@@ -1,0 +1,115 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude Code Skills｜資料夾化、Gotchas 與 9 大技能類型實戰筆記</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claude Code Skills｜資料夾化、Gotchas 與 9 大技能類型實戰筆記</h1><h1>Claude Code Skills｜資料夾化、Gotchas 與 9 大技能類型實戰筆記</h1>
+<p>本文整理數位時代文章與 Anthropic 官方〈Lessons from building Claude Code: How we use skills〉。重點不是「把提示詞存成一個 Markdown 檔」而已，而是把 Skill 當成可漸進讀取的能力資料夾：`SKILL.md` 只放觸發條件、流程與關鍵坑點；詳細文件、範本、腳本與參考資料則放在支援檔案中，讓 Claude 需要時才讀。</p>
+<h1>一句話摘要</h1>
+<p>有效的 Claude Code Skill 應該像一個小型作業系統插件：用清楚 description 提高觸發命中率，用資料夾與支援檔降低脈絡污染，用 Gotchas 持續沉澱「模型最常做錯但團隊已踩過的坑」，再用腳本與驗證流程讓 agent 組合既有工具，而不是每次重造輪子。</p>
+<h1>為什麼這篇值得收進 AI 學習雷達</h1>
+<ul>
+<li>它把 Skill 從「提示詞模板」提升為「Context Engineering」：在對的時機，把對的資訊交給模型。</li>
+<li>Anthropic 內部截至 2026 年 6 月初已有數百個 Skill 活躍使用，代表這不是單點功能，而是團隊級 agent 工作流的基本設施。</li>
+<li>對 Hermes / Claude Code / Codex 類工作流都可轉用：Skill 的核心是觸發條件、支援檔案、腳本、護欄與持續修補 Gotchas。</li>
+<li>對欒帥目前的 AI 學習雷達、課程教材、Hermes Agent 技能庫都很有參考價值：可把常見任務拆成可維護、可部署、可驗證的技能資料夾。</li>
+</ul>
+<h1>核心觀念：Skill 是資料夾，不只是單檔 Markdown</h1>
+<p>數位時代文章指出，多數人第一次理解 Skill 時容易以為只是「寫一個 markdown 指令檔」。但 Anthropic 的實務重點是：</p>
+<ul>
+<li>`SKILL.md` 不應塞滿所有文件，否則每次觸發都等於把整本手冊攤在模型面前。</li>
+<li>更好的模式是資料夾化：`SKILL.md` 說明何時使用、怎麼做、何時讀哪些參考檔。</li>
+<li>詳細 API 文件、範例、腳本、範本與測試資料放在 `references/`、`templates/`、`scripts/` 等支援檔。</li>
+<li>這種「漸進揭露」能降低 token 成本與注意力干擾，也讓 Skill 更容易維護。</li>
+</ul>
+<h1>Anthropic 歸納的 9 大 Skill 類型</h1>
+<p>| 類型 | 用途 | 欒帥可轉用方向 |</p>
+<p>|---|---|---|</p>
+<p>| 函式庫與 API 參考 | 教 Claude 正確使用某個函式庫、CLI、SDK，附常踩雷 | Hermes / Google Workspace / GitHub / Notion 工具使用 SOP |</p>
+<p>| 產品驗證 | 定義如何測試與確認功能真的動了 | 每次改 KB、部署 GitHub Pages、串接 LINE 後的驗證清單 |</p>
+<p>| 資料抓取與分析 | 接監控、資料源、儀表板與分析腳本 | AI 學習雷達每日/每週資料收集與摘要 |</p>
+<p>| 業務流程與團隊自動化 | 將重複流程收成一個可呼叫能力 | 報名名單處理、課程通知、活動追蹤 |</p>
+<p>| 程式碼鷹架與範本 | 自動建立新服務、新模組、新頁面樣板 | 新知識庫頁面、課程 landing page、工具 demo scaffold |</p>
+<p>| 程式碼品質與審查 | 強制團隊風格、協助 review | PR 前安全檢查、命名規則、無底線檔名檢查 |</p>
+<p>| CI/CD 與部署 | PR、測試、漸進部署、回滾 | GitHub Pages 部署、Hermes 更新、靜態站 rebuild |</p>
+<p>| Runbooks 故障排除 | 從症狀出發，多工具調查並輸出報告 | LINE webhook、OCR、PDF、模型 provider 故障排查 |</p>
+<p>| 基礎設施操作 | 例行維運與破壞性動作護欄 | VPS、cron、token、備份、防火牆與權限維護 |</p>
+<h1>最高價值區塊：Gotchas</h1>
+<p>文章特別強調，Skill 裡訊號最高的內容通常是 Gotchas。這不是一般文件會寫的漂亮流程，而是團隊被坑過才知道的細節。</p>
+<p>典型 Gotchas 包含：</p>
+<ul>
+<li>同一筆資料有多個版本時，要取「最後核准」或「版本最高」那筆，不一定是時間最新。</li>
+<li>不同系統對同一概念可能使用不同名稱，例如出差、公假、business trip 實際上是同一種狀態。</li>
+<li>測試環境回傳成功不代表正式流程真的完成；還要確認外部系統、主管核准、部署頁面或資料庫狀態。</li>
+<li>Agent 很容易「順手修掉」非目標檔案；debug 類 Skill 要限制可修改範圍。</li>
+</ul>
+<p>對欒帥的工作流來說，Gotchas 應優先記錄：LINE 附件格式陷阱、GitHub Pages 傳播延遲、PDF OCR venv 分離、檔名不得用底線、含個資資料不可公開部署、以及每日第一次回覆要附知識庫首頁等穩定規則。</p>
+<h1>Description 要寫給模型看</h1>
+<p>Skill 的 `description` 不是人類目錄摘要，而是模型判斷「何時應該載入這個 Skill」的觸發說明。</p>
+<p>好的 description 應該：</p>
+<ul>
+<li>明確寫出使用情境，例如「當使用者要求整理報名名單、去重、保留個資隱私時使用」。</li>
+<li>放入使用者可能說出的觸發詞，而不是只寫抽象分類。</li>
+<li>避免過寬，否則 Skill 會過度觸發；也避免過窄，否則需要時載不到。</li>
+<li>把任務邊界寫清楚：這個 Skill 做什麼、不做什麼、什麼情況要改用其他 Skill。</li>
+</ul>
+<h1>腳本、範本與 Hooks：讓 Agent 組合，不要重造</h1>
+<p>Anthropic 的建議是把可重複動作做成腳本或範本，讓 Claude 把腦力用在判斷下一步，而不是每次重新寫樣板。</p>
+<p>文章提到的方向包含：</p>
+<ul>
+<li>用支援檔案保存欄位格式、API 範例、輸出範本。</li>
+<li>用 `scripts/` 放可重複執行的資料抓取、測試、部署或驗證腳本。</li>
+<li>用 on-demand hooks 做情境護欄，例如正式環境操作時自動阻擋 `rm -rf`、`DROP TABLE`、force-push 等危險命令。</li>
+<li>debug 時可用類似 freeze 的限制，讓 agent 只改特定資料夾，避免修出非目標變更。</li>
+</ul>
+<h1>建議的 SKILL.md 骨架</h1>
+<p>```yaml</p>
+<p>---</p>
+<p>name: weekly-report</p>
+<p>description: 彙整這週完成的工作，產生給主管看的週報。當使用者說「跑週報」「整理這週進度」時觸發。</p>
+<p>---</p>
+<p>```</p>
+<p>```markdown</p>
+<h1>週報產生器</h1>
+<h2>怎麼做</h2>
+<ul>
+<li>讀 config.json 取得週報收件人與格式；若還沒設定，先問使用者。</li>
+<li>彙整這週完成事項，只列和上週相比的新進度。</li>
+<li>將週報新增到 reports.log，不覆蓋歷史。</li>
+</ul>
+<h2>Gotchas</h2>
+<ul>
+<li>「標記完成」不等於真的結案，要看最新核准狀態。</li>
+<li>同一件事可能改過多次，只取最後定案版本。</li>
+</ul>
+<h2>參考</h2>
+<ul>
+<li>欄位與格式範本見 references/format.md，需要時再讀。</li>
+</ul>
+<p>```</p>
+<h1>對欒帥可立即轉成的 Skill 候選</h1>
+<p>| 候選 Skill | 觸發場景 | 主要 Gotchas |</p>
+<p>|---|---|---|</p>
+<p>| link-archive-to-kb | 分享文章、社群貼文、影片、工具頁 | 去重、官方來源補強、GitHub Pages 延遲、每日首頁連結 |</p>
+<p>| private-roster-processing | Google Sheets / 報名名單 / 個資資料 | 不改原始檔、不公開部署、去重 key 不能只用填表 email |</p>
+<p>| hermes-line-attachment-triage | LINE 圖片、PDF、文件上傳 | PDF 不能當圖片、照片需轉 PNG + localhost 視覺 workaround |</p>
+<p>| github-pages-deployment-check | rebuild / deploy / public verification | 先驗 raw artifact，再等 20–60 秒驗 Pages |</p>
+<p>| ai-course-content-adaptation | 把 AI 工具/文章轉成課程教材 | 區分官方事實、社群宣稱、教學改寫與可實作練習 |</p>
+<p>| skill-maintenance | 新增或修補 Hermes / Claude Code Skills | description 要可觸發、Gotchas 要持續更新、支援檔不要塞進主檔 |</p>
+<h1>導入建議</h1>
+<ul>
+<li>先從高頻、錯一次成本高的工作流做 Skill，而不是從「看起來完整」的百科型文件開始。</li>
+<li>每個 Skill 儘量只做一類事；橫跨太多任務會讓 agent 混淆。</li>
+<li>`SKILL.md` 保持短而準，詳細內容拆到 `references/`、`scripts/`、`templates/`。</li>
+<li>每次任務出錯後，不只修當下問題，也把錯誤模式補進 Gotchas。</li>
+<li>對會改檔、部署、刪資料、碰 token 的 Skill 加上驗證與護欄。</li>
+<li>定期檢查已存在 Skill 是否過寬、過時或描述不清，避免 Skill 變成脈絡污染源。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>數位時代文章是對 Anthropic 官方文章與 Claude Code docs 的中文整理；本文保留中文摘要，並以官方連結作為技術背景來源。</li>
+<li>Anthropic 的 Skills、Plugins、Hooks 與 Claude Code 文件會快速更新；實作前仍應以官方 docs 和目前 CLI 行為為準。</li>
+<li>本文不把「9 大類型」視為固定分類表，而是作為規劃 Skill portfolio 的實用地圖。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>數位時代：Claude Code Skill 怎麼寫、SKILL.md 放什麼？9 大類型＋Gotchas 寫法一次看懂： <a href="https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types</a></li>
+<li>Anthropic：Lessons from building Claude Code: How we use skills： <a href="https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills" target="_blank" rel="noopener">https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills</a></li>
+<li>Claude Code Docs：Skills： <a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></li>
+<li>Claude Code Docs：Plugins： <a href="https://code.claude.com/docs/en/plugins" target="_blank" rel="noopener">https://code.claude.com/docs/en/plugins</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-16 · https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Claude Code</span><span class="tag">Claude</span><span class="tag">Anthropic</span><span class="tag">Skills</span><span class="tag">AI Agent</span><span class="tag">Context Engineering</span><span class="tag">Prompt Engineering</span><span class="tag">開發流程</span><span class="tag">自動化</span><span class="tag">數位時代</span><h3>原始連結</h3><p><a href="https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types</a></p><p><a href="https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills" target="_blank" rel="noopener">https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills</a></p><p><a href="https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types</a></p><p><a href="https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills" target="_blank" rel="noopener">https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://code.claude.com/docs/en/plugins" target="_blank" rel="noopener">https://code.claude.com/docs/en/plugins</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

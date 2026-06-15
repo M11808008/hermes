@@ -1,5 +1,40 @@
 [
   {
+    "title": "Claude Code Skills｜資料夾化、Gotchas 與 9 大技能類型實戰筆記",
+    "date": "2026-06-16",
+    "source": "https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types",
+    "author": "李先泰 / 數位時代 BusinessNext / Anthropic Thariq Shihipar",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Claude",
+      "Anthropic",
+      "Skills",
+      "AI Agent",
+      "Context Engineering",
+      "Prompt Engineering",
+      "開發流程",
+      "自動化",
+      "數位時代"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types",
+      "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills",
+      "https://www.bnext.com.tw/article/91235/build-effective-claude-code-skills-with-folders-gotchas-and-9-types",
+      "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills",
+      "https://code.claude.com/docs/en/skills",
+      "https://code.claude.com/docs/en/plugins"
+    ],
+    "excerpt": "有效的 Claude Code Skill 應該像一個小型作業系統插件：用清楚 description 提高觸發命中率，用資料夾與支援檔降低脈絡污染，用 Gotchas 持續沉澱「模型最常做錯但團隊已踩過的坑」，再用腳本與驗證流程讓 agent 組合既有工具，而不是每次重造輪子。",
+    "slug": "2026-06-16-claude-code-skills-folders-gotchas-nine-types-bnext",
+    "html": "articles/2026-06-16-claude-code-skills-folders-gotchas-nine-types-bnext.html",
+    "markdown": "articles/2026/06/2026-06-16-claude-code-skills-folders-gotchas-nine-types-bnext.md"
+  },
+  {
     "title": "ComfyUI-LongCat-Avatar｜LongCat-Video-Avatar 1.5 的 ComfyUI 節點與 CUDA/Mac 限制",
     "date": "2026-06-15",
     "source": "https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1",
