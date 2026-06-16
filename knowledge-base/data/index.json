@@ -35,6 +35,41 @@
     "markdown": "articles/2026/06/2026-06-16-claude-code-skills-folders-gotchas-nine-types-bnext.md"
   },
   {
+    "title": "台北大同｜老麵店 70 年四醬乾麵與延三夜市路線筆記",
+    "date": "2026-06-16",
+    "source": "https://kkmurmur.com/old-noodle/",
+    "author": "老K嘴一下 / 老K",
+    "type": "article",
+    "topics": [
+      "美食",
+      "台北美食",
+      "大同區",
+      "延三夜市",
+      "迪化街",
+      "大橋頭站",
+      "圓山站",
+      "乾麵",
+      "四醬麵",
+      "小吃",
+      "老店",
+      "生活資料"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://kkmurmur.com/old-noodle/",
+      "https://kkmurmur.com/old-noodle/",
+      "https://kkmurmur.com/old-noodle/",
+      "https://www.facebook.com/oldnoodle",
+      "https://www.google.com/maps/place/%E8%80%81%E9%BA%B5%E5%BA%97/@25.0703643,121.5090773,17z/data=!4m6!3m5!1s0x3442a938296ed9e1:0xe418d4d5ff9483de!8m2!3d25.0703643!4d121.5116522!16s%2Fg%2F11c3k6dnm5?entry=ttu"
+    ],
+    "excerpt": "老麵店位在台北大同區迪化街二段、延三夜市尾段，是傳承 70 餘年的乾麵老店；招牌四醬乾麵以芝麻醬、炸醬、油蔥酥豬油與鹹水調成，適合安排成大橋頭站、圓山站、延三夜市或迪化街北段散步時的經典小吃點。",
+    "slug": "2026-06-16-taipei-datong-old-noodle-four-sauce-dry-noodle",
+    "html": "articles/2026-06-16-taipei-datong-old-noodle-four-sauce-dry-noodle.html",
+    "markdown": "articles/2026/06/2026-06-16-taipei-datong-old-noodle-four-sauce-dry-noodle.md"
+  },
+  {
     "title": "ComfyUI-LongCat-Avatar｜LongCat-Video-Avatar 1.5 的 ComfyUI 節點與 CUDA/Mac 限制",
     "date": "2026-06-15",
     "source": "https://www.threads.com/@rookiestar28/post/DZZ7ZRageo1",
