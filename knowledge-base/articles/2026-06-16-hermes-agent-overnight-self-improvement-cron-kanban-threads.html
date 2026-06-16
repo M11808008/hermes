@@ -1,0 +1,96 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hermes Agent 夜間自我提升模式｜Cron、Gateway、Memory、Skills 與 Kanban 的睡眠回神架構</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Hermes Agent 夜間自我提升模式｜Cron、Gateway、Memory、Skills 與 Kanban 的睡眠回神架構</h1><h1>Hermes Agent 夜間自我提升模式｜Cron、Gateway、Memory、Skills 與 Kanban 的睡眠回神架構</h1>
+<p>Threads 貼文描述 Hermes Agent 可以在晚上 11 點到早上 8 點之間「睡眠回神」：監控系統、吸收知識、完成預定任務、提升自身技能，並在早上前把簡報送到 Telegram 群組。本文將貼文內容轉成可落地的 Hermes 架構筆記，並用官方文件中的 Cron、Gateway、Memory、Skills、Kanban 等功能校正。</p>
+<h1>一句話摘要</h1>
+<p>Hermes 的「睡眠回神」不是單一按鈕，而是由 24/7 Gateway、Cron 排程、持久化記憶與技能、Kanban 多代理工作隊列、Telegram/Discord/Slack 等訊息出口組合而成；它能在夜間自動跑監控、整理知識、產出簡報與沉澱技能，但需要明確的任務邊界、成本控制與人工審核。</p>
+<h1>Threads 貼文重點</h1>
+<p>| 主張 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 夜間任務 | 從晚上 11 點到早上 8 點，系統監控、吸收知識、完成預定任務、提升技能 |</p>
+<p>| 早晨交付 | 早上前將簡報送到 Telegram 群組 |</p>
+<p>| 後台分支 | 自我提升循環可在後台分支運作 |</p>
+<p>| 管理員 / Curator | 清理過時流程或技能，避免舊 SOP 污染 |</p>
+<p>| Kanban | 看板調度器約每 60 秒觸發一次，用於多代理任務排程 |</p>
+<p>| Cron | 定時任務可先用腳本檢測變更，只有真正變動時才消耗 token |</p>
+<p>| 基礎設施 | 本地機器 24/7、Gateway 服務、Cron daemon、`~/.hermes/` 持久化儲存、至少一個訊息平台 |</p>
+<p>| 部署經驗 | 作者留言表示使用 Mac Mini，需要長時間開著，但省電 |</p>
+<h1>支撐架構</h1>
+<p>| 元件 | Hermes 對應功能 | 作用 |</p>
+<p>|---|---|---|</p>
+<p>| 常駐主機 | Mac Mini / VPS / Linux server | 保持 Gateway 與排程可長時間運作 |</p>
+<p>| Gateway | `hermes gateway run/install/start` | 讓 Hermes 接收與推送 Telegram、LINE、Discord、Slack 等訊息 |</p>
+<p>| Cron | Hermes Cron jobs | 夜間排程、資料檢查、每日摘要、變更偵測 |</p>
+<p>| Script-only watchdog | Cron `script` + `no_agent=True` 或先跑 script 再進 agent | 無變更時靜默，有變更才觸發 LLM，節省 token |</p>
+<p>| Memory | Hermes memory | 保留穩定偏好、環境事實、長期上下文 |</p>
+<p>| Skills | Hermes skills | 把成功 workflow、Gotchas、工具使用方式沉澱成可重用程序 |</p>
+<p>| Curator | Hermes curator | 檢查、封存或整理過時技能，降低脈絡污染 |</p>
+<p>| Kanban | Hermes Kanban multi-agent board | 多任務、多 profile、多代理協作，適合較複雜工作隊列 |</p>
+<p>| Telegram / Slack / Discord | Messaging platforms | 早晨簡報與告警出口 |</p>
+<h1>欒帥可用的夜間任務設計</h1>
+<p>| 夜間任務 | 可做內容 | 交付形式 |</p>
+<p>|---|---|---|</p>
+<p>| AI 學習雷達巡檢 | 檢查 RSS / 已收藏連結 / GitHub repo 是否有新內容 | 早上 LINE / Telegram 摘要 |</p>
+<p>| 知識庫健康檢查 | rebuild、檢查 404、確認 index.json、找重複文章 | 簡短健康報告 |</p>
+<p>| 技能維護 | 找出最近任務的錯誤模式，建議補 Gotchas 或修 Skill | 技能修補草稿或已修補報告 |</p>
+<p>| Gateway 監控 | 確認 LINE / Telegram webhook health、gateway log 是否有錯 | 異常才通知 |</p>
+<p>| 課程內容準備 | 將近期 AI 文章整理成可講的案例、活動題、工具清單 | 早晨教學備忘 |</p>
+<p>| 檔案備份 | 備份 config、skills、knowledge-base source、sessions 摘要 | 本機備份路徑與狀態 |</p>
+<h1>實作輪廓</h1>
+<p>```text</p>
+<p>23:00 啟動夜間排程</p>
+<p>  1. script-only watchdog：先檢查資料源是否有變更</p>
+<p>  2. 有變更才啟動 agent 摘要 / 歸檔 / 分析</p>
+<p>  3. 複雜任務寫入 Kanban，由 worker profiles 分工</p>
+<p>  4. 完成後 rebuild 知識庫、跑健康檢查</p>
+<p>  5. 若任務過程發現新 Gotcha，修補對應 Skill</p>
+<p>  6. 08:00 前將簡報送到 Telegram / LINE</p>
+<p>```</p>
+<h1>節省 token 的關鍵</h1>
+<p>貼文提到「定時任務可以免費檢測變更，並且僅在真正發生變更時才消耗 token」。實作上可用：</p>
+<ul>
+<li>Cron job 的 `script` 先查 RSS、GitHub API、檔案 mtime、HTTP ETag、hash。</li>
+<li>沒變化時 stdout 空白，或 script-only watchdog 不通知。</li>
+<li>有變化時才讓 agent 摘要、歸檔、推送。</li>
+<li>對固定格式告警可用 `no_agent=True`，完全不經 LLM。</li>
+<li>對需要判斷、綜合、改寫的內容才啟用 agent。</li>
+</ul>
+<h1>風險與限制</h1>
+<p>| 風險 | 控制方式 |</p>
+<p>|---|---|</p>
+<p>| 夜間任務亂改檔 | 限定 workdir、使用 Git、保留備份、部署前驗證 |</p>
+<p>| token 成本失控 | 先用 script 做變更偵測，設定摘要範圍與頻率 |</p>
+<p>| 技能越寫越亂 | 使用 Curator、定期封存過時技能、Gotchas 保持短而準 |</p>
+<p>| 通知太吵 | 無變更靜默，只推送異常與每日簡報 |</p>
+<p>| 敏感資料外洩 | 私密資料不得公開部署，token 留在 `.env`，摘要中移除個資 |</p>
+<p>| Mac Mini 斷電或睡眠 | 關閉睡眠、使用 UPS 或改 VPS；至少要有啟動後健康檢查 |</p>
+<h1>和 Claude / OpenClaw Dream / Reflection 的關係</h1>
+<p>貼文留言提到 Claude 也有類似「睡眠回神」功能，另有人提到 OpenClaw 的 Dream / reflection。可以理解為同一個 agent 系統設計趨勢：</p>
+<ul>
+<li>reflection：任務後回顧，找出錯誤與可改進點。</li>
+<li>skill learning：把成功流程寫成技能，未來可重用。</li>
+<li>scheduled work：用排程在使用者離線時完成固定工作。</li>
+<li>multi-agent queue：把大任務拆成可排程、可追蹤、可恢復的工作隊列。</li>
+</ul>
+<p>Hermes 的差異在於它把這些能力放在本機 / 自架環境、訊息 Gateway、Cron、Skills、Memory、Kanban 與可操作檔案系統的組合中。</p>
+<h1>欒帥下一步建議</h1>
+<ul>
+<li>先做「AI 學習雷達夜間巡檢」：只在新內容出現時摘要與歸檔。</li>
+<li>再做「知識庫健康檢查」：檢查最新文章、index、GitHub Pages 404。</li>
+<li>第三階段才做「技能自我修補」：只針對已確認的錯誤模式修補 Gotchas，不讓 agent 自由改所有技能。</li>
+<li>所有夜間 job 都要有清楚輸出：新增了什麼、跳過了什麼、失敗在哪、是否需要人工處理。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>Threads 貼文是概念與經驗分享，本文用 Hermes 官方文件與本機技能知識校正可落地架構。</li>
+<li>「每 60 秒」屬 Kanban / scheduler 運作描述，實際頻率與部署模式可能依版本與設定不同。</li>
+<li>「自我提升」應理解為技能、流程、記憶與報告品質的工程化迭代，不應讓 agent 無限制修改自身或生產環境。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads： <a href="https://www.threads.com/@heroman1916/post/DZmk7-yEyfG" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DZmk7-yEyfG</a></li>
+<li>Hermes Agent Docs： <a href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/</a></li>
+<li>Hermes Cron： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></li>
+<li>Hermes Kanban： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban</a></li>
+<li>Hermes Memory： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/memory" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/memory</a></li>
+<li>Hermes Skills： <a href="https://hermes-agent.nousresearch.com/docs/skills" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/skills</a></li>
+<li>Hermes Messaging Gateway： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/messaging/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-16 · https://www.threads.com/@heroman1916/post/DZmk7-yEyfG · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Hermes Agent</span><span class="tag">AI Agent</span><span class="tag">Cron</span><span class="tag">Kanban</span><span class="tag">Skills</span><span class="tag">Memory</span><span class="tag">Telegram</span><span class="tag">Gateway</span><span class="tag">自動化</span><span class="tag">Threads</span><h3>原始連結</h3><p><a href="https://www.threads.com/@heroman1916/post/DZmk7-yEyfG" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DZmk7-yEyfG</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/</a></p><p><a href="https://www.threads.com/@heroman1916/post/DZmk7-yEyfG" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DZmk7-yEyfG</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/memory" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/memory</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/skills" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/skills</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/messaging/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

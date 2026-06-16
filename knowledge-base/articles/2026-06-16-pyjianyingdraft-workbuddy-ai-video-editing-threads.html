@@ -1,0 +1,75 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>pyJianYingDraft｜用 Python 生成剪映草稿，串接 WorkBuddy 的半自動剪輯工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>pyJianYingDraft｜用 Python 生成剪映草稿，串接 WorkBuddy 的半自動剪輯工作流</h1><h1>pyJianYingDraft｜用 Python 生成剪映草稿，串接 WorkBuddy 的半自動剪輯工作流</h1>
+<p>Threads 貼文指出：「Python 有一個包，可以建立剪映草稿，接上 WorkBuddy 就可以自動剪輯。」留言補充對應 GitHub 專案為 `GuanYixuan/pyJianYingDraft`。本文將社群發現整理成可實作的技術筆記，並用 GitHub README / API metadata 校正限制。</p>
+<h1>一句話摘要</h1>
+<p>pyJianYingDraft 不是直接替你完成所有創意剪輯，而是讓 Python 生成剪映草稿與時間線；若前面接上 WorkBuddy、Hermes、Codex 或其他 agent，就能把「請 AI 規劃怎麼剪」轉成草稿檔，再交給剪映檢查、微調與匯出。</p>
+<h1>來源脈絡</h1>
+<p>| 來源 | 重點 |</p>
+<p>|---|---|</p>
+<p>| Threads 原貼 | yanyz915 表示才發現 Python 套件可建立剪映草稿，接上 WorkBuddy 就能自動剪輯 |</p>
+<p>| 作者後續留言 | 「讓 WorkBuddy 學會怎麼用這個 Python 包給我剪影片」並表示之後可能寫教學 |</p>
+<p>| 留言補充 | haiqushe 指向 GitHub：`GuanYixuan/pyJianYingDraft` |</p>
+<p>| GitHub repo | 輕量、靈活、易上手的 Python 剪映草稿生成及導出工具，用於自動化影片剪輯 / 混剪流水線 |</p>
+<h1>GitHub 專案狀態</h1>
+<p>| 項目 | pyJianYingDraft |</p>
+<p>|---|---|</p>
+<p>| Repo | <a href="https://github.com/GuanYixuan/pyJianYingDraft" target="_blank" rel="noopener">https://github.com/GuanYixuan/pyJianYingDraft</a> |</p>
+<p>| 語言 | Python |</p>
+<p>| License | Apache-2.0 |</p>
+<p>| GitHub 狀態 | 擷取時約 3,649 stars、599 forks |</p>
+<p>| 安裝 | `pip install pyJianYingDraft` |</p>
+<p>| 官方描述 | Python 剪映草稿生成及導出工具，構建全自動影片剪輯 / 混剪流水線 |</p>
+<p>| CapCut 分支 | <a href="https://github.com/GuanYixuan/pyCapCut，擷取時約" target="_blank" rel="noopener">https://github.com/GuanYixuan/pyCapCut，擷取時約</a> 540 stars、73 forks，仍在遷移 / 開發中 |</p>
+<h1>它能做什麼</h1>
+<p>| 模組 | 能力 |</p>
+<p>|---|---|</p>
+<p>| 草稿生成 | 新增本地影片、圖片、音訊素材，控制時間、長度、播放速度 |</p>
+<p>| 時間線 | 多軌道、層級、片段位置與持續時間控制 |</p>
+<p>| 文字 / 字幕 | 新增文字、設定字體樣式、文字描邊、陰影、氣泡、花字，支援匯入 `.srt` 生成字幕 |</p>
+<p>| 視覺效果 | 濾鏡、特效、轉場、入場 / 出場 / 組合動畫、蒙版、關鍵幀 |</p>
+<p>| 音訊 | 音量、淡入淡出、音訊片段特效 |</p>
+<p>| 模板模式 | 載入未加密 `draft_content.json` 作為模板，替換素材與文字，導入模板軌道 |</p>
+<p>| 批量導出 | 可控制剪映開啟指定草稿並導出，但受剪映版本與平台限制 |</p>
+<h1>重要限制與坑點</h1>
+<p>| 限制 | 說明 |</p>
+<p>|---|---|</p>
+<p>| 剪映 6+ 模板限制 | README 指出剪映 6+ 對 `draft_content.json` 加密，因此模板模式目前只支援剪映 5.9 及以下版本 |</p>
+<p>| 剪映 7+ 導出限制 | README 指出剪映 7+ 隱藏控件，批量導出功能目前只支援剪映 6 及以下版本 |</p>
+<p>| macOS / Linux 限制 | 可生成草稿與使用模板模式，但不支援自動導出；生成草稿仍需在 Windows 版剪映下導出 |</p>
+<p>| AI 不是剪輯品質保證 | AI 可生成時間線，但節奏、情緒、轉場與素材取捨仍需要人審 |</p>
+<p>| WorkBuddy 串接屬社群實驗 | 原貼說明正在研究，尚未提供完整教學；本文不假設已存在穩定端到端方案 |</p>
+<h1>欒帥可用的半自動剪輯流程</h1>
+<ul>
+<li>素材整理：將原始影片、圖片、旁白、音樂、字幕檔放入固定資料夾。</li>
+<li>AI 規劃：請 Hermes / WorkBuddy / Codex 讀素材清單與腳本，輸出剪輯企劃：片段順序、起訖時間、字幕、B-roll、音樂點。</li>
+<li>Python 生成草稿：由 pyJianYingDraft 把企劃轉成剪映草稿時間線。</li>
+<li>剪映人工審稿：在剪映中打開草稿，檢查節奏、字幕、轉場、音量與素材授權。</li>
+<li>匯出與發布：目前若要穩定自動導出，優先考慮 Windows + 受支援剪映版本；若在 macOS，先以草稿生成 + 人工匯出為主。</li>
+</ul>
+<h1>適合做成的內容自動化</h1>
+<p>| 場景 | 做法 |</p>
+<p>|---|---|</p>
+<p>| 課程短影音 | AI 依講義產生 60–90 秒片段腳本，再生成字幕與鏡頭時間線 |</p>
+<p>| 工具教學影片 | 固定片頭 / 片尾 / 字幕樣式作為模板，替換螢幕錄影與關鍵字 |</p>
+<p>| 社群精華剪輯 | 將長影片切成多個主題短片草稿，人工挑選後匯出 |</p>
+<p>| AI 學習雷達週報影片 | 從知識庫週報選 3–5 則重點，自動生成口播字幕與素材位置 |</p>
+<h1>建議先做的最小實驗</h1>
+<ul>
+<li>安裝：`pip install pyJianYingDraft`。</li>
+<li>找到剪映草稿資料夾，例如 `.../JianyingPro Drafts`。</li>
+<li>跑官方 `demo.py`，確認剪映中能看到新草稿與時間線。</li>
+<li>先只做「素材 + 字幕 + 轉場」三件事，不要一開始追求全自動剪輯。</li>
+<li>成功後再讓 agent 產生 JSON 剪輯計畫，Python 只負責把計畫轉為草稿。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>Threads 原貼是社群發現與實驗，不是完整教學；目前穩定資訊以 GitHub README 為主。</li>
+<li>GitHub stars、forks、版本支援狀態會變動；本文記錄的是 2026-06-16 擷取時狀態。</li>
+<li>WorkBuddy 的具體操作方式未由原貼完整公開，本文只整理可推導的 agent + Python 草稿生成架構。</li>
+<li>自動剪輯涉及素材授權、音樂授權、肖像權與平台規範，發布前仍需人工確認。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads： <a href="https://www.threads.com/@yanyz915/post/DZmf9AKEdPh" target="_blank" rel="noopener">https://www.threads.com/@yanyz915/post/DZmf9AKEdPh</a></li>
+<li>pyJianYingDraft GitHub： <a href="https://github.com/GuanYixuan/pyJianYingDraft" target="_blank" rel="noopener">https://github.com/GuanYixuan/pyJianYingDraft</a></li>
+<li>pyCapCut GitHub： <a href="https://github.com/GuanYixuan/pyCapCut" target="_blank" rel="noopener">https://github.com/GuanYixuan/pyCapCut</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-16 · https://www.threads.com/@yanyz915/post/DZmf9AKEdPh · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Python</span><span class="tag">pyJianYingDraft</span><span class="tag">pyCapCut</span><span class="tag">剪映</span><span class="tag">CapCut</span><span class="tag">WorkBuddy</span><span class="tag">影片自動化</span><span class="tag">自動剪輯</span><span class="tag">GitHub</span><span class="tag">Threads</span><h3>原始連結</h3><p><a href="https://www.threads.com/@yanyz915/post/DZmf9AKEdPh" target="_blank" rel="noopener">https://www.threads.com/@yanyz915/post/DZmf9AKEdPh</a></p><p><a href="https://github.com/GuanYixuan/pyJianYingDraft" target="_blank" rel="noopener">https://github.com/GuanYixuan/pyJianYingDraft</a></p><p><a href="https://www.threads.com/@yanyz915/post/DZmf9AKEdPh" target="_blank" rel="noopener">https://www.threads.com/@yanyz915/post/DZmf9AKEdPh</a></p><p><a href="https://github.com/GuanYixuan/pyJianYingDraft" target="_blank" rel="noopener">https://github.com/GuanYixuan/pyJianYingDraft</a></p><p><a href="https://github.com/GuanYixuan/pyCapCut" target="_blank" rel="noopener">https://github.com/GuanYixuan/pyCapCut</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
