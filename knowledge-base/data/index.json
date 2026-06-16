@@ -2771,6 +2771,12 @@
     "status": "archived",
     "links": [
       "https://www.threads.com/@fennyhsu1936/post/DYyvkH4ESlq",
+      "https://github.com/meituan-longcat/LongCat-Video",
+      "https://github.com/meituan-longcat/LongCat-Video",
+      "https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5",
+      "https://huggingface.co/spaces/victor/LongCat-Video-Avatar-1.5",
+      "https://huggingface.co/spaces/multimodalart/LongCat-Video",
+      "https://meigen-ai.github.io/LongCat-Video-Avatar-1.5-Page/",
       "https://www.threads.com/@fennyhsu1936/post/DYyvkH4ESlq"
     ],
     "excerpt": "美團 LongCat 團隊低調開源了 LongCat-Video，MIT 授權可免費商用，支援上傳照片＋音檔生成 AI 數位人說話影片，但硬體需求極高（需 2 張 A100 等級 GPU，VRAM 40–80GB），一般電腦無法負擔，建議透過 HuggingFace 免費 Space 先行體驗。",
