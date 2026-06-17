@@ -1,5 +1,39 @@
 [
   {
+    "title": "Grok Imagine Video 1.5｜720p 約 25 秒生成的快速影像轉影片模型",
+    "date": "2026-06-17",
+    "source": "https://www.threads.com/@heroman1916/post/DZrGyJKE07a",
+    "author": "heroman1916 / xAI / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Video",
+      "Grok",
+      "xAI",
+      "Image-to-Video",
+      "影片生成",
+      "原型設計",
+      "720p",
+      "創作者工具",
+      "模型更新"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@heroman1916/post/DZrGyJKE07a?xmt=AQG02taZsJI5_l8J4zxR3PPnLKEf2LXYVuExQLOvH8rOOf9USF9E5uRubbSL_kCvhzQYRKIILA&slof=1",
+      "https://x.ai/news/grok-imagine-video-1-5",
+      "https://www.threads.com/@heroman1916/post/DZrGyJKE07a",
+      "https://x.ai/news/grok-imagine-video-1-5",
+      "https://x.ai/news/grok-imagine-1-5",
+      "https://docs.x.ai/developers/models/grok-imagine-video-1.5-preview"
+    ],
+    "excerpt": "Grok Imagine Video 1.5 是 xAI 的 image-to-video 模型更新，主打更快的 720p 生成、較好的動作、物理與音訊表現；官方資訊顯示 Fast 版本可把 6 秒 720p 影片生成時間從前代 40 秒以上降到約 25 秒，這使它更適合做廣告分鏡、產品概念、課程素材與 AI 影片原型的快速迭代。",
+    "slug": "2026-06-17-grok-imagine-video-1-5-fast-720p-prototyping-threads",
+    "html": "articles/2026-06-17-grok-imagine-video-1-5-fast-720p-prototyping-threads.html",
+    "markdown": "articles/2026/06/2026-06-17-grok-imagine-video-1-5-fast-720p-prototyping-threads.md"
+  },
+  {
     "title": "Runway MCP｜在 ChatGPT 內直接生成與編輯影片、圖片的創作工作流",
     "date": "2026-06-17",
     "source": "https://x.com/runwayml/status/2066596138824696214",

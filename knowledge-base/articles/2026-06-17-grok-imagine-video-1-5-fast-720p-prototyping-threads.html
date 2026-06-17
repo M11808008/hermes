@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Grok Imagine Video 1.5｜720p 約 25 秒生成的快速影像轉影片模型</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Grok Imagine Video 1.5｜720p 約 25 秒生成的快速影像轉影片模型</h1><h1>Grok Imagine Video 1.5｜720p 約 25 秒生成的快速影像轉影片模型</h1>
+<p>來源為 heroman1916 的 Threads 貼文。貼文指出 Grok Image / Imagine Video 1.5 推出，速度提升明顯，720p 影片約 25 秒可生成，對原型設計來說有重要意義。本文以 Threads 貼文作為發現來源，並用 xAI 官方新聞搜尋摘要與 xAI Developers 文件補強規格、價格與使用限制。</p>
+<h1>一句話摘要</h1>
+<p>Grok Imagine Video 1.5 是 xAI 的 image-to-video 模型更新，主打更快的 720p 生成、較好的動作、物理與音訊表現；官方資訊顯示 Fast 版本可把 6 秒 720p 影片生成時間從前代 40 秒以上降到約 25 秒，這使它更適合做廣告分鏡、產品概念、課程素材與 AI 影片原型的快速迭代。</p>
+<h1>來源與官方資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 來源 | heroman1916：Grok Image Video 1.5 推出，720p 約 25 秒，對原型設計是革命性改變 |</p>
+<p>| Threads 互動 | 約 5,040 次瀏覽；66 likes、6 replies、3 reposts、37 bookmarks；數字會隨時間變動 |</p>
+<p>| 官方新聞 | xAI: Grok Imagine Video 1.5 |</p>
+<p>| 官方文件 | xAI Developers: Grok Imagine Video 1.5 Preview |</p>
+<p>| 模型名稱 | grok-imagine-video-1.5；alias 包含 grok-imagine-video-1.5-preview、grok-imagine-video-1.5-2026-05-30 |</p>
+<p>| 主要模態 | Image-to-Video；xAI 文件顯示此模型目前不支援純 text-to-video |</p>
+<p>| 解析度價格 | xAI Docs 顯示 API video per second：480p $0.08、720p $0.14；實際以官方文件為準 |</p>
+<p>| 速率限制 | xAI Docs 顯示 requests per minute 60；實際依帳號與區域可能不同 |</p>
+<h1>這次更新的重點</h1>
+<p>| 更新面向 | 判讀 |</p>
+<p>|---|---|</p>
+<p>| 速度 | 官方搜尋摘要指出 Fast 版本約可在 25 秒產出 6 秒 720p 影片，前代為 40 秒以上 |</p>
+<p>| 畫質 | 官方資訊主打 sharper realism / better realism，適合更快看出概念是否成立 |</p>
+<p>| 物理與動作 | 官方資訊提到 better motion、better physics，對人物、物件互動與鏡頭運動更關鍵 |</p>
+<p>| 音訊 | 官方資訊提到 better audio；若音訊與畫面同步改善，對短廣告與 social video 原型更有幫助 |</p>
+<p>| 原型迭代 | 25 秒級別的 720p 生成，讓創作者可以更頻繁測試 prompt、構圖與鏡頭運動 |</p>
+<h1>對原型設計的意義</h1>
+<p>這類速度提升最重要的不是「最終成片立刻可發」，而是把視覺原型的等待時間壓低。當 720p 片段可以在半分鐘左右出結果，創作者就能用更接近設計迭代的方式工作：先快速產出 3-5 個 motion variant，再挑選方向做二次精修。</p>
+<p>| 使用情境 | 為什麼適合 |</p>
+<p>|---|---|</p>
+<p>| 廣告分鏡 | 快速比較不同鏡頭、產品進場、光線與節奏 |</p>
+<p>| 課程與簡報開場 | 把抽象 AI 概念轉成短視覺片段，用於吸引注意 |</p>
+<p>| 社群短影音原型 | 快速測試 visual hook 是否成立，再決定是否進入正式剪輯 |</p>
+<p>| 產品概念影片 | 用 image-to-video 把 UI、硬體或場景圖動起來，做提案 demo |</p>
+<p>| Prompt 教學 | 讓學員即時看到「提示詞改一行」對畫面與動作的影響 |</p>
+<h1>對欒帥的實用價值</h1>
+<ul>
+<li>可作為 AI 影片課程中的速度迭代案例：從「生成一次等很久」變成「像設計稿一樣連續試版」。</li>
+<li>適合和 Runway MCP、VidRush、Fomofly 等工具放在同一條內容生產鏈比較：Grok Imagine 偏快迭代 image-to-video，Runway 偏專業創作工作台，VidRush 偏長影片自動化，Fomofly 偏長片轉短片。</li>
+<li>可用於 AI 學習雷達的影片工具評測模板：記錄 prompt、輸入圖、生成時間、解析度、成本、可用率、失敗類型。</li>
+<li>對提案與教學很有幫助：不用先追求完美成片，而是先用 720p 快速驗證視覺方向。</li>
+<li>若未來要大量使用，應建立成本估算：生成秒數 × 解析度單價 × 可用率，避免快速迭代變成隱性高成本。</li>
+</ul>
+<h1>建議測試清單</h1>
+<p>| 測試項目 | 建議做法 |</p>
+<p>|---|---|</p>
+<p>| 輸入圖片 | 準備產品圖、人物半身圖、場景圖各一張，測試模型對不同題材的穩定度 |</p>
+<p>| 生成長度 | 先測 6 秒短片，記錄 720p 實際等待時間是否接近 25 秒 |</p>
+<p>| 鏡頭運動 | 分別測 pan、dolly in、orbit、handheld、slow zoom，觀察變形與物理合理性 |</p>
+<p>| 音訊 | 檢查是否產生可用音訊、是否與畫面情境一致，以及商用前是否需替換 |</p>
+<p>| 成本 | 記錄 480p 與 720p 的單次成本與可用率，估算每支可用 demo 的平均成本 |</p>
+<p>| 人工審核 | 檢查人物手指、文字、Logo、產品細節、物理穿模與畫面閃爍 |</p>
+<h1>風險與注意</h1>
+<ul>
+<li>Threads 貼文強調速度，但相關留言也指出品質與穩定性仍是關鍵；快速不等於可直接商用。</li>
+<li>xAI Docs 顯示模型目前是 image-to-video，不是純文字生成影片；若工作流需要 text-to-video，要確認是否另有入口或產品層封裝。</li>
+<li>720p 適合快速原型與社群草稿，但正式廣告或大螢幕輸出可能仍需更高解析度或後製。</li>
+<li>若使用第三方 API 包裝平台，價格、限制與模型版本可能和 xAI 官方不同，需避免混淆。</li>
+<li>官方 x.ai 新聞頁受 Cloudflare 阻擋，本文的新聞規格以 Brave Search 官方摘要與 xAI Developers 文件交叉整理，正式採用前應再以可登入環境確認官方頁完整內容。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文可直接擷取 Threads 貼文與相關串文內容；xAI 官方新聞頁在本機瀏覽與程式擷取時受到 Cloudflare 阻擋，因此未能讀取完整新聞原文。已用 Brave Search 對 xAI 官方頁面的摘要與 xAI Developers 模型文件補強關鍵規格。模型價格、速率限制、支援區域與產品入口可能更新，需以 xAI Docs 與帳號實際可用功能為準。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-17 · https://www.threads.com/@heroman1916/post/DZrGyJKE07a · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Video</span><span class="tag">Grok</span><span class="tag">xAI</span><span class="tag">Image-to-Video</span><span class="tag">影片生成</span><span class="tag">原型設計</span><span class="tag">720p</span><span class="tag">創作者工具</span><span class="tag">模型更新</span><h3>原始連結</h3><p><a href="https://www.threads.com/@heroman1916/post/DZrGyJKE07a?xmt=AQG02taZsJI5_l8J4zxR3PPnLKEf2LXYVuExQLOvH8rOOf9USF9E5uRubbSL_kCvhzQYRKIILA&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DZrGyJKE07a?xmt=AQG02taZsJI5_l8J4zxR3PPnLKEf2LXYVuExQLOvH8rOOf9USF9E5uRubbSL_kCvhzQYRKIILA&amp;slof=1</a></p><p><a href="https://x.ai/news/grok-imagine-video-1-5" target="_blank" rel="noopener">https://x.ai/news/grok-imagine-video-1-5</a></p><p><a href="https://www.threads.com/@heroman1916/post/DZrGyJKE07a" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DZrGyJKE07a</a></p><p><a href="https://x.ai/news/grok-imagine-video-1-5" target="_blank" rel="noopener">https://x.ai/news/grok-imagine-video-1-5</a></p><p><a href="https://x.ai/news/grok-imagine-1-5" target="_blank" rel="noopener">https://x.ai/news/grok-imagine-1-5</a></p><p><a href="https://docs.x.ai/developers/models/grok-imagine-video-1.5-preview" target="_blank" rel="noopener">https://docs.x.ai/developers/models/grok-imagine-video-1.5-preview</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
