@@ -1,0 +1,69 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Puti-AI Auto Transcribe NotebookLM｜把 FB / YouTube 影片自動轉成 NotebookLM 知識庫的 Agent 技能包</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Puti-AI Auto Transcribe NotebookLM｜把 FB / YouTube 影片自動轉成 NotebookLM 知識庫的 Agent 技能包</h1><h1>Puti-AI Auto Transcribe NotebookLM｜把 FB / YouTube 影片自動轉成 NotebookLM 知識庫的 Agent 技能包</h1>
+<p>來源為黃朝榮老師在 GEG Taiwan 社團分享的 Facebook 貼文。貼文介紹一套「Puti-AI 自動轉寫與同步工具」：讓使用者把 Facebook Reels、YouTube、Instagram 等影音連結交給 AI Agent，由工具下載影片、用 Gemini 2.5 做視聽雙模態轉寫與書面化整理，再同步到 NotebookLM。本文以 Facebook 貼文作為發現來源，並以 GitHub repo / README 作為 canonical source。</p>
+<h1>一句話摘要</h1>
+<p>Puti-AI Auto Transcribe NotebookLM 是一個 Python + yt-dlp + Gemini 2.5 Flash + NotebookLM MCP CLI 的開源工作流，目標是把「下載影片、轉寫、去口語、整理成 Markdown、匯入 NotebookLM」這串複製貼上地獄，包成 AI Agent 可自動執行的技能包。</p>
+<h1>專案資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Facebook 發現來源 | 黃朝榮老師於 GEG Taiwan 社團分享 |</p>
+<p>| GitHub repo | <a href="https://github.com/puti001/Puti-AI-auto-transcribe-notebooklm" target="_blank" rel="noopener">https://github.com/puti001/Puti-AI-auto-transcribe-notebooklm</a> |</p>
+<p>| Padlet 工具庫 | <a href="https://padlet.com/clongwh/puti-ai-teaching-tool-library-tifvrvjcpg51cw7r" target="_blank" rel="noopener">https://padlet.com/clongwh/puti-ai-teaching-tool-library-tifvrvjcpg51cw7r</a> |</p>
+<p>| 語言 / 架構 | Python；`transcribe.py`、`agent_instructions.md`、`requirements.txt` |</p>
+<p>| 主要依賴 | `google-genai`、`yt-dlp`、`notebooklm-mcp-cli`、`openai` |</p>
+<p>| 模型路徑 | 優先使用 Gemini 2.5 Flash；若無 Gemini key，可降級為 OpenAI Whisper + GPT-4o |</p>
+<p>| GitHub 狀態 | 擷取時約 0 stars、0 forks、0 issues；repo 建立於 2026-06-16，仍屬早期專案 |</p>
+<p>| 授權 | GitHub API 未顯示 license；導入前需確認授權條款 |</p>
+<h1>它解決的三個痛點</h1>
+<p>| 痛點 | 原本問題 | 這個工具的做法 |</p>
+<p>|---|---|---|</p>
+<p>| AI 只聽不看 | NotebookLM / 一般轉寫流程常依賴音訊或 YouTube caption；遇到背景音樂、古文、生僻詞、畫面字幕時容易漏 | 先下載 MP4，讓 Gemini 2.5 同時看畫面字幕與聽人聲，做 OCR + ASR 對齊 |</p>
+<p>| 平台登入阻擋 | Facebook Reels 等平台常阻擋無登入下載或抓取 | 以 yt-dlp 下載影音；並透過 agent / 本機環境處理登入與下載流程 |</p>
+<p>| 手動複製貼上 | 下載、轉寫、整理、貼到 NotebookLM、再生成簡報很耗時 | `transcribe.py` 自動輸出 Markdown，若 `nlm` 可用則建立 NotebookLM 筆記本並匯入來源 |</p>
+<h1>工作流拆解</h1>
+<p>| 步驟 | 工具 / 檔案 | 說明 |</p>
+<p>|---|---|---|</p>
+<p>| 1. 接收影片 URL | Agent 指令或 CLI | 使用者輸入 `自動逐字稿：[影片網址]` 或執行 `python transcribe.py &lt;url&gt;` |</p>
+<p>| 2. 下載 MP4 | `yt-dlp` | 抓取 Facebook / YouTube / Instagram 等影音串流並存成暫存影片 |</p>
+<p>| 3. 多模態轉寫 | Gemini 2.5 Flash | 上傳影片到 Gemini Files API，要求模型結合畫面字幕 OCR 與人聲 ASR 產出繁中 Markdown 報告 |</p>
+<p>| 4. 書面化整理 | Gemini / GPT-4o | 自動去除口語贅字，輸出章節化、重點加粗的書面知識報告 |</p>
+<p>| 5. NotebookLM 同步 | `notebooklm-mcp-cli` / `nlm` | 檢查登入、建立新 notebook、匯入 Markdown 來源檔 |</p>
+<p>| 6. 清理暫存 | `transcribe.py` | 完成後刪除本地 MP4 暫存檔，避免硬碟殘留 |</p>
+<h1>Agent 友善設計</h1>
+<p>這個 repo 特別有一份 `agent_instructions.md`，明確告訴 Cursor、Windsurf、Antigravity、Claude Code 等 AI 編程助理：</p>
+<ul>
+<li>自動執行 `pip install -r requirements.txt`。</li>
+<li>執行 `nlm login` 檢查 NotebookLM 登入。</li>
+<li>註冊 MCP server：server name 為 `notebooklm`，command 為 `nlm mcp`。</li>
+<li>執行 `nlm doctor` 驗證狀態。</li>
+<li>當使用者輸入 `自動逐字稿：[VIDEO_URL]` 時，直接背景執行 `python transcribe.py [VIDEO_URL]`。</li>
+</ul>
+<p>這點很值得注意：它不是只有腳本，而是把「給 AI Agent 的操作規則」也放進 repo，讓工具更接近可被代理接手的技能包。</p>
+<h1>對欒帥的實用價值</h1>
+<ul>
+<li>**可作為 AI 教學自動化案例**：把影片學習、逐字稿、Markdown 筆記、NotebookLM 知識庫串成完整 pipeline，適合示範 agentic workflow。</li>
+<li>**適合處理社群短影片知識化**：許多 Facebook Reels / YouTube Shorts 只有短影音，這套方法能把影片變成可搜尋、可問答、可生成簡報的資料來源。</li>
+<li>**可和 AI 學習雷達互補**：Hermes 負責歸檔公開知識庫；Puti-AI 這類工具可負責把影片內容先變成結構化 Markdown，再進一步供 NotebookLM 或知識庫使用。</li>
+<li>**可作為 NotebookLM 教學補強**：Google NotebookLM 官方已支援 YouTube / audio sources，但官方文件也說明 YouTube 來源依賴公開影片與 captions；這個工具嘗試用「下載完整 MP4 + Gemini 看畫面」補足 caption 品質不足與平台限制。</li>
+<li>**可延伸為課程工作坊**：學生只給影片連結，Agent 自動轉寫與建庫，最後用 NotebookLM 生成摘要、FAQ、簡報或學習指南。</li>
+</ul>
+<h1>導入前注意事項</h1>
+<ul>
+<li>**Facebook / Instagram 下載穩定性不保證**：yt-dlp 對平台登入、防爬、影片格式的支援會變動；有些內容仍可能需要 cookie、登入或人工處理。</li>
+<li>**NotebookLM 自動登入可能不一定無痛**：README 假設本機 Chrome / Google session 可協助登入，但不同系統、瀏覽器權限、Google 安全檢查都可能讓自動登入失敗。</li>
+<li>**Gemini 上傳影片涉及資料外傳**：影片會上傳到 Gemini Files API 做處理；若內容包含個資、學生資料或非公開課程，需先確認授權與隱私。</li>
+<li>**「辨識率近乎 100%」屬作者主張**：實際效果仍取決於影片音質、字幕清晰度、語言、背景音樂、模型限制與影片長度。</li>
+<li>**授權尚未明確**：GitHub API 未顯示 license，正式商用或改作前需確認作者授權。</li>
+<li>**NotebookLM 官方來源限制仍需遵守**：NotebookLM 對可匯入來源類型、YouTube captions、網頁擷取與來源數量有產品限制；此工具是把結果轉成 Markdown 後同步，不代表能繞過 NotebookLM 本身規則。</li>
+</ul>
+<h1>建議測試流程</h1>
+<p>| 測試項目 | 做法 |</p>
+<p>|---|---|</p>
+<p>| 環境檢查 | 建立虛擬環境，安裝 `requirements.txt`，避免污染主 Python |</p>
+<p>| API key | 先用 `GEMINI_API_KEY` 測試短影片；沒有 Gemini key 再測 OpenAI fallback |</p>
+<p>| NotebookLM 登入 | 執行 `nlm login` 與 `nlm doctor`，確認 MCP CLI 可用 |</p>
+<p>| 小影片試跑 | 先用 1-3 分鐘公開 YouTube 影片，檢查轉寫品質與成本 |</p>
+<p>| Facebook Reels | 再測 Facebook Reel，記錄是否需要 cookie / 登入 |</p>
+<p>| 輸出檢查 | 檢查 Markdown 是否保留重點、是否過度改寫、是否漏掉畫面文字 |</p>
+<p>| NotebookLM 匯入 | 確認新 notebook 名稱、來源檔、引用與後續問答是否正常 |</p>
+<h1>判讀限制</h1>
+<p>本文根據 Facebook 貼文、Puti-AI Padlet 工具庫、GitHub repo metadata、README、`agent_instructions.md`、`requirements.txt` 與部分 `transcribe.py` 原始碼整理。本文尚未在本機實際執行該工具，也未驗證 Facebook Reels 下載成功率、NotebookLM MCP CLI 實際登入穩定性或 Gemini 對不同長度影片的成本與品質；因此此篇定位為「工具與工作流評估筆記」，不是實測報告。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-18 · https://www.facebook.com/share/p/18vR8AsYt2/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">NotebookLM</span><span class="tag">Gemini 2.5</span><span class="tag">yt-dlp</span><span class="tag">MCP</span><span class="tag">影音轉寫</span><span class="tag">教學工具</span><span class="tag">自動化工作流</span><span class="tag">Facebook Reels</span><span class="tag">YouTube</span><span class="tag">Puti-AI</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/18vR8AsYt2/" target="_blank" rel="noopener">https://www.facebook.com/share/p/18vR8AsYt2/</a></p><p><a href="https://github.com/puti001/Puti-AI-auto-transcribe-notebooklm" target="_blank" rel="noopener">https://github.com/puti001/Puti-AI-auto-transcribe-notebooklm</a></p><p><a href="https://www.facebook.com/share/p/18vR8AsYt2/" target="_blank" rel="noopener">https://www.facebook.com/share/p/18vR8AsYt2/</a></p><p><a href="https://github.com/puti001/Puti-AI-auto-transcribe-notebooklm" target="_blank" rel="noopener">https://github.com/puti001/Puti-AI-auto-transcribe-notebooklm</a></p><p><a href="https://padlet.com/clongwh/puti-ai-teaching-tool-library-tifvrvjcpg51cw7r" target="_blank" rel="noopener">https://padlet.com/clongwh/puti-ai-teaching-tool-library-tifvrvjcpg51cw7r</a></p><p><a href="https://support.google.com/notebooklm/answer/16215270" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16215270</a></p><p><a href="https://blog.google/innovation-and-ai/products/notebooklm-audio-video-sources/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/products/notebooklm-audio-video-sources/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

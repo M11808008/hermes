@@ -68,6 +68,43 @@
     "markdown": "articles/2026/06/2026-06-18-llm-wiki-for-n8n-google-docs-sheets-knowledge-base.md"
   },
   {
+    "title": "Puti-AI Auto Transcribe NotebookLM｜把 FB / YouTube 影片自動轉成 NotebookLM 知識庫的 Agent 技能包",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/p/18vR8AsYt2/",
+    "author": "黃朝榮 / Puti-AI / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "NotebookLM",
+      "Gemini 2.5",
+      "yt-dlp",
+      "MCP",
+      "影音轉寫",
+      "教學工具",
+      "自動化工作流",
+      "Facebook Reels",
+      "YouTube",
+      "Puti-AI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/18vR8AsYt2/",
+      "https://github.com/puti001/Puti-AI-auto-transcribe-notebooklm",
+      "https://www.facebook.com/share/p/18vR8AsYt2/",
+      "https://github.com/puti001/Puti-AI-auto-transcribe-notebooklm",
+      "https://padlet.com/clongwh/puti-ai-teaching-tool-library-tifvrvjcpg51cw7r",
+      "https://support.google.com/notebooklm/answer/16215270",
+      "https://blog.google/innovation-and-ai/products/notebooklm-audio-video-sources/"
+    ],
+    "excerpt": "Puti-AI Auto Transcribe NotebookLM 是一個 Python + yt-dlp + Gemini 2.5 Flash + NotebookLM MCP CLI 的開源工作流，目標是把「下載影片、轉寫、去口語、整理成 Markdown、匯入 NotebookLM」這串複製貼上地獄，包成 AI Agent 可自動執行的技能包。",
+    "slug": "2026-06-18-puti-ai-auto-transcribe-notebooklm-facebook-youtube-agent-skill",
+    "html": "articles/2026-06-18-puti-ai-auto-transcribe-notebooklm-facebook-youtube-agent-skill.html",
+    "markdown": "articles/2026/06/2026-06-18-puti-ai-auto-transcribe-notebooklm-facebook-youtube-agent-skill.md"
+  },
+  {
     "title": "Grok Imagine Video 1.5｜720p 約 25 秒生成的快速影像轉影片模型",
     "date": "2026-06-17",
     "source": "https://www.threads.com/@heroman1916/post/DZrGyJKE07a",
