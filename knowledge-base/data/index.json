@@ -1,5 +1,40 @@
 [
   {
+    "title": "數位時代圖解 7 大 AI 模型變現力｜ChatGPT、Gemini、Claude 到 Grok 的代理入口戰",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/p/1DSarRfM4E/",
+    "author": "數位時代 BusinessNext / 劉燿瑜 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "Grok",
+      "Perplexity",
+      "DeepSeek",
+      "Meta AI",
+      "AI 商業模式",
+      "生成式 AI",
+      "數位時代"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1DSarRfM4E/",
+      "https://www.bnext.com.tw/article/91212/llm-ai-agent",
+      "https://www.facebook.com/share/p/1DSarRfM4E/",
+      "https://www.facebook.com/bnextmedia/posts/pfbid0HoBAXnbgcwnGV8DB6Zj4zbjeL8f5bgUdYrnUTjuC6RZE8wFHS6TJpi5rfTv5GuuMl",
+      "https://www.bnext.com.tw/article/91212/llm-ai-agent"
+    ],
+    "excerpt": "AI 模型競爭已從「誰回答得比較好」進入「誰能成為使用者工作、搜尋、購物與日常決策入口」的代理平台戰；ChatGPT 贏在規模，Gemini 與 Meta AI 贏在既有生態，Claude 贏在企業與重度工作流，Grok、Perplexity、DeepSeek 則各自用社群即時性、搜尋可信度與低成本模型路線切入。",
+    "slug": "2026-06-18-bnext-seven-ai-model-monetization-agent-platform-war",
+    "html": "articles/2026-06-18-bnext-seven-ai-model-monetization-agent-platform-war.html",
+    "markdown": "articles/2026/06/2026-06-18-bnext-seven-ai-model-monetization-agent-platform-war.md"
+  },
+  {
     "title": "n8n 版 LLM Wiki｜用 Google Docs / Sheets 實作 Karpathy 預編譯知識庫",
     "date": "2026-06-18",
     "source": "https://github.com/uncle6me-web/LLM-Wiki-for-n8n",
