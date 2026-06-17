@@ -1,5 +1,40 @@
 [
   {
+    "title": "Runway MCP｜在 ChatGPT 內直接生成與編輯影片、圖片的創作工作流",
+    "date": "2026-06-17",
+    "source": "https://x.com/runwayml/status/2066596138824696214",
+    "author": "Runway / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Video",
+      "Runway",
+      "MCP",
+      "ChatGPT",
+      "Claude",
+      "Cursor",
+      "影片生成",
+      "圖片生成",
+      "創作者工具",
+      "Agent Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/runwayml/status/2066596138824696214?s=53",
+      "https://runwayml.com/mcp",
+      "https://x.com/runwayml/status/2066596138824696214",
+      "https://runwayml.com/mcp",
+      "https://runwayml.com/product",
+      "https://mcp.runwayml.com/mcp"
+    ],
+    "excerpt": "Runway MCP 把 Runway 的影片／圖片生成能力接進 ChatGPT、Claude、Cursor、Replit 等支援 MCP 的代理工具中，讓使用者可在原本的對話或開發環境裡請 AI 產生、修改、延伸視覺素材；這代表創作流程正從「切換工具」轉向「代理在同一上下文中調用專業生成工具」。",
+    "slug": "2026-06-17-runway-mcp-chatgpt-video-image-generation-x",
+    "html": "articles/2026-06-17-runway-mcp-chatgpt-video-image-generation-x.html",
+    "markdown": "articles/2026/06/2026-06-17-runway-mcp-chatgpt-video-image-generation-x.md"
+  },
+  {
     "title": "夏日芝麻醬拌麵食譜｜Facebook Reel 蘇大水的飯",
     "date": "2026-06-17",
     "source": "Facebook Reel",
