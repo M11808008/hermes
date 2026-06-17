@@ -1,0 +1,68 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>n8n 版 LLM Wiki｜用 Google Docs / Sheets 實作 Karpathy 預編譯知識庫</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>n8n 版 LLM Wiki｜用 Google Docs / Sheets 實作 Karpathy 預編譯知識庫</h1><h1>n8n 版 LLM Wiki｜用 Google Docs / Sheets 實作 Karpathy 預編譯知識庫</h1>
+<p>這個 GitHub 專案把 Andrej Karpathy 提出的「LLM Wiki」知識庫思路，改寫成一般人較容易上手的 **n8n + Google Docs + Google Sheets** 工作流。它不是把資料切碎後丟進向量資料庫，而是讓 LLM 先閱讀、整理、改寫並維護一組結構化 wiki 條目；查詢時先看目錄，再讀相關條目回答。</p>
+<h1>一句話摘要</h1>
+<p>LLM-Wiki-for-n8n 是一套可下載的 n8n 範本包：用 Google Sheets 當索引、Google Docs 當條目本體，透過 n8n 工作流把上傳文件轉成可持續更新的 LLM Wiki，適合作為「不想先架向量資料庫」的個人／團隊知識庫原型。</p>
+<h1>專案資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| GitHub repo | <a href="https://github.com/uncle6me-web/LLM-Wiki-for-n8n" target="_blank" rel="noopener">https://github.com/uncle6me-web/LLM-Wiki-for-n8n</a> |</p>
+<p>| 專案描述 | n8n 版 LLM Wiki — Karpathy 的 LLM Wiki 觀念，用 n8n + Google Docs + Google Sheets 實作的可下載版本 |</p>
+<p>| 建立時間 | 2026-06-17 |</p>
+<p>| 授權 | MIT |</p>
+<p>| GitHub 狀態 | 約 7 stars、1 fork、0 open issues（擷取時點，會隨時間變動） |</p>
+<p>| 主要內容 | `workflows/LLM_wiki.json`、`workflows/create_wiki_page.json`、`index.xlsx`、`wiki/*.docx` 範例 |</p>
+<p>| 使用前提 | n8n 實例、Google 帳號 / OAuth、LLM 金鑰；範例用 Google Gemini 節點，可替換成其他 LLM |</p>
+<h1>核心觀念：從 RAG「抽碎片」改成 Wiki「預編譯」</h1>
+<p>傳統 RAG 常見流程是：文件切塊、向量化、存進向量庫，使用者提問時找出幾段相似片段給 LLM 回答。這種方式部署快，但 LLM 常只看到片段，容易缺乏全局結構。</p>
+<p>LLM Wiki 的想法相反：先把原始資料交給 LLM 做「編輯」，讓它像維基百科編輯一樣整理主題、改寫內容、更新既有條目、建立目錄。之後查詢時，AI 先讀索引，再讀完整 wiki 條目回答。</p>
+<p>| 面向 | 傳統向量 RAG | LLM Wiki |</p>
+<p>|---|---|---|</p>
+<p>| 入庫方式 | 切塊 → embedding → 向量庫 | LLM 閱讀 → 整理改寫 → 更新 wiki |</p>
+<p>| 查詢方式 | 相似度檢索幾段 chunk | 先查 index，再讀相關條目全文 |</p>
+<p>| 知識形態 | 偏資料倉庫，越堆越多 | 偏知識庫，持續整理與重構 |</p>
+<p>| 優點 | 快、便宜、易擴大量 | 脈絡完整、可讀性高、可人工審查 |</p>
+<p>| 代價 | 結構感弱、可能漏掉全局 | 入庫 token 成本較高，需要維護更新邏輯 |</p>
+<h1>這個 n8n 版本怎麼做</h1>
+<p>專案把知識庫拆成兩種 Google 檔案：</p>
+<p>| 元件 | 角色 |</p>
+<p>|---|---|</p>
+<p>| Google Sheets / `index.xlsx` | 目錄。欄位包含 `topic`、`doc_id`、`keywords`、`summary`、`last_updated`，讓 AI 先判斷要讀哪篇 |</p>
+<p>| Google Docs / `wiki/*.docx` | wiki 條目本體。每個主題是一份 Doc，方便多人閱讀、手機查看與人工修訂 |</p>
+<p>| n8n 主工作流 `LLM_wiki.json` | 同時包含資料入庫與查詢兩條流程 |</p>
+<p>| n8n 子工作流 `create_wiki_page.json` | 建立新 Google Doc 並移到指定 wiki 資料夾，回傳 `doc_id` |</p>
+<p>資料入庫時，n8n 透過表單接收 `.md` / `.txt` 檔案，抽取文字後交給「知識寫入助手」。這個 Agent 的鐵律是先讀 index，再判斷主題是否已存在：已存在就 append / 更新既有 Google Doc 與 index；不存在就建立新 Doc、寫入內容，並在 index 新增一列。</p>
+<p>查詢時，n8n 的 chat trigger 會啟動「知識查詢助手」。它先讀 index 的 keywords / summary，選出相關 `doc_id`，再讀對應 Google Doc 全文回答；若 index 找不到，就應該老實回報 Wiki 尚未收錄。</p>
+<h1>對欒帥的實用價值</h1>
+<ul>
+<li>**可作為 AI 學習雷達的教學案例**：很好示範「不是所有知識庫都要從向量資料庫開始」，尤其適合課程中比較 RAG、agentic knowledge base、pre-compile knowledge 的差異。</li>
+<li>**適合非工程團隊導入**：Google Docs / Sheets 對一般團隊門檻低，內容可被人直接閱讀與修正，不像向量庫那樣黑盒。</li>
+<li>**可變成 n8n 教學範本**：同時涵蓋表單上傳、Google OAuth、Google Docs / Sheets、HTTP Request 子工作流、LLM Agent、Chat Trigger，是一個完整自動化教材。</li>
+<li>**很適合知識沉澱而非即時搜尋**：若目標是把課程資料、專案文件、FAQ、會議紀錄整理成「可持續維護的內部百科」，這個模式比單純聊天機器人更有長期價值。</li>
+<li>**可與 Hermes / 個人知識庫互補**：Hermes 可負責抓取、整理與部署靜態知識庫；n8n 版本則可作為 Google Workspace 團隊工作流的落地示範。</li>
+</ul>
+<h1>建議測試流程</h1>
+<p>| 步驟 | 做法 |</p>
+<p>|---|---|</p>
+<p>| 1. 匯入工作流 | 在 n8n 匯入 `workflows/LLM_wiki.json` 與 `workflows/create_wiki_page.json` |</p>
+<p>| 2. 建立 Google 檔案 | 將 `index.xlsx` 上傳到 Drive 並轉成 Google Sheets；建立 wiki 資料夾；可選擇上傳範例 `.docx` |</p>
+<p>| 3. 接 OAuth 與 LLM | Google Sheets / Docs / Drive 節點接 Google OAuth；LLM 節點接 Gemini 或替換成自己的模型 |</p>
+<p>| 4. 替換 webhook | 將範本內作者的 webhook URL 改成自己的 n8n webhook |</p>
+<p>| 5. 測試入庫 | 上傳一份 Markdown / TXT，確認 index 新增或更新、wiki 資料夾出現 Google Doc |</p>
+<p>| 6. 測試查詢 | 用 chat trigger 提問，觀察 Agent 是否先讀 index，再讀相關 Doc |</p>
+<p>| 7. 檢查成本與品質 | 記錄 token 消耗、條目品質、是否過度拆分主題、是否需要人工審稿 |</p>
+<h1>導入時要注意</h1>
+<ul>
+<li>**token 成本會比純向量檢索高**：因為入庫階段要讓 LLM 真正閱讀、整理、改寫，不只是便宜 embedding。</li>
+<li>**需要嚴格的 index discipline**：專案 README 強調「沒讀過 index 不准做任何事」，這點很重要；否則 Agent 容易重複建立條目或更新錯地方。</li>
+<li>**範本 webhook 必須替換**：README 提醒工作流內含作者的 webhook URL，上線前要改成自己的 n8n URL。</li>
+<li>**Google Docs 方便，但不是資料庫**：適合低門檻知識管理；若資料量、權限模型、版本稽核需求變大，仍可能需要更正式的儲存層。</li>
+<li>**需要人工審稿機制**：LLM 改寫後的 wiki 條目可讀性高，但也可能合併錯誤、誤解來源或遺漏細節，建議至少保留原始檔與審核流程。</li>
+</ul>
+<h1>適合與不適合的場景</h1>
+<p>| 適合 | 不適合 |</p>
+<p>|---|---|</p>
+<p>| 小型團隊知識庫、課程資料整理、FAQ、研究筆記、會議紀錄沉澱 | 超大規模文件庫、需要毫秒級查詢、嚴格權限隔離、必須保留逐字原文的法務資料 |</p>
+<p>| 想讓人可以直接閱讀 / 修改內容 | 只需要快速問答，不在乎知識庫可讀性 |</p>
+<p>| 想教 n8n + Google Workspace + LLM Agent 工作流 | 已有成熟向量資料庫與檢索評測 pipeline 的團隊 |</p>
+<h1>判讀限制</h1>
+<p>本文根據 GitHub API metadata、專案 README 與 Karpathy LLM Wiki 原始概念連結整理。GitHub stars、forks、issues 與 repo 檔案會隨時間變動；實際 n8n 節點版本、Google OAuth 權限、Gemini / 其他 LLM 節點設定，也需要以本機 n8n 匯入後的實際畫面為準。本文尚未實際匯入 n8n 執行工作流，因此不宣稱其範本在所有 n8n 版本都可直接無修改運行。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-18 · https://github.com/uncle6me-web/LLM-Wiki-for-n8n · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">LLM Wiki</span><span class="tag">n8n</span><span class="tag">Google Docs</span><span class="tag">Google Sheets</span><span class="tag">Knowledge Base</span><span class="tag">RAG</span><span class="tag">AI Agent</span><span class="tag">工作流自動化</span><span class="tag">個人知識庫</span><h3>原始連結</h3><p><a href="https://github.com/uncle6me-web/LLM-Wiki-for-n8n" target="_blank" rel="noopener">https://github.com/uncle6me-web/LLM-Wiki-for-n8n</a></p><p><a href="https://github.com/uncle6me-web/LLM-Wiki-for-n8n" target="_blank" rel="noopener">https://github.com/uncle6me-web/LLM-Wiki-for-n8n</a></p><p><a href="https://github.com/uncle6me-web/LLM-Wiki-for-n8n" target="_blank" rel="noopener">https://github.com/uncle6me-web/LLM-Wiki-for-n8n</a></p><p><a href="https://raw.githubusercontent.com/uncle6me-web/LLM-Wiki-for-n8n/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/uncle6me-web/LLM-Wiki-for-n8n/main/README.md</a></p><p><a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11ac484894" target="_blank" rel="noopener">https://gist.github.com/karpathy/442a6bf555914893e9891c11ac484894</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

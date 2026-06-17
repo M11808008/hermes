@@ -1,5 +1,38 @@
 [
   {
+    "title": "n8n 版 LLM Wiki｜用 Google Docs / Sheets 實作 Karpathy 預編譯知識庫",
+    "date": "2026-06-18",
+    "source": "https://github.com/uncle6me-web/LLM-Wiki-for-n8n",
+    "author": "uncle6me-web / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "LLM Wiki",
+      "n8n",
+      "Google Docs",
+      "Google Sheets",
+      "Knowledge Base",
+      "RAG",
+      "AI Agent",
+      "工作流自動化",
+      "個人知識庫"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/uncle6me-web/LLM-Wiki-for-n8n",
+      "https://github.com/uncle6me-web/LLM-Wiki-for-n8n",
+      "https://github.com/uncle6me-web/LLM-Wiki-for-n8n",
+      "https://raw.githubusercontent.com/uncle6me-web/LLM-Wiki-for-n8n/main/README.md",
+      "https://gist.github.com/karpathy/442a6bf555914893e9891c11ac484894"
+    ],
+    "excerpt": "LLM-Wiki-for-n8n 是一套可下載的 n8n 範本包：用 Google Sheets 當索引、Google Docs 當條目本體，透過 n8n 工作流把上傳文件轉成可持續更新的 LLM Wiki，適合作為「不想先架向量資料庫」的個人／團隊知識庫原型。",
+    "slug": "2026-06-18-llm-wiki-for-n8n-google-docs-sheets-knowledge-base",
+    "html": "articles/2026-06-18-llm-wiki-for-n8n-google-docs-sheets-knowledge-base.html",
+    "markdown": "articles/2026/06/2026-06-18-llm-wiki-for-n8n-google-docs-sheets-knowledge-base.md"
+  },
+  {
     "title": "Grok Imagine Video 1.5｜720p 約 25 秒生成的快速影像轉影片模型",
     "date": "2026-06-17",
     "source": "https://www.threads.com/@heroman1916/post/DZrGyJKE07a",
