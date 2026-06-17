@@ -35,6 +35,43 @@
     "markdown": "articles/2026/06/2026-06-18-bnext-seven-ai-model-monetization-agent-platform-war.md"
   },
   {
+    "title": "自製智慧寶寶攝影機架構｜OpenCV / YOLO、Firebase 與 LINE 告警的準爸爸工程專案",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/p/1CmAemx6x2/?mibextid=wwXIfr",
+    "author": "雲橫介 工程師 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "OpenCV",
+      "YOLO",
+      "Firebase",
+      "LINE Messaging API",
+      "MediaMTX",
+      "WebRTC",
+      "Python",
+      "Computer Vision",
+      "IoT",
+      "智慧寶寶攝影機",
+      "工程專案"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1CmAemx6x2/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/aigctw/permalink/3301340176716538/",
+      "https://www.facebook.com/share/p/1CmAemx6x2/?mibextid=wwXIfr",
+      "https://github.com/bluenviron/mediamtx",
+      "https://firebase.google.com/docs/functions",
+      "https://firebase.google.com/docs/firestore",
+      "https://developers.line.biz/en/docs/messaging-api/sending-messages/"
+    ],
+    "excerpt": "自製智慧寶寶攝影機的合理 MVP 是把「即時觀看」與「AI 偵測 / 告警」分成兩條線：影像線由攝影機 → 串流服務 → 手機觀看；資料線由 Python / OpenCV / YOLO 偵測事件 → Firebase 記錄狀態與截圖 → LINE 發出告警。",
+    "slug": "2026-06-18-diy-ai-baby-monitor-opencv-firebase-line-alert-architecture",
+    "html": "articles/2026-06-18-diy-ai-baby-monitor-opencv-firebase-line-alert-architecture.html",
+    "markdown": "articles/2026/06/2026-06-18-diy-ai-baby-monitor-opencv-firebase-line-alert-architecture.md"
+  },
+  {
     "title": "n8n 版 LLM Wiki｜用 Google Docs / Sheets 實作 Karpathy 預編譯知識庫",
     "date": "2026-06-18",
     "source": "https://github.com/uncle6me-web/LLM-Wiki-for-n8n",
@@ -66,6 +103,40 @@
     "slug": "2026-06-18-llm-wiki-for-n8n-google-docs-sheets-knowledge-base",
     "html": "articles/2026-06-18-llm-wiki-for-n8n-google-docs-sheets-knowledge-base.html",
     "markdown": "articles/2026/06/2026-06-18-llm-wiki-for-n8n-google-docs-sheets-knowledge-base.md"
+  },
+  {
+    "title": "NotebookLM 代理式研究圖書館流程｜從空白筆記本自動搜尋來源到衛教資料庫",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/p/1BnKWf9aSE/",
+    "author": "蘇秦 / AI教學運用交流 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "NotebookLM",
+      "Google AI Ultra",
+      "Gemini",
+      "Agentic Research",
+      "Deep Research",
+      "教學工具",
+      "研究工作流",
+      "衛教資料庫",
+      "Google Workspace"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1BnKWf9aSE/",
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-deep-research-file-types/",
+      "https://www.facebook.com/share/p/1BnKWf9aSE/",
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-deep-research-file-types/",
+      "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/",
+      "https://support.google.com/notebooklm/answer/16215270"
+    ],
+    "excerpt": "NotebookLM 正從「你先丟資料給我」轉向「你描述研究問題，我幫你找來源、建資料庫、再在來源範圍內整理輸出」的代理式研究工具；這對課程備課、衛教指南、文宣素材與主題研究非常有價值，但進階來源探索與輸出能力可能受 Google AI Ultra / Workspace 方案限制。",
+    "slug": "2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook",
+    "html": "articles/2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook.html",
+    "markdown": "articles/2026/06/2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook.md"
   },
   {
     "title": "Puti-AI Auto Transcribe NotebookLM｜把 FB / YouTube 影片自動轉成 NotebookLM 知識庫的 Agent 技能包",
