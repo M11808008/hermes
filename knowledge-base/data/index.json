@@ -1,5 +1,42 @@
 [
   {
+    "title": "AI 新聞室工具鏈｜8 款工具把記者會轉成快訊、短影音與多語發布",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH",
+    "author": "aicuttools / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "新聞工作流",
+      "AI Agent / 自動化",
+      "內容製作",
+      "短影音",
+      "多語在地化",
+      "Workflow Automation",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH",
+      "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH",
+      "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH",
+      "https://www.heygen.com/",
+      "https://www.fomofly.ai/",
+      "https://www.rask.ai/",
+      "https://runwayml.com/",
+      "https://www.veed.io/",
+      "https://www.opus.pro/",
+      "https://n8n.io/",
+      "https://www.perplexity.ai/"
+    ],
+    "excerpt": "這則貼文值得歸檔的重點不是單一工具推薦，而是「AI 新聞室流水線」：用 Perplexity 補背景、Fomofly / OpusClip 從長直播切短片、VEED 加字幕、Rask 做多語配音、Runway 補示意畫面、HeyGen 生成主播口播，再用 n8n 把上架與分發自動化。",
+    "slug": "2026-06-19-ai-newsroom-eight-tool-workflow-threads",
+    "html": "articles/2026-06-19-ai-newsroom-eight-tool-workflow-threads.html",
+    "markdown": "articles/2026/06/2026-06-19-ai-newsroom-eight-tool-workflow-threads.md"
+  },
+  {
     "title": "AI 智慧時代打造製造業永續競爭力｜製造業 AI Agent 與 n8n 實戰工作坊",
     "date": "2026-06-18",
     "source": "line-user-text",
