@@ -37,6 +37,41 @@
     "markdown": "articles/2026/06/2026-06-19-ai-newsroom-eight-tool-workflow-threads.md"
   },
   {
+    "title": "ComfyUI × Kling 3.0 Turbo｜官方 Partner Node 影片生成工作流上線",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@junyan5400/post/DZvgTzrEUpx",
+    "author": "junyan5400 / ComfyUI / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "ComfyUI",
+      "Kling 3.0",
+      "Kling 3.0 Turbo",
+      "AI Video",
+      "Partner Nodes",
+      "Workflow Automation",
+      "生成式影片",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@junyan5400/post/DZvgTzrEUpx",
+      "https://docs.comfy.org/tutorials/partner-nodes/kling/kling-3-0",
+      "https://www.threads.com/@junyan5400/post/DZvgTzrEUpx",
+      "https://docs.comfy.org/tutorials/partner-nodes/kling/kling-3-0",
+      "https://docs.comfy.org/built-in-nodes/KlingVideoNode",
+      "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_kling_v3_video.json",
+      "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/templates/api_kling_v3_video.json",
+      "https://www.comfy.org/"
+    ],
+    "excerpt": "Kling 3.0 進入 ComfyUI Partner Nodes 的意義，是把多鏡頭影片生成、主體一致性、音畫同步與解析度／比例控制納入節點式工作流；對重度創作者來說，它不只是「多一個影片模型」，而是可與圖片、提示詞、後製與自動化節點串接的影片生成模組。",
+    "slug": "2026-06-19-comfyui-kling-3-turbo-workflow-template",
+    "html": "articles/2026-06-19-comfyui-kling-3-turbo-workflow-template.html",
+    "markdown": "articles/2026/06/2026-06-19-comfyui-kling-3-turbo-workflow-template.md"
+  },
+  {
     "title": "AI 智慧時代打造製造業永續競爭力｜製造業 AI Agent 與 n8n 實戰工作坊",
     "date": "2026-06-18",
     "source": "line-user-text",

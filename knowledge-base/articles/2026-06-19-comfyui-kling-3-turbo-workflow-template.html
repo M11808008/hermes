@@ -1,0 +1,84 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ComfyUI × Kling 3.0 Turbo｜官方 Partner Node 影片生成工作流上線</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>ComfyUI × Kling 3.0 Turbo｜官方 Partner Node 影片生成工作流上線</h1><h1>ComfyUI × Kling 3.0 Turbo｜官方 Partner Node 影片生成工作流上線</h1>
+<p>來源為 Threads 帳號 junyan5400 的貼文，指出 ComfyUI 官方已公布可靈 Kling 3.0 Turbo / Kling 3.0 在 ComfyUI 正式上線，並附上 Comfy-Org 官方 workflow template。本文以 ComfyUI 官方 Kling 3.0 教學、KlingVideoNode 文件與 GitHub workflow template 作為穩定來源。</p>
+<h1>一句話摘要</h1>
+<p>Kling 3.0 進入 ComfyUI Partner Nodes 的意義，是把多鏡頭影片生成、主體一致性、音畫同步與解析度／比例控制納入節點式工作流；對重度創作者來說，它不只是「多一個影片模型」，而是可與圖片、提示詞、後製與自動化節點串接的影片生成模組。</p>
+<h1>Threads 貼文可確認資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 發布帳號 | junyan5400 |</p>
+<p>| Threads 顯示時間 | 約 1 小時前 |</p>
+<p>| 主張 | Kling 3.0 Turbo 已在 ComfyUI 正式上線 |</p>
+<p>| 貼文提到特色 | 生成速度更快、品質更穩定、Kling 系列最快生成速度、提示詞遵從度、音畫同步、性價比 |</p>
+<p>| 官方建議 | 更新至最新穩定版本進行體驗 |</p>
+<p>| 附連結 | Comfy-Org/workflow_templates 的 api_kling_v3_video.json |</p>
+<h1>官方文件補強</h1>
+<p>ComfyUI 官方 Kling 3.0 教學頁將 Kling 3.0 描述為可在 ComfyUI Partner Nodes 中使用的多模態生成系統，涵蓋 Kling Video 3.0、Kling Video 3.0 Omni、Kling Image 3.0 等能力。官方頁強調的重點包含：</p>
+<ul>
+<li>Multi-shot generation：可做多段鏡頭／分鏡式影片生成。</li>
+<li>Locked subject consistency：在鏡頭移動與場景演化中維持角色或物件一致性。</li>
+<li>Native audio with character awareness：支援多語音訊、唇形同步與表情對齊。</li>
+<li>Native text rendering：能處理廣告、UI 場景與品牌內容中的畫面文字。</li>
+<li>需要正確登入並使用 Partner Nodes；部分功能可能依 ComfyUI 穩定版更新節奏而不同。</li>
+</ul>
+<p>KlingVideoNode 官方文件則顯示，該節點可生成 Kling V3 影片，並提供 multi-shot、generate_audio、model、resolution、aspect_ratio、seed、start_frame 等參數。</p>
+<h1>官方 workflow template 結構</h1>
+<p>Comfy-Org 官方 template `api_kling_v3_video.json` 目前包含三個核心節點：</p>
+<p>| 節點 | 作用 |</p>
+<p>|---|---|</p>
+<p>| LoadImage | 載入起始圖片，範例檔名為 boxing.png |</p>
+<p>| KlingVideoNode | 主要影片生成節點，使用 `kling-v3` 模型 |</p>
+<p>| SaveVideo | 將輸出影片保存到 `video/ComfyUI` |</p>
+<p>KlingVideoNode 範例參數：</p>
+<p>| 參數 | 範例值 / 意義 |</p>
+<p>|---|---|</p>
+<p>| multi-shot | `2 storyboards`，表示用兩段分鏡提示詞生成影片 |</p>
+<p>| prompt 1 | 拳擊比賽近距離鏡頭、低角度、淺景深、汗水與表情細節 |</p>
+<p>| duration 1 | 2 |</p>
+<p>| prompt 2 | 兩位拳手交換重拳，鏡頭從中景拉到寬景，戲劇化慢動作 |</p>
+<p>| duration 2 | 3 |</p>
+<p>| generate_audio | true |</p>
+<p>| model | `kling-v3` |</p>
+<p>| resolution | `1080p` |</p>
+<p>| aspect_ratio | `16:9` |</p>
+<p>這個 template 比較像「官方示範工作流」：重點是展示如何把圖片起點、Kling V3 影片節點與影片輸出串起來，而不是一鍵完成所有商業後製。</p>
+<h1>欒帥可採用的實務流程</h1>
+<ul>
+<li>先更新 ComfyUI 到最新穩定版，避免 Partner Node 或前端版本不足。</li>
+<li>從官方 template 匯入 `api_kling_v3_video.json`，先確認 `KlingVideoNode` 是否可正常載入。</li>
+<li>將起始圖替換成自己的課程視覺、產品圖、角色設定圖或品牌場景圖。</li>
+<li>把 prompt 拆成分鏡，而不是寫一段抽象描述：每段都要包含角色、場景、動作、鏡頭運動、節奏與聲音需求。</li>
+<li>先用 720p 或短秒數測試 prompt，再升到 1080p 或更高解析度，避免一次燒掉太多額度。</li>
+<li>影片生成後接上字幕、剪輯、封面、轉檔或社群發布工作流，才會形成真正可用的內容生產線。</li>
+</ul>
+<h1>適合的使用場景</h1>
+<p>| 場景 | 為什麼適合 Kling 3.0 in ComfyUI |</p>
+<p>|---|---|</p>
+<p>| 課程開場動畫 | 可從講師／課程主視覺做出短片段，接到剪輯與字幕流程 |</p>
+<p>| 產品展示 B-roll | 用起始圖片控制產品外觀，再用分鏡 prompt 設計鏡頭 |</p>
+<p>| AI 工具教學素材 | 可快速生成「概念示意」與「未來工作流」畫面 |</p>
+<p>| 品牌短影音 | 透過 16:9 / 9:16 / 1:1 比例做不同平台版本 |</p>
+<p>| 多鏡頭敘事測試 | multi-shot 比單段 prompt 更接近分鏡腳本思維 |</p>
+<h1>不適合直接使用的情境</h1>
+<ul>
+<li>需要絕對事實影像的新聞或紀錄片場景：AI 生成畫面必須標示為示意。</li>
+<li>需要完整長片自動產製：KlingVideoNode 更適合生成短片段或 B-roll，再交由剪輯層整合。</li>
+<li>角色、文字、品牌 logo 必須零錯誤的商業素材：仍需多輪測試與人工修正。</li>
+<li>未確認費用與額度前的大量批次生成：Partner Node / Cloud / API 方案的費用與限制需先確認。</li>
+</ul>
+<h1>Prompt 寫法建議</h1>
+<p>與其寫「做一支高級的拳擊影片」，更適合寫成：</p>
+<ul>
+<li>第一鏡：場景、人物、服裝、光線、鏡頭距離與運動。</li>
+<li>第二鏡：動作升級、鏡頭轉換、節奏、慢動作或聲音需求。</li>
+<li>每段都要明確描述畫面焦點，避免模型在多鏡頭中漂移。</li>
+<li>若使用起始圖，prompt 應尊重起始圖中的主體，不要要求完全衝突的造型。</li>
+</ul>
+<h1>技術判讀與注意事項</h1>
+<ul>
+<li>官方 template 是 ComfyUI 工作流格式，適合匯入前端；若要透過 API 腳本直接執行，仍需確認是否為 API 格式或重新從 ComfyUI 匯出 API 格式。</li>
+<li>workflow template 的 GitHub commit 顯示該檔案由 `Add new Kling templates` 加入；貼文所說的「剛剛公布」更可能指 ComfyUI 文件／穩定版與社群公告節奏，而不是該 JSON 檔案首次出現在 GitHub 的時間。</li>
+<li>KlingVideoNode 文件列出 `4k`、`1080p`、`720p` 與 `16:9`、`9:16`、`1:1` 等選項，但實際可用性可能受帳號、地區、額度、模型版本與 ComfyUI 版本影響。</li>
+<li>若使用 Comfy Cloud 或 Partner Nodes，需注意登入、API key、付費方案、佇列與輸出下載限制。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則更新值得高優先保存，因為 ComfyUI 正從「本地節點式生圖工具」擴展成整合商用影片模型、雲端 API 與多模型工作流的創作中樞。Kling 3.0 進入官方 Partner Nodes 後，欒帥可以把影片生成納入可重用的節點圖：前端素材、分鏡 prompt、影片生成、字幕、轉檔、發布與自動化可以逐步接成一條可管理的內容產線。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://www.threads.com/@junyan5400/post/DZvgTzrEUpx · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">ComfyUI</span><span class="tag">Kling 3.0</span><span class="tag">Kling 3.0 Turbo</span><span class="tag">AI Video</span><span class="tag">Partner Nodes</span><span class="tag">Workflow Automation</span><span class="tag">生成式影片</span><span class="tag">Threads</span><h3>原始連結</h3><p><a href="https://www.threads.com/@junyan5400/post/DZvgTzrEUpx" target="_blank" rel="noopener">https://www.threads.com/@junyan5400/post/DZvgTzrEUpx</a></p><p><a href="https://docs.comfy.org/tutorials/partner-nodes/kling/kling-3-0" target="_blank" rel="noopener">https://docs.comfy.org/tutorials/partner-nodes/kling/kling-3-0</a></p><p><a href="https://www.threads.com/@junyan5400/post/DZvgTzrEUpx" target="_blank" rel="noopener">https://www.threads.com/@junyan5400/post/DZvgTzrEUpx</a></p><p><a href="https://docs.comfy.org/tutorials/partner-nodes/kling/kling-3-0" target="_blank" rel="noopener">https://docs.comfy.org/tutorials/partner-nodes/kling/kling-3-0</a></p><p><a href="https://docs.comfy.org/built-in-nodes/KlingVideoNode" target="_blank" rel="noopener">https://docs.comfy.org/built-in-nodes/KlingVideoNode</a></p><p><a href="https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_kling_v3_video.json" target="_blank" rel="noopener">https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_kling_v3_video.json</a></p><p><a href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/templates/api_kling_v3_video.json" target="_blank" rel="noopener">https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/templates/api_kling_v3_video.json</a></p><p><a href="https://www.comfy.org/" target="_blank" rel="noopener">https://www.comfy.org/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
