@@ -1,5 +1,40 @@
 [
   {
+    "title": "AI 智慧時代打造製造業永續競爭力｜製造業 AI Agent 與 n8n 實戰工作坊",
+    "date": "2026-06-18",
+    "source": "line-user-text",
+    "author": "欒帥 Luarn-Pin / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "製造業",
+      "AI Agent",
+      "n8n",
+      "AI Skill",
+      "智慧製造",
+      "SOP",
+      "企業知識庫",
+      "自動化流程",
+      "工作坊",
+      "臺科大"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "line://text/ai-manufacturing-n8n-agent-workshop-2026-06-26",
+      "line://text/ai-manufacturing-n8n-agent-workshop-2026-06-26",
+      "https://www.tigerai.info/",
+      "https://community.n8n.io/t/2026-n8n-taipei-first-meetup-a-massive-success/260173",
+      "https://www.ftis.org.tw/active/csts1150622305217.htm",
+      "https://money.udn.com/money/story/5723/9128930?from=edn_related_storybottom"
+    ],
+    "excerpt": "這場工作坊的核心價值在於把「AI Skill 企業知識結構化」、「AI Agent 任務型代理」與「n8n 低程式碼自動化流程」整合成製造業可落地的研發、營運、報表與 SOP 執行架構。",
+    "slug": "2026-06-18-ai-manufacturing-n8n-agent-workshop-ntust-garage",
+    "html": "articles/2026-06-18-ai-manufacturing-n8n-agent-workshop-ntust-garage.html",
+    "markdown": "articles/2026/06/2026-06-18-ai-manufacturing-n8n-agent-workshop-ntust-garage.md"
+  },
+  {
     "title": "AI 瓦基第二大腦｜PACE 思考行動地圖與個人 AI 工作流課程",
     "date": "2026-06-18",
     "source": "https://www.facebook.com/share/r/16vRW72k9S/?mibextid=wwXIfr",
