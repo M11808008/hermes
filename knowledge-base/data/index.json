@@ -273,6 +273,40 @@
     "markdown": "articles/2026/06/2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook.md"
   },
   {
+    "title": "NUS Electrical Engineering Minor｜跨域學生的電機素養與 IoT / 智慧製造職涯路徑",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/p/17fEvbNA7e/?mibextid=wwXIfr",
+    "author": "NUS Electrical and Computer Engineering / NUS College of Design and Engineering / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "NUS",
+      "Electrical Engineering",
+      "跨域教育",
+      "IoT",
+      "Embedded Systems",
+      "Smart Manufacturing",
+      "Mechatronics",
+      "Healthcare Technology",
+      "課程設計",
+      "高等教育"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/17fEvbNA7e/?mibextid=wwXIfr",
+      "https://cde.nus.edu.sg/ece/minor-in-electrical-engineering/",
+      "https://www.facebook.com/share/p/17fEvbNA7e/?mibextid=wwXIfr",
+      "https://cde.nus.edu.sg/ece/minor-in-electrical-engineering/",
+      "https://tinyurl.com/minor-in-ee"
+    ],
+    "excerpt": "當 AI、感測器、嵌入式系統、能源與物理世界整合越來越深，非電機背景學生也需要基礎電機素養；NUS 這個 minor 把 circuits、signals、sensors、embedded systems、energy systems 打包成跨域學生可修的 20 Units 結構，可視為「Physical AI / 智慧製造 / IoT 時代的工程通識」案例。",
+    "slug": "2026-06-18-nus-minor-electrical-engineering-cross-disciplinary-technology-literacy",
+    "html": "articles/2026-06-18-nus-minor-electrical-engineering-cross-disciplinary-technology-literacy.html",
+    "markdown": "articles/2026/06/2026-06-18-nus-minor-electrical-engineering-cross-disciplinary-technology-literacy.md"
+  },
+  {
     "title": "Puti-AI Auto Transcribe NotebookLM｜把 FB / YouTube 影片自動轉成 NotebookLM 知識庫的 Agent 技能包",
     "date": "2026-06-18",
     "source": "https://www.facebook.com/share/p/18vR8AsYt2/",
