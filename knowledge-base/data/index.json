@@ -1,5 +1,37 @@
 [
   {
+    "title": "AI 瓦基第二大腦｜PACE 思考行動地圖與個人 AI 工作流課程",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/r/16vRW72k9S/?mibextid=wwXIfr",
+    "author": "閱讀前哨站瓦基 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI 工作流",
+      "第二大腦",
+      "知識管理",
+      "寫作",
+      "PACE",
+      "AI 協作",
+      "課程"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/16vRW72k9S/?mibextid=wwXIfr",
+      "https://sat.cool/course/192",
+      "https://www.facebook.com/share/r/16vRW72k9S/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1541073554214225",
+      "https://sat.cool/course/192",
+      "https://www.youtube.com/watch?v=XKCf_fFU2D8"
+    ],
+    "excerpt": "這門課的重點不是追逐最新 AI 工具，而是把個人觀點、任務脈絡、知識管理與輸出流程系統化，讓 AI 變成能持續升級的第二大腦與協作工作流。",
+    "slug": "2026-06-18-ai-waki-second-brain-pace-ai-workflow-course",
+    "html": "articles/2026-06-18-ai-waki-second-brain-pace-ai-workflow-course.html",
+    "markdown": "articles/2026/06/2026-06-18-ai-waki-second-brain-pace-ai-workflow-course.md"
+  },
+  {
     "title": "數位時代圖解 7 大 AI 模型變現力｜ChatGPT、Gemini、Claude 到 Grok 的代理入口戰",
     "date": "2026-06-18",
     "source": "https://www.facebook.com/share/p/1DSarRfM4E/",
@@ -33,6 +65,39 @@
     "slug": "2026-06-18-bnext-seven-ai-model-monetization-agent-platform-war",
     "html": "articles/2026-06-18-bnext-seven-ai-model-monetization-agent-platform-war.html",
     "markdown": "articles/2026/06/2026-06-18-bnext-seven-ai-model-monetization-agent-platform-war.md"
+  },
+  {
+    "title": "BR 電商 AI 反擊計畫 2｜用 AI 升級蝦皮選品、廣告與商品圖片",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/r/1D27jpUuQR/?mibextid=wwXIfr",
+    "author": "Br電商 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "電商",
+      "蝦皮",
+      "商品圖片",
+      "AI 廣告素材",
+      "AI 文案",
+      "選品",
+      "行銷轉換",
+      "課程"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1D27jpUuQR/?mibextid=wwXIfr",
+      "https://brec.kaik.io/courses/2025",
+      "https://www.facebook.com/share/r/1D27jpUuQR/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2045841132945331",
+      "https://brec.kaik.io/courses/2025",
+      "https://line.me/R/ti/p/@889ggikp"
+    ],
+    "excerpt": "對蝦皮／中小電商賣家來說，AI 影像與文案工具的價值不只是「生成漂亮圖片」，而是把選品、商品圖、廣告素材、文案與淨利控管放在同一條轉換率流程裡檢視。",
+    "slug": "2026-06-18-br-ecommerce-ai-shopee-ads-product-image-workshop",
+    "html": "articles/2026-06-18-br-ecommerce-ai-shopee-ads-product-image-workshop.html",
+    "markdown": "articles/2026/06/2026-06-18-br-ecommerce-ai-shopee-ads-product-image-workshop.md"
   },
   {
     "title": "自製智慧寶寶攝影機架構｜OpenCV / YOLO、Firebase 與 LINE 告警的準爸爸工程專案",
