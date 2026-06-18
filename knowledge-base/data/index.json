@@ -100,6 +100,40 @@
     "markdown": "articles/2026/06/2026-06-18-br-ecommerce-ai-shopee-ads-product-image-workshop.md"
   },
   {
+    "title": "Codex AI Agent 代理人教學簡報｜從問 AI 到指揮 AI 助理",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/p/1GcB5Se8wL/?mibextid=wwXIfr",
+    "author": "呂聰賢 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Codex",
+      "AI Agent",
+      "coding agent",
+      "AGENTS.md",
+      "本地檔案",
+      "自動化流程",
+      "教學簡報",
+      "OpenAI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1GcB5Se8wL/?mibextid=wwXIfr",
+      "https://developers.openai.com/codex/cli",
+      "https://www.facebook.com/share/p/1GcB5Se8wL/?mibextid=wwXIfr",
+      "https://developers.openai.com/codex/cli",
+      "https://developers.openai.com/codex/quickstart",
+      "https://developers.openai.com/codex/guides/agents-md",
+      "https://github.com/openai/codex"
+    ],
+    "excerpt": "Codex 的教學重點不只是「讓 AI 寫程式」，而是理解 agentic workflow：它能在指定專案資料夾中讀檔、改檔、執行命令、根據 AGENTS.md 延續專案規則，並在使用者授權與驗證下完成整理、開發、測試與部署任務。",
+    "slug": "2026-06-18-codex-ai-agent-beginner-teaching-slides-facebook",
+    "html": "articles/2026-06-18-codex-ai-agent-beginner-teaching-slides-facebook.html",
+    "markdown": "articles/2026/06/2026-06-18-codex-ai-agent-beginner-teaching-slides-facebook.md"
+  },
+  {
     "title": "自製智慧寶寶攝影機架構｜OpenCV / YOLO、Firebase 與 LINE 告警的準爸爸工程專案",
     "date": "2026-06-18",
     "source": "https://www.facebook.com/share/p/1CmAemx6x2/?mibextid=wwXIfr",

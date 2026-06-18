@@ -1,0 +1,56 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Codex AI Agent 代理人教學簡報｜從問 AI 到指揮 AI 助理</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Codex AI Agent 代理人教學簡報｜從問 AI 到指揮 AI 助理</h1><h1>Codex AI Agent 代理人教學簡報｜從問 AI 到指揮 AI 助理</h1>
+<p>來源是呂聰賢老師的 Facebook 貼文「Codex AI Agent 代理人教學簡報」。貼文搭配多張簡報圖，主軸是把初學者從「問 AI 問題」帶到「指揮 AI 助理執行專案任務」。本文以 Facebook 貼文作為發現來源，並用 OpenAI Codex 官方文件與 GitHub repo 補強可驗證資訊。</p>
+<h1>一句話摘要</h1>
+<p>Codex 的教學重點不只是「讓 AI 寫程式」，而是理解 agentic workflow：它能在指定專案資料夾中讀檔、改檔、執行命令、根據 AGENTS.md 延續專案規則，並在使用者授權與驗證下完成整理、開發、測試與部署任務。</p>
+<h1>貼文簡報可讀到的重點</h1>
+<p>| 簡報頁面 | 主題 | 可保存重點 |</p>
+<p>|---|---|---|</p>
+<p>| Page 1 | 40 分鐘學會 Codex，零基礎終極教程 | 從「問 AI」升級為「指揮 AI 助理」；課程目標含理解 Codex 定位、讀取檔案／執行任務、專案流程、自動化與工具整合、AI Agent 思維 |</p>
+<p>| Page 2 | Codex 是什麼 | Codex 是可進入專案資料夾、讀取檔案、執行指令、修改內容、協助完成任務的 AI 工作助理；核心能力包含理解專案脈絡、延續規則、執行命令與工具整合、協助開發測試部署 |</p>
+<p>| Page 3 | Codex 與 ChatGPT 差異 | ChatGPT 偏對話、文案與概念解釋；Codex 偏操作專案、整理檔案、修改程式與執行流程；專案規則可透過 AGENTS.md 管理 |</p>
+<p>| Page 4 | 安裝與開始使用 | 基本流程：開啟 Codex、用 ChatGPT 帳號登入、選擇電腦資料夾或 Git repository、建立第一個任務、確認讀取／執行／修改權限、檢查輸出並持續調整 |</p>
+<p>| Page 5 | 本地檔案操作 | 可用於批次重新命名照片、依內容分類 Word/PDF/圖片、整理課程素材、產生檔案清單與 Excel/CSV 報表 |</p>
+<h1>官方資訊補強</h1>
+<p>| 來源 | 確認內容 |</p>
+<p>|---|---|</p>
+<p>| OpenAI Codex CLI docs | Codex CLI 是可在本機 terminal 執行的 coding agent，能在選定資料夾中讀取、修改與執行程式碼；ChatGPT Plus / Pro / Business / Edu / Enterprise 方案包含 Codex 使用權限，亦可使用 API key |</p>
+<p>| OpenAI Quickstart | Codex 預設以 Agent mode 開始，可讀檔、執行命令、在專案資料夾寫入變更；首次使用需以 ChatGPT 帳號或 API key 登入，並選擇 project folder |</p>
+<p>| AGENTS.md 官方指南 | Codex 會在開始工作前讀取 AGENTS.md，讓全域與專案層級規則形成指令鏈；這適合保存 repo 慣例、測試指令、風格規範與工作流程 |</p>
+<p>| GitHub openai/codex | 專案描述為「Lightweight coding agent that runs in your terminal」，主要語言 Rust，Apache-2.0 license；GitHub API 查詢時約 91.8k stars、13.5k forks、7.2k open issues（2026-06-18 快照） |</p>
+<h1>對欒帥的實用價值</h1>
+<ul>
+<li>**很適合教學入門**：這份簡報把 Codex 從「寫程式工具」重新定位成「可被指揮的專案助理」，適合作為 AI Agent 課程第一堂的概念框架。</li>
+<li>**能連到 Hermes 工作流**：Codex 的 AGENTS.md 與 Hermes skill / memory / tools 有相似治理概念，可用來說明「規則、工具、權限、驗證」是 Agent 落地的四個核心。</li>
+<li>**可直接變成示範任務**：例如整理課程素材、批次重新命名、產生檔案清單、修 README、跑測試、建立小工具。</li>
+<li>**有助於降低初學者恐懼**：從本地資料夾整理開始，比一開始就做大型程式專案更容易體驗 agentic workflow。</li>
+</ul>
+<h1>建議教學示範流程</h1>
+<p>| 階段 | 示範任務 | 驗證方式 |</p>
+<p>|---|---|---|</p>
+<p>| 1. 只讀探索 | 請 Codex 說明這個資料夾有哪些檔案、用途與可能重複項目 | 不改檔，只輸出清單與建議 |</p>
+<p>| 2. 小範圍整理 | 只針對 5 個測試檔案改名，先不要動全部資料 | 人工確認命名規則正確 |</p>
+<p>| 3. 建立規則 | 寫一份 AGENTS.md，規定檔名用連字號、不得用底線、變更前先列計畫 | 再次執行時檢查 Codex 是否遵守 |</p>
+<p>| 4. 自動化輸出 | 產生 CSV 檔案清單或 Markdown 索引 | 比對檔案數與欄位是否正確 |</p>
+<p>| 5. 專案任務 | 在 Git repo 中修一個小 bug 或補 README | git diff、測試、人工 review |</p>
+<h1>欒帥可複用的入門 Prompt</h1>
+<p>```text</p>
+<p>請先不要修改任何檔案。請讀取這個專案資料夾，完成三件事：</p>
+<ul>
+<li>用表格整理主要檔案與資料夾用途。</li>
+<li>找出可能需要整理、重新命名或補文件的地方。</li>
+<li>提出一個最小安全修改計畫，列出會改哪些檔案、為什麼、如何驗證。</li>
+</ul>
+<p>等我確認後，才可以開始修改。</p>
+<p>```</p>
+<h1>導入提醒</h1>
+<ul>
+<li>**先選對工作資料夾**：Codex 能操作的是你授權的 project folder；不要在含敏感資料或未備份資料夾中做初學測試。</li>
+<li>**先要求計畫再執行**：初學者應先用「請先不要修改」建立安全邊界。</li>
+<li>**用 Git 或備份保護現場**：程式專案用 Git；一般檔案整理則先複製一份 sample folder。</li>
+<li>**AGENTS.md 是團隊規則，不是聊天記憶**：穩定規範應放在 repo 裡，避免靠臨時 prompt 反覆提醒。</li>
+<li>**驗證比生成重要**：每個任務都要有檔案清單、測試、diff、截圖或輸出報表作為完成證據。</li>
+</ul>
+<h1>與既有 Codex 筆記的關係</h1>
+<p>知識庫已有「OpenAI Codex 團隊成員分享：11 個技巧」一文，偏向進階工作流、durable threads、steering、queue、skills、shared memory。本文則聚焦初學者教學簡報與第一堂課設計，兩者可搭配使用：先用本文建立基本概念，再用 11 個技巧擴展到長期任務與團隊流程。</p>
+<h1>判讀限制</h1>
+<p>Facebook 貼文可直接讀到前 5 張簡報的 OCR/alt 文字，後續圖片在未登入狀態下未完整展開；因此本文不逐頁聲稱完整 10 頁內容，而是以可見簡報文字、貼文標題、OpenAI 官方文件與 GitHub repo 補強整理。Codex 的方案權限、安裝方式、CLI flags、記憶與安全權限會持續更新，正式教學前應再次核對 OpenAI Codex docs 與本機 `codex --version` / `codex login status`。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-18 · https://www.facebook.com/share/p/1GcB5Se8wL/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Codex</span><span class="tag">AI Agent</span><span class="tag">coding agent</span><span class="tag">AGENTS.md</span><span class="tag">本地檔案</span><span class="tag">自動化流程</span><span class="tag">教學簡報</span><span class="tag">OpenAI</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1GcB5Se8wL/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1GcB5Se8wL/?mibextid=wwXIfr</a></p><p><a href="https://developers.openai.com/codex/cli" target="_blank" rel="noopener">https://developers.openai.com/codex/cli</a></p><p><a href="https://www.facebook.com/share/p/1GcB5Se8wL/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1GcB5Se8wL/?mibextid=wwXIfr</a></p><p><a href="https://developers.openai.com/codex/cli" target="_blank" rel="noopener">https://developers.openai.com/codex/cli</a></p><p><a href="https://developers.openai.com/codex/quickstart" target="_blank" rel="noopener">https://developers.openai.com/codex/quickstart</a></p><p><a href="https://developers.openai.com/codex/guides/agents-md" target="_blank" rel="noopener">https://developers.openai.com/codex/guides/agents-md</a></p><p><a href="https://github.com/openai/codex" target="_blank" rel="noopener">https://github.com/openai/codex</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
