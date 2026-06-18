@@ -239,6 +239,40 @@
     "markdown": "articles/2026/06/2026-06-18-iris-creator-lab-ai-avatar-digital-product-marketing-course.md"
   },
   {
+    "title": "LitVideo 雙引擎｜Seedance 2.0 與 Kling 3.0 的 AI 影片工作流分工",
+    "date": "2026-06-18",
+    "source": "https://www.facebook.com/share/v/14gGU3JcE8g/",
+    "author": "AI Video / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Video",
+      "LitVideo",
+      "LitMedia",
+      "Seedance 2.0",
+      "Kling 3.0",
+      "生成式影片",
+      "內容製作",
+      "多模型工作流",
+      "影片行銷"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/14gGU3JcE8g/",
+      "https://www.litmedia.ai/resource-ai-video/kling-3.0-features-and-comparison/",
+      "https://www.facebook.com/share/v/14gGU3JcE8g/",
+      "https://www.facebook.com/reel/998159832636832/",
+      "https://www.litmedia.ai/ai-video-generator/",
+      "https://www.litmedia.ai/resource-ai-video/kling-3.0-features-and-comparison/"
+    ],
+    "excerpt": "LitVideo 的價值不只是提供單一 AI 影片模型，而是把 Seedance 2.0、Kling 3.0、PixVerse、Vidu、Jimeng 等模型收進同一個多模型創作介面；對創作者來說，重點是依照任務把「快速社群素材」與「可控敘事影片」分流，而不是盲目追逐單一最新模型。",
+    "slug": "2026-06-18-litvideo-seedance-2-kling-3-dual-engine-ai-video-workflow",
+    "html": "articles/2026-06-18-litvideo-seedance-2-kling-3-dual-engine-ai-video-workflow.html",
+    "markdown": "articles/2026/06/2026-06-18-litvideo-seedance-2-kling-3-dual-engine-ai-video-workflow.md"
+  },
+  {
     "title": "n8n 版 LLM Wiki｜用 Google Docs / Sheets 實作 Karpathy 預編譯知識庫",
     "date": "2026-06-18",
     "source": "https://github.com/uncle6me-web/LLM-Wiki-for-n8n",
