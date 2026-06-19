@@ -265,6 +265,43 @@
     "markdown": "articles/2026/06/2026-06-19-local-ai-transcriber-macbook-pro-mlx-whisper-server.md"
   },
   {
+    "title": "NVIDIA Build｜一站式試用 NIM 模型、Agentic Skills 與 AI Blueprints 的開發平台",
+    "date": "2026-06-19",
+    "source": "https://tools.wingzero.tw/article/sn/3951",
+    "author": "DeTools 工具翼零 / NVIDIA / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "NVIDIA",
+      "NVIDIA Build",
+      "NIM",
+      "AI Agent",
+      "Agentic Skills",
+      "Blueprints",
+      "RAG",
+      "推理服務",
+      "開發平台",
+      "MLOps"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://tools.wingzero.tw/article/sn/3951",
+      "https://build.nvidia.com/",
+      "https://tools.wingzero.tw/article/sn/3951",
+      "https://build.nvidia.com/",
+      "https://build.nvidia.com/models",
+      "https://build.nvidia.com/skills",
+      "https://build.nvidia.com/blueprints",
+      "https://docs.api.nvidia.com/"
+    ],
+    "excerpt": "NVIDIA Build 是 NVIDIA AI 生態的「模型試用 + 推理 API + Agent 能力 + 應用藍圖」入口：開發者可以先在線上測試 Nemotron、DeepSeek、Cosmos 等推理 endpoint，探索 Agentic Skills 與 Blueprints，再把成熟流程延伸到 NIM、GPU 與企業部署環境。",
+    "slug": "2026-06-19-nvidia-build-nim-agentic-skills-blueprints-developer-platform",
+    "html": "articles/2026-06-19-nvidia-build-nim-agentic-skills-blueprints-developer-platform.html",
+    "markdown": "articles/2026/06/2026-06-19-nvidia-build-nim-agentic-skills-blueprints-developer-platform.md"
+  },
+  {
     "title": "OpenAI Codex OAuth｜OpenClaw 與 Hermes 可用的 ChatGPT 訂閱帳號認證教學",
     "date": "2026-06-19",
     "source": "https://www.koc.com.tw/archives/641373",

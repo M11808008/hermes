@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NVIDIA Build｜一站式試用 NIM 模型、Agentic Skills 與 AI Blueprints 的開發平台</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>NVIDIA Build｜一站式試用 NIM 模型、Agentic Skills 與 AI Blueprints 的開發平台</h1><h1>NVIDIA Build｜一站式試用 NIM 模型、Agentic Skills 與 AI Blueprints 的開發平台</h1>
+<p>來源是 DeTools 工具翼零介紹 NVIDIA Build 的文章。原文將 NVIDIA Build 定位為整合 LLM、視覺模型、NIM 微服務、Agent 開發工具與企業部署支援的生成式 AI 開發入口。本文保留 DeTools 作為發現來源，並以 NVIDIA Build 官方頁面作為 canonical source。</p>
+<h1>一句話摘要</h1>
+<p>NVIDIA Build 是 NVIDIA AI 生態的「模型試用 + 推理 API + Agent 能力 + 應用藍圖」入口：開發者可以先在線上測試 Nemotron、DeepSeek、Cosmos 等推理 endpoint，探索 Agentic Skills 與 Blueprints，再把成熟流程延伸到 NIM、GPU 與企業部署環境。</p>
+<h1>DeTools 原文重點</h1>
+<p>| 面向 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 文章標題 | NVIDIA Build：一站式體驗 NVIDIA AI 模型、Agent 與推理服務的開發平台 |</p>
+<p>| 發布時間 | 2026-06-19 10:51:10 |</p>
+<p>| 指向網址 | <a href="https://build.nvidia.com/" target="_blank" rel="noopener">https://build.nvidia.com/</a> |</p>
+<p>| 定位 | AI Model Hub 與開發入口網站 |</p>
+<p>| 核心技術 | NIM、AI Foundation Models、Agent 工具、RAG、推理 API、GPU 部署、模型評測 |</p>
+<p>| 適用對象 | AI 應用開發者、Agent 團隊、企業 AI 團隊、MLOps、RAG 與多模態研究者 |</p>
+<h1>官方頁面確認資訊</h1>
+<p>NVIDIA Build 官方首頁目前呈現的主要區塊包括：</p>
+<p>| 官方區塊 | 觀察到的內容 | 實務含義 |</p>
+<p>|---|---|---|</p>
+<p>| Use Inference Endpoints | Free inference with leading models | 先在線上試模型與推理 API，降低模型選型成本 |</p>
+<p>| Models | Nemotron 3 Ultra、DeepSeek V4 Pro、Cosmos3 Nano Reasoner、Step 3.7 Flash 等 | Build 是多模型入口，不只展示 NVIDIA 自家模型 |</p>
+<p>| Use Agentic Skills | Pre-built capabilities your agent can call | 把可被 Agent 調用的能力整理成 skills 類型資源 |</p>
+<p>| Skills 分類 | AI and Machine Learning、Accelerated Computing、Physical AI、Developer Tools | 對應軟體 AI、加速運算、實體 AI 與開發工具場景 |</p>
+<p>| Blueprints | workflows and code samples to build AI applications | 提供從零建構 AI 應用的工作流與程式範例 |</p>
+<p>| GPUs / DGX Station | step-by-step playbooks、NemoClaw | 從雲端試用延伸到 NVIDIA GPU 與安全代理執行環境 |</p>
+<p>| Docs | docs.api.nvidia.com | 提供 API 與開發文件入口 |</p>
+<h1>NVIDIA Build 與 NIM 的角色拆解</h1>
+<p>| 名稱 | 可理解為 | 對開發者的價值 |</p>
+<p>|---|---|---|</p>
+<p>| NVIDIA Build | AI 開發者入口與試用平台 | 快速探索模型、技能、藍圖與 API 文件 |</p>
+<p>| NIM | NVIDIA Inference Microservices | 把模型推理封裝成可部署、可擴展、較接近 production 的服務元件 |</p>
+<p>| Inference Endpoints | 雲端線上推理入口 | 不必先本地架 GPU 即可測試模型能力 |</p>
+<p>| Agentic Skills | Agent 可調用的預製能力 | 降低工具調用、資料處理與 domain workflow 的開發成本 |</p>
+<p>| Blueprints | 應用工作流與範例架構 | 從 demo 走向可複製的系統設計模板 |</p>
+<h1>與既有 NVIDIA 策略的關係</h1>
+<p>NVIDIA Build 可視為 NVIDIA 近年 AI 策略的整合前台：</p>
+<ul>
+<li>**模型層**：Nemotron、Cosmos、DeepSeek、Gemma、Llama、Mistral 等模型或合作模型入口。</li>
+<li>**推理層**：用 NIM / inference endpoints 將模型包成可呼叫、可測試、可部署的服務。</li>
+<li>**Agent 層**：透過 Agentic Skills、tool calling、RAG workflow、Blueprints 支援 Agentic AI 開發。</li>
+<li>**實體 AI 層**：Physical AI 類別與 Cosmos 系列延伸到機器人、自駕、工廠、倉儲與數位孿生。</li>
+<li>**企業部署層**：成熟需求可回到 NVIDIA GPU、DGX Station、企業基礎設施與 MLOps 流程。</li>
+</ul>
+<h1>對欒帥的實用判讀</h1>
+<ul>
+<li>**適合作為 AI 課程中的「企業級 AI 平台案例」**：它不是單一聊天機器人，而是模型、推理、Agent、Blueprint、GPU 部署的一體化入口。</li>
+<li>**可用來補足 OpenRouter / AI Studio 的企業視角**：OpenRouter 偏多模型 API 聚合，Google AI Studio 偏 Gemini 開發入口；NVIDIA Build 則更強調 GPU、NIM、企業推理與 Physical AI。</li>
+<li>**適合做 Agent 工作流選型示範**：可以比較「直接呼叫模型 API」與「使用 Skills / Blueprints / NIM 封裝」的差異。</li>
+<li>**與 Physical AI 課程高度相關**：Build 上的 Cosmos、Physical AI skills、Blueprints 可以連到前一篇黃仁勳 Physical AI 論述，形成「願景 → 平台 → 開發流程」的教學鏈。</li>
+<li>**可作為企業導入 AI 的評估清單**：先試 endpoint、測模型輸出、看 API / NIM 支援，再評估部署成本、GPU 需求、資料安全與維運能力。</li>
+</ul>
+<h1>可放入教學或顧問簡報的框架</h1>
+<p>| 問題 | 可用 NVIDIA Build 示範的內容 |</p>
+<p>|---|---|</p>
+<p>| 如何快速比較模型？ | 進 Models / Inference Endpoints 試 Nemotron、DeepSeek、Cosmos 等模型 |</p>
+<p>| 如何把模型變成服務？ | 說明 NIM 將推理封裝成微服務，降低部署複雜度 |</p>
+<p>| Agent 不只靠 LLM，要接什麼？ | 引入 Agentic Skills，說明工具、資料、工作流與模型的分工 |</p>
+<p>| 企業要怎麼從 demo 走到 production？ | 從 Build 試用 → Blueprint 架構 → NIM / GPU 部署 → 監控與治理 |</p>
+<p>| Physical AI 如何落地？ | 從 Cosmos / Physical AI skills 連到數位孿生、機器人與工廠流程 |</p>
+<h1>導入注意事項</h1>
+<ul>
+<li>**Build 是入口，不是完整專案本身**：真正落地仍需要資料管線、權限、監控、成本管理、模型評測與部署策略。</li>
+<li>**NIM 適合企業推理，但需評估 GPU / 授權 / 維運成本**：不要只看 demo 免費試用，要估 production 的總成本。</li>
+<li>**Skills / Blueprints 需實測可用性**：不同技能或藍圖的成熟度、文件完整度與可部署性可能不同。</li>
+<li>**多模型入口不等於模型皆適用**：需依任務測試品質、速度、上下文長度、工具調用能力、資料隱私與合規需求。</li>
+<li>**Physical AI 類應用門檻更高**：若涉及工廠、機器人、自駕或感測器，還需安全驗證、場域整合與硬體維運。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文依 DeTools 原文、NVIDIA Build 官方首頁可見資訊與官方導覽連結整理；尚未登入 NVIDIA Build、實際呼叫 NIM endpoint、下載 NIM 容器或測試 Blueprints。文章中的「適合場景」屬平台定位與導入判讀，正式採用前仍需以實際 API 文件、價格、帳號權限、模型授權與部署測試為準。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://tools.wingzero.tw/article/sn/3951 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">NVIDIA</span><span class="tag">NVIDIA Build</span><span class="tag">NIM</span><span class="tag">AI Agent</span><span class="tag">Agentic Skills</span><span class="tag">Blueprints</span><span class="tag">RAG</span><span class="tag">推理服務</span><span class="tag">開發平台</span><span class="tag">MLOps</span><h3>原始連結</h3><p><a href="https://tools.wingzero.tw/article/sn/3951" target="_blank" rel="noopener">https://tools.wingzero.tw/article/sn/3951</a></p><p><a href="https://build.nvidia.com/" target="_blank" rel="noopener">https://build.nvidia.com/</a></p><p><a href="https://tools.wingzero.tw/article/sn/3951" target="_blank" rel="noopener">https://tools.wingzero.tw/article/sn/3951</a></p><p><a href="https://build.nvidia.com/" target="_blank" rel="noopener">https://build.nvidia.com/</a></p><p><a href="https://build.nvidia.com/models" target="_blank" rel="noopener">https://build.nvidia.com/models</a></p><p><a href="https://build.nvidia.com/skills" target="_blank" rel="noopener">https://build.nvidia.com/skills</a></p><p><a href="https://build.nvidia.com/blueprints" target="_blank" rel="noopener">https://build.nvidia.com/blueprints</a></p><p><a href="https://docs.api.nvidia.com/" target="_blank" rel="noopener">https://docs.api.nvidia.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
