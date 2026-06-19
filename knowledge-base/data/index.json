@@ -160,6 +160,42 @@
     "markdown": "articles/2026/06/2026-06-19-gemini-learning-map-bnext-35-guides.md"
   },
   {
+    "title": "黃仁勳 Physical AI 論述｜別只卷 IT，把 AI 帶進製造、物流與物理世界",
+    "date": "2026-06-19",
+    "source": "https://www.facebook.com/reel/1670134154174077",
+    "author": "楊竹筠 / NVIDIA / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Physical AI",
+      "實體 AI",
+      "NVIDIA",
+      "黃仁勳",
+      "Omniverse",
+      "Cosmos",
+      "數位孿生",
+      "機器人",
+      "製造業",
+      "物流",
+      "算力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1GTX8dpGMq/?mibextid=wwXIfr",
+      "https://nvidianews.nvidia.com/news/nvidia-expands-omniverse-with-generative-physical-ai",
+      "https://www.facebook.com/share/v/1GTX8dpGMq/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1670134154174077",
+      "https://nvidianews.nvidia.com/news/nvidia-expands-omniverse-with-generative-physical-ai",
+      "https://blogs.nvidia.com/blog/ces-2025-jensen-huang/"
+    ],
+    "excerpt": "這則 Reel 的重點不是單一金句，而是 NVIDIA 正在把 AI 從文字、客服、程式碼等資訊工作，推向製造、物流、倉儲、車輛、機器人與數位孿生；也就是讓 AI 理解物理世界、在模擬中訓練，再部署到真實世界。",
+    "slug": "2026-06-19-jensen-huang-physical-ai-50-trillion-industrial-opportunity",
+    "html": "articles/2026-06-19-jensen-huang-physical-ai-50-trillion-industrial-opportunity.html",
+    "markdown": "articles/2026/06/2026-06-19-jensen-huang-physical-ai-50-trillion-industrial-opportunity.md"
+  },
+  {
     "title": "本地 AI 轉錄架構｜用家中 MacBook Pro 當 Whisper 推論伺服器",
     "date": "2026-06-19",
     "source": "https://www.threads.com/@andrew54068/post/DZvHubJD6U9",
