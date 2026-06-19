@@ -72,6 +72,37 @@
     "markdown": "articles/2026/06/2026-06-19-comfyui-kling-3-turbo-workflow-template.md"
   },
   {
+    "title": "Veo 端午節貓狗搞笑短片｜中文對話、表情反轉與 8 秒喜劇 Prompt 範例",
+    "date": "2026-06-19",
+    "source": "line-user-text",
+    "author": "AI 人才科技實驗室 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Veo",
+      "AI Video",
+      "Prompt Engineering",
+      "中文語音",
+      "端午節",
+      "內容製作",
+      "HR 影片",
+      "短影音"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "line://text/veo-dragon-boat-festival-shiba-cat-comedy-prompt",
+      "https://youtu.be/9ue8VnBVxSc",
+      "https://youtu.be/bWhB9L-Fpt0",
+      "https://youtu.be/9ue8VnBVxSc"
+    ],
+    "excerpt": "這個案例值得保存，因為它展示了 AI 影片 Prompt 不只描述畫面，還能同時控制角色、鏡頭切換、中文台詞、英文翻譯、喜劇節奏與表情反轉；對 HR 宣導影片、節慶短影音與教學內容來說，是一個可改寫成企業／課程場景的短片模板。",
+    "slug": "2026-06-19-veo-dragon-boat-festival-shiba-cat-comedy-prompt",
+    "html": "articles/2026-06-19-veo-dragon-boat-festival-shiba-cat-comedy-prompt.html",
+    "markdown": "articles/2026/06/2026-06-19-veo-dragon-boat-festival-shiba-cat-comedy-prompt.md"
+  },
+  {
     "title": "永錫 Agent Skill 庫｜把 Codex 工作流沉澱成可分享的知識工作模組",
     "date": "2026-06-19",
     "source": "https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&id=655603570",

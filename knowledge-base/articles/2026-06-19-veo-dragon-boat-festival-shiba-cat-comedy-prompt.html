@@ -1,0 +1,71 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Veo 端午節貓狗搞笑短片｜中文對話、表情反轉與 8 秒喜劇 Prompt 範例</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Veo 端午節貓狗搞笑短片｜中文對話、表情反轉與 8 秒喜劇 Prompt 範例</h1><h1>Veo 端午節貓狗搞笑短片｜中文對話、表情反轉與 8 秒喜劇 Prompt 範例</h1>
+<p>來源為欒帥分享的會員貼文文字與兩支 YouTube 影片連結。貼文主題是「AI 實驗：端午節快樂！貓貓狗狗搞笑影片」，作者提到近期 AI 陪跑教練專案中包含「用 AI 製作企業 HR 宣導影片」，並以端午節、柴犬、橘貓、Podcast studio 與中文對話，示範一段 8 秒 Veo 影片 Prompt。</p>
+<h1>一句話摘要</h1>
+<p>這個案例值得保存，因為它展示了 AI 影片 Prompt 不只描述畫面，還能同時控制角色、鏡頭切換、中文台詞、英文翻譯、喜劇節奏與表情反轉；對 HR 宣導影片、節慶短影音與教學內容來說，是一個可改寫成企業／課程場景的短片模板。</p>
+<h1>YouTube 影片資訊</h1>
+<p>YouTube transcript API 顯示兩支影片皆未開放字幕逐字稿，因此本文以使用者貼文、影片 oEmbed metadata 與公開影片標題整理。</p>
+<p>| 影片 | YouTube 標題 | 頻道 | 長度 | 連結 |</p>
+<p>|---|---|---|---|---|</p>
+<p>| 版本 1 | [AI實驗] 端午節 柴犬搞笑影片 | AI 人才科技實驗室 | 8 秒 | <a href="https://youtu.be/bWhB9L-Fpt0" target="_blank" rel="noopener">https://youtu.be/bWhB9L-Fpt0</a> |</p>
+<p>| 版本 2 | [AI實驗] 端午節 柴犬貓咪搞笑影片 | AI 人才科技實驗室 | 8 秒 | <a href="https://youtu.be/9ue8VnBVxSc" target="_blank" rel="noopener">https://youtu.be/9ue8VnBVxSc</a> |</p>
+<h1>原始 Prompt 核心</h1>
+<p>使用者分享的 Prompt 主軸如下：</p>
+<p>```text</p>
+<p>An 8-second cinematic comedy video of a professional podcast studio.</p>
+<p>A Shiba Inu dog and a fluffy orange cat are sitting at a desk, wearing studio headphones.</p>
+<p>```</p>
+<p>關鍵台詞：</p>
+<p>| 角色 | 中文台詞 | 英文翻譯用途 |</p>
+<p>|---|---|---|</p>
+<p>| 柴犬 | 人類為了不讓屈原餓死，包肉粽丟進水裡請魚吃，太感人了！ | 幫模型理解端午節／屈原／肉粽／魚的語意關係 |</p>
+<p>| 橘貓 | 對啊！餵飽魚，然後人類就能吃那條胖魚了... | 建立冷面吐槽與黑色幽默反轉 |</p>
+<p>表情反轉：柴犬先感動地說話，橘貓冷冷吐槽後，鏡頭切回柴犬；柴犬變成 existential dread / sheer shock，嘴巴微張、眼睛睜大、瞳孔放大、整個定格在震驚中。</p>
+<h1>Prompt 結構拆解</h1>
+<p>| 模組 | Prompt 寫法 | 為什麼重要 |</p>
+<p>|---|---|---|</p>
+<p>| 片長與類型 | 8-second cinematic comedy video | 讓模型知道這是短秒數、喜劇節奏，不是一般敘事片 |</p>
+<p>| 場景 | professional podcast studio、cozy neon-lit studio background | 建立固定空間與鏡頭可信度 |</p>
+<p>| 角色 | Shiba Inu dog、fluffy orange cat、studio headphones | 清楚指定兩個可辨識角色與道具 |</p>
+<p>| 鏡頭節奏 | close-up、quick cut、cut back | 用剪輯語言要求模型做喜劇 timing |</p>
+<p>| 語音 / 字幕 | speaking in Chinese、Video language: Traditional Chinese | 提醒模型處理中文語音或字幕 |</p>
+<p>| 語意補強 | 中文台詞後附英文翻譯 | 降低模型誤解中文梗的機率 |</p>
+<p>| 表情控制 | emotional、cold cynical、existential dread、eyes wide open | 用情緒詞與臉部細節控制笑點 |</p>
+<p>| 品質描述 | photorealistic 4k、highly detailed fur | 提升毛髮與棚內畫面質感 |</p>
+<h1>可複用模板</h1>
+<p>若要改寫成其他節慶或企業宣導影片，可以沿用以下框架：</p>
+<p>```text</p>
+<p>An 8-second cinematic comedy video of [場景].</p>
+<p>[角色 A] and [角色 B] are [位置與道具].</p>
+<p>The video starts with a close-up of [角色 A] speaking emotionally in Traditional Chinese: &quot;[正經或感性台詞]&quot; ([English meaning]).</p>
+<p>Quick cut to [角色 B], who interrupts with [冷面 / 吐槽 / 反差] expression in Traditional Chinese: &quot;[反轉台詞]&quot; ([English meaning]).</p>
+<p>The camera immediately cuts back to [角色 A], whose expression changes to [震驚 / 尷尬 / 頓悟 / 崩潰].</p>
+<p>[場景氛圍], photorealistic, highly detailed, perfect comedic timing.</p>
+<p>Video language: Traditional Chinese.</p>
+<p>```</p>
+<h1>用在企業 HR 宣導影片的改寫方向</h1>
+<p>這個搞笑 Prompt 可以延伸到企業 HR、內訓或文化宣導：</p>
+<p>| 用途 | 可改寫方式 |</p>
+<p>|---|---|</p>
+<p>| 資安宣導 | 柴犬說「我只是點了一個免費禮物連結」，橘貓吐槽「然後全公司都收到勒索信了」 |</p>
+<p>| 請假制度 | 柴犬感性說「我用 AI 幫我寫請假理由」，橘貓吐槽「HR 也用 AI 查重」 |</p>
+<p>| 新人訓練 | 柴犬說「我把所有 SOP 都背起來了」，橘貓回「你只要知道去哪裡找最新版」 |</p>
+<p>| ESG / 節能 | 柴犬說「我把冷氣關掉救地球」，橘貓回「但你把伺服器開到滿載生成影片」 |</p>
+<p>| 端午節祝福 | 保留屈原、粽子、魚的幽默反轉，改成公司節慶短片 |</p>
+<h1>製作注意事項</h1>
+<ul>
+<li>**中文台詞要短**：8 秒影片容納不了太長對話；每句最好像短影音金句。</li>
+<li>**中文後附英文翻譯**：貼文提醒「包含中文台詞與括號內英文翻譯一起貼」，這有助於模型理解梗與語意。</li>
+<li>**笑點靠反轉，不靠堆詞**：第一句建立天真或感性，第二句用冷面邏輯反轉。</li>
+<li>**表情要寫具體**：如 mouth slightly agape、eyes wide open、pupils dilating，比只寫 shocked 更可控。</li>
+<li>**鏡頭要指定切換**：close-up、quick cut、cut back 是喜劇 timing 的核心。</li>
+<li>**節慶與品牌要分層**：如果用在企業影片，節慶梗可做開場，但品牌訊息應放在字幕或結尾 CTA。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>YouTube 兩支影片未開放字幕逐字稿；本文未逐格分析影片，只以使用者提供的完整 Prompt、貼文說明與 YouTube metadata 整理。</li>
+<li>貼文提到「加入免費會員可取得咒語」，本文僅保存已分享文字，不涉及會員內容權限判斷。</li>
+<li>Veo 或其他影片模型對中文語音、唇形同步、字幕與表情控制的穩定度會隨版本變動；實際產出可能仍有小 bug。</li>
+<li>本文將案例視為 Prompt engineering 與內容設計參考，不代表已驗證可在所有模型／帳號／地區重現相同結果。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則案例把「節慶短影音」與「企業 HR 宣導影片」連在一起：真正可學的是如何把 Prompt 寫成一段微型分鏡腳本，包含場景、角色、道具、台詞、翻譯、鏡頭、表情與喜劇節奏。對欒帥後續做課程宣傳、工作坊開場、節慶問候或 AI 影片教學，都可以直接改寫這個 8 秒雙角色反轉模板。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · line-user-text · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Veo</span><span class="tag">AI Video</span><span class="tag">Prompt Engineering</span><span class="tag">中文語音</span><span class="tag">端午節</span><span class="tag">內容製作</span><span class="tag">HR 影片</span><span class="tag">短影音</span><h3>原始連結</h3><p><a href="line://text/veo-dragon-boat-festival-shiba-cat-comedy-prompt" target="_blank" rel="noopener">line://text/veo-dragon-boat-festival-shiba-cat-comedy-prompt</a></p><p><a href="https://youtu.be/9ue8VnBVxSc" target="_blank" rel="noopener">https://youtu.be/9ue8VnBVxSc</a></p><p><a href="https://youtu.be/bWhB9L-Fpt0" target="_blank" rel="noopener">https://youtu.be/bWhB9L-Fpt0</a></p><p><a href="https://youtu.be/9ue8VnBVxSc" target="_blank" rel="noopener">https://youtu.be/9ue8VnBVxSc</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
