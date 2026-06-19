@@ -1,5 +1,37 @@
 [
   {
+    "title": "Claude Code 官方 30 分鐘教學｜Agent 級提示工程與團隊工作流",
+    "date": "2026-06-20",
+    "source": "https://www.threads.com/@darks0603/post/DZv_wkEmJaS",
+    "author": "陳盟升 / Anthropic Boris Cherny",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "Claude Code",
+      "Anthropic",
+      "Prompt Engineering",
+      "Context Engineering",
+      "開發流程",
+      "教學影片"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@darks0603/post/DZv_wkEmJaS",
+      "https://www.youtube.com/watch?v=6eBSHbLKuN0",
+      "https://www.threads.com/@darks0603/post/DZv_wkEmJaS",
+      "https://www.youtube.com/watch?v=6eBSHbLKuN0",
+      "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "https://docs.anthropic.com/en/docs/claude-code/common-workflows",
+      "https://docs.anthropic.com/en/docs/claude-code/memory"
+    ],
+    "excerpt": "Anthropic 的 30 分鐘教學可視為 Agent 級提示工程範本：不要只丟一句「幫我寫功能」，而是讓 Claude Code 先理解 repo、調用 git / GitHub / CLI / MCP 等工具、提出計畫、取得驗證訊號，並用 CLAUDE.md、slash commands、permissions 與 MCP 把團隊脈絡制度化。",
+    "slug": "2026-06-20-claude-code-mastering-30-minutes-agent-prompting",
+    "html": "articles/2026-06-20-claude-code-mastering-30-minutes-agent-prompting.html",
+    "markdown": "articles/2026/06/2026-06-20-claude-code-mastering-30-minutes-agent-prompting.md"
+  },
+  {
     "title": "AI 新聞室工具鏈｜8 款工具把記者會轉成快訊、短影音與多語發布",
     "date": "2026-06-19",
     "source": "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH",
@@ -3775,12 +3807,25 @@
     "type": "article",
     "topics": [
       "AI 語音/音訊",
-      "開源專案"
+      "開源專案",
+      "VoxCPM",
+      "Voice Cloning",
+      "TTS"
     ],
     "use": [],
     "importance": "medium",
     "status": "archived",
-    "links": [],
+    "links": [
+      "https://www.threads.com/@resen168/post/DZCUrjTkZL1",
+      "https://github.com/OpenBMB/VoxCPM",
+      "https://www.threads.com/@resen168/post/DZCUrjTkZL1",
+      "https://www.threads.com/@govin999999/post/DZxnk_JGMAg",
+      "https://github.com/OpenBMB/VoxCPM",
+      "https://voxcpm.com",
+      "https://voxcpm.readthedocs.io/en/latest/",
+      "https://huggingface.co/openbmb/VoxCPM2",
+      "https://arxiv.org/abs/2606.06928"
+    ],
     "excerpt": "# VoxCPM2：開源語音合成新工具（20k GitHub Stars） **來源：** [Threads@resen168](https://www.threads.com/@resen168/post/DZCUrjTkZL1) · 8 小時前 · 48 讚 · 62 次分享 · 2,602 次瀏覽 --- ## ",
     "slug": "2026-05-30-voxcpm2-open-source-voice-synthesis-20k-stars",
     "html": "articles/2026-05-30-voxcpm2-open-source-voice-synthesis-20k-stars.html",

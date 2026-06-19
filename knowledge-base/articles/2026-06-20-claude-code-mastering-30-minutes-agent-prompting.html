@@ -1,0 +1,77 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude Code 官方 30 分鐘教學｜Agent 級提示工程與團隊工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claude Code 官方 30 分鐘教學｜Agent 級提示工程與團隊工作流</h1><h1>Claude Code 官方 30 分鐘教學｜Agent 級提示工程與團隊工作流</h1>
+<p>Threads 貼文把這支 Anthropic 官方影片定位成「不用到處亂學提示詞，直接看官方示範」。實際重點確實不只是 Claude Code 操作，而是 coding agent 的完整工作法：先問 codebase、再規劃、再改碼、用測試或截圖迭代，最後把團隊工具與記憶配置成可重複的工作流。</p>
+<h1>一句話摘要</h1>
+<p>Anthropic 的 30 分鐘教學可視為 Agent 級提示工程範本：不要只丟一句「幫我寫功能」，而是讓 Claude Code 先理解 repo、調用 git / GitHub / CLI / MCP 等工具、提出計畫、取得驗證訊號，並用 CLAUDE.md、slash commands、permissions 與 MCP 把團隊脈絡制度化。</p>
+<h1>來源與影片資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 分享者 | @darks0603 |</p>
+<p>| 官方影片 | Mastering Claude Code in 30 minutes |</p>
+<p>| 發布者 | Anthropic YouTube channel |</p>
+<p>| 影片長度 | 約 28:07 |</p>
+<p>| 主講者 | Boris Cherny，Anthropic technical staff，Claude Code creator |</p>
+<p>| Threads 重點 | 30 分鐘看官方影片，學 Agent 級提示工程；可搭配「陪讀蛙」雙語字幕外掛 |</p>
+<h1>影片核心脈絡</h1>
+<p>主講者先把 Claude Code 定義成「fully agentic」的 coding assistant：它不是補幾行 code 的 autocomplete，而是用於做 feature、寫 function / file、修 bug、跑工具與整理工作。它刻意放在 terminal，因為能跨 VS Code、Xcode、JetBrains、Vim、SSH、tmux 等環境，減少被單一 IDE 綁住。</p>
+<h1>可直接採用的 Agent 工作流</h1>
+<p>| 階段 | 做法 | 對欒帥的應用 |</p>
+<p>|---|---|---|</p>
+<p>| 1. 先做 codebase Q&amp;A | 新手不要一開始就叫它改碼，先問「這段怎麼用？」「這個 class 怎麼 instantiate？」「為什麼這個 function 有 15 個參數？」 | 用於接手 Hermes / KB / 課程頁 repo 時，先讓 agent 讀架構與 git history |</p>
+<p>| 2. 要求先規劃 | 明確說「before you write code, make a plan / brainstorm / ask for approval」 | 大改版、部署、自動化前先產生計畫，避免 agent 直接亂改 |</p>
+<p>| 3. 給它驗證工具 | unit tests、integration tests、Puppeteer 截圖、iOS simulator、web screenshot 都可當 feedback loop | KB 首頁、課程 landing page、管理介面都應讓 agent 截圖/測試後自行迭代 |</p>
+<p>| 4. 教它用團隊工具 | CLI、MCP server、GitHub issue、Sentry、GCP logs、內部工具都可透過說明與設定交給 Claude Code 使用 | 把部署、OCR、Google Sheets、LINE 附件處理整理成工具與技能，而非每次重講 |</p>
+<p>| 5. 把 context 制度化 | 用 CLAUDE.md、nested CLAUDE.md、slash commands、settings、permissions、MCP JSON | 對 Hermes skills / AGENTS.md / project memory 都是同一個 context engineering 思路 |</p>
+<h1>重要操作觀念</h1>
+<ul>
+<li>`terminal-setup`：讓終端輸入多行 prompt 更順；影片提到 Shift+Enter 類操作可改善長 prompt 體驗。</li>
+<li>`theme`：設定 light / dark / daltonized theme。</li>
+<li>`install github app`：可在 GitHub issue / PR 中 `@claude` 觸發工作。</li>
+<li>allowed tools / permissions：常用安全命令可允許，危險命令或 URL 可封鎖。</li>
+<li>語音輸入 prompt：主講者提到在 macOS 用 dictation 直接「跟 Claude Code 說話」，適合描述複雜任務。</li>
+<li>`commit push` 這類短指令：Claude Code 會根據 git log 與 repo 慣例自行整理 commit、branch、PR。</li>
+<li>`#` 記憶：當工具用法或團隊偏好需要保存時，可把它寫入 memory。</li>
+<li>`!` bash mode：直接跑本機命令，輸出會進入下一輪 context。</li>
+<li>`@` mention files / folders：把關鍵檔案拉進 context。</li>
+<li>Escape：停止目前操作並補充修正；Escape twice 可回到歷史。</li>
+<li>`resume` / `continue`：接回先前 session。</li>
+<li>Ctrl+R：查看更完整工具輸出。</li>
+</ul>
+<h1>Context Engineering 重點</h1>
+<p>影片中最值得保存的是「讓 agent 變聰明不是靠更長 prompt，而是靠正確脈絡配置」。可分成四層：</p>
+<ul>
+<li>Project CLAUDE.md：repo 根目錄，放共享 bash commands、style guide、架構決策、核心檔案。</li>
+<li>Local CLAUDE.md：個人偏好，不一定進版控。</li>
+<li>Nested CLAUDE.md：特定子資料夾需要的脈絡，在 agent 進入該區域時再載入。</li>
+<li>Enterprise / global policies：全公司共用的 permissions、blocked commands、MCP servers 與安全規則。</li>
+</ul>
+<p>對 Hermes / Codex / Claude Code 類工作流來說，這與技能資料夾、AGENTS.md、專案記憶其實是同一件事：把「常識、工具、限制、驗證」變成 repo 內可維護的文字與設定。</p>
+<h1>Claude Code SDK / `-p` 的意義</h1>
+<p>影片後段提到 Claude Code SDK，可把 Claude Code 當成「超聰明 Unix utility」：</p>
+<ul>
+<li>將 prompt、allowed tools、output format 給 CLI。</li>
+<li>讓輸出成為 JSON 或 streaming JSON，接到 CI、incident response、log 分析、Sentry / GCP / GitHub pipeline。</li>
+<li>可以 pipe in / pipe out，讓 agent 進入現有 shell workflow，而不是另開一套系統。</li>
+</ul>
+<p>這對欒帥的價值是：未來 AI 學習雷達、LINE 文件處理、報名名單整理、GitHub Pages 驗證都可逐步變成 CLI/cron/agent pipeline，而不只是聊天式操作。</p>
+<h1>團隊導入建議</h1>
+<ul>
+<li>第一天不要要求同事直接「讓 agent 幫我開發功能」，先練 codebase Q&amp;A。</li>
+<li>每個 repo 先建立短版 CLAUDE.md，只放高訊號規則：測試命令、部署命令、檔名規則、禁止事項、常見坑。</li>
+<li>對 UI / 文件 / 靜態站任務，要求 agent 必須截圖或 fetch public URL 驗證。</li>
+<li>對會動到 production、token、資料庫、個資的命令，預設要權限護欄。</li>
+<li>如果工作流重複出現三次，就把它升級成 slash command、skill 或腳本。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>本文已擷取 Threads 貼文與 YouTube transcript；YouTube 自動轉錄把「Claude Code」多處聽成「Quad Code / Cloud Code」，本文已依影片主題與官方標題校正。</li>
+<li>影片是實務示範，不是完整安全規範；permissions、MCP、SDK、GitHub app 細節仍應以 Anthropic 官方文件與目前 CLI 版本為準。</li>
+<li>Threads 提到的「陪讀蛙」外掛僅作為字幕輔助線索，本次未驗證此外掛本身的安全性與維護狀態。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads： <a href="https://www.threads.com/@darks0603/post/DZv_wkEmJaS" target="_blank" rel="noopener">https://www.threads.com/@darks0603/post/DZv_wkEmJaS</a></li>
+<li>YouTube：Mastering Claude Code in 30 minutes： <a href="https://www.youtube.com/watch?v=6eBSHbLKuN0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=6eBSHbLKuN0</a></li>
+<li>Anthropic Docs：Claude Code Overview： <a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/overview</a></li>
+<li>Anthropic Docs：Common workflows： <a href="https://docs.anthropic.com/en/docs/claude-code/common-workflows" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/common-workflows</a></li>
+<li>Anthropic Docs：Memory： <a href="https://docs.anthropic.com/en/docs/claude-code/memory" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/memory</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-20 · https://www.threads.com/@darks0603/post/DZv_wkEmJaS · article</div><h3>標籤</h3><span class="tag">AI Agent</span><span class="tag">Claude Code</span><span class="tag">Anthropic</span><span class="tag">Prompt Engineering</span><span class="tag">Context Engineering</span><span class="tag">開發流程</span><span class="tag">教學影片</span><h3>原始連結</h3><p><a href="https://www.threads.com/@darks0603/post/DZv_wkEmJaS" target="_blank" rel="noopener">https://www.threads.com/@darks0603/post/DZv_wkEmJaS</a></p><p><a href="https://www.youtube.com/watch?v=6eBSHbLKuN0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=6eBSHbLKuN0</a></p><p><a href="https://www.threads.com/@darks0603/post/DZv_wkEmJaS" target="_blank" rel="noopener">https://www.threads.com/@darks0603/post/DZv_wkEmJaS</a></p><p><a href="https://www.youtube.com/watch?v=6eBSHbLKuN0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=6eBSHbLKuN0</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/overview</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/common-workflows" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/common-workflows</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/memory" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/memory</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
