@@ -101,6 +101,36 @@
     "markdown": "articles/2026/06/2026-06-19-comfyui-kling-3-turbo-workflow-template.md"
   },
   {
+    "title": "Gemini 學習地圖｜數位時代 35 篇 Gemini 實測教學整理",
+    "date": "2026-06-19",
+    "source": "https://www.bnext.com.tw/article/91249/gemini-learning-map",
+    "author": "數位時代 / 蘇柔瑋 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Gemini",
+      "Google Workspace",
+      "NotebookLM",
+      "Gemini Notebooks",
+      "Gemini Canvas",
+      "Prompt Engineering",
+      "AI Workflow",
+      "數位時代"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/91249/gemini-learning-map",
+      "https://www.bnext.com.tw/article/91249/gemini-learning-map",
+      "https://www.bnext.com.tw/article/91249/gemini-learning-map"
+    ],
+    "excerpt": "這篇文章適合收進 AI 學習雷達，因為它不是單點工具介紹，而是一份「Gemini 工作流學習地圖」：從知道 Gemini 是什麼，到把它放進 Google Workspace、知識庫、簡報、表格、日曆、求職、行銷與設計流程中。",
+    "slug": "2026-06-19-gemini-learning-map-bnext-35-guides",
+    "html": "articles/2026-06-19-gemini-learning-map-bnext-35-guides.html",
+    "markdown": "articles/2026/06/2026-06-19-gemini-learning-map-bnext-35-guides.md"
+  },
+  {
     "title": "本地 AI 轉錄架構｜用家中 MacBook Pro 當 Whisper 推論伺服器",
     "date": "2026-06-19",
     "source": "https://www.threads.com/@andrew54068/post/DZvHubJD6U9",
@@ -133,6 +163,36 @@
     "slug": "2026-06-19-local-ai-transcriber-macbook-pro-mlx-whisper-server",
     "html": "articles/2026-06-19-local-ai-transcriber-macbook-pro-mlx-whisper-server.html",
     "markdown": "articles/2026/06/2026-06-19-local-ai-transcriber-macbook-pro-mlx-whisper-server.md"
+  },
+  {
+    "title": "OpenAI Codex OAuth｜OpenClaw 與 Hermes 可用的 ChatGPT 訂閱帳號認證教學",
+    "date": "2026-06-19",
+    "source": "https://www.koc.com.tw/archives/641373",
+    "author": "電腦王阿達 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Hermes Agent",
+      "OpenClaw",
+      "Codex",
+      "OAuth",
+      "OpenAI",
+      "GPT-5.5",
+      "ChatGPT Plus",
+      "電腦王阿達"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.koc.com.tw/archives/641373",
+      "https://www.koc.com.tw/archives/641373",
+      "https://www.koc.com.tw/archives/641373"
+    ],
+    "excerpt": "這篇文章值得收錄的原因，是它清楚區分了「OpenAI API Key 用量計費」與「OpenAI Codex OAuth / ChatGPT 訂閱帳號授權」兩條路徑：前者走平台 API 帳單，後者走 ChatGPT / Codex 訂閱權益，對 Hermes 與 OpenClaw 使用者的成本結構差很多。",
+    "slug": "2026-06-19-openai-codex-oauth-openclaw-hermes-setup-koc",
+    "html": "articles/2026-06-19-openai-codex-oauth-openclaw-hermes-setup-koc.html",
+    "markdown": "articles/2026/06/2026-06-19-openai-codex-oauth-openclaw-hermes-setup-koc.md"
   },
   {
     "title": "Palmier Pro｜讓 Claude、Codex 直接操作時間軸的 AI 原生影片剪輯器",
