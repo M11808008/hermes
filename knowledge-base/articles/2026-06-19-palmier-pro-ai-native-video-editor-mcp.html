@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Palmier Pro｜讓 Claude、Codex 直接操作時間軸的 AI 原生影片剪輯器</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Palmier Pro｜讓 Claude、Codex 直接操作時間軸的 AI 原生影片剪輯器</h1><h1>Palmier Pro｜讓 Claude、Codex 直接操作時間軸的 AI 原生影片剪輯器</h1>
+<p>來源為 Threads 帳號 whaleagent 的貼文，介紹一款名為 Palmier Pro 的 AI 原生影片剪輯器：它主打「不是把 AI 外掛到剪輯軟體旁邊」，而是讓 Claude、Codex、Cursor 等代理人能直接讀取專案並操作時間軸。本文以 Palmier 官方網站、GitHub README、最新 release 與 YC Launch 頁面作為補強來源。</p>
+<h1>一句話摘要</h1>
+<p>Palmier Pro 的重點不是單純「自動剪片」，而是把影片剪輯軟體變成 AI Agent 可操作的工作環境：AI 可以整理素材、裁切片段、重排時間軸、調整速度／靜音，並透過內建生成式 AI 在時間軸中產生影像或影片素材。</p>
+<h1>Threads 貼文可確認資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 發布帳號 | whaleagent |</p>
+<p>| 主題 | Palmier Pro：為 AI 而生的影片剪輯器 |</p>
+<p>| 貼文主張 | Claude 可協助整理素材、自動分資料夾、裁切、調速、靜音，甚至生成新鏡頭 |</p>
+<p>| 產品定位 | 開源、Mac 原生、可下載使用 |</p>
+<p>| 核心觀察 | 當工具開始聽得懂人話，門檻從「會不會用軟體」轉向「想做出什麼」 |</p>
+<h1>官方資訊補強</h1>
+<p>Palmier Pro 官方 README 將它描述為「The video editor built for AI」，並明確列出三個核心方向：</p>
+<p>| 面向 | 官方描述重點 |</p>
+<p>|---|---|</p>
+<p>| Swift-native video editor | 從零以 Swift 建構的 Mac 原生剪輯器，目標參考 Premiere Pro，但把 AI 納入工作流 |</p>
+<p>| Built-in Generative AI | 可在時間軸中用 Seedance、Kling、Nano Banana Pro 等模型生成影片或圖片 |</p>
+<p>| Integrates with your agents | 可透過 MCP 連接 Claude、Codex、Cursor，或使用 app 內建 agent 與同一個剪輯專案協作 |</p>
+<p>官方 GitHub 顯示 Palmier Pro 是 macOS 影片剪輯器，授權為 GPLv3；最新 release 為 `v0.3.3`，提供 `PalmierPro.dmg` 下載。README 也註明目前支援平台為 Apple Silicon 上的 macOS 26 Tahoe。</p>
+<h1>MCP：真正值得注意的地方</h1>
+<p>Palmier Pro 在 app 開啟時會提供 HTTP MCP server：</p>
+<p>```text</p>
+<p><a href="http://127.0.0.1:19789/mcp" target="_blank" rel="noopener">http://127.0.0.1:19789/mcp</a></p>
+<p>```</p>
+<p>這代表 Claude Code、Codex、Cursor 等工具可以透過 MCP 讀取並操作剪輯專案，而不只是生成一段文字建議。官方 README 提供的連接方式包含：</p>
+<p>```bash</p>
+<p>claude mcp add --transport http palmier-pro <a href="http://127.0.0.1:19789/mcp" target="_blank" rel="noopener">http://127.0.0.1:19789/mcp</a></p>
+<p>```</p>
+<p>```bash</p>
+<p>codex mcp add palmier-pro --url <a href="http://127.0.0.1:19789/mcp" target="_blank" rel="noopener">http://127.0.0.1:19789/mcp</a></p>
+<p>```</p>
+<p>Cursor 則可透過 app 內的 `Help -&gt; MCP Instructions -&gt; Install in Cursor` 安裝，或手動加入 `~/.cursor/mcp.json`。</p>
+<h1>欒帥可採用的實務判斷</h1>
+<p>| 問題 | 判斷 |</p>
+<p>|---|---|</p>
+<p>| 是否值得追蹤？ | 值得。它把影片剪輯從「人工拖拉時間軸」推向「Agent 操作創作軟體」的新型態。 |</p>
+<p>| 是否適合現在導入課程內容產線？ | 可先作為實驗工具，不宜立即取代成熟剪輯流程。原因是目前平台限制較明確，只支援 Apple Silicon + macOS 26。 |</p>
+<p>| 最有價值的場景 | AI 教學短片、課程宣傳片、產品 demo、B-roll 自動整理、多版本短影音剪輯。 |</p>
+<p>| 主要風險 | 早期版本穩定性、macOS 26 門檻、生成式 AI 功能需登入與訂閱、商業素材仍需人工審核。 |</p>
+<h1>可以如何放進 AI 學習雷達工作流</h1>
+<ul>
+<li>把 Palmier Pro 視為「AI Agent 操作創作軟體」案例，而不只是新剪輯器。</li>
+<li>先測 MCP 能力：讓 Claude 或 Codex 讀取專案、整理素材、標記片段、產生剪輯建議。</li>
+<li>再測時間軸操作：裁切、重排、靜音、調速與輸出是否穩定。</li>
+<li>最後再測生成式 AI：例如補 B-roll、產生轉場素材、補產品展示鏡頭。</li>
+<li>若要用於課程或品牌內容，仍需保留人工 final cut 與版權／事實檢查流程。</li>
+</ul>
+<h1>產品訊號</h1>
+<p>| 訊號 | 觀察 |</p>
+<p>|---|---|</p>
+<p>| 開源 | 影片剪輯器、MCP server 與 agent chat 開源；生成式 AI processing 不是完全開源 |</p>
+<p>| 授權 | GPLv3 |</p>
+<p>| 下載 | GitHub Releases 提供 macOS DMG |</p>
+<p>| 生態定位 | 對接 Claude、Codex、Cursor，符合 MCP 工具化趨勢 |</p>
+<p>| 早期熱度 | GitHub 已有千星級關注，YC Launch 與科技媒體也有報導 |</p>
+<h1>延伸觀察</h1>
+<p>Palmier Pro 的出現，代表創作工具正在進入下一階段：AI 不再只是「幫你產生素材」或「回答如何剪片」，而是能直接進入創作軟體的操作層。這會讓未來的內容製作能力更接近「導演式指令」：人負責方向、敘事、品牌判斷與審美，AI 負責素材整理、重複剪輯、時間軸調整與多版本輸出。</p>
+<p>對課程、社群短影音、品牌內容團隊來說，這類工具最值得關注的不是單次生成效果，而是它是否能與既有 AI Agent 工作流、素材庫、腳本系統與發布流程串起來。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://www.threads.com/@whaleagent/post/DZwYQ0wjQ7Y · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Video</span><span class="tag">Video Editing</span><span class="tag">Palmier Pro</span><span class="tag">Claude</span><span class="tag">Codex</span><span class="tag">MCP</span><span class="tag">Open Source</span><span class="tag">macOS</span><span class="tag">Threads</span><h3>原始連結</h3><p><a href="https://www.threads.com/@whaleagent/post/DZwYQ0wjQ7Y" target="_blank" rel="noopener">https://www.threads.com/@whaleagent/post/DZwYQ0wjQ7Y</a></p><p><a href="https://github.com/palmier-io/palmier-pro" target="_blank" rel="noopener">https://github.com/palmier-io/palmier-pro</a></p><p><a href="https://www.threads.com/@whaleagent/post/DZwYQ0wjQ7Y" target="_blank" rel="noopener">https://www.threads.com/@whaleagent/post/DZwYQ0wjQ7Y</a></p><p><a href="https://www.palmier.io/" target="_blank" rel="noopener">https://www.palmier.io/</a></p><p><a href="https://github.com/palmier-io/palmier-pro" target="_blank" rel="noopener">https://github.com/palmier-io/palmier-pro</a></p><p><a href="https://github.com/palmier-io/palmier-pro/releases/latest" target="_blank" rel="noopener">https://github.com/palmier-io/palmier-pro/releases/latest</a></p><p><a href="https://www.ycombinator.com/launches/QtT-palmier-pro-an-open-source-video-editor-your-agents-can-operate" target="_blank" rel="noopener">https://www.ycombinator.com/launches/QtT-palmier-pro-an-open-source-video-editor-your-agents-can-operate</a></p><p><a href="https://www.digitaltrends.com/cool-tech/this-new-video-editor-lets-claude-work-directly-on-your-timeline/" target="_blank" rel="noopener">https://www.digitaltrends.com/cool-tech/this-new-video-editor-lets-claude-work-directly-on-your-timeline/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

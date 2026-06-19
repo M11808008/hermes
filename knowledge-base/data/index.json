@@ -72,6 +72,42 @@
     "markdown": "articles/2026/06/2026-06-19-comfyui-kling-3-turbo-workflow-template.md"
   },
   {
+    "title": "Palmier Pro｜讓 Claude、Codex 直接操作時間軸的 AI 原生影片剪輯器",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@whaleagent/post/DZwYQ0wjQ7Y",
+    "author": "whaleagent / Palmier / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Video",
+      "Video Editing",
+      "Palmier Pro",
+      "Claude",
+      "Codex",
+      "MCP",
+      "Open Source",
+      "macOS",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@whaleagent/post/DZwYQ0wjQ7Y",
+      "https://github.com/palmier-io/palmier-pro",
+      "https://www.threads.com/@whaleagent/post/DZwYQ0wjQ7Y",
+      "https://www.palmier.io/",
+      "https://github.com/palmier-io/palmier-pro",
+      "https://github.com/palmier-io/palmier-pro/releases/latest",
+      "https://www.ycombinator.com/launches/QtT-palmier-pro-an-open-source-video-editor-your-agents-can-operate",
+      "https://www.digitaltrends.com/cool-tech/this-new-video-editor-lets-claude-work-directly-on-your-timeline/"
+    ],
+    "excerpt": "Palmier Pro 的重點不是單純「自動剪片」，而是把影片剪輯軟體變成 AI Agent 可操作的工作環境：AI 可以整理素材、裁切片段、重排時間軸、調整速度／靜音，並透過內建生成式 AI 在時間軸中產生影像或影片素材。",
+    "slug": "2026-06-19-palmier-pro-ai-native-video-editor-mcp",
+    "html": "articles/2026-06-19-palmier-pro-ai-native-video-editor-mcp.html",
+    "markdown": "articles/2026/06/2026-06-19-palmier-pro-ai-native-video-editor-mcp.md"
+  },
+  {
     "title": "Veo 端午節貓狗搞笑短片｜中文對話、表情反轉與 8 秒喜劇 Prompt 範例",
     "date": "2026-06-19",
     "source": "line-user-text",
