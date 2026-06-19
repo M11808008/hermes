@@ -37,6 +37,35 @@
     "markdown": "articles/2026/06/2026-06-19-ai-newsroom-eight-tool-workflow-threads.md"
   },
   {
+    "title": "ChatGPT 照片轉民俗裝飾平面插畫｜Decorative Folk Flat Illustration Prompt 範例",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@___kekeke____/post/DZsG9JRmWtA",
+    "author": "___kekeke____ / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "ChatGPT",
+      "Image Generation",
+      "Prompt",
+      "Illustration",
+      "Folk Art",
+      "Decorative Folk Flat Illustration",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@___kekeke____/post/DZsG9JRmWtA",
+      "https://www.threads.com/@___kekeke____/post/DZsG9JRmWtA",
+      "https://www.threads.com/@___kekeke____/post/DZsG9JRmWtA"
+    ],
+    "excerpt": "這段 prompt 的核心不是要求模型「畫得像照片」，而是要求它完整保留照片構圖與人物關係，並把所有細節重新翻譯成民俗裝飾、扁平插畫、塗鴉元素與童趣色彩。",
+    "slug": "2026-06-19-chatgpt-decorative-folk-flat-illustration-photo-prompt",
+    "html": "articles/2026-06-19-chatgpt-decorative-folk-flat-illustration-photo-prompt.html",
+    "markdown": "articles/2026/06/2026-06-19-chatgpt-decorative-folk-flat-illustration-photo-prompt.md"
+  },
+  {
     "title": "ComfyUI × Kling 3.0 Turbo｜官方 Partner Node 影片生成工作流上線",
     "date": "2026-06-19",
     "source": "https://www.threads.com/@junyan5400/post/DZvgTzrEUpx",
@@ -70,6 +99,40 @@
     "slug": "2026-06-19-comfyui-kling-3-turbo-workflow-template",
     "html": "articles/2026-06-19-comfyui-kling-3-turbo-workflow-template.html",
     "markdown": "articles/2026/06/2026-06-19-comfyui-kling-3-turbo-workflow-template.md"
+  },
+  {
+    "title": "本地 AI 轉錄架構｜用家中 MacBook Pro 當 Whisper 推論伺服器",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@andrew54068/post/DZvHubJD6U9",
+    "author": "andrew54068 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Local AI",
+      "Whisper",
+      "MLX",
+      "Apple Silicon",
+      "Transcription",
+      "MCP",
+      "Workflow Automation",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@andrew54068/post/DZvHubJD6U9",
+      "https://github.com/ml-explore/mlx",
+      "https://www.threads.com/@andrew54068/post/DZvHubJD6U9",
+      "https://github.com/ml-explore/mlx",
+      "https://github.com/mustafaaljadery/lightning-whisper-mlx",
+      "https://vexa.ai/",
+      "https://vexa.ai/blog/how-to-set-up-self-hosted-meeting-transcription-5-minutes"
+    ],
+    "excerpt": "這不是單純「把模型搬到另一台電腦」，而是把閒置高效能 Mac 變成私人推論伺服器：隨身筆電保留輕便與續航，家中 MBP 負責 Whisper 轉錄重工，資料不經雲端 API，並透過多層 fallback 保持工作流可靠。",
+    "slug": "2026-06-19-local-ai-transcriber-macbook-pro-mlx-whisper-server",
+    "html": "articles/2026-06-19-local-ai-transcriber-macbook-pro-mlx-whisper-server.html",
+    "markdown": "articles/2026/06/2026-06-19-local-ai-transcriber-macbook-pro-mlx-whisper-server.md"
   },
   {
     "title": "Palmier Pro｜讓 Claude、Codex 直接操作時間軸的 AI 原生影片剪輯器",
