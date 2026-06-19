@@ -130,6 +130,41 @@
     "markdown": "articles/2026/06/2026-06-19-comfyui-kling-3-turbo-workflow-template.md"
   },
   {
+    "title": "Firecrawl Keyless｜不用 API Key 的 Agent 網頁搜尋、抓取與互動資料層",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@aiposthub/post/DZxCdPUEQln",
+    "author": "AI郵報 / Firecrawl / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Firecrawl",
+      "MCP",
+      "網頁抓取",
+      "資料擷取",
+      "PDF to Markdown",
+      "RAG",
+      "CLI",
+      "API",
+      "開發工具"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DZxCdPUEQln?xmt=AQG0Pz-fGBgE4einDzEcEKW95TyCW-vQ0QD15j12_yNqcgzJSYtqrphpdHm7YnVrFZgbv8aPAw&slof=1",
+      "https://www.firecrawl.dev/blog/firecrawl-keyless-launch",
+      "https://www.threads.com/@aiposthub/post/DZxCdPUEQln",
+      "https://www.firecrawl.dev/blog/firecrawl-keyless-launch",
+      "https://www.firecrawl.dev/",
+      "https://mcp.firecrawl.dev/v2/mcp"
+    ],
+    "excerpt": "Firecrawl Keyless 把「申請帳號、拿 API key、設定環境變數」這個 Agent 前置摩擦拿掉：開發者與 coding agent 可以先直接用 MCP、CLI 或 API 做搜尋、抓取與網頁互動，每月自動有 1,000 credits，等到需要擴量再註冊帳號與帶入 key。",
+    "slug": "2026-06-19-firecrawl-keyless-agent-web-data-no-api-key",
+    "html": "articles/2026-06-19-firecrawl-keyless-agent-web-data-no-api-key.html",
+    "markdown": "articles/2026/06/2026-06-19-firecrawl-keyless-agent-web-data-no-api-key.md"
+  },
+  {
     "title": "Gemini 學習地圖｜數位時代 35 篇 Gemini 實測教學整理",
     "date": "2026-06-19",
     "source": "https://www.bnext.com.tw/article/91249/gemini-learning-map",

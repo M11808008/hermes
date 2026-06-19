@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Firecrawl Keyless｜不用 API Key 的 Agent 網頁搜尋、抓取與互動資料層</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Firecrawl Keyless｜不用 API Key 的 Agent 網頁搜尋、抓取與互動資料層</h1><h1>Firecrawl Keyless｜不用 API Key 的 Agent 網頁搜尋、抓取與互動資料層</h1>
+<p>來源是 AI郵報在 Threads 對 Firecrawl Keyless 的介紹。Threads 貼文強調：Firecrawl 現在不用 API key 也能免費試用，讓 AI Agent 可以更低摩擦地搜尋網頁、抓取內容、解析 PDF、與網頁互動。本文保留 Threads 作為發現來源，並以 Firecrawl 官方 2026-06-16 Keyless 發布文作為 canonical source。</p>
+<h1>一句話摘要</h1>
+<p>Firecrawl Keyless 把「申請帳號、拿 API key、設定環境變數」這個 Agent 前置摩擦拿掉：開發者與 coding agent 可以先直接用 MCP、CLI 或 API 做搜尋、抓取與網頁互動，每月自動有 1,000 credits，等到需要擴量再註冊帳號與帶入 key。</p>
+<h1>Threads 貼文重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 發文者 | AI郵報（@aiposthub） |</p>
+<p>| 主題 | Firecrawl 不用 API key 即可免費試用 |</p>
+<p>| 主要能力 | 搜尋網頁、抓取網頁內容、與網頁互動、PDF 解析成乾淨 Markdown |</p>
+<p>| 支援介面 | MCP、CLI、API |</p>
+<p>| 可接工具 | Claude、Cursor、Codex、自建 Agent workflow |</p>
+<p>| 適用場景 | AI 知識庫、研究助理、競品分析、自動爬資料、PDF 轉 Markdown、Agent 自動查資料 |</p>
+<h1>官方發布確認資訊</h1>
+<p>Firecrawl 官方發布文《Introducing Firecrawl Keyless: Search, scrape, and interact without an API key》確認：</p>
+<p>| 項目 | 官方說法 |</p>
+<p>|---|---|</p>
+<p>| 發布日期 | 2026-06-16 |</p>
+<p>| 作者 | Eric Ciarla，Firecrawl cofounder |</p>
+<p>| 免費額度 | Every developer gets 1,000 free credits a month automatically |</p>
+<p>| 是否需要 API key | Keyless 模式不需要 Authorization header；需要擴量時再註冊並帶 key |</p>
+<p>| 核心能力 | Search、Scrape、Interact |</p>
+<p>| 支援表面 | MCP、CLI、API |</p>
+<p>| MCP endpoint | <a href="https://mcp.firecrawl.dev/v2/mcp" target="_blank" rel="noopener">https://mcp.firecrawl.dev/v2/mcp</a> |</p>
+<p>| CLI | `npx firecrawl-cli@latest` |</p>
+<p>| 典型 MCP 範例 | `claude mcp add --transport http firecrawl <a href="https://mcp.firecrawl.dev/v2/mcp`" target="_blank" rel="noopener">https://mcp.firecrawl.dev/v2/mcp`</a> |</p>
+<h1>為什麼這對 AI Agent 很重要</h1>
+<p>很多 Agent 專案的瓶頸不是模型本身，而是「資料進來以前」的摩擦：</p>
+<ul>
+<li>**網頁資料不乾淨**：導覽列、廣告、cookie banner、動態渲染會污染 context。</li>
+<li>**PDF 很難穩定解析**：尤其是研究報告、白皮書、課綱、投影片或掃描式文件。</li>
+<li>**動態頁面需要互動**：有些資料要點擊、翻頁、填表或等待 JS 渲染後才出現。</li>
+<li>**API key 管理會打斷 demo 與課堂**：工作坊、hackathon、學生專案常卡在憑證設定，而不是產品邏輯。</li>
+<li>**Agent 需要標準化資料層**：Search / Scrape / Interact 若能用 MCP 暴露成工具，Claude、Cursor、Codex、Hermes Agent、OpenCode 都可用同一種模式接入。</li>
+</ul>
+<h1>可抽象出的 Agent Web Data Layer</h1>
+<p>| 層級 | Firecrawl Keyless 扮演角色 | 對 Agent 的價值 |</p>
+<p>|---|---|---|</p>
+<p>| Discover | Search live web results | 先找資料源，不必硬塞固定網址 |</p>
+<p>| Retrieve | Scrape URL to clean Markdown / structured data | 把網頁轉成 LLM 可讀格式，降低 token 浪費 |</p>
+<p>| Operate | Interact with dynamic pages | 支援點擊、表單、翻頁、動態站台 |</p>
+<p>| Connect | MCP / CLI / API | 讓不同 Agent host 都能接同一個資料工具 |</p>
+<p>| Scale | 先 keyless，再登入擴量 | 原型與教學低摩擦，正式產品再做憑證與額度管理 |</p>
+<h1>對欒帥的實用判讀</h1>
+<ul>
+<li>**適合 AI 課程與工作坊**：如果要教學生做 RAG、研究助理、競品分析或 Agent workflow，Keyless 可以減少 API key 分發與環境設定成本。</li>
+<li>**適合快速 demo**：在 LINE、簡報或現場教學中，可以先展示「Agent 讀世界」的流程，再討論正式部署的權限與成本。</li>
+<li>**適合知識庫擷取管線**：它與既有「分享連結 → 擷取 → Markdown → 靜態知識庫」流程概念相近，可作為未來自動化資料擷取層的候選工具。</li>
+<li>**MCP 是關鍵切入點**：若工具以 MCP 形式暴露，Agent 不需要特別寫 SDK，就能把搜尋、抓取、互動當成可調用能力。</li>
+<li>**Keyless 不等於無限制**：免費 1,000 credits 適合原型、教學、小型專案；正式產品仍要處理帳號、額度、監控、資料授權與合規。</li>
+</ul>
+<h1>可直接放進課程的示範流程</h1>
+<ul>
+<li>先問 Agent：「請搜尋某個主題的最新官方來源。」</li>
+<li>Agent 透過 Firecrawl Search 找資料源。</li>
+<li>對官方文件、部落格或 PDF 使用 Scrape / Parse，轉成乾淨 Markdown。</li>
+<li>讓 Agent 彙整重點、產生引用表、標註來源 URL。</li>
+<li>將結果寫入知識庫或研究筆記。</li>
+<li>討論正式部署時要補上的 API key、額度控管、robots / ToS、資料隱私與重試策略。</li>
+</ul>
+<h1>風險與導入注意</h1>
+<ul>
+<li>**不要把 keyless 當成 production 安全設計**：正式服務仍應使用帳號、API key、權限控管、用量監控與錯誤追蹤。</li>
+<li>**網頁抓取需尊重來源規範**：注意網站 ToS、robots、著作權、個資與商業資料使用限制。</li>
+<li>**乾淨 Markdown 不代表事實正確**：Firecrawl 解決資料格式問題，不負責判斷內容真偽；仍需來源可信度評估。</li>
+<li>**PDF 解析仍可能有版面限制**：表格、掃描圖、手寫文字、複雜欄位可能需要 OCR 或人工校對。</li>
+<li>**MCP endpoint 可用性需實測**：本文依官方發布與 Threads 貼文整理，尚未在本機實際接入 Claude / Cursor / Codex 做端到端測試。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文根據 Threads 貼文、Firecrawl 官方 Keyless 發布文、Firecrawl 首頁與 Brave Search 搜尋結果整理。Threads 提到的「PDF 解析成乾淨 Markdown」與官方近期產品線相符，但 Keyless 發布文的核心列舉主要是 Search / Scrape / Interact；若要在正式流程使用 PDF parse，仍需實測目前 keyless endpoint、CLI 或 docs 對 PDF 的實際支援範圍。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://www.threads.com/@aiposthub/post/DZxCdPUEQln · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Firecrawl</span><span class="tag">MCP</span><span class="tag">網頁抓取</span><span class="tag">資料擷取</span><span class="tag">PDF to Markdown</span><span class="tag">RAG</span><span class="tag">CLI</span><span class="tag">API</span><span class="tag">開發工具</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aiposthub/post/DZxCdPUEQln?xmt=AQG0Pz-fGBgE4einDzEcEKW95TyCW-vQ0QD15j12_yNqcgzJSYtqrphpdHm7YnVrFZgbv8aPAw&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DZxCdPUEQln?xmt=AQG0Pz-fGBgE4einDzEcEKW95TyCW-vQ0QD15j12_yNqcgzJSYtqrphpdHm7YnVrFZgbv8aPAw&amp;slof=1</a></p><p><a href="https://www.firecrawl.dev/blog/firecrawl-keyless-launch" target="_blank" rel="noopener">https://www.firecrawl.dev/blog/firecrawl-keyless-launch</a></p><p><a href="https://www.threads.com/@aiposthub/post/DZxCdPUEQln" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DZxCdPUEQln</a></p><p><a href="https://www.firecrawl.dev/blog/firecrawl-keyless-launch" target="_blank" rel="noopener">https://www.firecrawl.dev/blog/firecrawl-keyless-launch</a></p><p><a href="https://www.firecrawl.dev/" target="_blank" rel="noopener">https://www.firecrawl.dev/</a></p><p><a href="https://mcp.firecrawl.dev/v2/mcp" target="_blank" rel="noopener">https://mcp.firecrawl.dev/v2/mcp</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
