@@ -1,0 +1,92 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>永錫 Agent Skill 庫｜把 Codex 工作流沉澱成可分享的知識工作模組</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>永錫 Agent Skill 庫｜把 Codex 工作流沉澱成可分享的知識工作模組</h1><h1>永錫 Agent Skill 庫｜把 Codex 工作流沉澱成可分享的知識工作模組</h1>
+<p>來源為張永錫 Facebook 公開貼文，貼文請大家幫 GitHub repo 加星，並提到「Github Star 可以賺 Token」。貼文連結指向 `<a href="https://github.com/twhsi/yonghsi-agent-skills`，實際" target="_blank" rel="noopener">https://github.com/twhsi/yonghsi-agent-skills`，實際</a> GitHub API 解析後導向 `twhsi/skills`，repo 描述為「Yonghsi Agent Skill library for Codex workflows」。本文以 GitHub repo、README、Hermes.md 與 skill-index 作為主要穩定來源。</p>
+<h1>一句話摘要</h1>
+<p>這個 repo 的價值不在「求星」本身，而在示範如何把個人知識工作流程整理成可安裝、可驗證、可分享的 Codex Skills：從每日計畫、九宮格、FIRE 分析、Obsidian graph 到 EPUB / HyperCard，都被放進一個「Agent 高效率，人腦慢生活」的工作系統。</p>
+<h1>Facebook 貼文與圖片可確認資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 發布者 | 張永錫 |</p>
+<p>| 貼文時間 | Facebook 顯示約 1 小時前 |</p>
+<p>| 貼文主旨 | 發現 GitHub Star 可賺 Token，請大家幫 repo 加 Star |</p>
+<p>| 貼文連結 | `<a href="https://github.com/twhsi/yonghsi-agent-skills`" target="_blank" rel="noopener">https://github.com/twhsi/yonghsi-agent-skills`</a> |</p>
+<p>| 圖片可見文字 | 驗證通過、將獲得 +500 積分；再獲得 131 星即可達到下一檔（+2,000） |</p>
+<p>| 圖片驗證項 | 公開 repo、在 6 月 18 日前建立、屬於 GitHub 帳號或活動前已有貢獻、真實 GitHub Star 數達門檻 |</p>
+<h1>GitHub repo 快照</h1>
+<p>| 欄位 | 觀察值 |</p>
+<p>|---|---|</p>
+<p>| 實際 repo | `twhsi/skills` |</p>
+<p>| 說明 | Yonghsi Agent Skill library for Codex workflows |</p>
+<p>| 建立時間 | 2026-06-16 |</p>
+<p>| 最近推送 | 2026-06-18 |</p>
+<p>| 主要語言 | Python |</p>
+<p>| Stars | 71（查詢時點快照） |</p>
+<p>| Forks | 11（查詢時點快照） |</p>
+<p>| Issues | 1 open issue（查詢時點快照） |</p>
+<p>| License | GitHub API 未顯示 license |</p>
+<p>註：Stars / forks / issues 屬時間敏感數字，應以 GitHub 頁面當下顯示為準。</p>
+<h1>Repo 的核心定位</h1>
+<p>README 開宗明義寫道：</p>
+<p>&gt; 用 Desktop 概念幫助知識工作者：Agent 高效率，人腦慢生活。</p>
+<p>這不是單純的 prompt collection，而是一套「Hermes HyperCard Loop」：</p>
+<p>```text</p>
+<p>人腦慢想</p>
+<p>  -&gt; 卡片整理</p>
+<p>  -&gt; Agent 執行</p>
+<p>  -&gt; Skill 沉澱</p>
+<p>  -&gt; GitHub 分享</p>
+<p>  -&gt; 書籍連結</p>
+<p>  -&gt; 回到 Desktop 日常</p>
+<p>```</p>
+<p>這個循環很接近欒帥目前 AI 學習雷達與 Hermes 的方向：把一次次工作流沉澱成可重複操作的模組，再用 GitHub / Markdown / 靜態頁面保留長期可引用的入口。</p>
+<h1>目前 Skill 地圖</h1>
+<p>GitHub `docs/skill-index.md` 顯示目前包含以下正式 Skill：</p>
+<p>| Skill | 用途 |</p>
+<p>|---|---|</p>
+<p>| todays-daily-plan | 用口語把今日事項寫入 Obsidian Mandala Grid 九宮時段與日記 |</p>
+<p>| personal-athlete-81-grid | 產生大谷翔平式 81 宮格個人訓練圖 |</p>
+<p>| auto-luhmann-numberer | 盧曼式書籍與卡片盒編號、驗證與清理 |</p>
+<p>| project-note-json-to-epub | 將結構化 project-note JSON 轉成可驗證 EPUB |</p>
+<p>| epub-hypercard-obsidian | 將 EPUB 卡片書轉成 Obsidian HyperCard Markdown folder |</p>
+<p>| obsidian-graph-view | 從節點、TOC、關鍵字或卡片資料生成 Obsidian 風格 graph |</p>
+<p>| imandalart | 產生手機可讀的 3x3 九宮索引卡 |</p>
+<p>| markdown-nine-grid-clipboard | 將文字、九宮卡或八領域草稿轉成 Markdown 3x3 表格 |</p>
+<p>| fire-analysis-card | 以 Fact / Index / Relation / Encyclopedia 分析中文文章 |</p>
+<p>| fire-card-to-epub | 將 FIRE 分析卡或 project-note JSON 轉成 EPUB 書 |</p>
+<p>| pdca | 產生中文等寬羅盤式 PDCA / CAPD 問題解決卡 |</p>
+<h1>最值得觀察的 Featured Skill：今日的日計畫</h1>
+<p>README 將 `todays-daily-plan` 列為主打 Skill。它服務 Obsidian 的 Mandala Grid 日計畫檔，讓使用者用口語說：</p>
+<p>```text</p>
+<p>Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，日記 Miru 來訪，狀況不是很好，加油。</p>
+<p>```</p>
+<p>Agent 會把內容安全追加到今天的九宮時段或日記區塊，而不是手動尋找 Markdown section。這裡的設計重點包括：</p>
+<ul>
+<li>用自然語言當入口，而非要求使用者學複雜 CLI。</li>
+<li>將「今天」定位到年度日計畫中的 section。</li>
+<li>補齊固定九宮時段，例如 09-12、12-13、15-18、日記等。</li>
+<li>只追加，不重排全年檔案，避免破壞既有 Mandala Grid 結構。</li>
+</ul>
+<h1>對欒帥的可借鏡之處</h1>
+<ul>
+<li>**把工作流產品化**：每個 Skill 都不是單次 prompt，而是有用途、入口、文件、範例與安裝位置的微型產品。</li>
+<li>**把個人系統公開成 repo**：repo 不是只放程式碼，也能放方法論、書籍連結、技能索引與日常操作面板。</li>
+<li>**把 Agent 和慢思考分工**：快速轉檔、整理、驗證交給 Agent；判斷、選題、長期節奏留給人。</li>
+<li>**用 GitHub 當長期入口**：書籍、課程或社群貼文都可連回固定 repo / docs / skill 路徑。</li>
+<li>**把知識卡片與出版串起來**：FIRE 卡、九宮卡、Obsidian graph、EPUB、HyperCard 串成完整知識生產線。</li>
+</ul>
+<h1>可對照 AI 學習雷達的改造想法</h1>
+<p>| Yonghsi repo 做法 | AI 學習雷達可借鏡 |</p>
+<p>|---|---|</p>
+<p>| `Hermes.md` 作為總控台 | 為 AI 學習雷達建立更明確的「工作流總控頁」 |</p>
+<p>| `docs/skill-index.md` | 為已沉澱的 Hermes 技能、歸檔模式、PDF/OCR 流程做可瀏覽索引 |</p>
+<p>| 每個 Skill 有固定資料夾 | 把重複任務如 Threads 歸檔、Facebook Reels 餐廳歸檔、PDF OCR 做成正式技能頁 |</p>
+<p>| 書籍連結策略 | 未來課程、講義、LINE 分享都可連回穩定公開頁 |</p>
+<p>| GitHub Star / Token 激勵 | 若未來有公開工具，也可把 star、fork、issue 當成社群驗證與回饋機制 |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>Facebook 貼文中的 Token / 積分活動未顯示平台名稱；本文只記錄圖片可見驗證條件，不推定是哪一個服務或活動。</li>
+<li>GitHub repo 星數與 fork 數為查詢時點快照，會隨時間變動。</li>
+<li>本文未實際安裝或執行 repo 中的 Codex Skills，只根據公開 README、Hermes.md、skill-index 與 GitHub API metadata 做架構整理。</li>
+<li>Repo 未在 GitHub API 中顯示 license；若要重用內容或程式，應先確認作者授權。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則貼文值得歸檔，因為它展示了台灣知識工作者如何把個人 Agent 工作流轉化為公開 GitHub Skill library。對欒帥而言，這提供一個可參考的方向：AI 學習雷達不只保存外部工具，也可以逐步把自己的高頻流程沉澱成公開或半公開的「Hermes Skill Library」，形成可教、可分享、可驗證、可擴充的知識工作系統。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&amp;id=655603570 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Codex</span><span class="tag">Agent Skills</span><span class="tag">GitHub</span><span class="tag">知識工作流</span><span class="tag">Obsidian</span><span class="tag">Mandala Grid</span><span class="tag">HyperCard</span><span class="tag">Facebook</span><h3>原始連結</h3><p><a href="https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&amp;id=655603570" target="_blank" rel="noopener">https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&amp;id=655603570</a></p><p><a href="https://github.com/twhsi/skills" target="_blank" rel="noopener">https://github.com/twhsi/skills</a></p><p><a href="https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&amp;id=655603570" target="_blank" rel="noopener">https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&amp;id=655603570</a></p><p><a href="https://github.com/twhsi/yonghsi-agent-skills" target="_blank" rel="noopener">https://github.com/twhsi/yonghsi-agent-skills</a></p><p><a href="https://github.com/twhsi/skills" target="_blank" rel="noopener">https://github.com/twhsi/skills</a></p><p><a href="https://github.com/twhsi/skills/blob/main/README.md" target="_blank" rel="noopener">https://github.com/twhsi/skills/blob/main/README.md</a></p><p><a href="https://github.com/twhsi/skills/blob/main/Hermes.md" target="_blank" rel="noopener">https://github.com/twhsi/skills/blob/main/Hermes.md</a></p><p><a href="https://github.com/twhsi/skills/blob/main/docs/skill-index.md" target="_blank" rel="noopener">https://github.com/twhsi/skills/blob/main/docs/skill-index.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

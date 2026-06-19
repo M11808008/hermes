@@ -72,6 +72,41 @@
     "markdown": "articles/2026/06/2026-06-19-comfyui-kling-3-turbo-workflow-template.md"
   },
   {
+    "title": "永錫 Agent Skill 庫｜把 Codex 工作流沉澱成可分享的知識工作模組",
+    "date": "2026-06-19",
+    "source": "https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&id=655603570",
+    "author": "張永錫 / twhsi / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Codex",
+      "Agent Skills",
+      "GitHub",
+      "知識工作流",
+      "Obsidian",
+      "Mandala Grid",
+      "HyperCard",
+      "Facebook"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&id=655603570",
+      "https://github.com/twhsi/skills",
+      "https://m.facebook.com/story.php?story_fbid=pfbid03nmCicQSAGqmYDaWHrk59GTz5KGQmXvMGgfHDuDfEf3ibm9qftGaWSF3NYo8yyaTl&id=655603570",
+      "https://github.com/twhsi/yonghsi-agent-skills",
+      "https://github.com/twhsi/skills",
+      "https://github.com/twhsi/skills/blob/main/README.md",
+      "https://github.com/twhsi/skills/blob/main/Hermes.md",
+      "https://github.com/twhsi/skills/blob/main/docs/skill-index.md"
+    ],
+    "excerpt": "這個 repo 的價值不在「求星」本身，而在示範如何把個人知識工作流程整理成可安裝、可驗證、可分享的 Codex Skills：從每日計畫、九宮格、FIRE 分析、Obsidian graph 到 EPUB / HyperCard，都被放進一個「Agent 高效率，人腦慢生活」的工作系統。",
+    "slug": "2026-06-19-yonghsi-agent-skills-codex-workflow-library",
+    "html": "articles/2026-06-19-yonghsi-agent-skills-codex-workflow-library.html",
+    "markdown": "articles/2026/06/2026-06-19-yonghsi-agent-skills-codex-workflow-library.md"
+  },
+  {
     "title": "AI 智慧時代打造製造業永續競爭力｜製造業 AI Agent 與 n8n 實戰工作坊",
     "date": "2026-06-18",
     "source": "line-user-text",
