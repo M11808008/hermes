@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TigerAI Code2n8n Skill Pack｜把自然語言與既有程式轉成可治理的 n8n 工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>TigerAI Code2n8n Skill Pack｜把自然語言與既有程式轉成可治理的 n8n 工作流</h1><h1>TigerAI Code2n8n Skill Pack｜把自然語言與既有程式轉成可治理的 n8n 工作流</h1>
+<p>來源是 GitHub repository `MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack`。這個專案由 n8n Taipei Ambassador Morris Lu 發布，定位為把 AI coding 與企業級 n8n 工作流治理接起來的 Skill Pack：讓使用者用自然語言、便利貼需求，或指向既有 Apps Script / Express / Lambda / Docker stack，由 AI 產出可審查、可交接、可治理的 n8n workflow。</p>
+<h1>一句話摘要</h1>
+<p>Code2n8n 不是「把每一行 code 逐字翻成 n8n 節點」的轉譯器，而是一套 porting / review / validation / governance 方法：決定哪些複雜演算法留在 code，哪些觸發、跨系統串接、重試、人工審批、通知與執行歷史應該升到 n8n 可視化流程裡。</p>
+<h1>GitHub Snapshot</h1>
+<ul>
+<li>Repository：MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack</li>
+<li>描述：Build enterprise-grade n8n workflows using natural language sticky notes; transform human intent into complete, documented three-layer automation systems.</li>
+<li>主要語言：JavaScript</li>
+<li>授權：MIT License</li>
+<li>Stars / Forks：約 74 stars、18 forks（2026-06-19 snapshot）</li>
+<li>建立時間：2026-05-06</li>
+<li>最近更新：2026-06-19</li>
+</ul>
+<h1>核心定位</h1>
+<p>README 把 Code2n8n 說得很清楚：</p>
+<ul>
+<li>AI Coding（Claude Code / Codex / Antigravity）擅長寫 code。</li>
+<li>n8n 擅長讓 code 變成企業可管理、可審查、可交接的 workflow。</li>
+<li>Code2n8n Skill Pack 是兩者中間的橋。</li>
+<li>輸入可以是自然語言需求，也可以是既有系統。</li>
+<li>輸出不是單純 JSON，而是包含設計、治理、驗證與交接脈絡的 workflow package。</li>
+</ul>
+<h1>兩條使用路徑</h1>
+<p>```text</p>
+<p>Path A：from zero</p>
+<p>自然語言 / 黃色便利貼需求</p>
+<p>  → sticky-note-to-workflow</p>
+<p>  → n8n workflow</p>
+<p>Path B：port existing system</p>
+<p>Apps Script / Express / Lambda / Netlify Functions / Docker stack</p>
+<p>  → code-to-workflow</p>
+<p>  → code modules + n8n workflow + migration docs</p>
+<p>```</p>
+<h1>專案包含什麼</h1>
+<ul>
+<li>15 個 Claude Code / Antigravity skills。</li>
+<li>DSL v1.2 與三層 sticky-note workflow 結構。</li>
+<li>Cookbook：自然語言到 workflow 的範例。</li>
+<li>Reference corpus：2,061 個 community workflows，定位是 design lookup corpus，不是 certified templates。</li>
+<li>4 個 enterprise patterns。</li>
+<li>A2A directive：提供多語言 AI-to-AI 指令，規範什麼情況才能聲稱 validated / tested / production-ready。</li>
+<li>Security Review gate、Validation SOP、scanner、manifest、installer 與 optional live round-trip。</li>
+<li>Case studies：Google Workspace admin、LINE customer service、on-prem LINE customer service、Taiwan e-invoice unified SDK 等。</li>
+</ul>
+<h1>安裝與使用脈絡</h1>
+<ul>
+<li>Antigravity：在 n8n 專案中執行 `/install-n8n-pack`，再用自然語言描述需求。</li>
+<li>Claude Code：在工作目錄執行 `bash install.sh` 或 `install.ps1`，再描述新需求或指向既有 codebase。</li>
+<li>其他 AI assistant：可貼 cookbook 範例當 few-shot prompt，模仿三層結構輸出 n8n workflow JSON。</li>
+</ul>
+<h1>對欒帥的實用判讀</h1>
+<ul>
+<li>這很適合放進「AI Agent × n8n 自動化」課程，因為它不是只有炫技，而是把企業會問的治理、交接、驗證、責任邊界一起放進方法論。</li>
+<li>它可以補上一般 AI coding demo 的缺口：AI 寫得出功能，但企業需要知道流程怎麼被審核、誰能接手、錯誤怎麼回滾、權限怎麼治理。</li>
+<li>與 OpenAI Codex Record &amp; Replay、Claude Code Artifacts 可串成一條趨勢線：AI agent 正在從「生成程式」走向「沉澱技能、可視化成果、可治理流程」。</li>
+<li>可用於製造業、客服、報表、內部工具、Google Workspace 管理、LINE OA 流程等需要跨系統協作的場景。</li>
+<li>導入時要保留 n8n Enterprise / IT 的責任邊界：SSO、IAM、HA、Audit、Source Control、Environments 不是 Skill Pack 自己提供，而是工作流要能乾淨落在企業平台能力之上。</li>
+</ul>
+<h1>風險與限制</h1>
+<ul>
+<li>Reference workflows 是設計查找素材，不代表可直接上 production。</li>
+<li>Code2n8n 是 partition methodology，不是萬能 code-to-workflow compiler。</li>
+<li>Security Review gate 不是完整 SAST / DAST / fuzzer。</li>
+<li>workflow 上線仍需要 credentials、環境隔離、測試資料、rollback 與權限設計。</li>
+<li>repo 本身是很好的 agentic engineering case study，但正式採用仍要針對內部 SOP 做審查。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">n8n</span><span class="tag">Code2n8n</span><span class="tag">TigerAI</span><span class="tag">Agentic Engineering</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Antigravity</span><span class="tag">Workflow Automation</span><span class="tag">Governance</span><h3>原始連結</h3><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/README.zh.md" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/README.zh.md</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/CODE2N8N.md" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/CODE2N8N.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
