@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GSAP Skills｜讓 Claude、Cursor、Codex 寫出更高質感網頁動畫的官方 AI 技能包</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>GSAP Skills｜讓 Claude、Cursor、Codex 寫出更高質感網頁動畫的官方 AI 技能包</h1><h1>GSAP Skills｜讓 Claude、Cursor、Codex 寫出更高質感網頁動畫的官方 AI 技能包</h1>
+<p>來源是 AI郵報在 Threads 分享的 GSAP Skills 實測串文，並連到 AI郵報完整文章與 GreenSock 官方 GitHub repository。Threads 的核心觀點是：AI 會寫程式，但做網站常有「紫藍漸層、玻璃卡片、普通 fade in」的模板味；GSAP Skills 補上的是動畫技術正確性，真正的高質感仍需要設計參考與明確的負面約束。</p>
+<h1>一句話摘要</h1>
+<p>GSAP Skills 是 GreenSock 官方為 AI coding agents 準備的技能包，讓 Claude Code、Cursor、Codex、Windsurf、Copilot 等工具更正確使用 GSAP 的 timeline、ScrollTrigger、plugins、React hooks、cleanup 與 performance pattern；它解決「動畫寫法正確」，但不會自動解決「設計品味」。</p>
+<h1>Threads 串文重點</h1>
+<p>| 面向 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 問題 | AI 做網站常落入 AI SaaS 模板感：紫藍漸層、玻璃擬態、光球背景、所有區塊 fade in |</p>
+<p>| GSAP 用途 | 滾動式敘事、文字逐字進場、SVG 變形、滑鼠互動、Dashboard 動態轉場、整頁動畫時間軸 |</p>
+<p>| GSAP Skills 價值 | 把官方動畫寫法、最佳實踐、效能優化整理成 AI 看得懂的技能包 |</p>
+<p>| 適用工具 | Claude Code、Cursor、Codex、Windsurf 等 AI 編程工具 |</p>
+<p>| 實測流程 | 裝 GSAP Skills → 給高質感網站參考 → 要求先出設計方案 → 再實作 Hero / ScrollTrigger / Dashboard / Login 轉場 |</p>
+<p>| 關鍵 prompt | 不要紫藍漸層球、不要玻璃卡片、不要普通 fade in、不要制式 AI SaaS landing page |</p>
+<h1>官方 GitHub 確認資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Repository | greensock/gsap-skills |</p>
+<p>| 描述 | Official AI skills for GSAP；教 AI coding agents 正確使用 GSAP、最佳實踐、常見動畫模式與 plugin usage |</p>
+<p>| 授權 | MIT License |</p>
+<p>| Stars / Forks | 約 9.4k stars、585 forks（2026-06-19 snapshot） |</p>
+<p>| 支援格式 | Agent Skills format，搭配 skills CLI |</p>
+<p>| 支援 agent | Cursor、Claude Code、Codex、Windsurf、Copilot、Google Antigravity 等 40+ agents |</p>
+<p>| 安裝 | `npx skills add <a href="https://github.com/greensock/gsap-skills`" target="_blank" rel="noopener">https://github.com/greensock/gsap-skills`</a> |</p>
+<p>| Claude Code | `/plugin marketplace add greensock/gsap-skills` |</p>
+<h1>內建 8 個 Skills</h1>
+<p>| Skill | 用途 |</p>
+<p>|---|---|</p>
+<p>| gsap-core | `gsap.to()` / `from()` / `fromTo()`、duration、stagger、easing、defaults |</p>
+<p>| gsap-timeline | sequencing、position parameter、labels、nesting、playback |</p>
+<p>| gsap-scrolltrigger | scroll-linked animations、pinning、scrub、refresh、cleanup |</p>
+<p>| gsap-plugins | ScrollToPlugin、ScrollSmoother、Flip、Draggable、SplitText、MorphSVG、CustomEase 等 |</p>
+<p>| gsap-utils | clamp、mapRange、normalize、interpolate、random、snap、toArray、selector 等 helper |</p>
+<p>| gsap-react | React useGSAP hook、refs、`gsap.context()`、cleanup、SSR 注意事項 |</p>
+<p>| gsap-performance | transforms over layout props、will-change、batching、ScrollTrigger 效能建議 |</p>
+<p>| gsap-frameworks | Vue、Svelte 等框架 lifecycle、selector scoping、unmount cleanup |</p>
+<h1>對欒帥的實用判讀</h1>
+<ul>
+<li>**這是「AI 做前端」從能跑到有質感的關鍵補丁**：AI coding tools 本來就會寫 HTML / CSS / JS，但常缺動畫結構與效能判斷；GSAP Skills 讓它更像懂 GSAP 的前端工程師。</li>
+<li>**適合做課程示範**：可用同一個 landing page prompt，示範「未安裝 skill」與「安裝 GSAP Skills + 設計參考」的差異。</li>
+<li>**不要把它當設計師替代品**：GSAP Skills 解決動畫 API 與 pattern；高質感仍來自 reference、art direction、節奏判斷、品牌語彙與人工 review。</li>
+<li>**很適合搭配你的知識庫／課程頁設計標準**：若要做有質感的 course landing、AI dashboard、互動簡報或 demo site，可把 GSAP Skills 當成 coding agent 的動畫上下文。</li>
+<li>**prompt 要先做設計方案，不要直接 code**：先要求 AI 產出視覺風格、Hero 分鏡、ScrollTrigger 敘事、Dashboard 動畫與排除項目，確認後再實作，能大幅降低模板味。</li>
+</ul>
+<h1>可複製的工作流</h1>
+<p>```text</p>
+<ul>
+<li>安裝 GSAP Skills。</li>
+<li>收集 3–5 個高質感網站參考：creative developer portfolio、digital magazine、premium product site、AI intelligence dashboard。</li>
+<li>明確列出不要什麼：不要紫藍漸層球、不要玻璃擬態卡片、不要普通 fade in、不要制式 AI SaaS 模板。</li>
+<li>先請 AI 產出設計方案，不要寫 code。</li>
+<li>確認 Hero、scroll narrative、dashboard preview、micro-interactions 與 transition 節奏。</li>
+<li>再請 AI 實作 HTML / CSS / JS 或 React / Vue / Svelte。</li>
+<li>逐段 review animation timing、cleanup、performance 與可讀性。</li>
+</ul>
+<p>```</p>
+<h1>可用 Prompt 片段</h1>
+<p>```text</p>
+<p>請使用 GSAP 做一個高質感互動網站，但不要做成一般 AI SaaS 模板。</p>
+<p>避免紫藍漸層球、玻璃擬態卡片、普通 fade in、制式 landing page。</p>
+<p>方向請參考 creative developer portfolio + AI intelligence dashboard + digital magazine。</p>
+<p>請先不要寫 code，先產出完整設計方案：視覺風格、Hero 進場分鏡、ScrollTrigger 滾動敘事、Dashboard 動畫、Login 到 Dashboard 轉場、要用哪些 GSAP 技術、要避免哪些老套效果。</p>
+<p>等我確認設計方向後，再開始實作。</p>
+<p>```</p>
+<h1>判讀限制</h1>
+<p>本文依 Threads 串文、AI郵報完整文章與 GreenSock 官方 GitHub README/API metadata 整理。尚未在本機實際安裝 `greensock/gsap-skills` 並比較同一專案輸出差異；stars、forks、repo 狀態為 2026-06-19 snapshot。正式導入時需確認所用 agent 是否支援 Agent Skills、skills CLI 是否可用，以及專案框架的 GSAP cleanup / SSR 要求。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://www.threads.com/@aiposthub/post/DZxXb0MgWm4 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Coding</span><span class="tag">GSAP</span><span class="tag">GSAP Skills</span><span class="tag">Web Animation</span><span class="tag">Claude Code</span><span class="tag">Cursor</span><span class="tag">Codex</span><span class="tag">Frontend</span><span class="tag">Design</span><span class="tag">開發工具</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aiposthub/post/DZxXb0MgWm4?xmt=AQG0aiMJR9byi5dFMrNB5wihSHfaSJjjNF8duFPAJ_6_qtOC3YW_QBTIAAP_Ol0fArgh6BUj&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DZxXb0MgWm4?xmt=AQG0aiMJR9byi5dFMrNB5wihSHfaSJjjNF8duFPAJ_6_qtOC3YW_QBTIAAP_Ol0fArgh6BUj&amp;slof=1</a></p><p><a href="https://github.com/greensock/gsap-skills" target="_blank" rel="noopener">https://github.com/greensock/gsap-skills</a></p><p><a href="https://www.threads.com/@aiposthub/post/DZxXb0MgWm4" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DZxXb0MgWm4</a></p><p><a href="https://www.aiposthub.com/claude-gsap-skills/" target="_blank" rel="noopener">https://www.aiposthub.com/claude-gsap-skills/</a></p><p><a href="https://github.com/greensock/gsap-skills" target="_blank" rel="noopener">https://github.com/greensock/gsap-skills</a></p><p><a href="https://gsap.com/" target="_blank" rel="noopener">https://gsap.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

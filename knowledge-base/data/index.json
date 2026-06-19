@@ -37,6 +37,36 @@
     "markdown": "articles/2026/06/2026-06-19-ai-newsroom-eight-tool-workflow-threads.md"
   },
   {
+    "title": "新聞媒體 AI 工具箱｜8 款工具把記者會變成即時短影音與多平台快訊",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH",
+    "author": "AI 剪輯工具推薦 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Newsroom",
+      "Short Video",
+      "Content Automation",
+      "n8n",
+      "Perplexity",
+      "Runway",
+      "HeyGen",
+      "OpusClip",
+      "Media Workflow"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH?xmt=AQG0teSxT-fW-zG9hCRQKy0-6V5Zn3p8dWFoBFqNFznZYmjY6TGWdSe3iiRMbdWPCA9DC-R5_w&slof=1",
+      "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH"
+    ],
+    "excerpt": "這則清單的價值不在單一工具，而是把新聞室工作拆成「素材切片、主播播報、翻譯配音、畫面生成、字幕、短影音、多平台發布、背景查核」八個節點；若用 n8n 串接，會接近一套輕量即時新聞台 workflow。",
+    "slug": "2026-06-19-ai-newsroom-eight-tools-live-event-publishing-workflow",
+    "html": "articles/2026-06-19-ai-newsroom-eight-tools-live-event-publishing-workflow.html",
+    "markdown": "articles/2026/06/2026-06-19-ai-newsroom-eight-tools-live-event-publishing-workflow.md"
+  },
+  {
     "title": "ChatGPT 照片轉民俗裝飾平面插畫｜Decorative Folk Flat Illustration Prompt 範例",
     "date": "2026-06-19",
     "source": "https://www.threads.com/@___kekeke____/post/DZsG9JRmWtA",
@@ -124,6 +154,36 @@
     "slug": "2026-06-19-chatgpt-paper-cut-layered-illustration-prompt",
     "html": "articles/2026-06-19-chatgpt-paper-cut-layered-illustration-prompt.html",
     "markdown": "articles/2026/06/2026-06-19-chatgpt-paper-cut-layered-illustration-prompt.md"
+  },
+  {
+    "title": "Claude Code Artifacts｜把 coding session 變成可分享、會更新的團隊互動頁",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@claudeai/post/DZvL805EbGH",
+    "author": "Claude by Anthropic / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Artifacts",
+      "Team Collaboration",
+      "Coding Agent",
+      "Dashboard",
+      "Developer Workflow",
+      "Anthropic"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@claudeai/post/DZvL805EbGH?xmt=AQG0hLzpzp8B32Zc3PUCOAdl6evkrwQL5M5wgtTThYDvotpnWEbn-ktA6FO0Ps_DoBu4xCJT&slof=1",
+      "https://claude.com/blog/artifacts-in-claude-code",
+      "https://www.threads.com/@claudeai/post/DZvL805EbGH",
+      "https://claude.com/blog/artifacts-in-claude-code"
+    ],
+    "excerpt": "Claude Code Artifacts 把「AI agent 在終端裡做了什麼」轉成團隊可共同查看的 live page；它解決的是 agentic coding 的協作與可視化問題，讓 reviewer、PM、stakeholder 不必只靠 chat log 或口頭轉述理解進度。",
+    "slug": "2026-06-19-claude-code-artifacts-live-team-pages",
+    "html": "articles/2026-06-19-claude-code-artifacts-live-team-pages.html",
+    "markdown": "articles/2026/06/2026-06-19-claude-code-artifacts-live-team-pages.md"
   },
   {
     "title": "ComfyUI × Kling 3.0 Turbo｜官方 Partner Node 影片生成工作流上線",
@@ -224,6 +284,41 @@
     "slug": "2026-06-19-gemini-learning-map-bnext-35-guides",
     "html": "articles/2026-06-19-gemini-learning-map-bnext-35-guides.html",
     "markdown": "articles/2026/06/2026-06-19-gemini-learning-map-bnext-35-guides.md"
+  },
+  {
+    "title": "GSAP Skills｜讓 Claude、Cursor、Codex 寫出更高質感網頁動畫的官方 AI 技能包",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@aiposthub/post/DZxXb0MgWm4",
+    "author": "AI郵報 / GreenSock / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Coding",
+      "GSAP",
+      "GSAP Skills",
+      "Web Animation",
+      "Claude Code",
+      "Cursor",
+      "Codex",
+      "Frontend",
+      "Design",
+      "開發工具"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DZxXb0MgWm4?xmt=AQG0aiMJR9byi5dFMrNB5wihSHfaSJjjNF8duFPAJ_6_qtOC3YW_QBTIAAP_Ol0fArgh6BUj&slof=1",
+      "https://github.com/greensock/gsap-skills",
+      "https://www.threads.com/@aiposthub/post/DZxXb0MgWm4",
+      "https://www.aiposthub.com/claude-gsap-skills/",
+      "https://github.com/greensock/gsap-skills",
+      "https://gsap.com/"
+    ],
+    "excerpt": "GSAP Skills 是 GreenSock 官方為 AI coding agents 準備的技能包，讓 Claude Code、Cursor、Codex、Windsurf、Copilot 等工具更正確使用 GSAP 的 timeline、ScrollTrigger、plugins、React hooks、cleanup 與 performance pattern；它解決「動畫寫法正確」，但不會自動解決「設計品味」。",
+    "slug": "2026-06-19-gsap-skills-ai-coding-web-animation-workflow",
+    "html": "articles/2026-06-19-gsap-skills-ai-coding-web-animation-workflow.html",
+    "markdown": "articles/2026/06/2026-06-19-gsap-skills-ai-coding-web-animation-workflow.md"
   },
   {
     "title": "黃仁勳 Physical AI 論述｜別只卷 IT，把 AI 帶進製造、物流與物理世界",
@@ -361,6 +456,36 @@
     "slug": "2026-06-19-openai-codex-oauth-openclaw-hermes-setup-koc",
     "html": "articles/2026-06-19-openai-codex-oauth-openclaw-hermes-setup-koc.html",
     "markdown": "articles/2026/06/2026-06-19-openai-codex-oauth-openclaw-hermes-setup-koc.md"
+  },
+  {
+    "title": "OpenAI Codex Record & Replay｜示範一次 Mac 工作流，自動變成可重用 Skill",
+    "date": "2026-06-19",
+    "source": "https://www.threads.com/@s_h_u_ooo/post/DZv49c9DvfA",
+    "author": "碩 / OpenAI Developers / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Codex",
+      "Record & Replay",
+      "Skills",
+      "Computer Use",
+      "macOS",
+      "Workflow Automation",
+      "OpenAI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@s_h_u_ooo/post/DZv49c9DvfA?xmt=AQG08M8PxpDuS6b7YlD940afAXddrBQ6wElfDFroMSv-1JJVN6qwc1FUedkgtGc3CgDXZ1X5&slof=1",
+      "https://developers.openai.com/codex/record-and-replay",
+      "https://www.threads.com/@s_h_u_ooo/post/DZv49c9DvfA",
+      "https://developers.openai.com/codex/record-and-replay"
+    ],
+    "excerpt": "Record & Replay 是 Codex 從「你用 prompt 教它」走向「你做一次給它看」的功能：適合重複、個人偏好強、很難用文字說清楚的流程，例如上字幕、請假申請、整理資料、壓縮影片、報銷或下載固定報表。",
+    "slug": "2026-06-19-openai-codex-record-replay-mac-workflow-skill",
+    "html": "articles/2026-06-19-openai-codex-record-replay-mac-workflow-skill.html",
+    "markdown": "articles/2026/06/2026-06-19-openai-codex-record-replay-mac-workflow-skill.md"
   },
   {
     "title": "Palmier Pro｜讓 Claude、Codex 直接操作時間軸的 AI 原生影片剪輯器",
