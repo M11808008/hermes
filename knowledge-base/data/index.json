@@ -32,6 +32,42 @@
     "markdown": "articles/2026/06/2026-06-20-claude-code-mastering-30-minutes-agent-prompting.md"
   },
   {
+    "title": "NotebookLM 辦公室五大工作流｜多來源整合、報告、會議、引用問答與團隊知識庫",
+    "date": "2026-06-20",
+    "source": "https://www.threads.com/@janrobert1722/post/DZxKYqviZtY",
+    "author": "jan robert / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "NotebookLM",
+      "Google",
+      "Google Workspace",
+      "知識管理",
+      "辦公自動化",
+      "會議整理",
+      "Prompt Engineering",
+      "教育行政"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@janrobert1722/post/DZxKYqviZtY",
+      "https://support.google.com/notebooklm/answer/16215270",
+      "https://www.threads.com/@janrobert1722/post/DZxKYqviZtY",
+      "https://support.google.com/notebooklm/answer/16215270",
+      "https://support.google.com/notebooklm/answer/16454555",
+      "https://support.google.com/notebooklm/answer/14276468",
+      "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-09-notebooklm-gemini-3-5-antigravity-agentic-research.html",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook.html"
+    ],
+    "excerpt": "NotebookLM 最適合放在「可信來源內的知識整理與交付」位置：先把公司文件、會議紀錄、報告、合約、SOP、課程教材整理成分層 notebook，再用明確 prompt 要它做跨來源比較、報告草稿、會議待辦、引用問答與新人/團隊知識庫；高風險輸出仍要人工複核來源、權限、數字與責任歸屬。",
+    "slug": "2026-06-20-notebooklm-office-five-workflows-threads",
+    "html": "articles/2026-06-20-notebooklm-office-five-workflows-threads.html",
+    "markdown": "articles/2026/06/2026-06-20-notebooklm-office-five-workflows-threads.md"
+  },
+  {
     "title": "AI 新聞室工具鏈｜8 款工具把記者會轉成快訊、短影音與多語發布",
     "date": "2026-06-19",
     "source": "https://www.threads.com/@aicuttools/post/DZu2LPzFWuH",

@@ -1,0 +1,82 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NotebookLM 辦公室五大工作流｜多來源整合、報告、會議、引用問答與團隊知識庫</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>NotebookLM 辦公室五大工作流｜多來源整合、報告、會議、引用問答與團隊知識庫</h1><h1>NotebookLM 辦公室五大工作流｜多來源整合、報告、會議、引用問答與團隊知識庫</h1>
+<p>來源是 Threads@janrobert1722 的長文，主軸是「NotebookLM 在辦公室環境最常被用的 5 大功能」。原文偏實用教學與推廣語氣；本文保留可落地的工作流，但用 Google 官方 Help 與欒帥既有 NotebookLM 文章校正功能邊界，避免把尚未普及或方案限定的功能當成所有帳號都可用。</p>
+<h1>一句話摘要</h1>
+<p>NotebookLM 最適合放在「可信來源內的知識整理與交付」位置：先把公司文件、會議紀錄、報告、合約、SOP、課程教材整理成分層 notebook，再用明確 prompt 要它做跨來源比較、報告草稿、會議待辦、引用問答與新人/團隊知識庫；高風險輸出仍要人工複核來源、權限、數字與責任歸屬。</p>
+<h1>Threads 原文整理出的五大功能</h1>
+<p>| 功能 | 原文主張 | 轉成可執行工作流 |</p>
+<p>|---|---|---|</p>
+<p>| 多來源知識庫整合 | 匯入 Docs、Sheets、Slides、PDF、Word、網頁、YouTube、資料夾等來源，讓 AI 建成專屬知識大腦 | 依主題建立 notebook：公司規章、產品資料、客戶合約、行銷企劃、課程教材；不要把所有資料混在同一本 |</p>
+<p>| 深度分析與專業報告 | 從資料中產出摘要、分析、建議、行動方案、簡報大綱 | 用「目的 + 範圍 + 格式 + 語氣 + 長度」下 prompt，並要求每個結論附來源 |</p>
+<p>| 會議轉錄與整理 | 上傳錄音後整理逐字稿、決議、待辦、負責人與截止日 | 會前先放議程與背景資料，會後上傳錄音/逐字稿，再生成 action items；人名、日期、數字必須人工核對 |</p>
+<p>| 知識問答與精準引用 | 像內部 Google，只從上傳來源回答並標註引用 | 適合查合約條款、SOP、過去案例、課程教材；問句要明確到文件範圍與輸出格式 |</p>
+<p>| 協作共用與團隊知識庫 | 建立團隊空間、設定權限、共用知識資產 | 以 Google Workspace 權限治理為前提：公司級、部門級、專案級分層，指定知識守門員維護 |</p>
+<h1>欒帥可直接套用的 Prompt 模板</h1>
+<h2>1. 多來源專案復盤</h2>
+<p>```text</p>
+<p>請只根據我這本 Notebook 的來源，整理過去 3 年專案資料。</p>
+<p>輸出表格欄位：專案名稱、目標、預算區間、成功關鍵、失敗原因、風險點、可沿用做法、來源引用。</p>
+<p>請最後給出今年最適合沿用的 5 條 SOP，並標註每條來自哪份文件。</p>
+<p>```</p>
+<h2>2. 給主管看的月報</h2>
+<p>```text</p>
+<p>根據本月會議紀錄、任務追蹤與數據表，寫一份給主管看的月報。</p>
+<p>請包含：成果摘要、進度、延遲/風險、下月計畫、需要主管決策的事項。</p>
+<p>格式：先 200 字摘要，再用表格列重點；語氣正式、務實、不要過度行銷。</p>
+<p>每個重要結論請附來源引用。</p>
+<p>```</p>
+<h2>3. 會議待辦與爭議點</h2>
+<p>```text</p>
+<p>請根據會議逐字稿與議程，整理：</p>
+<ul>
+<li>已決議事項</li>
+<li>待辦事項：任務、負責人、截止日、優先級</li>
+<li>尚未有共識的爭議點</li>
+<li>下次會議應先討論的 5 個問題</li>
+</ul>
+<p>若逐字稿中沒有明確負責人或日期，請標註「待確認」，不要自行猜測。</p>
+<p>```</p>
+<h2>4. 合約 / 規章問答</h2>
+<p>```text</p>
+<p>請只根據我提供的合約與公司規章回答：</p>
+<p>問題：如果對方延遲交付超過 14 天，我方可採取哪些處理方式？</p>
+<p>請列出相關條款、條款原文摘要、可採取行動、風險提醒、需要法務確認的事項。</p>
+<p>每一點都要標示來源文件與條款位置。</p>
+<p>```</p>
+<h2>5. 新人入門知識庫</h2>
+<p>```text</p>
+<p>請把這本 Notebook 的資料整理成新人入門指南。</p>
+<p>輸出：第一週學習路線、必讀文件清單、常見問題、容易踩雷的流程、可以問誰、30 天內應完成的任務。</p>
+<p>請區分「全公司通用」、「部門限定」、「專案限定」三層。</p>
+<p>```</p>
+<h1>使用架構建議</h1>
+<p>| 層級 | Notebook 類型 | 適合資料 | 權限建議 |</p>
+<p>|---|---|---|---|</p>
+<p>| 公司級 | 公司規章 / 品牌 / 制度 | 員工手冊、SOP、政策、表單 | 多數人可檢視，少數知識守門員可維護 |</p>
+<p>| 部門級 | 行銷 / 業務 / 行政 / 教學 | 部門流程、案例、話術、教材 | 部門內可編輯，跨部門可視需要檢視 |</p>
+<p>| 專案級 | 單一客戶或活動 | 合約、會議、時程、報價、風險紀錄 | 僅專案成員可存取；含個資/商業機密不得公開分享 |</p>
+<p>| 個人級 | 個人研究 / 備課 | 閱讀資料、靈感、草稿 | 個人維護，成熟後再升級到團隊 notebook |</p>
+<h1>重要校正與限制</h1>
+<ul>
+<li>**來源類型以官方 Help 與帳號介面為準**：Google Help 顯示 NotebookLM 支援加入或探索來源，且支援多種文件與音訊來源；但實際檔案大小、數量、格式、Drive 匯入限制與方案差異會變動。</li>
+<li>**「即時會議轉錄」不應過度解讀**：原文把 NotebookLM 描述成開會時即時錄音整理工具；導入時應先確認目前帳號是否支援直接錄音或音訊上傳。更穩妥做法是用 Google Meet / 錄音工具產生音訊或逐字稿，再匯入 NotebookLM 整理。</li>
+<li>**團隊空間與權限治理要小心**：NotebookLM 的分享、Workspace、公開 notebook、featured notebook 等能力會依帳號與政策不同；含客戶資料、合約、報名名單、個資的 notebook 不可任意公開。</li>
+<li>**AI 報告不是最後答案**：合約、法規、財務、醫療、人資等場景，一定要人工確認引用來源、日期、數字、人名與決策責任。</li>
+<li>**先分類再上傳**：原文最重要的一點是「不要把雜亂資料全丟進同一本」。NotebookLM 的品質很大程度取決於資料庫設計，而不是 prompt 魔法。</li>
+</ul>
+<h1>對欒帥的應用價值</h1>
+<ul>
+<li>**AI 課程教材**：可把 NotebookLM 當成「企業知識管理 / 辦公自動化」案例，讓學員練習建來源庫、問問題、產生報告、驗證引用。</li>
+<li>**課程行政與報名資料**：適合整理去識別化後的 FAQ、SOP、回饋摘要；含個資的原始名單仍應保存在私密本機或受控 Workspace，不公開部署。</li>
+<li>**AI 學習雷達互補**：雷達負責外部趨勢歸檔；NotebookLM 適合針對單一主題建立可信資料庫，再輸出教案、簡報、報告草稿。</li>
+<li>**企業導入顧問**：可用「先建庫、再問答、再報告、再治理」四步驟說明，而不是只賣「AI 幫你整理」。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads 原貼： <a href="https://www.threads.com/@janrobert1722/post/DZxKYqviZtY" target="_blank" rel="noopener">https://www.threads.com/@janrobert1722/post/DZxKYqviZtY</a></li>
+<li>NotebookLM Help：Add or discover new sources： <a href="https://support.google.com/notebooklm/answer/16215270" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16215270</a></li>
+<li>NotebookLM Help：Generate Video Overviews： <a href="https://support.google.com/notebooklm/answer/16454555" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16454555</a></li>
+<li>NotebookLM Help Center： <a href="https://support.google.com/notebooklm/answer/14276468" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/14276468</a></li>
+<li>Google 官方 NotebookLM agentic research 更新： <a href="https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/</a></li>
+<li>既有 AI 學習雷達：NotebookLM 升級為代理式研究夥伴： <a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-09-notebooklm-gemini-3-5-antigravity-agentic-research.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-09-notebooklm-gemini-3-5-antigravity-agentic-research.html</a></li>
+<li>既有 AI 學習雷達：NotebookLM 代理式研究圖書館流程： <a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook.html</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-20 · https://www.threads.com/@janrobert1722/post/DZxKYqviZtY · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">NotebookLM</span><span class="tag">Google</span><span class="tag">Google Workspace</span><span class="tag">知識管理</span><span class="tag">辦公自動化</span><span class="tag">會議整理</span><span class="tag">Prompt Engineering</span><span class="tag">教育行政</span><h3>原始連結</h3><p><a href="https://www.threads.com/@janrobert1722/post/DZxKYqviZtY" target="_blank" rel="noopener">https://www.threads.com/@janrobert1722/post/DZxKYqviZtY</a></p><p><a href="https://support.google.com/notebooklm/answer/16215270" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16215270</a></p><p><a href="https://www.threads.com/@janrobert1722/post/DZxKYqviZtY" target="_blank" rel="noopener">https://www.threads.com/@janrobert1722/post/DZxKYqviZtY</a></p><p><a href="https://support.google.com/notebooklm/answer/16215270" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16215270</a></p><p><a href="https://support.google.com/notebooklm/answer/16454555" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16454555</a></p><p><a href="https://support.google.com/notebooklm/answer/14276468" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/14276468</a></p><p><a href="https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-09-notebooklm-gemini-3-5-antigravity-agentic-research.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-09-notebooklm-gemini-3-5-antigravity-agentic-research.html</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-06-18-notebooklm-agentic-research-library-google-ai-ultra-workflow-facebook.html</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
