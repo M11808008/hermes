@@ -140,6 +140,47 @@
     "markdown": "articles/2026/06/2026-06-20-lm-studio-apple-wwdc-kimi-k26-mac-cluster.md"
   },
   {
+    "title": "Mac 本地 AI Agent 週末專案｜Rapid-MLX、Gemma 4 E4B、Hermes、SearXNG 與 Firecrawl 的輕量私有代理架構",
+    "date": "2026-06-20",
+    "source": "https://www.threads.com/@yeulin1129/post/DZy36FiHxKY",
+    "author": "鄭宇麟（@yeulin1129）；整理：Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Local AI",
+      "AI Agent",
+      "Hermes Agent",
+      "Rapid-MLX",
+      "MLX",
+      "Gemma 4",
+      "Apple Silicon",
+      "SearXNG",
+      "Firecrawl",
+      "OrbStack",
+      "Self Hosted"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@yeulin1129/post/DZy36FiHxKY",
+      "https://www.threads.com/@yeulin1129/post/DZy36FiHxKY",
+      "https://www.threads.com/@yeulin1129/post/DZy36FiHxKY",
+      "https://github.com/raullenchai/Rapid-MLX",
+      "https://rapidmlx.com",
+      "https://huggingface.co/mlx-community/gemma-4-E4B-it-qat-4bit",
+      "https://github.com/NousResearch/hermes-agent",
+      "https://docs.searxng.org",
+      "https://github.com/searxng/searxng",
+      "https://github.com/firecrawl/firecrawl",
+      "https://orbstack.dev"
+    ],
+    "excerpt": "# Mac 本地 AI Agent 週末專案｜Rapid-MLX、Gemma 4 E4B、Hermes、SearXNG 與 Firecrawl 的輕量私有代理架構 來源是 欒帥分享的 Threads 貼文。原文作者把一台 24GB Apple Silicon MacBook Air 當作本地 AI agent lab：",
+    "slug": "2026-06-20-local-mac-ai-agent-rapid-mlx-gemma-hermes-threads",
+    "html": "articles/2026-06-20-local-mac-ai-agent-rapid-mlx-gemma-hermes-threads.html",
+    "markdown": "articles/2026/06/2026-06-20-local-mac-ai-agent-rapid-mlx-gemma-hermes-threads.md"
+  },
+  {
     "title": "NotebookLM × Claude Cowork｜把 YouTube 專業頻道轉成 AI 知識庫與內容產出系統",
     "date": "2026-06-20",
     "source": "https://www.facebook.com/reel/875962008828926",
