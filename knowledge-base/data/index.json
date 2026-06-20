@@ -102,6 +102,44 @@
     "markdown": "articles/2026/06/2026-06-20-claude-code-mastering-30-minutes-agent-prompting.md"
   },
   {
+    "title": "LM Studio × Apple WWDC26｜4 台 Mac Studio 本地跑 1T Kimi K2.6 的 MLX Distributed 示範",
+    "date": "2026-06-20",
+    "source": "https://www.koc.com.tw/archives/646559",
+    "author": "電腦王阿達 / 達小編；整理：Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Apple",
+      "WWDC26",
+      "LM Studio",
+      "MLX",
+      "MLX Distributed",
+      "Kimi K2.6",
+      "Local AI",
+      "Mac Studio",
+      "RDMA-over-Thunderbolt",
+      "Edge AI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.koc.com.tw/archives/646559",
+      "https://www.koc.com.tw/archives/646559",
+      "https://www.koc.com.tw/archives/646559",
+      "https://www.youtube.com/watch?v=Wpwjqk1UGnQ",
+      "https://github.com/ml-explore/mlx",
+      "https://ml-explore.github.io/mlx/build/html/usage/distributed.html",
+      "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "https://lmstudio.ai",
+      "https://lmstudio.ai/lm-link"
+    ],
+    "excerpt": "Apple 在 WWDC26「Inside Apple Intelligence and Xcode」特別講座尾段，邀請 LM Studio 展示用 4 台 Mac Studio 透過 Thunderbolt 5 / RDMA-over-Thunderbolt 組成本地叢集，運行 1 兆參數 Kimi K2.6，並從 MacBook 與 iPhone 透過 LM Link 安全遠端使用；這代表「本地前沿模型」開始從單機玩具走向小型私有叢集。",
+    "slug": "2026-06-20-lm-studio-apple-wwdc-kimi-k26-mac-cluster",
+    "html": "articles/2026-06-20-lm-studio-apple-wwdc-kimi-k26-mac-cluster.html",
+    "markdown": "articles/2026/06/2026-06-20-lm-studio-apple-wwdc-kimi-k26-mac-cluster.md"
+  },
+  {
     "title": "NotebookLM 辦公室五大工作流｜多來源整合、報告、會議、引用問答與團隊知識庫",
     "date": "2026-06-20",
     "source": "https://www.threads.com/@janrobert1722/post/DZxKYqviZtY",
