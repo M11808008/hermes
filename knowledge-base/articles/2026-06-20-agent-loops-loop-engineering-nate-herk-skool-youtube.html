@@ -1,0 +1,142 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agent Loops / Loop Engineering 入門｜Reason-Act-Observe、驗證條件與停止標準</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Agent Loops / Loop Engineering 入門｜Reason-Act-Observe、驗證條件與停止標準</h1><h1>Agent Loops / Loop Engineering 入門｜Reason-Act-Observe、驗證條件與停止標準</h1>
+<p>來源是 欒帥分享的 AI Automation Society / Skool 貼文。貼文附上 Nate Herk 的 YouTube 影片《Finally. Agent Loops Clearly Explained.》，以及兩個 Skool 附件：`agent-loops-beginner-guide.html`、`agent-loop-source-audit-report.html`。本文以 Skool 貼文與 YouTube transcript 為主，並用 Forward Future / Matthew Berman 的 Loop Library 官方 repo 補強「loop」作為可重複 agent workflow 的定義。</p>
+<h1>一句話摘要</h1>
+<p>Agent loop 不是「同時開五個代理人炫技」，而是把人類原本會做的回饋、驗證、修改、再驗證流程，設計成 agent 可自行執行的循環：reason → act → observe → repeat，直到達到可檢查的 done criteria 或觸發 hard stop。</p>
+<h1>影片核心觀念</h1>
+<p>| 概念 | Nate Herk 的說法 | 對實作的意義 |</p>
+<p>|---|---|---|</p>
+<p>| Loop engineering | 不再只是直接 prompt coding agent，而是設計會 prompt agent 的系統 | 重點從「一次寫好 prompt」轉成「建立回饋迭代流程」 |</p>
+<p>| 兩大支柱 | goal 與 verification | 目標要清楚；agent 必須知道如何檢查自己有沒有完成 |</p>
+<p>| 基本循環 | reason / act / observe / repeat | 先規劃，執行，觀察結果，再依結果修正 |</p>
+<p>| Done criteria | agent 要知道什麼叫做完成 | 越能量化越好，例如測試全綠、分數達標、錯誤數為 0 |</p>
+<p>| Hard stop | 不讓 agent 無限迭代 | 設定最大輪數、時間、成本、或無改善時停止 |</p>
+<p>| 驗證比架構重要 | 不一定需要多 agent fleet | 多數任務用一個 terminal session + 好 prompt + 驗證迴圈即可 |</p>
+<h1>影片中的三個例子</h1>
+<h2>1. Thumbnail scoring loop</h2>
+<p>流程：</p>
+<ul>
+<li>生成 10 個 YouTube thumbnail 概念。</li>
+<li>用 rubric 評分：小尺寸清晰度、好奇心、情緒張力、視覺對比等。</li>
+<li>選 top 3。</li>
+<li>找出每個概念最弱處並改進。</li>
+<li>重新評分，持續迭代最強版本。</li>
+</ul>
+<p>Nate 的反思：這個例子有用，但「until satisfied」太主觀；更好的做法是讓 done criteria 盡量客觀，例如把 scoring agent 獨立出來，或用固定 rubric / A-B 標準 / 人類樣本校準它。</p>
+<h2>2. Three.js airplane loop</h2>
+<p>流程：</p>
+<ul>
+<li>要 coding agent 用 Three.js 做可互動 3D 飛機。</li>
+<li>agent 生成程式。</li>
+<li>開瀏覽器、旋轉、截圖、檢查渲染是否正常。</li>
+<li>根據視覺/功能檢查結果反覆修改。</li>
+</ul>
+<p>重點：loop 不保證 100% 完美，但能讓第一輪輸出比「請幫我做一台 3D 飛機」這種一次性 prompt 更接近可用結果。</p>
+<h2>3. Abbey Road HTML/CSS recreation loop</h2>
+<p>流程：</p>
+<ul>
+<li>要 Claude Code 不用 image generation，而是用 HTML/CSS/程式重現 Beatles Abbey Road 圖像。</li>
+<li>每輪輸出 HTML 後進瀏覽器截圖。</li>
+<li>比對 reference image。</li>
+<li>根據差距生成下一版。</li>
+<li>設定平均分數達 9 以上即停止，並有 8 輪 hard cap。</li>
+</ul>
+<p>結果仍不完美，但可觀察到每輪版本逐漸改善。這也說明：如果驗證標準本身太主觀或工具能力不適合，loop 會改善但不會魔法般解決問題。</p>
+<h1>什麼任務適合 Agent Loop？</h1>
+<p>| 適合 | 原因 | 驗證方式 |</p>
+<p>|---|---|---|</p>
+<p>| 程式修 bug / 測試修復 | 有明確錯誤訊息與測試 | unit tests、lint、logs、HTTP status |</p>
+<p>| 網頁/互動 demo | 可用 screenshot / browser check | 截圖、DOM 檢查、互動測試 |</p>
+<p>| 文件/知識庫更新 | 可比對來源與格式 | links 可讀、front matter 完整、build 成功 |</p>
+<p>| 影片剪輯 / transcript 對齊 | 有時間軸、字幕、段落邊界 | transcript alignment、render check、beat timing |</p>
+<p>| SEO / performance optimization | 有可量測指標 | Lighthouse、page-load、Core Web Vitals |</p>
+<p>| 多版本創意稿初篩 | 可用 rubric 先收斂 | scoring rubric + human final review |</p>
+<p>不適合：</p>
+<ul>
+<li>目標模糊到無法驗證，例如「讓它更好看」但沒有評分標準。</li>
+<li>風險高但缺少人工批准，例如自動修改 production、寄信、花錢、刪資料。</li>
+<li>成本會爆掉的任務，例如 done criteria 永遠達不到卻沒有 hard stop。</li>
+</ul>
+<h1>實作 Agent Loop 的最小模板</h1>
+<p>```text</p>
+<p>任務：請完成 [明確目標]。</p>
+<p>循環規則：</p>
+<ul>
+<li>先提出計畫與驗證方法。</li>
+<li>每次只做一組可檢查的修改。</li>
+<li>修改後必須執行驗證。</li>
+<li>如果驗證失敗，根據錯誤調整下一步。</li>
+<li>如果連續兩輪沒有改善，停止並回報原因。</li>
+</ul>
+<p>完成條件：</p>
+<ul>
+<li>[可量化條件 A]</li>
+<li>[可檢查條件 B]</li>
+<li>[輸出檔案 / 頁面 / 測試結果]</li>
+</ul>
+<p>停止條件：</p>
+<ul>
+<li>最多 [N] 輪。</li>
+<li>最多 [X] 分鐘或 [Y] token / 成本。</li>
+<li>遇到需要人工決策、帳號、付款、刪除或部署權限時先停止。</li>
+</ul>
+<p>最後回報：</p>
+<ul>
+<li>做了哪些輪次</li>
+<li>每輪驗證結果</li>
+<li>最終輸出位置</li>
+<li>尚未解決的限制</li>
+</ul>
+<p>```</p>
+<h1>欒帥 / Hermes 可以怎麼用</h1>
+<h2>1. AI 學習雷達文章產製 loop</h2>
+<p>```text</p>
+<p>請把這個連結整理成知識庫文章。</p>
+<p>Loop：擷取來源 → 搜尋既有 KB 去重 → 找官方 canonical source → 寫 Markdown → build → 檢查 index → push → 公開 URL 驗證。</p>
+<p>Done：公開 article URL 含標題 marker，data/index.json 含原始 URL，build success=true。</p>
+<p>Hard stop：若來源無法辨識且沒有 title/caption，不發佈公開文，改存 private pending note。</p>
+<p>```</p>
+<h2>2. 課程頁 / landing page loop</h2>
+<p>```text</p>
+<p>Loop：根據課程資料產出頁面 → 截圖 → 檢查 mobile / desktop 排版 → 修正 typography / CTA / section hierarchy → 再截圖。</p>
+<p>Done：手機與桌機截圖無明顯溢位，CTA 可點擊，關鍵資訊都在首屏或清楚 section。</p>
+<p>Hard stop：最多 6 輪，若缺講師照片/價格/報名連結則標示待補。</p>
+<p>```</p>
+<h2>3. 文件 / PDF 轉知識庫 loop</h2>
+<p>```text</p>
+<p>Loop：抽文字 → 檢查章節完整性 → 表格/頁碼修正 → 產摘要 → 來源引用檢查 → 轉 Markdown。</p>
+<p>Done：每個主要章節都有摘要與頁碼來源，沒有把個資公開，Markdown build 成功。</p>
+<p>Hard stop：掃描品質不足或 OCR 信心低時停止，要求人工提供更清晰 PDF。</p>
+<p>```</p>
+<h1>Forward Future Loop Library 補充</h1>
+<p>影片提到 Matthew Berman / Forward Future 的 Loop Library。GitHub repo `Forward-Future/loop-library` 將 loop 定義為「讓 agent 知道要做什麼、如何檢查成果、下一步怎麼改、何時停止」的可重複工作流。官方 README 也特別強調：loop 不是讓 agent 無限跑，而是要有真實檢查、清楚停止點、以及必要時把控制權交回人類。</p>
+<p>2026-06-20 GitHub snapshot：</p>
+<ul>
+<li>Repo：`Forward-Future/loop-library`</li>
+<li>描述：Practical repeatable AI-agent workflows for engineering, evaluation, operations, content, and design.</li>
+<li>License：MIT</li>
+<li>Stars：約 77</li>
+<li>Forks：約 11</li>
+<li>Homepage：<a href="https://signals.forwardfuture.ai/loop-library/" target="_blank" rel="noopener">https://signals.forwardfuture.ai/loop-library/</a></li>
+</ul>
+<h1>最重要的導入原則</h1>
+<ul>
+<li>**先寫 done criteria，再開 agent。** 如果人類自己也說不清完成標準，agent 只會把不確定性放大。</li>
+<li>**驗證工具要配任務。** 程式用 tests；網頁用 browser screenshot；內容用 rubric + source citation；影片用 transcript/timing/render check。</li>
+<li>**主觀任務要加 reviewer。** Thumbnail、文案、設計、影片風格都應有獨立 scorer 或人類最後審核。</li>
+<li>**不要迷信 24/7 agent fleet。** 對多數知識工作，30 分鐘到數小時的 bounded loop 比多日無人看管更實用。</li>
+<li>**成本是設計的一部分。** loop 的價值在於「更接近可用輸出」，不是 token 燃燒競賽。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>Skool 附件名稱可見，但本次未直接下載並完整審閱附件 HTML；本文主要依 Skool 貼文、YouTube transcript 與 Loop Library 官方 repo 整理。</li>
+<li>影片提到 Claude Code / Cloud Code 的語音轉寫可能有 ASR 拼寫差異；依上下文本文統一寫作 Claude Code。</li>
+<li>GitHub stars/forks 是 2026-06-20 查詢快照，會隨時間變動。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Skool 原貼： <a href="https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362" target="_blank" rel="noopener">https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362</a></li>
+<li>YouTube 影片： <a href="https://www.youtube.com/watch?v=EuzYhzB0vbI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=EuzYhzB0vbI</a></li>
+<li>Nate Herk YouTube 頻道： <a href="https://www.youtube.com/@nateherk" target="_blank" rel="noopener">https://www.youtube.com/@nateherk</a></li>
+<li>Forward Future Loop Library： <a href="https://signals.forwardfuture.ai/loop-library/" target="_blank" rel="noopener">https://signals.forwardfuture.ai/loop-library/</a></li>
+<li>GitHub repo： <a href="https://github.com/Forward-Future/loop-library" target="_blank" rel="noopener">https://github.com/Forward-Future/loop-library</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-20 · https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Agent Loops</span><span class="tag">Loop Engineering</span><span class="tag">Claude Code</span><span class="tag">Coding Agent</span><span class="tag">Prompt Engineering</span><span class="tag">Workflow Design</span><span class="tag">Evaluation</span><h3>原始連結</h3><p><a href="https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362" target="_blank" rel="noopener">https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362</a></p><p><a href="https://www.youtube.com/watch?v=EuzYhzB0vbI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=EuzYhzB0vbI</a></p><p><a href="https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362" target="_blank" rel="noopener">https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362</a></p><p><a href="https://www.youtube.com/watch?v=EuzYhzB0vbI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=EuzYhzB0vbI</a></p><p><a href="https://www.youtube.com/@nateherk" target="_blank" rel="noopener">https://www.youtube.com/@nateherk</a></p><p><a href="https://github.com/Forward-Future/loop-library" target="_blank" rel="noopener">https://github.com/Forward-Future/loop-library</a></p><p><a href="https://signals.forwardfuture.ai/loop-library/" target="_blank" rel="noopener">https://signals.forwardfuture.ai/loop-library/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
