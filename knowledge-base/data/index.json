@@ -34,6 +34,42 @@
     "markdown": "articles/2026/06/2026-06-20-agent-loops-loop-engineering-nate-herk-skool-youtube.md"
   },
   {
+    "title": "AI Engineering from Scratch｜503 課、20 階段的開源 AI 工程自學課綱",
+    "date": "2026-06-20",
+    "source": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "author": "rohitg00 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Engineering",
+      "AI Agent",
+      "Machine Learning",
+      "Deep Learning",
+      "LLM",
+      "MCP",
+      "Curriculum",
+      "Open Source",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/rohitg00/ai-engineering-from-scratch?fbclid=IwZnRzaASi3KBleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeCVkzJRcZKZaR4oLhUwVSq3G_2koRAQIkKHISVPopcqdwZS8rN-YmsTzw9e0_aem_F74MzSn6u_3iZjoJ_aF2Og",
+      "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "https://aiengineeringfromscratch.com",
+      "https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/main/README.md",
+      "https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/main/ROADMAP.md",
+      "https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/main/AGENTS.md",
+      "https://github.com/rohitg00/agentmemory"
+    ],
+    "excerpt": "`AI Engineering from Scratch` 是一套大型開源 AI 工程課綱：從數學與 ML 基礎一路走到 LLM、MCP、Agent Engineering、多代理、production infrastructure、alignment 與 capstone projects；它的特色不是只看影片或只呼叫 API，而是每課都要求「從原理手刻 → 用正式框架重做 → 產出可重用 artifact」。",
+    "slug": "2026-06-20-ai-engineering-from-scratch-rohitg00-github",
+    "html": "articles/2026-06-20-ai-engineering-from-scratch-rohitg00-github.html",
+    "markdown": "articles/2026/06/2026-06-20-ai-engineering-from-scratch-rohitg00-github.md"
+  },
+  {
     "title": "Claude Code 官方 30 分鐘教學｜Agent 級提示工程與團隊工作流",
     "date": "2026-06-20",
     "source": "https://www.threads.com/@darks0603/post/DZv_wkEmJaS",
