@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>中文 Vibe Coding 系統課｜SDD、自動化測試、Agent Skills、Git Worktree 與 OpenSpec</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>中文 Vibe Coding 系統課｜SDD、自動化測試、Agent Skills、Git Worktree 與 OpenSpec</h1><h1>中文 Vibe Coding 系統課｜SDD、自動化測試、Agent Skills、Git Worktree 與 OpenSpec</h1>
+<p>來源是 欒帥分享的 Threads 回覆。林鼎淵在回覆「Vibe coding 有什麼推薦教學」時，整理了一套中文 YouTube 播放清單《Vibe Coding 教學》。這套資源值得歸檔，因為它不是只教「對 AI 說一句話生成網站」，而是把 Vibe Coding 往工程化方向推：規格、測試、skills、worktree、多代理協作與可持續迭代。</p>
+<h1>一句話摘要</h1>
+<p>這是一條從「零基礎用 AI 做出東西」走向「可維護 AI 協作開發」的學習路徑：先學 AI coding 工具，再用 SDD 寫清楚需求，用自動化測試補上品質底線，最後用 Agent Skills、Git Worktree、OpenSpec 與 Codex / Claude Code / Antigravity 類工具建立可重複的開發流程。</p>
+<h1>Threads 原文整理的 7 個學習主題</h1>
+<p>| 順序 | 主題 | 對 Vibe Coding 的意義 |</p>
+<p>|---|---|---|</p>
+<p>| 1 | 認識 AI 程式碼編輯器帶來的優勢 | 先理解 AI coding assistant 能做什麼、不能做什麼 |</p>
+<p>| 2 | 使用規格驅動開發（SDD）初始化專案 | 避免只靠模糊 prompt，先把需求、範圍與驗收標準寫清楚 |</p>
+<p>| 3 | 建立自動化測試，解決 Vibe Coding 痛點 | 把「AI 看起來有做」改成「測試證明可用」 |</p>
+<p>| 4 | 導入、使用、設計 Agent Skills | 把重複知識封裝成技能，讓 AI 從泛用助手變專案專家 |</p>
+<p>| 5 | 認識 Git Worktree，指揮 AI Agents 同時運作 | 讓多個 agent 分支並行，降低互相覆蓋與 git 衝突 |</p>
+<p>| 6 | 用 OpenSpec 生成規格文件 | 讓專案每次迭代都有依據，不靠口頭記憶維持需求 |</p>
+<p>| 7 | 把成果封裝成可重複使用的 Agent Skills | 把一次性成果轉成下一次可延續的工作流資產 |</p>
+<h1>YouTube 播放清單校正</h1>
+<p>YouTube 播放清單頁面顯示：</p>
+<ul>
+<li>播放清單名稱：`Vibe Coding 教學`</li>
+<li>頻道：`工程師下班有約`</li>
+<li>頻道網址：`<a href="https://www.youtube.com/@dlcorner`" target="_blank" rel="noopener">https://www.youtube.com/@dlcorner`</a></li>
+<li>影片數：14 部</li>
+<li>上次更新：2026-06-01</li>
+<li>播放清單介紹強調：作者不想只宣傳「Vibe Coding 超輕鬆」，而是要分享坑、必要基礎知識、踩坑過程與具體案例。</li>
+</ul>
+<h1>核心影片路線圖</h1>
+<p>| 順序 | 影片 | 時長 | 學習重點 |</p>
+<p>|---|---|---:|---|</p>
+<p>| 1 | Vibe Coding 學習地圖：Gemini、Google AI Studio、Antigravity 使用情境 | 36:07 | 建立工具地圖與使用情境判斷 |</p>
+<p>| 2 | Google Antigravity：用 Vibe Coding 完成輕量級全端專案 | 35:54 | 從想法到全端原型 |</p>
+<p>| 3 | Antigravity Workflow：建立自動化測試，解決 Vibe Coding 痛點 | 35:49 | 以測試作為品質防線 |</p>
+<p>| 4 | Antigravity Agent Skills：當別人還在複製貼上，你的 AI 已經自動搞定 | 29:54 | 將重複脈絡封裝成 agent skill |</p>
+<p>| 5 | Git Worktree：指揮 AI Agents 同時運作，搭配 Agent Skills 建立自動化協作體系 | 31:43 | 多 agent / 多分支並行工作 |</p>
+<p>| 6 | Claude Code：一次搞懂 OpenSpec，讓專案每次迭代都有依據 | 37:25 | spec-driven / change-driven 開發流程 |</p>
+<p>| 7 | ChatGPT Codex：將 Vibe Coding 成果從「用完就丟」變成可持續優化的 Agent Skills | 30:23 | 把專案經驗沉澱為 reusable skills |</p>
+<p>| 8 | Vibe Coding 實戰必看：10 個會讓專案翻車的技術陷阱 | 3:59 | 快速列出常見風險 |</p>
+<p>| 9-12 | Cursor 入門、工具安裝、需求釐清到部署上線 | 18-31 分 | 補 Cursor / Node / Git / deploy 等基礎 |</p>
+<h1>為什麼這比一般 Vibe Coding 教學重要</h1>
+<p>很多 Vibe Coding 教學停在「自然語言 → 生成網頁」。這很適合啟蒙，但也很容易留下四個問題：</p>
+<ul>
+<li>**需求不穩**：一開始沒有 spec，後面每次改都像重做。</li>
+<li>**品質不可驗證**：AI 產出看似能跑，但沒有測試、沒有 lint、沒有 edge cases。</li>
+<li>**脈絡不可延續**：每次對話都重講規則，沒有 CLAUDE.md、skills、memory 或 project docs。</li>
+<li>**協作不可控**：多個 agent 同時改同一份 repo，容易覆蓋、衝突或產生不可合併分支。</li>
+</ul>
+<p>這套清單剛好補上這些缺口：SDD 提供需求骨架，自動化測試提供驗證，Agent Skills 提供可重用專家脈絡，Git Worktree 提供並行隔離，OpenSpec 提供持續變更依據。</p>
+<h1>給 欒帥的課程轉用建議</h1>
+<p>若要設計「非工程背景也能用 AI 做工具」的課，可以把這套資源拆成三層：</p>
+<h2>第一層：讓學員做出第一個東西</h2>
+<ul>
+<li>AI coding 工具差異與選擇。</li>
+<li>用中文描述需求。</li>
+<li>從個人頁、銷售頁、表單或小工具開始。</li>
+<li>快速部署到可分享網址。</li>
+</ul>
+<h2>第二層：讓東西不會一改就壞</h2>
+<ul>
+<li>寫簡單 spec：目標、使用者、輸入、輸出、done criteria。</li>
+<li>要 AI 先產測試或檢查清單。</li>
+<li>每次修改前要求 agent 先讀 spec，再改 code。</li>
+<li>用 git commit 保留版本。</li>
+</ul>
+<h2>第三層：把成果變成可重複流程</h2>
+<ul>
+<li>建立專案技能：設計規範、品牌語氣、部署方式、常見錯誤。</li>
+<li>用 Git Worktree 或分支讓多個方向平行探索。</li>
+<li>把成功 prompt / 工具鏈 / 驗證步驟寫成 skill。</li>
+<li>讓下一個專案直接複用，而不是從零開始。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文依 Threads 貼文與 YouTube 播放清單公開 metadata 整理。嘗試抓取首支影片 transcript 時，YouTube 回傳 transcripts disabled，因此本文不做逐字稿級摘要；影片內容細節需以實際觀看為準。OpenSpec、Antigravity、Agent Skills 在不同工具中的命名與實作可能不同，正式導入前應依實際工具文件與帳號權限確認。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-20 · https://www.threads.com/@deanlin5288/post/DZzZSFPmn3t · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Vibe Coding</span><span class="tag">AI Coding</span><span class="tag">Agent Skills</span><span class="tag">Git Worktree</span><span class="tag">SDD</span><span class="tag">OpenSpec</span><span class="tag">Claude Code</span><span class="tag">ChatGPT Codex</span><span class="tag">Google Antigravity</span><span class="tag">Cursor</span><span class="tag">中文教學</span><h3>原始連結</h3><p><a href="https://www.threads.com/@deanlin5288/post/DZzZSFPmn3t" target="_blank" rel="noopener">https://www.threads.com/@deanlin5288/post/DZzZSFPmn3t</a></p><p><a href="https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f</a></p><p><a href="https://www.threads.com/@deanlin5288/post/DZzZSFPmn3t" target="_blank" rel="noopener">https://www.threads.com/@deanlin5288/post/DZzZSFPmn3t</a></p><p><a href="https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f</a></p><p><a href="https://www.youtube.com/@dlcorner" target="_blank" rel="noopener">https://www.youtube.com/@dlcorner</a></p><p><a href="https://www.youtube.com/watch?v=2hbYCe_E5aU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=2hbYCe_E5aU</a></p><p><a href="https://www.youtube.com/watch?v=-FW5DgQEV0M" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-FW5DgQEV0M</a></p><p><a href="https://www.youtube.com/watch?v=Rb0_LutRIaw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Rb0_LutRIaw</a></p><p><a href="https://www.youtube.com/watch?v=xe00zJEtuMo" target="_blank" rel="noopener">https://www.youtube.com/watch?v=xe00zJEtuMo</a></p><p><a href="https://www.youtube.com/watch?v=1VuLTQidbPM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=1VuLTQidbPM</a></p><p><a href="https://www.youtube.com/watch?v=FeQv7mngg6Q" target="_blank" rel="noopener">https://www.youtube.com/watch?v=FeQv7mngg6Q</a></p><p><a href="https://www.youtube.com/watch?v=0pZri5f_tfk" target="_blank" rel="noopener">https://www.youtube.com/watch?v=0pZri5f_tfk</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -1,0 +1,95 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Antigravity Workflows 社群技巧｜用 Markdown 流程、Slash 指令與多代理並行壓縮重複任務</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Antigravity Workflows 社群技巧｜用 Markdown 流程、Slash 指令與多代理並行壓縮重複任務</h1><h1>Antigravity Workflows 社群技巧｜用 Markdown 流程、Slash 指令與多代理並行壓縮重複任務</h1>
+<p>來源是 欒帥分享的 Threads 貼文。Rock 描述一個 Antigravity 用法：把開發流程包成 `.antigravity/workflows/*.md`，再用 slash command 觸發，讓多個 AI agent 並行執行部署、PR、發信等工作。</p>
+<p>這則貼文值得收錄，但要以「社群技巧 / 待實測」角度保存：概念很有價值，與 Claude Code slash commands、Hermes skills、Codex / Cursor project rules、Git worktree 多代理協作高度相通；但貼文中的特定數字與目錄語法，仍需以 Antigravity 官方文件與本機實測確認。</p>
+<h1>一句話摘要</h1>
+<p>重點不是「Antigravity 某個神秘功能」，而是 agentic development 的共通趨勢：把 30 步人工流程寫成可版本控管的 Markdown workflow，透過 slash command 觸發，再交給多個 agent / sub-agent 並行處理，最後由人類審核與合併。</p>
+<h1>Threads 原文主張</h1>
+<p>| 項目 | 貼文內容 |</p>
+<p>|---|---|</p>
+<p>| 主題 | Gemini / Antigravity 的 workflow + slash command 用法 |</p>
+<p>| 核心說法 | 不要逐一跟 AI 對話，而是把流程包成 workflow，一句 slash 同時開多個 AI 並行 |</p>
+<p>| 目錄 | 建立 `.antigravity/workflows/` |</p>
+<p>| 檔案 | 把流程寫成 Markdown，例如 `deploy.md`，包含 title 與步驟條列 |</p>
+<p>| 觸發 | 在 Agent 輸入 `/deploy` |</p>
+<p>| 執行 | Gemini / Antigravity 將流程切片給多個 sub-agent 並行 |</p>
+<p>| 監控 | 在 Manager Surface 看 agent 進度 |</p>
+<p>| 成效主張 | 部署 + PR + 發信從 3 小時變 25 分鐘，產能約 ×7 |</p>
+<h1>來源校正與可信度分層</h1>
+<p>| 層級 | 判讀 |</p>
+<p>|---|---|</p>
+<p>| 已有官方脈絡 | Google 官方 NotebookLM 公告曾提及 Gemini 3.5 + Antigravity、agentic capabilities、secure cloud computer 與 100+ software skills；代表 Google 確實在推 agentic / skills 方向。 |</p>
+<p>| 播放清單佐證 | 林鼎淵的中文 Vibe Coding 播放清單包含 Antigravity Agent Skills、Git Worktree 與 workflow 相關教學，顯示社群已有實作討論。 |</p>
+<p>| 未確認細節 | `.antigravity/workflows/`、`/deploy`、Manager Surface 自動切片與自動合併等具體語法，本文未找到可公開檢索的官方文件確認。 |</p>
+<p>| 數字不可直接採信 | 「30 步變 1 指令」「速度 3-5 倍」「3 小時到 25 分鐘」應視為個案或行銷式估算，不能當 benchmark。 |</p>
+<h1>可抽象成通用 Agent Workflow Pattern</h1>
+<p>這個模式不只適用於 Antigravity，也適用於 Claude Code、Codex、Cursor、Hermes 或其他 coding agent：</p>
+<p>```text</p>
+<p>workflow markdown</p>
+<p>  → slash command / skill trigger</p>
+<p>  → agent decomposes tasks</p>
+<p>  → parallel worktrees / sub-agents</p>
+<p>  → tests / checks / logs</p>
+<p>  → human review</p>
+<p>  → merge / deploy / notify</p>
+<p>```</p>
+<h1>一個較安全的 deploy workflow 寫法</h1>
+<p>若把貼文精神轉成可落地模板，建議不要讓 agent 直接「自動合併、部署、發信」，而是分成安全階段：</p>
+<p>```markdown</p>
+<h1>deploy</h1>
+<p>Goal: prepare a deployment candidate, but do not push to production without human approval.</p>
+<p>Steps:</p>
+<ul>
+<li>Read project README, deployment docs, and recent git diff.</li>
+<li>Run lint and tests. If failing, stop and report root cause.</li>
+<li>Build the project locally.</li>
+<li>Create a release summary: changed files, risk areas, rollback plan.</li>
+<li>Open or update PR with checklist.</li>
+<li>Draft notification message, but do not send.</li>
+<li>Ask for human approval before merge, deploy, or external messages.</li>
+</ul>
+<p>```</p>
+<p>這樣能保留 workflow 的效率，又避免 agent 在沒有批准時做外部副作用。</p>
+<h1>為什麼它重要</h1>
+<h2>1. 從 Prompt Engineering 走向 Workflow Engineering</h2>
+<p>過去的問題是「怎麼問 AI」。現在更重要的是「怎麼把可重複流程寫成 AI 能執行、能驗證、能回報的工作規格」。Markdown workflow、slash command、skills、project rules，本質上都是把人類 SOP 變成 agent 可操作的介面。</p>
+<h2>2. 多代理的真正價值在隔離與驗證，不是炫技</h2>
+<p>同時開 5 個 AI 並行，只有在任務可切分、可驗證、可合併時才有價值。例如：</p>
+<ul>
+<li>一個 agent 修測試。</li>
+<li>一個 agent 更新文件。</li>
+<li>一個 agent 準備 PR 描述。</li>
+<li>一個 agent 檢查部署風險。</li>
+<li>一個 agent 做回歸測試或安全掃描。</li>
+</ul>
+<p>若沒有 worktree / branch 隔離、測試與 merge policy，多代理只會放大混亂。</p>
+<h2>3. 對 欒帥 的知識庫管線很有參考價值</h2>
+<p>AI 學習雷達目前已經很接近 workflow 化：</p>
+<ul>
+<li>讀 Threads / YouTube / GitHub / 新聞來源。</li>
+<li>找 canonical source。</li>
+<li>校正官方資料。</li>
+<li>寫 Markdown front matter 與文章。</li>
+<li>build 靜態網站。</li>
+<li>commit / push。</li>
+<li>驗證 GitHub Pages。</li>
+</ul>
+<p>這其實就能包成一個「archive-link」workflow。差別只在於是否把每一步拆成 sub-agent 並行，例如：一個查官方來源、一個讀既有知識庫避免重複、一個寫草稿、一個做驗證。</p>
+<h1>風險與導入注意</h1>
+<ul>
+<li>**不要自動執行高風險副作用**：merge、deploy、寄信、刪資料、付款、公開發布都應保留 human approval。</li>
+<li>**workflow 要有停止條件**：例如最多 3 輪修復、測試仍失敗就停止回報。</li>
+<li>**要有驗證訊號**：tests、build、HTTP status、diff review、preview URL，比「agent 說完成」可靠。</li>
+<li>**多代理要用 worktree / branch 隔離**：否則容易互相覆蓋。</li>
+<li>**社群數字要實測**：貼文提到的效率提升可作靈感，不應直接用於提案承諾。</li>
+</ul>
+<h1>給 欒帥的轉用建議</h1>
+<p>可以把這則貼文視為「AI 工作流技能化」案例，未來若要做課程或內部 SOP，可設計成：</p>
+<ul>
+<li>先讓學員把一個重複任務寫成 Markdown SOP。</li>
+<li>加上 done criteria、風險區、不得執行事項。</li>
+<li>用 Claude Code / Codex / Hermes skills 或 Antigravity workflows 其中一種工具觸發。</li>
+<li>用測試或 checklist 驗證。</li>
+<li>將成功 SOP 版本化，變成 team skill。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文依 Threads 貼文、既有 Google NotebookLM 官方公告脈絡、YouTube 播放清單 metadata 與本機搜尋整理。未能找到公開可檢索的 Antigravity 官方文件確認 `.antigravity/workflows/` 與 Manager Surface 的完整語法；正式採用前需在實際 Antigravity 環境中測試。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-20 · https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Google</span><span class="tag">Gemini</span><span class="tag">Antigravity</span><span class="tag">AI Agent</span><span class="tag">Multi Agent</span><span class="tag">Agent Workflows</span><span class="tag">Slash Commands</span><span class="tag">Agent Skills</span><span class="tag">Git Worktree</span><span class="tag">Vibe Coding</span><h3>原始連結</h3><p><a href="https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y" target="_blank" rel="noopener">https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y</a></p><p><a href="https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y" target="_blank" rel="noopener">https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y</a></p><p><a href="https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y" target="_blank" rel="noopener">https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y</a></p><p><a href="https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/</a></p><p><a href="https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f</a></p><p><a href="https://www.youtube.com/watch?v=1VuLTQidbPM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=1VuLTQidbPM</a></p><p><a href="https://www.youtube.com/watch?v=xe00zJEtuMo" target="_blank" rel="noopener">https://www.youtube.com/watch?v=xe00zJEtuMo</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

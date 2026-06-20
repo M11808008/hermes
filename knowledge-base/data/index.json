@@ -70,6 +70,42 @@
     "markdown": "articles/2026/06/2026-06-20-ai-engineering-from-scratch-rohitg00-github.md"
   },
   {
+    "title": "Antigravity Workflows 社群技巧｜用 Markdown 流程、Slash 指令與多代理並行壓縮重複任務",
+    "date": "2026-06-20",
+    "source": "https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y",
+    "author": "Rock（@rock.ai.w7）；整理：Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Google",
+      "Gemini",
+      "Antigravity",
+      "AI Agent",
+      "Multi Agent",
+      "Agent Workflows",
+      "Slash Commands",
+      "Agent Skills",
+      "Git Worktree",
+      "Vibe Coding"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y",
+      "https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y",
+      "https://www.threads.com/@rock.ai.w7/post/DZzH_XGka9Y",
+      "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/",
+      "https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f",
+      "https://www.youtube.com/watch?v=1VuLTQidbPM",
+      "https://www.youtube.com/watch?v=xe00zJEtuMo"
+    ],
+    "excerpt": "重點不是「Antigravity 某個神秘功能」，而是 agentic development 的共通趨勢：把 30 步人工流程寫成可版本控管的 Markdown workflow，透過 slash command 觸發，再交給多個 agent / sub-agent 並行處理，最後由人類審核與合併。",
+    "slug": "2026-06-20-antigravity-workflows-slash-command-multi-agent-threads",
+    "html": "articles/2026-06-20-antigravity-workflows-slash-command-multi-agent-threads.html",
+    "markdown": "articles/2026/06/2026-06-20-antigravity-workflows-slash-command-multi-agent-threads.md"
+  },
+  {
     "title": "Claude Code 官方 30 分鐘教學｜Agent 級提示工程與團隊工作流",
     "date": "2026-06-20",
     "source": "https://www.threads.com/@darks0603/post/DZv_wkEmJaS",
@@ -251,6 +287,48 @@
     "slug": "2026-06-20-notebooklm-office-five-workflows-threads",
     "html": "articles/2026-06-20-notebooklm-office-five-workflows-threads.html",
     "markdown": "articles/2026/06/2026-06-20-notebooklm-office-five-workflows-threads.md"
+  },
+  {
+    "title": "中文 Vibe Coding 系統課｜SDD、自動化測試、Agent Skills、Git Worktree 與 OpenSpec",
+    "date": "2026-06-20",
+    "source": "https://www.threads.com/@deanlin5288/post/DZzZSFPmn3t",
+    "author": "林鼎淵（@deanlin5288）／工程師下班有約；整理：Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Vibe Coding",
+      "AI Coding",
+      "Agent Skills",
+      "Git Worktree",
+      "SDD",
+      "OpenSpec",
+      "Claude Code",
+      "ChatGPT Codex",
+      "Google Antigravity",
+      "Cursor",
+      "中文教學"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@deanlin5288/post/DZzZSFPmn3t",
+      "https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f",
+      "https://www.threads.com/@deanlin5288/post/DZzZSFPmn3t",
+      "https://www.youtube.com/playlist?list=PLWWZkn1dW3eAvSZfJv0-02q27JIsfbN2f",
+      "https://www.youtube.com/@dlcorner",
+      "https://www.youtube.com/watch?v=2hbYCe_E5aU",
+      "https://www.youtube.com/watch?v=-FW5DgQEV0M",
+      "https://www.youtube.com/watch?v=Rb0_LutRIaw",
+      "https://www.youtube.com/watch?v=xe00zJEtuMo",
+      "https://www.youtube.com/watch?v=1VuLTQidbPM",
+      "https://www.youtube.com/watch?v=FeQv7mngg6Q",
+      "https://www.youtube.com/watch?v=0pZri5f_tfk"
+    ],
+    "excerpt": "這是一條從「零基礎用 AI 做出東西」走向「可維護 AI 協作開發」的學習路徑：先學 AI coding 工具，再用 SDD 寫清楚需求，用自動化測試補上品質底線，最後用 Agent Skills、Git Worktree、OpenSpec 與 Codex / Claude Code / Antigravity 類工具建立可重複的開發流程。",
+    "slug": "2026-06-20-vibe-coding-chinese-playlist-deanlin-youtube-threads",
+    "html": "articles/2026-06-20-vibe-coding-chinese-playlist-deanlin-youtube-threads.html",
+    "markdown": "articles/2026/06/2026-06-20-vibe-coding-chinese-playlist-deanlin-youtube-threads.md"
   },
   {
     "title": "AI 新聞室工具鏈｜8 款工具把記者會轉成快訊、短影音與多語發布",
