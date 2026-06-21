@@ -1,0 +1,82 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>電影大師 Pro｜NextFrame 從劇本到成片的 AI 影片工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>電影大師 Pro｜NextFrame 從劇本到成片的 AI 影片工作流</h1><h1>電影大師 Pro｜NextFrame 從劇本到成片的 AI 影片工作流</h1>
+<p>來源為 Threads 帳號「NextFrame白導」分享自行開發的「電影大師 Pro」。作者表示前一天發布的影片全程使用此工具製作，約 3 小時完成，流程包含劇本、美術設定、文字腳本與生成 Seedance 提示詞；原本是內部工具，後續開放給創作者使用。本文以 Threads 貼文作為發現來源，並以 `sd2.next-frame.ai` 官方網站作為 canonical source。</p>
+<h1>一句話摘要</h1>
+<p>「電影大師 Pro」的價值不在單次 prompt 產片，而在把「logline / 劇本 → AI 分鏡 → 角色與場景定稿 → 多鏡頭 1080p 成片 → 範本複製與放映室」整合成創作者可操作的拍片 pipeline；對欒帥來說，它值得觀察的是 AI 影片工具從「模型展示」走向「可管理專案的創作工作流」。</p>
+<h1>Threads 發現來源</h1>
+<p>| 面向 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 作者 | NextFrame白導（@donniepai） |</p>
+<p>| 工具名稱 | 電影大師 Pro |</p>
+<p>| 分享重點 | 昨天發布的影片全程使用自研工具製作，約 3 小時完成 |</p>
+<p>| 生成流程 | 劇本、美術設定、文字腳本、Seedance 提示詞一次完成 |</p>
+<p>| 開放狀態 | 原為內部工具，改版後開放創作者使用 |</p>
+<p>| 傳送門 | <a href="https://sd2.next-frame.ai/" target="_blank" rel="noopener">https://sd2.next-frame.ai/</a> |</p>
+<p>| 社群反應 | 留言多為感謝與收藏；有人回報連結一度無法測試 |</p>
+<h1>官方網站確認資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 產品 | 電影大師 Pro · NEXTFRAME |</p>
+<p>| 網站標題 | 電影大師 Pro · 從劇本到成片的 AI 工作流 |</p>
+<p>| 官方描述 | 為獨立創作者打造的 AI 電影預製作平台，從一句靈感、劇本、分鏡到 1080p 成片，一個工作流一次走完 |</p>
+<p>| 產品標語 | YOUR VISION · OUR CINEMA；讓一句靈感，變成可以播的短片 |</p>
+<p>| 核心主張 | 不用學 prompt、不用買器材、不用組劇組 |</p>
+<p>| 免費體驗 | 註冊送 120 點、第一支影片免費、免信用卡 |</p>
+<p>| 聯絡 | ai@next-frame.ai |</p>
+<p>| 狀態 | BETA |</p>
+<h1>三段式工作流</h1>
+<p>| 階段 | 官方說法 | 實務意義 |</p>
+<p>|---|---|---|</p>
+<p>| 01 寫 | 貼一段劇本或一句 logline，AI 拆段、配時長、列鏡頭 | 把抽象靈感變成可拍攝的分鏡與鏡頭清單 |</p>
+<p>| 02 選 | 角色、場景、道具產多版本，創作者挑選定稿；定稿後一路鎖定 | 解決 AI 影片常見的角色不一致、場景漂移問題 |</p>
+<p>| 03 拍 | 選好的角色與場景自動帶入，一鍵拍 1080p；失敗自動退點，不滿意可再拍 take | 把「產生片段」提升為「多 take、可管理的拍攝流程」 |</p>
+<h1>與一般 AI 影片生成器的差異</h1>
+<p>官方 FAQ 直接把差異定義為：Dreamina / Higgsfield / Kling 等是「生成器」（prompt → 一支影片）；電影大師 Pro 是「pipeline」（劇本 → 分鏡 → 角色 → 多鏡頭串成短片）。同樣可能使用後端影片模型，但差在工作流與專案管理。</p>
+<p>| 一般生成器 | 電影大師 Pro |</p>
+<p>|---|---|</p>
+<p>| 一次 prompt 生成一段影片 | 一個專案管理一整支短片 |</p>
+<p>| 需要使用者自己拆鏡頭、管角色、搬資料 | 劇本、角色、分鏡、成片串成一條時間線 |</p>
+<p>| 成功片段與失敗片段常分散在不同工具 | 每個版本保留，可切回上一版角色圖或影片 take |</p>
+<p>| 以模型能力為中心 | 以導演工作流與創作者選擇為中心 |</p>
+<h1>產品亮點</h1>
+<ul>
+<li>**一個檔案管一整部片**：劇本、角色、分鏡、成片在同一條時間線中管理。</li>
+<li>**版本留存**：角色圖、影片片段、選中與未選中的版本都保留，便於回退。</li>
+<li>**真人與動畫同一路徑**：官方稱真人角色照片 URL 可直接餵進影片生成，同一張臉可跨專案重用。</li>
+<li>**點數透明**：每張圖、每秒影片點數標示清楚；生成失敗自動退點。</li>
+<li>**範本一鍵複製**：官方提供完成作品範本，如《龍珠傳說》、血魅王座、最後三十秒；可複製劇本、角色、場景、影片到自己的工作區。</li>
+<li>**放映室**：展示獨立創作者的完整作品與片段分享，讓新用戶可先看成品品質與題材範圍。</li>
+</ul>
+<h1>價格與點數快照</h1>
+<p>| 方案 | 價格 | 點數 | 官方定位 |</p>
+<p>|---|---:|---:|---|</p>
+<p>| Free / 註冊體驗 | 免費 | 120 點 | 含一支 Turbo Fast 5 秒影片 + 一張 NB Pro 角色圖；免信用卡 |</p>
+<p>| Aperçu | US$19/月 | 1,300 點/月 | 每月約 1–3 支完整短片，入門創作 |</p>
+<p>| Auteur | US$49/月 | 3,500 點/月 | 每月約 3–10 支，1080p 高畫質、進階導演 DNA，創作者方案 |</p>
+<p>| Festival | US$129/月 | 9,500 點/月 | 每月約 7–28 支，最高畫質、全模型、專業接案 |</p>
+<p>網站另提到 V1 Founder 老用戶專屬永久 30% off；月費點數每個計費週期重置，加購點數在訂閱未取消時永不過期。價格與點數為 2026-06-22 擷取快照，正式使用前需以官網為準。</p>
+<h1>欒帥可用的判讀</h1>
+<h2>1. AI 影片教學可拿來示範「工作流設計」</h2>
+<p>這個工具不是單純展示某個模型多強，而是把創作拆成可教、可複製的流程：大綱、劇本、角色、美術設定、分鏡、生成提示詞、take 選擇、版本管理、成片展示。很適合放進 AI 課程當作「從 prompt 到 pipeline」的案例。</p>
+<h2>2. 適合快速做課程宣傳短片 PoC</h2>
+<p>若要做課程 teaser、活動預告、AI 學習雷達介紹片、概念短片，可以先用一句 logline 起草，再讓工具拆分鏡與角色。重點不是一次生成完美影片，而是快速得到可討論的視覺草稿。</p>
+<h2>3. 可觀察台灣創作者 SaaS 化能力</h2>
+<p>Threads 作者從內部工具轉公開產品，代表本地 AI 創作者開始把自己的 workflow 包成 SaaS。這類產品若能解決角色一致性、分鏡管理、版本回退與成本透明，比單純模型殼更有長期價值。</p>
+<h2>4. 需注意真人肖像與授權風險</h2>
+<p>官方 FAQ 提到真人角色 URL 可餵入影片生成，也提醒名人／公眾人物建議用「致敬」風格 prompt，不要直接生成本人。若用於課程、商案或公開社群，需確認肖像授權與素材來源。</p>
+<h1>建議測試計畫</h1>
+<p>| 測試題 | 觀察重點 |</p>
+<p>|---|---|</p>
+<p>| 30 秒課程預告 | 是否能從一句 logline 產出可用分鏡與角色設定 |</p>
+<p>| 同一角色跨 5–8 個鏡頭 | 臉、服裝、身形、風格是否穩定 |</p>
+<p>| 真人風格 vs 動畫風格 | 哪種風格更穩、成本更低、修正更快 |</p>
+<p>| 繁中劇本與台灣場景 | 對中文語境、地名、人物關係是否理解良好 |</p>
+<p>| 失敗退點機制 | 實際失敗時是否自動退點、帳單是否清楚 |</p>
+<p>| 範本複製 | 是否真的能複製完整劇本、角色、場景與影片工作區 |</p>
+<h1>不適合的情境</h1>
+<ul>
+<li>需要精準商業合約交付、品牌 legal approval、真人肖像授權完整控管的高風險案子，不能只靠 BETA 工具。</li>
+<li>需要長片、複雜對白、精準口型、連續動作一致性的案子，仍需大量測試與後製。</li>
+<li>若只是要一段單鏡頭動畫，直接用單一模型工具可能更快；電影大師 Pro 的優勢在多鏡頭、角色與專案管理。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文已擷取 Threads 貼文、官方網站首頁、FAQ、價格快照、範本與放映室連結；尚未登入實測、未實際生成影片，也未確認後端模型實際使用範圍。Threads 中提到「Seedance 提示詞」為作者貼文說法；官方首頁更強調整體 AI 影片預製作 pipeline，未在公開首頁逐項列出所有後端模型。價格、點數、折扣、免費額度與 BETA 條件會變動，正式使用前需以官方網站為準。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-22 · https://www.threads.com/@donniepai/post/DZ1jVDEH9bv · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI 影片</span><span class="tag">生成式影片</span><span class="tag">創作者工具</span><span class="tag">短片工作流</span><span class="tag">分鏡</span><span class="tag">角色一致性</span><span class="tag">Seedance</span><span class="tag">NextFrame</span><span class="tag">電影大師 Pro</span><h3>原始連結</h3><p><a href="https://www.threads.com/@donniepai/post/DZ1jVDEH9bv?xmt=AQG01DfHl-466yZCNVx3CAXJp5Sqw3FNRPwFsctmQcEcEudv5HdtW1G9joPsVdo0ysDMx5p8Sw&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@donniepai/post/DZ1jVDEH9bv?xmt=AQG01DfHl-466yZCNVx3CAXJp5Sqw3FNRPwFsctmQcEcEudv5HdtW1G9joPsVdo0ysDMx5p8Sw&amp;slof=1</a></p><p><a href="https://sd2.next-frame.ai/" target="_blank" rel="noopener">https://sd2.next-frame.ai/</a></p><p><a href="https://www.threads.com/@donniepai/post/DZ1jVDEH9bv" target="_blank" rel="noopener">https://www.threads.com/@donniepai/post/DZ1jVDEH9bv</a></p><p><a href="https://sd2.next-frame.ai/" target="_blank" rel="noopener">https://sd2.next-frame.ai/</a></p><p><a href="https://sd2.next-frame.ai/pricing" target="_blank" rel="noopener">https://sd2.next-frame.ai/pricing</a></p><p><a href="https://sd2.next-frame.ai/templates" target="_blank" rel="noopener">https://sd2.next-frame.ai/templates</a></p><p><a href="https://sd2.next-frame.ai/showcase" target="_blank" rel="noopener">https://sd2.next-frame.ai/showcase</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
