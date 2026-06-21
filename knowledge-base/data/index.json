@@ -33,6 +33,42 @@
     "markdown": "articles/2026/06/2026-06-21-eugenia-ai-content-monetization-system.md"
   },
   {
+    "title": "Hybride PageIndex RAG｜地端私有化推理式文件知識庫",
+    "date": "2026-06-21",
+    "source": "https://github.com/myyang19770915/Hybride_pageindex_RAG",
+    "author": "myyang19770915 / LINE user-shared post",
+    "type": "article",
+    "topics": [
+      "AI",
+      "RAG",
+      "PageIndex",
+      "MinerU",
+      "Agno",
+      "Qdrant",
+      "PostgreSQL",
+      "Local AI",
+      "私有化部署",
+      "文件知識庫",
+      "Agentic RAG"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "line://text-and-image/hybride-pageindex-rag",
+      "https://github.com/myyang19770915/Hybride_pageindex_RAG",
+      "https://github.com/myyang19770915/Hybride_pageindex_RAG",
+      "https://github.com/VectifyAI/PageIndex",
+      "https://github.com/opendatalab/mineru",
+      "https://qdrant.tech/documentation/search/hybrid-queries/",
+      "https://docs.agno.com/"
+    ],
+    "excerpt": "Hybride PageIndex RAG 是一套地端文件問答系統：上傳 PDF 後用 MinerU 解析表格、公式、圖說與 OCR，建立 PageIndex 式章節樹與頁碼範圍，再由 Agno Agent 以 Qdrant dense + BM25 + RRF 混合檢索命中章節，回 PostgreSQL 取頁面原文作答，並以串流聊天、引用頁碼、會話記憶與思考過程降低企業私有文件 RAG 的幻覺與外洩風險。",
+    "slug": "2026-06-21-hybride-pageindex-rag-local-private-kb",
+    "html": "articles/2026-06-21-hybride-pageindex-rag-local-private-kb.html",
+    "markdown": "articles/2026/06/2026-06-21-hybride-pageindex-rag-local-private-kb.md"
+  },
+  {
     "title": "Agent Loops / Loop Engineering 入門｜Reason-Act-Observe、驗證條件與停止標準",
     "date": "2026-06-20",
     "source": "https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362",

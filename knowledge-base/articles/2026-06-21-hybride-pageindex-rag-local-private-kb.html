@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hybride PageIndex RAG｜地端私有化推理式文件知識庫</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Hybride PageIndex RAG｜地端私有化推理式文件知識庫</h1><h1>Hybride PageIndex RAG｜地端私有化推理式文件知識庫</h1>
+<p>來源為欒帥在 LINE 分享的 GitHub repo、專案介紹文字與架構圖。專案名稱為 **Hybride PageIndex RAG**，定位是「私有化地端・推理式 RAG 知識庫」：把公司內部 PDF、SOP、規格書、操作手冊、論文等文件留在本機或內網，透過 MinerU 解析、PageIndex 章節樹、Qdrant 混合搜尋與 Agno Agent 進行可追溯的文件問答。</p>
+<h1>一句話摘要</h1>
+<p>Hybride PageIndex RAG 是一套地端文件問答系統：上傳 PDF 後用 MinerU 解析表格、公式、圖說與 OCR，建立 PageIndex 式章節樹與頁碼範圍，再由 Agno Agent 以 Qdrant dense + BM25 + RRF 混合檢索命中章節，回 PostgreSQL 取頁面原文作答，並以串流聊天、引用頁碼、會話記憶與思考過程降低企業私有文件 RAG 的幻覺與外洩風險。</p>
+<h1>專案快照</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| GitHub repo | myyang19770915/Hybride_pageindex_RAG |</p>
+<p>| Repo 描述 | 使用 MiniU / MinerU 進行文件擷取，結合 Qdrant 混合搜尋 + PageIndex 概念的章節樹搜尋回答 |</p>
+<p>| 建立時間 | 2026-06-21 |</p>
+<p>| 主要語言 | Python |</p>
+<p>| 授權 | GitHub API 擷取時未標示 license |</p>
+<p>| 星標 / fork | 2026-06-21 擷取時約 7 stars、2 forks；此數字會隨時間變動 |</p>
+<p>| 前端 | React 19、Vite、react-markdown |</p>
+<p>| 後端 | Python 3.12、FastAPI、Agno、LiteLLM / OpenAI 相容 API |</p>
+<p>| 文件解析 | MinerU 3.4、MinerU2.5-Pro VLM、pipeline / vlm / hybrid engine |</p>
+<p>| 檢索與儲存 | Qdrant、dense + BM25 sparse、RRF、PostgreSQL |</p>
+<p>| 本地模型 | LM Studio、OpenAI 相容 API、Qwen / embedding model 設定 |</p>
+<p>| 觀測 | Phoenix / OpenTelemetry |</p>
+<h1>架構流程</h1>
+<p>| 階段 | 圖中流程 | 實作重點 |</p>
+<p>|---|---|---|</p>
+<p>| 1 | 上傳 PDF | 支援企業 PDF、SOP、規格書、手冊、論文；上傳後建立文件任務與版本紀錄 |</p>
+<p>| 2 | MinerU 結構化解析 | 擷取表格、公式、圖說、OCR；掃描檔與雙欄排版可進一步測試解析策略 |</p>
+<p>| 3 | PageIndex 章節樹 | 依章節與頁碼範圍建立階層節點，避免傳統 chunking 切斷語意 |</p>
+<p>| 4 | 混合檢索 | Qdrant dense + BM25 sparse，再用 RRF 融合語意與關鍵字訊號 |</p>
+<p>| 5 | Agno Agent 推理 | Agent 主動呼叫 search knowledge、回 PostgreSQL 取頁面原文、判斷可答性 |</p>
+<p>| 6 | 串流回答 | ChatGPT 式逐字串流，附頁碼引用、思考 trace、會話記憶與歷史對話 |</p>
+<h1>核心能力</h1>
+<p>| 能力 | 價值 | 實務注意 |</p>
+<p>|---|---|---|</p>
+<p>| 地端私有化 | 文件不離開內網，適合企業 SOP、研發規格、客戶資料與機密 PDF | 仍需做好帳號權限、備份、內網端口與資料庫安全 |</p>
+<p>| 精準取證 | 命中章節節點後再取頁面原文，回答可附頁碼來源 | 引用能降低幻覺，但仍要在關鍵決策前人工核對原文 |</p>
+<p>| 誠實回答 | 查無資料時回 insufficient；問題太模糊時反問補充條件 | 需要 prompt / policy 明確要求不要硬編答案 |</p>
+<p>| 互動解析 | MinerU Playground 可切換 backend、語言、公式、表格、圖片分析與頁碼範圍 | 很適合針對難解 PDF 做解析品質調校 |</p>
+<p>| 會話記憶 | Agno PostgresDb 保留前幾輪對話，支援追問 | 企業場景需設定 session 保留期限與清除策略 |</p>
+<p>| 觀測與 trace | Phoenix / OpenTelemetry 可追蹤 Agent 呼叫與檢索步驟 | 若進入正式環境，trace 也可能含敏感內容，要控管存取權限 |</p>
+<h1>與一般 RAG 的差異</h1>
+<p>一般 RAG 常把 PDF 切成固定長度 chunks，再用向量相似度取 Top-K；這在 SOP、規格書、論文或跨頁表格中容易遇到三個問題：</p>
+<ul>
+<li>章節邊界被切斷，回答缺上下文。</li>
+<li>關鍵字、料號、錯誤碼不一定能靠純向量命中。</li>
+<li>命中 chunk 後不一定知道原文頁碼與脈絡。</li>
+</ul>
+<p>Hybride PageIndex RAG 的重點是把文件先整理成「章節樹 + 頁碼範圍」，查詢時先定位到可能相關的章節，再回頁面原文作答。它不是只追求「搜到相似文字」，而是把檢索、頁碼定位、原文取證與回答可答性判斷串成 Agentic RAG 流程。</p>
+<h1>適合欒帥關注的應用</h1>
+<p>| 場景 | 可以怎麼用 |</p>
+<p>|---|---|</p>
+<p>| 企業 SOP 問答 | 把內部 SOP、設備操作手冊與異常處理文件放進本地知識庫，讓新人或工程師用自然語言查步驟與頁碼 |</p>
+<p>| 技術文件查詢 | 規格書、API 文件、合約條款、機台參數可用頁碼引用回查原文 |</p>
+<p>| 客服知識庫 | 回答標準流程、限制條款與故障排除，並避免 AI 沒資料時硬編 |</p>
+<p>| 研究文獻整理 | 對長篇論文或多 PDF 報告做章節級索引與追問 |</p>
+<p>| AI 教學展示 | 可作為「私有化 RAG 架構」課程案例：解析、檢索、Agent、引用、觀測一次展示 |</p>
+<h1>部署與測試路線</h1>
+<p>README 給出的啟動方式偏向 Windows / PowerShell 與本地服務組合：</p>
+<ul>
+<li>用 uv 安裝 Python 依賴，Python 版本鎖定 &gt;=3.12,&lt;3.13。</li>
+<li>啟動 FastAPI 後端，範例使用 127.0.0.1:8200。</li>
+<li>啟動 React / Vite 前端，範例使用 127.0.0.1:5173。</li>
+<li>選用 PostgreSQL 127.0.0.1:5433 與 Qdrant 6333。</li>
+<li>若要完整 Agent 對話能力，需開啟 USE DATABASE、USE QDRANT、USE AGNO，並配置 LM Studio / LiteLLM / embedding endpoint。</li>
+<li>若要 MinerU VLM / hybrid backend，需下載 MinerU2.5-Pro 模型。</li>
+<li>驗證包含 pytest、ruff、frontend test / build，以及 live e2e scripts。</li>
+</ul>
+<h1>對實作的判讀</h1>
+<p>這個 repo 的價值在於把「企業私有文件 RAG」的幾個關鍵環節都串起來：</p>
+<ul>
+<li>文件解析不是只抽純文字，而是把表格、公式、圖說與 OCR 納入頁面 Markdown。</li>
+<li>檢索不是純向量，而是 dense + BM25 + RRF，對料號、錯誤碼、規格值更友善。</li>
+<li>回答不是直接拿 Top-K chunk 生文，而是讓 Agent 先找章節，再取原文，再判斷是否足以回答。</li>
+<li>介面不是命令列 demo，而是有 React 聊天、歷史對話、串流回答與解析測試台。</li>
+</ul>
+<p>對欒帥來說，這很適合納入「地端 AI / RAG / 企業知識庫」案例庫，未來可拆成課程中的一個完整範例：從 PDF ingestion 到 Agent trace，再到引用來源與隱私治理。</p>
+<h1>風險與判讀限制</h1>
+<ul>
+<li>本條目是根據 LINE 分享文字、架構圖、GitHub API metadata 與 README / repo 檔案檢視整理，尚未實際在本機完整跑起服務。</li>
+<li>GitHub repo 在 2026-06-21 擷取時很新，stars、forks、README、API 與環境設定可能快速變動。</li>
+<li>Repo 未標示 license；若要商用或改作企業內部方案，需先確認作者授權。</li>
+<li>README 有些命名疑似筆誤或口語差異，例如介紹文字寫 MiniU、README 實際多處為 MinerU；歸檔時以 repo README 與官方專案名稱 MinerU 為準。</li>
+<li>真正企業部署還需要補上權限控管、資料隔離、文件刪除政策、備份、模型成本、GPU 資源、監控與資安稽核。</li>
+</ul>
+<h1>延伸來源</h1>
+<ul>
+<li>Hybride PageIndex RAG GitHub：<a href="https://github.com/myyang19770915/Hybride_pageindex_RAG" target="_blank" rel="noopener">https://github.com/myyang19770915/Hybride_pageindex_RAG</a></li>
+<li>PageIndex GitHub：<a href="https://github.com/VectifyAI/PageIndex" target="_blank" rel="noopener">https://github.com/VectifyAI/PageIndex</a></li>
+<li>MinerU GitHub：<a href="https://github.com/opendatalab/mineru" target="_blank" rel="noopener">https://github.com/opendatalab/mineru</a></li>
+<li>Qdrant hybrid queries：<a href="https://qdrant.tech/documentation/search/hybrid-queries/" target="_blank" rel="noopener">https://qdrant.tech/documentation/search/hybrid-queries/</a></li>
+<li>Agno docs：<a href="https://docs.agno.com/" target="_blank" rel="noopener">https://docs.agno.com/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-21 · https://github.com/myyang19770915/Hybride_pageindex_RAG · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">RAG</span><span class="tag">PageIndex</span><span class="tag">MinerU</span><span class="tag">Agno</span><span class="tag">Qdrant</span><span class="tag">PostgreSQL</span><span class="tag">Local AI</span><span class="tag">私有化部署</span><span class="tag">文件知識庫</span><span class="tag">Agentic RAG</span><h3>原始連結</h3><p><a href="line://text-and-image/hybride-pageindex-rag" target="_blank" rel="noopener">line://text-and-image/hybride-pageindex-rag</a></p><p><a href="https://github.com/myyang19770915/Hybride_pageindex_RAG" target="_blank" rel="noopener">https://github.com/myyang19770915/Hybride_pageindex_RAG</a></p><p><a href="https://github.com/myyang19770915/Hybride_pageindex_RAG" target="_blank" rel="noopener">https://github.com/myyang19770915/Hybride_pageindex_RAG</a></p><p><a href="https://github.com/VectifyAI/PageIndex" target="_blank" rel="noopener">https://github.com/VectifyAI/PageIndex</a></p><p><a href="https://github.com/opendatalab/mineru" target="_blank" rel="noopener">https://github.com/opendatalab/mineru</a></p><p><a href="https://qdrant.tech/documentation/search/hybrid-queries/" target="_blank" rel="noopener">https://qdrant.tech/documentation/search/hybrid-queries/</a></p><p><a href="https://docs.agno.com/" target="_blank" rel="noopener">https://docs.agno.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
