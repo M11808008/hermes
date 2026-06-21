@@ -1,5 +1,43 @@
 [
   {
+    "title": "Codex 插件堆疊｜把 coding agent 變成可執行任務的 AI 工作台",
+    "date": "2026-06-22",
+    "source": "https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1",
+    "author": "AI郵報 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "OpenAI Codex",
+      "AI Agent",
+      "插件生態",
+      "工作流自動化",
+      "Computer Use",
+      "Browser Automation",
+      "HyperFrames",
+      "Vercel",
+      "GitHub",
+      "Skills",
+      "Automations",
+      "開發與程式",
+      "商業與生產力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1?xmt=AQG0a9HOtAKTHPgUy0eKlkgUaZcGr0aiEf6yLqoLzuSy-t7eHjc6PbrY6Ge5qca6UerrY02tIQ&slof=1",
+      "https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1",
+      "https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1",
+      "https://openai.com/index/codex-for-every-role-tool-workflow/",
+      "https://openai.com/index/codex-for-knowledge-work",
+      "https://github.com/openai/role-specific-plugins"
+    ],
+    "excerpt": "Codex 最值得研究的方向已經不只是 code generation，而是「工具配置能力」：Computer Use / Chrome / Browser 負責進入操作現場，HyperFrames 把網頁動畫轉成影片素材，Build Web Apps + Figma + Playwright 管前端落地，Superpowers 管需求拆解，GitHub + Vercel 管版本與部署，Skills + Automations 則把可重複流程固化。",
+    "slug": "2026-06-22-codex-plugin-stack-ai-workbench-workflow",
+    "html": "articles/2026-06-22-codex-plugin-stack-ai-workbench-workflow.html",
+    "markdown": "articles/2026/06/2026-06-22-codex-plugin-stack-ai-workbench-workflow.md"
+  },
+  {
     "title": "電影大師 Pro｜NextFrame 從劇本到成片的 AI 影片工作流",
     "date": "2026-06-22",
     "source": "https://www.threads.com/@donniepai/post/DZ1jVDEH9bv",

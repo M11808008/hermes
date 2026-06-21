@@ -1,0 +1,107 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Codex 插件堆疊｜把 coding agent 變成可執行任務的 AI 工作台</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Codex 插件堆疊｜把 coding agent 變成可執行任務的 AI 工作台</h1><h1>Codex 插件堆疊｜把 coding agent 變成可執行任務的 AI 工作台</h1>
+<p>來源為 Threads 帳號「AI郵報」對 Codex 插件工作流的整理。貼文的重點不是單一外掛消息，而是把 Codex 從「寫程式工具」重新看成一台可配置的 AI 工作台：能操作畫面、看設計、部署網站、輸出影片、拆解問題，並把流程變成 Skills 與 Automations 留下來。</p>
+<h1>一句話摘要</h1>
+<p>Codex 最值得研究的方向已經不只是 code generation，而是「工具配置能力」：Computer Use / Chrome / Browser 負責進入操作現場，HyperFrames 把網頁動畫轉成影片素材，Build Web Apps + Figma + Playwright 管前端落地，Superpowers 管需求拆解，GitHub + Vercel 管版本與部署，Skills + Automations 則把可重複流程固化。</p>
+<h1>Threads 貼文重點</h1>
+<p>| 插件／工具組 | 貼文定位 | 適合任務 |</p>
+<p>|---|---|---|</p>
+<p>| Computer Use / Chrome / Browser | 電腦操作三件套 | 原生 App、登入網站、本地前端預覽、UI 檢查 |</p>
+<p>| HyperFrames | 自媒體創作者值得看的影片插件 | 用 HTML / CSS / GSAP 產出 MP4，製作工具介紹、產品更新、課程宣傳、Reels 動效 |</p>
+<p>| Build Web Apps + Figma + Playwright | 降低 AI 味、把視覺約束落地 | 從截圖、Figma frame、產品 brief 到 Web App 實作與測試 |</p>
+<p>| Superpowers | 表面是開發流程，實際可當產品顧問 | brainstorm、規格、TDD、debug、code review、MVP 與驗證拆解 |</p>
+<p>| GitHub + Vercel | vibe coding 標配 | repo 串接、build、修錯、部署、preview URL |</p>
+<p>| Skills + Automations | 把流程留下來 | changelog、bug issue 掃描、固定報表、簡報、開發流程模板 |</p>
+<h1>操作面分工</h1>
+<h2>1. Computer Use / Chrome / Browser：讓 Codex 進入現場</h2>
+<p>貼文把三者拆得很清楚：</p>
+<ul>
+<li>**Computer Use**：適合原生 App、系統設定、桌面軟體、GUI 測試等只能用滑鼠與畫面的任務。</li>
+<li>**Chrome**：適合需要既有登入狀態的網站，例如 Gmail、CRM、後台、內部系統。</li>
+<li>**Browser**：適合本地網頁開發、前端預覽與 UI 檢查，例如打開 localhost 檢查手機版跑版、間距、按鈕層級。</li>
+</ul>
+<p>這個分工對欒帥很重要：AI Agent 的穩定度常常不是模型問題，而是「它到底用哪種介面進入任務現場」。能用 DOM / browser 就不要用純視覺點擊；必須進桌面 App 才用 Computer Use；需要登入 session 才用 Chrome。</p>
+<h2>2. HyperFrames：把網頁動畫變成影片素材</h2>
+<p>貼文認為 HyperFrames 特別適合自媒體創作者。它的概念是用 HTML、CSS、GSAP 做動畫，再輸出 MP4。這讓 Codex 可以用程式方式生成資訊動效，而不是手動打開 After Effects 拉 timeline。</p>
+<p>可用情境：</p>
+<p>| 內容型態 | 可產出素材 |</p>
+<p>|---|---|</p>
+<p>| AI 工具介紹 | 短版 explainer、功能卡片、模型比較動畫 |</p>
+<p>| 產品更新 | changelog 影片、feature launch 動效 |</p>
+<p>| 課程宣傳 | 開場動畫、章節轉場、課綱視覺化 |</p>
+<p>| YouTube / Reels | intro、資訊圖動效、科技感 B-roll |</p>
+<p>| AI 學習雷達 | 每週重點摘要短片、文章卡片輪播 |</p>
+<p>對欒帥來說，這可以接在知識庫與課程工作流後面：先整理文章重點，再由 agent 生成 HTML 動畫，最後輸出成可發社群的 MP4。</p>
+<h2>3. Build Web Apps + Figma + Playwright：減少 AI 味</h2>
+<p>貼文提到 Codex 直接從零做前端時容易出現「紫藍漸層、玻璃卡片、圓角滿天飛」的模板感。因此更好的做法是給明確視覺約束：截圖、設計參考、Figma frame 或產品 brief，先整理版面、元件與風格，再實作成 Web App。</p>
+<p>之後用 Browser 或 Playwright 檢查：</p>
+<ul>
+<li>spacing 是否符合設計；</li>
+<li>手機版是否跑版；</li>
+<li>元件狀態是否正常；</li>
+<li>與原設計稿差多少；</li>
+<li>button hierarchy 與 CTA 是否清楚。</li>
+</ul>
+<p>這和欒帥的設計偏好一致：不要只說「幫我做漂亮一點」，而是把美感拆成可驗證的約束與測試項。</p>
+<h2>4. Superpowers：把模糊需求整理成人話</h2>
+<p>貼文對 Superpowers 的解讀很實用：雖然它看起來是開發插件，內含 brainstorm、寫規格、TDD、debug、code review 等流程，但最有價值的是 brainstorm。</p>
+<p>很多 AI 工作流失敗不是模型差，而是需求一開始太糊。Superpowers 會逼使用者先拆：</p>
+<ul>
+<li>目標是什麼；</li>
+<li>限制是什麼；</li>
+<li>有哪些方案；</li>
+<li>風險在哪裡；</li>
+<li>先做哪個 MVP；</li>
+<li>怎麼驗證結果。</li>
+</ul>
+<p>因此它不只適合工程，也適合 PM、行銷、內容、課程設計與活動規劃。</p>
+<h2>5. GitHub + Vercel + Skills + Automations：從一次任務變成可重複流程</h2>
+<p>貼文把 GitHub / Vercel 視為 vibe coding 標配：讓 Codex 接 repo、跑 build、有錯就修、部署到 Vercel，最後提供 preview URL。</p>
+<p>Skills 與 Automations 則負責把流程固化。例如：</p>
+<p>| 固化流程 | 實際用途 |</p>
+<p>|---|---|</p>
+<p>| 每週整理 changelog | 將產品更新變成摘要、短文、簡報或影片腳本 |</p>
+<p>| 定期掃描 bug issue | 找高頻問題、重現步驟、優先級建議 |</p>
+<p>| 固定報表變簡報 | 把例行資料整理成可展示版本 |</p>
+<p>| 常用開發流程包成 skill | 讓 agent 下次直接沿用 SOP |</p>
+<p>| 內容製作流程變模板 | 從資料蒐集、草稿、審稿到發布自動化 |</p>
+<h1>官方脈絡補充</h1>
+<p>OpenAI 已在 2026-06 推出 Codex 角色專屬插件與 role-specific plugin templates。官方 GitHub repo `openai/role-specific-plugins` 將插件定位為可客製的 Codex 模板，包含 domain-specific skills、connector bindings 與 starter assets，用來讓團隊把 Codex 配成 sales、data analytics、product design、financial markets 等職能工作流。</p>
+<p>官方 repo README 也提醒：connector-backed plugins 可能含 placeholder app / connector id，安裝前必須替換成目標 workspace 可用的 connector id；不用的 optional app binding 應移除。這代表插件不是「按一下就全自動」的玩具，而是需要權限、資料來源與 workspace governance 的工作流配置。</p>
+<h1>欒帥可用的實作架構</h1>
+<p>可把這篇貼文轉成一套個人 AI 工作台分層：</p>
+<p>| 層級 | 工具 | 欒帥用途 |</p>
+<p>|---|---|---|</p>
+<p>| 任務入口 | ChatGPT / Codex / Hermes | 描述目標、拆任務、產出計畫 |</p>
+<p>| 操作現場 | Browser / Chrome / Computer Use | 檢查網站、登入後台、測 GUI |</p>
+<p>| 開發落地 | GitHub / Playwright / Vercel | 寫碼、測試、預覽、部署 |</p>
+<p>| 內容輸出 | HyperFrames / HTML animation / MP4 | AI 學習雷達短影音、課程宣傳、產品更新 |</p>
+<p>| 思考框架 | Superpowers / Skills | brainstorm、規格、TDD、debug、code review |</p>
+<p>| 流程持久化 | Skills / Automations / cron | 每週摘要、固定報表、知識庫部署、重複任務 |</p>
+<h1>建議實驗路線</h1>
+<ul>
+<li>**先做一個低風險前端任務**：例如 AI 學習雷達某篇文章的 landing card 或課程頁 section。</li>
+<li>**加入設計約束**：提供參考截圖、色彩、版型、字級、CTA 層級，避免 AI 味。</li>
+<li>**用 Browser / Playwright 驗證**：檢查手機版、間距、互動狀態與 console error。</li>
+<li>**接 GitHub / Vercel 或 GitHub Pages**：完成 preview URL 或公開頁面。</li>
+<li>**把流程寫成 skill**：成功後將 prompt、驗證步驟、部署步驟保存成可重用 SOP。</li>
+<li>**第二階段再接 HyperFrames**：把同一篇內容轉成 15–30 秒資訊動效 MP4。</li>
+</ul>
+<h1>風險與治理</h1>
+<ul>
+<li>**權限最小化**：Chrome、CRM、Gmail、內部後台都含敏感資料，Agent 不應拿到超出任務所需的權限。</li>
+<li>**部署前人工審核**：Codex 可自動 build / deploy，但公開頁面、課程頁與客戶內容仍要人工檢查。</li>
+<li>**不要把插件當魔法**：插件只是工具連接與技能包，效果仍取決於資料品質、指令清楚度與驗證流程。</li>
+<li>**設計品質要可測量**：用 Figma、截圖與 Playwright 檢查，避免「看起來不錯」這種主觀空話。</li>
+<li>**工作流要可回放**：每個成功流程都應轉成 skill / checklist，否則下次還是從零開始。</li>
+</ul>
+<h1>與既有知識庫的關聯</h1>
+<p>這篇可與既有文章「OpenAI Codex for every role｜角色插件、Sites 與 Annotations 讓 Codex 走向全職位工作流平台」互補：前者是 OpenAI 官方平台更新與職能插件全景，本文則是創作者與個人工作流角度的實戰配置清單。</p>
+<h1>判讀限制</h1>
+<p>本文主要依據 Threads 貼文可公開擷取內容與 OpenAI role-specific plugins GitHub repo README。貼文中提到的 HyperFrames、Build Web Apps、Superpowers 等名稱可能指 Codex 插件／技能／社群工作流組合；本次未逐一登入 Codex 插件市場驗證可用性，也未實測 HyperFrames 輸出 MP4。任何涉及登入網站、CRM、Gmail、Vercel 部署或 GitHub repo 寫入的自動化，都應先在測試環境與最小權限下驗證。</p>
+<h1>原始連結</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1</a></li>
+<li>OpenAI Codex for every role：<a href="https://openai.com/index/codex-for-every-role-tool-workflow/" target="_blank" rel="noopener">https://openai.com/index/codex-for-every-role-tool-workflow/</a></li>
+<li>OpenAI Codex for knowledge work：<a href="https://openai.com/index/codex-for-knowledge-work" target="_blank" rel="noopener">https://openai.com/index/codex-for-knowledge-work</a></li>
+<li>OpenAI role-specific plugins repo：<a href="https://github.com/openai/role-specific-plugins" target="_blank" rel="noopener">https://github.com/openai/role-specific-plugins</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-22 · https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">OpenAI Codex</span><span class="tag">AI Agent</span><span class="tag">插件生態</span><span class="tag">工作流自動化</span><span class="tag">Computer Use</span><span class="tag">Browser Automation</span><span class="tag">HyperFrames</span><span class="tag">Vercel</span><span class="tag">GitHub</span><span class="tag">Skills</span><span class="tag">Automations</span><span class="tag">開發與程式</span><span class="tag">商業與生產力</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1?xmt=AQG0a9HOtAKTHPgUy0eKlkgUaZcGr0aiEf6yLqoLzuSy-t7eHjc6PbrY6Ge5qca6UerrY02tIQ&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1?xmt=AQG0a9HOtAKTHPgUy0eKlkgUaZcGr0aiEf6yLqoLzuSy-t7eHjc6PbrY6Ge5qca6UerrY02tIQ&amp;slof=1</a></p><p><a href="https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1</a></p><p><a href="https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1</a></p><p><a href="https://openai.com/index/codex-for-every-role-tool-workflow/" target="_blank" rel="noopener">https://openai.com/index/codex-for-every-role-tool-workflow/</a></p><p><a href="https://openai.com/index/codex-for-knowledge-work" target="_blank" rel="noopener">https://openai.com/index/codex-for-knowledge-work</a></p><p><a href="https://github.com/openai/role-specific-plugins" target="_blank" rel="noopener">https://github.com/openai/role-specific-plugins</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
