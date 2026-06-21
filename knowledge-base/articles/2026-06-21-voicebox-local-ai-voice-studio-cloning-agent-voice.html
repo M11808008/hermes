@@ -1,0 +1,80 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Voicebox｜本機優先的開源 AI 聲音工作室、聲音複製與 Agent 語音輸出</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Voicebox｜本機優先的開源 AI 聲音工作室、聲音複製與 Agent 語音輸出</h1><h1>Voicebox｜本機優先的開源 AI 聲音工作室、聲音複製與 Agent 語音輸出</h1>
+<p>來源為 Threads 帳號「自由揚John ｜邊創業邊旅居的工程師」分享 GitHub 專案 `jamiepine/voicebox`。貼文主張只需約 30 秒語音即可複製聲音，輸入文字後可生成相似聲音。本文以 GitHub repo / README / release / security 文件作為 canonical source，Threads 作為發現來源與實測感受補充。</p>
+<h1>一句話摘要</h1>
+<p>Voicebox 不只是單一「聲音複製」玩具，而是把 TTS、STT、聲音 profile、後製效果、長文切段、故事時間軸、REST API 與 MCP server 整合成一套本機優先的 AI voice I/O stack；對欒帥來說，它最值得觀察的是「AI Agent 有自己的聲音」與「私有聲音資料本機化」兩條路線。</p>
+<h1>Threads 貼文重點</h1>
+<p>| 面向 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 分享者 | 自由揚John ｜邊創業邊旅居的工程師（@ceo.working） |</p>
+<p>| 社群觀察 | 稱 Voicebox 是最近 GitHub 上熱門的聲音複製專案 |</p>
+<p>| 操作印象 | 約 30 秒語音樣本，輸入文字後可生成很像本人聲音的朗讀 |</p>
+<p>| 使用者疑問 | 留言關心粵語支援、聲音被收集或盜用、語速控制、版權與詐騙風險 |</p>
+<p>| 作者補充 | 即時對話場景可能露出破綻，因為生成時仍需要等待 |</p>
+<h1>GitHub 專案快照</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Repo | `jamiepine/voicebox` |</p>
+<p>| GitHub | <a href="https://github.com/jamiepine/voicebox" target="_blank" rel="noopener">https://github.com/jamiepine/voicebox</a> |</p>
+<p>| 官方網站 | <a href="https://voicebox.sh" target="_blank" rel="noopener">https://voicebox.sh</a> |</p>
+<p>| Docs | <a href="https://docs.voicebox.sh" target="_blank" rel="noopener">https://docs.voicebox.sh</a> |</p>
+<p>| 描述 | The open-source AI voice studio. Clone, dictate, create. |</p>
+<p>| 授權 | MIT License |</p>
+<p>| 主要語言 | TypeScript、Python、Rust |</p>
+<p>| 最新 release | v0.5.0，2026-04-25 發布 |</p>
+<p>| GitHub 快照 | 2026-06-21 查詢：31,479 stars、3,871 forks、461 open issues |</p>
+<p>| 支援平台 | macOS Apple Silicon / Intel、Windows、Docker；Linux 需依文件自行 build |</p>
+<h1>README 確認的核心能力</h1>
+<p>| 模組 | 能力 |</p>
+<p>|---|---|</p>
+<p>| Voice cloning | 從幾秒參考音訊做 zero-shot cloning，也可用預設 voices |</p>
+<p>| TTS engines | 7 個引擎：Qwen3-TTS、Qwen CustomVoice、LuxTTS、Chatterbox Multilingual、Chatterbox Turbo、HumeAI TADA、Kokoro |</p>
+<p>| 語言 | README 稱 23 種語言；不同引擎支援範圍不同 |</p>
+<p>| 情緒與語氣 | Chatterbox Turbo 支援 `[laugh]`、`[sigh]`、`[gasp]` 等 paralinguistic tags；Qwen CustomVoice 支援自然語言 delivery control |</p>
+<p>| 長文生成 | 自動切段、crossfade，可處理 scripts、articles、chapters，README 標示 max text length 50,000 characters |</p>
+<p>| 後製效果 | Pitch shift、reverb、delay、chorus/flanger、compressor、gain、high/low-pass filter |</p>
+<p>| Stories editor | 多軌時間軸，適合對話、podcast、narrative |</p>
+<p>| Voice input | Whisper-based STT、全域 dictation hotkey、push-to-talk / toggle modes |</p>
+<p>| Agent voice output | 透過 `voicebox.speak` 與 built-in MCP server，讓 Claude Code、Cursor、Cline 等 MCP-aware agent 用指定聲音說話 |</p>
+<p>| API-first | REST API + built-in MCP server，可整合到自己的 App / Agent |</p>
+<p>| Native app | Tauri / Rust，不是 Electron |</p>
+<h1>架構判讀</h1>
+<p>| 層級 | 角色 | 對欒帥的意義 |</p>
+<p>|---|---|---|</p>
+<p>| 桌面 App | Tauri native app，管理 voices、generation、stories、dictation | 可當成低摩擦本機 voice lab，而不是只跑 command line demo |</p>
+<p>| Python voice backend | 負責模型推理、TTS / STT、音訊生成 | 適合評估本機 GPU / CPU 成本與部署複雜度 |</p>
+<p>| Profile / Persona | 每個 voice profile 可帶 persona，用於 Compose / Rewrite / Respond | 可把「聲音」與「角色人格」綁成教學助理或 agent persona |</p>
+<p>| REST API | 外部程式可呼叫語音生成 | 可接 Hermes、課程平台、內容產線 |</p>
+<p>| MCP server | 讓 Claude Code / Cursor / Cline 等工具呼叫聲音輸出 | 代表 agent 不只輸出文字，還能進入語音互動層 |</p>
+<p>| Local-first privacy | 預設本機處理，Security 文件稱 voice data 不離開本機，除非啟用 remote server mode | 適合私有聲音素材；但仍要管好本機檔案與遠端模式設定 |</p>
+<h1>與既有聲音模型案例的差異</h1>
+<p>知識庫已有 VoxCPM2 這類開源語音合成模型案例。Voicebox 的角度不同：VoxCPM2 偏模型能力與聲音生成效果；Voicebox 偏「產品化 voice studio + agent voice I/O」。也就是說，Voicebox 的重點不只是模型，而是把多個模型、桌面 UI、API、MCP、故事編輯器、dictation 與後製效果包成可使用的工作台。</p>
+<h1>欒帥可用的工作流想像</h1>
+<ul>
+<li>**AI 課程助教聲音**：建立一個課程助教 voice profile，讓課程摘要、練習提醒、講義導讀可以用一致聲音輸出。</li>
+<li>**Hermes / Agent 語音層**：透過 REST API 或 MCP，把文字回覆轉成 voice bubble / audio memo，形成「Agent 會說話」的體驗。</li>
+<li>**內容產線**：把文章、電子報、教學腳本轉成短音檔，搭配字幕與剪輯工具產生 podcast / short video voiceover。</li>
+<li>**外語訓練**：用不同語言與聲音引擎測試口音、語速、自然度，做聽力或口說教材。</li>
+<li>**本機隱私測試**：比對 ElevenLabs / WisprFlow / 雲端 TTS 與 Voicebox，在隱私、品質、延遲、硬體成本上的取捨。</li>
+</ul>
+<h1>實測前建議檢查清單</h1>
+<p>| 檢查項 | 原因 |</p>
+<p>|---|---|</p>
+<p>| 下載來源 | 只從 GitHub Releases 或 voicebox.sh 官方鏈結下載，避免被植入惡意 installer |</p>
+<p>| 硬體條件 | 不同 TTS engine 對 GPU / VRAM / Metal / CUDA 要求不同；先用 Apple Silicon DMG 或 Docker 小樣本測試 |</p>
+<p>| 聲音授權 | 只複製本人或明確授權者聲音；不要用名人、他人、客戶或學生聲音做未授權生成 |</p>
+<p>| 詐騙防護 | 聲音複製足以造成語音詐騙風險，教學中應加入 consent、watermark、明確揭露與防詐辨識 |</p>
+<p>| 即時性 | Threads 作者也提醒生成時仍需等待；不等於低延遲 real-time call cloning |</p>
+<p>| 遠端模式 | Security 文件稱本機預設安全，但 remote server mode 需要 HTTPS、可信網路與身份確認 |</p>
+<p>| 開源活躍度 | 461 open issues 代表專案熱門但問題多；正式導入前需看 release notes、known issues 與系統相容性 |</p>
+<h1>可做的小型驗證實驗</h1>
+<ul>
+<li>在 Mac Apple Silicon 安裝 v0.5.0 DMG。</li>
+<li>用自己 30 秒乾淨語音建立 profile，測 3 段文本：中文、英文、中英混合技術名詞。</li>
+<li>分別比較 Qwen3-TTS、Chatterbox Multilingual、Kokoro 或可用引擎的自然度、延遲、專有名詞與情緒表現。</li>
+<li>測試 `voicebox.speak` / MCP 是否能讓 coding agent 或內容 agent 播報任務完成摘要。</li>
+<li>記錄 CPU/GPU、生成時間、失敗率與音檔輸出格式，決定是否值得串到 Hermes 工作流。</li>
+</ul>
+<h1>安全與倫理提醒</h1>
+<p>Voicebox 的能力很強，但聲音是高度敏感的生物特徵與身份線索。建議所有教學與展示都採用本人聲音或明確授權樣本，並在生成內容中標示 AI 合成。若用於商業內容、課程、客服或 agent voice，需建立使用同意、素材保存、撤回權、濫用回報與防詐提示流程。不要把「開源」誤解成「可以任意複製任何人的聲音」。</p>
+<h1>判讀限制</h1>
+<p>本文根據 Threads 貼文、Threads 留言、GitHub API、README、Release 與 Security 文件整理；尚未在本機實際安裝 Voicebox 或測試聲音複製品質。Threads 所稱「30 秒語音就很像」是分享者實測感受，README 則以「a few seconds of audio」描述 zero-shot cloning，實際效果會受錄音品質、語言、引擎、硬體與生成設定影響。GitHub stars、forks、issues 與 release 資訊為 2026-06-21 查詢快照，會隨時間變動。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-21 · https://www.threads.com/@ceo.working/post/DZ18dbiEYZF · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Voice AI</span><span class="tag">聲音複製</span><span class="tag">TTS</span><span class="tag">STT</span><span class="tag">本機 AI</span><span class="tag">MCP</span><span class="tag">Agent Voice</span><span class="tag">Qwen3-TTS</span><span class="tag">Whisper</span><span class="tag">開源工具</span><h3>原始連結</h3><p><a href="https://www.threads.com/@ceo.working/post/DZ18dbiEYZF?xmt=AQG0QP4GS8OMRp7eYlO_JD5mG1N4N8zTVjsZUk-XB3APNFSdW0AiKBo5fsM5L81JTuVM8gEP&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@ceo.working/post/DZ18dbiEYZF?xmt=AQG0QP4GS8OMRp7eYlO_JD5mG1N4N8zTVjsZUk-XB3APNFSdW0AiKBo5fsM5L81JTuVM8gEP&amp;slof=1</a></p><p><a href="https://github.com/jamiepine/voicebox" target="_blank" rel="noopener">https://github.com/jamiepine/voicebox</a></p><p><a href="https://www.threads.com/@ceo.working/post/DZ18dbiEYZF" target="_blank" rel="noopener">https://www.threads.com/@ceo.working/post/DZ18dbiEYZF</a></p><p><a href="https://github.com/jamiepine/voicebox" target="_blank" rel="noopener">https://github.com/jamiepine/voicebox</a></p><p><a href="https://voicebox.sh" target="_blank" rel="noopener">https://voicebox.sh</a></p><p><a href="https://docs.voicebox.sh" target="_blank" rel="noopener">https://docs.voicebox.sh</a></p><p><a href="https://github.com/jamiepine/voicebox/releases/tag/v0.5.0" target="_blank" rel="noopener">https://github.com/jamiepine/voicebox/releases/tag/v0.5.0</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

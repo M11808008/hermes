@@ -105,6 +105,42 @@
     "markdown": "articles/2026/06/2026-06-21-studio0808-livecaption-local-bilingual-subtitle-extension.md"
   },
   {
+    "title": "Voicebox｜本機優先的開源 AI 聲音工作室、聲音複製與 Agent 語音輸出",
+    "date": "2026-06-21",
+    "source": "https://www.threads.com/@ceo.working/post/DZ18dbiEYZF",
+    "author": "自由揚John / Jamie Pine / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Voice AI",
+      "聲音複製",
+      "TTS",
+      "STT",
+      "本機 AI",
+      "MCP",
+      "Agent Voice",
+      "Qwen3-TTS",
+      "Whisper",
+      "開源工具"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@ceo.working/post/DZ18dbiEYZF?xmt=AQG0QP4GS8OMRp7eYlO_JD5mG1N4N8zTVjsZUk-XB3APNFSdW0AiKBo5fsM5L81JTuVM8gEP&slof=1",
+      "https://github.com/jamiepine/voicebox",
+      "https://www.threads.com/@ceo.working/post/DZ18dbiEYZF",
+      "https://github.com/jamiepine/voicebox",
+      "https://voicebox.sh",
+      "https://docs.voicebox.sh",
+      "https://github.com/jamiepine/voicebox/releases/tag/v0.5.0"
+    ],
+    "excerpt": "Voicebox 不只是單一「聲音複製」玩具，而是把 TTS、STT、聲音 profile、後製效果、長文切段、故事時間軸、REST API 與 MCP server 整合成一套本機優先的 AI voice I/O stack；對欒帥來說，它最值得觀察的是「AI Agent 有自己的聲音」與「私有聲音資料本機化」兩條路線。",
+    "slug": "2026-06-21-voicebox-local-ai-voice-studio-cloning-agent-voice",
+    "html": "articles/2026-06-21-voicebox-local-ai-voice-studio-cloning-agent-voice.html",
+    "markdown": "articles/2026/06/2026-06-21-voicebox-local-ai-voice-studio-cloning-agent-voice.md"
+  },
+  {
     "title": "Agent Loops / Loop Engineering 入門｜Reason-Act-Observe、驗證條件與停止標準",
     "date": "2026-06-20",
     "source": "https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362",
