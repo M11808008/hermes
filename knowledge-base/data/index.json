@@ -69,6 +69,42 @@
     "markdown": "articles/2026/06/2026-06-21-hybride-pageindex-rag-local-private-kb.md"
   },
   {
+    "title": "Studio0808 LiveCaption｜本機即時雙語字幕 Chrome 外掛與無障礙學習工作流",
+    "date": "2026-06-21",
+    "source": "https://www.facebook.com/share/p/1MEYtWxx3k/",
+    "author": "李佳恩 / Studio0808 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "即時字幕",
+      "無障礙教育",
+      "Chrome Extension",
+      "本機 AI",
+      "SenseVoice",
+      "Sherpa ONNX",
+      "Ollama",
+      "DeepSeek",
+      "Antigravity",
+      "影音學習",
+      "開源工具"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1MEYtWxx3k/",
+      "https://github.com/begin0808/LiveCaption",
+      "https://www.facebook.com/share/p/1MEYtWxx3k/",
+      "https://www.facebook.com/groups/gaitech/permalink/1711654703352071/",
+      "https://github.com/begin0808/LiveCaption",
+      "https://begin0808.github.io/LiveCaption/"
+    ],
+    "excerpt": "Studio0808 LiveCaption 是一個很適合 AI 學習與無障礙教育場景的開源工具：它把「看國外直播或無字幕影片」變成可即時閱讀、可翻譯、可保存的本機字幕工作流，但目前仍屬早期專案，需注意安裝門檻、模型下載、API 金鑰與翻譯準確性驗證。",
+    "slug": "2026-06-21-studio0808-livecaption-local-bilingual-subtitle-extension",
+    "html": "articles/2026-06-21-studio0808-livecaption-local-bilingual-subtitle-extension.html",
+    "markdown": "articles/2026/06/2026-06-21-studio0808-livecaption-local-bilingual-subtitle-extension.md"
+  },
+  {
     "title": "Agent Loops / Loop Engineering 入門｜Reason-Act-Observe、驗證條件與停止標準",
     "date": "2026-06-20",
     "source": "https://www.skool.com/ai-automation-society/new-video-finally-agent-loops-clearly-explained?p=78105362",

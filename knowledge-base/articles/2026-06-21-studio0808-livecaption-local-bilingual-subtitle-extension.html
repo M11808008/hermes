@@ -1,0 +1,79 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Studio0808 LiveCaption｜本機即時雙語字幕 Chrome 外掛與無障礙學習工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Studio0808 LiveCaption｜本機即時雙語字幕 Chrome 外掛與無障礙學習工作流</h1><h1>Studio0808 LiveCaption｜本機即時雙語字幕 Chrome 外掛與無障礙學習工作流</h1>
+<p>來源為 Generative AI 技術交流中心中李佳恩分享的 Facebook 社團貼文。貼文發布一款以 Antigravity + Gemini 3.5 Flash 開發的「Studio0808 LiveCaption」多國語言版：用 Chrome 外掛擷取網頁影音分頁音訊，再由本機 Python 後端以 SenseVoice / Sherpa-ONNX 做語音辨識，並可接 Ollama 或 DeepSeek 產生雙語字幕。</p>
+<h1>一句話摘要</h1>
+<p>Studio0808 LiveCaption 是一個很適合 AI 學習與無障礙教育場景的開源工具：它把「看國外直播或無字幕影片」變成可即時閱讀、可翻譯、可保存的本機字幕工作流，但目前仍屬早期專案，需注意安裝門檻、模型下載、API 金鑰與翻譯準確性驗證。</p>
+<h1>專案快照</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 專案 | Studio0808 LiveCaption |</p>
+<p>| GitHub | <a href="https://github.com/begin0808/LiveCaption" target="_blank" rel="noopener">https://github.com/begin0808/LiveCaption</a> |</p>
+<p>| 線上手冊 | <a href="https://begin0808.github.io/LiveCaption/" target="_blank" rel="noopener">https://begin0808.github.io/LiveCaption/</a> |</p>
+<p>| Repo 描述 | 即時影音雙語字幕翻譯系統；本機離線 AI 語音辨識與翻譯；支援 SenseVoice、Ollama、DeepSeek |</p>
+<p>| 主要語言 | HTML、JavaScript、Python、CSS |</p>
+<p>| GitHub 快照 | 2026-06-21 查詢：15 stars、5 forks、0 open issues，預設分支 `master` |</p>
+<p>| 授權狀態 | README 顯示 MIT badge；GitHub API 未偵測到 license 欄位，實際採用前仍應確認是否有 LICENSE 檔 |</p>
+<p>| 平台 | README 標示 Windows / macOS；Windows 有離線整合包，macOS 需原始碼啟動後端 |</p>
+<h1>Facebook 貼文重點</h1>
+<p>| 主張 | 說明 |</p>
+<p>|---|---|</p>
+<p>| 起心動念 1 | 追國外 AI 大神直播、最新技術影片時，不再受語言限制 |</p>
+<p>| 起心動念 2 | 幫助聽障或聽力不便者看無字幕線上影片、課程或直播 |</p>
+<p>| 多語支援 | 本機 AI 語音辨識，支援中、英、日、韓、粵語等語音 |</p>
+<p>| 隱私 | 音訊擷取與辨識在本機完成，降低外洩風險 |</p>
+<p>| 翻譯 | 可選 Ollama 本地模型或 DeepSeek 線上 API |</p>
+<p>| UI | 毛玻璃字幕懸浮框，可調字體大小，支援滑鼠穿透 |</p>
+<p>| 延遲 | 即時辨識與翻譯可能有 1–2 秒延遲，但足以同步學習 |</p>
+<h1>官方手冊確認的使用場景</h1>
+<p>| 場景 | 可用方式 |</p>
+<p>|---|---|</p>
+<p>| 線上課程與學術講座 | 看 Coursera、Udemy、YouTube 無字幕教學影片，即時取得繁中翻譯 |</p>
+<p>| 聽障輔助與無障礙學習 | 把線上影片或視訊課程語音轉成可讀字幕 |</p>
+<p>| 外語聽力練習 | 可切換僅原文、僅翻譯、雙語對照模式 |</p>
+<p>| 全球直播 / 海外新聞 | 即時掌握無字幕直播與海外影音內容 |</p>
+<p>| 網頁視訊會議 | 在 Google Meet / Teams 等瀏覽器會議中產生雙語字幕，手冊提到可保存 Markdown 會議紀錄 |</p>
+<p>| 影音創作者 | 快速整理國外參考影片、訪談紀錄與腳本素材 |</p>
+<h1>技術架構拆解</h1>
+<p>| 模組 | 作用 | 技術線索 |</p>
+<p>|---|---|---|</p>
+<p>| Chrome Extension | 擷取當前分頁音訊、顯示字幕懸浮框 | Manifest V3、`tabCapture`、`offscreen`、`activeTab`、content script |</p>
+<p>| Python Backend | WebSocket 接收音訊、VAD 斷句、ASR 辨識、翻譯 | FastAPI、Uvicorn、websockets、Sherpa-ONNX、OpenCC、httpx |</p>
+<p>| VAD | 偵測語音片段與斷句 | Silero VAD ONNX；後端設定 threshold 0.4、min speech 0.15s |</p>
+<p>| ASR | 多語音訊轉文字 | SenseVoice-Small ONNX int8，支援 zh/en/ja/ko/yue |</p>
+<p>| 翻譯 | 字幕翻譯與雙語對照 | Ollama 本地模型、DeepSeek API；程式註解也提到 Google Translate fallback |</p>
+<p>| UI / UX | 毛玻璃字幕、字體大小、歷史行數、滑鼠穿透 | 適合直播或影片不中斷觀看 |</p>
+<h1>安裝與操作流程</h1>
+<p>| 步驟 | Windows 整合包 | 原始碼 / macOS |</p>
+<p>|---|---|---|</p>
+<p>| 1. 後端 | 下載 `LiveCaption_V20260621.ZIP`，執行 `點我啟動【即時字幕】後端服務.bat` | Python 3.8+，進入 `backend` 後 `pip install -r requirements.txt`、`python download_models.py`、`python main.py` |</p>
+<p>| 2. 外掛 | Chrome 開啟 `chrome://extensions/`，啟用開發者模式 | 同左 |</p>
+<p>| 3. 載入 | 選擇專案中的 `extension` 資料夾 | 同左 |</p>
+<p>| 4. 使用 | 開啟 YouTube 或網頁影片，點外掛啟動即時字幕 | 同左 |</p>
+<p>| 5. 翻譯 | 若需全離線，搭配 Ollama；若追求翻譯品質，可設定 DeepSeek API key | 同左 |</p>
+<h1>對欒帥的教學與工作流價值</h1>
+<ul>
+<li>**AI 學習雷達的「直播吸收器」**：可用來看 OpenAI、Anthropic、Google、NVIDIA、AI 研究者的國外直播，把字幕變成第一層理解輔助。</li>
+<li>**無障礙教育案例**：很適合放進「AI for accessibility」或「AI 教育平權」單元，因為它直接把聽覺障礙、語言障礙與同步學習串在一起。</li>
+<li>**本機 AI 架構示範**：Chrome Extension + local FastAPI + ONNX ASR + optional LLM translation，是很清楚的端側 AI pipeline 範例。</li>
+<li>**可延伸成會議紀錄工具**：若 Markdown 存檔功能穩定，可接到 Obsidian / NotebookLM / AI 學習雷達做課程與會議筆記。</li>
+<li>**適合作為 Antigravity / Gemini 實作案例**：Facebook 原文強調用 Antigravity + Gemini 3.5 Flash 開發，可作為「AI coding agent 產出實用工具」的案例。</li>
+</ul>
+<h1>實測前建議檢查清單</h1>
+<p>| 檢查項 | 原因 |</p>
+<p>|---|---|</p>
+<p>| Chrome 權限 | 外掛需要 `tabCapture` 與 `&lt;all_urls&gt;`，應確認只在可信瀏覽器環境使用 |</p>
+<p>| 模型下載來源 | `download_models.py` 從 sherpa-onnx release 下載 SenseVoice / Silero VAD 模型 |</p>
+<p>| API key 安全 | 若使用 DeepSeek，金鑰會存於外掛設定；避免在共用電腦使用 |</p>
+<p>| 翻譯品質 | Facebook 留言有人詢問翻譯正確性；正式教學前應用同一段英文直播做抽樣評估 |</p>
+<p>| 隱私範圍 | 本機 ASR + Ollama 才是完整離線；使用 DeepSeek 就會把文字送到雲端翻譯 API |</p>
+<p>| 依賴完整性 | `backend/main.py` 使用 `opencc`，但目前 `requirements.txt` 片段中未列出 opencc 相關套件；若安裝失敗需補查依賴 |</p>
+<p>| 授權 | README 有 MIT badge，但 GitHub API 未偵測 license；商用或再散布前應確認 LICENSE 檔 |</p>
+<h1>可做的小型驗證實驗</h1>
+<ul>
+<li>選一段 5 分鐘英文 AI 發表會影片。</li>
+<li>分別測試：僅原文、Ollama 本地翻譯、DeepSeek API 翻譯。</li>
+<li>紀錄延遲、首字漏字率、專有名詞準確率、雙語對照可讀性。</li>
+<li>測試中英日韓與粵語各一段，確認 SenseVoice 多語能力是否符合教學需求。</li>
+<li>將輸出的字幕/Markdown 接到 AI 學習雷達，評估是否能形成「直播 → 字幕 → 摘要 → 知識庫」流程。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文根據 Facebook 社團貼文、GitHub API / README、官方 GitHub Pages 手冊與原始碼片段整理；尚未在本機實際安裝執行 LiveCaption，因此延遲、準確率、穩定性、GPU/CPU 資源占用與 Markdown 存檔可靠度仍需實測。GitHub 指標為 2026-06-21 查詢快照，會隨時間變動。Facebook 原文提到「100% 本地端」與「100% 離線隱私」時，應理解為使用本機 ASR + Ollama 翻譯的模式；若切換 DeepSeek API，翻譯文字會送往雲端服務。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-21 · https://www.facebook.com/share/p/1MEYtWxx3k/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">即時字幕</span><span class="tag">無障礙教育</span><span class="tag">Chrome Extension</span><span class="tag">本機 AI</span><span class="tag">SenseVoice</span><span class="tag">Sherpa ONNX</span><span class="tag">Ollama</span><span class="tag">DeepSeek</span><span class="tag">Antigravity</span><span class="tag">影音學習</span><span class="tag">開源工具</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1MEYtWxx3k/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1MEYtWxx3k/</a></p><p><a href="https://github.com/begin0808/LiveCaption" target="_blank" rel="noopener">https://github.com/begin0808/LiveCaption</a></p><p><a href="https://www.facebook.com/share/p/1MEYtWxx3k/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1MEYtWxx3k/</a></p><p><a href="https://www.facebook.com/groups/gaitech/permalink/1711654703352071/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/permalink/1711654703352071/</a></p><p><a href="https://github.com/begin0808/LiveCaption" target="_blank" rel="noopener">https://github.com/begin0808/LiveCaption</a></p><p><a href="https://begin0808.github.io/LiveCaption/" target="_blank" rel="noopener">https://begin0808.github.io/LiveCaption/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
