@@ -1210,7 +1210,7 @@
   {
     "title": "TigerAI Code2n8n Skill Pack｜把自然語言與既有程式轉成可治理的 n8n 工作流",
     "date": "2026-06-19",
-    "source": "https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack",
+    "source": "https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack",
     "author": "MorrisLu-Taipei / TigerAI / Hermes Agent",
     "type": "article",
     "topics": [
@@ -1229,10 +1229,15 @@
     "importance": "high",
     "status": "archived",
     "links": [
-      "https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack",
-      "https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack",
-      "https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/README.zh.md",
-      "https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/CODE2N8N.md"
+      "https://www.facebook.com/share/p/18uhvqjmrH/?mibextid=wwXIfr",
+      "https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack",
+      "https://www.facebook.com/share/p/18uhvqjmrH/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/n8ngroups/posts/1530062068671389/?mibextid=wwXIfr",
+      "https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack",
+      "https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack/blob/main/README.zh.md",
+      "https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack/blob/main/CODE2N8N.md",
+      "https://github.com/paid-tw/einvoice",
+      "https://www.npmjs.com/package/@paid-tw/einvoice"
     ],
     "excerpt": "Code2n8n 不是「把每一行 code 逐字翻成 n8n 節點」的轉譯器，而是一套 porting / review / validation / governance 方法：決定哪些複雜演算法留在 code，哪些觸發、跨系統串接、重試、人工審批、通知與執行歷史應該升到 n8n 可視化流程裡。",
     "slug": "2026-06-19-tigerai-code2n8n-skill-pack-agentic-workflow-governance",

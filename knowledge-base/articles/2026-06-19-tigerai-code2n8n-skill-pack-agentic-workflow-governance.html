@@ -4,13 +4,13 @@
 <p>Code2n8n 不是「把每一行 code 逐字翻成 n8n 節點」的轉譯器，而是一套 porting / review / validation / governance 方法：決定哪些複雜演算法留在 code，哪些觸發、跨系統串接、重試、人工審批、通知與執行歷史應該升到 n8n 可視化流程裡。</p>
 <h1>GitHub Snapshot</h1>
 <ul>
-<li>Repository：MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack</li>
-<li>描述：Build enterprise-grade n8n workflows using natural language sticky notes; transform human intent into complete, documented three-layer automation systems.</li>
+<li>Repository：MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack</li>
+<li>描述：TigerAI A2A Code2n8n Skill Pack v1.0 — 將自然語言需求或既有 codebase 轉成可治理、可審查、可驗證的企業級 n8n workflows。</li>
 <li>主要語言：JavaScript</li>
 <li>授權：MIT License</li>
-<li>Stars / Forks：約 74 stars、18 forks（2026-06-19 snapshot）</li>
+<li>Stars / Forks：約 79 stars、19 forks（2026-06-22 snapshot）</li>
 <li>建立時間：2026-05-06</li>
-<li>最近更新：2026-06-19</li>
+<li>最近更新：2026-06-22</li>
 </ul>
 <h1>核心定位</h1>
 <p>README 把 Code2n8n 說得很清楚：</p>
@@ -57,11 +57,39 @@
 <li>可用於製造業、客服、報表、內部工具、Google Workspace 管理、LINE OA 流程等需要跨系統協作的場景。</li>
 <li>導入時要保留 n8n Enterprise / IT 的責任邊界：SSO、IAM、HA、Audit、Source Control、Environments 不是 Skill Pack 自己提供，而是工作流要能乾淨落在企業平台能力之上。</li>
 </ul>
+<h1>2026-06-22 補充：電子發票 SDK → 14 個 n8n workflows 的實戰案例</h1>
+<p>Morris Lu 在 n8n Taiwan User Group 補充分享了 v1.0 的實戰里程碑：以 `paid-tw/einvoice` 台灣電子發票 TypeScript SDK 為來源，透過 Claude Code × Codex × Antigravity 與 TigerAI A2A Code2n8n Skill Pack，轉成可治理的 n8n workflow 案例。</p>
+<h2>Facebook 貼文重點</h2>
+<ul>
+<li>`paid-tw/einvoice` 是台灣電子發票統一 SDK，支援 Amego、ECPay 綠界、ezPay 藍新、ezPay 跨境、ezReceipt，對應財政部 MIG 4.0 情境。</li>
+<li>TigerAI A2A Code2n8n Skill Pack 將 SDK 轉為 14 個 n8n workflow，涵蓋開立、作廢、折讓、查詢、B2B、載具、外幣、排程、對帳、稽核匯出等流程。</li>
+<li>貼文宣稱已對接 Amego 真實 sandbox 測試：Amego 10/10 capability runtime PASS，產生 11 筆真實發票 trace，可在 Amego 後台查驗。</li>
+<li>22 個資安 SEC entries 中，20 個已修，1 個 upstream gap 已 mitigated。</li>
+<li>4-Tier 外部依賴安全檢查被放進 CI gate。</li>
+<li>目標不是只畫流程圖，而是把工程師看得懂的 SDK，轉成公司也管得住、查得到、交接得下去的 n8n workflow。</li>
+</ul>
+<h2>GitHub 官方 repo 交叉驗證</h2>
+<p>截至本次檢查：</p>
+<p>| Repository | 角色 | Snapshot |</p>
+<p>|---|---|---|</p>
+<p>| `MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack` | Code2n8n 方法論與 v1.0 實作包 | JavaScript、MIT、約 79 stars / 19 forks、README 明列 paid-tw/einvoice v1.0 案例 |</p>
+<p>| `paid-tw/einvoice` | 台灣電子發票統一 TypeScript SDK | TypeScript、MIT、約 106 stars / 17 forks、npm package `@paid-tw/einvoice` |</p>
+<p>`paid-tw/einvoice` README 說明其核心是供應商無關的 `InvoiceProvider` 介面與多個 adapter，讓商業邏輯不必綁死 Amego、ECPay、ezPay 或 ezReceipt；並透過 capabilities、Zod schema、MockProvider、InvoiceError 等機制處理能力偵測、驗證與錯誤正規化。</p>
+<p>TigerAI repo README 則明確把這次 v1.0 定位為：將 `paid-tw/einvoice` 轉為 80-line Hono `svc` wrapper + 14 n8n workflows，並完成 Path B 的 port、security review 與 real-vendor-sandbox runtime evidence。README 也保留 upstream issue 草稿，指出 Amego `SCHEDULED_ISSUE` capability 宣告與 runtime 行為存在不一致，Pack 端已用 capability-aware gate 緩解。</p>
+<h2>對欒帥的實用判讀更新</h2>
+<p>這個補充讓原本的 Code2n8n 概念更具體：它不是只說「AI 可以把 code 變 n8n」，而是用台灣電子發票這種有法規、供應商、稅務、稽核與 sandbox trace 的情境，示範企業級 agent workflow 必須同時處理三件事：</p>
+<ul>
+<li>**Porting**：把 SDK 包成服務與 n8n workflow，而不是硬把所有邏輯塞進節點。</li>
+<li>**Validation**：用真實供應商 sandbox、trace 與 capability coverage 證明流程能跑。</li>
+<li>**Governance**：把資安項目、外部依賴檢查、upstream gap 與 CI gate 放進交付物。</li>
+</ul>
+<p>這很適合放進「AI Agent × n8n × 企業自動化」課程：案例本土化、場景夠硬、也能讓學員理解 AI coding demo 與真正可治理工作流之間的距離。</p>
 <h1>風險與限制</h1>
 <ul>
 <li>Reference workflows 是設計查找素材，不代表可直接上 production。</li>
 <li>Code2n8n 是 partition methodology，不是萬能 code-to-workflow compiler。</li>
 <li>Security Review gate 不是完整 SAST / DAST / fuzzer。</li>
 <li>workflow 上線仍需要 credentials、環境隔離、測試資料、rollback 與權限設計。</li>
+<li>Facebook 貼文中的 sandbox trace、SEC entries 與 CI gate 數字已與 GitHub README 大方向一致，但本文未登入 Amego 後台或本機執行 repo；正式導入前仍需自行重跑測試與審查 workflow credentials。</li>
 <li>repo 本身是很好的 agentic engineering case study，但正式採用仍要針對內部 SOP 做審查。</li>
-</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">n8n</span><span class="tag">Code2n8n</span><span class="tag">TigerAI</span><span class="tag">Agentic Engineering</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Antigravity</span><span class="tag">Workflow Automation</span><span class="tag">Governance</span><h3>原始連結</h3><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/README.zh.md" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/README.zh.md</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/CODE2N8N.md" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-Code2n8n-Skill-Pack/blob/main/CODE2N8N.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-19 · https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">n8n</span><span class="tag">Code2n8n</span><span class="tag">TigerAI</span><span class="tag">Agentic Engineering</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Antigravity</span><span class="tag">Workflow Automation</span><span class="tag">Governance</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/18uhvqjmrH/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/18uhvqjmrH/?mibextid=wwXIfr</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack</a></p><p><a href="https://www.facebook.com/share/p/18uhvqjmrH/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/18uhvqjmrH/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/groups/n8ngroups/posts/1530062068671389/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/groups/n8ngroups/posts/1530062068671389/?mibextid=wwXIfr</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack/blob/main/README.zh.md" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack/blob/main/README.zh.md</a></p><p><a href="https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack/blob/main/CODE2N8N.md" target="_blank" rel="noopener">https://github.com/MorrisLu-Taipei/TigerAI-A2A-Code2n8n-Skill-Pack/blob/main/CODE2N8N.md</a></p><p><a href="https://github.com/paid-tw/einvoice" target="_blank" rel="noopener">https://github.com/paid-tw/einvoice</a></p><p><a href="https://www.npmjs.com/package/@paid-tw/einvoice" target="_blank" rel="noopener">https://www.npmjs.com/package/@paid-tw/einvoice</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
