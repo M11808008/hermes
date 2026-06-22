@@ -1,0 +1,130 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sakana Fugu｜把多模型協作封裝成單一 API 的「模型編排」路線</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Sakana Fugu｜把多模型協作封裝成單一 API 的「模型編排」路線</h1><h1>Sakana Fugu｜把多模型協作封裝成單一 API 的「模型編排」路線</h1>
+<p>Sakana AI 在 2026-06-22 發表 Sakana Fugu 與 Fugu Ultra。官方定位不是再推出一個單體大模型，而是把 multi-agent orchestration 變成一個可直接呼叫的 foundation model / API：使用者只打一個 endpoint，內部由 Fugu 判斷是否自行回答、何時委派、呼叫哪些模型、如何驗證與整合結果。</p>
+<h1>一句話摘要</h1>
+<p>Fugu 的核心價值是把「多模型協作、任務拆解、模型路由、結果驗證」包成單一 OpenAI-compatible API；對 AI Agent、研究自動化、企業主權 AI 與教育示範來說，這比單純比較單一模型分數更值得觀察。</p>
+<h1>官方資訊速查</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 發表單位 | Sakana AI |</p>
+<p>| 發表日期 | 2026-06-22 |</p>
+<p>| 產品 | Sakana Fugu、Fugu Ultra |</p>
+<p>| 官方定位 | One model API to access a full multi-agent orchestration system |</p>
+<p>| API 形式 | 官方稱可透過單一 OpenAI-compatible API 使用 |</p>
+<p>| 產品頁 | <a href="https://sakana.ai/fugu/" target="_blank" rel="noopener">https://sakana.ai/fugu/</a> |</p>
+<p>| Console | <a href="https://console.sakana.ai" target="_blank" rel="noopener">https://console.sakana.ai</a> |</p>
+<p>| 技術報告 | <a href="https://github.com/SakanaAI/fugu/blob/main/Fugu_technical_report.pdf" target="_blank" rel="noopener">https://github.com/SakanaAI/fugu/blob/main/Fugu_technical_report.pdf</a> |</p>
+<p>| 研究基礎 | Trinity、Conductor：learned model orchestration / learned agent orchestration |</p>
+<h1>Fugu 在解決什麼問題</h1>
+<p>Sakana AI 的論點是：真實工作不只需要「一個最強模型」，而是需要一個會協調模型的系統。複雜任務常包含：</p>
+<ul>
+<li>判斷任務能否直接解。</li>
+<li>選擇合適模型或專家 agent。</li>
+<li>把任務拆成可委派的子問題。</li>
+<li>驗證中間結果。</li>
+<li>整合成一致、可靠的最終答案。</li>
+<li>在供應商不可用、受限制或品質不穩時改走其他模型。</li>
+</ul>
+<p>Fugu 把這些動作包在模型內部，讓開發者不用自己寫完整 multi-agent framework，也不用把供應商路由、模型 fallback、驗證流程全部暴露在產品程式碼裡。</p>
+<h1>Fugu 與 Fugu Ultra 的差異</h1>
+<p>| 模型 | 官方定位 | 適合場景 | 欒帥可怎麼理解 |</p>
+<p>|---|---|---|---|</p>
+<p>| Fugu | 強性能與低延遲的平衡版 | 日常工作、聊天服務、coding、code review、互動式產品 | 作為「預設 agent 模型編排層」，重視反應速度與穩定性 |</p>
+<p>| Fugu Ultra | 追求困難多步任務的最高品質 | AI research、論文重現、資安分析、文獻與專利調查 | 作為「深度研究 / 長任務 agent conductor」，重視精度、深度與持續推進 |</p>
+<p>官方也提到，對資料、隱私或合規有要求的團隊，可以選擇把特定 agents 排除在池外。這點對企業導入很重要，因為模型編排若不能控制 agent pool，就很難進入合規或敏感資料工作流。</p>
+<h1>這件事為什麼重要</h1>
+<h2>1. AI 競爭正在從「模型能力」走向「編排能力」</h2>
+<p>過去的主敘事是訓練更大的單一模型；Fugu 代表另一條路線：訓練一個會協調其他模型的模型。未來的 agent 平台競爭，可能不只比誰的 base model 最強，而是比：</p>
+<ul>
+<li>誰更會拆任務。</li>
+<li>誰更會選模型。</li>
+<li>誰更會驗證與反駁中間結果。</li>
+<li>誰能在長任務裡保持方向與一致性。</li>
+<li>誰能把模型供應商風險抽象掉。</li>
+</ul>
+<p>這和欒帥常關注的 Hermes / Codex / Claude Code / MCP / workflow API 是同一個方向：AI 能力正在從單點工具變成可編排的作業系統層。</p>
+<h2>2. 它把 multi-agent 的複雜度藏到 API 後面</h2>
+<p>很多團隊知道 multi-agent 有價值，但實作時會遇到大量摩擦：planner、executor、critic、tool router、memory、cost control、retry、trace、權限與安全邊界。Fugu 的主張是把這些包成一個模型介面。</p>
+<p>這對產品設計的意義是：未來 SaaS 不一定要內建複雜 agent graph，可能只需要把高階任務交給一個 orchestration model，再搭配自己的 tools / data / policy layer。</p>
+<h2>3. 它把「AI sovereignty」從政策口號變成架構問題</h2>
+<p>官方特別強調單一供應商依賴的風險：若某模型因出口管制、政策、地區限制或商業策略而不可用，關鍵業務不能完全卡死。Fugu 的解法是 agent pool 可替換、可繞路、可吸收新模型。</p>
+<p>對企業與教育場景來說，這可以轉成一個很實用的架構觀念：</p>
+<p>| 問題 | 單一模型架構 | 模型編排架構 |</p>
+<p>|---|---|---|</p>
+<p>| 供應商中斷 | 服務品質或功能直接受影響 | 可切換其他 agent / model |</p>
+<p>| 模型專長不足 | 只能靠 prompt 補救 | 可委派給不同專長模型 |</p>
+<p>| 成本控制 | 高低階任務都打同一模型 | 依任務選擇模型深度 |</p>
+<p>| 合規要求 | 需整體替換模型供應商 | 可排除特定 agent / provider |</p>
+<p>| 長任務可靠性 | 容易漂移或漏步驟 | 可引入分工、驗證、綜合 |</p>
+<h1>官方提到的實際應用</h1>
+<p>Sakana AI 表示 beta program 有接近 500 位 early users，觀察到 Fugu 在長而混亂的真實工作流中價值較明顯。官方列出的例子包括：</p>
+<ul>
+<li>自動化資料科學研究 / AutoResearch。</li>
+<li>論文重現與 AI research。</li>
+<li>Code review 與 coding。</li>
+<li>資安評估：recon、XSS / SQLi 檢查、auth review、證據與 retest steps。</li>
+<li>文獻與專利調查。</li>
+<li>機械設計、日本手寫分析、棋類與金融時間序列預測等實驗。</li>
+</ul>
+<p>最值得抓住的不是單一 benchmark，而是「長任務持續推進」：讀資料、實作、測試、比較證據、修正失敗、找出缺口、產出報告。這正是 agentic workflow 最難的部分。</p>
+<h1>對欒帥的實用判讀</h1>
+<h2>1. 可作為「Agent 編排層」課程案例</h2>
+<p>Fugu 很適合拿來教 AI Agent 架構分層：</p>
+<p>| 層級 | 例子 | 教學重點 |</p>
+<p>|---|---|---|</p>
+<p>| Base model | GPT、Claude、Gemini、open model | 單次推理與生成能力 |</p>
+<p>| Tool / MCP layer | 檔案、瀏覽器、GitHub、資料庫、影音 API | 讓模型能行動 |</p>
+<p>| Orchestration layer | Fugu / Hermes 類 conductor | 拆任務、選模型、委派、驗證、整合 |</p>
+<p>| Product workflow | 研究助理、程式審查、資安掃描、文獻調查 | 把 agent 能力變成可交付流程 |</p>
+<p>這比只講「多個 agent 互相聊天」更成熟，因為它把協作能力設計成可被呼叫、可替換、可控管的基礎層。</p>
+<h2>2. 可作為企業 AI 主權與多供應商策略範例</h2>
+<p>對企業簡報或課程來說，Fugu 可用來說明：不要把 AI strategy 理解成「選一個最強模型」；更成熟的設計是建立 model portfolio、routing policy、fallback policy、data boundary 與 evaluation loop。</p>
+<p>可用的提問模板：</p>
+<ul>
+<li>哪些任務一定要用最高品質模型？哪些任務可用便宜快速模型？</li>
+<li>如果主要模型供應商明天不可用，服務會怎麼退化？</li>
+<li>哪些資料不能送到特定 agent / provider？</li>
+<li>agent 的中間步驟如何留下 evidence trace？</li>
+<li>最終答案如何驗證，而不是只相信最會說服人的模型？</li>
+</ul>
+<h2>3. 可觀察是否真正做到「可控、可追蹤、可評估」</h2>
+<p>Fugu 的產品敘事很漂亮，但實際導入仍要看三件事：</p>
+<p>| 檢查點 | 為什麼重要 |</p>
+<p>|---|---|</p>
+<p>| Trace / observability | 若看不到內部委派與驗證，就難以除錯與合規 |</p>
+<p>| Agent pool 控制 | 企業需要排除特定模型、地區、資料流向或成本層級 |</p>
+<p>| Evaluation / benchmark reproducibility | 官方 benchmark 與使用者 quote 需要可重現測試支撐 |</p>
+<p>| 成本與延遲 | 多模型協作可能提升品質，但也可能提高成本與等待時間 |</p>
+<p>| Tool permission | 若未來接工具，必須有明確安全邊界與 destructive action guardrail |</p>
+<h1>和 Hermes / Codex 工作流的關係</h1>
+<p>Fugu 比較像「模型層的 conductor」；Hermes / Codex / Claude Code 則偏向「執行環境與工具層」。可這樣對照：</p>
+<p>| 角色 | 代表 | 功能 |</p>
+<p>|---|---|---|</p>
+<p>| Orchestration model | Sakana Fugu | 決定如何拆任務、呼叫哪些模型、整合結果 |</p>
+<p>| Agent runtime | Hermes Agent | 管理工具、記憶、技能、排程、訊息平台、檔案與流程 |</p>
+<p>| Coding executor | Codex / Claude Code | 在 repo 中修改程式、跑測試、產生 PR |</p>
+<p>| Tool protocol | MCP / API / CLI | 提供外部能力與資料來源 |</p>
+<p>如果未來 Fugu API 成熟，它可以成為 Hermes 或其他 agent runtime 的其中一個「上層模型選項」；但 runtime 的工具權限、記憶、檔案、安全與部署仍需要另外設計。</p>
+<h1>建議後續測試</h1>
+<p>| 測試 | 做法 | 觀察點 |</p>
+<p>|---|---|---|</p>
+<p>| Code review | 給同一 PR diff，與現有模型比較 | 是否找到更多真 bug，而非只增加噪音 |</p>
+<p>| 文獻調查 | 給研究問題與限制條件 | 是否能保留引用、分辨證據強弱 |</p>
+<p>| 資安分析 | 只給合法 scoped target / toy app | 是否遵守範圍、避免破壞性行為 |</p>
+<p>| 長任務規劃 | 給一個 2–3 小時研究 / 實作任務 | 是否能持續推進並修正失敗 |</p>
+<p>| 成本延遲 | 同任務跑 Fugu / Fugu Ultra | 評估品質提升是否值得成本 |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>本篇依 Sakana AI 官方發表頁、產品頁與官方連結整理，尚未在本機實測 Fugu API。</li>
+<li>官方 benchmark 中，非 Fugu 模型分數多為模型供應商自報；跨模型比較仍需看技術報告、評測設定與可重現性。</li>
+<li>官方文章提到的早期使用者評語與 beta 結果屬產品發表資料，適合做趨勢判讀，不應直接視為獨立第三方評測。</li>
+<li>實際導入仍需確認價格、延遲、資料保留政策、agent pool 控制、traceability 與合規條款。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>Sakana Fugu Release: <a href="https://sakana.ai/fugu-release/" target="_blank" rel="noopener">https://sakana.ai/fugu-release/</a></li>
+<li>Product page: <a href="https://sakana.ai/fugu/" target="_blank" rel="noopener">https://sakana.ai/fugu/</a></li>
+<li>Console: <a href="https://console.sakana.ai" target="_blank" rel="noopener">https://console.sakana.ai</a></li>
+<li>Technical report: <a href="https://github.com/SakanaAI/fugu/blob/main/Fugu_technical_report.pdf" target="_blank" rel="noopener">https://github.com/SakanaAI/fugu/blob/main/Fugu_technical_report.pdf</a></li>
+<li>Trinity: <a href="https://sakana.ai/trinity/" target="_blank" rel="noopener">https://sakana.ai/trinity/</a></li>
+<li>Conductor: <a href="https://sakana.ai/learning-to-orchestrate/" target="_blank" rel="noopener">https://sakana.ai/learning-to-orchestrate/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-23 · https://sakana.ai/fugu-release/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">LLM</span><span class="tag">Multi-Agent</span><span class="tag">Model Orchestration</span><span class="tag">AI Agent</span><span class="tag">API</span><span class="tag">Sakana AI</span><span class="tag">Fugu</span><span class="tag">Fugu Ultra</span><span class="tag">AI Sovereignty</span><span class="tag">Benchmark</span><span class="tag">Research Automation</span><h3>原始連結</h3><p><a href="https://sakana.ai/fugu-release/" target="_blank" rel="noopener">https://sakana.ai/fugu-release/</a></p><p><a href="https://sakana.ai/fugu-release/" target="_blank" rel="noopener">https://sakana.ai/fugu-release/</a></p><p><a href="https://sakana.ai/fugu-release/" target="_blank" rel="noopener">https://sakana.ai/fugu-release/</a></p><p><a href="https://sakana.ai/fugu/" target="_blank" rel="noopener">https://sakana.ai/fugu/</a></p><p><a href="https://console.sakana.ai" target="_blank" rel="noopener">https://console.sakana.ai</a></p><p><a href="https://github.com/SakanaAI/fugu/blob/main/Fugu_technical_report.pdf" target="_blank" rel="noopener">https://github.com/SakanaAI/fugu/blob/main/Fugu_technical_report.pdf</a></p><p><a href="https://sakana.ai/trinity/" target="_blank" rel="noopener">https://sakana.ai/trinity/</a></p><p><a href="https://sakana.ai/learning-to-orchestrate/" target="_blank" rel="noopener">https://sakana.ai/learning-to-orchestrate/</a></p><p><a href="https://arxiv.org/abs/2512.04695" target="_blank" rel="noopener">https://arxiv.org/abs/2512.04695</a></p><p><a href="https://arxiv.org/abs/2512.04388" target="_blank" rel="noopener">https://arxiv.org/abs/2512.04388</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

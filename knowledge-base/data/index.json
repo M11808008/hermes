@@ -38,6 +38,46 @@
     "markdown": "articles/2026/06/2026-06-23-runway-recipes-api-product-ad-swap-workflow.md"
   },
   {
+    "title": "Sakana Fugu｜把多模型協作封裝成單一 API 的「模型編排」路線",
+    "date": "2026-06-23",
+    "source": "https://sakana.ai/fugu-release/",
+    "author": "Sakana AI / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "LLM",
+      "Multi-Agent",
+      "Model Orchestration",
+      "AI Agent",
+      "API",
+      "Sakana AI",
+      "Fugu",
+      "Fugu Ultra",
+      "AI Sovereignty",
+      "Benchmark",
+      "Research Automation"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://sakana.ai/fugu-release/",
+      "https://sakana.ai/fugu-release/",
+      "https://sakana.ai/fugu-release/",
+      "https://sakana.ai/fugu/",
+      "https://console.sakana.ai",
+      "https://github.com/SakanaAI/fugu/blob/main/Fugu_technical_report.pdf",
+      "https://sakana.ai/trinity/",
+      "https://sakana.ai/learning-to-orchestrate/",
+      "https://arxiv.org/abs/2512.04695",
+      "https://arxiv.org/abs/2512.04388"
+    ],
+    "excerpt": "Fugu 的核心價值是把「多模型協作、任務拆解、模型路由、結果驗證」包成單一 OpenAI-compatible API；對 AI Agent、研究自動化、企業主權 AI 與教育示範來說，這比單純比較單一模型分數更值得觀察。",
+    "slug": "2026-06-23-sakana-fugu-model-orchestration-api",
+    "html": "articles/2026-06-23-sakana-fugu-model-orchestration-api.html",
+    "markdown": "articles/2026/06/2026-06-23-sakana-fugu-model-orchestration-api.md"
+  },
+  {
     "title": "Codex 插件堆疊｜把 coding agent 變成可執行任務的 AI 工作台",
     "date": "2026-06-22",
     "source": "https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1",
