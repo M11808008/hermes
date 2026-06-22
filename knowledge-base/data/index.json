@@ -107,6 +107,45 @@
     "markdown": "articles/2026/06/2026-06-22-gemini-in-chrome-youtube-no-caption-summary-workflow-facebook-reel.md"
   },
   {
+    "title": "HyperFrames｜用 HTML、Claude Code 與 Codex 生成可重現動畫影片的開源工作流",
+    "date": "2026-06-22",
+    "source": "https://www.threads.com/@kufutw/post/DZ4SzEFD9ph",
+    "author": "Threads@kufutw / Peter Yang / HeyGen HyperFrames / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "HyperFrames",
+      "Claude Code",
+      "Codex",
+      "HTML Video",
+      "AI Agent",
+      "內容製作",
+      "影片生成",
+      "GSAP",
+      "開源工具",
+      "多媒體與內容",
+      "開發與程式"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DZ4SzEFD9ph?xmt=AQG0Sdxjf-DsFGhYFOwJ1Zm0VcAIYEjWfj_p4_hAtOBcqRKJVD1L7kySpb3wO9ms7k28qG7LEg&slof=1",
+      "https://github.com/heygen-com/hyperframes",
+      "https://www.threads.com/@kufutw/post/DZ4SzEFD9ph",
+      "https://x.com/petergyang/status/2068333151186022460?s=20",
+      "https://github.com/heygen-com/hyperframes",
+      "https://hyperframes.heygen.com/quickstart",
+      "https://www.hyperframes.dev/design",
+      "https://github.com/heygen-com/hyperframes/blob/main/docs/guides/claude-design-hyperframes.md",
+      "https://github.com/heygen-com/hyperframes/blob/main/docs/guides/open-design-hyperframes.md"
+    ],
+    "excerpt": "HyperFrames 把「影片」改寫成 HTML + CSS + media + seekable animations：AI Agent 先規劃 storyboard、frame.md 與畫面元素，再用 CLI 預覽與輸出 MP4；這讓產品 Demo、課程宣傳、社群短片與 AI 學習雷達摘要影片，有機會走向可重現、可版本控管的 video-as-code 流程。",
+    "slug": "2026-06-22-hyperframes-html-ai-video-claude-code-codex-workflow",
+    "html": "articles/2026-06-22-hyperframes-html-ai-video-claude-code-codex-workflow.html",
+    "markdown": "articles/2026/06/2026-06-22-hyperframes-html-ai-video-claude-code-codex-workflow.md"
+  },
+  {
     "title": "電影大師 Pro｜NextFrame 從劇本到成片的 AI 影片工作流",
     "date": "2026-06-22",
     "source": "https://www.threads.com/@donniepai/post/DZ1jVDEH9bv",

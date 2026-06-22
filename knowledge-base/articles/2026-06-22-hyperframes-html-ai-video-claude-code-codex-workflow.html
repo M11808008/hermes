@@ -1,0 +1,135 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HyperFrames｜用 HTML、Claude Code 與 Codex 生成可重現動畫影片的開源工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>HyperFrames｜用 HTML、Claude Code 與 Codex 生成可重現動畫影片的開源工作流</h1><h1>HyperFrames｜用 HTML、Claude Code 與 Codex 生成可重現動畫影片的開源工作流</h1>
+<p>來源是 Threads@kufutw 轉述 Peter Yang 對 HyperFrames 的介紹：HyperFrames 團隊展示了一套直接在 Claude Code 和 Codex 裡，以 HTML 製作高品質動畫影片的工作流。重點不是單純「AI 生成影片」，而是把影片變成可 lint、可 preview、可 render、可由 coding agent 迭代的工程化產物。</p>
+<h1>一句話摘要</h1>
+<p>HyperFrames 把「影片」改寫成 HTML + CSS + media + seekable animations：AI Agent 先規劃 storyboard、frame.md 與畫面元素，再用 CLI 預覽與輸出 MP4；這讓產品 Demo、課程宣傳、社群短片與 AI 學習雷達摘要影片，有機會走向可重現、可版本控管的 video-as-code 流程。</p>
+<h1>Threads / X 貼文重點</h1>
+<p>Threads 貼文指出：</p>
+<ul>
+<li>HyperFrames 可直接在 Claude Code 與 Codex 裡，用 HTML 製作動畫影片。</li>
+<li>流程不依賴傳統剪輯軟體，而是透過 AI 生成 `frame.md`、Storyboard 分鏡腳本與視覺元素。</li>
+<li>工具目前 100% 免費且開源。</li>
+<li>要做出精緻效果，關鍵在完整工作流：分鏡規劃、`frame.md` 結構、以及如何引導 AI 生成一致性的畫面與動畫。</li>
+<li>應用情境包含簡報動畫、產品 Demo、社群短影片。</li>
+</ul>
+<p>Peter Yang 的 X 貼文也補充：他原本不相信可以用 HTML 做出這類影片，直到 HyperFrames 團隊展示如何直接在 Codex 與 Claude Code 裡完成；他特別提醒，真正好看的結果仰賴正確工作流，而不只是把 prompt 丟給工具。</p>
+<h1>官方 repo 交叉驗證</h1>
+<p>GitHub 官方 repo `heygen-com/hyperframes` 描述為：「Write HTML. Render video. Built for agents.」截至本次檢查：</p>
+<p>| 項目 | Snapshot |</p>
+<p>|---|---|</p>
+<p>| Repository | `heygen-com/hyperframes` |</p>
+<p>| 主要語言 | TypeScript |</p>
+<p>| 授權 | Apache-2.0 |</p>
+<p>| Stars / Forks | 約 29.8k stars / 2.8k forks（2026-06-22 snapshot） |</p>
+<p>| 需求 | Node.js 22+、FFmpeg |</p>
+<p>| 官方定位 | 將 HTML、CSS、media 與 seekable animations 轉為 deterministic MP4 videos |</p>
+<p>README 明確說明，HyperFrames 可透過 CLI 本機使用，也可由 AI coding agents 透過 skills 操作。官方 quickstart 建議：</p>
+<p>```bash</p>
+<p>npx skills add heygen-com/hyperframes</p>
+<p>```</p>
+<p>或手動建立專案：</p>
+<p>```bash</p>
+<p>npx hyperframes init my-video</p>
+<p>cd my-video</p>
+<p>npx hyperframes preview</p>
+<p>npx hyperframes render</p>
+<p>```</p>
+<h1>HyperFrames 的核心概念</h1>
+<h2>1. HTML 成為影片格式</h2>
+<p>HyperFrames 不是讓 AI 直接吐出一段不可控影片，而是定義一個 HTML composition。畫面、文字、影片、音訊、時間、軌道與動畫，都放在可讀的 HTML / CSS / JS 結構中。</p>
+<p>官方 README 範例使用：</p>
+<ul>
+<li>`data-composition-id`</li>
+<li>`data-start`</li>
+<li>`data-width` / `data-height`</li>
+<li>`data-duration`</li>
+<li>`data-track-index`</li>
+<li>GSAP timeline</li>
+<li>media elements</li>
+</ul>
+<p>最後 renderer 會在 headless Chrome 中逐 frame seek，再用 FFmpeg 編碼，所以同一份輸入能產生較可重現的輸出。</p>
+<h2>2. Agent skills 管理製作 loop</h2>
+<p>官方說明 HyperFrames skills 會教 AI Agent 一套 production loop：</p>
+<ul>
+<li>plan the video；</li>
+<li>write valid HTML；</li>
+<li>wire seekable animations；</li>
+<li>add media；</li>
+<li>lint；</li>
+<li>preview；</li>
+<li>render。</li>
+</ul>
+<p>這些 skills 可搭配 Claude Code、Cursor、Gemini CLI、Codex、Google Antigravity、GitHub Copilot CLI 等支援 skills 的 coding agents。</p>
+<h2>3. frame.md 是設計系統到影格的翻譯層</h2>
+<p>官方 `frame.md` 定位很關鍵：一般 `design.md` 描述品牌、tokens、字體、色彩與 UI 規範，但不是為鏡頭與時間軸設計。`frame.md` 則把同一套設計規則轉為適合 16:9 或其他影片畫面的 composition 指令，讓 Agent 不必猜 scale、dwell、motion 與視覺節奏。</p>
+<p>換句話說：</p>
+<ul>
+<li>`design.md`：品牌與介面設計語言。</li>
+<li>`frame.md`：影片構圖、節奏、畫面比例與 motion direction。</li>
+<li>Storyboard：敘事順序與每幕重點。</li>
+<li>HyperFrames HTML：可預覽、可渲染、可版本控管的影片原始碼。</li>
+</ul>
+<h1>適合欒帥的應用場景</h1>
+<h2>1. AI 學習雷達短影音</h2>
+<p>可把每週知識庫重點轉成 15–30 秒短片：</p>
+<ul>
+<li>3–5 個重點卡片；</li>
+<li>每則工具／文章一個 scene；</li>
+<li>加上標題、來源、關鍵數字與 CTA；</li>
+<li>用 GitHub Pages 文章連結作為延伸閱讀。</li>
+</ul>
+<p>這比手動剪片更容易規模化，也能把已歸檔的 Markdown 變成影片素材來源。</p>
+<h2>2. 課程與工作坊宣傳</h2>
+<p>AI 課程、n8n 工作坊、Physical AI / Agentic Workflow 主題都可以轉成：</p>
+<ul>
+<li>開場概念影片；</li>
+<li>課程單元預告；</li>
+<li>報名頁 hero animation；</li>
+<li>章節轉場素材；</li>
+<li>產品 demo-style explainer。</li>
+</ul>
+<h2>3. 技術產品 Demo</h2>
+<p>對工具型產品或內部自動化，可用 HTML 生成：</p>
+<ul>
+<li>流程圖動畫；</li>
+<li>before / after 對比；</li>
+<li>feature launch；</li>
+<li>dashboard 數據動畫；</li>
+<li>PR walkthrough / code diff 動畫。</li>
+</ul>
+<h1>建議實驗路線</h1>
+<p>先不要直接追求 60 秒大片。建議用低風險任務驗證：</p>
+<ul>
+<li>選一篇 AI 學習雷達文章。</li>
+<li>把摘要拆成 5 個 scenes。</li>
+<li>寫一份簡短 `frame.md`：色彩、字級、節奏、畫面比例、動效風格。</li>
+<li>讓 Claude Code 或 Codex 產生 HyperFrames HTML。</li>
+<li>跑 `npx hyperframes lint`。</li>
+<li>跑 `npx hyperframes preview` 看節奏。</li>
+<li>微調 ease、duration、stagger、字幕可讀性。</li>
+<li>最後 `npx hyperframes render` 匯出 MP4。</li>
+</ul>
+<h1>可用 Prompt 骨架</h1>
+<p>```text</p>
+<p>Using /hyperframes, create a 20-second 16:9 explainer video from this article.</p>
+<p>First produce a storyboard and frame.md plan.</p>
+<p>Use a premium dark editorial style, strong Traditional Chinese typography, high contrast, and readable mobile-safe captions.</p>
+<p>Do not render yet. After the storyboard is approved, write valid HyperFrames HTML, run lint, then preview before final render.</p>
+<p>```</p>
+<h1>與既有知識庫的關聯</h1>
+<p>這篇補強了先前「Codex 插件堆疊｜把 coding agent 變成可執行任務的 AI 工作台」中的 HyperFrames 段落。前文是把 HyperFrames 放在 Codex 工具堆疊裡；本文則以官方 repo、frame.md、CLI 與 agent skills 為主，整理成可實作的 video-as-code 工作流。</p>
+<h1>風險與限制</h1>
+<ul>
+<li>HyperFrames 仍需要 Node.js 22+ 與 FFmpeg，並不是純瀏覽器一鍵產片。</li>
+<li>影片品質高度依賴 storyboard、frame.md、素材、字體、節奏與人工審稿；不能把「開源工具」誤解成自動產出高品質。</li>
+<li>Agent 產生的 HTML / JS 仍需 lint、preview 與人工檢查，尤其是中文字級、留白、節奏、音樂版權與來源標示。</li>
+<li>官方 repo 成長快速，stars / forks / CLI 指令與 skills 清單屬時間敏感資訊。</li>
+<li>本次尚未在本機實際 render MP4；本文定位為工具與工作流評估筆記，不是實測報告。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@kufutw/post/DZ4SzEFD9ph" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZ4SzEFD9ph</a></li>
+<li>Peter Yang X：<a href="https://x.com/petergyang/status/2068333151186022460?s=20" target="_blank" rel="noopener">https://x.com/petergyang/status/2068333151186022460?s=20</a></li>
+<li>HyperFrames GitHub：<a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></li>
+<li>HyperFrames Quickstart：<a href="https://hyperframes.heygen.com/quickstart" target="_blank" rel="noopener">https://hyperframes.heygen.com/quickstart</a></li>
+<li>frame.md playground：<a href="https://www.hyperframes.dev/design" target="_blank" rel="noopener">https://www.hyperframes.dev/design</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-22 · https://www.threads.com/@kufutw/post/DZ4SzEFD9ph · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">HyperFrames</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">HTML Video</span><span class="tag">AI Agent</span><span class="tag">內容製作</span><span class="tag">影片生成</span><span class="tag">GSAP</span><span class="tag">開源工具</span><span class="tag">多媒體與內容</span><span class="tag">開發與程式</span><h3>原始連結</h3><p><a href="https://www.threads.com/@kufutw/post/DZ4SzEFD9ph?xmt=AQG0Sdxjf-DsFGhYFOwJ1Zm0VcAIYEjWfj_p4_hAtOBcqRKJVD1L7kySpb3wO9ms7k28qG7LEg&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZ4SzEFD9ph?xmt=AQG0Sdxjf-DsFGhYFOwJ1Zm0VcAIYEjWfj_p4_hAtOBcqRKJVD1L7kySpb3wO9ms7k28qG7LEg&amp;slof=1</a></p><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p><p><a href="https://www.threads.com/@kufutw/post/DZ4SzEFD9ph" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZ4SzEFD9ph</a></p><p><a href="https://x.com/petergyang/status/2068333151186022460?s=20" target="_blank" rel="noopener">https://x.com/petergyang/status/2068333151186022460?s=20</a></p><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p><p><a href="https://hyperframes.heygen.com/quickstart" target="_blank" rel="noopener">https://hyperframes.heygen.com/quickstart</a></p><p><a href="https://www.hyperframes.dev/design" target="_blank" rel="noopener">https://www.hyperframes.dev/design</a></p><p><a href="https://github.com/heygen-com/hyperframes/blob/main/docs/guides/claude-design-hyperframes.md" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes/blob/main/docs/guides/claude-design-hyperframes.md</a></p><p><a href="https://github.com/heygen-com/hyperframes/blob/main/docs/guides/open-design-hyperframes.md" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes/blob/main/docs/guides/open-design-hyperframes.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
