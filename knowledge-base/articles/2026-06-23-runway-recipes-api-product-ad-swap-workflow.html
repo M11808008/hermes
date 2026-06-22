@@ -1,0 +1,103 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Runway Recipes API｜把產品廣告、商品替換與 UGC 影音工作流封裝成 API</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Runway Recipes API｜把產品廣告、商品替換與 UGC 影音工作流封裝成 API</h1><h1>Runway Recipes API｜把產品廣告、商品替換與 UGC 影音工作流封裝成 API</h1>
+<p>來源是 Kufu 酷服在 Threads 的整理，並追到 Runway 官方 X 貼文與 Runway API 官方文件。Threads 原文的核心判斷是：Runway 不是只推出新模型，而是把官方設計好的影音生成流程封裝成 API endpoint，讓企業與開發者用一次 API 呼叫即可產出產品廣告、商品替換、UGC 影片或行銷素材。</p>
+<h1>一句話摘要</h1>
+<p>Runway Recipes API 把「模型選擇、prompt engineering、工作流設計、後處理」包成可呼叫的官方 recipe；對電商、MarTech、SaaS 與內容平台來說，這讓 AI 影音從「自己串模型」變成「把成熟影音能力嵌進產品」。</p>
+<h1>來源與官方資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 發現來源 | Kufu 酷服：Runway Recipes API 讓廣告影片與產品替換變成即插即用服務 |</p>
+<p>| 官方 X 貼文 | Runway：New on the Runway API: Recipes. Drop production-ready generative media features into your platform, with one API call. |</p>
+<p>| 官方文件 | <a href="https://docs.dev.runwayml.com/recipes/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/</a> |</p>
+<p>| 官方定位 | Recipes are Runway-built endpoints with prompting and workflow expertise packaged in |</p>
+<p>| API 流程 | 呼叫 recipe endpoint 後取得 task id，再輪詢 `GET /v1/tasks/{id}` 取得輸出 |</p>
+<p>| 關鍵限制 | 適合已知、標準化、可重複的 use case；若需要完全自訂流程，仍應使用 base model/API 自建 pipeline |</p>
+<h1>Runway Recipes 目前涵蓋的工作流</h1>
+<p>| Recipe | 官方用途 | 欒帥可怎麼理解 |</p>
+<p>|---|---|---|</p>
+<p>| Product Ad | 從產品參考圖、風格參考與創意方向生成 cinematic 產品廣告影片 | 商品照 → 社群短廣告，適合電商、課程教材商品化示範 |</p>
+<p>| Product Swap | 把既有影片中的商品替換成新產品，保留鏡頭運動、燈光與場景構圖 | 一支成功廣告模板 → 套不同商品 SKU，適合 catalog / A/B creative |</p>
+<p>| Product UGC | 用人物參考圖與產品圖生成 UGC 風格促銷影片 | 模擬 creator / KOC 短影音，但需特別注意肖像與授權 |</p>
+<p>| Multi-Shot Video | 依 story prompt 或 3–5 個 shot list 生成多鏡頭影片 | 比單鏡頭更像完整短廣告，可用於品牌故事、課程預告 |</p>
+<p>| Marketing Stock Image | 依文字 brief 與可選 Logo 生成品牌行銷圖 | 替代 stock photo 搜尋或拍攝前期草稿 |</p>
+<p>| Product Campaign Image | 以單張產品圖與風格 brief 生成四張 campaign hero visuals | landing page、廣告素材、商品視覺方向探索 |</p>
+<h1>這件事為什麼重要</h1>
+<p>過去企業導入 AI 影片，技術成本常不是「能不能呼叫模型」，而是：</p>
+<ul>
+<li>如何把產品照、品牌規範、情境、鏡頭語言轉成穩定 prompt。</li>
+<li>如何在不同模型之間選擇合適能力。</li>
+<li>如何處理素材規格、長度、解析度、失敗重試與後處理。</li>
+<li>如何把一次性的創作流程變成可大量生成的 API 產品能力。</li>
+</ul>
+<p>Runway Recipes 的意義在於把這些「工作流 know-how」商品化。它不是只賣模型，而是賣一組經官方調校過、可直接嵌入商業產品的 media generation workflow。</p>
+<h1>對欒帥的實用判讀</h1>
+<h2>1. AI 影音平台會從「模型 API」進入「工作流 API」競爭</h2>
+<p>Threads 原文判斷很準：這不是單純模型競賽，而是 workflow competition。未來教學與產品設計可以把 AI 能力分成三層：</p>
+<p>| 層級 | 例子 | 價值 |</p>
+<p>|---|---|---|</p>
+<p>| Base model | text-to-video、image-to-video、image generation | 高自由度，但要自己設計 prompt 與流程 |</p>
+<p>| Workflow recipe | Runway Product Ad / Product Swap / UGC | 用較少參數完成常見商業任務 |</p>
+<p>| Productized feature | 電商後台一鍵生成商品廣告、MarTech 平台自動生成素材 | 對終端使用者最直覺，可大規模部署 |</p>
+<h2>2. 很適合做「AI Agent × MarTech」課程案例</h2>
+<p>可以把 Runway Recipes 設計成一個課堂案例：</p>
+<ul>
+<li>Hermes / ChatGPT 先整理品牌、商品、受眾與文案角度。</li>
+<li>用 spreadsheet 或 Airtable 管理商品圖片與 campaign brief。</li>
+<li>後端批次呼叫 Runway Recipes API 生成多組素材。</li>
+<li>人工審核品牌一致性、錯誤畫面、肖像與授權。</li>
+<li>合格素材進入廣告投放、社群排程或 landing page。</li>
+<li>成效數據回流，決定下一輪 creative prompt 與 reference media。</li>
+</ul>
+<p>這比單純示範「AI 生成一支影片」更有教學價值，因為它把 AI 影音放進真實商業 pipeline。</p>
+<h2>3. 對 AI 學習雷達／課程宣傳的可能用法</h2>
+<p>| 場景 | 可用 Recipe | 實作方式 |</p>
+<p>|---|---|---|</p>
+<p>| 課程預告短片 | Multi-Shot Video / Product Ad | 將課程定位、學習成果、講師形象轉成 5–15 秒預告 |</p>
+<p>| AI 工具介紹影片 | Multi-Shot Video | 用 3–5 個 shot list 呈現工具痛點、流程、結果 |</p>
+<p>| 知識庫文章封面 | Marketing Stock Image / Product Campaign Image | 為重要專題產生一致風格的封面與 social card |</p>
+<p>| 商品化教材素材 | Product Ad | 把課程、工作坊、教材包視為「產品」做廣告視覺 |</p>
+<p>| 電商／品牌案例教學 | Product Swap / Product UGC | 示範同一廣告模板如何換商品、換受眾、換風格 |</p>
+<h1>建議實驗流程</h1>
+<p>| 步驟 | 做法 | 驗證點 |</p>
+<p>|---|---|---|</p>
+<p>| 1. 選一個明確 use case | 例如「AI 課程 10 秒短影音」或「單一產品 4 秒廣告」 | 任務是否屬於官方 recipe 覆蓋範圍 |</p>
+<p>| 2. 準備 reference media | 單一主體、清楚角度、乾淨背景、足夠解析度 | 不要讓多個主體干擾產品識別 |</p>
+<p>| 3. 寫 brief | 受眾、平台、語氣、風格、長度、禁忌元素 | brief 是否比單句 prompt 更接近商業需求 |</p>
+<p>| 4. 呼叫 recipe endpoint | 使用官方 SDK 或 REST API；取得 task id | 任務是否穩定完成、是否需重試 |</p>
+<p>| 5. 輪詢與保存輸出 | `GET /v1/tasks/{id}` 取得影片或圖片 URL | 檔案保存、命名、版本管理是否可追蹤 |</p>
+<p>| 6. 人工審核 | 品牌、肖像、文字、Logo、商品形變、合規 | 是否可直接上線，或只適合作為草稿 |</p>
+<p>| 7. 成本紀錄 | 記錄 credits、長度、解析度、成功率 | 是否適合批量生成 |</p>
+<h1>成本與規格提醒</h1>
+<p>Runway 官方文件列出 recipe pricing，且多數影片類 recipe 依解析度與秒數計費。例如 Product Ad、Product Swap、Product UGC 皆有 720p / 1080p 與 4–15 秒長度範圍；Multi-Shot Video 則以每秒 credits 計。這表示它適合「短影音 creative」與「廣告素材變體」，不應直接視為低成本長片生成方案。</p>
+<p>實際部署前應建立：</p>
+<ul>
+<li>每支影片預估 credits。</li>
+<li>每批生成的最大張數／支數。</li>
+<li>失敗重試上限。</li>
+<li>人工審核與淘汰率。</li>
+<li>素材授權與肖像權檢查。</li>
+</ul>
+<h1>和既有 Runway MCP 的差異</h1>
+<p>知識庫中已有 Runway MCP 文章，重點是「在 ChatGPT、Claude、Cursor 等代理環境裡直接使用 Runway」。本篇的角度不同：Recipes API 是給開發者與企業產品嵌入使用的 workflow endpoint。</p>
+<p>| 方向 | Runway MCP | Runway Recipes API |</p>
+<p>|---|---|---|</p>
+<p>| 使用者 | 創作者、agent 使用者、ChatGPT/Claude 使用者 | 開發者、SaaS、MarTech、電商平台 |</p>
+<p>| 入口 | MCP server / 對話式代理 | REST API / SDK / endpoint |</p>
+<p>| 核心價值 | 少切工具，在同一上下文生成素材 | 把成熟工作流嵌入產品，大規模批次生成 |</p>
+<p>| 最適合 | 個人創作、互動式修改、agent demo | 產品化、自動化、catalog creative、行銷素材 pipeline |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>Threads 原文是中文社群摘要，本文以 Runway 官方 X 貼文與官方 API docs 補強；沒有實際呼叫 API 測試輸出品質。</li>
+<li>官方 Recipes 清單、定價、長度限制與支援輸入格式可能持續變動，部署前應以 Runway API 文件與帳號方案為準。</li>
+<li>Product UGC 牽涉人物參考圖與擬真促銷影片，實務上必須處理肖像權、揭露、廣告法規與品牌安全。</li>
+<li>Product Swap 可降低 creative production 成本，但不代表所有產品外觀、材質、Logo 與使用情境都能穩定保真；重要商用素材仍需人工 QA。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@kufutw/post/DZ3okpVD0fX" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZ3okpVD0fX</a></li>
+<li>Runway 官方 X：<a href="https://x.com/runwayml/status/2067335278943990212" target="_blank" rel="noopener">https://x.com/runwayml/status/2067335278943990212</a></li>
+<li>Runway Recipes docs：<a href="https://docs.dev.runwayml.com/recipes/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/</a></li>
+<li>Product Ad：<a href="https://docs.dev.runwayml.com/recipes/product-ad/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/product-ad/</a></li>
+<li>Product Swap：<a href="https://docs.dev.runwayml.com/recipes/product-swap/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/product-swap/</a></li>
+<li>Product UGC：<a href="https://docs.dev.runwayml.com/recipes/product-ugc/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/product-ugc/</a></li>
+<li>Reference media guidelines：<a href="https://docs.dev.runwayml.com/recipes/reference-media/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/reference-media/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-23 · https://www.threads.com/@kufutw/post/DZ3okpVD0fX · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Video</span><span class="tag">Runway</span><span class="tag">API</span><span class="tag">Recipes API</span><span class="tag">影音生成</span><span class="tag">產品廣告</span><span class="tag">MarTech</span><span class="tag">電商</span><span class="tag">Workflow API</span><h3>原始連結</h3><p><a href="https://www.threads.com/@kufutw/post/DZ3okpVD0fX" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZ3okpVD0fX</a></p><p><a href="https://docs.dev.runwayml.com/recipes/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/</a></p><p><a href="https://www.threads.com/@kufutw/post/DZ3okpVD0fX" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DZ3okpVD0fX</a></p><p><a href="https://x.com/runwayml/status/2067335278943990212" target="_blank" rel="noopener">https://x.com/runwayml/status/2067335278943990212</a></p><p><a href="https://docs.dev.runwayml.com/recipes/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/</a></p><p><a href="https://docs.dev.runwayml.com/recipes/product-ad/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/product-ad/</a></p><p><a href="https://docs.dev.runwayml.com/recipes/product-swap/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/product-swap/</a></p><p><a href="https://docs.dev.runwayml.com/recipes/product-ugc/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/product-ugc/</a></p><p><a href="https://docs.dev.runwayml.com/recipes/multi-shot-video/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/multi-shot-video/</a></p><p><a href="https://docs.dev.runwayml.com/recipes/reference-media/" target="_blank" rel="noopener">https://docs.dev.runwayml.com/recipes/reference-media/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

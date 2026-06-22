@@ -1,5 +1,43 @@
 [
   {
+    "title": "Runway Recipes API｜把產品廣告、商品替換與 UGC 影音工作流封裝成 API",
+    "date": "2026-06-23",
+    "source": "https://www.threads.com/@kufutw/post/DZ3okpVD0fX",
+    "author": "Kufu 酷服 / Runway / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Video",
+      "Runway",
+      "API",
+      "Recipes API",
+      "影音生成",
+      "產品廣告",
+      "MarTech",
+      "電商",
+      "Workflow API"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DZ3okpVD0fX",
+      "https://docs.dev.runwayml.com/recipes/",
+      "https://www.threads.com/@kufutw/post/DZ3okpVD0fX",
+      "https://x.com/runwayml/status/2067335278943990212",
+      "https://docs.dev.runwayml.com/recipes/",
+      "https://docs.dev.runwayml.com/recipes/product-ad/",
+      "https://docs.dev.runwayml.com/recipes/product-swap/",
+      "https://docs.dev.runwayml.com/recipes/product-ugc/",
+      "https://docs.dev.runwayml.com/recipes/multi-shot-video/",
+      "https://docs.dev.runwayml.com/recipes/reference-media/"
+    ],
+    "excerpt": "Runway Recipes API 把「模型選擇、prompt engineering、工作流設計、後處理」包成可呼叫的官方 recipe；對電商、MarTech、SaaS 與內容平台來說，這讓 AI 影音從「自己串模型」變成「把成熟影音能力嵌進產品」。",
+    "slug": "2026-06-23-runway-recipes-api-product-ad-swap-workflow",
+    "html": "articles/2026-06-23-runway-recipes-api-product-ad-swap-workflow.html",
+    "markdown": "articles/2026/06/2026-06-23-runway-recipes-api-product-ad-swap-workflow.md"
+  },
+  {
     "title": "Codex 插件堆疊｜把 coding agent 變成可執行任務的 AI 工作台",
     "date": "2026-06-22",
     "source": "https://www.threads.com/@aiposthub/post/DZ2WyvcAcw1",
