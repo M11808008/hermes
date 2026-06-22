@@ -38,6 +38,40 @@
     "markdown": "articles/2026/06/2026-06-22-codex-plugin-stack-ai-workbench-workflow.md"
   },
   {
+    "title": "Codex 簡報 PPT Skill｜先大綱、再單張試作的可控式簡報生成流程",
+    "date": "2026-06-22",
+    "source": "https://www.facebook.com/reel/1311910121145863",
+    "author": "李安 / OpenAI Developers / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "OpenAI Codex",
+      "Codex Skills",
+      "簡報自動化",
+      "PowerPoint",
+      "工作流自動化",
+      "內容製作",
+      "教育與課程",
+      "商業與生產力",
+      "開發與程式"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1311910121145863",
+      "https://developers.openai.com/codex/skills",
+      "https://www.facebook.com/reel/1311910121145863",
+      "https://developers.openai.com/codex/skills",
+      "https://developers.openai.com/codex/guides/agents-md",
+      "https://github.com/openai/codex"
+    ],
+    "excerpt": "這則 Reel 值得收錄的重點不只是「Codex 可以做簡報」，而是它示範了更可靠的 Agent 產出模式：先確認簡報大綱，再做單張樣張驗收，最後才批次產出完整 PPT；這比一次生成整份簡報更適合教學、企劃與課程內容製作。",
+    "slug": "2026-06-22-codex-ppt-skill-outline-first-slide-workflow-facebook-reel",
+    "html": "articles/2026-06-22-codex-ppt-skill-outline-first-slide-workflow-facebook-reel.html",
+    "markdown": "articles/2026/06/2026-06-22-codex-ppt-skill-outline-first-slide-workflow-facebook-reel.md"
+  },
+  {
     "title": "電影大師 Pro｜NextFrame 從劇本到成片的 AI 影片工作流",
     "date": "2026-06-22",
     "source": "https://www.threads.com/@donniepai/post/DZ1jVDEH9bv",

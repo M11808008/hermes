@@ -1,0 +1,101 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Codex 簡報 PPT Skill｜先大綱、再單張試作的可控式簡報生成流程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Codex 簡報 PPT Skill｜先大綱、再單張試作的可控式簡報生成流程</h1><h1>Codex 簡報 PPT Skill｜先大綱、再單張試作的可控式簡報生成流程</h1>
+<p>來源是李安分享的 Facebook Reel「方便的 Codex 簡報 PPT Skill」。影片可公開擷取的文字指出：這個簡報 skill 很適合新手使用，會先給簡報大綱讓使用者確認，之後往下生成一張給你看，再完整製作。</p>
+<h1>一句話摘要</h1>
+<p>這則 Reel 值得收錄的重點不只是「Codex 可以做簡報」，而是它示範了更可靠的 Agent 產出模式：先確認簡報大綱，再做單張樣張驗收，最後才批次產出完整 PPT；這比一次生成整份簡報更適合教學、企劃與課程內容製作。</p>
+<h1>Reel 可擷取資訊</h1>
+<ul>
+<li>標題：方便的 Codex 簡報 PPT Skill</li>
+<li>作者：李安</li>
+<li>影片長度：約 55 秒</li>
+<li>Facebook Reel ID：1311910121145863</li>
+<li>可見說明：這個簡報 skill 很適合新手使用；會先給你簡報大綱確認；之後會先生成一張給你看，再完整製作。</li>
+<li>擷取限制：未登入 Facebook 無法完整驗證留言、附件或 skill 原始檔；本文以公開 metadata、Reel 說明與 OpenAI Codex Skills 官方文件補足脈絡。</li>
+</ul>
+<h1>可重用的三段式簡報 Agent 流程</h1>
+<h2>1. 先產大綱，不直接做整份簡報</h2>
+<p>第一步應該讓 Agent 只輸出：</p>
+<ul>
+<li>目標受眾；</li>
+<li>簡報目的；</li>
+<li>頁數範圍；</li>
+<li>每頁標題；</li>
+<li>每頁重點；</li>
+<li>建議圖表或視覺素材；</li>
+<li>需要使用者補資料的地方。</li>
+</ul>
+<p>這一步的價值是把內容結構先鎖住，避免 Agent 一開始就浪費時間做出風格漂亮但邏輯錯誤的 PPT。</p>
+<h2>2. 先做一張樣張，確認視覺與資訊密度</h2>
+<p>Reel 提到的「先生成一張給你看」非常重要。簡報最容易失控的地方通常不是內容，而是：</p>
+<ul>
+<li>字太多；</li>
+<li>主視覺不符合品牌；</li>
+<li>表格與圖表不可讀；</li>
+<li>每頁資訊密度不一致；</li>
+<li>AI 生成的版面有模板感；</li>
+<li>中文斷行、字重、留白不佳。</li>
+</ul>
+<p>先驗收一張樣張，就能在還沒做完整份之前調整版型、字級、色系、圖文比例與敘事節奏。</p>
+<h2>3. 最後才批次製作完整檔案</h2>
+<p>大綱與樣張都通過後，再讓 Agent 產出整份簡報。這時應要求它保留：</p>
+<ul>
+<li>章節一致性；</li>
+<li>標題層級；</li>
+<li>CTA 與結論頁；</li>
+<li>講者備註；</li>
+<li>可修改的文字與圖表，而不是整頁截圖；</li>
+<li>版本記錄與修改摘要。</li>
+</ul>
+<h1>和 OpenAI Codex Skills 的關係</h1>
+<p>OpenAI Developers 的 Codex Skills 文件指出，Skill 是一個含 `SKILL.md` 的資料夾，可搭配 scripts、references、assets、templates 與 agent 設定；Codex 會先看到 skill 的名稱與描述，當任務符合描述時才載入完整 `SKILL.md`。使用者也可以在 CLI / IDE 中透過 `/skills` 或 `$` 明確呼叫 skill。</p>
+<p>這代表「簡報 PPT Skill」不應只是單一 prompt，而可以做成可維護的工作流包：</p>
+<ul>
+<li>`SKILL.md`：定義何時使用簡報流程、產出格式、審核關卡。</li>
+<li>`templates/`：保存課程簡報、提案簡報、報告簡報版型。</li>
+<li>`references/`：保存品牌規範、課程定位、受眾設定、常用案例。</li>
+<li>`scripts/`：可選擇用 Python / Node 產生 PPTX、匯出圖片或檢查頁數。</li>
+<li>`assets/`：保存 logo、色票、圖示、範例封面。</li>
+</ul>
+<h1>給欒帥的實作價值</h1>
+<h2>1. AI 課程與工作坊簡報</h2>
+<p>很適合把「AI 學習雷達」文章、課程大綱、工作坊活動說明轉成簡報初稿。流程可以是：</p>
+<ul>
+<li>從知識庫文章整理課程主軸。</li>
+<li>產出 10–15 頁簡報大綱。</li>
+<li>先做封面或一頁核心概念樣張。</li>
+<li>確認視覺語言後再生成整份。</li>
+<li>人工審稿後輸出 PPTX / PDF。</li>
+</ul>
+<h2>2. 避免新手被 Agent 一次帶偏</h2>
+<p>對新手來說，一次要求 AI「幫我做一份簡報」通常會得到看似完整但難修改的成果。這個 skill 的價值在於把任務拆成「大綱審核 → 樣張審核 → 完整生成」，讓使用者在關鍵節點介入，而不是最後才發現整份都要重做。</p>
+<h2>3. 可變成 Hermes / Codex 共用的 Skill</h2>
+<p>同一套流程可以在 Hermes Agent 與 Codex 之間共用概念：Hermes 負責擷取來源、整理知識庫與產出內容架構；Codex 或本機 Python 工具負責生成 PPTX、版面檢查與檔案輸出。</p>
+<h1>建議的 Prompt 骨架</h1>
+<p>你是簡報製作 Agent。請不要一開始製作完整簡報。先完成三階段流程：</p>
+<ul>
+<li>先詢問或推定簡報目的、受眾、頁數、語氣與輸出格式。</li>
+<li>產出完整大綱，等待我確認。</li>
+<li>大綱確認後，只先製作第一張代表性樣張，說明版型、色系、資訊密度與可修改元素。</li>
+<li>樣張確認後，才製作完整簡報。</li>
+<li>完成後提供修改摘要、檔案路徑、可再調整項目與人工審查清單。</li>
+</ul>
+<h1>檢查清單</h1>
+<ul>
+<li>大綱是否符合受眾與場合？</li>
+<li>每頁是否只有一個主要訊息？</li>
+<li>是否先做樣張，而不是直接批次做完整份？</li>
+<li>中文字級、留白、對齊與圖文比例是否可讀？</li>
+<li>表格、流程圖、數據圖是否能在投影或手機上閱讀？</li>
+<li>是否保留可編輯文字，而不是把文字壓成圖片？</li>
+<li>是否有講者備註、結論頁與下一步行動？</li>
+</ul>
+<h1>與既有知識庫的關聯</h1>
+<p>這篇可補強既有「Codex 插件堆疊」文章裡的 Skills / Automations 段落：那篇是 Codex 插件與工作台全景，本文則聚焦在簡報產出的實際控制流程。也可和「OpenAI Codex for every role」文章互補，因為官方提到 Codex 已逐步走向 documents、spreadsheets、slides 與 websites 等非工程知識工作場景。</p>
+<h1>判讀限制</h1>
+<p>本次沒有取得 Reel 內的完整螢幕錄影逐字稿，也未登入 Facebook 查看留言或附件，因此無法確認李安實際使用的 skill 檔案、prompt、PPT 產出工具或是否有公開下載連結。本文保存的是公開可見的工作流概念，並以 OpenAI Codex Skills / AGENTS.md 官方文件補足可實作架構。若日後取得原始 skill 檔或範例 PPT，應再補充實測結果。</p>
+<h1>原始連結</h1>
+<ul>
+<li>Facebook Reel：<a href="https://www.facebook.com/reel/1311910121145863" target="_blank" rel="noopener">https://www.facebook.com/reel/1311910121145863</a></li>
+<li>OpenAI Codex Skills：<a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></li>
+<li>OpenAI AGENTS.md 指引：<a href="https://developers.openai.com/codex/guides/agents-md" target="_blank" rel="noopener">https://developers.openai.com/codex/guides/agents-md</a></li>
+<li>OpenAI Codex GitHub：<a href="https://github.com/openai/codex" target="_blank" rel="noopener">https://github.com/openai/codex</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-22 · https://www.facebook.com/reel/1311910121145863 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">OpenAI Codex</span><span class="tag">Codex Skills</span><span class="tag">簡報自動化</span><span class="tag">PowerPoint</span><span class="tag">工作流自動化</span><span class="tag">內容製作</span><span class="tag">教育與課程</span><span class="tag">商業與生產力</span><span class="tag">開發與程式</span><h3>原始連結</h3><p><a href="https://www.facebook.com/reel/1311910121145863" target="_blank" rel="noopener">https://www.facebook.com/reel/1311910121145863</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://www.facebook.com/reel/1311910121145863" target="_blank" rel="noopener">https://www.facebook.com/reel/1311910121145863</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://developers.openai.com/codex/guides/agents-md" target="_blank" rel="noopener">https://developers.openai.com/codex/guides/agents-md</a></p><p><a href="https://github.com/openai/codex" target="_blank" rel="noopener">https://github.com/openai/codex</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
