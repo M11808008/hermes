@@ -72,6 +72,41 @@
     "markdown": "articles/2026/06/2026-06-22-codex-ppt-skill-outline-first-slide-workflow-facebook-reel.md"
   },
   {
+    "title": "Gemini in Chrome 分析無 CC 的長 YouTube｜NotebookLM 失效時的瀏覽器內摘要工作流",
+    "date": "2026-06-22",
+    "source": "https://www.facebook.com/reel/1692434195205142",
+    "author": "李安 / Google Help / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Gemini",
+      "Gemini in Chrome",
+      "NotebookLM",
+      "YouTube",
+      "影片摘要",
+      "瀏覽器 AI",
+      "學習工作流",
+      "教育與課程",
+      "商業與生產力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1692434195205142",
+      "https://support.google.com/chrome/answer/16283624?hl=en&co=GENIE.Platform%3DDesktop",
+      "https://www.facebook.com/reel/1692434195205142",
+      "https://support.google.com/chrome/answer/16283624?hl=en&co=GENIE.Platform%3DDesktop",
+      "https://support.google.com/chrome/a/answer/17031592?hl=en",
+      "https://support.google.com/notebooklm/answer/16215270?hl=en&co=GENIE.Platform%3DDesktop",
+      "https://blog.google/products/chrome/new-ai-features-for-chrome/"
+    ],
+    "excerpt": "這則 Reel 的重點是「影片學習工作流的備援路徑」：當 NotebookLM 因為 YouTube 沒有字幕而無法匯入時，可以改用 Gemini in Chrome 在瀏覽器脈絡中對影片頁面做摘要與提問；它不一定取代完整轉寫，但能快速判斷長影片是否值得深入處理。",
+    "slug": "2026-06-22-gemini-in-chrome-youtube-no-caption-summary-workflow-facebook-reel",
+    "html": "articles/2026-06-22-gemini-in-chrome-youtube-no-caption-summary-workflow-facebook-reel.html",
+    "markdown": "articles/2026/06/2026-06-22-gemini-in-chrome-youtube-no-caption-summary-workflow-facebook-reel.md"
+  },
+  {
     "title": "電影大師 Pro｜NextFrame 從劇本到成片的 AI 影片工作流",
     "date": "2026-06-22",
     "source": "https://www.threads.com/@donniepai/post/DZ1jVDEH9bv",
