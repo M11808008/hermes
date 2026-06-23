@@ -1,0 +1,98 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agnes AI｜免費 Omni-modal API 與 Hermes Agent 串接觀察</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Agnes AI｜免費 Omni-modal API 與 Hermes Agent 串接觀察</h1><h1>Agnes AI｜免費 Omni-modal API 與 Hermes Agent 串接觀察</h1>
+<p>電腦王阿達在 2026-06-23 介紹 Agnes AI：一個來自新加坡 / Sapiens AI 生態的 AI API 平台，主打可免費透過 API 呼叫文字、圖片與影片模型，且目前文章實測指出免綁信用卡、暫無明確使用額度限制。這對想測試 OpenClaw、Hermes Agent 或其他 agent runtime 的使用者很有吸引力，因為多數可用於 agent 的 API 不是付費，就是免費層速度與額度非常有限。</p>
+<h1>一句話摘要</h1>
+<p>Agnes AI 值得收進雷達的重點不是「免費」本身，而是它把文字 agent、圖片生成、圖片編輯與影片生成都放進同一個 OpenAI-style API 生態；適合作為低成本實驗入口，但不應直接假設能承擔正式產品或敏感資料工作流。</p>
+<h1>來源重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 來源 | 電腦王阿達：完全免費用的 AI API！支援 AI 代理、圖片、影片生成，免綁信用卡 |</p>
+<p>| 發布時間 | 2026-06-23 15:10 +08:00 |</p>
+<p>| 服務 | Agnes AI |</p>
+<p>| 官方網站 | <a href="https://agnes-ai.com/" target="_blank" rel="noopener">https://agnes-ai.com/</a> |</p>
+<p>| API Base URL | <a href="https://apihub.agnes-ai.com/v1" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1</a> |</p>
+<p>| 註冊 | 支援一般帳號、Google、GitHub |</p>
+<p>| 付款資訊 | 文章實測指出不需綁信用卡 |</p>
+<p>| 文件狀態 | 文章提醒文件頁面偶爾顯示錯誤，需重新整理 |</p>
+<h1>可用模型整理</h1>
+<p>| 類型 | 模型 | 適用場景 |</p>
+<p>|---|---|---|</p>
+<p>| 文字 / Agent | `agnes-2.0-flash` / Agnes-2.0-Flash | AI agent、tool calling、coding、一般聊天、多輪任務 |</p>
+<p>| 圖片 | Agnes-Image-2.0-Flash、Agnes-Image-2.1-Flash | 圖片生成、圖片編輯、image-to-image |</p>
+<p>| 影片 | Agnes-Video-2.0 / Agnes Video V2.0 | 圖生影片或影片生成流程 |</p>
+<p>文章提到官方榜單宣稱：Agnes-2.0-Flash 在 ClawEval 通用排行榜分數高於 GPT 5.4；圖片模型在 AA 圖片編輯排行榜接近 Nano Banana；影片模型在 AA 圖生影片排行榜僅略低於 Seedance 1.5 Pro。這些資訊適合做趨勢觀察，但正式採用前仍應自行以固定任務集驗證。</p>
+<h1>Hermes Agent 串接判讀</h1>
+<p>文章示範將 Agnes AI 接到 Hermes Agent：</p>
+<ul>
+<li>註冊 Agnes AI 帳號。</li>
+<li>在 API 金鑰頁面建立新的 API Key。</li>
+<li>將 provider 設為 custom / OpenAI-compatible。</li>
+<li>Base URL 使用 `<a href="https://apihub.agnes-ai.com/v1`。" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1`。</a></li>
+<li>Model Name 使用 `agnes-2.0-flash` 或官方文件列出的模型名稱。</li>
+</ul>
+<p>對 Hermes 類 runtime 來說，Agnes AI 的意義在於可快速測試 agent 工作流：讓模型使用工具、整理網頁資料、輸出 CSV、生成圖片或觸發影片模型。文章實測 `Agnes-2.0-Flash` 可完成「到電腦王阿達網站整理當日新文章並在桌面儲存 CSV」這類工具型任務。</p>
+<h1>實測現象</h1>
+<p>| 測試 | 文章觀察 |</p>
+<p>|---|---|</p>
+<p>| 文字 agent 任務 | 可完成網站資料整理並輸出 CSV |</p>
+<p>| 圖片生成 | 成功，品質可接受，約 1 分鐘內完成 |</p>
+<p>| 影片生成 | 成功，約 2 分鐘左右 |</p>
+<p>| 影片查詢 / 生成錯誤 | 使用 Agnes-2.0-Flash 要求生成或查詢已生成影片時曾出現「無效的令牌」錯誤；改用 Gemini 3.1 Flash Lite 可解 |</p>
+<p>| 尖峰時段 | 非尖峰時刻速度較可接受 |</p>
+<p>| 文件頁 | 有時顯示系統繁忙或錯誤，需重新整理 |</p>
+<h1>對欒帥的實用判讀</h1>
+<h2>1. 可作為課程裡的「零成本 Agent API」案例</h2>
+<p>如果要教學生或工作坊學員體驗 Hermes / OpenClaw 類 agent runtime，Agnes AI 這類免信用卡 API 是很好的上手案例。它降低了三個門檻：</p>
+<ul>
+<li>不必先處理 OpenAI / Anthropic 付費帳單。</li>
+<li>不必架本地模型。</li>
+<li>同一平台可示範文字、圖片、影片 API 的差異。</li>
+</ul>
+<p>但教學時要把它定位成「實驗與入門」，不要包裝成正式產品級 SLA。</p>
+<h2>2. 適合先做工具鏈 smoke test，不適合直接承接核心任務</h2>
+<p>建議測試順序：</p>
+<ul>
+<li>一般對話與中文回答品質。</li>
+<li>工具呼叫與 JSON / structured output 穩定性。</li>
+<li>檔案讀寫、網頁整理、CSV 輸出等 agent 任務。</li>
+<li>圖片生成與編輯任務。</li>
+<li>影片生成與狀態查詢。</li>
+<li>高併發或長任務延遲觀察。</li>
+</ul>
+<p>若要接進正式工作流，至少要補上 retry、fallback model、timeout、錯誤訊息收斂與資料外送風險控管。</p>
+<h2>3. 免費 API 的關鍵不是省錢，而是驗證成本降低</h2>
+<p>免費 API 最有價值的地方，是讓團隊能快速比較 agent runtime、prompt pattern、tool permission、workflow design，而不是一開始就被 token 成本限制。對欒帥的 AI 學習雷達來說，它可放在「低摩擦實驗基礎設施」分類。</p>
+<h1>導入前檢查清單</h1>
+<p>| 檢查項 | 為什麼重要 |</p>
+<p>|---|---|</p>
+<p>| 免費政策是否穩定 | 免費無限制可能是早期推廣，未來可能改為額度制或排隊制 |</p>
+<p>| API 文件可用性 | 文件若常出錯，團隊導入與除錯成本會提高 |</p>
+<p>| OpenAI compatibility 完整度 | 需測試 streaming、tool calling、image/video endpoint、錯誤格式 |</p>
+<p>| 資料保留與隱私條款 | 不應把個資、客戶資料、內部文件直接送入未評估服務 |</p>
+<p>| 影片任務錯誤處理 | 文章已觀察到「無效的令牌」錯誤，需設 fallback |</p>
+<p>| 速率限制與尖峰延遲 | 免費服務在多人使用時可能不穩 |</p>
+<p>| Benchmark 可重現性 | 官方榜單需用自己的任務集驗證，不宜直接採信 |</p>
+<h1>建議後續測試</h1>
+<p>| 測試 | 做法 | 觀察點 |</p>
+<p>|---|---|---|</p>
+<p>| Hermes Agent 基本串接 | custom provider + `<a href="https://apihub.agnes-ai.com/v1`" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1`</a> + `agnes-2.0-flash` | 是否能穩定出現在模型選單並完成一般對話 |</p>
+<p>| Tool calling | 讓模型整理本機資料或網頁資料 | 函式呼叫格式、錯誤修復能力、是否亂編檔案 |</p>
+<p>| Structured output | 要求固定 JSON schema | 格式遵循率與重試後成功率 |</p>
+<p>| 圖片生成 | 同 prompt 與其他模型比較 | 品質、延遲、失敗率 |</p>
+<p>| 影片生成 | 測試生成與查詢狀態 | token error、任務 ID、輪詢流程是否穩定 |</p>
+<p>| 免費額度壓力 | 多次小任務連續呼叫 | 是否限速、排隊或回傳非標準錯誤 |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>本篇依電腦王阿達文章與 Agnes AI 官方頁 / 搜尋結果整理，尚未在欒帥本機正式實測 Agnes API。</li>
+<li>免費、無限制、免信用卡屬文章發布當下觀察，未來可能改變。</li>
+<li>官方 benchmark 與第三方文章實測都應視為初步參考；正式導入仍需用自己的任務集與失敗率統計驗證。</li>
+<li>對 Hermes Agent 的設定應以 Hermes 官方 CLI / config 流程與當前版本為準；不要直接照搬截圖中的可能錯字或舊介面。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>電腦王阿達文章：<a href="https://www.koc.com.tw/archives/646877" target="_blank" rel="noopener">https://www.koc.com.tw/archives/646877</a></li>
+<li>Agnes AI 官方網站：<a href="https://agnes-ai.com/" target="_blank" rel="noopener">https://agnes-ai.com/</a></li>
+<li>開發者文件：<a href="https://agnes-ai.com/doc/cid2" target="_blank" rel="noopener">https://agnes-ai.com/doc/cid2</a></li>
+<li>Agnes 2.0 Flash 文件：<a href="https://agnes-ai.com/doc/agnes-20-flash" target="_blank" rel="noopener">https://agnes-ai.com/doc/agnes-20-flash</a></li>
+<li>Agnes Image 2.0 Flash 文件：<a href="https://agnes-ai.com/doc/agnes-image-20-flash" target="_blank" rel="noopener">https://agnes-ai.com/doc/agnes-image-20-flash</a></li>
+<li>API Base URL：<a href="https://apihub.agnes-ai.com/v1" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-23 · https://www.koc.com.tw/archives/646877 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">API</span><span class="tag">AI Agent</span><span class="tag">Hermes Agent</span><span class="tag">OpenClaw</span><span class="tag">Agnes AI</span><span class="tag">Sapiens AI</span><span class="tag">Omni-modal</span><span class="tag">Image Generation</span><span class="tag">Video Generation</span><span class="tag">Free API</span><h3>原始連結</h3><p><a href="https://www.koc.com.tw/archives/646877" target="_blank" rel="noopener">https://www.koc.com.tw/archives/646877</a></p><p><a href="https://www.koc.com.tw/archives/646877" target="_blank" rel="noopener">https://www.koc.com.tw/archives/646877</a></p><p><a href="https://www.koc.com.tw/archives/646877" target="_blank" rel="noopener">https://www.koc.com.tw/archives/646877</a></p><p><a href="https://agnes-ai.com/" target="_blank" rel="noopener">https://agnes-ai.com/</a></p><p><a href="https://agnes-ai.com/doc/cid2" target="_blank" rel="noopener">https://agnes-ai.com/doc/cid2</a></p><p><a href="https://agnes-ai.com/doc/agnes-20-flash" target="_blank" rel="noopener">https://agnes-ai.com/doc/agnes-20-flash</a></p><p><a href="https://agnes-ai.com/doc/agnes-image-20-flash" target="_blank" rel="noopener">https://agnes-ai.com/doc/agnes-image-20-flash</a></p><p><a href="https://apihub.agnes-ai.com/v1" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

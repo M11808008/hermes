@@ -1,5 +1,42 @@
 [
   {
+    "title": "Agnes AI｜免費 Omni-modal API 與 Hermes Agent 串接觀察",
+    "date": "2026-06-23",
+    "source": "https://www.koc.com.tw/archives/646877",
+    "author": "電腦王阿達 Rocky / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "API",
+      "AI Agent",
+      "Hermes Agent",
+      "OpenClaw",
+      "Agnes AI",
+      "Sapiens AI",
+      "Omni-modal",
+      "Image Generation",
+      "Video Generation",
+      "Free API"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.koc.com.tw/archives/646877",
+      "https://www.koc.com.tw/archives/646877",
+      "https://www.koc.com.tw/archives/646877",
+      "https://agnes-ai.com/",
+      "https://agnes-ai.com/doc/cid2",
+      "https://agnes-ai.com/doc/agnes-20-flash",
+      "https://agnes-ai.com/doc/agnes-image-20-flash",
+      "https://apihub.agnes-ai.com/v1"
+    ],
+    "excerpt": "Agnes AI 值得收進雷達的重點不是「免費」本身，而是它把文字 agent、圖片生成、圖片編輯與影片生成都放進同一個 OpenAI-style API 生態；適合作為低成本實驗入口，但不應直接假設能承擔正式產品或敏感資料工作流。",
+    "slug": "2026-06-23-agnes-ai-free-omni-modal-api-hermes-agent",
+    "html": "articles/2026-06-23-agnes-ai-free-omni-modal-api-hermes-agent.html",
+    "markdown": "articles/2026/06/2026-06-23-agnes-ai-free-omni-modal-api-hermes-agent.md"
+  },
+  {
     "title": "Eurail Global Pass｜歐洲鐵路全境通行證 85 折促銷與是否值得買的判斷表",
     "date": "2026-06-23",
     "source": "https://www.threads.com/@yuki.lin.18/post/DZ5R7YFE4DR",
