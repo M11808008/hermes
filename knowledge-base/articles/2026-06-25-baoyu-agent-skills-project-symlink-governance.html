@@ -1,0 +1,100 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>宝玉 Agent Skills 管理法｜用專案內安裝與軟連結治理 Claude / Codex 技能庫</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>宝玉 Agent Skills 管理法｜用專案內安裝與軟連結治理 Claude / Codex 技能庫</h1><h1>宝玉 Agent Skills 管理法｜用專案內安裝與軟連結治理 Claude / Codex 技能庫</h1>
+<p>來源是宝玉在 X 的長文，回應 LinearUncle 提到同時使用多個 coding agent 時，`/.agents/skills`、`/.codex/skills`、`~/.claude/skills` 各自分裂、互相找不到技能的痛點。本文保留原貼的工程化做法，並對照 OpenAI Codex 與 Claude Skills 官方文件，整理成適合欒帥日後治理個人 agent skill library 的決策筆記。</p>
+<h1>一句話摘要</h1>
+<p>這則貼文值得收錄的重點不是「又多一個 skills 安裝技巧」，而是提出一個可長期維護的技能庫治理原則：技能原件集中管理、專案內按需啟用、用軟連結跨工具暴露入口，避免全域技能污染上下文，也讓更新與修 bug 可以回饋原始 repo。</p>
+<h1>X 貼文可確認資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 發布者 | 宝玉 `@dotey` |</p>
+<p>| 貼文時間 | 2026-06-24 上午 4:02（X 顯示） |</p>
+<p>| 主題 | Agent Skills 管理、專案內安裝、軟連結、Claude Code / Codex 工作流 |</p>
+<p>| 原始問題 | 多個 coding agent 各有技能目錄，導致技能散落與重複同步 |</p>
+<p>| 貼文熱度快照 | 約 6.3 萬 views、609 likes、125 reposts、718 bookmarks（擷取時點） |</p>
+<h1>核心做法</h1>
+<h2>1. Skills 只裝在專案裡，不裝全域</h2>
+<p>宝玉的理由是上下文管理。Agent Skills 通常採用 progressive disclosure：一開始只把名稱、描述、路徑等摘要放進上下文，等 agent 判斷相關時才載入完整 `SKILL.md`。但全域技能太多時，光是摘要清單就會擠壓工作台；若誤觸發完整技能內容，也會浪費更大的上下文空間。</p>
+<p>因此做法是：</p>
+<ul>
+<li>不把所有技能塞進全域位置。</li>
+<li>每個專案只連入真正會用到的 skills。</li>
+<li>專案上下文保持乾淨，降低錯誤觸發與 token 浪費。</li>
+</ul>
+<p>這與 OpenAI Codex 文件提到的機制一致：Codex 會從 repository、user、admin、system 等位置讀取 skills；repository 位置會掃描 `.agents/skills`。OpenAI 也明確說 Codex 會先放入技能摘要，並在需要時載入完整 `SKILL.md`，因此大量安裝仍會產生上下文治理成本。</p>
+<h2>2. 技能原件集中在 GitHub 專案資料夾</h2>
+<p>贴文中的範例是把開源 skill 專案集中放在：</p>
+<p>```text</p>
+<p>~/GitHub/baoyu-skills</p>
+<p>~/GitHub/baoyu-design</p>
+<p>```</p>
+<p>這裡存放的是「技能原件」，不是每個專案都複製一份。這個分層很重要：</p>
+<p>| 層級 | 角色 | 好處 |</p>
+<p>|---|---|---|</p>
+<p>| `~/GitHub/&lt;skill-repo&gt;` | 技能原件 / upstream repo | 可以 `git pull` 更新，也能直接 commit 修正 |</p>
+<p>| 專案內 `.agents/skills/&lt;skill&gt;` | 專案按需入口 | 只讓當前專案看到需要的技能 |</p>
+<p>| `.claude/skills` | Claude Code 入口 | 讓 Claude Code 沿著入口找到同一批技能 |</p>
+<h2>3. 用軟連結而不是複製貼上</h2>
+<p>貼文範例：</p>
+<p>```text</p>
+<p>.agents/skills/baoyu-comic   -&gt;  ~/GitHub/baoyu-skills/skills/baoyu-comic</p>
+<p>.agents/skills/baoyu-design  -&gt;  ~/GitHub/baoyu-design/skills/baoyu-design</p>
+<p>.claude/skills               -&gt;  .agents/skills</p>
+<p>```</p>
+<p>軟連結的價值是「一份原件，多個入口」。改原件，所有專案入口同步更新；在專案中請 agent 修 skill，實際修到的也是原本的 repo，後續可以直接提交 PR 或回饋開源。</p>
+<h1>對欒帥的實用採用建議</h1>
+<h2>建議採用的目錄模型</h2>
+<p>可以把這則貼文的做法整理成三層：</p>
+<p>```text</p>
+<p>~/GitHub/agent-skills/              # 各種公開或自製技能原件</p>
+<p>~/GitHub/&lt;project&gt;/.agents/skills/  # 每個專案真正啟用的技能集合</p>
+<p>~/GitHub/&lt;project&gt;/.claude/skills   # 指向 .agents/skills 的 Claude Code 入口</p>
+<p>```</p>
+<p>如果同時用 Codex、Claude Code、Hermes 或其他 coding agent，核心原則不是讓每個工具各自複製一份，而是建立一個「專案技能入口」，再依各工具的規則掛過去。</p>
+<h2>適合放專案內的技能</h2>
+<p>| 技能類型 | 是否適合專案內啟用 | 原因 |</p>
+<p>|---|---|---|</p>
+<p>| 該專案專用部署流程 | 高 | 路徑、環境變數、測試命令通常只對該 repo 有效 |</p>
+<p>| 特定設計系統 / 品牌聲線 | 高 | 避免污染其他專案輸出風格 |</p>
+<p>| 課程頁、簡報、知識庫固定格式 | 高 | 可重用但通常有專案脈絡 |</p>
+<p>| 通用查詢 / 搜尋技能 | 中 | 若常用可全域，但摘要太多時仍建議精簡 |</p>
+<p>| 一次性實驗技能 | 低 | 先放 sandbox，成熟後再納入正式技能庫 |</p>
+<h1>可直接交給 agent 的自然語言指令</h1>
+<p>宝玉強調不用記 `ln -s` 指令，直接交代 agent 即可。欒帥可以使用這種說法：</p>
+<p>```text</p>
+<p>請把 ~/GitHub/agent-skills/skills/&lt;skill-name&gt; 軟連結到目前專案的 .agents/skills/&lt;skill-name&gt;，如果 .agents/skills 不存在就先建立；再讓 .claude/skills 指向 .agents/skills。請不要複製資料夾，使用 symlink，並檢查連結是否有效。</p>
+<p>```</p>
+<p>如果要更穩妥，可以再加：</p>
+<p>```text</p>
+<p>建立前請先檢查是否已有同名 skill；若已存在，先回報它是真實資料夾還是 symlink，不要覆蓋。</p>
+<p>```</p>
+<h1>風險與治理 caveats</h1>
+<p>| 風險 | 判讀 |</p>
+<p>|---|---|</p>
+<p>| 軟連結指到壞掉的路徑 | repo 搬移或刪除後，專案會看到 dangling symlink；需要定期檢查 |</p>
+<p>| 不同工具的 skill 規格不完全一致 | `SKILL.md` 是共同核心，但 frontmatter、支援檔案、觸發規則與工具限制可能不同 |</p>
+<p>| 修原件會影響多個專案 | 這是優點也是風險；重大修改前最好 git branch 或 commit checkpoint |</p>
+<p>| 全域技能仍有用途 | 真正每天都用、低風險、短描述的技能可以全域；但不應把全域當垃圾桶 |</p>
+<p>| 安全與資料邊界 | 從公開 repo 安裝 skills 前應讀 `SKILL.md`、scripts、templates，避免讓 agent 執行不明腳本 |</p>
+<h1>官方文件對照</h1>
+<ul>
+<li>OpenAI Codex Skills：Codex 支援 repository / user / admin / system 等不同 scope；repository 會掃描 `.agents/skills`，並以 progressive disclosure 管理上下文。</li>
+<li>Claude Code Skills：Claude Code 支援 `.claude/skills/&lt;skill&gt;/SKILL.md`，技能可在相關時自動載入，也可用 `/skill-name` 直接呼叫。</li>
+<li>Claude Agent Skills API 文件：Anthropic 強調 filesystem-based architecture 與 progressive disclosure，讓技能的 metadata、instructions、supporting files 分階段載入。</li>
+</ul>
+<p>這些官方設計都支持宝玉的結論：skills 不是越多越好，而是要用 scope、目錄與入口來治理。</p>
+<h1>欒帥可落地的下一步</h1>
+<ul>
+<li>盤點目前真正高頻使用的 Skills，分成全域、專案、實驗三類。</li>
+<li>對每個專案建立 `.agents/skills` 作為共同入口。</li>
+<li>只把該專案需要的技能用 symlink 連入。</li>
+<li>對 Claude Code 建 `.claude/skills -&gt; .agents/skills`。</li>
+<li>對 Codex 則優先使用官方文件建議的 repository `.agents/skills` scope。</li>
+<li>每次更新公開技能 repo 前先 commit；每次修技能後，把 bug fix 回饋到原 repo。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>本文根據 X 公開貼文、Open Graph metadata、頁面可見文字與官方 Skills 文件整理；未登入 X，也未展開全部 88 則回覆。</li>
+<li>貼文中的路徑是作者範例，實際 Codex / Claude / Hermes 安裝位置仍應以當前工具版本文件與專案約定為準。</li>
+<li>本文沒有在欒帥的實際專案中建立 symlink；若要執行，應先針對目標 repo 檢查既有 `.agents`、`.claude`、`.codex` 結構。</li>
+</ul>
+<h1>原始連結</h1>
+<p><a href="https://x.com/dotey/status/2069632132431929651" target="_blank" rel="noopener">https://x.com/dotey/status/2069632132431929651</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://x.com/dotey/status/2069632132431929651 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Agent Skills</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Skill Governance</span><span class="tag">Developer Workflow</span><span class="tag">Knowledge Work</span><span class="tag">X</span><h3>原始連結</h3><p><a href="https://x.com/dotey/status/2069632132431929651?s=68&amp;t=auVcoiE4iR2928axpMSCRg" target="_blank" rel="noopener">https://x.com/dotey/status/2069632132431929651?s=68&amp;t=auVcoiE4iR2928axpMSCRg</a></p><p><a href="https://x.com/dotey/status/2069632132431929651" target="_blank" rel="noopener">https://x.com/dotey/status/2069632132431929651</a></p><p><a href="https://x.com/dotey/status/2069632132431929651" target="_blank" rel="noopener">https://x.com/dotey/status/2069632132431929651</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://github.com/openai/skills" target="_blank" rel="noopener">https://github.com/openai/skills</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

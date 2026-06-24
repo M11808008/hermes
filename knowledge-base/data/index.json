@@ -1,5 +1,39 @@
 [
   {
+    "title": "宝玉 Agent Skills 管理法｜用專案內安裝與軟連結治理 Claude / Codex 技能庫",
+    "date": "2026-06-25",
+    "source": "https://x.com/dotey/status/2069632132431929651",
+    "author": "宝玉 / dotey / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Agent Skills",
+      "Claude Code",
+      "Codex",
+      "Skill Governance",
+      "Developer Workflow",
+      "Knowledge Work",
+      "X"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/dotey/status/2069632132431929651?s=68&t=auVcoiE4iR2928axpMSCRg",
+      "https://x.com/dotey/status/2069632132431929651",
+      "https://x.com/dotey/status/2069632132431929651",
+      "https://developers.openai.com/codex/skills",
+      "https://github.com/openai/skills",
+      "https://code.claude.com/docs/en/skills",
+      "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview"
+    ],
+    "excerpt": "這則貼文值得收錄的重點不是「又多一個 skills 安裝技巧」，而是提出一個可長期維護的技能庫治理原則：技能原件集中管理、專案內按需啟用、用軟連結跨工具暴露入口，避免全域技能污染上下文，也讓更新與修 bug 可以回饋原始 repo。",
+    "slug": "2026-06-25-baoyu-agent-skills-project-symlink-governance",
+    "html": "articles/2026-06-25-baoyu-agent-skills-project-symlink-governance.html",
+    "markdown": "articles/2026/06/2026-06-25-baoyu-agent-skills-project-symlink-governance.md"
+  },
+  {
     "title": "Claude 使用六個段位｜從提示詞到 AI 操作員與工作團隊",
     "date": "2026-06-24",
     "source": "https://www.facebook.com/reel/2537155100069025",
