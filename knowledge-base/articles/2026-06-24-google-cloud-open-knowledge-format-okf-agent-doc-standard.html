@@ -1,0 +1,136 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Google Cloud OKF｜用 Markdown + YAML 統一 Agent 知識交換格式</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Google Cloud OKF｜用 Markdown + YAML 統一 Agent 知識交換格式</h1><h1>Google Cloud OKF｜用 Markdown + YAML 統一 Agent 知識交換格式</h1>
+<p>李宗倫在 Generative AI 技術交流中心分享 Google Cloud 的 Open Knowledge Format（OKF），指出它試圖統一 Agent 知識交換與文檔格式。短連結 `goo.gle/4uGvAEe` 指向 GoogleCloudPlatform `knowledge-catalog` repository 的 `okf` 目錄，核心規格文件是 `okf/SPEC.md`。</p>
+<h1>一句話摘要</h1>
+<p>OKF 的重點不是創造複雜新格式，而是把「Markdown + YAML frontmatter + 目錄索引 + 引用慣例」正式規格化，讓人類、agent、資料目錄、RAG 管線與靜態網站可以共用同一份知識 bundle。</p>
+<h1>來源重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 社群貼文 | 李宗倫：總算有人要來統一 Agent 文檔格式 |</p>
+<p>| 官方短連結 | `<a href="https://goo.gle/4uGvAEe`" target="_blank" rel="noopener">https://goo.gle/4uGvAEe`</a> |</p>
+<p>| 指向位置 | `GoogleCloudPlatform/knowledge-catalog/tree/main/okf` |</p>
+<p>| 規格 | Open Knowledge Format v0.1 Draft |</p>
+<p>| 核心格式 | directory of Markdown files with YAML frontmatter |</p>
+<p>| 參考實作 | BigQuery enrichment agent、static HTML visualizer、sample bundles |</p>
+<p>| 範例 bundle | GA4、Stack Overflow、Bitcoin blocks / transactions |</p>
+<h1>OKF 是什麼</h1>
+<p>官方規格定義 OKF 是一種 open、human-friendly、agent-friendly 的知識表示格式，用來描述圍繞資料與系統的 metadata、context 與 curated insight。它可以由人手寫、由 agent 生成、跨組織交換，也可以由人類與 agent 共同消費。</p>
+<p>格式刻意保持極簡：</p>
+<ul>
+<li>一個 knowledge bundle 是一個目錄樹。</li>
+<li>每個 concept 是一個 UTF-8 Markdown 檔案。</li>
+<li>每個非保留 Markdown 檔案都應有 YAML frontmatter。</li>
+<li>唯一必填欄位是 `type`。</li>
+<li>`index.md` 與 `log.md` 是保留檔名，用於漸進式導覽與更新記錄。</li>
+<li>Markdown link 用來表示概念之間的關係。</li>
+<li>`# Citations` 可列出外部引用來源。</li>
+</ul>
+<h1>最小結構</h1>
+<p>OKF bundle 的典型結構如下：</p>
+<p>```text</p>
+<p>path/to/bundle/</p>
+<p>├── index.md</p>
+<p>├── log.md</p>
+<p>├── &lt;concept&gt;.md</p>
+<p>└── &lt;subdirectory&gt;/</p>
+<p>    ├── index.md</p>
+<p>    └── &lt;concept&gt;.md</p>
+<p>```</p>
+<p>每個 concept document 的 frontmatter 範例如下：</p>
+<p>```yaml</p>
+<p>---</p>
+<p>type: BigQuery Table</p>
+<p>title: Customers</p>
+<p>description: Customer master table for retail analytics.</p>
+<p>resource: <a href="https://console.cloud.google.com/bigquery?p=..." target="_blank" rel="noopener">https://console.cloud.google.com/bigquery?p=...</a></p>
+<p>tags: [customer, analytics]</p>
+<p>timestamp: 2026-05-28T00:00:00Z</p>
+<p>---</p>
+<p>```</p>
+<p>其中只有 `type` 是必填；`title`、`description`、`resource`、`tags`、`timestamp` 是建議欄位。生產者可加入額外 key，消費者應容忍未知欄位。</p>
+<h1>OKF 解決的問題</h1>
+<p>| 問題 | OKF 的回答 |</p>
+<p>|---|---|</p>
+<p>| Agent 讀不到企業脈絡 | 把資料、API、指標、runbook、業務規則整理成 Markdown concept |</p>
+<p>| 不同工具輸出格式不一致 | 用少量共同規則建立可交換 bundle |</p>
+<p>| 知識被鎖在平台裡 | bundle 是目錄，可放 git、tarball、repo 或靜態檔案伺服器 |</p>
+<p>| LLM ingestion 需要轉換 | Markdown 可直接放入 context；frontmatter 供檢索與篩選 |</p>
+<p>| 人類與 agent 維護兩套文件 | 同一份文件同時給人看、給 agent 讀 |</p>
+<p>| 版本與審查困難 | git diff、PR、blame、review workflow 直接可用 |</p>
+<h1>官方設計原則</h1>
+<p>規格明確主張 OKF 應具備以下特性：</p>
+<ul>
+<li>Readable：人類不靠工具即可閱讀。</li>
+<li>Parseable：agent 不需要特定 SDK 即可解析。</li>
+<li>Diffable：版本控制中可逐行比較。</li>
+<li>Portable：可跨工具、組織與時間保存。</li>
+<li>Minimally opinionated：只標準化必要結構，不規定領域分類法。</li>
+</ul>
+<p>這也是社群貼文中提到的三個亮點：零工具依賴、LLM 友好、雙向可讀。</p>
+<h1>與現有格式的關係</h1>
+<p>OKF 規格指出，它刻意接近幾個既有模式：</p>
+<ul>
+<li>LLM wiki repositories：Markdown + frontmatter 作為 agent-readable knowledge base。</li>
+<li>Obsidian / Notion 類個人知識工具：階層式文件與交叉連結。</li>
+<li>Metadata as code：把資料目錄與系統脈絡放進版本控制，而不是只存在某個 SaaS registry。</li>
+</ul>
+<p>差異在於 OKF 嘗試把這些鬆散慣例寫成 specification，讓不同 producer / consumer 可以最低限度互通。</p>
+<h1>對 AI Agent 工作流的意義</h1>
+<p>OKF 可以把 agent workflow 分為兩段：</p>
+<h2>1. Production：Agent 產生知識 bundle</h2>
+<p>Agent 可從 Query、API、資料庫 metadata、文件、log、schema 或企業資料目錄抓取資訊，轉換為 OKF concept：</p>
+<ul>
+<li>table / dataset 說明</li>
+<li>API endpoint 文件</li>
+<li>metric 定義</li>
+<li>incident runbook</li>
+<li>business process</li>
+<li>domain glossary</li>
+<li>schema 與 example queries</li>
+<li>citations 與來源追蹤</li>
+</ul>
+<h2>2. Consumption：Agent 或人類消費知識 bundle</h2>
+<p>消費端不需要特殊 SDK：</p>
+<ul>
+<li>人類可直接 `cat`、`grep`、瀏覽 Markdown。</li>
+<li>LLM 可把 relevant concept 直接載入 context。</li>
+<li>搜尋引擎可索引 frontmatter 與 body。</li>
+<li>靜態網站可渲染成可視化知識圖。</li>
+<li>agent 可沿著 `index.md` 與 Markdown links 逐步探索，而不是一次塞入整包資料。</li>
+</ul>
+<h1>對欒帥 AI 學習雷達的實用判讀</h1>
+<h2>1. 欒帥的知識庫其實已經接近 OKF 思路</h2>
+<p>目前 AI 學習雷達文章已採用 Markdown + YAML frontmatter，並有 metadata index、tag、週報與靜態網站輸出。這和 OKF 的基本精神高度一致：同一份內容同時可給人閱讀、給 agent 搜尋、給網站渲染。</p>
+<p>可考慮的對齊方向：</p>
+<ul>
+<li>在特定子目錄試做 OKF-compatible bundle。</li>
+<li>為文章 frontmatter 補入 `type` 欄位，例如 `type: AI Tool Note`、`type: Workflow`、`type: Research Brief`。</li>
+<li>將週報、工具、prompt、課程、案例拆成更明確的 concept 類型。</li>
+<li>將引用來源集中到 `# Citations`，提升可驗證性。</li>
+<li>產生 `index.md` 給 agent 做 progressive disclosure。</li>
+</ul>
+<h2>2. OKF 可作為課程中的「Agent 記憶格式」教學案例</h2>
+<p>很多人談 agent memory 時會直接跳到向量資料庫，但 OKF 提醒另一條路：先用最穩定、最可審查的 file-based knowledge。這很適合課程示範：</p>
+<ul>
+<li>用 Markdown 寫一份 domain concept。</li>
+<li>用 YAML frontmatter 標示 type、tags、resource。</li>
+<li>讓 agent 讀取 bundle 並回答問題。</li>
+<li>修改 concept 後用 git diff 追蹤知識演化。</li>
+<li>再視需求加入 search index、RAG 或 graph visualizer。</li>
+</ul>
+<h2>3. 需注意 OKF 仍是 v0.1 draft</h2>
+<p>OKF 目前是 v0.1 draft，應視為值得追蹤的開放規格，而不是已成熟的企業標準。導入時建議採取「兼容而不綁死」策略：</p>
+<ul>
+<li>可以採用 `type`、`index.md`、`log.md`、`# Citations` 等低風險慣例。</li>
+<li>不要為了完全符合 OKF 而破壞既有知識庫欄位。</li>
+<li>保持 frontmatter extensible，讓本地欄位與 OKF 欄位並存。</li>
+<li>等 Google Cloud / 社群後續版本穩定後，再決定是否完整遷移。</li>
+</ul>
+<h1>收錄判斷</h1>
+<p>OKF 是高優先級追蹤項目，因為它把 agent-readable knowledge、metadata as code、Markdown knowledge base 與企業資料目錄接在一起。若未來被更多 agent framework、資料目錄或 RAG 工具採納，它可能成為「agent 知識包」的低摩擦交換格式。</p>
+<h1>可追蹤連結</h1>
+<ul>
+<li>GitHub OKF 目錄：<a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf" target="_blank" rel="noopener">https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf</a></li>
+<li>OKF 規格：<a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md" target="_blank" rel="noopener">https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md</a></li>
+<li>Google Cloud Blog：<a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing" target="_blank" rel="noopener">https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing</a></li>
+<li>Facebook 貼文：<a href="https://www.facebook.com/groups/gaitech/posts/1708510190333189/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/posts/1708510190333189/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-24 · https://www.facebook.com/groups/gaitech/posts/1708510190333189/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Agent Knowledge</span><span class="tag">Open Knowledge Format</span><span class="tag">OKF</span><span class="tag">Google Cloud</span><span class="tag">Markdown</span><span class="tag">YAML</span><span class="tag">Knowledge Base</span><span class="tag">Metadata as Code</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/17gJigi9uk/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/17gJigi9uk/?mibextid=wwXIfr</a></p><p><a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf" target="_blank" rel="noopener">https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf</a></p><p><a href="https://www.facebook.com/groups/gaitech/posts/1708510190333189/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/posts/1708510190333189/</a></p><p><a href="https://goo.gle/4uGvAEe" target="_blank" rel="noopener">https://goo.gle/4uGvAEe</a></p><p><a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf" target="_blank" rel="noopener">https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf</a></p><p><a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md" target="_blank" rel="noopener">https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md</a></p><p><a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing" target="_blank" rel="noopener">https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

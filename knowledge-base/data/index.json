@@ -70,6 +70,41 @@
     "markdown": "articles/2026/06/2026-06-24-codex-browser-excalidraw-image-workflow.md"
   },
   {
+    "title": "Google Cloud OKF｜用 Markdown + YAML 統一 Agent 知識交換格式",
+    "date": "2026-06-24",
+    "source": "https://www.facebook.com/groups/gaitech/posts/1708510190333189/",
+    "author": "李宗倫 / Google Cloud / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Agent Knowledge",
+      "Open Knowledge Format",
+      "OKF",
+      "Google Cloud",
+      "Markdown",
+      "YAML",
+      "Knowledge Base",
+      "Metadata as Code"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/17gJigi9uk/?mibextid=wwXIfr",
+      "https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf",
+      "https://www.facebook.com/groups/gaitech/posts/1708510190333189/",
+      "https://goo.gle/4uGvAEe",
+      "https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf",
+      "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md",
+      "https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing"
+    ],
+    "excerpt": "OKF 的重點不是創造複雜新格式，而是把「Markdown + YAML frontmatter + 目錄索引 + 引用慣例」正式規格化，讓人類、agent、資料目錄、RAG 管線與靜態網站可以共用同一份知識 bundle。",
+    "slug": "2026-06-24-google-cloud-open-knowledge-format-okf-agent-doc-standard",
+    "html": "articles/2026-06-24-google-cloud-open-knowledge-format-okf-agent-doc-standard.html",
+    "markdown": "articles/2026/06/2026-06-24-google-cloud-open-knowledge-format-okf-agent-doc-standard.md"
+  },
+  {
     "title": "Muninn + iroh｜Hermes Agent 手機直連橋接方案",
     "date": "2026-06-24",
     "source": "https://www.facebook.com/groups/gaitech/posts/1714132776437597/",
