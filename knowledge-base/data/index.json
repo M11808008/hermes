@@ -34,6 +34,44 @@
     "markdown": "articles/2026/06/2026-06-25-baoyu-agent-skills-project-symlink-governance.md"
   },
   {
+    "title": "Claude Full Course｜用 Projects、Artifacts、Skills、Claude Code 建立可重複自動化工作流",
+    "date": "2026-06-25",
+    "source": "https://x.com/KhusbooT14835/status/2069606031442006286/video/1",
+    "author": "Khusboo Tayal / Julian Goldie SEO / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude",
+      "Claude Code",
+      "Claude Skills",
+      "AI Agent",
+      "Workflow Automation",
+      "Artifacts",
+      "Projects",
+      "Content Automation",
+      "Vibe Coding"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/KhusbooT14835/status/2069606031442006286/video/1",
+      "https://www.youtube.com/watch?v=KrKhfm2Xuho",
+      "https://x.com/KhusbooT14835/status/2069606031442006286",
+      "https://www.youtube.com/watch?v=KrKhfm2Xuho",
+      "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them",
+      "https://www.anthropic.com/news/projects",
+      "https://code.claude.com/docs/en/skills",
+      "https://support.claude.com/en/articles/12512198-how-to-create-custom-skills",
+      "https://code.claude.com/docs/en/artifacts",
+      "https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/"
+    ],
+    "excerpt": "這支影片真正值得收錄的不是「Claude 可以做很多事」這句話，而是一張工作流地圖：把一次性 prompt 升級成 Projects，把可視化輸出交給 Artifacts，把重複方法封裝成 Skills，把技術執行交給 Claude Code，再用 Connectors / Computer Use / IDE agent 把工作帶到 Google Drive、GitHub、WordPress、社群平台或本機專案。",
+    "slug": "2026-06-25-claude-full-course-build-automate-workflow-map",
+    "html": "articles/2026-06-25-claude-full-course-build-automate-workflow-map.html",
+    "markdown": "articles/2026/06/2026-06-25-claude-full-course-build-automate-workflow-map.md"
+  },
+  {
     "title": "OpenMontage｜開源 Agentic 影片生產系統，把 Claude / Cursor / Codex 變成影片工作室",
     "date": "2026-06-25",
     "source": "https://x.com/indiedevhailey/status/2069684466059202885",
