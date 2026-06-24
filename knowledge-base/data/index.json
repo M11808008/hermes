@@ -70,6 +70,41 @@
     "markdown": "articles/2026/06/2026-06-24-codex-browser-excalidraw-image-workflow.md"
   },
   {
+    "title": "Muninn + iroh｜Hermes Agent 手機直連橋接方案",
+    "date": "2026-06-24",
+    "source": "https://www.facebook.com/groups/gaitech/posts/1714132776437597/",
+    "author": "Thor Lin / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Hermes Agent",
+      "Muninn",
+      "iroh",
+      "P2P",
+      "iOS",
+      "Mobile Agent",
+      "TestFlight",
+      "Open Source"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/18Xbx66xGK/?mibextid=wwXIfr",
+      "https://ai-muninn.com/zh-TW/blog/hermes-muninn-phone-bridge",
+      "https://ai-muninn.com/zh-TW/blog/hermes-muninn-phone-bridge",
+      "https://github.com/coolthor/hermes-bridge",
+      "https://testflight.apple.com/join/8mcRtXsm",
+      "https://www.iroh.computer/",
+      "https://www.facebook.com/groups/gaitech/posts/1714132776437597/"
+    ],
+    "excerpt": "Muninn 的價值不是「多一個聊天 app」，而是把 Hermes 從桌面工具變成可隨身操作的個人 agent 介面；它用 iroh 解掉手機連回家中 agent 的網路摩擦，並把 session、cron、kanban、檔案、語音與媒體回傳都納入原生行動介面。",
+    "slug": "2026-06-24-muninn-iroh-hermes-phone-bridge",
+    "html": "articles/2026-06-24-muninn-iroh-hermes-phone-bridge.html",
+    "markdown": "articles/2026/06/2026-06-24-muninn-iroh-hermes-phone-bridge.md"
+  },
+  {
     "title": "Seedance 2.0 表情控制 Prompt｜用秒數節點寫出 AI 影片微表情表演",
     "date": "2026-06-24",
     "source": "https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk",

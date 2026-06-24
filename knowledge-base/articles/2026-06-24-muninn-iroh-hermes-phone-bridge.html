@@ -1,0 +1,93 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Muninn + iroh｜Hermes Agent 手機直連橋接方案</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Muninn + iroh｜Hermes Agent 手機直連橋接方案</h1><h1>Muninn + iroh｜Hermes Agent 手機直連橋接方案</h1>
+<p>Thor Lin 在 Generative AI 技術交流中心分享了 Muninn：一個專為 Hermes Agent 設計的 iOS app，搭配開源的 `hermes-bridge`，讓手機可以透過 iroh P2P 加密通道連回家中或本機的 Hermes。重點是：不必設定 LINE Bot、Telegram Bot、ngrok tunnel 或 webhook，安裝後掃 QR 即可配對。</p>
+<h1>一句話摘要</h1>
+<p>Muninn 的價值不是「多一個聊天 app」，而是把 Hermes 從桌面工具變成可隨身操作的個人 agent 介面；它用 iroh 解掉手機連回家中 agent 的網路摩擦，並把 session、cron、kanban、檔案、語音與媒體回傳都納入原生行動介面。</p>
+<h1>來源重點</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 社群貼文 | Thor Lin 於 Generative AI 技術交流中心分享 Muninn TestFlight 與 hermes-bridge |</p>
+<p>| 官方文章 | `[Agent 進階 #14] 出門也能跟家裡的助理說話：Muninn + iroh，5G 直連，不靠雲端` |</p>
+<p>| app | Muninn iOS app，TestFlight 公開測試 |</p>
+<p>| bridge | `coolthor/hermes-bridge`，Rust，MIT License |</p>
+<p>| 連線技術 | iroh P2P，加密驗證；可 direct，打洞失敗時可退回 relay |</p>
+<p>| 安裝模式 | 讓 Hermes clone repo、跑 `install.sh`、顯示配對 QR，再由手機掃描 |</p>
+<h1>安裝流程</h1>
+<p>作者建議的低摩擦流程如下：</p>
+<ul>
+<li>先安裝並啟動 Hermes Agent。</li>
+<li>透過 TestFlight 安裝 Muninn：`<a href="https://testflight.apple.com/join/8mcRtXsm`。" target="_blank" rel="noopener">https://testflight.apple.com/join/8mcRtXsm`。</a></li>
+<li>對 Hermes 說：</li>
+</ul>
+<p>&gt; 把 <a href="https://github.com/coolthor/hermes-bridge" target="_blank" rel="noopener">https://github.com/coolthor/hermes-bridge</a> clone 到 ~/hermes-bridge，跑它的 install.sh，然後顯示配對 QR 讓我連手機。</p>
+<ul>
+<li>打開 Muninn，掃描 QR code，輸入手機端顯示的確認碼完成配對。</li>
+</ul>
+<p>`hermes-bridge` README 補充：installer 會 clone repo、下載對應平台的 bridge binary（無需先安裝 Rust）、安裝 `connect-phone` skill，並顯示 QR。日後可對 Hermes 說「連接手機」或 `connect my phone` 重新顯示 QR。</p>
+<h1>Muninn 目前支援能力</h1>
+<p>| 能力 | 意義 |</p>
+<p>|---|---|</p>
+<p>| 多 agent 切換 | 家中跑多個 Hermes / agent 時，可在手機端直接選擇 |</p>
+<p>| Session 可視化 | 手機上能看到對話 session；這是 Telegram bot 介面較難提供的完整 agent 視角 |</p>
+<p>| Cron job 可視化 | 能查看排程任務，適合監控自動化工作流 |</p>
+<p>| Kanban 可視化 | 可觀察任務看板狀態，如 Running / Blocked / Done |</p>
+<p>| allow / not allow | agent 要執行高風險操作前，手機端仍可核准或拒絕 |</p>
+<p>| 傳圖 / 傳檔 | 手機相簿與文件可直接送給 agent；模型需具備視覺能力才可理解圖片 |</p>
+<p>| 語音輸入 | 透過 Hermes 的語音轉文字能力，把手機語音送成文字任務 |</p>
+<p>| 收回媒體 | agent 生成或抓到的圖片、影片、音訊、文件可回傳手機預覽 |</p>
+<p>| 繁體中文介面 | 對台灣使用者與教學情境更友善 |</p>
+<h1>技術架構判讀</h1>
+<p>`hermes-bridge` 是一支跑在 Hermes 旁邊的 Rust 常駐程式，把本機 Hermes dashboard 經由 iroh 通道開放給已配對手機。README 描述它使用多個 iroh ALPN：</p>
+<p>| ALPN | 用途 |</p>
+<p>|---|---|</p>
+<p>| `hermes-bridge/0` | 透明轉送本機 Hermes dashboard WebSocket |</p>
+<p>| `hermes-bridge-upload/0` | 手機上傳圖片、語音或文件給 agent |</p>
+<p>| `hermes-bridge-download/0` | agent 回傳圖片、影片、音訊或文件給手機 |</p>
+<p>核心設計是「手機 ↔ 家中電腦」之間的 P2P 加密通道。iroh 會先透過公共 relay 協助兩端找到彼此，並嘗試 NAT traversal / hole punching；若網路環境支援（例如 5G IPv6），可升級為 direct 直連。若打洞失敗，仍可經 relay 通訊，但多一跳且可能較慢。</p>
+<h1>與 LINE / Telegram Bot 的差異</h1>
+<p>| 面向 | Muninn + iroh | LINE / Telegram Bot |</p>
+<p>|---|---|---|</p>
+<p>| 設定門檻 | 掃 QR 配對，不需 webhook / tunnel | 需 bot token、public URL、webhook 或 gateway 設定 |</p>
+<p>| 介面 | 為 Hermes 設計的原生 agent 介面 | 通訊軟體聊天室介面 |</p>
+<p>| 資訊可視化 | 可看到 session、cron、kanban、多 agent | 通常只看到訊息流 |</p>
+<p>| 路由 | 兩端 P2P，失敗時 relay | 訊息必經平台伺服器 |</p>
+<p>| 檔案與媒體 | 原生設計支援上傳與下載通道 | 依平台 adapter、檔案類型與 webhook 限制而定 |</p>
+<p>| 風險 | 配對手機等同取得 agent 操作權 | bot token / webhook / platform 權限風險 |</p>
+<h1>安全模型與風險</h1>
+<p>Muninn 的配對 QR 被設計為一次性「介紹信」，不是永久鑰匙。手機掃描後，仍需要使用者輸入確認碼，手機的 NodeId 才會被加入 bridge 白名單。陌生裝置即使拿到 QR，也因 NodeId 不同、未被核准而無法連入。</p>
+<p>但這裡的風險不可低估：配對一台手機，就等於讓該手機可以操作 Hermes；而 Hermes 具備工具、檔案與 shell 執行能力。因此只應配對自己的裝置，舊手機或不再使用的裝置要撤銷白名單。</p>
+<p>移除方式包括：</p>
+<ul>
+<li>在 Muninn app 右上角齒輪中解除配對，並通知電腦端移除白名單。</li>
+<li>在電腦端列出與撤銷裝置：`scripts/run-bridge.sh list` / `scripts/run-bridge.sh revoke`。</li>
+<li>若整個 bridge 不再使用，停止 bridge，刪除 `~/hermes-bridge` 與 `~/.hermes-bridge`。</li>
+</ul>
+<h1>對欒帥的實用判讀</h1>
+<h2>1. 這是 Hermes 行動入口的重要補位</h2>
+<p>欒帥目前已透過 LINE 與 Hermes 互動，但 LINE adapter 的限制包括 webhook、公網 URL、reply token、檔案型別判斷與慢回覆按鈕。Muninn 若穩定，會是更接近「個人 AI 助理 app」的體驗：尤其是 session、cron、kanban 可視化，對高自治 agent 工作流比一般聊天平台更自然。</p>
+<h2>2. 可作為 AI 課程或工作坊的進階展示</h2>
+<p>Muninn 很適合放在「AI Agent 從桌面走向隨身助理」單元：</p>
+<ul>
+<li>入門層：Hermes Desktop 本機對話。</li>
+<li>通訊層：LINE / Telegram bot 讓手機可發訊息。</li>
+<li>原生層：Muninn + iroh 讓手機成為 agent 控制面板。</li>
+</ul>
+<p>這能幫學員理解 agent 不只是聊天模型，而是具備權限、任務、排程與檔案通道的個人運算介面。</p>
+<h2>3. 目前仍屬早期測試，宜先做沙盒驗證</h2>
+<p>作者明確提到目前主要由他與 Claude 開發，功能仍在早期階段。建議正式採用前先以沙盒機測試：</p>
+<ul>
+<li>bridge 是否能在目前 macOS / Hermes 版本穩定安裝。</li>
+<li>配對、重連、撤銷是否可靠。</li>
+<li>在 5G、Wi-Fi、公司網路、NAT 環境下 direct / relay 的連線表現。</li>
+<li>圖片、文件、語音與大檔案回傳是否符合需求。</li>
+<li>allow / not allow 的危險操作核准是否能清楚呈現。</li>
+<li>若手機遺失，撤銷裝置與刪除金鑰流程是否足夠低摩擦。</li>
+</ul>
+<h1>可追蹤連結</h1>
+<ul>
+<li>官方文章：<a href="https://ai-muninn.com/zh-TW/blog/hermes-muninn-phone-bridge" target="_blank" rel="noopener">https://ai-muninn.com/zh-TW/blog/hermes-muninn-phone-bridge</a></li>
+<li>GitHub bridge：<a href="https://github.com/coolthor/hermes-bridge" target="_blank" rel="noopener">https://github.com/coolthor/hermes-bridge</a></li>
+<li>TestFlight：<a href="https://testflight.apple.com/join/8mcRtXsm" target="_blank" rel="noopener">https://testflight.apple.com/join/8mcRtXsm</a></li>
+<li>Facebook 貼文：<a href="https://www.facebook.com/groups/gaitech/posts/1714132776437597/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/posts/1714132776437597/</a></li>
+</ul>
+<h1>收錄判斷</h1>
+<p>值得列為「Hermes Agent 生態 / 行動端 agent 操作介面」高優先級追蹤項目。若 Muninn 後續補齊穩定版、Android 版本、權限細分、通知、背景同步與更完整的安全稽核，它可能成為 Hermes 類個人 agent 從桌面擴展到手機的關鍵入口。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-24 · https://www.facebook.com/groups/gaitech/posts/1714132776437597/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Hermes Agent</span><span class="tag">Muninn</span><span class="tag">iroh</span><span class="tag">P2P</span><span class="tag">iOS</span><span class="tag">Mobile Agent</span><span class="tag">TestFlight</span><span class="tag">Open Source</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/18Xbx66xGK/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/18Xbx66xGK/?mibextid=wwXIfr</a></p><p><a href="https://ai-muninn.com/zh-TW/blog/hermes-muninn-phone-bridge" target="_blank" rel="noopener">https://ai-muninn.com/zh-TW/blog/hermes-muninn-phone-bridge</a></p><p><a href="https://ai-muninn.com/zh-TW/blog/hermes-muninn-phone-bridge" target="_blank" rel="noopener">https://ai-muninn.com/zh-TW/blog/hermes-muninn-phone-bridge</a></p><p><a href="https://github.com/coolthor/hermes-bridge" target="_blank" rel="noopener">https://github.com/coolthor/hermes-bridge</a></p><p><a href="https://testflight.apple.com/join/8mcRtXsm" target="_blank" rel="noopener">https://testflight.apple.com/join/8mcRtXsm</a></p><p><a href="https://www.iroh.computer/" target="_blank" rel="noopener">https://www.iroh.computer/</a></p><p><a href="https://www.facebook.com/groups/gaitech/posts/1714132776437597/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/posts/1714132776437597/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
