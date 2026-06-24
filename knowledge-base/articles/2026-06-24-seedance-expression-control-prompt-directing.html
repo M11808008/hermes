@@ -1,0 +1,91 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Seedance 2.0 表情控制 Prompt｜用秒數節點寫出 AI 影片微表情表演</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Seedance 2.0 表情控制 Prompt｜用秒數節點寫出 AI 影片微表情表演</h1><h1>Seedance 2.0 表情控制 Prompt｜用秒數節點寫出 AI 影片微表情表演</h1>
+<p>來源是 Threads 上 @dojquadarts 分享的「AI 表情控制提示詞」。作者把一段 15 秒 AI 影片拆成 0–2、2–4、4–6、6–8、8–10、10–12、12–15 秒的情緒節點，逐段描述視線、頭部、嘴角、眼神、眉眼、呼吸與情緒收束。留言中作者回覆使用工具為「小雲雀 ai、seedance2」；本文以 Threads 可見文字與 ByteDance / BytePlus 官方 Seedance 2.0 資訊整理成可重用的影片導演 prompt 方法。</p>
+<h1>一句話摘要</h1>
+<p>這則貼文值得收錄的重點不是單純「AI 影片可以控制表情」，而是它示範了把演員表演拆成時間軸、動作、臉部細節與情緒弧線的 prompt 寫法；對課程短片、角色 demo、品牌劇情與 AI 影像教學都很有參考價值。</p>
+<h1>Threads 可擷取資訊</h1>
+<ul>
+<li>作者：墨皙MX/AI落地師（@dojquadarts）</li>
+<li>可見時間：1 天前；瀏覽約 33 萬次。</li>
+<li>主要主題：AI 表情控制提示詞分享。</li>
+<li>作者在留言中回覆使用模型 / 平台：「seedance2.0」、「小雲雀 ai，seedance2」。</li>
+<li>社群討論重點：AI 影片創作需要細膩文字敘述、劇本與導演能力；也有人指出實際畫面可能仍未完全遵守「不露齒」等細節。</li>
+</ul>
+<h1>原始 15 秒表情控制 Prompt 結構</h1>
+<h2>0–2 秒：含蓄起始</h2>
+<p>低頭垂眸，嘴角噙含蓄淡笑，不露齒，神態溫柔安靜。</p>
+<h2>2–4 秒：笑意收斂，注意力轉向</h2>
+<p>笑意緩緩收斂，嘴角歸平；雙眼、頭部慢慢抬起，視線轉向畫面右側，神情轉為認真留意。</p>
+<h2>4–6 秒：疑惑與擔憂浮現</h2>
+<p>持續望向右方，眼神添上淺淡疑惑與擔憂，雙眼微睜（幅度自然），嘴唇輕啟呈欲言又止狀，眉眼微收，不皺眉。</p>
+<h2>6–8 秒：情緒下沉</h2>
+<p>視線緩緩下沉，頭部微低，笑意盡數褪去，神情安靜失落，內斂壓抑情緒，不流淚、不哭泣。</p>
+<h2>8–10 秒：壓抑後的自嘲</h2>
+<p>低頭輕閔雙眼，平復心緒，嘴角浮現一抹藏起難過的淺淡自嘲式淺笑，呼吸自然，動作極輕。</p>
+<h2>10–12 秒：重新迎光</h2>
+<p>緩緩抬頭，眼眸重新迎向柔光，眼神漸亮卻依舊克制，臉部轉向前方 / 偏右，唇角帶一絲溫柔又委屈的淡意。</p>
+<h2>12–15 秒：凝視收尾</h2>
+<p>目視前方 / 畫面右側，眼神柔和微潤，唇瓣輕動似欲語還休，最終保持安靜凝視狀態，定格在溫柔清冷、略帶憂鬱的情緒中，結尾無黑屏、無轉場。</p>
+<h1>可重用的寫法拆解</h1>
+<h2>1. 先切時間軸，不要只寫情緒形容詞</h2>
+<p>這份 prompt 的有效之處在於它不是只說「憂鬱、溫柔、失落」，而是把每 2 秒的狀態拆開。AI 影片模型通常更容易跟隨具體時間節點，而不是抽象的一段感覺。</p>
+<p>可重用格式：</p>
+<ul>
+<li>0–2 秒：初始姿態與情緒基調。</li>
+<li>2–4 秒：第一個注意力轉折。</li>
+<li>4–6 秒：情緒變化開始被看見。</li>
+<li>6–8 秒：核心情緒下沉或爆發。</li>
+<li>8–10 秒：角色自我壓抑或反應。</li>
+<li>10–12 秒：情緒回收或重新轉向。</li>
+<li>12–15 秒：定格收尾，避免黑屏與突兀轉場。</li>
+</ul>
+<h2>2. 把臉部表演拆成可觀察部件</h2>
+<p>貼文中反覆使用「眼神、雙眼、頭部、視線、嘴角、嘴唇、眉眼、呼吸」等具體部件。這比單純寫「很難過」更像導演給演員的動作指令。</p>
+<p>可用欄位：</p>
+<ul>
+<li>視線：看前方、下沉、右移、重新迎光。</li>
+<li>頭部：低頭、慢慢抬起、微低、偏右。</li>
+<li>嘴部：含笑、不露齒、嘴角歸平、唇瓣輕動。</li>
+<li>眼部：垂眸、微睜、微潤、眼神漸亮。</li>
+<li>眉眼：微收、不皺眉、克制。</li>
+<li>呼吸 / 動作：自然、極輕、不要過度表演。</li>
+</ul>
+<h2>3. 同時寫正向要求與禁止事項</h2>
+<p>「不露齒、不皺眉、不流淚、不哭泣、無黑屏、無轉場」是重要限制。這類負面條件可以降低模型產生過度戲劇化畫面的機率，但仍需用實際出圖檢查，因為留言中也有人指出畫面可能仍違反部分細節。</p>
+<h2>4. 把 prompt 當成劇本與分鏡，而不是神奇咒語</h2>
+<p>這則貼文的啟示是：AI 影片生成越接近角色表演，就越需要文學、劇本、分鏡、演員調度與導演語言。對教學來說，可把它轉成「情緒弧線設計練習」，讓學生先寫時間軸，再用模型測試哪些描述最穩定。</p>
+<h1>與 Seedance 2.0 官方定位的關係</h1>
+<p>ByteDance Seed 官方頁面稱 Seedance 2.0 支援文字、圖片、音訊與影片等多模態參考，並強調 performance、lighting、shadow、camera movement 等導演級控制。BytePlus ModelArk 的 Dreamina / Seedance prompt guide 也把 prompt 寫作視為生成品質的重要環節。</p>
+<p>因此，這則 Threads prompt 可以視為一個「表演控制」案例：它把官方所說的 director-level control 落在臉部表演與情緒節奏上，而不是只控制鏡頭或燈光。</p>
+<h1>給欒帥的使用價值</h1>
+<h2>AI 課程示範</h2>
+<p>很適合拿來教「AI 影片不是按鈕生成，而是導演語言」。課堂可讓學員把同一段情緒改寫成三種版本：溫柔、壓抑、崩潰，觀察模型是否跟得上細節。</p>
+<h2>品牌角色短片</h2>
+<p>若未來要做 KOL 角色、課程引導人物、客服 avatar 或產品情境劇，可以用這種秒數節點控制表情與情緒，不必只依賴模型自行理解抽象角色設定。</p>
+<h2>Prompt 模板化</h2>
+<p>可以做成一個表情控制模板：</p>
+<ul>
+<li>角色身份與情境。</li>
+<li>起始姿態。</li>
+<li>逐秒情緒節點。</li>
+<li>臉部 / 眼神 / 嘴角 / 頭部 / 呼吸欄位。</li>
+<li>禁止事項。</li>
+<li>收尾畫面。</li>
+<li>生成後人工檢查清單。</li>
+</ul>
+<h1>建議檢查清單</h1>
+<ul>
+<li>每個時間節點是否只有一個主要情緒變化？</li>
+<li>是否把抽象情緒轉成可見的臉部與身體動作？</li>
+<li>是否指定視線方向與鏡頭收尾？</li>
+<li>是否有過度矛盾的指令，例如同時要求低頭又直視鏡頭？</li>
+<li>是否列出禁止事項，但不把限制寫得過多導致模型混亂？</li>
+<li>生成後是否逐秒檢查，不只看整體氛圍？</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文未登入 Threads，也沒有下載或逐格檢查原始影片，只保存公開可見文字、留言與 Open Graph metadata。Seedance 2.0 / 小雲雀 AI 的實際功能、額度、介面與 prompt 跟隨能力可能隨版本更新而改變；本文把該貼文視為「prompt 結構案例」，不是保證同樣文字一定會生成完全相同表情。</p>
+<h1>原始連結</h1>
+<ul>
+<li>Threads：<a href="https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk" target="_blank" rel="noopener">https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk</a></li>
+<li>ByteDance Seedance 2.0：<a href="https://seed.bytedance.com/en/seedance2_0" target="_blank" rel="noopener">https://seed.bytedance.com/en/seedance2_0</a></li>
+<li>BytePlus Seedance prompt guide：<a href="https://docs.byteplus.com/en/docs/ModelArk/2222480" target="_blank" rel="noopener">https://docs.byteplus.com/en/docs/ModelArk/2222480</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-24 · https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI 影片</span><span class="tag">Seedance 2.0</span><span class="tag">Prompt Engineering</span><span class="tag">表情控制</span><span class="tag">角色表演</span><span class="tag">內容製作</span><span class="tag">多媒體與內容</span><h3>原始連結</h3><p><a href="https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk" target="_blank" rel="noopener">https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk</a></p><p><a href="https://seed.bytedance.com/en/seedance2_0" target="_blank" rel="noopener">https://seed.bytedance.com/en/seedance2_0</a></p><p><a href="https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk" target="_blank" rel="noopener">https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk</a></p><p><a href="https://seed.bytedance.com/en/seedance2_0" target="_blank" rel="noopener">https://seed.bytedance.com/en/seedance2_0</a></p><p><a href="https://docs.byteplus.com/en/docs/ModelArk/2222480" target="_blank" rel="noopener">https://docs.byteplus.com/en/docs/ModelArk/2222480</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

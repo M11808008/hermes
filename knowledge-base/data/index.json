@@ -1,5 +1,71 @@
 [
   {
+    "title": "Codex 內建瀏覽器 × Excalidraw｜把手繪草稿變成可批量化的生圖工作流",
+    "date": "2026-06-24",
+    "source": "https://www.threads.com/@ekcheungai/post/DZ6gkialDRO",
+    "author": "ekcheungAI / OpenAI Developers / Excalidraw",
+    "type": "article",
+    "topics": [
+      "AI",
+      "OpenAI Codex",
+      "Codex App",
+      "Excalidraw",
+      "Computer Use",
+      "影像生成",
+      "工作流自動化",
+      "內容製作",
+      "開發與程式",
+      "多媒體與內容"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@ekcheungai/post/DZ6gkialDRO",
+      "https://developers.openai.com/codex/app/browser",
+      "https://www.threads.com/@ekcheungai/post/DZ6gkialDRO",
+      "https://developers.openai.com/codex/app/browser",
+      "https://developers.openai.com/codex/app/computer-use",
+      "https://developers.openai.com/codex/app",
+      "https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/utils/export"
+    ],
+    "excerpt": "這則 Threads 值得收錄的重點不是「Codex 也能生圖」而已，而是它把 Codex 從 coding agent 推向「可操作瀏覽器與視覺草稿的創意工作台」：人用 Excalidraw 快速表達構圖，Codex 負責理解、生成、批量化與後製，形成比單次生圖更可控的內容生產流程。",
+    "slug": "2026-06-24-codex-browser-excalidraw-image-workflow",
+    "html": "articles/2026-06-24-codex-browser-excalidraw-image-workflow.html",
+    "markdown": "articles/2026/06/2026-06-24-codex-browser-excalidraw-image-workflow.md"
+  },
+  {
+    "title": "Seedance 2.0 表情控制 Prompt｜用秒數節點寫出 AI 影片微表情表演",
+    "date": "2026-06-24",
+    "source": "https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk",
+    "author": "墨皙MX/AI落地師（dojquadarts） / ByteDance Seed",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI 影片",
+      "Seedance 2.0",
+      "Prompt Engineering",
+      "表情控制",
+      "角色表演",
+      "內容製作",
+      "多媒體與內容"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk",
+      "https://seed.bytedance.com/en/seedance2_0",
+      "https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk",
+      "https://seed.bytedance.com/en/seedance2_0",
+      "https://docs.byteplus.com/en/docs/ModelArk/2222480"
+    ],
+    "excerpt": "這則貼文值得收錄的重點不是單純「AI 影片可以控制表情」，而是它示範了把演員表演拆成時間軸、動作、臉部細節與情緒弧線的 prompt 寫法；對課程短片、角色 demo、品牌劇情與 AI 影像教學都很有參考價值。",
+    "slug": "2026-06-24-seedance-expression-control-prompt-directing",
+    "html": "articles/2026-06-24-seedance-expression-control-prompt-directing.html",
+    "markdown": "articles/2026/06/2026-06-24-seedance-expression-control-prompt-directing.md"
+  },
+  {
     "title": "Agnes AI｜免費 Omni-modal API 與 Hermes Agent 串接觀察",
     "date": "2026-06-23",
     "source": "https://www.koc.com.tw/archives/646877",

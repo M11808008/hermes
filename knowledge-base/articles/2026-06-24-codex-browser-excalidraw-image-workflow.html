@@ -1,0 +1,101 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Codex 內建瀏覽器 × Excalidraw｜把手繪草稿變成可批量化的生圖工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Codex 內建瀏覽器 × Excalidraw｜把手繪草稿變成可批量化的生圖工作流</h1><h1>Codex 內建瀏覽器 × Excalidraw｜把手繪草稿變成可批量化的生圖工作流</h1>
+<p>來源是 ekcheungAI 在 Threads 分享的 Codex 玩法：用 Codex 內建瀏覽器直接開 Excalidraw，手畫一個草稿後，讓 Codex 依草稿生成圖片，並可結合 Codex 的程式能力做批量化、統一風格與自動後製。留言中也討論了 token / 額度消耗與高品質生成會燒額度的問題。</p>
+<h1>一句話摘要</h1>
+<p>這則 Threads 值得收錄的重點不是「Codex 也能生圖」而已，而是它把 Codex 從 coding agent 推向「可操作瀏覽器與視覺草稿的創意工作台」：人用 Excalidraw 快速表達構圖，Codex 負責理解、生成、批量化與後製，形成比單次生圖更可控的內容生產流程。</p>
+<h1>Threads 可擷取資訊</h1>
+<ul>
+<li>作者：@ekcheungai</li>
+<li>可見時間：22 小時前；瀏覽約 1 萬次。</li>
+<li>主文重點：Codex 內建瀏覽器開 Excalidraw；草稿可轉成生成圖；可批量化、統一風格、自動後製。</li>
+<li>作者留言：會耗 token，但畫圖用量相較寫 code 小很多；高品質生成與改圖時仍會明顯消耗額度。</li>
+<li>擷取限制：未登入 Threads，本文以公開頁面文字、留言與官方文件補足脈絡；未取得作者實際 prompt、草稿檔或輸出圖片。</li>
+</ul>
+<h1>工作流拆解</h1>
+<h2>1. 人先畫「低成本視覺意圖」</h2>
+<p>Excalidraw 的價值是快：不需要精準設計，也不需要先開 Figma。只要把畫面關係畫清楚，例如：</p>
+<ul>
+<li>主角位置；</li>
+<li>背景與前景層次；</li>
+<li>物件比例；</li>
+<li>鏡頭方向；</li>
+<li>文案區塊；</li>
+<li>留白與焦點。</li>
+</ul>
+<p>這比純文字 prompt 更容易傳達構圖，也比精修設計稿更低成本。</p>
+<h2>2. Codex 用內建瀏覽器讀取草稿</h2>
+<p>OpenAI Codex app 官方文件有獨立的 In-app browser 與 Computer Use 文件。官方說明 Codex 可在 app 內使用瀏覽器處理本地開發伺服器、file-backed pages，也可透過 browser / computer-use 操作與檢查畫面。這使它不只適合寫程式，也可處理「畫面 → 程式 / 資產 / 報告」的任務。</p>
+<p>在這個案例中，Excalidraw 是人機共同的中介：人畫草圖，Codex 讀畫面，接著產生圖片 prompt、HTML / SVG / PNG 或後製腳本。</p>
+<h2>3. 生成圖片不是終點，批量化才是重點</h2>
+<p>貼文最有價值的一句是「再配上 Codex 的程式能力，批量化、統一風格、自動後製都行」。這代表流程可以升級成：</p>
+<ul>
+<li>用 Excalidraw 畫 1 張構圖模板。</li>
+<li>Codex 讀取模板，拆成構圖描述與設計規則。</li>
+<li>生成多組 prompt / 圖片版本。</li>
+<li>用程式統一尺寸、邊框、色調、浮水印、檔名與輸出格式。</li>
+<li>自動產出社群平台需要的比例，例如 1:1、4:5、9:16、16:9。</li>
+<li>建立人工審核清單，再批量輸出。</li>
+</ul>
+<p>這是「創意 prompt」到「內容生產線」的差別。</p>
+<h1>和 Excalidraw 官方能力的關係</h1>
+<p>Excalidraw 本身不只是白板。官方 developer docs 提供匯出工具，例如 exportToBlob、exportToSvg、exportToClipboard，可輸出 PNG / SVG / clipboard 等格式。若要把這套流程做穩，可以讓 Codex 或腳本讀 `.excalidraw` JSON，直接轉成 SVG / PNG，再交給影像模型或後製工具。</p>
+<p>對 Agent 工作流來說，推薦把 Excalidraw 當作「可機讀草稿」而不是單純截圖：</p>
+<ul>
+<li>`.excalidraw`：保存可編輯結構。</li>
+<li>SVG：保留向量構圖與文字。</li>
+<li>PNG：提供給需要影像輸入的模型。</li>
+<li>JSON：讓 Codex / Python 腳本解析物件位置、大小與標籤。</li>
+</ul>
+<h1>給欒帥的實作價值</h1>
+<h2>1. 課程圖卡與知識庫封面</h2>
+<p>可以先用 Excalidraw 畫出課程模組、Agent 架構、AI 工具流程，再讓 Codex 轉成統一視覺風格的圖卡。這比每張圖重新 prompt 更穩定。</p>
+<h2>2. AI 學習雷達文章配圖</h2>
+<p>對知識庫文章，可把「文章重點 → Excalidraw 草圖 → Codex 生成多版封面 / 示意圖」做成流程。草圖保存後，下次同類文章能沿用構圖語言。</p>
+<h2>3. 批量社群內容</h2>
+<p>若要把一篇文章拆成多張 Threads / Facebook / LINE 圖卡，可以要求 Codex 讀同一個草稿，批量產出不同標題、比例與 CTA，但保持統一視覺系統。</p>
+<h1>建議 Prompt 骨架</h1>
+<p>你是視覺生產 Agent。請先閱讀目前瀏覽器中的 Excalidraw 草稿，理解構圖與標籤，不要直接自由發揮。</p>
+<p>請輸出：</p>
+<ul>
+<li>草稿元素清單：主體、背景、文字區、動線、視覺焦點。</li>
+<li>生成圖片 prompt：保留構圖，但補足風格、材質、光線與色彩。</li>
+<li>版型規格：輸出比例、尺寸、留白、字級與安全邊界。</li>
+<li>批量變體：至少 3 個風格方向，但構圖一致。</li>
+<li>後製腳本需求：重新命名、裁切、壓縮、加 logo、輸出 WebP / PNG。</li>
+<li>人工審核清單：是否偏離草稿、文字是否可讀、品牌風格是否一致。</li>
+</ul>
+<h1>適合 / 不適合情境</h1>
+<h2>適合</h2>
+<ul>
+<li>需要大量同風格圖卡。</li>
+<li>需要先用草稿鎖定構圖。</li>
+<li>需要把 AI 生圖結果再用程式後製。</li>
+<li>需要保留可追溯的創作過程。</li>
+<li>教學、講義、社群圖卡、知識庫封面。</li>
+</ul>
+<h2>不適合</h2>
+<ul>
+<li>只想快速玩一次單張圖。</li>
+<li>對圖片精準商業授權與素材可用性要求很高，但沒有人工審查。</li>
+<li>需要極高畫質商業修圖，仍可能需要 Photoshop / Figma / 專業影像流程。</li>
+<li>額度緊張時，不宜大量反覆高品質改圖。</li>
+</ul>
+<h1>額度與成本注意</h1>
+<p>Threads 作者提醒：會耗 token，高品質生成和改圖會更快消耗額度。這點很重要。這類流程應避免讓 Codex 不斷試錯，建議採用「先草圖 → 先小樣 → 再批量」：</p>
+<ul>
+<li>先只生成 1 張低成本樣張。</li>
+<li>確認構圖與風格後再批量。</li>
+<li>後製交給本機腳本，不要每次都要求模型重畫。</li>
+<li>對多平台尺寸，優先用裁切 / 版型重排，不要每個尺寸都重新生圖。</li>
+</ul>
+<h1>與既有知識庫的關聯</h1>
+<p>這篇可與既有「Codex 簡報 PPT Skill｜先大綱、再單張試作」互補：簡報那篇聚焦大綱與樣張審核；本文聚焦「草圖作為視覺規格」與「Codex + 瀏覽器 + 程式後製」的創意生產線。兩者都支持同一個原則：不要一次交給 Agent 全自動亂生成，要先用中間產物鎖定方向。</p>
+<h1>判讀限制</h1>
+<p>本文沒有實際登入 Threads、沒有取得作者示範影片逐幀畫面，也沒有在本機重現 Codex app 內建瀏覽器操作 Excalidraw 的完整流程。OpenAI Codex app、Computer Use、瀏覽器能力與圖片生成額度會隨帳號、地區、版本與方案變動；本文保存的是公開社群案例與可實作工作流設計，實際上線前仍需本機測試。</p>
+<h1>原始連結</h1>
+<ul>
+<li>Threads：<a href="https://www.threads.com/@ekcheungai/post/DZ6gkialDRO" target="_blank" rel="noopener">https://www.threads.com/@ekcheungai/post/DZ6gkialDRO</a></li>
+<li>OpenAI Codex in-app browser：<a href="https://developers.openai.com/codex/app/browser" target="_blank" rel="noopener">https://developers.openai.com/codex/app/browser</a></li>
+<li>OpenAI Codex computer use：<a href="https://developers.openai.com/codex/app/computer-use" target="_blank" rel="noopener">https://developers.openai.com/codex/app/computer-use</a></li>
+<li>OpenAI Codex app overview：<a href="https://developers.openai.com/codex/app" target="_blank" rel="noopener">https://developers.openai.com/codex/app</a></li>
+<li>Excalidraw export utilities：<a href="https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/utils/export" target="_blank" rel="noopener">https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/utils/export</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-24 · https://www.threads.com/@ekcheungai/post/DZ6gkialDRO · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">OpenAI Codex</span><span class="tag">Codex App</span><span class="tag">Excalidraw</span><span class="tag">Computer Use</span><span class="tag">影像生成</span><span class="tag">工作流自動化</span><span class="tag">內容製作</span><span class="tag">開發與程式</span><span class="tag">多媒體與內容</span><h3>原始連結</h3><p><a href="https://www.threads.com/@ekcheungai/post/DZ6gkialDRO" target="_blank" rel="noopener">https://www.threads.com/@ekcheungai/post/DZ6gkialDRO</a></p><p><a href="https://developers.openai.com/codex/app/browser" target="_blank" rel="noopener">https://developers.openai.com/codex/app/browser</a></p><p><a href="https://www.threads.com/@ekcheungai/post/DZ6gkialDRO" target="_blank" rel="noopener">https://www.threads.com/@ekcheungai/post/DZ6gkialDRO</a></p><p><a href="https://developers.openai.com/codex/app/browser" target="_blank" rel="noopener">https://developers.openai.com/codex/app/browser</a></p><p><a href="https://developers.openai.com/codex/app/computer-use" target="_blank" rel="noopener">https://developers.openai.com/codex/app/computer-use</a></p><p><a href="https://developers.openai.com/codex/app" target="_blank" rel="noopener">https://developers.openai.com/codex/app</a></p><p><a href="https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/utils/export" target="_blank" rel="noopener">https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/utils/export</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
