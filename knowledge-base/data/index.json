@@ -1,5 +1,40 @@
 [
   {
+    "title": "Claude 使用六個段位｜從提示詞到 AI 操作員與工作團隊",
+    "date": "2026-06-24",
+    "source": "https://www.facebook.com/reel/2537155100069025",
+    "author": "超強系列SuperAwesome / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude",
+      "Anthropic",
+      "Prompt Engineering",
+      "Claude Projects",
+      "Claude Skills",
+      "AI Workflow",
+      "工作流自動化",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1LHNtD9mnc/",
+      "https://www.facebook.com/superawesome0820/videos/2537155100069025/",
+      "https://www.facebook.com/share/v/1LHNtD9mnc/",
+      "https://www.facebook.com/reel/2537155100069025",
+      "https://support.claude.com/en/articles/9517075-what-are-projects",
+      "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them",
+      "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+      "https://code.claude.com/docs/en/skills"
+    ],
+    "excerpt": "這則 Reel 值得收錄的重點是：高手使用 Claude 的差別不在於「提示詞更長」，而是逐步把 Claude 從回答問題的聊天框，升級成會先訪談、會自我檢查、能讀取專案資料、可操作工具、能打包成 skill / plan mode，最後變成需要人類批准與指揮的 AI 工作團隊。",
+    "slug": "2026-06-24-claude-six-levels-from-prompt-to-ai-operator",
+    "html": "articles/2026-06-24-claude-six-levels-from-prompt-to-ai-operator.html",
+    "markdown": "articles/2026/06/2026-06-24-claude-six-levels-from-prompt-to-ai-operator.md"
+  },
+  {
     "title": "Codex 內建瀏覽器 × Excalidraw｜把手繪草稿變成可批量化的生圖工作流",
     "date": "2026-06-24",
     "source": "https://www.threads.com/@ekcheungai/post/DZ6gkialDRO",
