@@ -1,0 +1,151 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OpenMontage｜開源 Agentic 影片生產系統，把 Claude / Cursor / Codex 變成影片工作室</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>OpenMontage｜開源 Agentic 影片生產系統，把 Claude / Cursor / Codex 變成影片工作室</h1><h1>OpenMontage｜開源 Agentic 影片生產系統，把 Claude / Cursor / Codex 變成影片工作室</h1>
+<p>开发者Hailey 在 X 分享 OpenMontage，稱它是「全球首個開源 Agentic 視頻生產系統」，可以把 Claude / Cursor / Copilot 變成完整 AI 影片工作室。這則貼文值得收錄，但不應只當作「一句話拍大片」的社群爆款文；真正有價值的是它把影片製作拆成 pipeline、skill、tool registry、checkpoint、cost governance 與 self-review 的 agent workflow 架構。</p>
+<h1>一句話摘要</h1>
+<p>OpenMontage 不是單一影片生成模型，而是一套讓 coding agent 按照 pipeline manifests 與 stage director skills 操作多種影音工具的「開源影片製作作業系統」。</p>
+<h1>來源快照</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| X 發現來源 | 开发者Hailey：OpenMontage 可把 Claude / Cursor / Copilot 變成 AI 影片工作室 |</p>
+<p>| 作者/Repo | `calesthio/OpenMontage` |</p>
+<p>| 官方定位 | World&#x27;s first open-source, agentic video production system |</p>
+<p>| GitHub 快照 | 2026-06-25：18,546 stars、2,127 forks、107 open issues |</p>
+<p>| 授權 | AGPL-3.0 |</p>
+<p>| 主要語言 | Python |</p>
+<p>| 官方列舉 | 12 pipelines、52 tools、500+ agent skills |</p>
+<p>| 適用 Agent | README 指稱 Claude Code、Cursor、Copilot、Windsurf、Codex 等可讀檔與執行程式的 coding assistant |</p>
+<h1>它解決什麼問題</h1>
+<p>一般 AI 影片工具常卡在三個層級：</p>
+<ul>
+<li>只會產生單段影片或圖片，不會做完整內容企劃。</li>
+<li>每個 provider API 都要手動串接，成本與品質不可控。</li>
+<li>生成影片缺少腳本、素材授權、字幕、剪輯、配音、合成、自審與交付流程。</li>
+</ul>
+<p>OpenMontage 的解法是把影片製作流程 agent 化：由 agent 讀取規則與 pipeline，選工具、估成本、產出素材、合成影片、跑品質檢查，並在關鍵節點要求人類批准。</p>
+<h1>核心架構</h1>
+<p>官方 `PROJECT_CONTEXT.md` 把 OpenMontage 定位為 instruction-driven / agent-first 架構：</p>
+<p>```text</p>
+<p>Agent reads pipeline manifest (YAML)</p>
+<p>→ reads stage director skill (Markdown)</p>
+<p>→ uses Python tools</p>
+<p>→ self-reviews with meta skill</p>
+<p>→ writes checkpoints</p>
+<p>→ asks human approval when needed</p>
+<p>```</p>
+<p>也就是說，Python 主要負責工具與 persistence；真正的 orchestration、creative decisions、review logic 與 checkpoint policy 則在 YAML manifests 與 Markdown skills 裡。</p>
+<h1>主要組件</h1>
+<p>| 組件 | 作用 |</p>
+<p>|---|---|</p>
+<p>| `AGENT_GUIDE.md` | agent 操作契約，規範 pipeline、工具、決策溝通與 blocker escalation |</p>
+<p>| `PROJECT_CONTEXT.md` | 架構總覽、source of truth、pipeline 與 tool conventions |</p>
+<p>| `pipeline_defs/*.yaml` | 每種影片製作流程的 pipeline manifest |</p>
+<p>| `skills/pipelines/&lt;pipeline&gt;/&lt;stage&gt;-director.md` | 每一階段的 director skill，教 agent 如何做該階段 |</p>
+<p>| `tools/tool_registry.py` | 讓 agent discovery 目前可用工具、provider、成本與支援範圍 |</p>
+<p>| `tools/cost_tracker.py` | 預估、保留、核銷影音生成成本 |</p>
+<p>| `schemas/artifacts/` | 對 brief、script、scene plan、asset manifest、render report 等 artifact 做 schema 約束 |</p>
+<p>| Remotion / HyperFrames / FFmpeg | 影片合成與 motion graphics runtime |</p>
+<h1>官方列出的 Pipeline</h1>
+<p>| Pipeline | 用途 |</p>
+<p>|---|---|</p>
+<p>| `talking-head` | 人像講解 / presenter |</p>
+<p>| `animated-explainer` | 動畫解說影片 |</p>
+<p>| `screen-demo` | 螢幕錄製與產品 demo |</p>
+<p>| `clip-factory` | 短影音批次切片 |</p>
+<p>| `podcast-repurpose` | Podcast 轉短內容 |</p>
+<p>| `cinematic` | 電影感剪輯 |</p>
+<p>| `animation` | animation-first pipeline |</p>
+<p>| `character-animation` | 本機 rigged character animation |</p>
+<p>| `hybrid` | 來源素材 + 補充生成素材 |</p>
+<p>| `avatar-spokesperson` | Avatar 主持人 / spokesperson |</p>
+<p>| `localization-dub` | 翻譯配音與 localization |</p>
+<p>| `documentary-montage` | 紀錄片式蒙太奇 |</p>
+<p>| `framework-smoke` | 測試 harness |</p>
+<h1>影片製作能力地圖</h1>
+<p>官方 README 的重點不是「一個 prompt 直接魔法生成」，而是多工具協作：</p>
+<p>| 能力 | 工具 / Provider |</p>
+<p>|---|---|</p>
+<p>| 免費 TTS | Piper TTS，本機離線 |</p>
+<p>| 免費/開放素材 | Archive.org、NASA、Wikimedia Commons |</p>
+<p>| Stock media | Pexels、Unsplash、Pixabay |</p>
+<p>| 圖像生成 | FLUX、Recraft、DALL-E、Imagen、Stable Diffusion 等 |</p>
+<p>| 影片生成 | Kling、Runway、Veo、MiniMax、WAN、Hunyuan、CogVideo、LTX 等 |</p>
+<p>| 配音/音效/音樂 | ElevenLabs、Google TTS、OpenAI TTS、Suno、Piper |</p>
+<p>| 合成 | Remotion、HyperFrames、FFmpeg |</p>
+<p>| 字幕 | built-in / word-level captions / WhisperX 相關路徑 |</p>
+<h1>低成本說法如何判讀</h1>
+<p>X 貼文提到幾毛錢成本，README 也列出案例：</p>
+<p>| 範例 | README 成本快照 | 可能原因 |</p>
+<p>|---|---:|---|</p>
+<p>| Ghibli-style Candyland animation | $0.15 | 使用 FLUX 圖像 + Remotion 動畫，而不是昂貴影片生成 API |</p>
+<p>| Pixar-style banana short | $1.33 | 使用 Kling v3 motion clips + Google narration + music + captions |</p>
+<p>| Product ad | $0.69 | OpenAI image/TTS + royalty-free music + subtitles + Remotion data visualizations |</p>
+<p>這些成本是「特定工具組合與短片案例」的結果，不代表所有影片都能幾毛錢完成。若使用 Runway、Veo、HeyGen、長片、多角色、精細 reference video remake，成本會明顯上升。</p>
+<h1>OpenMontage 的關鍵設計：不是工具多，而是 governance 多</h1>
+<p>OpenMontage 的 `AGENT_GUIDE.md` 特別強調：</p>
+<ul>
+<li>所有影片製作都必須經過 pipeline system。</li>
+<li>重大 provider / model / runtime 選擇前要告知並取得批准。</li>
+<li>paid 或 consequential generation call 前要說明工具、provider、model、理由、是 sample 還是 batch run。</li>
+<li>若 Remotion 與 HyperFrames 都可用，proposal 階段要同時呈現兩者選項，不能默默選預設。</li>
+<li>blocker 必須清楚說明：嘗試了什麼、失敗原因、屬於 auth / provider / tool bug / prompt quality 哪一類、可選路徑與推薦方案。</li>
+</ul>
+<p>這使它更像「可審計的 production agent」，不是單純把 API 串在一起。</p>
+<h1>對欒帥的價值</h1>
+<h2>1. 很適合做 AI 教學與課程素材 pipeline 範本</h2>
+<p>OpenMontage 的 pipeline 思維可直接轉成 AI 課程案例：</p>
+<p>```text</p>
+<p>主題 → research brief → script → scene plan → asset plan → narration → subtitles → composition → self-review → publish</p>
+<p>```</p>
+<p>這比單純教「輸入 prompt 生成影片」更能展現 AI agent 的實務價值。</p>
+<h2>2. 可作為 AI 學習雷達的「影音化輸出」候選</h2>
+<p>未來可以挑一篇 AI 學習雷達文章，測試是否能轉成：</p>
+<ul>
+<li>60 秒短影音摘要</li>
+<li>教學型 explainer</li>
+<li>課程開場影片</li>
+<li>product / workflow demo</li>
+<li>podcast / lecture repurpose clip</li>
+</ul>
+<h2>3. 對 Hermes / Codex / Claude Skills 有參考價值</h2>
+<p>OpenMontage 把 pipeline manifest、stage director skills、tool registry 與 artifact schema 拆得很清楚。這對欒帥自己的 Hermes skills / KB archival workflows 也有啟發：</p>
+<p>| OpenMontage 概念 | 可借鑑到欒帥系統 |</p>
+<p>|---|---|</p>
+<p>| pipeline manifest | AI 學習雷達歸檔流程標準化 |</p>
+<p>| stage director skill | 把「抽取、查重、補強、寫作、部署」拆成可維護技能 |</p>
+<p>| tool registry | 明確列出可用工具、成本、限制 |</p>
+<p>| checkpoint | 發布前驗證 raw GitHub / Pages / index markers |</p>
+<p>| decision log | 記錄為何選用某 canonical source 或是否合併 duplicate |</p>
+<h1>採用建議</h1>
+<h2>先做 sandbox，不要直接接主力內容生產</h2>
+<p>OpenMontage 是高活躍、依賴多 provider 的開源專案。建議：</p>
+<ul>
+<li>先 clone 到隔離測試目錄。</li>
+<li>只跑 `make setup` 與 tool discovery，不放入任何高權限 secrets。</li>
+<li>優先使用零 API key 路徑：Piper、Archive.org、NASA、Wikimedia、FFmpeg、Remotion。</li>
+<li>若要接 API key，先用低額度/可撤銷 key，並設定預算上限。</li>
+<li>先測 30–60 秒教育型 explainer，不直接做長片或商業素材。</li>
+<li>檢查 AGPL-3.0 授權對衍生服務、部署與商業使用的影響。</li>
+</ul>
+<h2>適合 / 不適合場景</h2>
+<p>| 適合 | 不適合 |</p>
+<p>|---|---|</p>
+<p>| 教學 demo、短影音 prototype、內容 pipeline 教材 | 立刻要求影視級穩定商用交付 |</p>
+<p>| 有 coding agent 能讀檔/跑 code 的使用者 | 只想用網頁 UI 一鍵出片的人 |</p>
+<p>| 願意做 provider 成本治理與品質檢查 | 不想管理 API key、FFmpeg、Node、Python 環境的人 |</p>
+<p>| 需要可審計、可擴充的 agent workflow | 只需要單一模型生成幾秒影片的人 |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>X 貼文是社群摘要，本文以 GitHub README、AGENT_GUIDE、PROJECT_CONTEXT、PROVIDERS 文件補強與校正。</li>
+<li>未在本機實際執行 OpenMontage；本文是架構與採用判讀，不是安裝成功報告。</li>
+<li>GitHub stars、forks、issues、tool 數、pipeline 數是 2026-06-25 快照，專案仍快速變動。</li>
+<li>「成本低至幾毛錢」只適用於 README 中特定短片與工具組合；實際成本取決於 provider、長度、解析度、重試次數、模型與素材策略。</li>
+<li>AGPL-3.0 對公開服務與商用整合有授權義務，正式採用前需檢查法律與部署邊界。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>X 原文：<a href="https://x.com/indiedevhailey/status/2069684466059202885" target="_blank" rel="noopener">https://x.com/indiedevhailey/status/2069684466059202885</a></li>
+<li>GitHub Repo：<a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage</a></li>
+<li>Agent Guide：<a href="https://github.com/calesthio/OpenMontage/blob/main/AGENT_GUIDE.md" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage/blob/main/AGENT_GUIDE.md</a></li>
+<li>Project Context：<a href="https://github.com/calesthio/OpenMontage/blob/main/PROJECT_CONTEXT.md" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage/blob/main/PROJECT_CONTEXT.md</a></li>
+<li>Provider Guide：<a href="https://github.com/calesthio/OpenMontage/blob/main/docs/PROVIDERS.md" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage/blob/main/docs/PROVIDERS.md</a></li>
+<li>OpenMontage YouTube：<a href="https://www.youtube.com/@OpenMontage" target="_blank" rel="noopener">https://www.youtube.com/@OpenMontage</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://x.com/indiedevhailey/status/2069684466059202885 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Agentic Video</span><span class="tag">Video Generation</span><span class="tag">Open Source</span><span class="tag">Claude Code</span><span class="tag">Cursor</span><span class="tag">Codex</span><span class="tag">Remotion</span><span class="tag">FFmpeg</span><span class="tag">Workflow Automation</span><h3>原始連結</h3><p><a href="https://x.com/indiedevhailey/status/2069684466059202885" target="_blank" rel="noopener">https://x.com/indiedevhailey/status/2069684466059202885</a></p><p><a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage</a></p><p><a href="https://x.com/indiedevhailey/status/2069684466059202885" target="_blank" rel="noopener">https://x.com/indiedevhailey/status/2069684466059202885</a></p><p><a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage</a></p><p><a href="https://github.com/calesthio/OpenMontage/blob/main/AGENT_GUIDE.md" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage/blob/main/AGENT_GUIDE.md</a></p><p><a href="https://github.com/calesthio/OpenMontage/blob/main/PROJECT_CONTEXT.md" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage/blob/main/PROJECT_CONTEXT.md</a></p><p><a href="https://github.com/calesthio/OpenMontage/blob/main/docs/PROVIDERS.md" target="_blank" rel="noopener">https://github.com/calesthio/OpenMontage/blob/main/docs/PROVIDERS.md</a></p><p><a href="https://www.youtube.com/@OpenMontage" target="_blank" rel="noopener">https://www.youtube.com/@OpenMontage</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -34,6 +34,43 @@
     "markdown": "articles/2026/06/2026-06-25-baoyu-agent-skills-project-symlink-governance.md"
   },
   {
+    "title": "OpenMontage｜開源 Agentic 影片生產系統，把 Claude / Cursor / Codex 變成影片工作室",
+    "date": "2026-06-25",
+    "source": "https://x.com/indiedevhailey/status/2069684466059202885",
+    "author": "开发者Hailey / calesthio / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Agentic Video",
+      "Video Generation",
+      "Open Source",
+      "Claude Code",
+      "Cursor",
+      "Codex",
+      "Remotion",
+      "FFmpeg",
+      "Workflow Automation"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/indiedevhailey/status/2069684466059202885",
+      "https://github.com/calesthio/OpenMontage",
+      "https://x.com/indiedevhailey/status/2069684466059202885",
+      "https://github.com/calesthio/OpenMontage",
+      "https://github.com/calesthio/OpenMontage/blob/main/AGENT_GUIDE.md",
+      "https://github.com/calesthio/OpenMontage/blob/main/PROJECT_CONTEXT.md",
+      "https://github.com/calesthio/OpenMontage/blob/main/docs/PROVIDERS.md",
+      "https://www.youtube.com/@OpenMontage"
+    ],
+    "excerpt": "OpenMontage 不是單一影片生成模型，而是一套讓 coding agent 按照 pipeline manifests 與 stage director skills 操作多種影音工具的「開源影片製作作業系統」。",
+    "slug": "2026-06-25-openmontage-agentic-video-production-system",
+    "html": "articles/2026-06-25-openmontage-agentic-video-production-system.html",
+    "markdown": "articles/2026/06/2026-06-25-openmontage-agentic-video-production-system.md"
+  },
+  {
     "title": "Claude 使用六個段位｜從提示詞到 AI 操作員與工作團隊",
     "date": "2026-06-24",
     "source": "https://www.facebook.com/reel/2537155100069025",
@@ -4914,6 +4951,7 @@
       "https://github.com/OpenBMB/VoxCPM",
       "https://www.threads.com/@resen168/post/DZCUrjTkZL1",
       "https://www.threads.com/@govin999999/post/DZxnk_JGMAg",
+      "https://x.com/axichuhai/status/2069624744488432080",
       "https://github.com/OpenBMB/VoxCPM",
       "https://voxcpm.com",
       "https://voxcpm.readthedocs.io/en/latest/",
