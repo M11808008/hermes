@@ -1,0 +1,116 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GitHub 奶爸級教學｜AI 編程者必備的註冊、2FA、Git 與協作工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>GitHub 奶爸級教學｜AI 編程者必備的註冊、2FA、Git 與協作工作流</h1><h1>GitHub 奶爸級教學｜AI 編程者必備的註冊、2FA、Git 與協作工作流</h1>
+<p>老王霸 AI Lab 的 X Article 標題是：「一文超詳細講透 GitHub：註冊，雙重認證，搜尋，建倉庫，issue，本地 git，部署，fork，star，pull，push」。貼文定位很清楚：如果你是 AI 編程愛好者，GitHub 是必修基礎設施。</p>
+<p>X Article 需要登入才能完整閱讀，本文依公開預覽與 GitHub 官方文件補強，整理成 AI 編程工作流角度的 GitHub 入門地圖。</p>
+<h1>一句話摘要</h1>
+<p>對 AI 編程者來說，GitHub 不只是放程式碼的網站，而是讓 Codex、Claude Code、Cursor、Hermes 這類 agent 能安全修改、審查、部署與回滾成果的工程協作平台。</p>
+<h1>為什麼 AI 編程者必須懂 GitHub</h1>
+<p>| 能力 | 對 AI 工作流的意義 |</p>
+<p>|---|---|</p>
+<p>| Repository | 讓 agent 有明確專案邊界與檔案上下文 |</p>
+<p>| Git commit | 每一步改動可追蹤、可回滾 |</p>
+<p>| Branch | 讓 AI 修改在隔離分支發生，不污染主線 |</p>
+<p>| Pull Request | 將 AI 改動整理成可審查的 diff |</p>
+<p>| Issues | 把需求、bug、任務拆成 agent 可執行的單元 |</p>
+<p>| Actions / Pages | 自動測試、部署網站與產物 |</p>
+<p>| Fork / Star | 學習開源專案與保存資源 |</p>
+<p>| 2FA / Token | 保護帳號與自動化權限 |</p>
+<h1>建議學習順序</h1>
+<h2>1. 註冊與雙重認證</h2>
+<p>先完成 GitHub 帳號、Email 驗證與 2FA。AI 編程者尤其要注意：</p>
+<ul>
+<li>不要把 GitHub token 貼進聊天視窗。</li>
+<li>PAT 應只給必要 scope。</li>
+<li>若用 Codex / Claude Code / Hermes 操作 repo，先確認操作範圍與分支。</li>
+<li>重要 repo 建議開啟 branch protection。</li>
+</ul>
+<h2>2. 搜尋與看懂開源專案</h2>
+<p>GitHub 搜尋不是只找 repo 名稱，也能找：</p>
+<ul>
+<li>README 關鍵字</li>
+<li>specific file path</li>
+<li>language / stars / updated filters</li>
+<li>issues / pull requests</li>
+<li>topics</li>
+</ul>
+<p>AI 學習雷達在歸檔 GitHub 專案時，也應同步查看 README、license、stars、forks、issues、last updated，而不是只看社群貼文說法。</p>
+<h2>3. 建立 repository</h2>
+<p>AI 編程專案建 repo 時，最少應有：</p>
+<ul>
+<li>README.md：專案目的、安裝、啟動、測試</li>
+<li>.gitignore：排除 node_modules、venv、.env、build cache</li>
+<li>LICENSE：若要開源需明確授權</li>
+<li>AGENTS.md / CLAUDE.md：給 agent 的專案規則</li>
+<li>tests / CI：讓 agent 的改動可以驗證</li>
+</ul>
+<h2>4. Issues：把需求拆成任務</h2>
+<p>Issue 是把模糊需求變成可交付任務的地方。好的 issue 應包含：</p>
+<ul>
+<li>背景與目標</li>
+<li>範圍：哪些檔案可動、哪些不能動</li>
+<li>驗收條件</li>
+<li>測試方式</li>
+<li>截圖或重現步驟</li>
+<li>風險與限制</li>
+</ul>
+<p>這也是 AI agent 最容易成功的任務格式。</p>
+<h2>5. 本機 Git：clone、branch、commit、pull、push</h2>
+<p>AI 編程者至少要掌握：</p>
+<p>```bash</p>
+<p>git clone &lt;repo-url&gt;</p>
+<p>git checkout -b feature/name</p>
+<p>git status</p>
+<p>git diff</p>
+<p>git add .</p>
+<p>git commit -m &quot;feat: concise message&quot;</p>
+<p>git pull --rebase</p>
+<p>git push -u origin feature/name</p>
+<p>```</p>
+<p>重點不是背命令，而是知道每一步代表什麼狀態：工作區、暫存區、commit history、remote branch。</p>
+<h2>6. Fork / Pull Request</h2>
+<p>Fork 適合學習、貢獻或改造別人的開源專案。PR 則是把改動送回原 repo 的審查單位。</p>
+<p>AI agent 產生的 PR 建議附上：</p>
+<ul>
+<li>改了什麼</li>
+<li>為什麼改</li>
+<li>如何測試</li>
+<li>截圖或輸出</li>
+<li>已知限制</li>
+<li>是否影響相容性</li>
+</ul>
+<h2>7. 部署：GitHub Pages / Actions</h2>
+<p>對知識庫、課程頁、靜態網站而言，GitHub Pages 是低摩擦部署方式。AI 學習雷達目前也用 GitHub Pages 公開部署。</p>
+<p>基本流程是：</p>
+<ul>
+<li>產生靜態 HTML。</li>
+<li>commit 到 repo。</li>
+<li>push 到 main 或指定分支。</li>
+<li>等 Pages 發布。</li>
+<li>用 HTTP 200 驗證頁面。</li>
+</ul>
+<h1>對欒帥的實作建議</h1>
+<p>| 需求 | 建議 |</p>
+<p>|---|---|</p>
+<p>| 教 AI 初學者 | 先教 GitHub repository / commit / PR，再教 Codex 或 Claude Code |</p>
+<p>| 維護知識庫 | 所有公開文章都經 Git commit，可查歷史 |</p>
+<p>| 保護私密資料 | 報名名單、個資、token 不進公開 repo |</p>
+<p>| 做課程網站 | Pages + 靜態 HTML，低成本可持續 |</p>
+<p>| 讓 agent 協作 | 每個 repo 放 AGENTS.md，定義測試、部署、命名與禁區 |</p>
+<h1>常見錯誤</h1>
+<ul>
+<li>把 `.env`、API key、token commit 到 GitHub。</li>
+<li>讓 AI 直接在 main 分支大改，沒有 branch / PR。</li>
+<li>只看 AI 說「完成」，不看 git diff 與測試輸出。</li>
+<li>沒有 README，導致 agent 每次都要重新理解專案。</li>
+<li>沒有 issue / task 拆解，一次丟過大的需求給 agent。</li>
+<li>Pages 部署後沒做 200 OK 驗證。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>老王霸 AI Lab X：<a href="https://x.com/laowangbabababa/status/2061384966227849698" target="_blank" rel="noopener">https://x.com/laowangbabababa/status/2061384966227849698</a></li>
+<li>GitHub Docs：<a href="https://docs.github.com/" target="_blank" rel="noopener">https://docs.github.com/</a></li>
+<li>GitHub 2FA：<a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa" target="_blank" rel="noopener">https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa</a></li>
+<li>Create repository：<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository" target="_blank" rel="noopener">https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository</a></li>
+<li>Issues：<a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues" target="_blank" rel="noopener">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</a></li>
+<li>About Git：<a href="https://docs.github.com/en/get-started/using-git/about-git" target="_blank" rel="noopener">https://docs.github.com/en/get-started/using-git/about-git</a></li>
+<li>GitHub Pages：<a href="https://docs.github.com/en/pages" target="_blank" rel="noopener">https://docs.github.com/en/pages</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://x.com/laowangbabababa/status/2061384966227849698 · article</div><h3>標籤</h3><span class="tag">GitHub</span><span class="tag">Git</span><span class="tag">AI 編程</span><span class="tag">Vibe Coding</span><span class="tag">Developer Workflow</span><span class="tag">Version Control</span><span class="tag">Pull Request</span><span class="tag">Deployment</span><h3>原始連結</h3><p><a href="https://x.com/laowangbabababa/status/2061384966227849698" target="_blank" rel="noopener">https://x.com/laowangbabababa/status/2061384966227849698</a></p><p><a href="https://docs.github.com/" target="_blank" rel="noopener">https://docs.github.com/</a></p><p><a href="https://x.com/laowangbabababa/status/2061384966227849698" target="_blank" rel="noopener">https://x.com/laowangbabababa/status/2061384966227849698</a></p><p><a href="https://docs.github.com/" target="_blank" rel="noopener">https://docs.github.com/</a></p><p><a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa" target="_blank" rel="noopener">https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa</a></p><p><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository" target="_blank" rel="noopener">https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository</a></p><p><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues" target="_blank" rel="noopener">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</a></p><p><a href="https://docs.github.com/en/get-started/using-git/about-git" target="_blank" rel="noopener">https://docs.github.com/en/get-started/using-git/about-git</a></p><p><a href="https://docs.github.com/en/pages" target="_blank" rel="noopener">https://docs.github.com/en/pages</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -96,6 +96,7 @@
       "https://x.com/grgerwcwetwet/status/2069750112281350652",
       "https://x.com/gengdaJ/status/2069425112651272493",
       "https://x.com/JackQi82772/status/2069599178926522741",
+      "https://x.com/wangchangfu88/status/2069761892177125726",
       "https://github.com/bozhouDev/codex-orange-book",
       "https://vink567.github.io/codex-orange-book/",
       "https://raw.githubusercontent.com/bozhouDev/codex-orange-book/main/Codex%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf"
@@ -104,6 +105,41 @@
     "slug": "2026-06-25-codex-chinese-resource-map-orange-book-creator-skills",
     "html": "articles/2026-06-25-codex-chinese-resource-map-orange-book-creator-skills.html",
     "markdown": "articles/2026/06/2026-06-25-codex-chinese-resource-map-orange-book-creator-skills.md"
+  },
+  {
+    "title": "GitHub 奶爸級教學｜AI 編程者必備的註冊、2FA、Git 與協作工作流",
+    "date": "2026-06-25",
+    "source": "https://x.com/laowangbabababa/status/2061384966227849698",
+    "author": "老王霸 AI Lab / GitHub Docs",
+    "type": "article",
+    "topics": [
+      "GitHub",
+      "Git",
+      "AI 編程",
+      "Vibe Coding",
+      "Developer Workflow",
+      "Version Control",
+      "Pull Request",
+      "Deployment"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/laowangbabababa/status/2061384966227849698",
+      "https://docs.github.com/",
+      "https://x.com/laowangbabababa/status/2061384966227849698",
+      "https://docs.github.com/",
+      "https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa",
+      "https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository",
+      "https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues",
+      "https://docs.github.com/en/get-started/using-git/about-git",
+      "https://docs.github.com/en/pages"
+    ],
+    "excerpt": "對 AI 編程者來說，GitHub 不只是放程式碼的網站，而是讓 Codex、Claude Code、Cursor、Hermes 這類 agent 能安全修改、審查、部署與回滾成果的工程協作平台。",
+    "slug": "2026-06-25-github-beginner-guide-for-ai-coding-workflow",
+    "html": "articles/2026-06-25-github-beginner-guide-for-ai-coding-workflow.html",
+    "markdown": "articles/2026/06/2026-06-25-github-beginner-guide-for-ai-coding-workflow.md"
   },
   {
     "title": "Hermes /learn 模式｜從任意資料提煉可重用 Skill 的 Agent 工作流",
