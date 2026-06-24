@@ -171,6 +171,43 @@
     "markdown": "articles/2026/06/2026-06-24-seedance-expression-control-prompt-directing.md"
   },
   {
+    "title": "孔老師 AI 研習社｜Codex / Claude 10 個高頻 Agent Skills 清單與使用判讀",
+    "date": "2026-06-24",
+    "source": "https://youtu.be/e-9zHHzGM3k?si=Fp1ig_CKMi9myZhy",
+    "author": "孔老師AI研習社 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Agent Skills",
+      "Codex",
+      "Claude Code",
+      "Claude Skills",
+      "OpenAI Codex",
+      "Workflow Automation",
+      "Prompt Engineering",
+      "Knowledge Work"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://youtu.be/e-9zHHzGM3k?si=Fp1ig_CKMi9myZhy",
+      "https://www.youtube.com/watch?v=e-9zHHzGM3k",
+      "https://www.youtube.com/watch?v=e-9zHHzGM3k",
+      "https://drive.google.com/drive/folders/1hHLXTRvbvjGjavG_ycOvSqDqpxzp9JHE?usp=sharing",
+      "https://developers.openai.com/codex/skills",
+      "https://github.com/openai/skills",
+      "https://code.claude.com/docs/en/skills",
+      "https://support.claude.com/en/articles/12512198-how-to-create-custom-skills",
+      "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview"
+    ],
+    "excerpt": "這支影片值得收錄的重點不是「一次裝 10 個技能」，而是提出一組可覆蓋 agent 日常工作流的 skill portfolio：技能搜尋、搜尋增強、研究解釋、資訊圖表、前端設計、人格/風格蒸餾、截圖除錯與 token 壓縮。",
+    "slug": "2026-06-24-teacher-kong-top-ten-agent-skills-codex-claude",
+    "html": "articles/2026-06-24-teacher-kong-top-ten-agent-skills-codex-claude.html",
+    "markdown": "articles/2026/06/2026-06-24-teacher-kong-top-ten-agent-skills-codex-claude.md"
+  },
+  {
     "title": "Agnes AI｜免費 Omni-modal API 與 Hermes Agent 串接觀察",
     "date": "2026-06-23",
     "source": "https://www.koc.com.tw/archives/646877",

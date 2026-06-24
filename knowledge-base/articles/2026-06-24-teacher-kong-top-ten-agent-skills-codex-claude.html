@@ -1,0 +1,103 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>孔老師 AI 研習社｜Codex / Claude 10 個高頻 Agent Skills 清單與使用判讀</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>孔老師 AI 研習社｜Codex / Claude 10 個高頻 Agent Skills 清單與使用判讀</h1><h1>孔老師 AI 研習社｜Codex / Claude 10 個高頻 Agent Skills 清單與使用判讀</h1>
+<p>孔老師 AI 研習社發布影片《別再亂裝 Skills 了！我試用了 100 多個，真正離不開的只有這 10 個！》，主題是如何用少量高頻 Skills 放大 Codex 與 Claude 的工作能力。影片字幕已關閉，本文依據 YouTube oEmbed / yt-dlp metadata、影片描述章節、公開 Google Drive 技能包清單，以及 OpenAI / Anthropic 官方 Skills 文件整理。</p>
+<h1>一句話摘要</h1>
+<p>這支影片值得收錄的重點不是「一次裝 10 個技能」，而是提出一組可覆蓋 agent 日常工作流的 skill portfolio：技能搜尋、搜尋增強、研究解釋、資訊圖表、前端設計、人格/風格蒸餾、截圖除錯與 token 壓縮。</p>
+<h1>影片資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 影片 | 別再亂裝Skills了！我試用了100多個，真正離不開的只有這10個！ |</p>
+<p>| 頻道 | 孔老師AI研習社 |</p>
+<p>| 影片 ID | `e-9zHHzGM3k` |</p>
+<p>| 上架日期 | 2026-06-18 |</p>
+<p>| 長度 | 16 分 11 秒 |</p>
+<p>| 觀看數快照 | 約 16,630 |</p>
+<p>| 按讚數快照 | 約 661 |</p>
+<p>| 技能包來源 | Google Drive 公開資料夾 |</p>
+<p>| 字幕狀態 | YouTube transcript disabled，本文非逐字稿摘要 |</p>
+<h1>影片章節與 10 個 Skills</h1>
+<p>| 時間 | Skill / 主題 | 可能用途 |</p>
+<p>|---|---|---|</p>
+<p>| 00:00 | 引言 | 說明為什麼不要亂裝大量 skills |</p>
+<p>| 01:18 | Skills 特點 | 說明 skills 作為可重複調用工作流的價值 |</p>
+<p>| 03:35 | skill-creator | 用自然語言或示範建立新 skill |</p>
+<p>| 04:28 | find-skills | 搜尋、挑選或定位合適 skills |</p>
+<p>| 05:53 | smart-search | 強化搜尋與資料蒐集流程 |</p>
+<p>| 07:47 | infographic-builder | 產生資訊圖表 / 視覺化摘要 |</p>
+<p>| 08:39 | deep-research-explainer | 深度研究與主題解釋 |</p>
+<p>| 09:40 | caveman | 壓縮語句、省 token 的極簡模式 |</p>
+<p>| 10:14 | canvas-design / youtube-thumbnail-beautifier | 縮圖、美術與版面優化 |</p>
+<p>| 11:12 | persona-forge | 人格、語氣、品牌聲線蒸餾 |</p>
+<p>| 12:29 | frontend-design | 高質感前端設計與頁面生成 |</p>
+<p>| 13:32 | error-screenshot-helper | 從截圖判讀錯誤並協助除錯 |</p>
+<p>| 14:39 | 總結 | 強調精選常用技能勝過盲目堆疊 |</p>
+<p>&gt; 註：影片標題說 10 個真正離不開的 skills；章節中列出 10 個主要技能主題，其中 `canvas-design` 在公開資料夾中以 `youtube-thumbnail-beautifier.zip` 類似命名出現，可能是縮圖設計/美化相關技能包。</p>
+<h1>公開技能包清單</h1>
+<p>影片描述附上的 Google Drive 公開資料夾可見以下檔案：</p>
+<p>| 檔案 | 大小快照 | 判讀 |</p>
+<p>|---|---:|---|</p>
+<p>| `caveman.skill` | 2 KB | 省 token / 極簡表達模式 |</p>
+<p>| `deep-research-explainer.skill` | 4 KB | 深度研究與解釋型輸出 |</p>
+<p>| `error-screenshot-helper.skill` | 2 KB | 截圖錯誤判讀與除錯 |</p>
+<p>| `find-skills.skill` | 2 KB | 技能搜尋與選擇 |</p>
+<p>| `frontend-design-skill.zip` | 7 KB | 前端設計工作流 |</p>
+<p>| `infographic-builder.skill` | 27 KB | 資訊圖表生成，檔案最大，可能含模板/資源 |</p>
+<p>| `persona-forge.zip` | 14 KB | 人格與語氣蒸餾 |</p>
+<p>| `smart-search.zip` | 2 KB | 搜尋增強 |</p>
+<p>| `youtube-thumbnail-beautifier.zip` | 6 KB | YouTube 縮圖美化 / canvas design 類工作流 |</p>
+<h1>官方 Skills 概念對照</h1>
+<p>OpenAI Codex 與 Anthropic Claude 都已把 Skills 視為重要的 agent 擴充方式。官方文件的共同概念是：skill 通常是一個資料夾，內含 `SKILL.md` 或 `skill.md`，以 YAML frontmatter 描述名稱與觸發描述，再用 Markdown 寫入工作步驟；可附帶 scripts、references、assets 等輔助檔案。</p>
+<p>| 平台 | 官方重點 |</p>
+<p>|---|---|</p>
+<p>| OpenAI Codex Skills | Skills 是 agent 可發現與使用的任務包；OpenAI 提供 skills catalog 與 skill-creator，Codex 可把示範流程轉為可重用 skill |</p>
+<p>| Claude Code Skills | 可在 Claude Code 中建立、管理、分享 skills；也可透過 Claude API 或 claude.ai settings 使用 |</p>
+<p>| Agent Skills 通用趨勢 | `SKILL.md` + YAML frontmatter + Markdown 指令，正在成為跨 agent 的可攜工作流包裝形式 |</p>
+<h1>對欒帥的實用判讀</h1>
+<h2>1. 不要把 Skills 當外掛市集亂裝，要當「作業流程庫」治理</h2>
+<p>影片標題的「別再亂裝」很重要。Skills 的核心價值不是數量，而是能否穩定觸發、可審查、可修改、可驗證。對欒帥來說，建議把 skills 分成四層：</p>
+<p>| 層級 | 代表技能 | 採用策略 |</p>
+<p>|---|---|---|</p>
+<p>| 基礎治理 | skill-creator、find-skills | 保留，用於建立與搜尋技能 |</p>
+<p>| 資訊工作 | smart-search、deep-research-explainer | 可作為研究/課程/知識庫整理基礎 |</p>
+<p>| 表達輸出 | infographic-builder、frontend-design、youtube-thumbnail-beautifier | 適合課程、簡報、網站與社群素材 |</p>
+<p>| 個人化與除錯 | persona-forge、error-screenshot-helper、caveman | 視需求導入；需檢查指令品質與安全性 |</p>
+<h2>2. 對 AI 學習雷達最有價值的三個方向</h2>
+<p>### smart-search + deep-research-explainer</p>
+<p>可對應到「社群連結 → 官方來源查證 → 知識庫文章」流程。若技能品質足夠，可讓 agent 更穩定地補齊來源、避免薄弱摘要。</p>
+<p>### infographic-builder + frontend-design</p>
+<p>可支援欒帥偏好的高質感輸出，尤其是把 AI 學習雷達文章轉成課程頁、簡報頁、資訊圖表或 workshop 素材。</p>
+<p>### persona-forge</p>
+<p>可用來沉澱欒帥的品牌語氣、課程語氣與內容風格，避免每次重新提示「專業、優雅、繁中、高質感」。但這類 skill 最需要審查，避免塞入過度僵硬或不合時宜的語氣規則。</p>
+<h2>3. 建議先做沙盒試裝，不要直接放進主力 agent</h2>
+<p>這些技能包來自第三方 Google Drive，應先視為「可讀可學的範例」，不要直接在主力 Codex / Claude / Hermes 環境全量安裝。建議流程：</p>
+<ul>
+<li>下載到臨時資料夾。</li>
+<li>解壓後檢查 `SKILL.md` / `skill.md`、scripts、assets。</li>
+<li>確認沒有要求讀取 secrets、上傳私人資料、執行危險 shell 指令。</li>
+<li>先挑 1–2 個低風險技能，例如 `caveman`、`find-skills` 測試。</li>
+<li>對每個技能建立「適用 / 不適用 / 觸發語 / 驗證方式」。</li>
+<li>真正好用再改寫成欒帥自有版本，放入可維護的 skills 目錄。</li>
+</ul>
+<h1>可轉成欒帥自有 Skill 的候選</h1>
+<p>| 候選 | 為什麼值得改寫成自有版 |</p>
+<p>|---|---|</p>
+<p>| AI 學習雷達 archival skill | 已有穩定流程：抽取社群/影片/文章 → 查重 → 官方來源補強 → Markdown → rebuild/deploy |</p>
+<p>| 課程頁生成 skill | 可把 AI 工具、工作坊、教學大綱轉成高質感 landing page |</p>
+<p>| 圖表化摘要 skill | 可把文章變成資訊圖、課堂 handout 或 LINE 可讀圖卡 |</p>
+<p>| 錯誤截圖判讀 skill | 可改善 LINE 截圖支援與排錯流程 |</p>
+<p>| 品牌語氣 skill | 固化繁中、專業、優雅、Luarn-Pin 命名等穩定偏好 |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>YouTube transcript 已關閉，本文未使用逐字稿；內容基於影片 metadata、描述章節、Google Drive 檔案清單與官方 Skills 文件。</li>
+<li>未實際下載與執行第三方 skills，因此不保證每個技能包的安全性、品質或相容性。</li>
+<li>Google Drive 檔案與 YouTube 觀看數、按讚數都是 2026-06-24 的快照，後續可能變動。</li>
+<li>若要正式導入，需逐一審查 skill 內容與 scripts，尤其是任何可執行檔或 shell / Python 腳本。</li>
+</ul>
+<h1>可追蹤連結</h1>
+<ul>
+<li>YouTube 影片：<a href="https://www.youtube.com/watch?v=e-9zHHzGM3k" target="_blank" rel="noopener">https://www.youtube.com/watch?v=e-9zHHzGM3k</a></li>
+<li>技能包 Google Drive：<a href="https://drive.google.com/drive/folders/1hHLXTRvbvjGjavG_ycOvSqDqpxzp9JHE?usp=sharing" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1hHLXTRvbvjGjavG_ycOvSqDqpxzp9JHE?usp=sharing</a></li>
+<li>OpenAI Codex Skills：<a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></li>
+<li>OpenAI Skills Catalog：<a href="https://github.com/openai/skills" target="_blank" rel="noopener">https://github.com/openai/skills</a></li>
+<li>Claude Code Skills：<a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></li>
+<li>Claude Skill 建立說明：<a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills" target="_blank" rel="noopener">https://support.claude.com/en/articles/12512198-how-to-create-custom-skills</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-24 · https://youtu.be/e-9zHHzGM3k?si=Fp1ig_CKMi9myZhy · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Agent Skills</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Claude Skills</span><span class="tag">OpenAI Codex</span><span class="tag">Workflow Automation</span><span class="tag">Prompt Engineering</span><span class="tag">Knowledge Work</span><h3>原始連結</h3><p><a href="https://youtu.be/e-9zHHzGM3k?si=Fp1ig_CKMi9myZhy" target="_blank" rel="noopener">https://youtu.be/e-9zHHzGM3k?si=Fp1ig_CKMi9myZhy</a></p><p><a href="https://www.youtube.com/watch?v=e-9zHHzGM3k" target="_blank" rel="noopener">https://www.youtube.com/watch?v=e-9zHHzGM3k</a></p><p><a href="https://www.youtube.com/watch?v=e-9zHHzGM3k" target="_blank" rel="noopener">https://www.youtube.com/watch?v=e-9zHHzGM3k</a></p><p><a href="https://drive.google.com/drive/folders/1hHLXTRvbvjGjavG_ycOvSqDqpxzp9JHE?usp=sharing" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1hHLXTRvbvjGjavG_ycOvSqDqpxzp9JHE?usp=sharing</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://github.com/openai/skills" target="_blank" rel="noopener">https://github.com/openai/skills</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills" target="_blank" rel="noopener">https://support.claude.com/en/articles/12512198-how-to-create-custom-skills</a></p><p><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
