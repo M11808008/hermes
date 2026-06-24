@@ -72,6 +72,102 @@
     "markdown": "articles/2026/06/2026-06-25-claude-full-course-build-automate-workflow-map.md"
   },
   {
+    "title": "Codex 中文學習資源地圖｜橙皮書、創作者 Skills 與社群閱讀路徑",
+    "date": "2026-06-25",
+    "source": "https://x.com/grgerwcwetwet/status/2069750112281350652",
+    "author": "周覽資源分享 / 逸塵 / 川野 / bozhouDev / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "OpenAI Codex",
+      "Codex",
+      "Agent Skills",
+      "Vibe Coding",
+      "中文教程",
+      "AI Agent",
+      "Workflow Automation"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/grgerwcwetwet/status/2069750112281350652",
+      "https://github.com/bozhouDev/codex-orange-book",
+      "https://x.com/grgerwcwetwet/status/2069750112281350652",
+      "https://x.com/gengdaJ/status/2069425112651272493",
+      "https://x.com/JackQi82772/status/2069599178926522741",
+      "https://github.com/bozhouDev/codex-orange-book",
+      "https://vink567.github.io/codex-orange-book/",
+      "https://raw.githubusercontent.com/bozhouDev/codex-orange-book/main/Codex%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf"
+    ],
+    "excerpt": "《Codex 橙皮書》適合當入門與系統化教材；逸塵的長串貼文適合當實戰案例索引；川野的創作者 Skills 則適合把 Codex 用在選題、調研、寫作、去 AI 味、封面、資訊圖與 HTML 發布等內容生產線。",
+    "slug": "2026-06-25-codex-chinese-resource-map-orange-book-creator-skills",
+    "html": "articles/2026-06-25-codex-chinese-resource-map-orange-book-creator-skills.html",
+    "markdown": "articles/2026/06/2026-06-25-codex-chinese-resource-map-orange-book-creator-skills.md"
+  },
+  {
+    "title": "Hermes /learn 模式｜從任意資料提煉可重用 Skill 的 Agent 工作流",
+    "date": "2026-06-25",
+    "source": "https://x.com/dracovibecoding/status/2069671865518633088",
+    "author": "draco / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Hermes Agent",
+      "Agent Skills",
+      "Skill Authoring",
+      "Knowledge Management",
+      "Workflow Automation",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/dracovibecoding/status/2069671865518633088",
+      "https://hermes-agent.nousresearch.com/docs",
+      "https://x.com/dracovibecoding/status/2069671865518633088",
+      "https://hermes-agent.nousresearch.com/docs",
+      "https://github.com/NousResearch/hermes-agent"
+    ],
+    "excerpt": "Hermes Skill 的價值不是「記住一段聊天」，而是把成功的流程、工具命令、驗證步驟、常見陷阱與安全邊界封裝成下一次可直接使用的操作手冊。",
+    "slug": "2026-06-25-hermes-learn-mode-skill-extraction-workflow",
+    "html": "articles/2026-06-25-hermes-learn-mode-skill-extraction-workflow.html",
+    "markdown": "articles/2026/06/2026-06-25-hermes-learn-mode-skill-extraction-workflow.md"
+  },
+  {
+    "title": "Karpathy LLM Wiki｜用 Obsidian 與 Claude Code 建立可累積的 AI 第二大腦",
+    "date": "2026-06-25",
+    "source": "https://x.com/textocriativo/status/2069777875184599409",
+    "author": "Rafael Estrela / Andrej Karpathy / Ar9av",
+    "type": "article",
+    "topics": [
+      "AI",
+      "LLM Wiki",
+      "Obsidian",
+      "Claude Code",
+      "Second Brain",
+      "Personal Knowledge Base",
+      "AI Agent",
+      "Knowledge Management"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/textocriativo/status/2069777875184599409",
+      "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+      "https://x.com/textocriativo/status/2069777875184599409",
+      "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+      "https://github.com/Ar9av/obsidian-wiki",
+      "https://github.com/ekadetov/llm-wiki"
+    ],
+    "excerpt": "LLM Wiki 的核心是：raw sources 保留原始資料、wiki pages 存放 AI 編輯後的知識條目、CLAUDE.md / AGENTS.md 定義維護規則，讓個人知識不再停留在一次性聊天，而能長期累積。",
+    "slug": "2026-06-25-karpathy-llm-wiki-obsidian-claude-code-second-brain",
+    "html": "articles/2026-06-25-karpathy-llm-wiki-obsidian-claude-code-second-brain.html",
+    "markdown": "articles/2026/06/2026-06-25-karpathy-llm-wiki-obsidian-claude-code-second-brain.md"
+  },
+  {
     "title": "OpenMontage｜開源 Agentic 影片生產系統，把 Claude / Cursor / Codex 變成影片工作室",
     "date": "2026-06-25",
     "source": "https://x.com/indiedevhailey/status/2069684466059202885",

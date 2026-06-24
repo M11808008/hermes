@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Karpathy LLM Wiki｜用 Obsidian 與 Claude Code 建立可累積的 AI 第二大腦</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Karpathy LLM Wiki｜用 Obsidian 與 Claude Code 建立可累積的 AI 第二大腦</h1><h1>Karpathy LLM Wiki｜用 Obsidian 與 Claude Code 建立可累積的 AI 第二大腦</h1>
+<p>Rafael Estrela 的 X 貼文用葡萄牙文整理了 Andrej Karpathy 的 LLM Wiki 想法：不要只把 AI 當成寫程式工具，而是把 Claude Code 這類 coding agent 連到一個資料夾，讓它閱讀文章、逐字稿、PDF、筆記，整理成一套可查詢、可交叉連結、可持續更新的第二大腦。</p>
+<p>這與傳統 RAG 不同：不是每次查詢都把資料切 chunk 丟進向量庫，而是先讓 LLM 把知識「編譯」成維基頁面。之後查詢時，agent 先讀 index 與相關條目，再回答問題。</p>
+<h1>一句話摘要</h1>
+<p>LLM Wiki 的核心是：raw sources 保留原始資料、wiki pages 存放 AI 編輯後的知識條目、CLAUDE.md / AGENTS.md 定義維護規則，讓個人知識不再停留在一次性聊天，而能長期累積。</p>
+<h1>架構快照</h1>
+<p>| 層級 | 角色 | 說明 |</p>
+<p>|---|---|---|</p>
+<p>| raw / sources | 原始資料層 | 放文章、PDF、逐字稿、書摘、網頁、截圖說明；原則上不讓 LLM 改動 |</p>
+<p>| wiki | 編譯知識層 | LLM 產生主題頁、人物頁、概念頁、摘要、索引、交叉連結 |</p>
+<p>| schema | 治理規則層 | 用 CLAUDE.md / AGENTS.md 定義命名、引用、更新、矛盾標記、查詢流程 |</p>
+<p>| agent | 維護者 | Claude Code、Codex、Hermes、Cursor 等可讀檔與改檔的 agent |</p>
+<p>| Obsidian | 人類介面 | 讓使用者用圖譜、wikilink、搜尋與筆記介面瀏覽知識 |</p>
+<h1>X 貼文整理的操作流程</h1>
+<p>Rafael Estrela 貼文給出的流程大意是：</p>
+<ul>
+<li>安裝 Obsidian，建立一個 Vault。</li>
+<li>用 Claude Code 開啟這個 Vault 或資料夾。</li>
+<li>放入 Karpathy 的 LLM Wiki 設定檔／wiki 範式。</li>
+<li>讓 Claude 建立三個結構：原始資料資料夾、wiki 頁面資料夾、管理規則檔。</li>
+<li>把文章、PDF、逐字稿、筆記等資料放到原始資料夾。</li>
+<li>對 Claude 說「分析並整理這些內容」。</li>
+<li>之後即可針對已存資料提問，並讓系統維持連結與可搜尋性。</li>
+</ul>
+<h1>開源實作：Ar9av/obsidian-wiki</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Repo | `Ar9av/obsidian-wiki` |</p>
+<p>| 描述 | Framework for AI agents to build and maintain a digital brain through Obsidian wiki using Karpathy&#x27;s LLM Wiki pattern |</p>
+<p>| GitHub | <a href="https://github.com/Ar9av/obsidian-wiki" target="_blank" rel="noopener">https://github.com/Ar9av/obsidian-wiki</a> |</p>
+<p>| stars 快照 | 約 2,433 |</p>
+<p>| forks 快照 | 約 239 |</p>
+<p>| license | MIT |</p>
+<p>| 安裝 | `pip install obsidian-wiki`，再執行 `obsidian-wiki setup --vault /path/to/your/digital/brain` |</p>
+<p>| 支援 agent | README 提到 Claude Code、Cursor、Codex、Gemini、Hermes、Pi 等 |</p>
+<p>Ar9av 的實作把 LLM Wiki 包裝成技能與設定工具：指定 Obsidian vault 後，它會把 wiki skills 安裝到多種 AI agent，讓使用者可以在 agent 裡說「set up my wiki」，再由 agent 依照規則建立或維護知識庫。</p>
+<h1>另一個實作：ekadetov/llm-wiki</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Repo | `ekadetov/llm-wiki` |</p>
+<p>| 描述 | Claude Code plugin for persistent, compounding knowledge bases in Obsidian |</p>
+<p>| GitHub | <a href="https://github.com/ekadetov/llm-wiki" target="_blank" rel="noopener">https://github.com/ekadetov/llm-wiki</a> |</p>
+<p>| stars 快照 | 約 90 |</p>
+<p>| license | MIT |</p>
+<p>| 指令 | `/llm-wiki:wiki init`、`ingest`、`compile`、`query`、`lint` |</p>
+<p>這個 repo 更偏 Claude Code plugin。它把流程拆成初始化、來源匯入、編譯 wiki、查詢與 lint 檢查，適合需要明確命令式流程的使用者。</p>
+<h1>與既有 n8n 版 LLM Wiki 的差異</h1>
+<p>AI 學習雷達已收錄「n8n 版 LLM Wiki｜用 Google Docs / Sheets 實作 Karpathy 預編譯知識庫」。本篇的差異是：</p>
+<p>| 面向 | n8n / Google Docs 版 | Obsidian / Claude Code 版 |</p>
+<p>|---|---|---|</p>
+<p>| 目標使用者 | 低程式門檻、自動化平台使用者 | 會用本機資料夾、Markdown、coding agent 的知識工作者 |</p>
+<p>| 儲存格式 | Google Docs / Sheets | Markdown + Obsidian vault |</p>
+<p>| Agent 角色 | n8n workflow orchestrates LLM | Claude Code / Codex / Hermes 直接讀寫 vault |</p>
+<p>| 可攜性 | 綁 Google 文件與 n8n 節點 | 純文字 Markdown，可放 Git、Dropbox、iCloud、NAS |</p>
+<p>| 治理方式 | 工作流節點與表格索引 | CLAUDE.md / AGENTS.md / wiki schema |</p>
+<h1>為什麼這對欒帥重要</h1>
+<ul>
+<li>**AI 學習雷達可以變成 raw source 層**：外部連結、文章、PDF、影片逐字稿都先進 raw。</li>
+<li>**公開知識庫是 wiki 層**：整理過的 Markdown 文章就是可讀、可部署、可搜尋的編譯知識。</li>
+<li>**Hermes / Codex / Claude Code 是維護 agent**：負責查重、補來源、更新 metadata、重建索引、部署驗證。</li>
+<li>**Obsidian 可作為私有深度筆記層**：不公開的課程規劃、名單、講義草稿可留在本機 vault。</li>
+<li>**它避免每次從零開始問 AI**：重複概念先編譯成頁面，後續 agent 讀既有脈絡即可。</li>
+</ul>
+<h1>導入建議</h1>
+<p>| 階段 | 做法 |</p>
+<p>|---|---|</p>
+<p>| 1. 建資料夾規則 | raw、articles/wiki、assets、private、CLAUDE.md / AGENTS.md |</p>
+<p>| 2. 定義 metadata | title、source、date、tags、importance、summary、canonical-url |</p>
+<p>| 3. 建查重規則 | 同主題優先更新 canonical article，不重複開新檔 |</p>
+<p>| 4. 建驗證規則 | 外部連結、GitHub metadata、部署 200 OK、敏感資訊遮蔽 |</p>
+<p>| 5. 建輸出規則 | 公開知識庫、私密 Obsidian、課程講義、社群貼文各自不同格式 |</p>
+<h1>注意事項</h1>
+<ul>
+<li>LLM Wiki 不是免審稿工具；agent 會整理知識，但引用、事實與矛盾仍需抽查。</li>
+<li>raw sources 應保留原樣，避免 LLM 改壞原始證據。</li>
+<li>若含個資、報名名單、客戶資料，不應放到公開部署資料夾。</li>
+<li>Obsidian vault 若同步到雲端，需確認權限與備份策略。</li>
+<li>GitHub stars / forks 是 2026-06-25 快照，會持續變動。</li>
+</ul>
+<h1>相關連結</h1>
+<ul>
+<li>Rafael Estrela X：<a href="https://x.com/textocriativo/status/2069777875184599409" target="_blank" rel="noopener">https://x.com/textocriativo/status/2069777875184599409</a></li>
+<li>Karpathy LLM Wiki gist：<a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</a></li>
+<li>Ar9av/obsidian-wiki：<a href="https://github.com/Ar9av/obsidian-wiki" target="_blank" rel="noopener">https://github.com/Ar9av/obsidian-wiki</a></li>
+<li>ekadetov/llm-wiki：<a href="https://github.com/ekadetov/llm-wiki" target="_blank" rel="noopener">https://github.com/ekadetov/llm-wiki</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://x.com/textocriativo/status/2069777875184599409 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">LLM Wiki</span><span class="tag">Obsidian</span><span class="tag">Claude Code</span><span class="tag">Second Brain</span><span class="tag">Personal Knowledge Base</span><span class="tag">AI Agent</span><span class="tag">Knowledge Management</span><h3>原始連結</h3><p><a href="https://x.com/textocriativo/status/2069777875184599409" target="_blank" rel="noopener">https://x.com/textocriativo/status/2069777875184599409</a></p><p><a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</a></p><p><a href="https://x.com/textocriativo/status/2069777875184599409" target="_blank" rel="noopener">https://x.com/textocriativo/status/2069777875184599409</a></p><p><a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</a></p><p><a href="https://github.com/Ar9av/obsidian-wiki" target="_blank" rel="noopener">https://github.com/Ar9av/obsidian-wiki</a></p><p><a href="https://github.com/ekadetov/llm-wiki" target="_blank" rel="noopener">https://github.com/ekadetov/llm-wiki</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
