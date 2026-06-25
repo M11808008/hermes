@@ -1157,6 +1157,40 @@
     "markdown": "articles/2026/06/2026-06-21-hybride-pageindex-rag-local-private-kb.md"
   },
   {
+    "title": "羅達 Rhoda｜Prompt 沒過時：它是 Agent Skills 與 SOP 化工作流的地基",
+    "date": "2026-06-21",
+    "source": "https://www.facebook.com/share/p/1GedKHAugL/",
+    "author": "羅達 Rhoda / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI新手村",
+      "Prompt Engineering",
+      "Agent Skills",
+      "Claude Code",
+      "SOP",
+      "生產力",
+      "FinTech"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1GedKHAugL/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid04DEHP8Drfjoq47M2Y88TKEHxXtmLdLedmUy1LuswYYSsoRTiQKT3CPp1wt7FDvkFl",
+      "https://www.facebook.com/share/p/1GedKHAugL/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid04DEHP8Drfjoq47M2Y88TKEHxXtmLdLedmUy1LuswYYSsoRTiQKT3CPp1wt7FDvkFl",
+      "https://www.anthropic.com/news/skills",
+      "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "https://code.claude.com/docs/en/skills",
+      "https://developers.openai.com/codex/skills"
+    ],
+    "excerpt": "Prompt 是第一次把工作交代清楚；Skill 是同一件事重複多次後，把清楚交代沉澱成可複用 SOP。",
+    "slug": "2026-06-21-rhoda-prompt-foundation-before-agent-skills",
+    "html": "articles/2026-06-21-rhoda-prompt-foundation-before-agent-skills.html",
+    "markdown": "articles/2026/06/2026-06-21-rhoda-prompt-foundation-before-agent-skills.md"
+  },
+  {
     "title": "Studio0808 LiveCaption｜本機即時雙語字幕 Chrome 外掛與無障礙學習工作流",
     "date": "2026-06-21",
     "source": "https://www.facebook.com/share/p/1MEYtWxx3k/",

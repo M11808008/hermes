@@ -1,0 +1,105 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>羅達 Rhoda｜Prompt 沒過時：它是 Agent Skills 與 SOP 化工作流的地基</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>羅達 Rhoda｜Prompt 沒過時：它是 Agent Skills 與 SOP 化工作流的地基</h1><h1>羅達 Rhoda｜Prompt 沒過時：它是 Agent Skills 與 SOP 化工作流的地基</h1>
+<p>羅達 Rhoda 在「AI 新手村」五篇連載第一天，回應一個很常見的焦慮：如果 Anthropic 工程師開始談 Agent Skills、SOP、技能包，是不是代表 prompt engineering 已經過時？</p>
+<p>貼文的核心答案很清楚：Prompt 沒有過時。Prompt 是把事情講清楚的入口；Skill 則是把反覆講清楚的事情制度化。兩者不是新舊替代，而是「臨場交代」與「寫成 SOP」的關係。</p>
+<h1>一句話摘要</h1>
+<p>Prompt 是第一次把工作交代清楚；Skill 是同一件事重複多次後，把清楚交代沉澱成可複用 SOP。</p>
+<h1>貼文中的關鍵比喻</h1>
+<p>| 概念 | 貼文比喻 | 實務意義 |</p>
+<p>|---|---|---|</p>
+<p>| Prompt | 第一次口頭交代新人怎麼做 | 你要能把目標、背景、限制、輸出格式說清楚 |</p>
+<p>| Skill / SOP | 同一件事講到第三次，乾脆寫成 SOP | 把重複任務固定成可被 AI 反覆執行的流程 |</p>
+<p>| System | 多個 SOP 能互相接力 | 從單點提示詞進化成穩定工作流 |</p>
+<p>貼文強調：沒有人會因為公司有 SOP，就說「會交代事情」過時。AI 也是一樣。你得先會 prompt，才寫得出好 skill。</p>
+<h1>正確順序</h1>
+<p>```text</p>
+<ul>
+<li>先把話講清楚（prompt）</li>
+<li>同一類任務做熟後，發現一直重複</li>
+<li>把它寫成 SOP / skill，讓 AI 以後照做</li>
+</ul>
+<p>```</p>
+<p>這也呼應 Anthropic 官方 Prompt Engineering 文件：prompt 仍是一種需要反覆測試、調整、驗證的工程實務。Agent Skills 則是把程序性知識封裝起來，讓 agent 在需要時取用。</p>
+<h1>兩個可直接使用的 Prompt</h1>
+<h2>1. 找出值得寫成 SOP 的重複工作</h2>
+<p>```text</p>
+<p>回顧我這週問你的所有問題，哪些是我反覆在做、格式類似的任務？列成清單，並建議哪幾個最適合寫成固定的 SOP。</p>
+<p>```</p>
+<p>適用情境：</p>
+<ul>
+<li>想盤點自己每天重複請 AI 做的事。</li>
+<li>想找出最值得做成 skill 的流程。</li>
+<li>想把零散 prompt 變成個人工作系統。</li>
+</ul>
+<h2>2. 讓每次交代都更精準的萬用開頭</h2>
+<p>```text</p>
+<p>在回答前，先用一句話重述我的目標、列出你需要但我還沒給的資訊，再開始。</p>
+<p>```</p>
+<p>適用情境：</p>
+<ul>
+<li>任務容易被 AI 誤解。</li>
+<li>需求還不完整，但想先讓 AI 幫忙釐清。</li>
+<li>想訓練自己把目標與限制講清楚。</li>
+</ul>
+<h1>對欒帥的實作轉化</h1>
+<p>這篇很適合放在 AI 學習雷達的「從 Prompt 到 Skills」系列開頭。它提醒我們：不要急著把所有事情都包成 skill，先找出「值得 SOP 化」的任務。</p>
+<h2>欒帥版 Skill 化判斷表</h2>
+<p>| 問題 | 如果答案是 yes | 下一步 |</p>
+<p>|---|---|---|</p>
+<p>| 這件事一週至少做一次嗎？ | 值得記錄 | 保存 prompt 與輸出範例 |</p>
+<p>| 每次輸出格式都差不多嗎？ | 適合 SOP 化 | 固定欄位、標題、驗證規則 |</p>
+<p>| 每次都會犯類似錯誤嗎？ | 需要規則回寫 | 把錯誤與修正寫進 skill |</p>
+<p>| 需要特定檔案、模板或腳本嗎？ | 不只是 prompt | 建立 skill 資料夾與 supporting files |</p>
+<p>| 可以拆成 3–5 個步驟嗎？ | 適合 pipeline | 後續可串成多 skill 工作流 |</p>
+<h1>AI 學習雷達可用範例</h1>
+<p>把「歸檔一篇 AI 文章」這件事拆開看：</p>
+<p>```text</p>
+<p>第一次：請 AI 幫我摘要這篇文章。</p>
+<p>第二次：請 AI 幫我擷取作者、日期、重點與應用場景。</p>
+<p>第三次：發現每次都要補官方文件、判讀限制、欄位 frontmatter。</p>
+<p>第四次：把它寫成 AI 學習雷達歸檔 SOP / skill。</p>
+<p>```</p>
+<p>也就是說，目前知識庫歸檔流程本身就是這篇貼文的實例：</p>
+<ul>
+<li>一開始是單次 prompt。</li>
+<li>後來變成固定欄位與寫作格式。</li>
+<li>再變成來源擷取、官方補強、Markdown 寫入、索引重建、GitHub Pages 驗證。</li>
+<li>最後沉澱成可重複使用的知識庫工作流。</li>
+</ul>
+<h1>對教學的價值</h1>
+<p>如果要教 AI 新手，這篇比直接教「怎麼寫 Claude Skill」更適合作為第一堂。原因是大多數新手真正缺的不是 skill 語法，而是：</p>
+<ul>
+<li>不知道如何說清楚目標。</li>
+<li>不知道如何定義輸出格式。</li>
+<li>不知道如何把重複任務整理出來。</li>
+<li>不知道錯誤修正應該被保存，而不是每次重講。</li>
+</ul>
+<p>可以設計一個 30 分鐘練習：</p>
+<ul>
+<li>寫下本週重複請 AI 做的 5 件事。</li>
+<li>選出最常重複的一件。</li>
+<li>寫出第一版 prompt。</li>
+<li>加上「重述目標與缺漏資訊」的萬用開頭。</li>
+<li>請 AI 判斷這件事是否值得做成 SOP。</li>
+</ul>
+<h1>與官方文件的對照</h1>
+<ul>
+<li>Anthropic Agent Skills：把程序性知識封裝給 agent 使用，並可包含指令、模板、腳本等資源。</li>
+<li>Anthropic Prompt Engineering：prompt 仍需像工程一樣反覆測試與迭代。</li>
+<li>Claude Code Skills：Skill 可用 SKILL.md 與支援檔案描述何時啟用、怎麼執行、需要哪些素材。</li>
+<li>OpenAI Codex Skills：讓 coding agent 以較低上下文成本選用特定任務知識。</li>
+</ul>
+<p>這些文件共同指向同一件事：Skill 不是取代 prompt，而是把成熟 prompt 和流程封裝成可重複使用的任務知識。</p>
+<h1>判讀限制</h1>
+<ul>
+<li>貼文提到 Anthropic 工程師演講與官方文件；本文已用可公開存取的 Anthropic / Claude / Codex 文件補強，但未逐字驗證演講內容。</li>
+<li>貼文中的「2025 年 10 月官方正式發表」依其社群貼文脈絡保留；實際產品名稱、開放範圍與文件路徑可能隨平台更新而變動。</li>
+<li>本文重點是工作流與教學轉化，不將其解讀為某一平台功能的完整技術規格。</li>
+</ul>
+<h1>來源</h1>
+<ul>
+<li>Facebook 原始貼文：羅達 Rhoda，AI 新手村連載第一天「Prompt 沒過時，還是要把地基打好」。</li>
+<li>Anthropic：Introducing Agent Skills。</li>
+<li>Anthropic Docs：Prompt Engineering overview。</li>
+<li>Claude Code Docs：Extend Claude with skills。</li>
+<li>OpenAI Developers：Codex Agent Skills。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-21 · https://www.facebook.com/share/p/1GedKHAugL/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI新手村</span><span class="tag">Prompt Engineering</span><span class="tag">Agent Skills</span><span class="tag">Claude Code</span><span class="tag">SOP</span><span class="tag">生產力</span><span class="tag">FinTech</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1GedKHAugL/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1GedKHAugL/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid04DEHP8Drfjoq47M2Y88TKEHxXtmLdLedmUy1LuswYYSsoRTiQKT3CPp1wt7FDvkFl" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid04DEHP8Drfjoq47M2Y88TKEHxXtmLdLedmUy1LuswYYSsoRTiQKT3CPp1wt7FDvkFl</a></p><p><a href="https://www.facebook.com/share/p/1GedKHAugL/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1GedKHAugL/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid04DEHP8Drfjoq47M2Y88TKEHxXtmLdLedmUy1LuswYYSsoRTiQKT3CPp1wt7FDvkFl" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid04DEHP8Drfjoq47M2Y88TKEHxXtmLdLedmUy1LuswYYSsoRTiQKT3CPp1wt7FDvkFl</a></p><p><a href="https://www.anthropic.com/news/skills" target="_blank" rel="noopener">https://www.anthropic.com/news/skills</a></p><p><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
