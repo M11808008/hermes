@@ -1,0 +1,117 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>羅達 Rhoda｜Skill 其實分三層：描述、指令與工具才是完整 SOP</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>羅達 Rhoda｜Skill 其實分三層：描述、指令與工具才是完整 SOP</h1><h1>羅達 Rhoda｜Skill 其實分三層：描述、指令與工具才是完整 SOP</h1>
+<p>羅達 Rhoda 在「AI 新手村」五篇連載第二天，延續第一篇「Prompt 沒過時，它是 skill 的地基」的觀點，進一步提醒：很多人把 prompt 升級成 skill 時，只做到第二層，於是每次仍然要重貼格式、重講分類規則、重補資料範本。</p>
+<p>這篇的核心價值在於把「Skill」拆成三個可檢查層次：描述、指令、工具。對欒帥來說，這正好可以用來檢查 AI 學習雷達、課程設計、週報影片與資料分析工作流是否真的被資產化，而不是只是把 prompt 寫長。</p>
+<h1>一句話摘要</h1>
+<p>完整 Skill 不是一段漂亮 prompt，而是「何時使用」的描述、「怎麼做」的指令，以及「可重複使用」的工具附件。</p>
+<h1>三層 Skill 架構</h1>
+<p>| 層級 | 貼文說法 | 工程意義 | 常見缺口 |</p>
+<p>|---|---|---|---|</p>
+<p>| 1. 描述 | 什麼時候該翻這份 SOP | 讓模型判斷何時自動啟用 skill | 寫得太泛，導致不會觸發或亂觸發 |</p>
+<p>| 2. 指令 | 步驟怎麼做 | 任務流程、判斷順序、輸出格式 | 多數人只做到這層 |</p>
+<p>| 3. 工具 | 附的範本、腳本、參考檔 | 模板、欄位表、範例、程式碼、固定規則 | 最容易被忽略，也是槓桿最大的一層 |</p>
+<p>貼文用「每週寫工作週報」做例子：</p>
+<ul>
+<li>描述：當我說「幫我整理本週週報」時，自動啟用這份 skill。</li>
+<li>指令：抓本週完成事項 → 分成「已完成／進行中／卡關」三類 → 用固定語氣寫成三段。</li>
+<li>工具：附上公司週報格式範本、固定分類規則，甚至一段能自動撈任務清單的腳本。</li>
+</ul>
+<p>如果只有第二層「指令」，每次仍要補格式和規則；三層都齊，才可能做到一句話產生格式對、分類對、語氣也對的週報。</p>
+<h1>為什麼第三層最重要</h1>
+<p>貼文指出，多數人卡關時會一直潤飾 prompt，但真正該補的是附件：範本、清單、腳本、參考檔。</p>
+<p>這與 Anthropic 工程文章中的「progressive disclosure」概念相呼應：不要把所有內容一次塞進 prompt，而是讓 skill 先用簡短 metadata/description 被判斷是否適用，需要時再載入更完整的指令與支援檔案。</p>
+<p>第三層之所以重要，是因為它把 AI 從「每次重新猜」變成「沿用固定資產」。</p>
+<h2>第三層工具可以包含</h2>
+<ul>
+<li>報告模板：例如週報、課程介紹頁、知識庫文章 frontmatter。</li>
+<li>分類規則：例如「已完成／進行中／卡關」、「工具／教學／商業應用」。</li>
+<li>欄位清單：例如來源、作者、日期、限制、行動建議。</li>
+<li>範例輸出：讓模型知道什麼叫做「合格」。</li>
+<li>腳本：把可確定執行的部分交給 code，而不是每次請模型重想。</li>
+<li>參考檔：品牌語氣、設計規範、資料字典、常見錯誤。</li>
+</ul>
+<h1>對欒帥的實務轉化</h1>
+<p>如果要把一個 prompt 升級成穩定工作流，可以用這張檢查表。</p>
+<h2>Skill 三層檢查表</h2>
+<p>| 檢查問題 | 目的 | 若沒有，會發生什麼事 |</p>
+<p>|---|---|---|</p>
+<p>| 這個 skill 何時應該被啟用？ | 建立描述層 | AI 不知道何時該用，或需要你每次明講 |</p>
+<p>| 它的輸入是什麼？ | 避免任務邊界模糊 | AI 會補錯資料或問錯問題 |</p>
+<p>| 它的輸出格式固定嗎？ | 建立可驗收標準 | 每次結果長相不一樣 |</p>
+<p>| 有沒有範本？ | 降低生成不穩定 | 語氣、排版、欄位常跑掉 |</p>
+<p>| 有沒有清單或規則？ | 固定判斷標準 | 分類不一致，難以自動化 |</p>
+<p>| 有沒有可用 code 做的部分？ | 增加確定性 | AI 每次重寫，浪費 token 且結果不穩 |</p>
+<p>| 有沒有失敗案例可回寫？ | 讓 skill 進化 | 同樣錯誤反覆發生 |</p>
+<h1>可直接複製的 Prompt</h1>
+<p>貼文提供的升級 prompt 很適合作為欒帥盤點工作流的起手式：</p>
+<p>```text</p>
+<p>我想把『XX 任務』做成一個 skill。請幫我寫出三層：</p>
+<p>（1）描述：讓 AI 能自動判斷何時該用它；</p>
+<p>（2）指令：完成這件事的步驟；</p>
+<p>（3）工具：列出它需要哪些範本、清單或腳本，並幫我把能用 code 做的部分寫出來。</p>
+<p>```</p>
+<p>可以把 XX 換成：</p>
+<ul>
+<li>歸檔一篇 AI 社群貼文。</li>
+<li>把一篇工具文章轉成教學講義。</li>
+<li>製作一週 AI 學習雷達摘要。</li>
+<li>將課程報名名單整理成私密名單。</li>
+<li>把影片腳本轉成 LINE 可讀摘要。</li>
+</ul>
+<h1>AI 學習雷達的例子</h1>
+<p>以「歸檔 AI 文章」為例，三層可以這樣拆：</p>
+<h2>描述層</h2>
+<p>當欒帥分享 AI 工具、技術文章、社群貼文、GitHub 專案或官方公告連結時，啟用此流程。目標不是只摘要，而是轉成可供學習、教學、營運或工作流設計使用的知識庫文章。</p>
+<h2>指令層</h2>
+<ul>
+<li>擷取原文、作者、日期、可見圖片文字與外部連結。</li>
+<li>檢查知識庫是否已有同主題文章。</li>
+<li>用官方/權威來源補強功能、限制與版本差異。</li>
+<li>轉成欒帥可執行的實務框架。</li>
+<li>寫入 Markdown，重建靜態站。</li>
+<li>部署到 GitHub Pages 並驗證公開 URL。</li>
+</ul>
+<h2>工具層</h2>
+<ul>
+<li>Markdown frontmatter 模板。</li>
+<li>分類與 tag 規則。</li>
+<li>GitHub Pages build/deploy 腳本。</li>
+<li>公開 URL 驗證腳本。</li>
+<li>既有文章搜尋規則。</li>
+<li>寫作風格範例。</li>
+</ul>
+<p>這樣一來，知識庫歸檔就不是單次 prompt，而是可以反覆執行、可驗證、可擴充的 skill。</p>
+<h1>教學應用：把 Prompt 課升級成 Skill 課</h1>
+<p>這篇很適合接在第一天之後做 45 分鐘課堂活動：</p>
+<ul>
+<li>學員拿出昨天寫好的 prompt。</li>
+<li>把 prompt 標記為第二層「指令」。</li>
+<li>請學員補上第一層：何時應該啟用這個任務？</li>
+<li>請學員補上第三層：需要哪些模板、清單、範例、腳本？</li>
+<li>用同一任務比較「只有 prompt」與「三層 skill」的輸出穩定度。</li>
+</ul>
+<p>這樣教學會讓新手理解：不是 prompt 不重要，而是 prompt 要逐步沉澱成制度。</p>
+<h1>商業應用：第三層是資產</h1>
+<p>在企業裡，真正有價值的不是「誰會寫一句很厲害的 prompt」，而是能不能把專業判斷做成可交接、可複製、可驗證的工作資產。</p>
+<p>例如：</p>
+<ul>
+<li>顧問交付：把提案模板、訪談清單、風險判讀表放進 skill。</li>
+<li>金融分析：把資料欄位、指標公式、例外規則與圖表模板放進 skill。</li>
+<li>教學設計：把課程架構、活動模板、評量規準放進 skill。</li>
+<li>內容營運：把品牌語氣、標題規則、CTA 模板放進 skill。</li>
+</ul>
+<p>第三層工具越完整，AI 越像團隊裡已受訓的成員，而不是每次都要重新 onboarding 的新人。</p>
+<h1>判讀限制</h1>
+<ul>
+<li>貼文中的「三層」是很好的教學抽象；不同平台在文件中可能使用不同名詞，例如 metadata、instructions、resources、scripts、templates。</li>
+<li>YouTube 演講連結已作為社群貼文來源保留；本文未逐字轉錄演講，只使用可公開檢索的官方文件與工程文章補強。</li>
+<li>「能用 code 解決就別讓 AI 每次重想」適用於格式轉換、欄位整理、檔案處理等確定性任務；不代表所有判斷都應硬寫成程式。</li>
+</ul>
+<h1>來源</h1>
+<ul>
+<li>Facebook 原始貼文：羅達 Rhoda，AI 新手村連載第二天「Skill 其實分三層」。</li>
+<li>Anthropic：Introducing Agent Skills。</li>
+<li>Anthropic Engineering：Equipping agents for the real world with Agent Skills。</li>
+<li>Claude Code Docs：Extend Claude with skills。</li>
+<li>OpenAI Developers：Codex Agent Skills。</li>
+<li>YouTube：How Anthropic Engineers ACTUALLY Prompt Claude Code｜Austin Marchese。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-22 · https://www.facebook.com/share/p/19FCAvDNYj/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI新手村</span><span class="tag">Prompt Engineering</span><span class="tag">Agent Skills</span><span class="tag">Claude Code</span><span class="tag">SOP</span><span class="tag">生產力</span><span class="tag">FinTech</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/19FCAvDNYj/" target="_blank" rel="noopener">https://www.facebook.com/share/p/19FCAvDNYj/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid0BcCsJGGBwrxqXwqw1SkP2HwAnQAu5HoYexaGXGBft8frWWobxASzwzetQwnoMofkl" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid0BcCsJGGBwrxqXwqw1SkP2HwAnQAu5HoYexaGXGBft8frWWobxASzwzetQwnoMofkl</a></p><p><a href="https://www.facebook.com/share/p/19FCAvDNYj/" target="_blank" rel="noopener">https://www.facebook.com/share/p/19FCAvDNYj/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid0BcCsJGGBwrxqXwqw1SkP2HwAnQAu5HoYexaGXGBft8frWWobxASzwzetQwnoMofkl" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid0BcCsJGGBwrxqXwqw1SkP2HwAnQAu5HoYexaGXGBft8frWWobxASzwzetQwnoMofkl</a></p><p><a href="https://www.facebook.com/share/p/1GedKHAugL/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1GedKHAugL/</a></p><p><a href="https://www.anthropic.com/news/skills" target="_blank" rel="noopener">https://www.anthropic.com/news/skills</a></p><p><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener">https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://www.youtube.com/watch?v=qOvc9IUKEIc" target="_blank" rel="noopener">https://www.youtube.com/watch?v=qOvc9IUKEIc</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

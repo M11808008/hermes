@@ -1053,6 +1053,42 @@
     "markdown": "articles/2026/06/2026-06-22-page-arizona-biidi-the-arch-shell-gas-station-cave.md"
   },
   {
+    "title": "羅達 Rhoda｜Skill 其實分三層：描述、指令與工具才是完整 SOP",
+    "date": "2026-06-22",
+    "source": "https://www.facebook.com/share/p/19FCAvDNYj/",
+    "author": "羅達 Rhoda / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI新手村",
+      "Prompt Engineering",
+      "Agent Skills",
+      "Claude Code",
+      "SOP",
+      "生產力",
+      "FinTech"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/19FCAvDNYj/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid0BcCsJGGBwrxqXwqw1SkP2HwAnQAu5HoYexaGXGBft8frWWobxASzwzetQwnoMofkl",
+      "https://www.facebook.com/share/p/19FCAvDNYj/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid0BcCsJGGBwrxqXwqw1SkP2HwAnQAu5HoYexaGXGBft8frWWobxASzwzetQwnoMofkl",
+      "https://www.facebook.com/share/p/1GedKHAugL/",
+      "https://www.anthropic.com/news/skills",
+      "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "https://code.claude.com/docs/en/skills",
+      "https://developers.openai.com/codex/skills",
+      "https://www.youtube.com/watch?v=qOvc9IUKEIc"
+    ],
+    "excerpt": "完整 Skill 不是一段漂亮 prompt，而是「何時使用」的描述、「怎麼做」的指令，以及「可重複使用」的工具附件。",
+    "slug": "2026-06-22-rhoda-agent-skills-three-layers",
+    "html": "articles/2026-06-22-rhoda-agent-skills-three-layers.html",
+    "markdown": "articles/2026/06/2026-06-22-rhoda-agent-skills-three-layers.md"
+  },
+  {
     "title": "TAIWAN AI RAP｜國研院國網中心生成式 AI 賦能方案與工作坊",
     "date": "2026-06-22",
     "source": "https://www.threads.com/@gauhj_/post/DZ2rSswAfjT",
