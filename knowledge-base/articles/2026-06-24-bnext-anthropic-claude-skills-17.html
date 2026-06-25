@@ -1,0 +1,92 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>未來商務｜Anthropic 17 個 Claude Skills 官方清單與安裝取捨</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>未來商務｜Anthropic 17 個 Claude Skills 官方清單與安裝取捨</h1><h1>未來商務｜Anthropic 17 個 Claude Skills 官方清單與安裝取捨</h1>
+<p>《未來商務》文章整理 Anthropic 在 GitHub 公開的 17 個 Claude Skills。Skills 是以資料夾形式存在的任務指令包，Claude 會先讀取名稱與描述，等任務匹配時再載入完整內容，讓重複性工作更穩定，而不是每次重新貼 prompt。</p>
+<h1>一句話摘要</h1>
+<p>這篇文章值得收錄的重點不是「把 17 個全裝起來」，而是把 Claude Skills 視為 agent 工作流的模組化治理：先從最常交付的文件、品牌、工程與溝通場景挑 5–8 個高頻技能，再用 `skill-creator` 把欒帥自己的 SOP 變成可重用能力。</p>
+<h1>來源資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 文章 | Anthropic 17 個 Claude Skills 完整整理！文件、設計、開發、溝通 4大類一次看，適合誰用？ |</p>
+<p>| 媒體 | 未來商務 / BusinessNext Future Commerce |</p>
+<p>| 作者 | 陳祈安 |</p>
+<p>| 日期 | 2026-06-24 |</p>
+<p>| 主軸 | Anthropic 官方 Claude Skills 清單、使用情境與安裝建議 |</p>
+<p>| 官方 repo | <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">https://github.com/anthropics/skills</a> |</p>
+<p>| 官方說明 | Anthropic README 稱 skills 是 Claude 動態載入的 instructions、scripts、resources 資料夾，用於可重複的專門任務 |</p>
+<h1>17 個官方 Skills 分類</h1>
+<h2>文件製作類：最適合日常交付物</h2>
+<p>| Skill | 功能 | 適合對象 / 用法 |</p>
+<p>|---|---|---|</p>
+<p>| `pdf` | 建立、填寫、編輯、擷取 PDF 內容 | 報告、發票、合約摘要、文件轉換 |</p>
+<p>| `docx` | 產生與編輯 Word，支援樣式、表格、追蹤修訂 | 顧問、法務、專案管理、正式交付文件 |</p>
+<p>| `xlsx` | 建立與解析 Excel，保留公式與格式 | 財務分析、營運表格、報名或清單整理 |</p>
+<p>| `pptx` | 產生可編輯 PowerPoint，含文字、圖表與母版 | 課程簡報、主管報告、工作坊投影片 |</p>
+<p>文件類 Skills 的價值在於把 PDF → Excel → Word → PowerPoint 串成可交付流程，而不是只做純文字摘要。對欒帥來說，`pptx`、`docx`、`xlsx` 特別適合課程、報名名單、學習雷達素材整理。</p>
+<h2>設計與品牌類：讓輸出有一致風格</h2>
+<p>| Skill | 功能 | 適合對象 / 用法 |</p>
+<p>|---|---|---|</p>
+<p>| `brand-guidelines` | 套用品牌色彩、字型、排版規則 | 課程品牌、社群圖文、對外簡報一致化 |</p>
+<p>| `canvas-design` | 在 2D 畫布上排版，處理圖層、字型與間距 | 資訊圖表、社群圖文、課程視覺 |</p>
+<p>| `theme-factory` | 產生配色、字型組合與元件風格 | 快速建立視覺識別或設計系統草案 |</p>
+<p>| `algorithmic-art` | 以 p5.js 生成參數化 / 程序性藝術 | 創意開發、生成藝術、視覺實驗 |</p>
+<p>這組 Skill 對欒帥的實用點在於「風格治理」：當課程頁、簡報、知識庫卡片或宣傳圖需要一致高質感時，應先讓 AI 載入品牌規範，而不是靠單次 prompt 補救。</p>
+<h2>工程與開發類：讓 Claude 生成可測、可接、可上線的程式</h2>
+<p>| Skill | 功能 | 適合對象 / 用法 |</p>
+<p>|---|---|---|</p>
+<p>| `claude-api` | 教 Claude 正確使用 Anthropic API 新模式，如串流、工具呼叫、批次處理 | 串接 Anthropic API 的開發者 |</p>
+<p>| `mcp-builder` | 協助產生 MCP Server，連接 AI 與內部系統 | Agent 工作流、內部工具、資料系統整合 |</p>
+<p>| `frontend-design` | 現代前端模式：React、Tailwind、無障礙設計 | Claude Code 生成 UI、課程 landing page 原型 |</p>
+<p>| `web-artifacts-builder` | 產生複雜單頁應用，含狀態管理、routing、shadcn/ui | demo、互動教材、產品原型 |</p>
+<p>| `webapp-testing` | 用 Playwright 測試 Claude 生成的前端 | 讓 AI 自動驗證 UI 與流程是否可用 |</p>
+<p>這組最接近欒帥現有工作流：MCP、前端設計、自動測試與 API 串接都可轉成 Hermes / Claude / Codex 的 agentic build loop。尤其 `webapp-testing` 可避免「AI 產生漂亮但不可用的頁面」。</p>
+<h2>溝通與內容類：穩定語氣與協作格式</h2>
+<p>| Skill | 功能 | 適合對象 / 用法 |</p>
+<p>|---|---|---|</p>
+<p>| `doc-coauthoring` | 協作長篇文件，保留作者聲音，建議而非直接改寫 | 講義、文章、課程企劃、正式文件共同編修 |</p>
+<p>| `internal-comms` | 標準化公告、週報、狀態更新格式 | 團隊管理、專案進度、對內溝通 |</p>
+<p>| `slack-gif-creator` | 生成適合 Slack 尺寸的動態 GIF | 團隊文化、輕量互動素材 |</p>
+<p>這組的核心是「語氣與格式一致」。對欒帥比較高價值的是 `doc-coauthoring` 與 `internal-comms`；`slack-gif-creator` 則偏娛樂與團隊文化。</p>
+<h2>Meta Skill：自製 SOP 的入口</h2>
+<p>| Skill | 功能 | 適合對象 / 用法 |</p>
+<p>|---|---|---|</p>
+<p>| `skill-creator` | 引導建立符合官方格式的自訂 Skill，包含 YAML frontmatter、description 觸發語、指令結構、範例與評估 | 想把反覆工作流程標準化的人 |</p>
+<p>`skill-creator` 是整個清單中最值得長期關注的工具：它不是單一任務能力，而是把「常做的 SOP」變成可被 AI 自動觸發的能力。官方 repo 中的 `skill-creator/SKILL.md` 也強調建立技能後要用測試 prompt 與評估迭代，而不是只寫一次說明檔。</p>
+<h1>欒帥的建議安裝優先序</h1>
+<p>| 優先級 | 建議 Skill | 理由 |</p>
+<p>|---|---|---|</p>
+<p>| 第一輪 | `pptx`, `docx`, `xlsx` | 直接對應課程、名單、簡報與正式交付物 |</p>
+<p>| 第一輪 | `frontend-design`, `webapp-testing` | 對應高質感網頁 / landing page / 管理介面，且要可驗證 |</p>
+<p>| 第一輪 | `mcp-builder` | 對應 Hermes、內部工具、AI 學習雷達自動化與 Agent 整合 |</p>
+<p>| 第二輪 | `brand-guidelines`, `canvas-design` | 當課程品牌、頁面視覺與社群內容需要一致時啟用 |</p>
+<p>| 第二輪 | `doc-coauthoring`, `internal-comms` | 適合文章、企劃、公告與課程文案共寫 |</p>
+<p>| 長期 | `skill-creator` | 把欒帥常用 SOP 做成自訂技能，逐步形成個人工作流庫 |</p>
+<h1>不要全部安裝的原因</h1>
+<p>文章提醒：Skill 並不是裝越多越好。Claude 只會先讀取名稱與描述，但如果安裝太多功能相近的 Skills，就可能產生觸發競爭，導致 Claude 選錯 Skill。實務上應先保留 5–8 個高頻技能，等工作流穩定後再擴充。</p>
+<p>對欒帥而言，治理原則可以是：</p>
+<ul>
+<li>先保留高頻交付物：簡報、文件、表格、前端、測試、MCP。</li>
+<li>每個 Skill 都要有明確觸發場景，避免描述過度重疊。</li>
+<li>對課程、知識庫、LINE 自動整理這類重複流程，優先自製 skill，而不是一直加裝外部 skill。</li>
+<li>對第三方或社群 skill，先讀 `SKILL.md` 與 scripts，再決定是否放入工作流。</li>
+<li>關鍵任務要驗證輸出，不要因為 Skill 存在就跳過測試。</li>
+</ul>
+<h1>與既有 Agent Skills 筆記的關係</h1>
+<p>知識庫已收錄「孔老師 AI 研習社｜Codex / Claude 10 個高頻 Agent Skills 清單與使用判讀」。那篇偏向創作者推薦與第三方技能包；本篇則以 Anthropic 官方 `anthropics/skills` repo 與未來商務整理為主，適合當作官方基準清單。</p>
+<p>建議使用方式：</p>
+<ul>
+<li>官方 17 個 Skills：當作可信基準與能力分類。</li>
+<li>孔老師 10 個 Skills：當作社群實戰選品與靈感庫。</li>
+<li>欒帥自製 Skills：針對 AI 學習雷達、課程頁、名單處理、LINE 連結歸檔等固定流程。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>本文未實際在 Claude.ai / Claude Code 中逐一安裝測試 17 個 Skills；功能說明依未來商務文章、Anthropic GitHub README 與公開 repo 結構整理。</li>
+<li>Anthropic README 說明部分技能為開源 Apache 2.0；文件建立與編輯類 skills 屬 source-available 參考實作，實際授權與可用性應以 repo 最新內容為準。</li>
+<li>Claude.ai 免費 / 付費、Claude Code、Claude API 的安裝與啟用方式可能隨 Anthropic 產品更新而變動，正式採用前仍需檢查官方文件。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>未來商務文章：<a href="https://fc.bnext.com.tw/articles/view/4707" target="_blank" rel="noopener">https://fc.bnext.com.tw/articles/view/4707</a></li>
+<li>Anthropic skills repo：<a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">https://github.com/anthropics/skills</a></li>
+<li>Anthropic Agent Skills docs：<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview</a></li>
+<li>Agent Skills specification：<a href="https://agentskills.io/" target="_blank" rel="noopener">https://agentskills.io/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-24 · https://fc.bnext.com.tw/articles/view/4707 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Claude</span><span class="tag">Claude Skills</span><span class="tag">Anthropic</span><span class="tag">Agent Skills</span><span class="tag">Claude Code</span><span class="tag">Workflow Automation</span><span class="tag">MCP</span><span class="tag">Knowledge Work</span><h3>原始連結</h3><p><a href="https://fc.bnext.com.tw/articles/view/4707" target="_blank" rel="noopener">https://fc.bnext.com.tw/articles/view/4707</a></p><p><a href="https://fc.bnext.com.tw/articles/view/4707" target="_blank" rel="noopener">https://fc.bnext.com.tw/articles/view/4707</a></p><p><a href="https://fc.bnext.com.tw/articles/view/4707" target="_blank" rel="noopener">https://fc.bnext.com.tw/articles/view/4707</a></p><p><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">https://github.com/anthropics/skills</a></p><p><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview</a></p><p><a href="https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf" target="_blank" rel="noopener">https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf</a></p><p><a href="https://agentskills.io/" target="_blank" rel="noopener">https://agentskills.io/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
