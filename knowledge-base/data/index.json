@@ -241,6 +241,42 @@
     "markdown": "articles/2026/06/2026-06-25-openmontage-agentic-video-production-system.md"
   },
   {
+    "title": "video-autopilot-kit｜CapCut Computer Use × ffmpeg 的短影音自動化框架",
+    "date": "2026-06-25",
+    "source": "https://github.com/Hao0321/video-autopilot-kit",
+    "author": "Hao0321 Studio / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Video Automation",
+      "YouTube Shorts",
+      "CapCut",
+      "ffmpeg",
+      "Computer Use",
+      "Python",
+      "Creator Tools",
+      "GitHub",
+      "Content Pipeline"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/Hao0321/video-autopilot-kit",
+      "https://github.com/Hao0321/video-autopilot-kit",
+      "https://github.com/Hao0321/video-autopilot-kit",
+      "https://github.com/Hao0321/video-autopilot-kit/blob/main/SETUP.md",
+      "https://github.com/Hao0321/video-autopilot-kit/tree/main/examples",
+      "https://github.com/Hao0321/video-autopilot-kit/tree/main/knowledge",
+      "https://github.com/Hao0321/video-autopilot-kit/blob/main/TROUBLESHOOTING.md"
+    ],
+    "excerpt": "這個 repo 的核心價值是把「AI 生成影片」從單次 prompt 變成可治理的創作 pipeline：SETUP 問卷定義頻道與素材，CapCut helpers 走主力剪輯路徑，ffmpeg 負責後製與 demo，delivery QA 則在交付前檢查頻閃、死空檔、圖片排版與隱私外框等常見問題。",
+    "slug": "2026-06-25-video-autopilot-kit-capcut-ffmpeg-creator-system",
+    "html": "articles/2026-06-25-video-autopilot-kit-capcut-ffmpeg-creator-system.html",
+    "markdown": "articles/2026/06/2026-06-25-video-autopilot-kit-capcut-ffmpeg-creator-system.md"
+  },
+  {
     "title": "未來商務｜Anthropic 17 個 Claude Skills 官方清單與安裝取捨",
     "date": "2026-06-24",
     "source": "https://fc.bnext.com.tw/articles/view/4707",

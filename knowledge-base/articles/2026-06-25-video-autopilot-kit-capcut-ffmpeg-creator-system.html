@@ -1,0 +1,117 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>video-autopilot-kit｜CapCut Computer Use × ffmpeg 的短影音自動化框架</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>video-autopilot-kit｜CapCut Computer Use × ffmpeg 的短影音自動化框架</h1><h1>video-autopilot-kit｜CapCut Computer Use × ffmpeg 的短影音自動化框架</h1>
+<p>`Hao0321/video-autopilot-kit` 是一套 YouTube / 短影音自動化工具與方法論模板。它不是把某個創作者的私有資料、頻道策略或聲線打包給你，而是提供一個「框架 + 問卷」：你先回答自己的品牌、niche、素材路徑、製作偏好，再把它變成你的影片生產系統。</p>
+<h1>一句話摘要</h1>
+<p>這個 repo 的核心價值是把「AI 生成影片」從單次 prompt 變成可治理的創作 pipeline：SETUP 問卷定義頻道與素材，CapCut helpers 走主力剪輯路徑，ffmpeg 負責後製與 demo，delivery QA 則在交付前檢查頻閃、死空檔、圖片排版與隱私外框等常見問題。</p>
+<h1>GitHub 專案快照</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Repo | `Hao0321/video-autopilot-kit` |</p>
+<p>| 描述 | Fill-in-your-own-data framework for YouTube / short-form video automation: CapCut JSON + ffmpeg tooling + onboarding questionnaire |</p>
+<p>| 語言 | Python |</p>
+<p>| License | MIT |</p>
+<p>| Stars / Forks | 2026-06-25 擷取時約 86 stars、26 forks |</p>
+<p>| 建立 / 更新 | 建立於 2026-06-01；最後推送於 2026-06-23 |</p>
+<p>| Topics | `capcut`, `content-creation`, `creator-tools`, `ffmpeg`, `python`, `shorts`, `video-automation`, `youtube` |</p>
+<p>| 官方定位 | 不含作者私人資料；voice、策略、社群數字皆為空白模板，由使用者填入 |</p>
+<h1>架構與資料夾分工</h1>
+<p>| 區塊 | 角色 | 對欒帥的意義 |</p>
+<p>|---|---|---|</p>
+<p>| `SETUP.md` | 問卷式 onboarding：品牌、內容 niche、voice、製作設定、演算法、社群 | 可讓 AI 先訪談欒帥，再生成自己的 `profiles/`，避免套用別人的頻道策略 |</p>
+<p>| `templates/` | `brand_profile`、`voice_profile`、`algorithm_context`、`community_mobilization`、`content_pipeline`、`your_context` 等模板 | 可變成 AI 學習雷達、課程短影音、旅遊/美食內容的固定風格與 CTA 設定 |</p>
+<p>| `src/capcut_helpers/` | 主力剪輯路徑：CapCut Desktop 草稿 I/O、靜音處理、花字、AI 字幕校正、b-roll 對位、delivery QA | 適合做「AI 規劃 → CapCut 草稿/視窗操作 → 人工審稿 → 匯出」的半自動流程 |</p>
+<p>| `src/silent_vlog_maker/` | 次要 ffmpeg pipeline：素材掃描、正規化、字幕燒錄、直式影片、無口播靜音 vlog | 適合做快速 demo、旅遊/美食/素材型短片，但不是主力口播剪輯路徑 |</p>
+<p>| `examples/` | 可直接跑的自包含 demo，不需真素材或 CapCut | 可以先用來驗證環境與理解 pipeline，不必一開始碰 CapCut GUI |</p>
+<p>| `knowledge/` | 影片製作知識庫：M1–M100 避坑、演算法、SOP、CapCut automation、短影音 playbook | 值得當作影片 SOP / 課程教材素材；也可吸收到欒帥自己的創作者工作流 |</p>
+<p>| `TROUBLESHOOTING.md` | 常見問題與交付前 QA | 可避免自動剪輯最容易出現的字幕錯位、死空檔、頻閃、隱私外框與素材不對題 |</p>
+<h1>主力路徑：CapCut + AI Computer Use</h1>
+<p>README 明確提醒：這套系統的主力是 CapCut，不是純 ffmpeg。CapCut 沒有公開 API，因此自動化不是直接呼叫官方 API，而是靠 AI 助手透過 Computer Use 實際操作 CapCut Desktop 視窗，例如點按鈕、套模板、檢查畫面、匯出成品。</p>
+<p>主力需求：</p>
+<p>| 需求 | 說明 |</p>
+<p>|---|---|</p>
+<p>| CapCut Desktop | 主要剪輯、字幕、模板套用都在 CapCut 內完成；有 Pro 更好 |</p>
+<p>| AI 助手 + Computer Use | 必需。沒有 Computer Use，`capcut_helpers` 無法驅動 CapCut GUI |</p>
+<p>| Python 3.9+ | 跑工具、helper、demo 與後製腳本 |</p>
+<p>| `ffmpeg` / `ffprobe` | 匯出後的 BGM loop、修剪到人聲尾、player-safe 重編、demo 合成 |</p>
+<p>這點對欒帥很重要：它不是「純程式全自動剪輯」，而是「Agent 操作專業剪輯工具 + Python 後製 + 人工審稿」的混合模式。這比純 ffmpeg 更接近真實創作流程，也保留 CapCut 模板與視覺效果的彈性。</p>
+<h1>次要路徑：純 ffmpeg demo 與靜音 vlog</h1>
+<p>repo 也提供 `examples/` 讓使用者不用 CapCut、也不用真素材，就可以先看到 pipeline 會動：</p>
+<p>| Demo | 功能 | 需求 |</p>
+<p>|---|---|---|</p>
+<p>| `examples/01_vertical_short.py` | 用 ffmpeg 合成素材 → 產生 1080×1920 直式 Short，含 highlight captions 與 BGM | 需要 ffmpeg |</p>
+<p>| `examples/02_caption_broll_match.py` | 不用 keyword config，依 b-roll 檔名內容自動對位字幕 | 純 Python |</p>
+<p>這條路徑適合做最小驗證：先確認素材正規化、字幕對位、B-roll matching 的概念可行，再決定是否導入 CapCut Desktop + Computer Use。</p>
+<h1>最小啟動流程</h1>
+<p>`SETUP.md` 建議不用一次填完所有設定，先回答三組必答題即可：</p>
+<ul>
+<li>頻道名稱、handle、是否露臉、品牌色、結尾 CTA。</li>
+<li>內容類型與主平台：教學、vlog、開箱、評論；YouTube 長片、Shorts、Reels 或 TikTok。</li>
+<li>製作設定：CapCut 或純 ffmpeg、素材路徑、匯出路徑、字體、BGM、b-roll 庫。</li>
+</ul>
+<p>推薦做法是把 repo 丟給 Claude / ChatGPT，請它依 `SETUP.md` 先訪談必答 3 區，並生成 `profiles/`。這很適合欒帥，因為可以把 AI 學習雷達、課程、LINE 連結整理、週報影片等不同內容線拆成不同 profile，而不是每支片都重新 prompt。</p>
+<h1>交付前 QA：這個 repo 最值得注意的工程化設計</h1>
+<p>`TROUBLESHOOTING.md` 中的 `final_delivery_qa` 很有價值，因為它把自動剪輯常見錯誤變成出片前 checklist：</p>
+<p>| 檢查 | 問題 | 對應做法 |</p>
+<p>|---|---|---|</p>
+<p>| M91 chrome / 隱私 | 螢幕錄影洩漏工作列、檔案側欄、瀏覽器分頁、後台金額頁 | 裁到只剩內容區，抽幀逐格看 |</p>
+<p>| M92 圖片排版 | 非滿版圖有黑邊、zoompan 抖動、外框殘留 | 模糊背景填滿、靜止、裁內容區 |</p>
+<p>| M93 頻閃 | 遊戲爆擊、strobe、黑亮反覆造成不適 | `detect_flash` / blackdetect |</p>
+<p>| M94 真實 artifact | 旁白提到具體素材，畫面卻配 generic stock | 換成真實畫面 |</p>
+<p>| M95 句間死空檔 | 口播停頓 3–4 秒拖節奏 | `detect_long_pauses`，剪到約 0.5 秒 |</p>
+<p>這比單純「幫我剪影片」更成熟：它承認自動化會出錯，並提供交付前驗收機制。若欒帥要把 AI 學習雷達週報轉成短影音，這類 QA 比生成本身更關鍵。</p>
+<h1>欒帥可採用的流程設計</h1>
+<h2>A. AI 學習雷達週報影片</h2>
+<ul>
+<li>從知識庫 weekly digest 抽 3–5 則重點。</li>
+<li>Hermes 生成 60–90 秒口播稿、字幕段落與 b-roll 提示。</li>
+<li>用 `profiles/brand.md` 固定欒帥品牌語氣、片尾 CTA 與畫面風格。</li>
+<li>由 CapCut + Computer Use 套字幕、模板、畫面素材。</li>
+<li>匯出後用 ffmpeg 做 player-safe reencode 與 dead air 檢查。</li>
+<li>人工確認引用、素材授權與畫面是否對題後發布。</li>
+</ul>
+<h2>B. 課程短影音 / 工作坊宣傳片</h2>
+<p>| 階段 | 做法 |</p>
+<p>|---|---|</p>
+<p>| 企劃 | 從課程簡介抽痛點、學習成果、3 個亮點 |</p>
+<p>| 腳本 | 產生 hook → 問題 → 解法 → 課程 CTA |</p>
+<p>| 素材 | 課程頁截圖、講師照片、簡報頁、demo 畫面 |</p>
+<p>| CapCut | 套字幕模板與品牌色，產生可人工微調草稿 |</p>
+<p>| QA | 檢查隱私外框、死空檔、字幕錯字、CTA 是否清楚 |</p>
+<h2>C. 美食 / 旅遊素材型短片</h2>
+<p>若沒有口播，只做素材 montage，可先走 `silent_vlog_maker` 或 examples 的思路：把手機影片、地點、食物名稱、路線與推薦品項轉成直式短片。這適合欒帥已經在知識庫中收錄的美食 / 旅遊條目再製。</p>
+<h1>與既有知識庫文章的關係</h1>
+<p>知識庫已收錄 `pyJianYingDraft｜用 Python 生成剪映草稿，串接 WorkBuddy 的半自動剪輯工作流`。兩者可以這樣分工：</p>
+<p>| 工具 | 主要思路 | 適合場景 |</p>
+<p>|---|---|---|</p>
+<p>| pyJianYingDraft | Python 直接生成剪映草稿與時間線 | 想用程式產生草稿、固定模板、自動生成軌道 |</p>
+<p>| video-autopilot-kit | AI Computer Use 操作 CapCut + ffmpeg 後製 + 問卷式 profile | 想保留 CapCut GUI / 模板彈性，並用 agent 完成半自動剪輯 |</p>
+<p>若未來欒帥要做完整影片 agent，可把兩者合併：前段用 Hermes / Codex 產生剪輯計畫，中段選擇 pyJianYingDraft 或 CapCut Computer Use 生成草稿，後段用 video-autopilot-kit 的 QA 與 ffmpeg 後製。</p>
+<h1>建議先做的最小實驗</h1>
+<ul>
+<li>Clone repo 到本機實驗資料夾，不直接混入知識庫。</li>
+<li>確認 Python 3.9+ 與 ffmpeg / ffprobe 可用。</li>
+<li>先跑 `examples/02_caption_broll_match.py`，理解「用檔名內容對位字幕」是否符合欒帥素材整理習慣。</li>
+<li>再跑 `examples/01_vertical_short.py`，確認 1080×1920 直式影片輸出流程。</li>
+<li>建立一份 `profiles/brand.md` 與 `profiles/content_pipeline.md`，先只針對 AI 學習雷達週報影片。</li>
+<li>最後才接 CapCut Desktop + Computer Use，避免一開始把 GUI 自動化與素材策略混在一起除錯。</li>
+</ul>
+<h1>採用判斷</h1>
+<p>| 適合 | 不適合 / 要小心 |</p>
+<p>|---|---|</p>
+<p>| 想把固定內容來源轉成短影音，如週報、課程、工具介紹 | 想要完全無人審稿、自動發布的流程 |</p>
+<p>| 願意維護自己的 brand / voice / pipeline profiles | 不想整理素材檔名與路徑，或素材權利不清楚 |</p>
+<p>| 有 CapCut Desktop，且可接受 AI 透過 Computer Use 操作 GUI | 沒有 Computer Use 或不希望 AI 操作桌面應用 |</p>
+<p>| 重視交付前 QA、字幕對位、死空檔與隱私檢查 | 只想一次性生成影片，不想建立系統 |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>本文根據 GitHub API metadata、README、SETUP、examples、TROUBLESHOOTING 與 repo tree 擷取整理，未在本機實際 clone 或跑 demo。</li>
+<li>Stars、forks、issues 與 repo 結構為 2026-06-25 的時間點快照，後續可能變動。</li>
+<li>CapCut 自動化依賴 Desktop UI 與 AI Computer Use，穩定性會受作業系統、CapCut 版本、視窗狀態、模板與權限影響。</li>
+<li>自動剪輯仍需人工確認素材授權、音樂授權、肖像權、字幕正確性與平台規範。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>GitHub repo：<a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></li>
+<li>SETUP：<a href="https://github.com/Hao0321/video-autopilot-kit/blob/main/SETUP.md" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit/blob/main/SETUP.md</a></li>
+<li>Examples：<a href="https://github.com/Hao0321/video-autopilot-kit/tree/main/examples" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit/tree/main/examples</a></li>
+<li>Troubleshooting / QA：<a href="https://github.com/Hao0321/video-autopilot-kit/blob/main/TROUBLESHOOTING.md" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit/blob/main/TROUBLESHOOTING.md</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://github.com/Hao0321/video-autopilot-kit · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Video Automation</span><span class="tag">YouTube Shorts</span><span class="tag">CapCut</span><span class="tag">ffmpeg</span><span class="tag">Computer Use</span><span class="tag">Python</span><span class="tag">Creator Tools</span><span class="tag">GitHub</span><span class="tag">Content Pipeline</span><h3>原始連結</h3><p><a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></p><p><a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></p><p><a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></p><p><a href="https://github.com/Hao0321/video-autopilot-kit/blob/main/SETUP.md" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit/blob/main/SETUP.md</a></p><p><a href="https://github.com/Hao0321/video-autopilot-kit/tree/main/examples" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit/tree/main/examples</a></p><p><a href="https://github.com/Hao0321/video-autopilot-kit/tree/main/knowledge" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit/tree/main/knowledge</a></p><p><a href="https://github.com/Hao0321/video-autopilot-kit/blob/main/TROUBLESHOOTING.md" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit/blob/main/TROUBLESHOOTING.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
