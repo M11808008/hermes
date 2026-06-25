@@ -763,6 +763,42 @@
     "markdown": "articles/2026/06/2026-06-23-eurail-global-pass-kkday-threads-promo-travel-note.md"
   },
   {
+    "title": "羅達 Rhoda｜萬能 Skill 是陷阱：把 AI 工作流拆成可組合小工具",
+    "date": "2026-06-23",
+    "source": "https://www.facebook.com/share/p/1EMfbNv8jy/",
+    "author": "羅達 Rhoda / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI新手村",
+      "Agent Skills",
+      "Claude Code",
+      "Prompt Engineering",
+      "SOP",
+      "工作流設計",
+      "生產力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1EMfbNv8jy/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid0sQgyKxmZLnP6Ekrua6kt5psZBoDG2FEdQVj2BgKBdSGi3yKVVYX7nDJQwkuTdyBnl",
+      "https://www.facebook.com/share/p/1EMfbNv8jy/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid0sQgyKxmZLnP6Ekrua6kt5psZBoDG2FEdQVj2BgKBdSGi3yKVVYX7nDJQwkuTdyBnl",
+      "https://www.facebook.com/share/p/19FCAvDNYj/",
+      "https://www.facebook.com/share/p/1GedKHAugL/",
+      "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "https://www.anthropic.com/news/skills",
+      "https://github.com/anthropics/skills",
+      "https://code.claude.com/docs/en/skills"
+    ],
+    "excerpt": "Skill 不是越大越強；好的 skill 應該像樂高，能拆、能換、能重組，而不是一體成型、壞一處就整台報廢。",
+    "slug": "2026-06-23-rhoda-universal-skill-composability-trap",
+    "html": "articles/2026-06-23-rhoda-universal-skill-composability-trap.html",
+    "markdown": "articles/2026/06/2026-06-23-rhoda-universal-skill-composability-trap.md"
+  },
+  {
     "title": "Runway Recipes API｜把產品廣告、商品替換與 UGC 影音工作流封裝成 API",
     "date": "2026-06-23",
     "source": "https://www.threads.com/@kufutw/post/DZ3okpVD0fX",

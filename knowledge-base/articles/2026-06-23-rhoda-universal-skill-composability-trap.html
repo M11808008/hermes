@@ -1,0 +1,102 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>羅達 Rhoda｜萬能 Skill 是陷阱：把 AI 工作流拆成可組合小工具</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>羅達 Rhoda｜萬能 Skill 是陷阱：把 AI 工作流拆成可組合小工具</h1><h1>羅達 Rhoda｜萬能 Skill 是陷阱：把 AI 工作流拆成可組合小工具</h1>
+<p>羅達 Rhoda 在「AI 新手村」五篇連載第三天，提醒一個很容易踩的坑：剛學會做 skill 時，常會想做一個「萬能分析 skill」，把抓資料、清洗、跑統計、畫圖、寫結論全部包在一起。短期看起來很爽，長期會變成災難。</p>
+<p>這篇的價值在於把 skill 設計從「能不能一次完成」推進到「能不能維護、重用、除錯、控制風險」。對欒帥來說，這正是把 AI 學習雷達、課程內容、週報影片、資料整理流程做成長期資產時必須掌握的工程思維。</p>
+<h1>一句話摘要</h1>
+<p>Skill 不是越大越強；好的 skill 應該像樂高，能拆、能換、能重組，而不是一體成型、壞一處就整台報廢。</p>
+<h1>為什麼萬能 Skill 是陷阱</h1>
+<p>| 問題 | 萬能 skill 的後果 | 可組合小 skill 的做法 |</p>
+<p>|---|---|---|</p>
+<p>| 難除錯 | 不知道是抓資料、清洗、計算還是畫圖壞了 | 每個環節獨立，壞哪個修哪個 |</p>
+<p>| 難修改 | 改一個指標算法，可能影響整包流程 | 只改指標 skill，不動其他模組 |</p>
+<p>| 難重用 | 清洗邏輯被包在大 skill 裡，別的流程用不到 | 清洗 skill 可被多個分析流程共用 |</p>
+<p>| 難控風險 | 低風險、高風險動作混在一起 | 自動流程與人工確認流程分開 |</p>
+<p>| 難演進 | 規則散在一大包裡，越寫越亂 | 每個小 skill 各自回寫規則與範例 |</p>
+<p>貼文用樂高比喻很好：萬能 skill 像一體成型玩具車，壞一個輪子整台報廢；可組合 skill 像樂高，哪塊壞了換哪塊，還能拆掉重組成別的東西。</p>
+<h1>以分析流程為例：怎麼拆</h1>
+<p>原本的「萬能分析 skill」可能是：</p>
+<p>```text</p>
+<p>抓資料 → 清洗 → 計算 → 畫圖 → 寫結論</p>
+<p>```</p>
+<p>拆開後應該變成：</p>
+<p>```text</p>
+<p>skill-1：抓資料</p>
+<p>skill-2：清洗資料</p>
+<p>skill-3：計算指標</p>
+<p>skill-4：畫圖表</p>
+<p>skill-5：生成結論</p>
+<p>skill-6：輸出報告</p>
+<p>```</p>
+<p>每個 skill 只做一件事，但可以互相串接。這樣當抓資料 API 改版時，只需要修「抓資料」；當報告語氣要調整時，只需要修「輸出報告」。</p>
+<h1>欒帥版拆分原則</h1>
+<h2>1. 以「變動原因」拆</h2>
+<p>如果兩段流程會因不同原因改變，就不要放同一個 skill。</p>
+<ul>
+<li>資料來源會改：獨立成抓資料 skill。</li>
+<li>欄位清洗規則會改：獨立成清洗 skill。</li>
+<li>計算公式會改：獨立成指標 skill。</li>
+<li>視覺呈現會改：獨立成圖表 skill。</li>
+<li>寫作語氣會改：獨立成摘要/報告 skill。</li>
+</ul>
+<h2>2. 以「風險等級」拆</h2>
+<p>低風險動作可以讓 AI 自動跑，高風險動作必須人類確認。</p>
+<p>| 類型 | 可自動？ | 建議 |</p>
+<p>|---|---|---|</p>
+<p>| 擷取公開資料 | 可以 | 允許 AI 自動執行，但保留來源紀錄 |</p>
+<p>| 清洗與格式化 | 可以 | 用腳本或固定規則提高確定性 |</p>
+<p>| 產生草稿 | 可以 | 明確標示為草稿 |</p>
+<p>| 寫入正式資料庫 | 不應自動 | 必須人工確認 |</p>
+<p>| 送出交易、付款、對外發布 | 不應自動 | 強制手動觸發與二次驗證 |</p>
+<h2>3. 以「可重用性」拆</h2>
+<p>如果某段流程可被三個以上任務共用，它就值得獨立成 skill。</p>
+<p>例如 AI 學習雷達裡，「擷取 Facebook 貼文」、「搜尋官方文件」、「重建 GitHub Pages」、「驗證公開 URL」都可以被多篇文章共用，不應埋在單一文章流程裡。</p>
+<h1>user-invocable 與 disable-model-invocation 的重點</h1>
+<p>貼文提到兩個進階控制：</p>
+<ul>
+<li>`user-invocable: false`：不出現在使用者可手動選的清單裡，但仍可能由 AI 自己觸發。適合內部子流程，例如清洗資料、格式轉換。</li>
+<li>`disable-model-invocation: true`：禁止模型自行呼叫，只能由使用者手動執行。適合高風險動作，例如正式寫入、付款、交易、發送對外訊息。</li>
+</ul>
+<p>重點是：不要只問「這個 skill 能不能做」，還要問「誰可以啟動它」。</p>
+<h1>可直接複製的 Prompt</h1>
+<p>```text</p>
+<p>這是我現在的一個「萬能分析 skill」，它把抓資料、清洗、計算、畫圖、出結論全包在一起。請幫我：</p>
+<p>（1）判斷它應該拆成哪幾個各司其職的小 skill；</p>
+<p>（2）指出哪些部分（例如抓資料、清洗）可以共用、被其他分析流程互相 call；</p>
+<p>（3）告訴我哪些動作風險較高（例如寫入正式資料庫、送出交易），應該設成「只有我能手動執行」。</p>
+<p>```</p>
+<h1>AI 學習雷達的可組合化範例</h1>
+<p>目前「歸檔一篇社群貼文」可拆成：</p>
+<ul>
+<li>Facebook 擷取 skill：抓貼文、圖片 alt、留言中的來源連結。</li>
+<li>Dedupe skill：搜尋既有知識庫，判斷是新主題、補充篇還是重複。</li>
+<li>官方補強 skill：用官方文件、GitHub、產品 docs 驗證社群說法。</li>
+<li>寫作轉化 skill：把貼文轉成欒帥可用的教學/商業/工程框架。</li>
+<li>Build/deploy skill：重建靜態站、同步 deploy repo、commit/push。</li>
+<li>Verification skill：驗證文章頁、index、首頁、weekly digest 是否公開更新。</li>
+</ul>
+<p>這些如果包成一個「萬能歸檔 skill」，很快會難維護；拆成小 skill 後，每個環節都可獨立優化，也能服務不同內容類型。</p>
+<h1>教學應用</h1>
+<p>這篇可以設計成「拆解萬能 prompt」練習：</p>
+<ul>
+<li>學員先寫一個很大的萬能 prompt。</li>
+<li>標出其中的資料取得、處理、判斷、輸出、發布動作。</li>
+<li>依照單一職責拆成 3–6 個小 skill。</li>
+<li>判斷每個 skill 是 AI 可自動呼叫，還是必須人類手動執行。</li>
+<li>選其中一個最常重用的小 skill，補上描述、指令、工具三層。</li>
+</ul>
+<p>這樣學生會更容易理解：AI 工作流不是靠一個超長 prompt 撐住，而是靠一組可維護的小模組。</p>
+<h1>與官方文件的對照</h1>
+<p>Anthropic 工程文章把 Agent Skills 的特性描述為 composable、portable、powerful，並強調可以把額外檔案、腳本與資源放進 skill。Claude Code 文件也提供技能的 metadata 與 invocation 控制。這些都支持貼文的核心觀點：好的 skill 應該是可組合、可控制、可移植的工作資產。</p>
+<h1>判讀限制</h1>
+<ul>
+<li>貼文的「萬能 skill」是教學比喻；實際拆分粒度需依任務複雜度調整，不是越碎越好。</li>
+<li>`user-invocable` 與 `disable-model-invocation` 屬 Claude/Anthropic skill 生態中的控制欄位；其他平台可能有不同名稱或不支援。</li>
+<li>高風險動作即使設定為手動執行，也仍需要權限、日誌與二次確認機制，不能只依賴 prompt 約束。</li>
+</ul>
+<h1>來源</h1>
+<ul>
+<li>Facebook 原始貼文：羅達 Rhoda，AI 新手村連載第三天「萬能的 skill 其實是個大陷阱」。</li>
+<li>Anthropic Engineering：Equipping agents for the real world with Agent Skills。</li>
+<li>Anthropic：Introducing Agent Skills。</li>
+<li>GitHub：anthropics/skills 官方範例庫。</li>
+<li>Claude Code Docs：Extend Claude with skills。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-23 · https://www.facebook.com/share/p/1EMfbNv8jy/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI新手村</span><span class="tag">Agent Skills</span><span class="tag">Claude Code</span><span class="tag">Prompt Engineering</span><span class="tag">SOP</span><span class="tag">工作流設計</span><span class="tag">生產力</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1EMfbNv8jy/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EMfbNv8jy/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid0sQgyKxmZLnP6Ekrua6kt5psZBoDG2FEdQVj2BgKBdSGi3yKVVYX7nDJQwkuTdyBnl" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid0sQgyKxmZLnP6Ekrua6kt5psZBoDG2FEdQVj2BgKBdSGi3yKVVYX7nDJQwkuTdyBnl</a></p><p><a href="https://www.facebook.com/share/p/1EMfbNv8jy/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EMfbNv8jy/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid0sQgyKxmZLnP6Ekrua6kt5psZBoDG2FEdQVj2BgKBdSGi3yKVVYX7nDJQwkuTdyBnl" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid0sQgyKxmZLnP6Ekrua6kt5psZBoDG2FEdQVj2BgKBdSGi3yKVVYX7nDJQwkuTdyBnl</a></p><p><a href="https://www.facebook.com/share/p/19FCAvDNYj/" target="_blank" rel="noopener">https://www.facebook.com/share/p/19FCAvDNYj/</a></p><p><a href="https://www.facebook.com/share/p/1GedKHAugL/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1GedKHAugL/</a></p><p><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener">https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills</a></p><p><a href="https://www.anthropic.com/news/skills" target="_blank" rel="noopener">https://www.anthropic.com/news/skills</a></p><p><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">https://github.com/anthropics/skills</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
