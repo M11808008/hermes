@@ -1,0 +1,93 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>洪御博｜把企業顧問經驗拆成 Codex Skills 的商業營運系統</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>洪御博｜把企業顧問經驗拆成 Codex Skills 的商業營運系統</h1><h1>洪御博｜把企業顧問經驗拆成 Codex Skills 的商業營運系統</h1>
+<p>洪御博在 Facebook 貼文中分享一個「企業顧問經驗 × Codex Skills」的工作流：把十幾年的顧問框架拆成 Skill 後，使用者只要輸入公司網址或一句創業構想，例如「我想成立一個寵物殯葬事業，請幫我規劃」，系統就能產出市場營運計畫的初版骨架。</p>
+<p>這不是單純「AI 幫我寫企劃」，而是把經驗、框架、SOP、報表、提案流程變成可重複呼叫的知識資產。OpenAI 官方 Codex Skills 文件也確認：Skill 是一個包含 `SKILL.md` 的資料夾，可用 frontmatter 描述觸發條件，再把工作步驟、參考資料、腳本或模板放進去，讓 Codex 在合適任務中載入使用。</p>
+<h1>一句話摘要</h1>
+<p>這則貼文值得存的重點是：Codex 的商業價值不只在寫程式，而在「把專家經驗拆成可呼叫、可維護、可交接的 Skill」，讓企劃、市場分析、SOP、例行報表與提案初稿從一次性手工變成可複用系統。</p>
+<h1>貼文主張整理</h1>
+<p>| 面向 | 貼文中的說法 | 可轉成的實務設計 |</p>
+<p>|---|---|---|</p>
+<p>| 輸入 | 一個公司網址，或一句創業構想 | 建立「公司/專案 intake 表單」：網址、產業、目標客群、資源、限制、期限 |</p>
+<p>| 輸出 | 商業模式、市場分析、客群分析、廣告布局、價值主張、KPI、年度行事曆、部門整合、反對意見、工具建議、路線圖、甘特圖 | 拆成多個 Skill 或多階段 pipeline，不要一次塞進單一超大 prompt |</p>
+<p>| 框架來源 | Jay Abraham、Russell Brunson、Dan Kennedy、Chris Guillebeau 等行銷/創業框架 | 將框架做成 reference notes，避免 AI 只憑記憶模仿名人風格 |</p>
+<p>| 痛點 | 顧問開完會後要花數天整理分析與企劃 | 讓 AI 先產出 60–70 分的初版，人再判斷方向是否值得深入 |</p>
+<p>| 場景 | 離職交接、例行報表、KPI 追蹤、固定回覆、臨時提案 | 把組織知識變成「交接 Skill」「週報 Skill」「提案 Skill」「客服 Skill」 |</p>
+<h1>對欒帥真正有用的判讀</h1>
+<h2>1. 不要把它看成「一份教案」</h2>
+<p>這則貼文的 CTA 是「Codex 極速教案」，但對欒帥更有價值的是背後的架構：</p>
+<ul>
+<li>把顧問經驗拆成多個可觸發模組。</li>
+<li>每個模組都有輸入、輸出、檢查點與範例。</li>
+<li>用 Codex 先做初版，而不是直接當最終顧問結論。</li>
+<li>人類的工作從「從零整理資料」轉成「審核假設、修正策略、決定是否執行」。</li>
+</ul>
+<p>這比單純蒐集技能包更重要。Skills 的品質取決於你放進去的 SOP、範例、限制與驗收標準。</p>
+<h2>2. 商業顧問系統應拆成多個小 Skill</h2>
+<p>不要做一個「超級商業顧問 Skill」包辦全部，容易輸出漂亮但不可驗證的企劃書。比較好的拆法：</p>
+<p>| Skill | 目的 | 輸出 |</p>
+<p>|---|---|---|</p>
+<p>| `business-intake` | 將一句想法補齊為專案簡報 | 問題清單、假設、缺口資料 |</p>
+<p>| `market-scan` | 初步市場與競品盤點 | 市場摘要、競品表、資料來源 |</p>
+<p>| `customer-segment` | 定義客群與使用情境 | ICP、痛點、購買阻力 |</p>
+<p>| `value-proposition` | 轉成價值主張與訊息 | 主張、證據、反對意見 |</p>
+<p>| `campaign-plan` | 把主張變成廣告/內容計畫 | 內容主題、渠道、CTA |</p>
+<p>| `kpi-roadmap` | 把想法變成可追蹤計畫 | KPI、里程碑、甘特圖 |</p>
+<p>| `proposal-review` | 檢查企劃是否過度幻想 | 風險、缺證據、下一步驗證 |</p>
+<h1>欒帥可直接採用的版本</h1>
+<h2>A. AI 課程／工作坊企劃</h2>
+<p>將課程設計經驗變成 Skills：</p>
+<ul>
+<li>`course-intake`：輸入課程主題、對象、時數、場域、預算。</li>
+<li>`learner-profile`：生成學員程度與痛點假設。</li>
+<li>`curriculum-map`：拆學習目標、單元、練習與成果。</li>
+<li>`landing-page-brief`：生成招生頁架構與文案初稿。</li>
+<li>`course-risk-review`：檢查是否太工具導向、缺乏實作、時間不合理。</li>
+</ul>
+<p>這會比每次重新問 ChatGPT「幫我寫課綱」穩定很多。</p>
+<h2>B. AI 學習雷達週報／內容產品化</h2>
+<p>可以把現有知識庫變成內容營運系統：</p>
+<ul>
+<li>`weekly-signal-picker`：從新文章挑 3–5 個重要主題。</li>
+<li>`audience-angle`：分成教師、企業主管、創作者、工程師視角。</li>
+<li>`short-video-script`：生成 60–90 秒短影音口播。</li>
+<li>`linkedin-post`：轉成欒帥 LinkedIn 版本。</li>
+<li>`fact-check`：檢查來源、避免誇大與未驗證說法。</li>
+</ul>
+<h2>C. 組織交接與例行任務</h2>
+<p>貼文提到「離職交接」「報表」「KPI 追蹤」，這其實是企業導入 Agent Skills 最容易成功的低風險入口：</p>
+<ul>
+<li>先把現有 SOP、報表範本、常見問答整理成 Markdown。</li>
+<li>每個 Skill 只處理一類任務，例如週報、客服回覆、活動檢核、簡報大綱。</li>
+<li>要求輸出附上「使用了哪些資料、哪些是假設、哪些需要人確認」。</li>
+<li>最後由人審核後才寄出、發佈或交付客戶。</li>
+</ul>
+<h1>最小實驗：一小時做出第一個「顧問 Skill」</h1>
+<ul>
+<li>選一個高頻任務：例如「幫一個 AI 課程做市場定位」。</li>
+<li>寫一個 `SKILL.md`：包含觸發條件、輸入欄位、輸出格式、不可做的事。</li>
+<li>放入 2–3 個過去成功案例或範本。</li>
+<li>用 Codex 對同一個主題跑三次，觀察輸出是否穩定。</li>
+<li>加上驗收表：是否有資料來源？是否有假設？是否有下一步行動？</li>
+<li>把錯誤補回 Skill，而不是每次重新 prompt。</li>
+</ul>
+<h1>驗收標準</h1>
+<p>| 檢查 | 合格標準 |</p>
+<p>|---|---|</p>
+<p>| 可觸發 | Codex 能在正確任務中知道何時使用這個 Skill |</p>
+<p>| 可維護 | Skill 不是一大坨 prompt，而是有步驟、範例與限制 |</p>
+<p>| 可驗證 | 輸出要標記資料來源、假設與待確認項目 |</p>
+<p>| 可交接 | 別人看 `SKILL.md` 也能理解用途，不依賴原作者口頭說明 |</p>
+<p>| 可擴充 | 新案例可以追加到 references/templates，而不是重寫整個 Skill |</p>
+<h1>風險與限制</h1>
+<ul>
+<li>Facebook 貼文是公開宣傳與經驗分享，不等於該「Codex 極速教案」內容已被實測或驗證。</li>
+<li>AI 產出的市場分析、KPI、甘特圖可能很完整但不一定正確；必須回到資料來源與商業假設檢查。</li>
+<li>把同事交接資料或企業內部文件做成 Skill 時，要注意權限、個資、商業機密與離職交接倫理。</li>
+<li>Codex Skills 能提升重複任務效率，但不能取代決策責任；真正的價值在「初版速度 + 人類審核」，不是全自動出策略。</li>
+</ul>
+<h1>來源</h1>
+<ul>
+<li>Facebook 原始貼文：洪御博，主題為「千萬別讓老闆知道這個東西」與 Codex 極速教案。</li>
+<li>OpenAI Codex Skills 官方文件：確認 Skill 結構、`SKILL.md`、觸發描述與 CLI/IDE 使用方式。</li>
+<li>OpenAI AGENTS.md 官方文件：確認 Codex 可用專案層級說明維持專案規範。</li>
+<li>OpenAI Codex CLI 官方文件：確認 Codex CLI 的本地工作流與自然語言操作能力。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://www.facebook.com/bahn.hung/posts/pfbid01H5cyNLzGjQScJcSdiDKQdHEvgxCt7Sky8emySC9WYsUxPzAYegeoNpfJ27LFz1nl · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Codex</span><span class="tag">Agent Skills</span><span class="tag">商業顧問</span><span class="tag">自動化</span><span class="tag">知識管理</span><span class="tag">SOP</span><span class="tag">工作流</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1HDhpNzrHf/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1HDhpNzrHf/?mibextid=wwXIfr</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://www.facebook.com/share/p/1HDhpNzrHf/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1HDhpNzrHf/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/bahn.hung/posts/pfbid01H5cyNLzGjQScJcSdiDKQdHEvgxCt7Sky8emySC9WYsUxPzAYegeoNpfJ27LFz1nl" target="_blank" rel="noopener">https://www.facebook.com/bahn.hung/posts/pfbid01H5cyNLzGjQScJcSdiDKQdHEvgxCt7Sky8emySC9WYsUxPzAYegeoNpfJ27LFz1nl</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://developers.openai.com/codex/guides/agents-md" target="_blank" rel="noopener">https://developers.openai.com/codex/guides/agents-md</a></p><p><a href="https://developers.openai.com/codex/cli" target="_blank" rel="noopener">https://developers.openai.com/codex/cli</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
