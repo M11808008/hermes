@@ -6198,5 +6198,47 @@
     "slug": "2026-05-20-欒帥-我看過這個-repo-了",
     "html": "articles/2026-05-20-欒帥-我看過這個-repo-了.html",
     "markdown": "articles/2026/05/2026-05-20-欒帥-我看過這個-repo-了.md"
+  },
+  {
+    "title": "Anthropic Academy｜Claude 13 堂免費課程學習路線：Claude Code、Agent Skills、MCP 與 AI Fluency",
+    "date": "2026-03-05",
+    "source": "https://www.bnext.com.tw/article/90216/claude-13-free-lessons",
+    "author": "蘇柔瑋 / 數位時代 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude",
+      "Anthropic",
+      "Anthropic Academy",
+      "Claude Code",
+      "Agent Skills",
+      "MCP",
+      "Model Context Protocol",
+      "AI Fluency",
+      "AI Education",
+      "RAG",
+      "Computer Use",
+      "Learning Route"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/90216/claude-13-free-lessons",
+      "https://www.bnext.com.tw/article/90216/claude-13-free-lessons",
+      "https://www.bnext.com.tw/article/90216/claude-13-free-lessons",
+      "https://anthropic.skilljar.com/",
+      "https://anthropic.skilljar.com/claude-101",
+      "https://anthropic.skilljar.com/claude-code-in-action",
+      "https://anthropic.skilljar.com/introduction-to-agent-skills",
+      "https://anthropic.skilljar.com/claude-with-the-anthropic-api",
+      "https://anthropic.skilljar.com/introduction-to-model-context-protocol",
+      "https://anthropic.skilljar.com/model-context-protocol-advanced-topics",
+      "https://anthropic.skilljar.com/ai-fluency-framework-foundations"
+    ],
+    "excerpt": "這組課程不是單純的 Claude 操作教學，而是一條從「AI 素養」到「Agent 工程」的完整學習路線：非工程背景可先學 4D AI Fluency；工程與自動化工作流則應優先補 Claude Code、Agent Skills、MCP、Claude API 與 RAG。",
+    "slug": "2026-03-05-bnext-claude-13-free-lessons-anthropic-academy",
+    "html": "articles/2026-03-05-bnext-claude-13-free-lessons-anthropic-academy.html",
+    "markdown": "articles/2026/06/2026-03-05-bnext-claude-13-free-lessons-anthropic-academy.md"
   }
 ]
