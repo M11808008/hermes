@@ -623,6 +623,41 @@
     "markdown": "articles/2026/06/2026-06-24-muninn-iroh-hermes-phone-bridge.md"
   },
   {
+    "title": "羅達 Rhoda｜會自我迭代變強的 Skill：把每次修正寫回工作資產",
+    "date": "2026-06-24",
+    "source": "https://www.facebook.com/share/p/1CtWYxs3Mc/",
+    "author": "羅達 Rhoda / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI新手村",
+      "Agent Skills",
+      "Claude Code",
+      "Prompt Engineering",
+      "多 Agent",
+      "工作流設計",
+      "SOP",
+      "生產力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1CtWYxs3Mc/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid02LxsTHoZT6zijy1eGRiFFNuhMTr5qsU8yFsQdrZrNmsZyMnhvDkDpv9riBepxx7Uml",
+      "https://www.facebook.com/share/p/1CtWYxs3Mc/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid02LxsTHoZT6zijy1eGRiFFNuhMTr5qsU8yFsQdrZrNmsZyMnhvDkDpv9riBepxx7Uml",
+      "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "https://www.anthropic.com/news/skills",
+      "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "https://code.claude.com/docs/en/skills"
+    ],
+    "excerpt": "Prompt 是花掉的時間，skill 是存下來的本金；每次把修正寫回 skill，就是讓 AI 工作流產生複利。",
+    "slug": "2026-06-24-rhoda-self-iterating-skill-compounding",
+    "html": "articles/2026-06-24-rhoda-self-iterating-skill-compounding.html",
+    "markdown": "articles/2026/06/2026-06-24-rhoda-self-iterating-skill-compounding.md"
+  },
+  {
     "title": "Seedance 2.0 表情控制 Prompt｜用秒數節點寫出 AI 影片微表情表演",
     "date": "2026-06-24",
     "source": "https://www.threads.com/@dojquadarts/post/DZ4pkkSgUAk",

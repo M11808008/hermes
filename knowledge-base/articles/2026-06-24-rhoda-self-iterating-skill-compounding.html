@@ -1,0 +1,117 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>羅達 Rhoda｜會自我迭代變強的 Skill：把每次修正寫回工作資產</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>羅達 Rhoda｜會自我迭代變強的 Skill：把每次修正寫回工作資產</h1><h1>羅達 Rhoda｜會自我迭代變強的 Skill：把每次修正寫回工作資產</h1>
+<p>羅達 Rhoda 在「AI 新手村」五篇連載第四天，補上整套 skill 工作流最關鍵的一環：skill 不只是寫好一次就放著，而是要在每次使用後，把錯誤、修正、規則、例外與範例寫回去。</p>
+<p>這篇最值得欒帥保存的概念是：AI 不會自己變聰明；真正讓 AI 協作能力越來越強的，是人把「重複出現的修正」沉澱成可重用的工作資產。</p>
+<h1>一句話摘要</h1>
+<p>Prompt 是花掉的時間，skill 是存下來的本金；每次把修正寫回 skill，就是讓 AI 工作流產生複利。</p>
+<h1>文章核心：第 1 天與第 30 天的差距</h1>
+<p>貼文引用 Anthropic 的工程文化脈絡：目標不是只讓 Claude 今天完成任務，而是讓 Claude 與人合作到第 30 天時，比第 1 天更懂你的規則、語境與品質標準。</p>
+<p>差距不在於模型「用久了自然記得」，而在於工程師會在每次執行後問：</p>
+<p>```text</p>
+<p>這是一次性的修正，還是應該永遠寫進 skill？</p>
+<p>```</p>
+<p>如果答案是「以後還會遇到」，就應該寫回 skill。</p>
+<h1>自我迭代迴圈</h1>
+<p>```text</p>
+<p>使用 skill</p>
+<p>→ 發現錯誤或不符合期待</p>
+<p>→ 判斷是不是重複性規則</p>
+<p>→ 把規則、例外、範例寫回 skill</p>
+<p>→ 下次同類任務直接變好</p>
+<p>```</p>
+<p>這不是魔法，而是版本管理與知識沉澱。</p>
+<h1>貼文中的量化分析例子</h1>
+<p>羅達 Rhoda 以量化分析為例：</p>
+<p>| AI 常犯錯 | 寫回 skill 的規則 |</p>
+<p>|---|---|</p>
+<p>| 除權息日期抓成前一天 | 日期以收盤後公告為準 |</p>
+<p>| 成交量單位混淆：張 vs 股 | 明確寫入單位換算規則 |</p>
+<p>| 欄位有空值導致整批計算錯誤 | 寫入空值處理策略 |</p>
+<p>這些如果每次只在聊天中提醒，就是每次重做；如果寫回 skill，就會變成下次的預設能力。</p>
+<h1>可直接複製的回寫 Prompt</h1>
+<p>```text</p>
+<p>請 review 我剛剛用完這個 skill 後的來回對話。</p>
+<p>把我重複糾正你的地方，整理成規則寫回 skill，讓下次同樣的錯不會再發生。</p>
+<p>```</p>
+<p>更適合欒帥工作流的版本：</p>
+<p>```text</p>
+<p>請根據剛剛這次任務的錯誤、我補充的規則、你需要反覆確認的地方，提出一份 skill 更新建議。</p>
+<p>請分成：</p>
+<ul>
+<li>應新增的硬性規則</li>
+<li>應新增的例外情況</li>
+<li>應新增的範例</li>
+<li>應新增的驗證步驟</li>
+<li>不應寫入 skill、只屬於本次任務的暫時資訊</li>
+</ul>
+<p>最後請給我可直接貼回 SKILL.md 的段落。</p>
+<p>```</p>
+<h1>關鍵判斷：什麼該寫回，什麼不該寫回</h1>
+<p>| 類型 | 要不要寫回 skill | 原因 |</p>
+<p>|---|---|---|</p>
+<p>| 重複發生的錯誤 | 要 | 避免下次再犯 |</p>
+<p>| 使用者穩定偏好 | 要 | 會長期降低溝通成本 |</p>
+<p>| 檔案命名規則 | 要 | 屬於跨任務標準 |</p>
+<p>| 驗證流程 | 要 | 可提升品質穩定性 |</p>
+<p>| 本次任務的臨時網址 | 不要 | 很快過期 |</p>
+<p>| 一次性 PR 編號 / commit SHA | 不要 | 不是長期規則 |</p>
+<p>| 尚未驗證的猜測 | 不要 | 會污染 skill |</p>
+<p>| 使用者臨時改口 | 視情況 | 需要判斷是否為長期偏好 |</p>
+<p>這也是 Hermes Agent 記憶與 skill 維護的核心：長期規則進 skill，暫時任務狀態留在會話，不要把一次性雜訊寫進永久資產。</p>
+<h1>欒帥的 AI 學習雷達可怎麼用</h1>
+<p>以目前「分享 Facebook 貼文 → 歸檔 AI 學習雷達」流程為例，每次出錯都可回寫：</p>
+<ul>
+<li>如果 Facebook 文章有留言補充官方來源，要把留言來源也擷取。</li>
+<li>如果貼文是同一系列連載，要與前後篇互相連結。</li>
+<li>如果官方數字如 90.2% 只適用特定評測，要加上限制，不可過度泛化。</li>
+<li>如果 GitHub Pages 快取造成文章 404，要用 cache-busting query 與 Actions 狀態驗證。</li>
+<li>如果新文章已出現在 raw GitHub 但 Pages 尚未更新，要等待或觸發 rebuild。</li>
+</ul>
+<p>這些就是「錯一次、補一次」的 skill 複利。</p>
+<h1>多 Agent 並行之前，先把 Skill 養穩</h1>
+<p>貼文提到 Anthropic 內部多 agent 研究系統在特定內部 research eval 中，比單一 agent 高出 90.2%。這個數字很吸引人，但重點不該是「立刻開很多 agent」，而是：</p>
+<ul>
+<li>單一 skill 要先穩。</li>
+<li>每個 skill 要有清楚輸入、輸出、驗證標準。</li>
+<li>多個 agent 才能分工：抓資料、分析、撰寫、驗證。</li>
+<li>若 skill 不穩，多 agent 只會放大錯誤與溝通成本。</li>
+</ul>
+<p>對欒帥來說，正確順序是：</p>
+<p>```text</p>
+<p>Prompt 地基 → Skill 三層 → 可組合小 Skill → 使用後寫回 → 多 Agent 並行</p>
+<p>```</p>
+<h1>教學應用：讓學生理解「AI 複利」</h1>
+<p>這篇很適合做一個課堂活動：</p>
+<ul>
+<li>學生先用同一個 prompt 做一次任務。</li>
+<li>老師指出 2–3 個錯誤或不符合期待的地方。</li>
+<li>學生把修正寫回 skill。</li>
+<li>再做第二次同類任務。</li>
+<li>比較第 1 次與第 2 次輸出差異。</li>
+</ul>
+<p>學生會直觀看到：AI 能力提升不是因為模型自己進化，而是因為人把工作知識寫成可重複使用的規則。</p>
+<h1>商業應用：把顧問經驗產品化</h1>
+<p>顧問、講師、營運負責人最有價值的不是一次性的回答，而是長期累積的判斷規則。這篇可以轉化成商業方法：</p>
+<ul>
+<li>每次客戶專案後，把判斷準則寫回 skill。</li>
+<li>每次簡報被挑錯，把常見反駁與修正寫回 skill。</li>
+<li>每次資料分析出錯，把欄位定義、單位換算、例外處理寫回 skill。</li>
+<li>每次教學活動後，把學生卡點、範例、提問順序寫回 skill。</li>
+</ul>
+<p>久了之後，skill 庫會變成「可被 AI 調用的顧問方法論」。</p>
+<h1>與官方文件的對照</h1>
+<p>Anthropic 的 Agent Skills 文件與工程文章強調，skills 可以封裝指令、腳本、範例與資源，並讓 agent 在需要時載入。Anthropic 多 agent 研究系統文章則說明，在複雜研究任務中，lead agent 可以協調多個 subagents 並行探索。兩者合起來看，貼文的核心判斷是合理的：穩定、可迭代的 skill 是多 agent 發揮價值前的基礎。</p>
+<h1>判讀限制</h1>
+<ul>
+<li>「第 30 天比第 1 天強」應理解為工程式的 skill 維護與知識累積，不是模型本身自動永久學習。</li>
+<li>多 agent +90.2% 來自 Anthropic 特定內部研究評測，不代表所有任務都會提升 90.2%。</li>
+<li>讓 AI 幫你修改 skill 時，仍需人類審核，避免把錯誤規則、過度泛化或一次性資訊寫進長期資產。</li>
+<li>對高風險流程，例如資料庫寫入、對外發布、交易、付款，不應只靠 skill 規則，還需要權限、審核與日誌。</li>
+</ul>
+<h1>來源</h1>
+<ul>
+<li>Facebook 原始貼文：羅達 Rhoda，AI 新手村連載第四天「送你一個會自我迭代變強的 skill」。</li>
+<li>Anthropic Engineering：How we built our multi-agent research system。</li>
+<li>Anthropic：Introducing Agent Skills。</li>
+<li>Anthropic Engineering：Equipping agents for the real world with Agent Skills。</li>
+<li>Claude Code Docs：Extend Claude with skills。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-24 · https://www.facebook.com/share/p/1CtWYxs3Mc/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI新手村</span><span class="tag">Agent Skills</span><span class="tag">Claude Code</span><span class="tag">Prompt Engineering</span><span class="tag">多 Agent</span><span class="tag">工作流設計</span><span class="tag">SOP</span><span class="tag">生產力</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1CtWYxs3Mc/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1CtWYxs3Mc/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid02LxsTHoZT6zijy1eGRiFFNuhMTr5qsU8yFsQdrZrNmsZyMnhvDkDpv9riBepxx7Uml" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid02LxsTHoZT6zijy1eGRiFFNuhMTr5qsU8yFsQdrZrNmsZyMnhvDkDpv9riBepxx7Uml</a></p><p><a href="https://www.facebook.com/share/p/1CtWYxs3Mc/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1CtWYxs3Mc/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid02LxsTHoZT6zijy1eGRiFFNuhMTr5qsU8yFsQdrZrNmsZyMnhvDkDpv9riBepxx7Uml" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid02LxsTHoZT6zijy1eGRiFFNuhMTr5qsU8yFsQdrZrNmsZyMnhvDkDpv9riBepxx7Uml</a></p><p><a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener">https://www.anthropic.com/engineering/multi-agent-research-system</a></p><p><a href="https://www.anthropic.com/news/skills" target="_blank" rel="noopener">https://www.anthropic.com/news/skills</a></p><p><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener">https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
