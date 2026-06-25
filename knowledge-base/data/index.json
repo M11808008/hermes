@@ -343,6 +343,40 @@
     "markdown": "articles/2026/06/2026-06-25-openmontage-agentic-video-production-system.md"
   },
   {
+    "title": "吳相勳｜用 Claude Computer Use / Codex 做生成式 AI 社群監測排程",
+    "date": "2026-06-25",
+    "source": "https://www.facebook.com/sonicwu/posts/pfbid02ZRjTWVnopUKAM8Qu85oDaVf6vGyGB9n2xmipoect4Ac3RU2Cjfup5CXfoqcJkQsal",
+    "author": "吳相勳 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Agent",
+      "Claude Computer Use",
+      "Codex",
+      "社群監測",
+      "自動化",
+      "Cron",
+      "Knowledge Work",
+      "資訊策展"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1HZUNkFVuJ/",
+      "https://www.facebook.com/sonicwu/posts/pfbid02ZRjTWVnopUKAM8Qu85oDaVf6vGyGB9n2xmipoect4Ac3RU2Cjfup5CXfoqcJkQsal",
+      "https://www.facebook.com/share/p/1HZUNkFVuJ/",
+      "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool",
+      "https://code.claude.com/docs/en/computer-use",
+      "https://developers.openai.com/codex/cloud",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/cron"
+    ],
+    "excerpt": "這則貼文不是單純「用 AI 滑社群」，而是把資訊焦慮轉成可排程的社群偵測流程：AI 負責巡覽、篩選、摘要、留檔與寄送，人類只看高品質候選清單。",
+    "slug": "2026-06-25-sonicwu-ai-social-monitoring-agent",
+    "html": "articles/2026-06-25-sonicwu-ai-social-monitoring-agent.html",
+    "markdown": "articles/2026/06/2026-06-25-sonicwu-ai-social-monitoring-agent.md"
+  },
+  {
     "title": "video-autopilot-kit｜CapCut Computer Use × ffmpeg 的短影音自動化框架",
     "date": "2026-06-25",
     "source": "https://github.com/Hao0321/video-autopilot-kit",

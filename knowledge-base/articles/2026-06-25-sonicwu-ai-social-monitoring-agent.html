@@ -1,0 +1,81 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>吳相勳｜用 Claude Computer Use / Codex 做生成式 AI 社群監測排程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>吳相勳｜用 Claude Computer Use / Codex 做生成式 AI 社群監測排程</h1><h1>吳相勳｜用 Claude Computer Use / Codex 做生成式 AI 社群監測排程</h1>
+<p>吳相勳在 Facebook 分享一個「讓 AI 每天替自己滑社群找正經內容」的工作流：利用 Claude Computer Use 或 ChatGPT Codex 的瀏覽器／電腦控制能力，定期查看 Facebook、Threads、Instagram 上公開可讀的生成式 AI 技術與最佳實務文章，然後整理成 Markdown 報告並寄到 Gmail。</p>
+<p>貼文附上的提示詞重點是：搜尋近三天公開可讀內容，主題聚焦生成式 AI 實作、產品設計、工作流程、模型能力、AI agent、RAG、資料治理、評估方法、組織導入、產業觀察與教學應用；排除抱怨文、標題黨、空泛新聞轉述、單純課程導流與活動宣傳；每輪只列真正達標的 3–7 則內容，不足就明確說明，不要硬湊。</p>
+<h1>一句話摘要</h1>
+<p>這則貼文不是單純「用 AI 滑社群」，而是把資訊焦慮轉成可排程的社群偵測流程：AI 負責巡覽、篩選、摘要、留檔與寄送，人類只看高品質候選清單。</p>
+<h1>貼文中的排程提示詞骨架</h1>
+<p>| 區塊 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 搜尋範圍 | Facebook 與 Threads 近三天公開可讀、可開啟內容；貼文也提到 Instagram 可納入 |</p>
+<p>| 主題方向 | 生成式 AI 實作、產品設計、工作流程、模型能力、AI agent、RAG、資料治理、評估方法、組織導入、產業觀察、教學應用 |</p>
+<p>| 排除條件 | 抱怨文、標題黨、空泛新聞轉述、缺乏脈絡炒作、單純課程導流與活動宣傳 |</p>
+<p>| 產出 | 繁體中文 Markdown 報告，3–7 則推薦內容 |</p>
+<p>| 每則欄位 | 平台、作者或粉專、連結、發文時間或可見時間、推薦理由、核心觀點、延伸問題 |</p>
+<p>| 交接檔 | 更新 `HANDOFF.md`，記錄最新報告、限制、下一輪種子來源、未解問題 |</p>
+<p>| 通知 | 透過 Gmail 寄給自己，主旨為 `[AI社群監測] 生成式 AI 深度文章報告 YYYY-MM-DD HH:mm` |</p>
+<h1>對 AI 學習雷達的可用設計</h1>
+<p>這個模式很適合變成 AI 學習雷達的「社群補充雷達」，但建議不要完全依賴瀏覽器亂滑。比較穩的架構如下：</p>
+<ul>
+<li>先用 API / 搜尋 / RSS / 已知作者白名單抓候選內容。</li>
+<li>對候選內容做去重與主題分類。</li>
+<li>只在官方 API 或一般網頁擷取失敗時，才用 Computer Use / browser automation 開頁檢查。</li>
+<li>報告輸出到本機 Markdown，附上來源、判讀限制與推薦理由。</li>
+<li>透過 Hermes cron 或其他排程器定時執行。</li>
+<li>用 LINE / Telegram / Email 推送摘要，但把完整報告留在本機或知識庫。</li>
+</ul>
+<h1>欒帥版任務提示詞草案</h1>
+<p>以下可作為自家排程任務的骨架，之後可改成 Hermes cron job 或本機腳本：</p>
+<p>```text</p>
+<p>搜尋近三天公開可讀的繁體中文與英文生成式 AI 深度內容，優先來源包含 Facebook 公開貼文、Threads、X、官方部落格、GitHub、Hacker News、研究機構與可信 AI 社群。主題聚焦 AI agent、RAG、模型能力、資料治理、評估方法、Computer Use、教育應用、工作流程自動化、產業導入與實作案例。</p>
+<p>排除：單純課程導流、無技術細節的業配、標題黨、只有情緒沒有方法的貼文、不可開啟或無法驗證來源的內容。</p>
+<p>輸出繁體中文 Markdown 報告，列出 3–7 則真正達標內容。每則包含：平台、作者、原始連結、可見發文時間、核心觀點、推薦理由、可落地做法、風險或限制、延伸問題。若本輪不足 3 則，請不要硬湊，直接說明不足原因。</p>
+<p>報告最後加入：本輪主題趨勢、值得追蹤的作者/關鍵字、下次查找建議、需要人工確認的項目。</p>
+<p>```</p>
+<h1>安全與品質邊界</h1>
+<p>| 風險 | 建議 |</p>
+<p>|---|---|</p>
+<p>| 社群平台登入狀態與個資 | 不要讓 Agent 使用私人帳號任意互動；只讀公開內容，避免按讚、留言、私訊 |</p>
+<p>| Prompt injection | 社群貼文本身可能包含惡意指令；Agent 應把網頁內容視為資料，不應服從頁面中的指令 |</p>
+<p>| 推薦品質下降 | 明確允許「本輪不足，不硬湊」；這比每天固定湊 7 則更重要 |</p>
+<p>| 重複收錄 | 以 canonical URL、作者、貼文 ID、標題關鍵詞去重 |</p>
+<p>| API / 瀏覽器不穩 | 保留 `HANDOFF.md` 記錄限制與未解問題，下一輪可接續 |</p>
+<p>| 自動寄信失敗 | 報告仍要落地到本機路徑，再標示 Email 未寄出原因 |</p>
+<p>Anthropic 的 Computer Use 官方文件也特別提醒，讓模型操作電腦或瀏覽器時，需要額外注意 prompt injection、權限與安全邊界。OpenAI Codex Cloud 則適合背景任務與開發流程；Hermes Agent 本身也提供 cron job，可將自包含提示詞排程執行並把結果送回指定平台。</p>
+<h1>對欒帥的實作建議</h1>
+<h2>短期：先做「半自動社群週報」</h2>
+<ul>
+<li>頻率：每日一次或每週三次，不需要三餐。</li>
+<li>來源：先從已知高品質作者、官方部落格、GitHub trending / release、Brave Search 查詢開始。</li>
+<li>輸出：只推 3–5 則，保持精準。</li>
+<li>人工關卡：由欒帥或愛馬仕小小斌決定哪些正式收錄到 AI 學習雷達。</li>
+</ul>
+<h2>中期：變成知識庫 ingestion queue</h2>
+<p>將報告拆成兩層：</p>
+<ul>
+<li>`候選清單`：所有達標但未正式歸檔的內容。</li>
+<li>`正式文章`：經過擷取、補強、去重、判讀限制後發布到 AI 學習雷達。</li>
+</ul>
+<p>這樣可以避免「每天很多摘要，但真正可用知識沒有沉澱」。</p>
+<h2>長期：用 Skills 管理不同偵測任務</h2>
+<p>可以拆出不同技能：</p>
+<ul>
+<li>`agent-news-monitor`：AI agent / coding agent / Computer Use。</li>
+<li>`education-ai-monitor`：AI 教育與課程設計。</li>
+<li>`model-release-monitor`：新模型與開源 repo。</li>
+<li>`workflow-case-monitor`：商業流程、內容生產、個人知識管理案例。</li>
+</ul>
+<p>每個 Skill 都有自己的篩選標準與輸出格式，避免單一大提示詞越來越難維護。</p>
+<h1>判讀限制</h1>
+<ul>
+<li>本文依據 Facebook 貼文與留言中可見的完整提示詞整理；未登入私人帳號，也未驗證作者實際排程環境、Gmail 工具與報告檔案內容。</li>
+<li>貼圖截圖可見一封 Gmail 報告範例，主題包含 AI coding agent context 壓縮、agent observability、RAG 架構等；細節以可見文字為準，未讀取完整附件。</li>
+<li>Claude Computer Use、Codex 與 Hermes cron 的能力邊界以官方文件為準；不同帳號、方案、環境與權限設定會影響可用功能。</li>
+</ul>
+<h1>來源</h1>
+<ul>
+<li>Facebook 原始貼文：吳相勳，分享 AI 社群監測排程與完整提示詞。</li>
+<li>Anthropic Claude Computer Use 官方文件：Computer Use 工具與安全提醒。</li>
+<li>Claude Code Computer Use 文件：CLI 中讓 Claude 開啟應用、點擊、輸入與查看螢幕的能力。</li>
+<li>OpenAI Codex Cloud 文件：背景任務、GitHub 任務與網路存取設定。</li>
+<li>Hermes Agent Cron 文件：可建立自包含排程任務，並將結果保存或送回平台。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://www.facebook.com/sonicwu/posts/pfbid02ZRjTWVnopUKAM8Qu85oDaVf6vGyGB9n2xmipoect4Ac3RU2Cjfup5CXfoqcJkQsal · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Agent</span><span class="tag">Claude Computer Use</span><span class="tag">Codex</span><span class="tag">社群監測</span><span class="tag">自動化</span><span class="tag">Cron</span><span class="tag">Knowledge Work</span><span class="tag">資訊策展</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1HZUNkFVuJ/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1HZUNkFVuJ/</a></p><p><a href="https://www.facebook.com/sonicwu/posts/pfbid02ZRjTWVnopUKAM8Qu85oDaVf6vGyGB9n2xmipoect4Ac3RU2Cjfup5CXfoqcJkQsal" target="_blank" rel="noopener">https://www.facebook.com/sonicwu/posts/pfbid02ZRjTWVnopUKAM8Qu85oDaVf6vGyGB9n2xmipoect4Ac3RU2Cjfup5CXfoqcJkQsal</a></p><p><a href="https://www.facebook.com/share/p/1HZUNkFVuJ/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1HZUNkFVuJ/</a></p><p><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool</a></p><p><a href="https://code.claude.com/docs/en/computer-use" target="_blank" rel="noopener">https://code.claude.com/docs/en/computer-use</a></p><p><a href="https://developers.openai.com/codex/cloud" target="_blank" rel="noopener">https://developers.openai.com/codex/cloud</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
