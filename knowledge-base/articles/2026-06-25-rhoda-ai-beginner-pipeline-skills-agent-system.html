@@ -1,0 +1,119 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>羅達 Rhoda｜用一句話啟動資料分析 Pipeline：Prompt、Skills 與多 Agent 的新手系統化路線</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>羅達 Rhoda｜用一句話啟動資料分析 Pipeline：Prompt、Skills 與多 Agent 的新手系統化路線</h1><h1>羅達 Rhoda｜用一句話啟動資料分析 Pipeline：Prompt、Skills 與多 Agent 的新手系統化路線</h1>
+<p>羅達 Rhoda 在 Facebook「AI 新手村」五篇連載大結局中，示範如何從一個好 prompt，逐步養成可以重複執行的資料分析系統。貼文的核心案例是股票研究日報：過去手動抓資料、清洗、算指標、畫圖、寫結論可能要一兩個小時；現在透過一句觸發指令「幫我跑 XXXX 的日報」，讓一串 skills 接力完成。</p>
+<p>這則貼文的價值不在於單一工具教學，而在於把新手最容易卡住的「我會問 AI，但不知道怎麼變成系統」拆成五個可執行階段：Prompt → Skill → 可組合 Skill → Skill 自我迭代 → 多 Agent 並行。</p>
+<h1>一句話摘要</h1>
+<p>先不要急著做大系統；從一個好 prompt 開始，把重複工作拆成小 skill，再把 skill 養到穩定，最後才交給多 agent 並行。</p>
+<h1>貼文中的五步路線</h1>
+<p>| 階段 | 貼文說法 | 實務轉譯 |</p>
+<p>|---|---|---|</p>
+<p>| 1. Prompt | 每一步都從一個 prompt 開始 | 先把「怎麼抓資料」「怎麼清洗」「怎麼算」用自然語言講清楚 |</p>
+<p>| 2. 三層 Skill | 描述、指令、工具 | 一個 skill 至少要有何時啟用、執行步驟、欄位規則/腳本/模板 |</p>
+<p>| 3. 可組合 | 不做萬能巨獸 | 把流程拆成抓資料、清洗、算指標、畫圖、寫結論等小模組 |</p>
+<p>| 4. 自我進化 | 用完寫回 skill | 遇到除權息、單位、空值等錯誤，要回寫規則而不是每次重新提醒 |</p>
+<p>| 5. 多 Agent | 一句話並行 | 在技能穩定後，再讓不同 agent 平行處理資料、計算、視覺化與撰稿 |</p>
+<h1>貼文給出的 Pipeline 範本</h1>
+<p>```text</p>
+<p>一句話（觸發）</p>
+<p>→ 抓資料 skill</p>
+<p>→ 清洗 skill</p>
+<p>→ 算指標 skill</p>
+<p>→ 畫圖 skill</p>
+<p>→ 寫結論 skill</p>
+<p>→ 一份日報</p>
+<p>```</p>
+<p>貼文提供的新手 prompt：</p>
+<p>```text</p>
+<p>我每天／每週都要做『XX 分析』。請幫我：</p>
+<p>（1）把它拆成 3～5 個各司其職的小 skill；</p>
+<p>（2）每個 skill 標出描述、指令、需要的工具；</p>
+<p>（3）設計一句『觸發指令』，讓我打一句話就能依序跑完整條流程。</p>
+<p>```</p>
+<h1>對欒帥的實作版本</h1>
+<p>如果要把這套思路用在 AI 學習雷達、課程設計或商業分析，不建議直接建立「超大型萬能 AI 助理」。更穩的作法是先選一個高頻任務，拆成明確 pipeline。</p>
+<h2>範例 A：AI 學習雷達文章歸檔</h2>
+<p>```text</p>
+<p>觸發：歸檔這個 AI 連結</p>
+<p>→ source-extraction skill：擷取原文、作者、日期、可見圖片與外部連結</p>
+<p>→ authority-check skill：找官方文件、GitHub、論文或產品頁補強</p>
+<p>→ practical-translation skill：轉成欒帥可用的教學、商業或工作流觀點</p>
+<p>→ knowledge-base-writing skill：產出 Markdown 與 frontmatter</p>
+<p>→ publish-verify skill：重建索引、部署、驗證公開 URL</p>
+<p>```</p>
+<p>這其實已經接近目前愛馬仕小小斌的工作流：不是只摘要，而是把連結轉成可累積的知識資產。</p>
+<h2>範例 B：課程設計 Pipeline</h2>
+<p>```text</p>
+<p>觸發：幫我把這個 AI 主題做成 90 分鐘課</p>
+<p>→ audience-scan skill：確認學員背景、先備知識、痛點</p>
+<p>→ concept-map skill：拆核心概念與誤區</p>
+<p>→ activity-design skill：設計練習、討論、產出物</p>
+<p>→ slide-outline skill：產生投影片架構</p>
+<p>→ assessment skill：設計檢核題與課後任務</p>
+<p>```</p>
+<h2>範例 C：股票或產業日報 Pipeline</h2>
+<p>```text</p>
+<p>觸發：幫我跑某公司／某產業日報</p>
+<p>→ data-source skill：抓行情、新聞、財報、公告</p>
+<p>→ cleaning skill：處理缺值、單位、時間區間、除權息</p>
+<p>→ indicator skill：計算關鍵指標</p>
+<p>→ visualization skill：畫圖與標註異常</p>
+<p>→ narrative skill：整理成管理者可讀結論</p>
+<p>```</p>
+<h1>Skill 的三層設計檢查表</h1>
+<p>| 層級 | 必填內容 | 常見錯誤 |</p>
+<p>|---|---|---|</p>
+<p>| 描述 | 這個 skill 何時該被啟用、何時不該用 | 只寫「做資料分析」，太模糊 |</p>
+<p>| 指令 | 明確步驟、輸入、輸出、錯誤處理 | 只寫目標，沒有流程 |</p>
+<p>| 工具 | 欄位規則、公式、腳本、模板、範例 | 沒有可重用素材，每次都靠模型猜 |</p>
+<p>Claude Code 官方 skills 文件也採用類似思路：Skill 不只是 Markdown 說明，還可以包含模板、腳本、範例輸出等輔助檔案。OpenAI Codex Skills 文件也強調，skills 讓 agent 能在需要時選用特定任務知識，而不是把所有細節都塞進主提示詞。</p>
+<h1>多 Agent 要晚一點再上</h1>
+<p>貼文提到 Anthropic 內部多 agent 研究系統在內部 research eval 中，比單一 Claude Opus 4 agent 高出 90.2%。這個數字來自 Anthropic 工程文章，脈絡是複雜研究任務下的 lead agent + subagents 架構，不代表所有任務都會自動提升 90%。</p>
+<p>對欒帥來說，比較務實的判斷是：</p>
+<ul>
+<li>任務能拆成彼此相對獨立的子問題，才值得並行。</li>
+<li>每個子任務的輸入、輸出、完成標準要清楚。</li>
+<li>合併結果需要另一個「總編 / reviewer」角色檢查矛盾與重複。</li>
+<li>如果 skill 還沒穩，多 agent 只會把錯誤放大。</li>
+</ul>
+<h1>從新手到系統的落地路線</h1>
+<ul>
+<li>選一個每週至少做一次的重複任務。</li>
+<li>寫出第一版「一句話觸發指令」。</li>
+<li>把任務拆成 3–5 個小 skill。</li>
+<li>每個 skill 補上三層：描述、指令、工具。</li>
+<li>跑一次完整流程，記錄失敗點。</li>
+<li>把失敗規則寫回對應 skill。</li>
+<li>重複 3–5 次後，才考慮自動化或多 agent 並行。</li>
+</ul>
+<h1>不建議一開始做的事</h1>
+<ul>
+<li>不要先做「萬能助理」。</li>
+<li>不要把所有規則塞進單一超長 prompt。</li>
+<li>不要在流程尚未穩定前就上排程自動化。</li>
+<li>不要讓多 agent 同時改同一份資料或同一個檔案。</li>
+<li>不要只保存漂亮輸出；要保存錯誤修正規則。</li>
+</ul>
+<h1>對 AI 學習雷達的關聯</h1>
+<p>這篇可以與既有的 Claude Skills、Codex Skills、社群監測排程與工作流產品化文章互相連結。它補上的是「新手怎麼從第一個 prompt 走到可複用系統」的教學階梯。</p>
+<p>若未來要開 AI 實作課，這篇可作為一堂 60–90 分鐘工作坊：</p>
+<ul>
+<li>學員選自己的重複工作。</li>
+<li>寫一句觸發指令。</li>
+<li>拆 3–5 個 skill。</li>
+<li>每個 skill 寫描述、指令、工具。</li>
+<li>讓 AI 產出第一版 pipeline。</li>
+<li>討論如何把錯誤寫回 skill。</li>
+</ul>
+<h1>判讀限制</h1>
+<ul>
+<li>本文依據 Facebook 公開可見貼文、圖片 alt/OCR 與留言中的系列連結整理；未登入私人帳號，也未逐篇完整擷取前四篇連載。</li>
+<li>貼文中的股票日報流程是作者自述使用情境；本文將其轉化為通用 pipeline 設計法，並非驗證其投資分析準確度。</li>
+<li>Anthropic 90.2% 數字應限縮理解為 Anthropic 內部研究評測中的複雜研究任務結果，不應泛化為所有多 agent 工作流必然提升。</li>
+</ul>
+<h1>來源</h1>
+<ul>
+<li>Facebook 原始貼文：羅達 Rhoda，AI 新手村連載大結局，五步串成資料分析 pipeline。</li>
+<li>Anthropic Engineering：How we built our multi-agent research system。</li>
+<li>Claude Code Docs：Extend Claude with skills。</li>
+<li>Claude Blog：Steering Claude Code: skills, hooks, subagents and more。</li>
+<li>OpenAI Developers：Codex Agent Skills。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://www.facebook.com/share/p/18XpBWXE18/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI新手村</span><span class="tag">Prompt Engineering</span><span class="tag">Claude Code</span><span class="tag">Agent Skills</span><span class="tag">Multi Agent</span><span class="tag">Data Pipeline</span><span class="tag">FinTech</span><span class="tag">生產力</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/18XpBWXE18/" target="_blank" rel="noopener">https://www.facebook.com/share/p/18XpBWXE18/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid026meQaZeWjUvr2Q3MFfp2yjF3fMiXuSMQDuR82EQqiPukQm6jP4mJBZ5kMmVEA6YQl" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid026meQaZeWjUvr2Q3MFfp2yjF3fMiXuSMQDuR82EQqiPukQm6jP4mJBZ5kMmVEA6YQl</a></p><p><a href="https://www.facebook.com/share/p/18XpBWXE18/" target="_blank" rel="noopener">https://www.facebook.com/share/p/18XpBWXE18/</a></p><p><a href="https://www.facebook.com/AV8D.levelup/posts/pfbid026meQaZeWjUvr2Q3MFfp2yjF3fMiXuSMQDuR82EQqiPukQm6jP4mJBZ5kMmVEA6YQl" target="_blank" rel="noopener">https://www.facebook.com/AV8D.levelup/posts/pfbid026meQaZeWjUvr2Q3MFfp2yjF3fMiXuSMQDuR82EQqiPukQm6jP4mJBZ5kMmVEA6YQl</a></p><p><a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener">https://www.anthropic.com/engineering/multi-agent-research-system</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more" target="_blank" rel="noopener">https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

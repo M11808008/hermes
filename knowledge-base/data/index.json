@@ -343,6 +343,41 @@
     "markdown": "articles/2026/06/2026-06-25-openmontage-agentic-video-production-system.md"
   },
   {
+    "title": "羅達 Rhoda｜用一句話啟動資料分析 Pipeline：Prompt、Skills 與多 Agent 的新手系統化路線",
+    "date": "2026-06-25",
+    "source": "https://www.facebook.com/share/p/18XpBWXE18/",
+    "author": "羅達 Rhoda / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI新手村",
+      "Prompt Engineering",
+      "Claude Code",
+      "Agent Skills",
+      "Multi Agent",
+      "Data Pipeline",
+      "FinTech",
+      "生產力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/18XpBWXE18/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid026meQaZeWjUvr2Q3MFfp2yjF3fMiXuSMQDuR82EQqiPukQm6jP4mJBZ5kMmVEA6YQl",
+      "https://www.facebook.com/share/p/18XpBWXE18/",
+      "https://www.facebook.com/AV8D.levelup/posts/pfbid026meQaZeWjUvr2Q3MFfp2yjF3fMiXuSMQDuR82EQqiPukQm6jP4mJBZ5kMmVEA6YQl",
+      "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "https://code.claude.com/docs/en/skills",
+      "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more",
+      "https://developers.openai.com/codex/skills"
+    ],
+    "excerpt": "先不要急著做大系統；從一個好 prompt 開始，把重複工作拆成小 skill，再把 skill 養到穩定，最後才交給多 agent 並行。",
+    "slug": "2026-06-25-rhoda-ai-beginner-pipeline-skills-agent-system",
+    "html": "articles/2026-06-25-rhoda-ai-beginner-pipeline-skills-agent-system.html",
+    "markdown": "articles/2026/06/2026-06-25-rhoda-ai-beginner-pipeline-skills-agent-system.md"
+  },
+  {
     "title": "吳相勳｜用 Claude Computer Use / Codex 做生成式 AI 社群監測排程",
     "date": "2026-06-25",
     "source": "https://www.facebook.com/sonicwu/posts/pfbid02ZRjTWVnopUKAM8Qu85oDaVf6vGyGB9n2xmipoect4Ac3RU2Cjfup5CXfoqcJkQsal",
