@@ -1,0 +1,109 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gemini 3.5 Flash 內建 Computer Use｜瀏覽器、手機與桌面 Agent 操作能力</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Gemini 3.5 Flash 內建 Computer Use｜瀏覽器、手機與桌面 Agent 操作能力</h1><h1>Gemini 3.5 Flash 內建 Computer Use｜瀏覽器、手機與桌面 Agent 操作能力</h1>
+<p>unwire.hk 報導 Google 在 2026-06-24 宣布將 Computer Use 功能直接整合到 Gemini 3.5 Flash。Google 官方部落格也確認：Computer Use 現在是 Gemini 3.5 Flash 支援的內建工具，開發者可透過 Gemini API 與 Gemini Enterprise Agent Platform 建立能看見、理解並操作介面的 Agent。</p>
+<h1>一句話摘要</h1>
+<p>Gemini 的 Computer Use 從「獨立 Gemini 2.5 computer use model」升級為「Gemini 3.5 Flash 內建工具」，代表 Google 正把瀏覽器、手機與桌面操作能力納入主流 Flash 模型，讓 Agent 不只會回答，也能執行長流程任務；但實務導入必須搭配 sandbox、人類確認、權限隔離與 prompt injection 防護。</p>
+<h1>來源資訊</h1>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 媒體來源 | unwire.hk《Google Gemini 3.5 Flash 內置 Computer Use 功能 可直接操作瀏覽器、手機及桌面》 |</p>
+<p>| 媒體日期 | 2026-06-25 |</p>
+<p>| 官方來源 | Google Blog《Introducing computer use in Gemini 3.5 Flash》 |</p>
+<p>| 官方日期 | 2026-06-24 |</p>
+<p>| 官方作者 | Mateo Quiros, Product Manager, Google DeepMind |</p>
+<p>| 官方一句話 | Computer use is now a built-in tool in Gemini 3.5 Flash to build agents that can interact across platforms. |</p>
+<p>| 開發入口 | Gemini API、Gemini Enterprise Agent Platform、Browserbase demo、Google Gemini computer-use-preview repo |</p>
+<h1>核心變化</h1>
+<p>| 以前 | 現在 |</p>
+<p>|---|---|</p>
+<p>| Computer Use 主要以獨立的 Gemini 2.5 computer use model 提供 | Computer Use 成為 Gemini 3.5 Flash 內建工具 |</p>
+<p>| 開發者需要另外選用獨立 computer-use 模型 | 可在主流 Flash 模型上使用 Computer Use 能力 |</p>
+<p>| 偏 preview / 特定模型能力 | 更接近 Gemini API 與企業 Agent 平台的一般開發能力 |</p>
+<p>| 以瀏覽器自動化示範為主 | 官方敘述擴展到 browser、mobile、desktop environments |</p>
+<p>Google 官方說法是：Gemini 已擅長 function calling、Search / Maps grounding 等內建工具；加入 Computer Use 後，開發者可建立能 across browser, mobile and desktop environments 看見、推理並採取行動的 custom agents。</p>
+<h1>可做什麼</h1>
+<p>| 類型 | 可能任務 | 欒帥的判讀 |</p>
+<p>|---|---|---|</p>
+<p>| 瀏覽器操作 | 網頁測試、表單填寫、跨站資料檢查、Browserbase demo | 可與現有 Hermes / browser tools / Playwright QA 流程比較 |</p>
+<p>| 軟體測試 | 連續測試 UI、檢查流程是否可用、回報失敗步驟 | 對課程 landing page、知識庫管理介面、報名頁驗證有價值 |</p>
+<p>| 無障礙檢查 | Google demo 提到可 audit documentation for accessibility issues | 可用在課程網站與知識庫前端的 a11y 審查 |</p>
+<p>| 企業應用 | 操作專業工具、長流程 knowledge work、內部系統任務 | 需要更嚴格權限、沙盒與審批；不宜直接連敏感後台 |</p>
+<p>| 手機 / 桌面 | 官方與 unwire 均提到支援 mobile / desktop environments | 實際 API、平台支援與執行環境需依 Google docs 更新驗證 |</p>
+<h1>官方 reference implementation</h1>
+<p>Google 連到 `google-gemini/computer-use-preview` 作為參考實作。GitHub API 擷取快照：</p>
+<p>| 項目 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Repo | <a href="https://github.com/google-gemini/computer-use-preview" target="_blank" rel="noopener">https://github.com/google-gemini/computer-use-preview</a> |</p>
+<p>| 語言 | Python |</p>
+<p>| License | Apache-2.0 |</p>
+<p>| Stars / Forks | 2026-06-25 擷取時約 3,015 stars、380 forks |</p>
+<p>| 主要執行檔 | `main.py` |</p>
+<p>| 支援環境 | `playwright` 本機 Chrome、`browserbase` 雲端瀏覽器 |</p>
+<p>| 預設模型 | README 顯示 `gemini-3.5-flash` |</p>
+<p>| 早期模型 | `gemini-2.5-computer-use-preview-10-2025` |</p>
+<p>| 需要金鑰 | `GEMINI_API_KEY`；若用 Browserbase 另需 `BROWSERBASE_API_KEY` / `BROWSERBASE_PROJECT_ID` |</p>
+<p>README 的基本命令概念：</p>
+<p>```bash</p>
+<p>python main.py --query &quot;Go to Google and type &#x27;Hello World&#x27; into the search bar&quot; --env=&quot;playwright&quot;</p>
+<p>python main.py --query &quot;Go to Google and type &#x27;Hello World&#x27; into the search bar&quot; --env=&quot;browserbase&quot;</p>
+<p>```</p>
+<p>這表示 Google 目前把「Computer Use」包成可由自然語言任務驅動的 browser agent 參考架構，而不是只提供抽象模型能力。</p>
+<h1>安全設計重點</h1>
+<p>Google 官方特別把安全放進公告中，原因很明確：一旦模型能操作介面，prompt injection、越權點擊與不可逆操作的風險會比純聊天高很多。</p>
+<p>| 安全措施 | 意義 |</p>
+<p>|---|---|</p>
+<p>| Targeted adversarial training | 針對 computer use 情境做對抗訓練，降低被惡意指令操控的風險 |</p>
+<p>| 敏感 / 不可逆操作要求使用者確認 | 例如付款、刪除、送出正式資料前要 human-in-the-loop |</p>
+<p>| 偵測 indirect prompt injection 後自動停止任務 | 網頁、文件或第三方內容若嵌入惡意指令，Agent 應停止而非照做 |</p>
+<p>| Secure sandboxing | 把瀏覽器 / 桌面任務放在隔離環境，避免污染主機與帳號 |</p>
+<p>| Strict access controls | 限制 Agent 能碰的帳號、檔案、服務與權限 |</p>
+<p>欒帥若將這類能力導入 Hermes 工作流，建議預設原則是：先用 sandbox / demo 帳號跑；所有登入、付款、刪除、寄送、公開發布、修改正式資料庫等動作，都要人工確認。</p>
+<h1>對欒帥的實務意義</h1>
+<h2>1. Hermes / Browserbase / Playwright 工作流可對照升級</h2>
+<p>欒帥現有自動化流程已常用 browser extraction、Playwright 類任務、GitHub Pages 驗證與知識庫部署。Gemini 3.5 Flash Computer Use 的價值是可能把「模型推理 + UI 操作」合在同一個模型工具鏈中，尤其適合：</p>
+<ul>
+<li>自動測試知識庫首頁、搜尋、tag filter、文章頁連結。</li>
+<li>驗證課程 landing page 的報名流程與 mobile layout。</li>
+<li>對多頁表單、後台流程做 step-by-step QA。</li>
+<li>用 Browserbase 雲端瀏覽器隔離測試帳號與環境。</li>
+</ul>
+<h2>2. 和 CapCut / video-autopilot-kit 的 Computer Use 是同一趨勢</h2>
+<p>前一篇已收錄 `video-autopilot-kit`，其主力路徑也是 AI 透過 Computer Use 操作 CapCut Desktop。Gemini 這篇則顯示 Google 也把「看螢幕 + 操作介面」變成主流模型能力。兩者共同趨勢是：Agent 不只串 API，也能操作 legacy GUI 與沒有 API 的工具。</p>
+<h2>3. 不是所有任務都應讓 Agent 自動完成</h2>
+<p>Computer Use 越強，越需要設定邊界：</p>
+<p>| 可先自動化 | 需要人工確認 |</p>
+<p>|---|---|</p>
+<p>| 開網頁、截圖、比對 layout、讀取公開資料、填測試表單 | 正式送出表單、付款、刪除資料、寄信、公開發文、改正式設定 |</p>
+<p>| 使用 demo / sandbox / 測試帳號 | 使用主帳號、後台、金融資料、學生/學員個資 |</p>
+<p>| 回報可疑 prompt injection 或介面變化 | 繼續執行第三方頁面要求的額外指令 |</p>
+<h1>建議觀察 / 測試路線</h1>
+<ul>
+<li>先看 Browserbase demo：確認它如何呈現螢幕、步驟與控制權。</li>
+<li>Clone `google-gemini/computer-use-preview` 到獨立實驗資料夾，不混入正式 Hermes repo。</li>
+<li>使用測試 Google 帳號或無登入網站，不碰正式帳號。</li>
+<li>先跑只讀任務：搜尋、截圖、比對網頁文字、檢查 a11y。</li>
+<li>再跑可逆任務：填寫測試表單但不送出，或操作本地 demo app。</li>
+<li>最後才評估能否用於知識庫管理介面、課程頁 QA 或前端驗收。</li>
+</ul>
+<h1>和其他 Computer Use / Agent 技術的比較</h1>
+<p>| 類型 | 代表 | 特點 |</p>
+<p>|---|---|---|</p>
+<p>| Gemini built-in Computer Use | Gemini 3.5 Flash + Gemini API / Enterprise Agent Platform | Google 官方模型工具整合，強調跨 browser / mobile / desktop 與企業安全 |</p>
+<p>| Browserbase agent environment | Browserbase demo / cloud browser | 適合把瀏覽器操作放在隔離雲端環境 |</p>
+<p>| Playwright automation | `computer-use-preview` 的 `--env playwright` | 適合本機可重現 browser 操作，但仍要處理 select / OS UI 等限制 |</p>
+<p>| Hermes browser tools | 目前知識庫擷取、部署驗證、QA 常用工具 | 更可控、可程式化，適合現在的穩定任務 |</p>
+<p>| GUI Computer Use | CapCut / Desktop app 操作 | 可操作無 API 工具，但最需要視窗狀態、權限與人工審稿 |</p>
+<h1>判讀限制</h1>
+<ul>
+<li>unwire 文中提到 OSWorld-Verified UI Control 78.4% 成績；本文保留為媒體轉述 / Google DeepMind 評估頁面脈絡，未從 benchmark 圖像中逐格 OCR 驗證所有數字。</li>
+<li>Google 官方文章確認 browser、mobile、desktop environments 的方向，但具體平台支援、API 參數、可用地區與 quota 仍需以 Gemini API docs 最新版本為準。</li>
+<li>本文未實際執行 Browserbase demo 或 `google-gemini/computer-use-preview`；技術流程依官方 blog、docs 連結與 GitHub README 整理。</li>
+<li>Computer Use 能力涉及高風險操作，任何與個資、付款、刪除、發文、寄信、後台修改相關流程都不應無人監督。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>unwire.hk：<a href="https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/" target="_blank" rel="noopener">https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/</a></li>
+<li>Google Blog：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/</a></li>
+<li>Gemini API Computer Use docs：<a href="https://ai.google.dev/gemini-api/docs/computer-use" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/computer-use</a></li>
+<li>Google reference implementation：<a href="https://github.com/google-gemini/computer-use-preview" target="_blank" rel="noopener">https://github.com/google-gemini/computer-use-preview</a></li>
+<li>Browserbase demo：<a href="http://gemini.browserbase.com/" target="_blank" rel="noopener">http://gemini.browserbase.com/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-25 · https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/ · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Agent</span><span class="tag">Gemini</span><span class="tag">Gemini 3.5 Flash</span><span class="tag">Computer Use</span><span class="tag">Browser Automation</span><span class="tag">Desktop Automation</span><span class="tag">Mobile Automation</span><span class="tag">Browserbase</span><span class="tag">Playwright</span><span class="tag">Google DeepMind</span><span class="tag">Agent Safety</span><h3>原始連結</h3><p><a href="https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/?utm_id=97758_v0_s00_e0_tv1_a1demo0ecitoxu" target="_blank" rel="noopener">https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/?utm_id=97758_v0_s00_e0_tv1_a1demo0ecitoxu</a></p><p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/</a></p><p><a href="https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/" target="_blank" rel="noopener">https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/</a></p><p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/</a></p><p><a href="https://ai.google.dev/gemini-api/docs/computer-use" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/computer-use</a></p><p><a href="https://github.com/google-gemini/computer-use-preview" target="_blank" rel="noopener">https://github.com/google-gemini/computer-use-preview</a></p><p><a href="http://gemini.browserbase.com/" target="_blank" rel="noopener">http://gemini.browserbase.com/</a></p><p><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computer-use" target="_blank" rel="noopener">https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computer-use</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

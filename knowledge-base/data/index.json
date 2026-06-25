@@ -107,6 +107,44 @@
     "markdown": "articles/2026/06/2026-06-25-codex-chinese-resource-map-orange-book-creator-skills.md"
   },
   {
+    "title": "Gemini 3.5 Flash 內建 Computer Use｜瀏覽器、手機與桌面 Agent 操作能力",
+    "date": "2026-06-25",
+    "source": "https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/",
+    "author": "Lawton / unwire.hk / Mateo Quiros / Google DeepMind / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Gemini",
+      "Gemini 3.5 Flash",
+      "Computer Use",
+      "Browser Automation",
+      "Desktop Automation",
+      "Mobile Automation",
+      "Browserbase",
+      "Playwright",
+      "Google DeepMind",
+      "Agent Safety"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/?utm_id=97758_v0_s00_e0_tv1_a1demo0ecitoxu",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+      "https://unwire.hk/2026/06/25/gemini-3-5-flash-computer-use-built-in/software/",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+      "https://ai.google.dev/gemini-api/docs/computer-use",
+      "https://github.com/google-gemini/computer-use-preview",
+      "http://gemini.browserbase.com/",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computer-use"
+    ],
+    "excerpt": "Gemini 的 Computer Use 從「獨立 Gemini 2.5 computer use model」升級為「Gemini 3.5 Flash 內建工具」，代表 Google 正把瀏覽器、手機與桌面操作能力納入主流 Flash 模型，讓 Agent 不只會回答，也能執行長流程任務；但實務導入必須搭配 sandbox、人類確認、權限隔離與 prompt injection 防護。",
+    "slug": "2026-06-25-gemini-3-5-flash-built-in-computer-use",
+    "html": "articles/2026-06-25-gemini-3-5-flash-built-in-computer-use.html",
+    "markdown": "articles/2026/06/2026-06-25-gemini-3-5-flash-built-in-computer-use.md"
+  },
+  {
     "title": "GitHub 奶爸級教學｜AI 編程者必備的註冊、2FA、Git 與協作工作流",
     "date": "2026-06-25",
     "source": "https://x.com/laowangbabababa/status/2061384966227849698",
