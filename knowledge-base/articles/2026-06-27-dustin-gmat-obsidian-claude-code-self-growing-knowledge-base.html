@@ -1,0 +1,80 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dustin GMAT｜用 Obsidian + Claude Code 蓋會自己長大的 AI 知識庫</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Dustin GMAT｜用 Obsidian + Claude Code 蓋會自己長大的 AI 知識庫</h1><h1>Dustin GMAT｜用 Obsidian + Claude Code 蓋會自己長大的 AI 知識庫</h1>
+<p>Dustin GMAT 在 Threads 回覆一則「大家會打造自己的 AI 知識庫嗎？」的討論，表示「真的，我就這樣做，而且每天用」，並附上 YouTube 影片《AI 一直忘記？我用 Obsidian + Claude Code 蓋了會自己長大的知識庫》。影片重點不是單純推薦 Obsidian，而是把 Obsidian 變成 Claude Code 可讀、可寫、可維護的長期上下文系統。</p>
+<h1>一句話摘要</h1>
+<p>這套方法把 Obsidian 從「人的筆記軟體」升級成「AI 的跨專案記憶層」：用本機 Markdown、wikilink、日誌、週報、專案索引與 CLAUDE.md，讓 Claude Code 能在多個專案之間找回脈絡、更新狀態、累積 SOP 與反思。</p>
+<h1>為什麼需要 AI 知識庫</h1>
+<p>影片開頭先講 AI 工作流最大的限制：上下文視窗不是無限的。即使 Claude 有很大的 context window，實際使用時也會被模型回答、工具呼叫、中間推理與檔案內容快速消耗。當上下文接近滿載，AI 就容易忘記前面的事情，或開始用不完整脈絡亂答。</p>
+<p>因此長期使用 AI 做工作，核心能力會變成 context management：</p>
+<ul>
+<li>把長期會用到的資訊寫成文件。</li>
+<li>下次開工時，只餵 AI 正確且足夠的資料。</li>
+<li>不要把所有東西都塞進同一輪對話。</li>
+<li>讓 AI 能自己查找相關文件，而不是每次都靠人複製貼上。</li>
+</ul>
+<h1>為什麼選 Obsidian</h1>
+<p>Dustin 的理由很清楚：Obsidian 同時有傳統資料夾結構，也支援 wikilink，能讓不同文件在不同層級之間互相連線。這對 AI 很重要，因為單一專案資料夾只知道自己的脈絡；但真實工作常常是跨專案的，例如課程、顧問、財務、日誌、週報與待辦會互相影響。</p>
+<p>Obsidian 的優點包括：</p>
+<ul>
+<li>檔案是本機 Markdown，資料主權留在自己手上。</li>
+<li>不像 Notion / Evernote 主要依賴雲端資料庫，未來要搬走更容易。</li>
+<li>支援 wikilink 與標籤，能把樹狀資料夾變成網狀知識圖譜。</li>
+<li>社群外掛成熟，可延伸成資料庫、待辦儀表板、專案管理系統。</li>
+<li>對 Claude Code 這類 coding agent 友善，因為它可以直接讀寫 Markdown 檔案。</li>
+</ul>
+<h1>Dustin 示範的建立流程</h1>
+<p>影片中的基本流程是：</p>
+<ul>
+<li>安裝 Obsidian。</li>
+<li>建立一個新的 vault，作為跨專案管理知識庫。</li>
+<li>在該資料夾開啟 Claude Code。</li>
+<li>請 Claude Code 協助安裝或串接 Obsidian CLI。</li>
+<li>用計劃模式請 Claude Code 調查本機中使用 Claude Code 的專案背景。</li>
+<li>請 Claude Code 上網研究 Obsidian + Claude Code 的整合方式。</li>
+<li>要求它先提問、確認需求，再規劃知識庫架構。</li>
+<li>看懂計劃後再讓它動手建立檔案與索引。</li>
+</ul>
+<p>其中關鍵是「先用 plan mode」，避免 AI 一開始就亂動檔案。Dustin 強調：從零建立系統時，要先讓 AI 讀相關資料、研究最佳做法、詢問偏好，然後才執行。</p>
+<h1>知識庫結構範例</h1>
+<p>Dustin 的真實知識庫因為含私人資訊，只展示結構。核心元素包括：</p>
+<p>| 區塊 | 作用 |</p>
+<p>|---|---|</p>
+<p>| 生涯目標 | 放長期方向、事業線、技能線、生活線 |</p>
+<p>| 待辦總覽 | 統整跨專案任務，而不是散在各資料夾 |</p>
+<p>| 每日例行 | 每天要做的事情與檢查項 |</p>
+<p>| 每週週報 | 整理本週日誌、進度、下週計畫 |</p>
+<p>| 個人資訊 | 稅務策略、家庭 schedule、財務規劃等私密脈絡 |</p>
+<p>| 生涯主軸 | GMAT 教學、Claude Code 教學、AI 顧問等核心專案 |</p>
+<p>| 日誌 | 每完成一個任務，就請 Claude 自動寫入紀錄 |</p>
+<p>| 書籤 | 平常看到與專案相關的網路資料 |</p>
+<p>| 專案索引 | 讓 AI 快速理解目前有哪些活躍專案 |</p>
+<h1>CLAUDE.md 的角色</h1>
+<p>影片特別提到在 vault 第一層放 `CLAUDE.md`。這個檔案不是寫給人看的，而是寫給 AI 看的入口說明。它應該告訴 Claude：</p>
+<ul>
+<li>這個知識庫的主人是誰。</li>
+<li>vault 名稱與用途。</li>
+<li>主要資料夾結構。</li>
+<li>每個區塊應該如何讀取。</li>
+<li>哪些文件是狀態總覽、週報、專案索引、個人偏好或長期目標。</li>
+<li>AI 查找資訊時應該先讀哪些檔案。</li>
+</ul>
+<p>對欒帥的系統來說，這很像 Hermes skills / memory / knowledge base 的本機版入口說明：把「該怎麼找資料」明確寫給 Agent，而不是期待它每次自己猜。</p>
+<h1>對 AI 學習雷達的可用啟發</h1>
+<ul>
+<li>AI 學習雷達目前已經有 Markdown 條目、公開 HTML 與 JSON index；可以再補一層「私密 Obsidian / 本機 vault」來存不適合公開部署的課程資料、個資名單、私密 SOP 與跨專案週報。</li>
+<li>公開知識庫適合保存可分享的文章與工具；Obsidian vault 適合保存欒帥個人目標、課程運營、私密學生資料、內部流程與日誌。</li>
+<li>`CLAUDE.md` / `AGENTS.md` / Hermes skill 可以成為 AI 讀取 vault 的導覽層，避免每次重新說明工作偏好。</li>
+<li>Wikilink 的價值在於讓「課程、工具、學生、專案、週報」互相連接，未來 AI 查詢時能跨資料夾找到關聯脈絡。</li>
+<li>這套方法可以和 Hermes 的私密知識庫規則結合：公開資料部署到 GitHub Pages，私密資料只留本機，不外流。</li>
+</ul>
+<h1>實作建議</h1>
+<p>若要在欒帥環境落地，建議先做小範圍版本：</p>
+<ul>
+<li>建立一個私密 vault，例如 `~/Documents/luarn-pin-private-vault`。</li>
+<li>第一層放 `CLAUDE.md`，說明用途、資料分類、隱私規則與禁止公開部署的邊界。</li>
+<li>建立 `projects/`、`courses/`、`weekly-reviews/`、`daily-logs/`、`people-private/`、`sops/` 等資料夾。</li>
+<li>每次完成重要任務後，只寫一則簡短日誌，不把所有聊天全文塞進去。</li>
+<li>每週讓 Agent 讀日誌生成週報、下一步、阻塞點與需人工決策事項。</li>
+<li>對含個資資料加上明確標籤與 public false 規則，避免被同步到公開知識庫。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文依據 Threads 貼文、YouTube 影片標題、可取得逐字稿與可見內容整理；影片中展示的真實知識庫含私人資訊，本文只整理可公開理解的架構與方法，不複製任何私密內容。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-27 · https://www.threads.com/@dustin_gmat/post/DaEu-A7j224 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Claude Code</span><span class="tag">Obsidian</span><span class="tag">Knowledge Base</span><span class="tag">Personal Knowledge Management</span><span class="tag">Context Engineering</span><span class="tag">Local First</span><span class="tag">Wikilink</span><span class="tag">Project Management</span><span class="tag">Second Brain</span><h3>原始連結</h3><p><a href="https://www.threads.com/@dustin_gmat/post/DaEu-A7j224?xmt=AQG0kM5DoqJhaEkRKA2ytWO-Ms5NA1lX92MW20KSiuOI3a3UZd4_nbTZDhfDZd6M8Ka4xToCQQ&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@dustin_gmat/post/DaEu-A7j224?xmt=AQG0kM5DoqJhaEkRKA2ytWO-Ms5NA1lX92MW20KSiuOI3a3UZd4_nbTZDhfDZd6M8Ka4xToCQQ&amp;slof=1</a></p><p><a href="https://youtu.be/EhMKfG1dvnI" target="_blank" rel="noopener">https://youtu.be/EhMKfG1dvnI</a></p><p><a href="https://www.threads.com/@dustin_gmat/post/DaEu-A7j224" target="_blank" rel="noopener">https://www.threads.com/@dustin_gmat/post/DaEu-A7j224</a></p><p><a href="https://youtu.be/EhMKfG1dvnI?si=KtLt_m6ASdHVBfwQ" target="_blank" rel="noopener">https://youtu.be/EhMKfG1dvnI?si=KtLt_m6ASdHVBfwQ</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

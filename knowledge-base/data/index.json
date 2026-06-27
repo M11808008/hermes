@@ -28,6 +28,38 @@
     "markdown": "articles/2026/06/2026-06-27-ci-fullstack-threads-posts-link-capture.md"
   },
   {
+    "title": "Dustin GMAT｜用 Obsidian + Claude Code 蓋會自己長大的 AI 知識庫",
+    "date": "2026-06-27",
+    "source": "https://www.threads.com/@dustin_gmat/post/DaEu-A7j224",
+    "author": "Dustin GMAT / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Obsidian",
+      "Knowledge Base",
+      "Personal Knowledge Management",
+      "Context Engineering",
+      "Local First",
+      "Wikilink",
+      "Project Management",
+      "Second Brain"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@dustin_gmat/post/DaEu-A7j224?xmt=AQG0kM5DoqJhaEkRKA2ytWO-Ms5NA1lX92MW20KSiuOI3a3UZd4_nbTZDhfDZd6M8Ka4xToCQQ&slof=1",
+      "https://youtu.be/EhMKfG1dvnI",
+      "https://www.threads.com/@dustin_gmat/post/DaEu-A7j224",
+      "https://youtu.be/EhMKfG1dvnI?si=KtLt_m6ASdHVBfwQ"
+    ],
+    "excerpt": "這套方法把 Obsidian 從「人的筆記軟體」升級成「AI 的跨專案記憶層」：用本機 Markdown、wikilink、日誌、週報、專案索引與 CLAUDE.md，讓 Claude Code 能在多個專案之間找回脈絡、更新狀態、累積 SOP 與反思。",
+    "slug": "2026-06-27-dustin-gmat-obsidian-claude-code-self-growing-knowledge-base",
+    "html": "articles/2026-06-27-dustin-gmat-obsidian-claude-code-self-growing-knowledge-base.html",
+    "markdown": "articles/2026/06/2026-06-27-dustin-gmat-obsidian-claude-code-self-growing-knowledge-base.md"
+  },
+  {
     "title": "電腦王阿達｜蘋果官方教學：不用 API、不用訂閱，在 Mac 上用本地模型跑 AI Agent",
     "date": "2026-06-26",
     "source": "https://www.koc.com.tw/archives/647214",
@@ -401,7 +433,7 @@
     "title": "OpenMontage｜開源 Agentic 影片生產系統，把 Claude / Cursor / Codex 變成影片工作室",
     "date": "2026-06-25",
     "source": "https://x.com/indiedevhailey/status/2069684466059202885",
-    "author": "开发者Hailey / calesthio / Hermes Agent",
+    "author": "开发者Hailey / Andy Chuah / calesthio / Hermes Agent",
     "type": "article",
     "topics": [
       "AI",
@@ -423,6 +455,7 @@
       "https://x.com/indiedevhailey/status/2069684466059202885",
       "https://github.com/calesthio/OpenMontage",
       "https://x.com/indiedevhailey/status/2069684466059202885",
+      "https://www.threads.com/@andychuah_here_/post/DaEhleZjYSH",
       "https://github.com/calesthio/OpenMontage",
       "https://github.com/calesthio/OpenMontage/blob/main/AGENT_GUIDE.md",
       "https://github.com/calesthio/OpenMontage/blob/main/PROJECT_CONTEXT.md",
