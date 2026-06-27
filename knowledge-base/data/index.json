@@ -60,6 +60,40 @@
     "markdown": "articles/2026/06/2026-06-27-dustin-gmat-obsidian-claude-code-self-growing-knowledge-base.md"
   },
   {
+    "title": "小海豚筆記｜VisoMaster Fusion：本地端 AI 換臉、面部增強與即時攝影機處理工具",
+    "date": "2026-06-27",
+    "source": "https://x.com/gaoren7716/status/2070465848595407057",
+    "author": "小海豚筆記 / VisoMasterFusion / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Face Swap",
+      "Deepfake Safety",
+      "Computer Vision",
+      "Digital Human",
+      "Local AI",
+      "Video Editing",
+      "Webcam",
+      "Open Source",
+      "Python"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/gaoren7716/status/2070465848595407057?s=68&t=auVcoiE4iR2928axpMSCRg",
+      "https://github.com/VisoMasterFusion/VisoMaster-Fusion",
+      "https://x.com/gaoren7716/status/2070465848595407057",
+      "https://github.com/VisoMasterFusion/VisoMaster-Fusion",
+      "https://github.com/VisoMasterFusion/VisoMaster-Fusion/blob/main/docs/quickstart.md",
+      "https://github.com/VisoMasterFusion/VisoMaster-Fusion/blob/main/docs/user_manual.md"
+    ],
+    "excerpt": "VisoMaster Fusion 是偏專業桌面軟體型的開源換臉 / 面部編輯工具：功能完整、可本地跑、支援影片與 webcam，但也因具備深偽能力，必須以同意、授權、標示與安全邊界為使用前提。",
+    "slug": "2026-06-27-gaoren-visomaster-fusion-local-face-swap-tool",
+    "html": "articles/2026-06-27-gaoren-visomaster-fusion-local-face-swap-tool.html",
+    "markdown": "articles/2026/06/2026-06-27-gaoren-visomaster-fusion-local-face-swap-tool.md"
+  },
+  {
     "title": "與神｜Windows-AI-Agent：用 Ollama + PowerShell 做本地 Windows 電腦控制 Agent",
     "date": "2026-06-27",
     "source": "https://www.threads.com/@goat.92760769/post/DaE23JOlOvX",
@@ -466,7 +500,7 @@
     "title": "Karpathy LLM Wiki｜用 Obsidian 與 Claude Code 建立可累積的 AI 第二大腦",
     "date": "2026-06-25",
     "source": "https://x.com/textocriativo/status/2069777875184599409",
-    "author": "Rafael Estrela / Andrej Karpathy / Ar9av",
+    "author": "Rafael Estrela / Avid / Andrej Karpathy / Ar9av",
     "type": "article",
     "topics": [
       "AI",
@@ -485,6 +519,7 @@
       "https://x.com/textocriativo/status/2069777875184599409",
       "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
       "https://x.com/textocriativo/status/2069777875184599409",
+      "https://x.com/Av1dlive/status/2070507527213871594",
       "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
       "https://github.com/Ar9av/obsidian-wiki",
       "https://github.com/ekadetov/llm-wiki"
