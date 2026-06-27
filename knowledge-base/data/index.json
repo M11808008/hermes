@@ -60,6 +60,71 @@
     "markdown": "articles/2026/06/2026-06-27-dustin-gmat-obsidian-claude-code-self-growing-knowledge-base.md"
   },
   {
+    "title": "與神｜Windows-AI-Agent：用 Ollama + PowerShell 做本地 Windows 電腦控制 Agent",
+    "date": "2026-06-27",
+    "source": "https://www.threads.com/@goat.92760769/post/DaE23JOlOvX",
+    "author": "與神 / lions0814-sketch / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Windows",
+      "Ollama",
+      "Local AI",
+      "PowerShell",
+      "Computer Use",
+      "Open Source",
+      "GPL-3.0",
+      "Security"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@goat.92760769/post/DaE23JOlOvX?xmt=AQG08hLji4d6r3hcSrjijg3eqc6BOUNO_PX0snybhxFl7RmIm85IVrM_uyVA24X28y2MkKEzyg&slof=1",
+      "https://github.com/lions0814-sketch/Windows-AI-Agent",
+      "https://www.threads.com/@goat.92760769/post/DaE23JOlOvX",
+      "https://github.com/lions0814-sketch/Windows-AI-Agent",
+      "https://raw.githubusercontent.com/lions0814-sketch/Windows-AI-Agent/main/README.md"
+    ],
+    "excerpt": "Windows-AI-Agent 是一個「本地 Ollama + PowerShell」的 Windows 電腦控制小工具，重點不是聊天，而是把中文指令轉成可執行的系統操作；但也因此必須把安全審查放在功能體驗之前。",
+    "slug": "2026-06-27-goat-windows-ai-agent-local-ollama-powershell",
+    "html": "articles/2026-06-27-goat-windows-ai-agent-local-ollama-powershell.html",
+    "markdown": "articles/2026/06/2026-06-27-goat-windows-ai-agent-local-ollama-powershell.md"
+  },
+  {
+    "title": "VK 科技閱讀時間｜NotebookLM 產業研究工作流：7 步驟拆解產業全貌",
+    "date": "2026-06-27",
+    "source": "https://www.facebook.com/ads/ig_redirect/",
+    "author": "VK 科技閱讀時間 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "NotebookLM",
+      "Industry Research",
+      "Research Workflow",
+      "Prompting",
+      "Course",
+      "VK 科技閱讀時間",
+      "Knowledge Work",
+      "Decision Making"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/ads/ig_redirect/?d=Ad8kdB9nWFbuMj4zliAEZT43DfNq1-NYGqDBQfsQ5CvBKfn1T31UjIxUeJb1SGe05lyeQhCGvOySufGs8D2xxA68yTT-eM8LqOYZJ8hOC4y35a-QyCHFXlZoIXSo_VYLMRFvR88IcE-4B71G8QI8QvI-zf8huPX8WWs3dj1hz_nWEohUICyPEO3iyuGcTUy5Gs7jFLBWKGWfzrotAaze01PSLRnzahukDwNlC6K6qF6Vr4CDHwKRadVoP9onnxZKE1-tu-CpLBXNZ2orTFhRwYpf2o6vIYgQBawulzt1BwTQAOR-DzdEUeJAZ-4wxXOXWyQ8tvDGIW3boMFUmY-Jz3CO3a-DnwQs4dnd4GivSVEryvcoYb_Gxi4nCs87EEo0BffCmAK1pY9XJXVIySFm68K_0yACLoUZaV81SA4_gnaS231uDEIgnrPgt0W69wC9S21TB8c8EkZvRNEW0WYZxgI2RPv6ZTLUVed3tY_KkzjJvgaZrJdojmNOKp1B-28bK_VvICsIioByyHnTAKRygR37i39EWewHI-z76WZUMCPeql0VP-BYj4wDYfRH1K4GHGxHNM4tkpa5fBniIiHtxXGvHExOz2v9QRIgUrOtj1816So1FDZchHUZCheRUGKtjb8&a=1&hash=Ad-fzb_MI2UYxeAUuo0",
+      "https://vktechread.kaik.io/courses/nblm-industry",
+      "https://vktechread.kaik.io/courses/nblm-industry",
+      "https://vktechread.kaik.io/courses/nblm-academic",
+      "https://vktechread.kaik.io/courses/nblm-content"
+    ],
+    "excerpt": "這門課的價值不在單點教 NotebookLM 功能，而是在把「蒐集資料 → 梳理產業脈絡 → 形成洞察 → 支援決策」包成可重複使用的七步驟研究流程與提示詞清單。",
+    "slug": "2026-06-27-vk-notebooklm-industry-research-workflow-course",
+    "html": "articles/2026-06-27-vk-notebooklm-industry-research-workflow-course.html",
+    "markdown": "articles/2026/06/2026-06-27-vk-notebooklm-industry-research-workflow-course.md"
+  },
+  {
     "title": "電腦王阿達｜蘋果官方教學：不用 API、不用訂閱，在 Mac 上用本地模型跑 AI Agent",
     "date": "2026-06-26",
     "source": "https://www.koc.com.tw/archives/647214",
