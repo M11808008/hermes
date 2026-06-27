@@ -28,6 +28,41 @@
     "markdown": "articles/2026/06/2026-06-27-ci-fullstack-threads-posts-link-capture.md"
   },
   {
+    "title": "電腦王阿達｜蘋果官方教學：不用 API、不用訂閱，在 Mac 上用本地模型跑 AI Agent",
+    "date": "2026-06-26",
+    "source": "https://www.koc.com.tw/archives/647214",
+    "author": "電腦王阿達 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Agent",
+      "Local AI",
+      "Apple",
+      "Apple Silicon",
+      "MLX",
+      "MLX LM",
+      "Xcode",
+      "OpenAI Compatible API",
+      "Tool Calling",
+      "WWDC 2026"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.koc.com.tw/archives/647214",
+      "https://www.koc.com.tw/archives/647214",
+      "https://www.koc.com.tw/archives/647214",
+      "https://developer.apple.com/videos/play/wwdc2026/232/",
+      "https://ml-explore.github.io/mlx/",
+      "https://github.com/ml-explore/mlx-lm"
+    ],
+    "excerpt": "Apple 正式把「本地端 AI Agent 開發工作流」推到 Mac 開發者面前：用 MLX LM Server 提供 OpenAI 相容 API，讓 Xcode、OpenCode 或自訂 Agent 直接連本機模型，完成寫程式、建置、修錯與迭代。",
+    "slug": "2026-06-26-koc-apple-mlx-local-agentic-ai-mac",
+    "html": "articles/2026-06-26-koc-apple-mlx-local-agentic-ai-mac.html",
+    "markdown": "articles/2026/06/2026-06-26-koc-apple-mlx-local-agentic-ai-mac.md"
+  },
+  {
     "title": "Threads 小魚｜韓系女孩漫畫拼貼風格影像提示詞",
     "date": "2026-06-26",
     "source": "https://www.threads.com/@fishhhh_722/post/DZ7ZnZRD_xO",

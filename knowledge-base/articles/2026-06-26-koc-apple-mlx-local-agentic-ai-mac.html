@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>電腦王阿達｜蘋果官方教學：不用 API、不用訂閱，在 Mac 上用本地模型跑 AI Agent</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>電腦王阿達｜蘋果官方教學：不用 API、不用訂閱，在 Mac 上用本地模型跑 AI Agent</h1><h1>電腦王阿達｜蘋果官方教學：不用 API、不用訂閱，在 Mac 上用本地模型跑 AI Agent</h1>
+<p>電腦王阿達整理 Apple WWDC 2026 議程「Run local agentic AI on the Mac using MLX」。MLX 團隊工程師 Angelos 示範如何在 Mac 上建立一套完全本地端的 Agentic AI 工作流：模型、工具呼叫、推理迴圈與開發工具整合都在 Apple Silicon 上執行，不需要雲端 API Key，也不需要按 Token 計費。</p>
+<h1>一句話摘要</h1>
+<p>Apple 正式把「本地端 AI Agent 開發工作流」推到 Mac 開發者面前：用 MLX LM Server 提供 OpenAI 相容 API，讓 Xcode、OpenCode 或自訂 Agent 直接連本機模型，完成寫程式、建置、修錯與迭代。</p>
+<h1>核心概念：從聊天模型到 Agentic Loop</h1>
+<p>傳統 LLM 對話是「使用者給提示詞，模型回覆」，後續執行指令、讀檔、修錯通常仍靠人手完成。</p>
+<p>Agentic 模式則是：</p>
+<ul>
+<li>Agent 與模型對話，決定下一步。</li>
+<li>Agent 呼叫工具，例如 Shell、檔案讀寫、API 或建置指令。</li>
+<li>Agent 觀察工具回傳結果。</li>
+<li>再把結果交回模型判斷下一步。</li>
+<li>反覆循環直到任務完成。</li>
+</ul>
+<p>在 Apple Silicon 上，這個迴圈可以完全本地執行，帶來三個價值：資料不離開機器、離線或弱網環境仍可用、沒有雲端模型使用成本。</p>
+<h1>Apple 提出的四層堆疊</h1>
+<p>| 層級 | 角色 | 重點 |</p>
+<p>|---|---|---|</p>
+<p>| MLX | 底層運算框架 | Apple Silicon 專用開源陣列框架，負責 Metal 加速與記憶體管理 |</p>
+<p>| MLX LM | 模型層 | 載入、執行、量化與微調 LLM，支援 Hugging Face 模型、CLI 與 Python API |</p>
+<p>| MLX LM Server | 伺服器層 | 提供 OpenAI API 相容 HTTP 服務，支援工具呼叫與 reasoning 模型 |</p>
+<p>| Agent 框架 / 工具 | 應用層 | Xcode、OpenCode、PyAgent 或自訂腳本，只要支援 OpenAI Chat Completions 協定即可接入 |</p>
+<p>文章也提到，Ollama、LM Studio、vLLM 等工具部分路線已與 MLX / MLX LM 生態相關；這代表 Apple 不是只做 demo，而是在把 Mac 本地推理接到既有開發工具鏈。</p>
+<h1>三步驟啟動本地 Agent</h1>
+<p>文章整理的官方示範流程很直接：</p>
+<p>```bash</p>
+<p>pip install mlx-lm</p>
+<p>```</p>
+<p>接著啟動本地伺服器：</p>
+<p>```bash</p>
+<p>mlx_lm.server --model mlx-community/Qwen-3.5-4B-8bit</p>
+<p>```</p>
+<p>最後把 Agent 框架的 Base URL 指到本地服務：</p>
+<p>```text</p>
+<p><a href="http://127.0.0.1:8080" target="_blank" rel="noopener">http://127.0.0.1:8080</a></p>
+<p>```</p>
+<p>以 OpenCode 為例，只要新增一個 local provider，指定 localhost URL 與模型名稱，之後互動就會透過本地模型執行。Agent 不需要知道模型是在雲端還是在 Mac 上。</p>
+<h1>三個效能關鍵</h1>
+<h2>1. 提示詞處理速度</h2>
+<p>Agent 工作流反覆把工具輸出餵回模型，單一會話可能累積大量上下文。Apple 的賣點是 M5 晶片神經加速器與 MLX kernel 能加速矩陣乘法與 attention；文章指出相較 M4，M5 在相關提示詞處理上可有 4 倍加速，而且開發者不需要額外改程式。</p>
+<h2>2. 並行處理多個子 Agent</h2>
+<p>真實 Agent 工作常會拆成多個 sub-agent：讀文件、搜尋程式碼、寫測試、修 bug 同時進行。MLX LM Server 透過 Continuous Batching 動態合併請求，讓本地 GPU 同時服務多個請求，降低子任務排隊等待。</p>
+<h2>3. 分散式推理</h2>
+<p>當模型太大、單台 Mac 記憶體放不下時，MLX 支援把模型分散到多台 Mac。文章提到 macOS 26.2 起 Thunderbolt RDMA 提供低延遲高頻寬通訊，使用 4 個節點時分散式推理最多可提升約 3 倍。</p>
+<h1>官方示範案例</h1>
+<h2>從零建立 SwiftUI iPad 繪圖 App</h2>
+<p>示範從空白 Xcode 專案開始，請 Agent 建立 iPad 繪圖 App。Agent 會檢查專案結構、制定計畫、寫檔、建置、讀取錯誤、修正錯誤，最後產出可執行版本。接著再要求把筆頭改成圓形端點，Agent 也能修改程式碼並重新編譯。</p>
+<h2>在 Xcode 中修復 Bug</h2>
+<p>另一個示範是把本地模型接入 Xcode：開啟 Xcode 設定 → Intelligence → Add chat provider → Locally Hosted Provider → 設定 8080 連接埠。之後 Xcode 可直接與本地模型互動，讓模型檢查錯誤、定位程式碼並寫入修正，全程不把程式碼送上雲端。</p>
+<h1>對欒帥的可落地意義</h1>
+<ul>
+<li>本地端 coding agent 會成為 Mac 開發工作流的重要路線，尤其適合處理私有程式碼、課程素材、內部文件與不適合上雲的資料。</li>
+<li>MLX LM Server 的 OpenAI 相容 API 很關鍵，因為可讓既有工具以「換 provider」的方式接上本地模型，而不是重寫整套 Agent。</li>
+<li>對 AI 學習雷達與課程設計而言，這篇可作為「本地 AI Agent 教學」的範例素材：從概念、安裝、伺服器、工具接入到 Xcode 實作，一條線完整。</li>
+<li>實務上仍需驗證模型能力。小型本地模型適合示範、輔助與低風險任務；大型專案或複雜推理仍可能需要雲端高階模型或 hybrid routing。</li>
+</ul>
+<h1>可追蹤資源</h1>
+<ul>
+<li>原文： <a href="https://www.koc.com.tw/archives/647214" target="_blank" rel="noopener">https://www.koc.com.tw/archives/647214</a></li>
+<li>Apple WWDC 2026 session： <a href="https://developer.apple.com/videos/play/wwdc2026/232/" target="_blank" rel="noopener">https://developer.apple.com/videos/play/wwdc2026/232/</a></li>
+<li>MLX 官方文件： <a href="https://ml-explore.github.io/mlx/" target="_blank" rel="noopener">https://ml-explore.github.io/mlx/</a></li>
+<li>MLX LM GitHub： <a href="https://github.com/ml-explore/mlx-lm" target="_blank" rel="noopener">https://github.com/ml-explore/mlx-lm</a></li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文依據電腦王阿達文章與其引用的 Apple WWDC session 整理；文章中的 M5、macOS 26.2、Qwen 型號與效能數字需以 Apple 官方 session 與 MLX 專案最新文件為準。實際可用模型、工具呼叫穩定度與 Xcode 整合能力，仍需在欒帥的本機環境實測。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-26 · https://www.koc.com.tw/archives/647214 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Agent</span><span class="tag">Local AI</span><span class="tag">Apple</span><span class="tag">Apple Silicon</span><span class="tag">MLX</span><span class="tag">MLX LM</span><span class="tag">Xcode</span><span class="tag">OpenAI Compatible API</span><span class="tag">Tool Calling</span><span class="tag">WWDC 2026</span><h3>原始連結</h3><p><a href="https://www.koc.com.tw/archives/647214" target="_blank" rel="noopener">https://www.koc.com.tw/archives/647214</a></p><p><a href="https://www.koc.com.tw/archives/647214" target="_blank" rel="noopener">https://www.koc.com.tw/archives/647214</a></p><p><a href="https://www.koc.com.tw/archives/647214" target="_blank" rel="noopener">https://www.koc.com.tw/archives/647214</a></p><p><a href="https://developer.apple.com/videos/play/wwdc2026/232/" target="_blank" rel="noopener">https://developer.apple.com/videos/play/wwdc2026/232/</a></p><p><a href="https://ml-explore.github.io/mlx/" target="_blank" rel="noopener">https://ml-explore.github.io/mlx/</a></p><p><a href="https://github.com/ml-explore/mlx-lm" target="_blank" rel="noopener">https://github.com/ml-explore/mlx-lm</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
