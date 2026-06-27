@@ -1,0 +1,81 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Anthropic Agent Loop 工作坊｜Plan、Build、Judge 三代理建立可自我驗證的應用開發流程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Anthropic Agent Loop 工作坊｜Plan、Build、Judge 三代理建立可自我驗證的應用開發流程</h1><h1>Anthropic Agent Loop 工作坊｜Plan、Build、Judge 三代理建立可自我驗證的應用開發流程</h1>
+<p>Easycompany、Jokker 與 Hamza Khalid 轉述同一組 Claude Code / Anthropic 相關工作坊內容：工程師示範如何用 agent loop 從零建立完整 app。重點不是單一提示詞，而是讓多個代理分工：一個負責規劃，一個負責建造，一個負責評審，循環到成果真的可用。</p>
+<h1>一句話摘要</h1>
+<p>Agent loop 的價值不在「模型更聰明」，而在「流程能自我驗證」：Plan → Build → Judge 持續循環，直到符合明確成功標準或達到停止條件。</p>
+<h1>來源快照</h1>
+<p>| 來源 | 重點 |</p>
+<p>|---|---|</p>
+<p>| Easycompany | Anthropic 工程師用約半小時講述如何建立自我提高、持續優化的 Loop 流程，並用實例驗證。 |</p>
+<p>| Jokker | 西語轉述：Anthropic 發布免費工作坊，用 AI agents 建立完整公司 / 應用型流程，agents 彼此協作並分配任務。 |</p>
+<p>| Hamza Khalid | 強調三代理結構：one plan、one build、one judge，cycling until the app actually works。 |</p>
+<p>| Anatoli Kopadze | Brave 搜尋可見相同敘述來源：Anthropic engineers build a full app from scratch using a loop of agents。 |</p>
+<h1>Loop 的基本模型</h1>
+<p>Easycompany 引用的長文將 Loop 拆成五步：</p>
+<ul>
+<li>Discover：找出需要做什麼。</li>
+<li>Plan：決定怎麼做。</li>
+<li>Execute：執行任務。</li>
+<li>Verify：對照目標檢查結果。</li>
+<li>Iterate：未達標就把結果餵回去繼續。</li>
+</ul>
+<p>這和傳統 prompt 最大差異是：Prompt 給 AI 一條單次指令；Loop 給 AI 一個目標、完成標準、驗證方式與放棄規則。</p>
+<h1>三個關鍵護欄</h1>
+<p>| 護欄 | 為什麼重要 |</p>
+<p>|---|---|</p>
+<p>| Verifier | 沒有真正的測試、規則或評分，Loop 只是 agent 反覆同意自己。 |</p>
+<p>| State | 必須記錄完成、失敗、下一步，否則每輪都從零開始並重複犯錯。 |</p>
+<p>| Stop condition | 沒有成功條件與硬性上限，Loop 可能整晚空轉、燒 token、仍無結果。 |</p>
+<h1>什麼任務適合 Loop？</h1>
+<p>原文建議先檢查四個條件：</p>
+<ul>
+<li>任務至少每週重複一次。</li>
+<li>壞結果可以被自動拒絕，例如測試、lint、type check、構建或硬規則失敗。</li>
+<li>Agent 能從頭到尾完成，不會中途大量丟回給人類。</li>
+<li>「完成」必須客觀；若高度主觀，仍需人類在關鍵節點把關。</li>
+</ul>
+<p>缺任何一條，就先不要搭重型 Loop；用好的 prompt 或半自動流程更穩。</p>
+<h1>為什麼先在軟體工程爆發？</h1>
+<p>程式碼有天然 verifier：測試通過、lint 乾淨、型別無錯、build 成功。這讓 agent 知道自己是否真的完成，而不只是產出看似合理的答案。</p>
+<p>典型 coding loop 可寫成：</p>
+<ul>
+<li>Goal：讓指定測試全綠、lint 乾淨、無 type error。</li>
+<li>Each iteration：讀失敗訊息、選影響最大的一個失敗點、做最小修改、重新跑測試。</li>
+<li>Verify：測試全綠 + 0 warning + 0 type error。</li>
+<li>Stop：成功或達到迭代上限。</li>
+<li>On stop：摘要已改內容與仍失敗項目。</li>
+</ul>
+<h1>組成元件</h1>
+<p>| 元件 | 角色 |</p>
+<p>|---|---|</p>
+<p>| Automation | 定時或事件觸發，讓任務不用每次手動啟動。 |</p>
+<p>| Skill | 保存可復用任務說明，避免定時任務裡塞一大段難維護提示詞。 |</p>
+<p>| Subagents | 將執行者與檢查者分開；writer 可以快，reviewer 要嚴格。 |</p>
+<p>| Connectors | 讓 agent 能建立 PR、關聯 ticket、通知頻道，而不只給建議。 |</p>
+<p>| Verifier | 真正的關卡：測試、型別、建構、規則驗證、rubric 評分。 |</p>
+<h1>成本與風險</h1>
+<p>Loop 不是免費魔法。每輪都可能重讀目標、上下文、上一輪結果與失敗原因；若再加入 maker + checker 結構，品質提升但成本也增加。成熟 Loop 需要：</p>
+<ul>
+<li>迭代上限。</li>
+<li>token / 花費預算。</li>
+<li>便宜模型處理低價值步驟。</li>
+<li>接受率監控。</li>
+<li>失敗告警。</li>
+<li>硬性 verifier。</li>
+</ul>
+<h1>對欒帥的可用意義</h1>
+<ul>
+<li>這是 AI Agent 課程中非常適合講「從 prompt 到 workflow」的案例。</li>
+<li>可用 Plan / Build / Judge 解釋多代理協作：不是叫三個 AI 同時聊天，而是給每個代理不同責任與驗證標準。</li>
+<li>可對照 Hermes 的 cronjob、skills、delegate_task、verification discipline，說明成熟 agent 系統需要觸發器、狀態、工具、驗證與停止條件。</li>
+<li>對企業導入 AI，可提醒「先手動跑通，再固化成 Skill，再加 Loop，最後才排程自動化」。</li>
+</ul>
+<h1>最佳導入順序</h1>
+<ul>
+<li>先讓一次手動流程穩定成功。</li>
+<li>把流程沉澱成 Skill / SOP。</li>
+<li>加入 verifier、state 與 stop condition。</li>
+<li>拆出 maker / reviewer 或 planner / builder / judge。</li>
+<li>最後再放入 cron、GitHub Actions、hooks 或平台自動化。</li>
+</ul>
+<h1>判讀限制</h1>
+<p>本文根據 X 貼文、fxtwitter 擷取內容與 Brave Search 對相關 Anthropic 工程文章的搜尋結果整理；未完整轉錄影片字幕。工作坊影片中的具體工具版本、示範 app 與程式碼細節需另以官方影片或 Anthropic 文件核對。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-27 · https://x.com/Easycompany333/status/2070488245616427145 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Claude Code</span><span class="tag">Anthropic</span><span class="tag">Agent Loop</span><span class="tag">Multi-Agent</span><span class="tag">Automation</span><span class="tag">Software Development</span><h3>原始連結</h3><p><a href="https://x.com/easycompany333/status/2070488245616427145?s=68&amp;t=auVcoiE4iR2928axpMSCRg" target="_blank" rel="noopener">https://x.com/easycompany333/status/2070488245616427145?s=68&amp;t=auVcoiE4iR2928axpMSCRg</a></p><p><a href="https://x.com/Easycompany333/status/2070488245616427145" target="_blank" rel="noopener">https://x.com/Easycompany333/status/2070488245616427145</a></p><p><a href="https://x.com/0xJokker/status/2070694742438883728" target="_blank" rel="noopener">https://x.com/0xJokker/status/2070694742438883728</a></p><p><a href="https://x.com/humzaakhalid/status/2070803186554945643" target="_blank" rel="noopener">https://x.com/humzaakhalid/status/2070803186554945643</a></p><p><a href="https://x.com/AnatoliKopadze/status/2068690663919530207" target="_blank" rel="noopener">https://x.com/AnatoliKopadze/status/2068690663919530207</a></p><p><a href="https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk" target="_blank" rel="noopener">https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk</a></p><p><a href="https://www.anthropic.com/engineering/building-c-compiler" target="_blank" rel="noopener">https://www.anthropic.com/engineering/building-c-compiler</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

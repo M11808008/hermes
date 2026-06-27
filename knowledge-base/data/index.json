@@ -1,5 +1,37 @@
 [
   {
+    "title": "Anthropic Agent Loop 工作坊｜Plan、Build、Judge 三代理建立可自我驗證的應用開發流程",
+    "date": "2026-06-27",
+    "source": "https://x.com/Easycompany333/status/2070488245616427145",
+    "author": "Easycompany / Jokker / Hamza Khalid / Anthropic Claude Code team",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Anthropic",
+      "Agent Loop",
+      "Multi-Agent",
+      "Automation",
+      "Software Development"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/easycompany333/status/2070488245616427145?s=68&t=auVcoiE4iR2928axpMSCRg",
+      "https://x.com/Easycompany333/status/2070488245616427145",
+      "https://x.com/0xJokker/status/2070694742438883728",
+      "https://x.com/humzaakhalid/status/2070803186554945643",
+      "https://x.com/AnatoliKopadze/status/2068690663919530207",
+      "https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk",
+      "https://www.anthropic.com/engineering/building-c-compiler"
+    ],
+    "excerpt": "Agent loop 的價值不在「模型更聰明」，而在「流程能自我驗證」：Plan → Build → Judge 持續循環，直到符合明確成功標準或達到停止條件。",
+    "slug": "2026-06-27-anthropic-agent-loop-workshop-plan-build-judge",
+    "html": "articles/2026-06-27-anthropic-agent-loop-workshop-plan-build-judge.html",
+    "markdown": "articles/2026/06/2026-06-27-anthropic-agent-loop-workshop-plan-build-judge.md"
+  },
+  {
     "title": "ci.fullstack｜Threads 兩則貼文連結暫存與待補擷取",
     "date": "2026-06-27",
     "source": "https://www.threads.com/@ci.fullstack",
@@ -125,6 +157,66 @@
     "slug": "2026-06-27-goat-windows-ai-agent-local-ollama-powershell",
     "html": "articles/2026-06-27-goat-windows-ai-agent-local-ollama-powershell.html",
     "markdown": "articles/2026/06/2026-06-27-goat-windows-ai-agent-local-ollama-powershell.md"
+  },
+  {
+    "title": "Hamza Khalid｜Claude Code 5 分鐘修復：CLAUDE.md、Skills、Hooks、Subagents 與 Agent Teams 五層設定",
+    "date": "2026-06-27",
+    "source": "https://x.com/humzaakhalid/status/2070803186554945643",
+    "author": "Hamza Khalid",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Agentic Coding",
+      "CLAUDE.md",
+      "Skills",
+      "Hooks",
+      "Subagents",
+      "Agent Teams"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/humzaakhalid/status/2070803186554945643?s=68&t=auVcoiE4iR2928axpMSCRg",
+      "https://x.com/humzaakhalid/status/2070079028661559604",
+      "https://x.com/humzaakhalid/status/2070803186554945643",
+      "https://x.com/humzaakhalid/status/2070079028661559604",
+      "https://docs.anthropic.com"
+    ],
+    "excerpt": "Claude Code 要穩定，不是靠一次更好的 prompt，而是靠五層工作區設定：CLAUDE.md、Skills、Hooks、Subagents、Agent Teams。",
+    "slug": "2026-06-27-hamza-khalid-claude-code-five-layer-setup",
+    "html": "articles/2026-06-27-hamza-khalid-claude-code-five-layer-setup.html",
+    "markdown": "articles/2026/06/2026-06-27-hamza-khalid-claude-code-five-layer-setup.md"
+  },
+  {
+    "title": "川野｜Codex 不只是寫文案：把它配置成可復用的工程工作系統",
+    "date": "2026-06-27",
+    "source": "https://x.com/JackQi82772/status/2070708246219026703",
+    "author": "川野 / JackQi82772",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Codex",
+      "Agentic Coding",
+      "AGENTS.md",
+      "Skills",
+      "MCP",
+      "Automation",
+      "Subagents",
+      "Software Development"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/jackqi82772/status/2070708246219026703?s=68&t=auVcoiE4iR2928axpMSCRg",
+      "https://x.com/JackQi82772/status/2070708246219026703"
+    ],
+    "excerpt": "Codex 的高階用法不是更長的提示詞，而是把專案規則、常用工作流、外部工具、驗證機制與權限邊界沉澱成可重複運行的系統。",
+    "slug": "2026-06-27-jackqi82772-codex-configurable-work-system",
+    "html": "articles/2026-06-27-jackqi82772-codex-configurable-work-system.html",
+    "markdown": "articles/2026/06/2026-06-27-jackqi82772-codex-configurable-work-system.md"
   },
   {
     "title": "VK 科技閱讀時間｜NotebookLM 產業研究工作流：7 步驟拆解產業全貌",
