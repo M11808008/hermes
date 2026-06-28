@@ -33,6 +33,38 @@
     "markdown": "articles/2026/06/2026-06-28-ai-network-freedom-chatgpt-understands-business-workflow.md"
   },
   {
+    "title": "未來商務｜ChatGPT Image 2.0 提示詞大全：80 組圖像生成範例與五大應用場景",
+    "date": "2026-06-28",
+    "source": "https://fc.bnext.com.tw/articles/view/4713",
+    "author": "《數位時代》蘇柔瑋 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "ChatGPT",
+      "ChatGPT Image",
+      "Image Generation",
+      "Prompt",
+      "生成式設計",
+      "社群內容",
+      "視覺設計",
+      "行銷",
+      "工作流"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://fc.bnext.com.tw/articles/view/4713?",
+      "https://fc.bnext.com.tw/articles/view/4713",
+      "https://fc.bnext.com.tw/articles/view/4713",
+      "https://fc.bnext.com.tw/articles/view/4713?"
+    ],
+    "excerpt": "ChatGPT Image 2.0 的提示詞要好用，關鍵不是堆形容詞，而是明確指定「圖像用途、內容結構、風格參考、版面元素、文字需求、比例與限制」，讓 AI 產出的圖像可以直接用於社群、簡報、活動、行銷與個人品牌素材。",
+    "slug": "2026-06-28-bnext-chatgpt-image-2-prompt-library-80-examples",
+    "html": "articles/2026-06-28-bnext-chatgpt-image-2-prompt-library-80-examples.html",
+    "markdown": "articles/2026/06/2026-06-28-bnext-chatgpt-image-2-prompt-library-80-examples.md"
+  },
+  {
     "title": "葉子｜Qwopucode 27B FP8 Block：本地 LLM 模型合併與低成本推理訊號",
     "date": "2026-06-28",
     "source": "https://www.facebook.com/groups/aigctw/permalink/3312544385596117/",
