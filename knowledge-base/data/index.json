@@ -33,6 +33,40 @@
     "markdown": "articles/2026/06/2026-06-28-ai-network-freedom-chatgpt-understands-business-workflow.md"
   },
   {
+    "title": "葉子｜Qwopucode 27B FP8 Block：本地 LLM 模型合併與低成本推理訊號",
+    "date": "2026-06-28",
+    "source": "https://www.facebook.com/groups/aigctw/permalink/3312544385596117/",
+    "author": "葉子 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Local LLM",
+      "Qwen",
+      "Qwen3.6",
+      "Qwopucode",
+      "FP8",
+      "Model Merge",
+      "Hugging Face",
+      "Agent",
+      "Coding Model",
+      "本地模型"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/197cw5vkoR/?mibextid=wwXIfr",
+      "https://huggingface.co/win10/Qwopucode-full-v15-27B-FP8-Block",
+      "https://www.facebook.com/share/p/197cw5vkoR/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/aigctw/permalink/3312544385596117/",
+      "https://huggingface.co/win10/Qwopucode-full-v15-27B-FP8-Block"
+    ],
+    "excerpt": "這則訊號值得追蹤：27B 級別的 Qwen 系本地模型，正在透過 FP8 Block 量化與多模型合併，嘗試在成本、coding、agent、長上下文、tool-use 與多語能力之間取得更好的實用平衡。",
+    "slug": "2026-06-28-qwopucode-27b-fp8-block-local-llm-merge",
+    "html": "articles/2026-06-28-qwopucode-27b-fp8-block-local-llm-merge.html",
+    "markdown": "articles/2026/06/2026-06-28-qwopucode-27b-fp8-block-local-llm-merge.md"
+  },
+  {
     "title": "Anthropic Agent Loop 工作坊｜Plan、Build、Judge 三代理建立可自我驗證的應用開發流程",
     "date": "2026-06-27",
     "source": "https://x.com/Easycompany333/status/2070488245616427145",
