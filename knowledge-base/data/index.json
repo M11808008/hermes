@@ -29,6 +29,36 @@
     "markdown": "articles/2026/06/2026-06-30-ai-agent-workflow-lab-claude-code-ai-employee-team-facebook-video.md"
   },
   {
+    "title": "李厂长来了｜Claude Cowork + NotebookLM 自動化工作流：用 Skills 連接研究、簡報與定時摘要",
+    "date": "2026-06-30",
+    "source": "https://youtu.be/w0i9wklw_ng",
+    "author": "李厂长来了 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude",
+      "Claude Cowork",
+      "NotebookLM",
+      "Agent Skills",
+      "自動化",
+      "工作流",
+      "知識管理",
+      "簡報",
+      "定時任務"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://youtu.be/w0i9wklw_ng?si=wzvlpQR3C2lhUrr5",
+      "https://www.youtube.com/watch?v=w0i9wklw_ng"
+    ],
+    "excerpt": "這支影片值得保存的重點是：把 NotebookLM 當成「資料理解與內容生成平台」，把 Claude Cowork 當成「任務調度與工具操作層」，再用 NotebookLM Skill 把兩者接起來，形成可用於研究、簡報、週報、音頻摘要與定時情報更新的 Agent 工作流。",
+    "slug": "2026-06-30-lichangzhang-claude-cowork-notebooklm-automation-workflow",
+    "html": "articles/2026-06-30-lichangzhang-claude-cowork-notebooklm-automation-workflow.html",
+    "markdown": "articles/2026/06/2026-06-30-lichangzhang-claude-cowork-notebooklm-automation-workflow.md"
+  },
+  {
     "title": "AI 網絡自由創業｜先讓 ChatGPT 懂你，再談內容、文案與流程自動化",
     "date": "2026-06-28",
     "source": "https://www.facebook.com/reel/1014662351323296",
