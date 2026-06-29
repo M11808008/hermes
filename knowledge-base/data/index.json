@@ -29,6 +29,39 @@
     "markdown": "articles/2026/06/2026-06-30-ai-agent-workflow-lab-claude-code-ai-employee-team-facebook-video.md"
   },
   {
+    "title": "AI郵報｜用 Codex 打造 AI 數位分身：示範一次流程，之後重跑、檢查、回報",
+    "date": "2026-06-30",
+    "source": "https://www.threads.com/@aiposthub/post/DaH0JocAbeL",
+    "author": "AI郵報 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Codex",
+      "AI Agent",
+      "Record & Replay",
+      "Browser Actions",
+      "Automations",
+      "自動化",
+      "工作流",
+      "課程",
+      "AI 數位分身"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DaH0JocAbeL?xmt=AQG0fL4QkWi8PP6prGzsC6c8sHyPI69ISvp2zK_GUabZJpPq-8D0jtOKxEL2CTHqJQiuVCUQUA&slof=1",
+      "https://luma.com/155vu03x",
+      "https://www.threads.com/@aiposthub/post/DaH0JocAbeL?xmt=AQG0fL4QkWi8PP6prGzsC6c8sHyPI69ISvp2zK_GUabZJpPq-8D0jtOKxEL2CTHqJQiuVCUQUA&slof=1",
+      "https://www.threads.com/@aiposthub/post/DaH0JocAbeL",
+      "https://luma.com/155vu03x"
+    ],
+    "excerpt": "這則值得保存的重點是：Codex 自動化的教學語言正在從「學工具」轉成「示範一次你的工作方式」；核心不是讓 AI 只給建議，而是讓 AI 能操作網頁、更新資料、檢查結果，並在完成後回報新增幾筆、跳過幾筆、哪些需要人工確認。",
+    "slug": "2026-06-30-aipost-codex-ai-digital-double-automation-course",
+    "html": "articles/2026-06-30-aipost-codex-ai-digital-double-automation-course.html",
+    "markdown": "articles/2026/06/2026-06-30-aipost-codex-ai-digital-double-automation-course.md"
+  },
+  {
     "title": "李厂长来了｜Claude Cowork + NotebookLM 自動化工作流：用 Skills 連接研究、簡報與定時摘要",
     "date": "2026-06-30",
     "source": "https://youtu.be/w0i9wklw_ng",
