@@ -62,6 +62,39 @@
     "markdown": "articles/2026/06/2026-06-30-aipost-codex-ai-digital-double-automation-course.md"
   },
   {
+    "title": "AI郵報｜放下神奇 Prompt：從 Karpathy 的 CLAUDE.md 看 AI Coding 系統化",
+    "date": "2026-06-30",
+    "source": "https://www.threads.com/@aiposthub/post/DaItdbigRTu",
+    "author": "AI郵報 / Philo / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude",
+      "Claude Code",
+      "CLAUDE.md",
+      "AI Coding",
+      "Agentic Engineering",
+      "Loop Engineering",
+      "Vibe Coding",
+      "工作流",
+      "軟體工程"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DaItdbigRTu?xmt=AQG0FVj1M8iEW6RV1zHIxGTDUs-i_xjhvDArSBUzZcLkr_u9ANh_IbeQvU0DEQRjtmiqyv1CZg&slof=1",
+      "https://www.aiposthub.com/karpathy-claude-md-ai-coding-truth/",
+      "https://www.threads.com/@aiposthub/post/DaItdbigRTu?xmt=AQG0FVj1M8iEW6RV1zHIxGTDUs-i_xjhvDArSBUzZcLkr_u9ANh_IbeQvU0DEQRjtmiqyv1CZg&slof=1",
+      "https://www.threads.com/@aiposthub/post/DaItdbigRTu",
+      "https://www.aiposthub.com/karpathy-claude-md-ai-coding-truth/"
+    ],
+    "excerpt": "Karpathy 的 CLAUDE.md 之所以重要，不是因為它是一份神奇 prompt，而是它示範了 AI Coding 正在從 prompt 技巧走向 Agentic Engineering：用專案規則、任務邊界、驗證流程與安全審查，讓 AI Agent 在可控環境中穩定工作。",
+    "slug": "2026-06-30-aipost-karpathy-claude-md-agentic-engineering-system",
+    "html": "articles/2026-06-30-aipost-karpathy-claude-md-agentic-engineering-system.html",
+    "markdown": "articles/2026/06/2026-06-30-aipost-karpathy-claude-md-agentic-engineering-system.md"
+  },
+  {
     "title": "李厂长来了｜Claude Cowork + NotebookLM 自動化工作流：用 Skills 連接研究、簡報與定時摘要",
     "date": "2026-06-30",
     "source": "https://youtu.be/w0i9wklw_ng",
