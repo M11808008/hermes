@@ -59,6 +59,36 @@
     "markdown": "articles/2026/06/2026-06-30-lichangzhang-claude-cowork-notebooklm-automation-workflow.md"
   },
   {
+    "title": "李厂长来了｜Claude Cowork vs Codex：誰才是更好的 AI 工作助手？",
+    "date": "2026-06-30",
+    "source": "https://youtu.be/HSDyr8bmuOI",
+    "author": "李厂长来了 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude",
+      "Claude Cowork",
+      "Codex",
+      "OpenAI",
+      "AI Agent",
+      "Agent Skills",
+      "工作流",
+      "自動化",
+      "生產力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://youtu.be/HSDyr8bmuOI?si=Q0vzIaTHOWRHdnT8",
+      "https://www.youtube.com/watch?v=HSDyr8bmuOI"
+    ],
+    "excerpt": "Claude Cowork 適合規劃、頭腦風暴、複雜前端、企業權限控管與自訂工作流；Codex 適合調研、結構化文件、圖片生成、長任務執行與程式碼審查；真正高效的做法是依任務分工，而不是把所有工作押在單一 Agent 上。",
+    "slug": "2026-06-30-lichangzhang-claude-cowork-vs-codex-ai-work-assistant",
+    "html": "articles/2026-06-30-lichangzhang-claude-cowork-vs-codex-ai-work-assistant.html",
+    "markdown": "articles/2026/06/2026-06-30-lichangzhang-claude-cowork-vs-codex-ai-work-assistant.md"
+  },
+  {
     "title": "AI 網絡自由創業｜先讓 ChatGPT 懂你，再談內容、文案與流程自動化",
     "date": "2026-06-28",
     "source": "https://www.facebook.com/reel/1014662351323296",
