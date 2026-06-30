@@ -1,5 +1,39 @@
 [
   {
+    "title": "Govin.AI｜Apple Container：Mac 本地 AI Coding 與 Agent 後端的 Docker Desktop 替代方案",
+    "date": "2026-07-01",
+    "source": "https://www.threads.com/@govin999999/post/DaMwza1GAN1?xmt=AQG0DsOjKoU6F2iLNgOXtnp_RbQr-mHE03lTWO0aKmxajKlzHLjtpgnLUsJScRqacOodDmU4Lw&slof=1",
+    "author": "Govin.AI / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Coding",
+      "AI Agent",
+      "Apple",
+      "Mac",
+      "Apple Silicon",
+      "Container",
+      "Docker",
+      "Docker Desktop",
+      "DevOps",
+      "Local Development"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@govin999999/post/DaMwza1GAN1?xmt=AQG0DsOjKoU6F2iLNgOXtnp_RbQr-mHE03lTWO0aKmxajKlzHLjtpgnLUsJScRqacOodDmU4Lw&slof=1",
+      "https://www.threads.com/@govin999999/post/DaMwza1GAN1",
+      "https://www.threads.com/@govin999999/post/DaMwza1GAN1",
+      "https://github.com/apple/container",
+      "https://github.com/apple/containerization"
+    ],
+    "excerpt": "Apple 官方 `container` 專案讓 Mac 使用者可用輕量級 VM 執行 Linux 容器，對本地跑 AI Agent、微服務與 AI Coding 開發很有吸引力；但它目前更適合單一容器、小型服務與實驗環境，還不能簡單等同 Docker Desktop / Docker Compose 的完整替代品。",
+    "slug": "2026-07-01-govin-apple-container-docker-desktop-ai-coding-mac",
+    "html": "articles/2026-07-01-govin-apple-container-docker-desktop-ai-coding-mac.html",
+    "markdown": "articles/2026/07/2026-07-01-govin-apple-container-docker-desktop-ai-coding-mac.md"
+  },
+  {
     "title": "AI Agent Workflow Lab｜Claude Code 入門到精通：把 Claude 變成 AI 員工團隊",
     "date": "2026-06-30",
     "source": "https://www.facebook.com/61582855526986/videos/1675422396872273/",
