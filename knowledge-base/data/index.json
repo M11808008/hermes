@@ -29,6 +29,37 @@
     "markdown": "articles/2026/06/2026-06-30-ai-agent-workflow-lab-claude-code-ai-employee-team-facebook-video.md"
   },
   {
+    "title": "AI 漫劇製作課程筆記｜從商業變現、文案、角色一致性到圖生影片後製",
+    "date": "2026-06-30",
+    "source": "local-pdf: video.pdf",
+    "author": "Hermes Agent / 課程 PDF OCR",
+    "type": "course-note",
+    "topics": [
+      "AI",
+      "AI Video",
+      "AI 漫劇",
+      "課程",
+      "教材筆記",
+      "內容變現",
+      "圖生影片",
+      "角色一致性",
+      "短影音",
+      "Creator Tools"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "local-pdf: video.pdf",
+      "local-pdf: video.pdf",
+      "local-pdf: video.pdf"
+    ],
+    "excerpt": "這份教材把 AI 漫劇製作整理成一條可教、可拆工、可商業化的內容流水線：先確定變現模型，再用 AI 生成小說/腳本，接著建立角色卡、場景卡與分鏡卡，最後以圖生影片、配音、嘴型匹配、剪輯與上架完成作品。",
+    "slug": "2026-06-30-ai-comic-drama-production-course-notes",
+    "html": "articles/2026-06-30-ai-comic-drama-production-course-notes.html",
+    "markdown": "articles/2026/06/2026-06-30-ai-comic-drama-production-course-notes.md"
+  },
+  {
     "title": "AI郵報｜用 Codex 打造 AI 數位分身：示範一次流程，之後重跑、檢查、回報",
     "date": "2026-06-30",
     "source": "https://www.threads.com/@aiposthub/post/DaH0JocAbeL",
