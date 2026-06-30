@@ -1,0 +1,110 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Frappe ERPNext｜開源 ERP 平台與未來專案備忘</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Frappe ERPNext｜開源 ERP 平台與未來專案備忘</h1><h1>Frappe ERPNext｜開源 ERP 平台與未來專案備忘</h1>
+<p>這份筆記是針對欒帥分享的 GitHub 專案 <a href="https://github.com/frappe/erpnext" target="_blank" rel="noopener">https://github.com/frappe/erpnext</a> 建立的長期備忘。未來若我們需要做企業內部系統、AI Agent 接企業流程、課程案例、營運管理工具、CRM / 庫存 / 財務整合，可以優先回來看 ERPNext。</p>
+<h1>一句話摘要</h1>
+<p>ERPNext 是一套成熟的 100% 開源 ERP 系統，底層跑在 Frappe Framework 上，適合作為中小企業數位化、流程整合、內部管理系統與 AI Agent 企業應用的開源底座。</p>
+<h1>專案定位</h1>
+<p>ERPNext 的核心定位是「Powerful, Intuitive and Open-Source ERP」。它不是單一工具，而是一整套企業營運系統，涵蓋從交易、庫存、製造到專案與客戶管理的流程。</p>
+<p>官方列出的主要功能包括：</p>
+<ul>
+<li>Accounting：會計、現金流、交易紀錄與財務報表。</li>
+<li>Order Management：庫存、銷售訂單、客戶、供應商、出貨與履約。</li>
+<li>Manufacturing：生產週期、物料消耗、產能規劃、委外加工。</li>
+<li>Asset Management：資產採購、折舊、維護、報廢與集中管理。</li>
+<li>Projects：專案、任務、工時、議題與獲利追蹤。</li>
+</ul>
+<h1>技術底層</h1>
+<p>ERPNext 不是獨立從零寫的系統，它建立在 Frappe 生態系上：</p>
+<ul>
+<li>Frappe Framework：Python 與 JavaScript 的全端 Web 應用框架，提供資料模型、權限、使用者認證、REST API、後台與 DocType 機制。</li>
+<li>Frappe UI：Vue-based UI library，可用於打造現代化單頁應用。</li>
+<li>ERPNext App：作為 Frappe App 安裝，透過 `erpnext/hooks.py` 註冊前端資源、事件、安裝流程、session boot、doctype 擴充與系統設定。</li>
+</ul>
+<h1>我已完成的快速讀碼結果</h1>
+<p>本機已 shallow clone 到：</p>
+<p>`~/.hermes/cache/repo-learning/frappe-erpnext`</p>
+<p>讀到的專案狀態：</p>
+<ul>
+<li>GitHub repo：frappe/erpnext</li>
+<li>Default branch：develop</li>
+<li>授權：GPL-3.0</li>
+<li>底層依賴：Frappe &gt;= 17.0.0-dev, &lt; 18.0.0</li>
+<li>Python 專案設定：`pyproject.toml`</li>
+<li>前端設定：`package.json`，另有 `banking` 子專案，使用 Vite / TypeScript / Vue 生態</li>
+<li>CI：GitHub Actions，包含 MariaDB / Postgres server tests、linters、release、translation sync、Docker release 等 workflow</li>
+<li>測試量：目前約 441 個 Python test files</li>
+<li>檔案組成概略：Python 約 2791 檔、JSON 約 1136 檔、JavaScript 約 637 檔、Markdown 約 197 檔、TypeScript / TSX 約 136 檔</li>
+</ul>
+<h1>主要業務模組</h1>
+<p>目前 repo 內含大量 Frappe DocType。依目錄觀察，核心模組包括：</p>
+<ul>
+<li>accounts：會計與財務，DocType 數量最大。</li>
+<li>stock：庫存、倉儲、物料與報表。</li>
+<li>selling：銷售流程、報價、訂單、客戶相關。</li>
+<li>buying：採購、供應商、採購流程。</li>
+<li>manufacturing：BOM、生產、工單、產能與製造流程。</li>
+<li>crm：商機、客戶關係、銷售活動。</li>
+<li>projects：專案、任務、工時與交付管理。</li>
+<li>assets：資產管理。</li>
+<li>support：支援、客服與問題追蹤。</li>
+<li>quality-management：品質管理。</li>
+<li>maintenance：維護與設備保養。</li>
+<li>regional：各地區法規、稅務與在地化。</li>
+<li>subcontracting：委外加工。</li>
+<li>setup：公司、權限、基礎設定與初始化流程。</li>
+<li>portal / shopping-cart：對外入口與電商相關能力。</li>
+<li>erpnext-integrations：外部整合。</li>
+<li>telephony / edi / communication：通訊、EDI 與延伸流程。</li>
+</ul>
+<h1>對欒帥未來可能有用的方向</h1>
+<h2>1. 企業 AI Agent 的流程底座</h2>
+<p>ERPNext 很適合作為「企業資料與流程系統」，AI Agent 可以接在上面做：</p>
+<ul>
+<li>自動查詢客戶、訂單、庫存、應收帳款。</li>
+<li>依照自然語言產生報表摘要。</li>
+<li>協助建立採購單、銷售單、專案任務或客服紀錄。</li>
+<li>把 LINE / Email / 表單訊息轉成 ERPNext 內部流程。</li>
+<li>建立企業內部的 agentic workflow：例如每日營運簡報、異常庫存提醒、逾期應收款追蹤。</li>
+</ul>
+<h2>2. 課程案例</h2>
+<p>如果未來要教「AI 如何落地到企業工作流」，ERPNext 可以當作很好的真實案例：</p>
+<ul>
+<li>不是玩具資料庫，而是真正企業會用的 ERP。</li>
+<li>有模組、有權限、有流程、有報表、有 API。</li>
+<li>可示範 AI Agent 如何查詢、整理、跨模組操作。</li>
+<li>可示範「AI 不只是聊天，而是接到企業作業系統裡」。</li>
+</ul>
+<h2>3. 客製化內部系統</h2>
+<p>對需要 CRM、報價、庫存、採購、專案管理的組織，ERPNext 可能比從零開發更快：</p>
+<ul>
+<li>開源可自架。</li>
+<li>功能完整。</li>
+<li>可用 Frappe App 擴充。</li>
+<li>可與外部服務整合。</li>
+<li>適合做 PoC，再逐步客製。</li>
+</ul>
+<h1>需要注意的地方</h1>
+<ul>
+<li>GPL-3.0 授權：若做商業客製或再散布，需要特別注意授權義務。</li>
+<li>架構不輕：ERPNext 是完整 ERP，不適合當小型 demo app 隨便塞進現有服務。</li>
+<li>生態依賴 Frappe：真正要改功能，需學 Frappe Framework、DocType、hooks、bench、migration、permission 與 app 架構。</li>
+<li>官方 README 建議快速評估可用 Docker demo；正式部署則應看 Frappe Docker / Frappe Cloud / bench 相關文件。</li>
+<li>develop branch 目前指向 v17 開發線，若要正式導入應選穩定版與對應文件。</li>
+</ul>
+<h1>未來使用時的第一步</h1>
+<p>若欒帥之後說「我們來用 ERPNext / Frappe 做一個企業系統」，建議流程是：</p>
+<ul>
+<li>先判斷需求屬於哪個模組：會計、庫存、銷售、CRM、專案、製造、客服。</li>
+<li>查 ERPNext 是否已有內建 DocType 與流程。</li>
+<li>用 Docker demo 或 Frappe Cloud 快速試流程。</li>
+<li>若要客製，再研究 Frappe App、DocType、hooks、permission 與 API。</li>
+<li>若要接 AI Agent，優先走 REST API / Server Script / Custom App，不要直接改核心。</li>
+</ul>
+<h1>重要連結</h1>
+<ul>
+<li>GitHub repo：<a href="https://github.com/frappe/erpnext" target="_blank" rel="noopener">https://github.com/frappe/erpnext</a></li>
+<li>官方網站：<a href="https://frappe.io/erpnext" target="_blank" rel="noopener">https://frappe.io/erpnext</a></li>
+<li>官方文件：<a href="https://docs.frappe.io/erpnext/" target="_blank" rel="noopener">https://docs.frappe.io/erpnext/</a></li>
+<li>Live demo：<a href="https://erpnext-demo.frappe.cloud/app/home" target="_blank" rel="noopener">https://erpnext-demo.frappe.cloud/app/home</a></li>
+<li>Frappe Framework：<a href="https://github.com/frappe/frappe" target="_blank" rel="noopener">https://github.com/frappe/frappe</a></li>
+<li>Frappe Docker：<a href="https://github.com/frappe/frappe_docker" target="_blank" rel="noopener">https://github.com/frappe/frappe_docker</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-06-30 · https://github.com/frappe/erpnext · repo-note</div><h3>標籤</h3><span class="tag">ERPNext</span><span class="tag">Frappe Framework</span><span class="tag">ERP</span><span class="tag">Open Source</span><span class="tag">Business Software</span><span class="tag">Accounting</span><span class="tag">Inventory</span><span class="tag">Manufacturing</span><span class="tag">CRM</span><span class="tag">GitHub</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Vue</span><h3>原始連結</h3><p><a href="https://github.com/frappe/erpnext" target="_blank" rel="noopener">https://github.com/frappe/erpnext</a></p><p><a href="https://frappe.io/erpnext" target="_blank" rel="noopener">https://frappe.io/erpnext</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

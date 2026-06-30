@@ -126,6 +126,39 @@
     "markdown": "articles/2026/06/2026-06-30-aipost-karpathy-claude-md-agentic-engineering-system.md"
   },
   {
+    "title": "Frappe ERPNext｜開源 ERP 平台與未來專案備忘",
+    "date": "2026-06-30",
+    "source": "https://github.com/frappe/erpnext",
+    "author": "Frappe Technologies / Hermes Agent",
+    "type": "repo-note",
+    "topics": [
+      "ERPNext",
+      "Frappe Framework",
+      "ERP",
+      "Open Source",
+      "Business Software",
+      "Accounting",
+      "Inventory",
+      "Manufacturing",
+      "CRM",
+      "GitHub",
+      "Python",
+      "JavaScript",
+      "Vue"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/frappe/erpnext",
+      "https://frappe.io/erpnext"
+    ],
+    "excerpt": "ERPNext 是一套成熟的 100% 開源 ERP 系統，底層跑在 Frappe Framework 上，適合作為中小企業數位化、流程整合、內部管理系統與 AI Agent 企業應用的開源底座。",
+    "slug": "2026-06-30-frappe-erpnext-open-source-erp-platform",
+    "html": "articles/2026-06-30-frappe-erpnext-open-source-erp-platform.html",
+    "markdown": "articles/2026/06/2026-06-30-frappe-erpnext-open-source-erp-platform.md"
+  },
+  {
     "title": "李厂长来了｜Claude Cowork + NotebookLM 自動化工作流：用 Skills 連接研究、簡報與定時摘要",
     "date": "2026-06-30",
     "source": "https://youtu.be/w0i9wklw_ng",
