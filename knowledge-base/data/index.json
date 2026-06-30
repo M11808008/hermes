@@ -186,6 +186,42 @@
     "markdown": "articles/2026/06/2026-06-30-lichangzhang-claude-cowork-vs-codex-ai-work-assistant.md"
   },
   {
+    "title": "張原禎｜第一性原理手稿煉金術師：把手寫筆記轉成文章、QBQ 與 NotebookLM 知識庫",
+    "date": "2026-06-30",
+    "source": "https://www.facebook.com/share/p/1bGXgzJrYH/?mibextid=wwXIfr",
+    "author": "張原禎 / 塾長 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Gemini",
+      "Gem",
+      "NotebookLM",
+      "Notion",
+      "OCR",
+      "第一性原理",
+      "手寫筆記",
+      "知識管理",
+      "寫作工作流",
+      "QBQ"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1bGXgzJrYH/?mibextid=wwXIfr",
+      "http://220.128.199.92/index.php?load=read&id=3265",
+      "https://www.facebook.com/share/p/1bGXgzJrYH/?mibextid=wwXIfr",
+      "http://220.128.199.92/index.php?load=read&id=3265",
+      "https://docs.google.com/document/d/1GwQmvIJov5T5x9nWm6kef7eEw-TWhPGvMOgp-0TLs4E/edit?usp=sharing",
+      "http://220.128.199.92/index.php?load=read&id=3262",
+      "https://www.facebook.com/reel/1562818032082440"
+    ],
+    "excerpt": "這則貼文的核心價值是：把手寫筆記不只 OCR 成文字，而是透過 Gemini Gem 加上第一性原理分析、文章模板與 QBQ 提問，變成可累積、可再利用、可放入 NotebookLM / Notion 的個人知識生產系統。",
+    "slug": "2026-06-30-zhang-yuanzhen-first-principles-handwritten-notes-gem",
+    "html": "articles/2026-06-30-zhang-yuanzhen-first-principles-handwritten-notes-gem.html",
+    "markdown": "articles/2026/06/2026-06-30-zhang-yuanzhen-first-principles-handwritten-notes-gem.md"
+  },
+  {
     "title": "AI 網絡自由創業｜先讓 ChatGPT 懂你，再談內容、文案與流程自動化",
     "date": "2026-06-28",
     "source": "https://www.facebook.com/reel/1014662351323296",
