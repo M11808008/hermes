@@ -1,5 +1,39 @@
 [
   {
+    "title": "Cursor for iOS｜用手機啟動 Cloud Agent、看 Demo、審 Diff 並合併 PR",
+    "date": "2026-07-01",
+    "source": "https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB?xmt=AQG0CtLReqpnoQvG4GrDpjWMNzBoOxYq-kPNDkCdAPtCPlPpbREAnnJkWK2ZP3PZtv-U7F2NvQ&slof=1",
+    "author": "Matt Cheng / s_h_u_ooo / Cursor / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Coding",
+      "Cursor",
+      "Cloud Agent",
+      "iOS",
+      "Mobile Workflow",
+      "PR Review",
+      "Software Development",
+      "Agentic Coding"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB?xmt=AQG0CtLReqpnoQvG4GrDpjWMNzBoOxYq-kPNDkCdAPtCPlPpbREAnnJkWK2ZP3PZtv-U7F2NvQ&slof=1",
+      "https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB",
+      "https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB",
+      "https://cursor.com/blog/ios-mobile-app",
+      "https://cursor.com/docs/cloud-agent",
+      "https://cursor.com/cloud",
+      "https://cursor.com/changelog"
+    ],
+    "excerpt": "Cursor for iOS 把 AI Coding 從「坐在電腦前操作 IDE」推進到「手機派工、雲端執行、收到通知、看 demo / diff、直接 merge PR」的行動化 Agent 工作流。",
+    "slug": "2026-07-01-cursor-ios-cloud-agent-mobile-pr-workflow",
+    "html": "articles/2026-07-01-cursor-ios-cloud-agent-mobile-pr-workflow.html",
+    "markdown": "articles/2026/07/2026-07-01-cursor-ios-cloud-agent-mobile-pr-workflow.md"
+  },
+  {
     "title": "Govin.AI｜Apple Container：Mac 本地 AI Coding 與 Agent 後端的 Docker Desktop 替代方案",
     "date": "2026-07-01",
     "source": "https://www.threads.com/@govin999999/post/DaMwza1GAN1?xmt=AQG0DsOjKoU6F2iLNgOXtnp_RbQr-mHE03lTWO0aKmxajKlzHLjtpgnLUsJScRqacOodDmU4Lw&slof=1",
@@ -32,6 +66,39 @@
     "slug": "2026-07-01-govin-apple-container-docker-desktop-ai-coding-mac",
     "html": "articles/2026-07-01-govin-apple-container-docker-desktop-ai-coding-mac.html",
     "markdown": "articles/2026/07/2026-07-01-govin-apple-container-docker-desktop-ai-coding-mac.md"
+  },
+  {
+    "title": "Kufu｜Orior AI：AI UGC 真人廣告平台與虛擬代言人工作流",
+    "date": "2026-07-01",
+    "source": "https://www.threads.com/@kufutw/post/DaMskTgkooe?xmt=AQG0AWBN6juqrxYm_hPKHcLdf-Ty2-pm8IJRno5ZM2xbpHSjxHgod-do9mZcpboY6Vv75mJDcA&slof=1",
+    "author": "Kufu 酷服 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI UGC",
+      "Orior AI",
+      "AI Video",
+      "AI Ads",
+      "Virtual Influencer",
+      "Lip Sync",
+      "Content Marketing",
+      "電商廣告",
+      "Creator Tools"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DaMskTgkooe?xmt=AQG0AWBN6juqrxYm_hPKHcLdf-Ty2-pm8IJRno5ZM2xbpHSjxHgod-do9mZcpboY6Vv75mJDcA&slof=1",
+      "https://www.threads.com/@kufutw/post/DaMskTgkooe",
+      "https://www.threads.com/@kufutw/post/DaMskTgkooe",
+      "https://www.oriorai.com/",
+      "https://x.com/notiiivy/status/2071740096508727720"
+    ],
+    "excerpt": "Orior AI 代表 AI UGC 平台正在從「生成一張人物圖」進化為「建立一致角色 → 產出照片/影片 → 口型同步 → 多平台發布」的廣告內容流水線。",
+    "slug": "2026-07-01-kufu-orior-ai-ugc-virtual-ad-workflow",
+    "html": "articles/2026-07-01-kufu-orior-ai-ugc-virtual-ad-workflow.html",
+    "markdown": "articles/2026/07/2026-07-01-kufu-orior-ai-ugc-virtual-ad-workflow.md"
   },
   {
     "title": "AI Agent Workflow Lab｜Claude Code 入門到精通：把 Claude 變成 AI 員工團隊",

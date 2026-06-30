@@ -1,0 +1,77 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cursor for iOS｜用手機啟動 Cloud Agent、看 Demo、審 Diff 並合併 PR</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Cursor for iOS｜用手機啟動 Cloud Agent、看 Demo、審 Diff 並合併 PR</h1><h1>Cursor for iOS｜用手機啟動 Cloud Agent、看 Demo、審 Diff 並合併 PR</h1>
+<h1>一句話摘要</h1>
+<p>Cursor for iOS 把 AI Coding 從「坐在電腦前操作 IDE」推進到「手機派工、雲端執行、收到通知、看 demo / diff、直接 merge PR」的行動化 Agent 工作流。</p>
+<h1>Threads 串文重點</h1>
+<p>原串文提到：</p>
+<ul>
+<li>Cursor for iOS 正式公開測試。</li>
+<li>可以用手機直接管理 Agent，概念類似 Codex。</li>
+<li>在外面可用語音丟需求，讓 Cloud Agent 開跑。</li>
+<li>完成後可在手機上看 demo。</li>
+<li>最後直接在手機上 merge。</li>
+<li>影片為官方說明並加上中文字幕。</li>
+</ul>
+<p>Matt Cheng 回覆自己晚上領到美國 edu mail 後去申請 Pro，顯示這則串文也和 Cursor Pro / 學生資格、行動端 AI Coding 使用情境有關。</p>
+<h1>官方資訊交叉確認</h1>
+<p>Cursor 官方部落格〈Build from anywhere with Cursor for iOS〉說明：Cursor iOS 已是 native iOS app public beta。使用者可以：</p>
+<ul>
+<li>從手機選擇 repo 並啟動 agent。</li>
+<li>用語音描述需求。</li>
+<li>使用 slash commands 引導 Cursor。</li>
+<li>遠端控制正在本機執行的 agents。</li>
+<li>讓 Cloud Agents 在隔離 VM 中執行、測試、產出 demo。</li>
+<li>透過 Live Activities 與 push notifications 接收完成、需要輸入、可 review 等通知。</li>
+<li>檢視 demos、screenshots、logs、diffs。</li>
+<li>留下 follow-up instructions。</li>
+<li>直接從 iOS app merge PR。</li>
+</ul>
+<h1>Cloud Agent 的角色變化</h1>
+<p>Cursor 的 Cloud Agent 不只是「手機版聊天機器人」，而是遠端開發執行單元：</p>
+<ul>
+<li>在獨立 VM 中擁有完整開發環境。</li>
+<li>可長時間非同步執行。</li>
+<li>可測試、驗證與 demo 工作成果。</li>
+<li>目標是產出 merge-ready PR。</li>
+<li>可與本機 session handoff：本機計畫送到 cloud，或把 cloud session 帶回本機測試。</li>
+</ul>
+<p>這使手機不再只是通知中心，而是 Agent orchestration console。</p>
+<h1>對 AI Coding 工作流的意義</h1>
+<p>這則值得歸檔，因為它代表 AI Coding 工具競爭重點正在移動：</p>
+<ul>
+<li>從單次 code completion 轉向長任務 agent。</li>
+<li>從桌面 IDE 轉向跨裝置控制。</li>
+<li>從「寫程式」轉向「派工、驗收、審查、合併」。</li>
+<li>從同步對話轉向非同步雲端執行。</li>
+<li>從文字回覆轉向 demo、screenshot、log、diff 等可驗證 artifacts。</li>
+</ul>
+<h1>可用情境</h1>
+<p>| 情境 | Cursor iOS / Cloud Agent 的價值 |</p>
+<p>|---|---|</p>
+<p>| 外出想到功能 | 用語音快速建立任務，讓 agent 先跑 |</p>
+<p>| 緊急 bug | 手機啟動 agent 讀 repo、重現問題、提出 PR |</p>
+<p>| UI 反饋 | 截圖加註解，直接丟給 agent 做修改 |</p>
+<p>| 長任務 | Cloud Agent 非同步執行，不占用本機 |</p>
+<p>| PR 驗收 | 手機看 demo、log、diff，必要時 merge |</p>
+<h1>對欒帥的應用建議</h1>
+<p>對欒帥來說，這是「AI 助理不是只能在桌面等指令」的重要案例。未來可把 AI 學習雷達、課程頁、知識庫維護、簡報素材整理等任務拆成手機可派工的工作包：</p>
+<ul>
+<li>用語音說明要整理哪篇連結或 PDF。</li>
+<li>Agent 在雲端更新 repo 或草稿。</li>
+<li>手機看預覽與 diff。</li>
+<li>確認後 merge / deploy。</li>
+</ul>
+<p>這與欒帥偏好的高自治、低摩擦流程高度一致，但也要保留審稿與驗證環節，避免 agent 在手機上直接合併未檢查的變更。</p>
+<h1>風險與注意</h1>
+<ul>
+<li>手機合併 PR 很方便，但仍需檢查 CI、diff、preview 與敏感資料。</li>
+<li>Cloud Agent 權限要最小化，避免可寫入過多 repo 或環境。</li>
+<li>長任務 agent 需要清楚 acceptance criteria，否則容易產出看似完成但未驗證的 PR。</li>
+<li>教學時應強調「手機是派工與驗收入口」，不是跳過工程品質控管。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads：<a href="https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB" target="_blank" rel="noopener">https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB</a></li>
+<li>Cursor iOS 官方部落格：<a href="https://cursor.com/blog/ios-mobile-app" target="_blank" rel="noopener">https://cursor.com/blog/ios-mobile-app</a></li>
+<li>Cursor Cloud Agent Docs：<a href="https://cursor.com/docs/cloud-agent" target="_blank" rel="noopener">https://cursor.com/docs/cloud-agent</a></li>
+<li>Cursor Cloud：<a href="https://cursor.com/cloud" target="_blank" rel="noopener">https://cursor.com/cloud</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-01 · https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB?xmt=AQG0CtLReqpnoQvG4GrDpjWMNzBoOxYq-kPNDkCdAPtCPlPpbREAnnJkWK2ZP3PZtv-U7F2NvQ&amp;slof=1 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">AI Coding</span><span class="tag">Cursor</span><span class="tag">Cloud Agent</span><span class="tag">iOS</span><span class="tag">Mobile Workflow</span><span class="tag">PR Review</span><span class="tag">Software Development</span><span class="tag">Agentic Coding</span><h3>原始連結</h3><p><a href="https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB?xmt=AQG0CtLReqpnoQvG4GrDpjWMNzBoOxYq-kPNDkCdAPtCPlPpbREAnnJkWK2ZP3PZtv-U7F2NvQ&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB?xmt=AQG0CtLReqpnoQvG4GrDpjWMNzBoOxYq-kPNDkCdAPtCPlPpbREAnnJkWK2ZP3PZtv-U7F2NvQ&amp;slof=1</a></p><p><a href="https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB" target="_blank" rel="noopener">https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB</a></p><p><a href="https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB" target="_blank" rel="noopener">https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB</a></p><p><a href="https://cursor.com/blog/ios-mobile-app" target="_blank" rel="noopener">https://cursor.com/blog/ios-mobile-app</a></p><p><a href="https://cursor.com/docs/cloud-agent" target="_blank" rel="noopener">https://cursor.com/docs/cloud-agent</a></p><p><a href="https://cursor.com/cloud" target="_blank" rel="noopener">https://cursor.com/cloud</a></p><p><a href="https://cursor.com/changelog" target="_blank" rel="noopener">https://cursor.com/changelog</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
