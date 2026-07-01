@@ -1,5 +1,38 @@
 [
   {
+    "title": "塞掐 Side Chat E412｜Agent 該怎麼分工？Nick Hsu 談 AI 組織、Claude Code 與企業工作流",
+    "date": "2026-07-02",
+    "source": "https://youtu.be/BJ92fomIRJM?si=Yrew6-kwaLsCmqG9",
+    "author": "INSIDE 硬塞的網路趨勢觀察 / 塞掐 Side Chat / Nick Hsu / Hermes Agent",
+    "type": "video",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Claude Code",
+      "Agentic Coding",
+      "組織設計",
+      "企業 AI",
+      "Vibe Coding",
+      "Builder Seller",
+      "Crypto",
+      "Side Chat"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://youtu.be/BJ92fomIRJM?si=Yrew6-kwaLsCmqG9",
+      "https://www.youtube.com/watch?v=BJ92fomIRJM",
+      "https://www.youtube.com/watch?v=BJ92fomIRJM",
+      "https://www.youtube.com/@inside6202",
+      "https://open.firstory.me/user/sidechat/platforms"
+    ],
+    "excerpt": "這集把「AI 工具使用」拉高到「組織與工作流重構」層次：Agent 分工不應複製傳統職位，而要按任務、領域、上下文與驗證閉環設計，真正的能力差距在於人是否能把問題、背景、目標與驗收標準講清楚。",
+    "slug": "2026-07-02-inside-sidechat-agent-division-nick-hsu-ai-workflow",
+    "html": "articles/2026-07-02-inside-sidechat-agent-division-nick-hsu-ai-workflow.html",
+    "markdown": "articles/2026/07/2026-07-02-inside-sidechat-agent-division-nick-hsu-ai-workflow.md"
+  },
+  {
     "title": "Cursor for iOS｜用手機啟動 Cloud Agent、看 Demo、審 Diff 並合併 PR",
     "date": "2026-07-01",
     "source": "https://www.threads.com/@matt.cheng0416/post/DaMWbnVEfMB?xmt=AQG0CtLReqpnoQvG4GrDpjWMNzBoOxYq-kPNDkCdAPtCPlPpbREAnnJkWK2ZP3PZtv-U7F2NvQ&slof=1",
