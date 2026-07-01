@@ -34,6 +34,30 @@
     "markdown": "articles/2026/07/2026-07-01-cursor-ios-cloud-agent-mobile-pr-workflow.md"
   },
   {
+    "title": "2026 GAI 年會簡報重點｜企業 AI 不是多人各用工具，而是可累積的判斷系統",
+    "date": "2026-07-01",
+    "source": "LINE 手稿",
+    "author": "Luarn-Pin / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "企業 AI",
+      "組織智慧",
+      "知識管理",
+      "判斷系統",
+      "企業大腦",
+      "GAI 年會"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [],
+    "excerpt": "企業 AI 的真正價值，不是讓每個人各自變強，而是把資料、語言、判斷與決策脈絡沉澱成可重複使用的組織智慧，讓公司越用越聰明。",
+    "slug": "2026-07-01-gai-annual-meeting-enterprise-ai-judgment-system",
+    "html": "articles/2026-07-01-gai-annual-meeting-enterprise-ai-judgment-system.html",
+    "markdown": "articles/2026/07/2026-07-01-gai-annual-meeting-enterprise-ai-judgment-system.md"
+  },
+  {
     "title": "Govin.AI｜Apple Container：Mac 本地 AI Coding 與 Agent 後端的 Docker Desktop 替代方案",
     "date": "2026-07-01",
     "source": "https://www.threads.com/@govin999999/post/DaMwza1GAN1?xmt=AQG0DsOjKoU6F2iLNgOXtnp_RbQr-mHE03lTWO0aKmxajKlzHLjtpgnLUsJScRqacOodDmU4Lw&slof=1",
