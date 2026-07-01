@@ -92,6 +92,40 @@
     "markdown": "articles/2026/07/2026-07-01-govin-apple-container-docker-desktop-ai-coding-mac.md"
   },
   {
+    "title": "J.Ten 天哥／快筆｜Hermes Agent 桌面版安裝、模型設定與 Telegram Bot 串接教學",
+    "date": "2026-07-01",
+    "source": "https://www.threads.com/@jtenaigo/post/DaPq010E84L?xmt=AQG0yhhMpP_Cjc7sjLWFcg54iJmfgGrraL_9qiWd3uYFYu5-muUmOb3bypIm7iLZdAY7pD7ioQ&slof=1",
+    "author": "J.Ten 天哥 / 快筆教育 / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Hermes Agent",
+      "AI Agent",
+      "Telegram Bot",
+      "BotFather",
+      "Nous Research",
+      "桌面版",
+      "模型設定",
+      "AI 工作流"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@jtenaigo/post/DaPq010E84L?xmt=AQG0yhhMpP_Cjc7sjLWFcg54iJmfgGrraL_9qiWd3uYFYu5-muUmOb3bypIm7iLZdAY7pD7ioQ&slof=1",
+      "https://www.threads.com/@jtenaigo/post/DaPq010E84L",
+      "https://www.threads.com/@jtenaigo/post/DaPq010E84L",
+      "https://www.vibee-studio.com/blog/hermes-agent-install-setup-telegram",
+      "https://hermes-agent.nousresearch.com/docs/",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/messaging/",
+      "https://github.com/NousResearch/hermes-agent"
+    ],
+    "excerpt": "這篇是面向 Hermes Agent 初學者的啟用流程文：從桌面版安裝、模型提供方設定、模型套用，到 Telegram Bot 串接，目標是讓 Hermes 不只被安裝，而是真的能進入日常工作流程。",
+    "slug": "2026-07-01-jtenaigo-vibee-hermes-agent-install-telegram-setup",
+    "html": "articles/2026-07-01-jtenaigo-vibee-hermes-agent-install-telegram-setup.html",
+    "markdown": "articles/2026/07/2026-07-01-jtenaigo-vibee-hermes-agent-install-telegram-setup.md"
+  },
+  {
     "title": "Kufu｜Orior AI：AI UGC 真人廣告平台與虛擬代言人工作流",
     "date": "2026-07-01",
     "source": "https://www.threads.com/@kufutw/post/DaMskTgkooe?xmt=AQG0AWBN6juqrxYm_hPKHcLdf-Ty2-pm8IJRno5ZM2xbpHSjxHgod-do9mZcpboY6Vv75mJDcA&slof=1",

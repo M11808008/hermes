@@ -1,0 +1,79 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>J.Ten 天哥／快筆｜Hermes Agent 桌面版安裝、模型設定與 Telegram Bot 串接教學</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>J.Ten 天哥／快筆｜Hermes Agent 桌面版安裝、模型設定與 Telegram Bot 串接教學</h1><h1>J.Ten 天哥／快筆｜Hermes Agent 桌面版安裝、模型設定與 Telegram Bot 串接教學</h1>
+<h1>一句話摘要</h1>
+<p>這篇是面向 Hermes Agent 初學者的啟用流程文：從桌面版安裝、模型提供方設定、模型套用，到 Telegram Bot 串接，目標是讓 Hermes 不只被安裝，而是真的能進入日常工作流程。</p>
+<h1>Threads 串文重點</h1>
+<p>J.Ten 天哥在 Threads 表示，自己整理了一篇 Hermes Agent 的安裝啟用教學，適合第一次接觸 Hermes 的人閱讀。內容包含：</p>
+<ul>
+<li>桌面版怎麼安裝。</li>
+<li>模型提供方怎麼設定。</li>
+<li>怎麼套用模型。</li>
+<li>怎麼串接 Telegram Bot。</li>
+</ul>
+<p>他也特別說明，這不是很硬的技術文，而是給初學者照著做的啟用流程。若只是想先把 Hermes 跑起來，可以從這篇開始。</p>
+<h1>快筆文章內容整理</h1>
+<p>快筆教育文章〈Hermes Agent 安裝啟用教學：桌面版、模型設定與 Telegram Bot 串接〉以 Windows 桌面版為示範，整理完整初次啟用流程。</p>
+<p>文章的核心觀點是：Hermes Agent 不是單純聊天視窗，而是一個本機 Agent 工作台。安裝完成後，仍需要完成幾個基礎設定，才算真正能開始使用。</p>
+<p>主要流程包括：</p>
+<ul>
+<li>下載並安裝 Hermes Windows 桌面版。</li>
+<li>進入 Hermes 設定頁，調整語言與外觀。</li>
+<li>在 Providers 連結模型提供方。</li>
+<li>回到 Model 頁套用主要模型。</li>
+<li>建立 Telegram Bot。</li>
+<li>取得 Telegram 使用者 ID。</li>
+<li>把 Bot Token 與 Allowed Telegram user ID 填回 Hermes。</li>
+<li>回到 Telegram 測試是否能與 Hermes 對話。</li>
+</ul>
+<h1>文章特別值得保留的提醒</h1>
+<p>這篇對初學者有價值的地方，不只是列出步驟，而是補上幾個常見卡點：</p>
+<ul>
+<li>連上 Provider 不等於已經套用模型，仍要回到 Model 頁選擇並套用主要模型。</li>
+<li>Telegram 串接需要 BotFather 產生 Bot Token。</li>
+<li>需要取得自己的 Telegram user ID，填入 Allowed Telegram user ID，避免任何人都能呼叫自己的 Hermes Bot。</li>
+<li>Bot Token、API Key、Telegram user ID 都可能是敏感資訊，公開截圖或簡報前必須遮蔽。</li>
+<li>若安裝後沒有回應，優先檢查模型提供方是否連線、模型是否套用、Telegram 設定是否儲存且 Token / user ID 是否正確。</li>
+</ul>
+<h1>官方脈絡交叉確認</h1>
+<p>Hermes Agent 官方文件也將 Hermes 定位為可連接模型、工具、技能、記憶、排程與多種訊息平台的 AI Agent 框架，而不只是單一聊天視窗。</p>
+<p>與這篇教學相關的官方能力包括：</p>
+<ul>
+<li>桌面／CLI 啟用與設定。</li>
+<li>Provider-agnostic 模型設定。</li>
+<li>Gateway / Messaging platform 串接。</li>
+<li>Telegram 等通訊平台讓使用者可從手機或外部聊天介面呼叫 Hermes。</li>
+<li>Skills、Memory、Tools、Cron 等功能讓 Hermes 能逐步進入個人或團隊工作流。</li>
+</ul>
+<p>因此，這篇快筆文章適合定位為「Hermes 初學者上手入口」，而不是完整進階架構教學。</p>
+<h1>對欒帥的應用價值</h1>
+<p>這篇值得放進 AI 學習雷達，因為它補齊 Hermes Agent 推廣時很重要的一層：降低新手啟用門檻。</p>
+<p>對欒帥來說，可用在幾個情境：</p>
+<ul>
+<li>給第一次接觸 Hermes 的學員當前置閱讀。</li>
+<li>課程中用來說明「安裝」與「啟用」的差異。</li>
+<li>作為 Telegram Bot 串接的非工程版操作參考。</li>
+<li>提醒學員不要公開 Bot Token、API Key 與 Telegram user ID。</li>
+<li>與進階教學搭配：先完成桌面版、模型與 Telegram，再進一步介紹 Skills、Memory、Cron、Webhook、Subagent。</li>
+</ul>
+<h1>可延伸成課程段落</h1>
+<p>若要放進 Hermes / AI Agent 課程，可以拆成三層：</p>
+<ul>
+<li>入門層：安裝桌面版、設定語言與外觀。</li>
+<li>可用層：接上模型提供方並套用主要模型。</li>
+<li>工作流層：串接 Telegram，讓 Hermes 進入日常訊息入口。</li>
+</ul>
+<p>這樣學員會更容易理解：Hermes 的價值不是「多一個 AI 聊天視窗」，而是把 AI Agent 接進自己的工作流程。</p>
+<h1>風險與注意</h1>
+<ul>
+<li>初學者照做時，要特別避免把 Bot Token 或 API Key 貼到社群、簡報截圖或公開文件。</li>
+<li>Allowed Telegram user ID 是基本白名單，不應省略。</li>
+<li>若是公司或課程環境使用，應另外規劃權限、資料邊界與敏感資料處理方式。</li>
+<li>Windows 桌面版流程適合新手，但進階部署、長期執行、Webhook、雲端或多平台 gateway 還需要更完整的架構說明。</li>
+</ul>
+<h1>參考來源</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@jtenaigo/post/DaPq010E84L" target="_blank" rel="noopener">https://www.threads.com/@jtenaigo/post/DaPq010E84L</a></li>
+<li>快筆教學：<a href="https://www.vibee-studio.com/blog/hermes-agent-install-setup-telegram" target="_blank" rel="noopener">https://www.vibee-studio.com/blog/hermes-agent-install-setup-telegram</a></li>
+<li>Hermes Agent Docs：<a href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/</a></li>
+<li>Hermes Messaging Docs：<a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/messaging/</a></li>
+<li>Hermes Agent GitHub：<a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-01 · https://www.threads.com/@jtenaigo/post/DaPq010E84L?xmt=AQG0yhhMpP_Cjc7sjLWFcg54iJmfgGrraL_9qiWd3uYFYu5-muUmOb3bypIm7iLZdAY7pD7ioQ&amp;slof=1 · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Hermes Agent</span><span class="tag">AI Agent</span><span class="tag">Telegram Bot</span><span class="tag">BotFather</span><span class="tag">Nous Research</span><span class="tag">桌面版</span><span class="tag">模型設定</span><span class="tag">AI 工作流</span><h3>原始連結</h3><p><a href="https://www.threads.com/@jtenaigo/post/DaPq010E84L?xmt=AQG0yhhMpP_Cjc7sjLWFcg54iJmfgGrraL_9qiWd3uYFYu5-muUmOb3bypIm7iLZdAY7pD7ioQ&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@jtenaigo/post/DaPq010E84L?xmt=AQG0yhhMpP_Cjc7sjLWFcg54iJmfgGrraL_9qiWd3uYFYu5-muUmOb3bypIm7iLZdAY7pD7ioQ&amp;slof=1</a></p><p><a href="https://www.threads.com/@jtenaigo/post/DaPq010E84L" target="_blank" rel="noopener">https://www.threads.com/@jtenaigo/post/DaPq010E84L</a></p><p><a href="https://www.threads.com/@jtenaigo/post/DaPq010E84L" target="_blank" rel="noopener">https://www.threads.com/@jtenaigo/post/DaPq010E84L</a></p><p><a href="https://www.vibee-studio.com/blog/hermes-agent-install-setup-telegram" target="_blank" rel="noopener">https://www.vibee-studio.com/blog/hermes-agent-install-setup-telegram</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/messaging/</a></p><p><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
