@@ -63,6 +63,39 @@
     "markdown": "articles/2026/07/2026-07-03-aiposthub-xai-voice-agent-builder-grok-voice-customer-service.md"
   },
   {
+    "title": "數位時代｜Claude Code 實戰教學：非工程師用自然語言做 Chrome 摘要外掛",
+    "date": "2026-07-03",
+    "source": "https://www.bnext.com.tw/article/91402/claude-code-no-coding-4-steps-build-your-own-tool-guidebook",
+    "author": "李先泰／數位時代 BusinessNext",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "No-code",
+      "Chrome Extension",
+      "AI 工具",
+      "Vibe Coding",
+      "非工程師開發",
+      "工作流自動化"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/91402/claude-code-no-coding-4-steps-build-your-own-tool-guidebook",
+      "https://www.bnext.com.tw/article/91402/claude-code-no-coding-4-steps-build-your-own-tool-guidebook",
+      "https://docs.anthropic.com/en/docs/claude-code/quickstart",
+      "https://docs.anthropic.com/en/docs/claude-code/slash-commands",
+      "https://docs.anthropic.com/en/docs/claude-code/settings",
+      "https://docs.anthropic.com/en/docs/claude-code/hooks",
+      "https://docs.anthropic.com/en/docs/claude-code/sub-agents"
+    ],
+    "excerpt": "這篇把 Claude Code 從「工程師寫程式工具」重新定位成「一般工作者把重複流程做成小工具的工作介面」：先規畫、再執行、測壞就修、隨時留下還原點。",
+    "slug": "2026-07-03-bnext-claude-code-no-code-chrome-extension-workflow",
+    "html": "articles/2026-07-03-bnext-claude-code-no-code-chrome-extension-workflow.html",
+    "markdown": "articles/2026/07/2026-07-03-bnext-claude-code-no-code-chrome-extension-workflow.md"
+  },
+  {
     "title": "Sidney Chiang｜Claude Science + Hermes + LLM Wiki：文獻研究到可聊知識庫工作流",
     "date": "2026-07-03",
     "source": "https://www.threads.com/@chsidney/post/DaRhcJ7kyd-?xmt=AQG0bSGxkY-KO21RDVDpfUem_BgKVYV5ktG-EZpkPza_CqdH6JUWVRJ94j80YS6Sg2E1WK7-Ww&slof=1",

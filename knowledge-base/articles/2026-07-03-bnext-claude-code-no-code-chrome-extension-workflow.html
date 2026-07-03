@@ -1,0 +1,84 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>數位時代｜Claude Code 實戰教學：非工程師用自然語言做 Chrome 摘要外掛</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>數位時代｜Claude Code 實戰教學：非工程師用自然語言做 Chrome 摘要外掛</h1><h1>數位時代｜Claude Code 實戰教學：非工程師用自然語言做 Chrome 摘要外掛</h1>
+<h1>一句話摘要</h1>
+<p>這篇把 Claude Code 從「工程師寫程式工具」重新定位成「一般工作者把重複流程做成小工具的工作介面」：先規畫、再執行、測壞就修、隨時留下還原點。</p>
+<h1>文章可擷取資訊</h1>
+<ul>
+<li>發布：2026-07-02，《數位時代 BusinessNext》。</li>
+<li>作者：李先泰。</li>
+<li>主題：Claude Code 實戰教學，目標讀者是非工程師與一般辦公工作者。</li>
+<li>實作案例：做一個 Chrome 擴充功能；在任意網頁反白文字、按右鍵，跳出三句話繁體中文摘要。</li>
+<li>核心主張：Claude Code 不只是寫 code，而是讓 AI 進入工作資料夾，讀檔、改檔、跑步驟，最後產出可重複使用的小工具。</li>
+</ul>
+<h1>Claude Code 與 Cowork 的分工</h1>
+<p>文章把 Claude 的三種介面分成三個層次：</p>
+<p>| 情境 | 適合介面 |</p>
+<p>| --- | --- |</p>
+<p>| 臨時問問題、改一段文字 | Chat |</p>
+<p>| 一批檔案要 AI 跑完整流程並交付成果 | Cowork |</p>
+<p>| 想把固定手工流程做成可反覆叫用的小工具 | Claude Code |</p>
+<p>這個分類對教學很有用，因為它讓非工程師理解：Claude Code 的價值不在「我會不會寫程式」，而在「我有沒有一個固定流程，值得讓 AI 幫我做成工具」。</p>
+<h1>新手設定流程</h1>
+<p>文章建議先做五件事：</p>
+<ul>
+<li>打開 Claude 桌面 App，切到 Code 分頁。</li>
+<li>建立專用工作資料夾，不要讓 AI 一開始就面對整個桌面或文件夾。</li>
+<li>依任務選模型：簡單任務用快模型，複雜規畫用強模型。</li>
+<li>用 `/init` 建立 `CLAUDE.md`，把資料夾規則寫成 AI 的常駐備忘錄。</li>
+<li>理解權限模式：新手先保留手動授權，熟悉後再提高自動化程度。</li>
+</ul>
+<p>值得特別保留的是 `CLAUDE.md` 的定位：它不是安全鎖，而是工作規則；真正能限制 Claude Code 讀寫與執行指令的，是權限設定。</p>
+<h1>工作節奏：先想、再做、壞了就修</h1>
+<p>文章最值得收錄的不是外掛範例本身，而是它整理出的 Claude Code 工作節奏：</p>
+<ul>
+<li>先用較強模型與 Plan Mode 規畫。</li>
+<li>把需求講清楚：成品長什麼樣、有哪些約束、不確定時先問。</li>
+<li>看過計畫後，再切到較快或較省的模型執行。</li>
+<li>測試結果；畫面不對就截圖，錯誤訊息就貼回 Claude。</li>
+<li>若修壞或繞圈，用 `/rewind` 回到較乾淨的狀態。</li>
+<li>大階段完成時用 git commit 留永久還原點。</li>
+<li>對話太長時用 `/context`、`/compact` 或重開新 session。</li>
+</ul>
+<p>這套流程可以直接抽象成 AI coding / agentic workflow 教學模板。</p>
+<h1>Chrome 摘要外掛案例</h1>
+<p>文章示範的 prompt 採三件式：</p>
+<ul>
+<li>成品：Chrome 擴充功能；反白文字後按右鍵，出現「一鍵 AI 摘要」，並在右上角浮窗顯示三句繁中摘要。</li>
+<li>約束：用 Claude Haiku 類模型摘要；API key 由使用者在設定頁自行填入，不寫死在程式碼裡；介面保持乾淨。</li>
+<li>不確定時：技術選擇不清楚要先問，不要猜。</li>
+</ul>
+<p>實作完成後，透過 `chrome://extensions` 開啟開發人員模式、載入未封裝項目，再填入 API key 測試摘要功能。文章也提醒要測試錯誤情境，例如清空 API key 後是否能顯示「尚未設定 API 金鑰」。</p>
+<h1>安全與成本提醒</h1>
+<p>文章有明確提醒：把 API key 放在擴充功能設定頁，只是避免硬寫在程式碼，不代表完善保護。這種做法只適合個人、本機、短期練習。</p>
+<p>實務上應補充：</p>
+<ul>
+<li>建立練習專用 key，不要用正式工作 key。</li>
+<li>設低支出上限，關閉或降低自動加值。</li>
+<li>練習結束後刪除 key。</li>
+<li>不要摘要公司、客戶或未公開資料。</li>
+<li>若要正式發佈給他人使用，應改走後端 proxy、server-side key 管理與用量控管，不能把 key 暴露在前端擴充功能裡。</li>
+</ul>
+<h1>官方交叉確認</h1>
+<p>Brave Search 交叉查到 Anthropic 官方 Claude Code 文件，與文章提到的主要概念相符：</p>
+<ul>
+<li>Claude Code 有 quickstart、settings、slash commands、hooks、subagents 等官方文件。</li>
+<li>Slash commands 包含以指令觸發工作流與專案內自訂指令的機制。</li>
+<li>權限與設定是 Claude Code 的核心安全邊界；實務上要根據任務風險調整。</li>
+<li>Hooks、MCP、subagents、skills 都屬於進階 agentic workflow 能力，但新手不應一次堆太多。</li>
+</ul>
+<p>需注意：文章中提到的模型名稱、桌面 App 介面與權限模式可能隨 Anthropic 版本更新而變動；課程或教學引用時，應以當下 Claude Code App 與官方 docs 為準。</p>
+<h1>為什麼值得 AI 學習雷達收錄</h1>
+<p>這篇適合放在「非工程師 AI coding 入門」與「Agentic workflow 教學」兩個脈絡下，理由有三：</p>
+<ul>
+<li>它把 Claude Code 的敘事從「會寫程式的人用」轉成「有固定流程的人用」。</li>
+<li>它提供一個很小但可完成的練習題，能讓學員在短時間內感受到 agent 做工具的價值。</li>
+<li>它把 Plan Mode、CLAUDE.md、權限、錯誤修復、/rewind、git commit、/compact 串成完整節奏。</li>
+</ul>
+<h1>對欒帥的應用</h1>
+<ul>
+<li>可整理成課程練習：「用 Claude Code 做自己的第一個 Chrome 小工具」。</li>
+<li>可改寫成 Hermes / Codex / Claude Code 通用的 agent 工作流：先計畫、再執行、驗證、留還原點。</li>
+<li>可搭配前一篇羅達 Claude Code 指令大禮包，形成「非工程師使用 Claude Code 的初階到中階路線」。</li>
+<li>可用來說明 AI 教學的重點不是背工具，而是學會把需求拆成成品、約束與不確定性處理。</li>
+</ul>
+<h1>注意事項</h1>
+<p>這篇文章很適合新手入門，但正式教學應補上兩個邊界：第一，瀏覽器外掛若要公開發佈，API key 不能留在前端；第二，AI 產生的工具仍要做基本測試、權限檢查與資料隱私評估。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-03 · https://www.bnext.com.tw/article/91402/claude-code-no-coding-4-steps-build-your-own-tool-guidebook · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Claude Code</span><span class="tag">No-code</span><span class="tag">Chrome Extension</span><span class="tag">AI 工具</span><span class="tag">Vibe Coding</span><span class="tag">非工程師開發</span><span class="tag">工作流自動化</span><h3>原始連結</h3><p><a href="https://www.bnext.com.tw/article/91402/claude-code-no-coding-4-steps-build-your-own-tool-guidebook" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91402/claude-code-no-coding-4-steps-build-your-own-tool-guidebook</a></p><p><a href="https://www.bnext.com.tw/article/91402/claude-code-no-coding-4-steps-build-your-own-tool-guidebook" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91402/claude-code-no-coding-4-steps-build-your-own-tool-guidebook</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/quickstart</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/slash-commands</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/settings" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/settings</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/hooks" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/hooks</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/sub-agents" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/sub-agents</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
