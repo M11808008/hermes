@@ -129,6 +129,38 @@
     "markdown": "articles/2026/07/2026-07-03-chsidney-claude-science-hermes-llm-wiki-research-workflow.md"
   },
   {
+    "title": "MQTT 與 AIoT 整合運用｜AI 不只要會聊天，還要會上班：Prompt、Context、Harness 三層工程",
+    "date": "2026-07-03",
+    "source": "https://www.facebook.com/groups/3636001276437792/posts/27382142724730314/",
+    "author": "MQTT 與 AIoT 整合運用 Facebook 社團",
+    "type": "article",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Prompt Engineering",
+      "Context Engineering",
+      "Harness Engineering",
+      "AIoT",
+      "MQTT",
+      "企業 AI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1EJndNJUvF/?mibextid=wwXIfr",
+      "https://www.facebook.com/share/p/1EJndNJUvF/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/3636001276437792/posts/27382142724730314/",
+      "https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html",
+      "https://addyosmani.com/blog/agent-harness-engineering/",
+      "https://wenwender.wordpress.com/2026/04/02/harness-engineering-ai-%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E7%AC%AC%E4%B8%89%E5%80%8B%E7%B6%AD%E5%BA%A6/"
+    ],
+    "excerpt": "AI 要「上班」不能只靠神 prompt；需要 Prompt、Context、Harness 三層一起設計，才能從聊天工具變成可執行、可監控、可治理的企業 AI agent。",
+    "slug": "2026-07-03-facebook-mqtt-aiot-ai-engineering-three-layers",
+    "html": "articles/2026-07-03-facebook-mqtt-aiot-ai-engineering-three-layers.html",
+    "markdown": "articles/2026/07/2026-07-03-facebook-mqtt-aiot-ai-engineering-three-layers.md"
+  },
+  {
     "title": "冰淇淋貓｜三六食府：台電大樓站預約制私廚，黃仁勳愛店與花膠雞湯",
     "date": "2026-07-03",
     "source": "https://icecreamcat.tw/1134/",
