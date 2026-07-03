@@ -33,6 +33,43 @@
     "markdown": "articles/2026/07/2026-07-03-pound-seedance-2-selfie-vlog-ai-influencer-prompt.md"
   },
   {
+    "title": "AI Observer｜Mistral 免費開放旗艦模型：從價格戰到開發者心佔率",
+    "date": "2026-07-03",
+    "source": "https://www.threads.com/@the.ai.observer/post/DaRCpIDErWn?xmt=AQG0bjA7hNmldWyR1k9d07YaBp8kMKFWcfF9-i7X9U171RF5X6hAH6E9pxI674gyxOpeP01LzA&slof=1",
+    "author": "AI Observer（the.ai.observer） / INSIDE / Mistral AI",
+    "type": "article",
+    "topics": [
+      "AI",
+      "LLM",
+      "Mistral AI",
+      "免費模型",
+      "API Pricing",
+      "開發者生態",
+      "模型平台",
+      "AI 價格戰",
+      "Agentic Coding",
+      "Devstral"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@the.ai.observer/post/DaRCpIDErWn?xmt=AQG0bjA7hNmldWyR1k9d07YaBp8kMKFWcfF9-i7X9U171RF5X6hAH6E9pxI674gyxOpeP01LzA&slof=1",
+      "https://www.threads.com/@the.ai.observer/post/DaRCpIDErWn",
+      "https://www.threads.com/@the.ai.observer/post/DaRCpIDErWn",
+      "https://www.inside.com.tw/article/41612-mistral-free",
+      "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+      "https://docs.mistral.ai/deployment/ai-studio/tier",
+      "https://docs.mistral.ai/models/overview",
+      "https://mistral.ai/pricing/",
+      "https://mistral.ai/news/mistral-3/"
+    ],
+    "excerpt": "Mistral 的免費額度策略不是單純促銷，而是用「不綁信用卡、可直接拿 API key、足以原型測試的免費 token」降低開發者進場門檻，讓模型平台競爭從能力排名延伸到工具鏈預設選擇權。",
+    "slug": "2026-07-03-the-ai-observer-mistral-free-tier-developer-mindshare",
+    "html": "articles/2026-07-03-the-ai-observer-mistral-free-tier-developer-mindshare.html",
+    "markdown": "articles/2026/07/2026-07-03-the-ai-observer-mistral-free-tier-developer-mindshare.md"
+  },
+  {
     "title": "塞掐 Side Chat E412｜Agent 該怎麼分工？Nick Hsu 談 AI 組織、Claude Code 與企業工作流",
     "date": "2026-07-02",
     "source": "https://youtu.be/BJ92fomIRJM?si=Yrew6-kwaLsCmqG9",
