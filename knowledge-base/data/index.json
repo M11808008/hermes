@@ -1,5 +1,135 @@
 [
   {
+    "title": "AI Observer｜Hermes Agent iMessage 與桌面寵物更新：AI 工具開始競爭情感介面",
+    "date": "2026-07-03",
+    "source": "https://www.threads.com/@the.ai.observer/post/DaRr2UEkuv6?xmt=AQG0WBRWC9hORX83x6jChpdG5jRfSOyLQGCgX30w1D6rSzgNyUT6Vy4NaNZpiv5v4uxf37KGlw&slof=1",
+    "author": "AI Observer（the.ai.observer） / INSIDE / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Hermes Agent",
+      "iMessage",
+      "AI UX",
+      "Desktop Companion",
+      "Messaging Gateway",
+      "Agent Interface",
+      "情感介面"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@the.ai.observer/post/DaRr2UEkuv6?xmt=AQG0WBRWC9hORX83x6jChpdG5jRfSOyLQGCgX30w1D6rSzgNyUT6Vy4NaNZpiv5v4uxf37KGlw&slof=1",
+      "https://www.threads.com/@the.ai.observer/post/DaRr2UEkuv6",
+      "https://www.threads.com/@the.ai.observer/post/DaRr2UEkuv6",
+      "https://www.inside.com.tw/article/41633-hermes-agent-update-imessage-pet",
+      "https://github.com/NousResearch/hermes-agent/releases",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/messaging/"
+    ],
+    "excerpt": "Hermes Agent 的 iMessage 與桌面寵物更新，象徵 agent 產品開始從「會做事」走向「讓人願意長期共處」；未來 AI 工具的差異化會包含情感回饋、等待體驗與跨平台日常入口。",
+    "slug": "2026-07-03-ai-observer-hermes-agent-imessage-desktop-pet-ux",
+    "html": "articles/2026-07-03-ai-observer-hermes-agent-imessage-desktop-pet-ux.html",
+    "markdown": "articles/2026/07/2026-07-03-ai-observer-hermes-agent-imessage-desktop-pet-ux.md"
+  },
+  {
+    "title": "AI郵報｜xAI Voice Agent Builder：No-code 語音客服進入可部署階段",
+    "date": "2026-07-03",
+    "source": "https://www.threads.com/@aiposthub/post/DaR7du_ARlx?xmt=AQG0Fz9p5a4GjRvdtajy4EhbguRVYiun4ZntsWdoO4fsM-df0O4-0_kUZ1UoDPHD1MBQyBoW6g&slof=1",
+    "author": "AI郵報（aiposthub） / xAI",
+    "type": "article",
+    "topics": [
+      "AI",
+      "xAI",
+      "Grok Voice",
+      "Voice Agent",
+      "AI 客服",
+      "No-code",
+      "Speech-to-speech",
+      "MCP",
+      "Customer Support"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DaR7du_ARlx?xmt=AQG0Fz9p5a4GjRvdtajy4EhbguRVYiun4ZntsWdoO4fsM-df0O4-0_kUZ1UoDPHD1MBQyBoW6g&slof=1",
+      "https://www.threads.com/@aiposthub/post/DaR7du_ARlx",
+      "https://www.threads.com/@aiposthub/post/DaR7du_ARlx",
+      "https://x.ai/news/grok-voice-agent-builder"
+    ],
+    "excerpt": "xAI Voice Agent Builder 把語音客服從「工程整合專案」壓縮成 no-code 營運工具：建立電話 agent、接知識庫與工具、加 guardrails、看通話紀錄，價格也開始可以直接納入商業試算。",
+    "slug": "2026-07-03-aiposthub-xai-voice-agent-builder-grok-voice-customer-service",
+    "html": "articles/2026-07-03-aiposthub-xai-voice-agent-builder-grok-voice-customer-service.html",
+    "markdown": "articles/2026/07/2026-07-03-aiposthub-xai-voice-agent-builder-grok-voice-customer-service.md"
+  },
+  {
+    "title": "Sidney Chiang｜Claude Science + Hermes + LLM Wiki：文獻研究到可聊知識庫工作流",
+    "date": "2026-07-03",
+    "source": "https://www.threads.com/@chsidney/post/DaRhcJ7kyd-?xmt=AQG0bSGxkY-KO21RDVDpfUem_BgKVYV5ktG-EZpkPza_CqdH6JUWVRJ94j80YS6Sg2E1WK7-Ww&slof=1",
+    "author": "Sidney Chiang（chsidney） / Anthropic Claude Science / Hermes / LLM Wiki",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Science",
+      "Hermes Agent",
+      "LLM Wiki",
+      "Codex",
+      "文獻研究",
+      "Research Workflow",
+      "Knowledge Base",
+      "Skills"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@chsidney/post/DaRhcJ7kyd-?xmt=AQG0bSGxkY-KO21RDVDpfUem_BgKVYV5ktG-EZpkPza_CqdH6JUWVRJ94j80YS6Sg2E1WK7-Ww&slof=1",
+      "https://www.threads.com/@chsidney/post/DaRhcJ7kyd-",
+      "https://www.threads.com/@chsidney/post/DaRhcJ7kyd-",
+      "https://www.anthropic.com/news/claude-science-ai-workbench",
+      "https://claude.com/product/claude-science",
+      "https://claude.com/resources/tutorials/getting-started-with-claude-science"
+    ],
+    "excerpt": "這則貼文展示一條完整 AI 研究流水線：Claude Science 找文獻與產出研究摘要，Hermes 批次下載可取得 PDF，LLM Wiki / Codex ingest 後變成可對話的研究知識庫。",
+    "slug": "2026-07-03-chsidney-claude-science-hermes-llm-wiki-research-workflow",
+    "html": "articles/2026-07-03-chsidney-claude-science-hermes-llm-wiki-research-workflow.html",
+    "markdown": "articles/2026/07/2026-07-03-chsidney-claude-science-hermes-llm-wiki-research-workflow.md"
+  },
+  {
+    "title": "Kufu｜Fish Audio S2.1 Pro 免費 API：零成本 TTS 原型開發入口",
+    "date": "2026-07-03",
+    "source": "https://www.threads.com/@kufutw/post/DaSS1wXGIIq?xmt=AQG0EvBWorN8uyIDaB1Q5fUVP5XqFL0mS7ZMegXO3P-4jQ2MgKZLEOfYySsrd5OhhOloC5EK&slof=1",
+    "author": "Kufu 酷服｜AI 智能客服平台（kufutw） / Fish Audio",
+    "type": "article",
+    "topics": [
+      "AI",
+      "TTS",
+      "Fish Audio",
+      "AI 語音",
+      "Voice AI",
+      "API",
+      "免費模型",
+      "開發者生態",
+      "多媒體與內容"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DaSS1wXGIIq?xmt=AQG0EvBWorN8uyIDaB1Q5fUVP5XqFL0mS7ZMegXO3P-4jQ2MgKZLEOfYySsrd5OhhOloC5EK&slof=1",
+      "https://www.threads.com/@kufutw/post/DaSS1wXGIIq",
+      "https://www.threads.com/@kufutw/post/DaSS1wXGIIq",
+      "https://x.com/FishAudio/status/2072319320386883690?s=20",
+      "https://fish.audio/blog/s2-1-pro-free-api/",
+      "https://docs.fish.audio/overview/capabilities",
+      "https://fish.audio/"
+    ],
+    "excerpt": "Fish Audio 把 S2.1 Pro 以 `s2.1-pro-free` 形式開放給開發者測試，讓語音 agent、內容生成與客服原型可以先用高品質 TTS 跑起來，再評估正式付費與 SLA。",
+    "slug": "2026-07-03-kufu-fish-audio-s21-pro-free-tts-api",
+    "html": "articles/2026-07-03-kufu-fish-audio-s21-pro-free-tts-api.html",
+    "markdown": "articles/2026/07/2026-07-03-kufu-fish-audio-s21-pro-free-tts-api.md"
+  },
+  {
     "title": "Pound｜Seedance 2.0 手持自拍 Vlog：AI 網紅擬真影片 Prompt 範本",
     "date": "2026-07-03",
     "source": "https://www.threads.com/@pound0423/post/DaSxPGiGR_0?xmt=AQG0hD_OXoTlbDHKpO_tMm4uOtXNTG4L36bK8DVKh_MgNooNUZi0YTOe6j_hRRy7uZRi7LJp&slof=1",
@@ -31,6 +161,75 @@
     "slug": "2026-07-03-pound-seedance-2-selfie-vlog-ai-influencer-prompt",
     "html": "articles/2026-07-03-pound-seedance-2-selfie-vlog-ai-influencer-prompt.html",
     "markdown": "articles/2026/07/2026-07-03-pound-seedance-2-selfie-vlog-ai-influencer-prompt.md"
+  },
+  {
+    "title": "羅達 Rhoda｜用 Claude Code/Codex 打造 AV8D AI SEO Search：SEO、GEO、AEO 三維健檢工具",
+    "date": "2026-07-03",
+    "source": "https://www.facebook.com/share/p/1NCiMUhRQV/?mibextid=wwXIfr",
+    "author": "羅達 Rhoda（AV8D.levelup） / AV8D AI SEO Search",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Codex",
+      "SEO",
+      "GEO",
+      "AEO",
+      "AI SEO",
+      "Flask",
+      "Side Project",
+      "Vibe Coding",
+      "Python",
+      "Cloudflare"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1NCiMUhRQV/?mibextid=wwXIfr",
+      "https://www.facebook.com/AV8D.levelup/posts/1571740288294083/",
+      "https://www.facebook.com/share/p/1NCiMUhRQV/?mibextid=wwXIfr",
+      "https://www.facebook.com/AV8D.levelup/posts/1571740288294083/",
+      "https://seo.av8d-levelup.com/",
+      "https://seo.av8d-levelup.com/blog/geo-what-is-it.html",
+      "https://schema.org/",
+      "https://www.sitemaps.org/"
+    ],
+    "excerpt": "這則貼文是一個 AI coding 真實案例：用 Claude Code / Codex 把 SEO 經驗產品化成免費健檢工具，核心不是炫技，而是規則式評分、反爬處理、async job、部署與持續迭代。",
+    "slug": "2026-07-03-rhoda-ai-seo-search-claude-code-codex-geo-aeo",
+    "html": "articles/2026-07-03-rhoda-ai-seo-search-claude-code-codex-geo-aeo.html",
+    "markdown": "articles/2026/07/2026-07-03-rhoda-ai-seo-search-claude-code-codex-geo-aeo.md"
+  },
+  {
+    "title": "羅達 Rhoda｜Claude Code 指令大禮包：非碼農也能建立品質控管流程",
+    "date": "2026-07-03",
+    "source": "https://www.facebook.com/share/1E4b12VpeD/?mibextid=wwXIfr",
+    "author": "羅達 Rhoda（AV8D.levelup）",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Vibe Coding",
+      "Slash Commands",
+      "Code Review",
+      "AI 教學",
+      "非工程師開發",
+      "品質控管"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/1E4b12VpeD/?mibextid=wwXIfr",
+      "https://www.facebook.com/AV8D.levelup/posts/1593716259429819/",
+      "https://www.facebook.com/share/1E4b12VpeD/?mibextid=wwXIfr",
+      "https://www.facebook.com/AV8D.levelup/posts/1593716259429819/",
+      "https://code.claude.com/docs/en/code-review"
+    ],
+    "excerpt": "非工程師使用 Claude Code 的關鍵不是多會下 prompt，而是建立「改完 → 看 diff → code review → security review → verify」的品質控管節奏。",
+    "slug": "2026-07-03-rhoda-claude-code-command-pack-non-coders",
+    "html": "articles/2026-07-03-rhoda-claude-code-command-pack-non-coders.html",
+    "markdown": "articles/2026/07/2026-07-03-rhoda-claude-code-command-pack-non-coders.md"
   },
   {
     "title": "AI Observer｜Mistral 免費開放旗艦模型：從價格戰到開發者心佔率",
@@ -68,6 +267,35 @@
     "slug": "2026-07-03-the-ai-observer-mistral-free-tier-developer-mindshare",
     "html": "articles/2026-07-03-the-ai-observer-mistral-free-tier-developer-mindshare.html",
     "markdown": "articles/2026/07/2026-07-03-the-ai-observer-mistral-free-tier-developer-mindshare.md"
+  },
+  {
+    "title": "Martin Huang｜上海虹橋 T2 美國運通貴賓室：白金卡會員與獨立安檢價值",
+    "date": "2026-07-03",
+    "source": "https://www.threads.com/@twninhkg/post/DaRaWH4DsVd?xmt=AQG0rMq0Fs-MQjpF7kf_A4wVAho2WoA0rb0nTjDVeM3Of7ezl7TAsxtd8Uuxus8axRJ3WG8IUA&slof=1",
+    "author": "Martin Huang（twninhkg） / American Express",
+    "type": "article",
+    "topics": [
+      "旅遊",
+      "機場貴賓室",
+      "American Express",
+      "上海虹橋機場",
+      "白金卡",
+      "航空"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@twninhkg/post/DaRaWH4DsVd?xmt=AQG0rMq0Fs-MQjpF7kf_A4wVAho2WoA0rb0nTjDVeM3Of7ezl7TAsxtd8Uuxus8axRJ3WG8IUA&slof=1",
+      "https://www.threads.com/@twninhkg/post/DaRaWH4DsVd",
+      "https://www.threads.com/@twninhkg/post/DaRaWH4DsVd",
+      "https://www.americanexpress.com/en-us/travel/lounges/the-platinum-card/SHA/",
+      "https://www.americanexpress.com/en-hk/travel/lounges/the-platinum-card/SHA/V1-VIP-Lounge-Terminal-2-Domestic-0RwRo2fTp1/"
+    ],
+    "excerpt": "上海虹橋 T2 的美國運通貴賓室重點不只是吃喝，而是「景觀 + 獨立安檢」；對商務旅客而言，獨立安檢往往比餐食更有價值。",
+    "slug": "2026-07-03-twninhkg-shanghai-hongqiao-amex-lounge-platinum",
+    "html": "articles/2026-07-03-twninhkg-shanghai-hongqiao-amex-lounge-platinum.html",
+    "markdown": "articles/2026/07/2026-07-03-twninhkg-shanghai-hongqiao-amex-lounge-platinum.md"
   },
   {
     "title": "塞掐 Side Chat E412｜Agent 該怎麼分工？Nick Hsu 談 AI 組織、Claude Code 與企業工作流",
