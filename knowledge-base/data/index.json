@@ -1,5 +1,43 @@
 [
   {
+    "title": "4foodie｜南加州 Laguna Beach 一日自駕：海灘、披薩、Gelato、夕陽與 Pho 79",
+    "date": "2026-07-05",
+    "source": "Instagram Reel",
+    "author": "4foodie（@4foodie）",
+    "type": "social-post",
+    "topics": [
+      "Travel",
+      "Southern California",
+      "Laguna Beach",
+      "Dana Point",
+      "Garden Grove",
+      "California Road Trip",
+      "LA",
+      "Foodie",
+      "自駕旅行",
+      "加州旅遊"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DX4KAsWRoCj/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
+      "https://www.instagram.com/4foodie/reel/DX4KAsWRoCj/",
+      "https://www.instagram.com/4foodie/reel/DX4KAsWRoCj/",
+      "https://www.yelp.com/biz/truly-pizza-dana-point",
+      "https://www.opentable.com/r/truly-pizza-dana-point",
+      "https://www.orangecountyoutdoors.com/get-out-there/beaches/treasure-island",
+      "https://www.cozy1cafe.com/",
+      "https://www.visitlagunabeach.com/directory/crescent-bay-point-park/",
+      "https://guide.michelin.com/us/en/california/us-garden-grove/restaurant/pho-79",
+      "https://skyhorseauto.com/en/"
+    ],
+    "excerpt": "這是一條適合「不想只去 Santa Monica」的南加州一日自駕路線：LA 出發到 Laguna Beach 一帶，串起 Dana Point 披薩、Treasure Island Beach、Laguna gelato、Crescent Bay 夕陽與 Garden Grove 越南河粉。",
+    "slug": "2026-07-05-4foodie-laguna-beach-southern-california-road-trip",
+    "html": "articles/2026-07-05-4foodie-laguna-beach-southern-california-road-trip.html",
+    "markdown": "articles/2026/07/2026-07-05-4foodie-laguna-beach-southern-california-road-trip.md"
+  },
+  {
     "title": "Anthropic Financial Services｜AI 金融技能庫：把財報季、股票研究與價值投資工作流指令化",
     "date": "2026-07-05",
     "source": "LINE message + GitHub",
