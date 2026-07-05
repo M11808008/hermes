@@ -1,0 +1,276 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Anthropic Financial Services｜AI 金融技能庫：把財報季、股票研究與價值投資工作流指令化</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Anthropic Financial Services｜AI 金融技能庫：把財報季、股票研究與價值投資工作流指令化</h1><h1>Anthropic Financial Services｜AI 金融技能庫：把財報季、股票研究與價值投資工作流指令化</h1>
+<h1>一句話摘要</h1>
+<p>AI 正在把金融研究從「人工讀資料、手動整理、慢慢建模型」推向「資料收集、財報判讀、估值模型、投資論點與催化事件追蹤」的技能化工作流；Anthropic `financial-services` repo 是目前很值得研究的官方範例。</p>
+<h1>原始連結</h1>
+<p>GitHub：</p>
+<p><a href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener">https://github.com/anthropics/financial-services</a></p>
+<h1>為什麼這件事重要</h1>
+<p>近期 AI 圈開始快速往金融市場發展，特別是股票研究與基本面分析。這不只是把財報摘要得更快，而是把價值投資者常做的研究流程拆成可重複執行的 skill：</p>
+<ul>
+<li>財報前先建立預期與情境。</li>
+<li>財報後快速辨識 beat / miss 與 thesis impact。</li>
+<li>對新標的建立首次覆蓋報告。</li>
+<li>用新資料更新財務模型。</li>
+<li>維護投資論點與反證條件。</li>
+<li>追蹤催化事件與每日盤前想法。</li>
+</ul>
+<p>換句話說，AI 不只是讀資料，而是把研究流程「機構化」與「指令化」。</p>
+<h1>GitHub repo 交叉確認</h1>
+<p>透過 GitHub API 查詢 `anthropics/financial-services`：</p>
+<ul>
+<li>Repo：`anthropics/financial-services`</li>
+<li>License：Apache-2.0</li>
+<li>Created：2026-02-23</li>
+<li>Updated：2026-07-05</li>
+<li>Pushed：2026-06-26</li>
+<li>Stars：約 33k</li>
+<li>Forks：約 4.8k</li>
+<li>Default branch：main</li>
+</ul>
+<p>README 將此 repo 定位為：</p>
+<p>&gt; Reference agents, skills, and data connectors for the financial-services workflows we see most — investment banking, equity research, private equity, and wealth management.</p>
+<p>它同時支援兩種使用方式：</p>
+<ul>
+<li>作為 Claude Cowork plugin 安裝。</li>
+<li>透過 Claude Managed Agents API 部署到自己的 workflow engine。</li>
+</ul>
+<p>README 也明確提醒：這些 agents 只產出 analyst work product 草稿，不能視為投資、法律、稅務或會計建議；所有輸出都需要合格專業人士 review。</p>
+<h1>安裝方式重點</h1>
+<p>README 提供 Claude Code 安裝範例：</p>
+<p>```bash</p>
+<h1>Add the marketplace</h1>
+<p>claude plugin marketplace add anthropics/financial-services</p>
+<h1>Core skills + connectors</h1>
+<p>claude plugin install financial-analysis@claude-for-financial-services</p>
+<h1>Named agents</h1>
+<p>claude plugin install pitch-agent@claude-for-financial-services</p>
+<p>claude plugin install gl-reconciler@claude-for-financial-services</p>
+<p>claude plugin install market-researcher@claude-for-financial-services</p>
+<h1>Vertical skill bundles</h1>
+<p>claude plugin install investment-banking@claude-for-financial-services</p>
+<p>claude plugin install equity-research@claude-for-financial-services</p>
+<p>```</p>
+<p>安裝後，slash commands 會出現在 session 中，例如：`/comps`、`/dcf`、`/earnings`、`/ic-memo` 等。</p>
+<h1>1. 財報季的「降維打擊」武器</h1>
+<p>在美股或台股財報密集週，資訊量往往大到讓人窒息。最關鍵的兩個指令是：</p>
+<h1>`/earnings-preview`：財報前瞻</h1>
+<p>用途：在公司公布財報前，做情境分析與關鍵數據預測。</p>
+<p>這個 skill 會幫投資者事先建立：</p>
+<ul>
+<li>consensus estimates</li>
+<li>key metrics to watch</li>
+<li>bull / base / bear scenarios</li>
+<li>catalyst checklist</li>
+<li>trading setup</li>
+<li>option implied move 與歷史財報反應</li>
+</ul>
+<p>價值在於：當財報數字真正公布時，投資者能立刻判斷是「超預期」還是「低於預期」，而不是等市場已反應完才開始讀資料。</p>
+<h1>`/earnings`：財報後更新</h1>
+<p>用途：財報公布後產出季度更新報告，重點在 beat / miss、財務數字、電話會議重點、guidance 與投資論點變化。</p>
+<p>官方 command 描述要求：</p>
+<ul>
+<li>先確認資料是否最新。</li>
+<li>搜尋 earnings release、10-Q、transcript、investor presentation、consensus estimates。</li>
+<li>做 revenue / EPS / segment beat-miss analysis。</li>
+<li>更新估值與 forward estimates。</li>
+<li>產出 8–12 頁 earnings update report。</li>
+</ul>
+<p>這對財報季很有價值，因為它把「讀幾十頁 PDF、對照電話會議、更新模型」變成一條可執行工作流。</p>
+<h1>2. 機構級的深度研究與論點維護</h1>
+<p>建立投資部位不能只看線圖，核心仍是基本面研究與持股邏輯。</p>
+<h1>`/initiate`：首次覆蓋報告</h1>
+<p>用途：對一檔新股票產出機構等級的首次覆蓋報告。</p>
+<p>適合用在：</p>
+<ul>
+<li>第一次研究一家公司。</li>
+<li>建立完整基本面檔案。</li>
+<li>梳理 business model、segment、競爭格局、估值、風險與催化因素。</li>
+</ul>
+<h1>`/model-update`：更新財務模型</h1>
+<p>用途：隨著新財報、新 guidance 或新營運數據注入，自動更新模型中的財務參數。</p>
+<p>它的關鍵不是「幫你算一次」，而是讓模型與研究判斷能隨資料更新持續同步。</p>
+<h1>`/thesis`：維護投資論點</h1>
+<p>用途：定期檢視持股核心邏輯是否仍成立。</p>
+<p>價值投資最怕的不是短期股價波動，而是抱著過期或錯誤的期待。`/thesis` 可以協助建立：</p>
+<ul>
+<li>核心投資論點</li>
+<li>反證條件</li>
+<li>風險清單</li>
+<li>需要追蹤的 KPI</li>
+<li>新資料對 thesis 的正負面影響</li>
+</ul>
+<h1>3. 每日交易的靈感與催化劑追蹤</h1>
+<p>這組指令適合盤前準備、選題與日常研究節奏。</p>
+<h1>`/morning-note`：晨會筆記</h1>
+<p>用途：快速整理昨夜市場動態，產出今日交易想法與關注重點。</p>
+<p>適合金融 KOL、投研助理或交易團隊每天早上產出：</p>
+<ul>
+<li>市場摘要</li>
+<li>個股異動</li>
+<li>產業新聞</li>
+<li>交易想法</li>
+<li>今日待觀察事件</li>
+</ul>
+<h1>`/sector`：產業研究</h1>
+<p>用途：從宏觀產業概況、競爭格局、主題趨勢切入，建立研究框架。</p>
+<p>適合用來產出：</p>
+<ul>
+<li>AI infrastructure 產業研究</li>
+<li>半導體供應鏈 overview</li>
+<li>SaaS / cybersecurity / healthcare sector comparison</li>
+<li>主題型投資報告</li>
+</ul>
+<h1>`/screen`：選股篩選</h1>
+<p>用途：用條件篩選與研究框架找出新的投資想法。</p>
+<p>它可作為「想法來源」：從財務條件、估值、成長性、產業位置或催化事件等條件篩出候選標的。</p>
+<h1>`/catalysts`：催化事件追蹤</h1>
+<p>用途：追蹤覆蓋股票即將發生的重要事件。</p>
+<p>例如：</p>
+<ul>
+<li>財報日</li>
+<li>法說會</li>
+<li>新產品發表</li>
+<li>政策公布</li>
+<li>併購消息</li>
+<li>臨床試驗解盲</li>
+<li>分析師日</li>
+<li>監管審查節點</li>
+</ul>
+<p>這對「提前卡位行情」很重要，因為市場常常不是只反應財報結果，而是反應即將到來的預期變化。</p>
+<h1>Equity Research 官方技能清單</h1>
+<p>GitHub repo 中 `plugins/vertical-plugins/equity-research` 包含 9 個 skills：</p>
+<ul>
+<li>`catalyst-calendar`</li>
+<li>`earnings-analysis`</li>
+<li>`earnings-preview`</li>
+<li>`idea-generation`</li>
+<li>`initiating-coverage`</li>
+<li>`model-update`</li>
+<li>`morning-note`</li>
+<li>`sector-overview`</li>
+<li>`thesis-tracker`</li>
+</ul>
+<p>對應 slash commands：</p>
+<ul>
+<li>`catalysts.md`</li>
+<li>`earnings-preview.md`</li>
+<li>`earnings.md`</li>
+<li>`initiate.md`</li>
+<li>`model-update.md`</li>
+<li>`morning-note.md`</li>
+<li>`screen.md`</li>
+<li>`sector.md`</li>
+<li>`thesis.md`</li>
+</ul>
+<h1>Financial Analysis 官方技能清單</h1>
+<p>`plugins/vertical-plugins/financial-analysis` 包含 13 個 skills：</p>
+<ul>
+<li>`3-statement-model`</li>
+<li>`audit-xls`</li>
+<li>`clean-data-xls`</li>
+<li>`competitive-analysis`</li>
+<li>`comps-analysis`</li>
+<li>`dcf-model`</li>
+<li>`deck-refresh`</li>
+<li>`ib-check-deck`</li>
+<li>`lbo-model`</li>
+<li>`ppt-template-creator`</li>
+<li>`pptx-author`</li>
+<li>`skill-creator`</li>
+<li>`xlsx-author`</li>
+</ul>
+<p>對價值投資者最實用的是：</p>
+<ul>
+<li>`comps-analysis`：同業比較與相對估值。</li>
+<li>`dcf-model`：折現現金流估值。</li>
+<li>`3-statement-model`：三表連動模型。</li>
+<li>`competitive-analysis`：競爭分析。</li>
+<li>`clean-data-xls` / `audit-xls`：資料清理與模型審查。</li>
+</ul>
+<h1>其他 vertical plugins</h1>
+<p>Anthropic repo 還包含其他金融服務領域：</p>
+<h1>Investment Banking</h1>
+<ul>
+<li>`buyer-list`</li>
+<li>`cim-builder`</li>
+<li>`datapack-builder`</li>
+<li>`deal-tracker`</li>
+<li>`merger-model`</li>
+<li>`pitch-deck`</li>
+<li>`process-letter`</li>
+<li>`strip-profile`</li>
+<li>`teaser`</li>
+</ul>
+<h1>Private Equity</h1>
+<ul>
+<li>`ai-readiness`</li>
+<li>`dd-checklist`</li>
+<li>`dd-meeting-prep`</li>
+<li>`deal-screening`</li>
+<li>`deal-sourcing`</li>
+<li>`ic-memo`</li>
+<li>`portfolio-monitoring`</li>
+<li>`returns-analysis`</li>
+<li>`unit-economics`</li>
+<li>`value-creation-plan`</li>
+</ul>
+<h1>Wealth Management</h1>
+<ul>
+<li>`client-report`</li>
+<li>`client-review`</li>
+<li>`financial-plan`</li>
+<li>`investment-proposal`</li>
+<li>`portfolio-rebalance`</li>
+<li>`tax-loss-harvesting`</li>
+</ul>
+<h1>Fund Admin</h1>
+<ul>
+<li>`accrual-schedule`</li>
+<li>`break-trace`</li>
+<li>`gl-recon`</li>
+<li>`nav-tieout`</li>
+<li>`roll-forward`</li>
+<li>`variance-commentary`</li>
+</ul>
+<h1>Operations</h1>
+<ul>
+<li>`kyc-doc-parse`</li>
+<li>`kyc-rules`</li>
+</ul>
+<h1>對價值投資者的實際意義</h1>
+<h1>1. 更快建立選股邏輯</h1>
+<p>過去研究一家公司，需要人工蒐集財報、法說逐字稿、同業資料、估值模型與產業脈絡。現在可以用 skill 讓 AI 先搭出一版研究骨架，再由人修正假設與判斷。</p>
+<h1>2. 讓研究流程變得可複製</h1>
+<p>每次研究新股票都可以遵循類似流程：</p>
+<ul>
+<li>`/screen` 找候選。</li>
+<li>`/sector` 建立產業脈絡。</li>
+<li>`/initiate` 做首次覆蓋。</li>
+<li>`/comps` 與 `/dcf` 做估值。</li>
+<li>`/thesis` 建立投資論點與反證條件。</li>
+<li>`/catalysts` 建立事件追蹤。</li>
+<li>財報前 `/earnings-preview`，財報後 `/earnings`。</li>
+</ul>
+<h1>3. 把 KOL 內容從新聞轉述升級成研究產品</h1>
+<p>對金融 KOL 來說，這套技能可以把內容從「今天發生什麼事」升級成：</p>
+<ul>
+<li>這家公司目前市場預期是什麼？</li>
+<li>財報結果超預期還是低於預期？</li>
+<li>產業趨勢是否支撐原本 thesis？</li>
+<li>估值是否反映成長與風險？</li>
+<li>接下來有哪些催化事件？</li>
+</ul>
+<p>這就是從資訊搬運走向研究型內容。</p>
+<h1>4. 但最後判斷仍然要由人負責</h1>
+<p>AI 可以加速資料整理、模型更新與初稿產出，但它不能替代投資責任。尤其金融場景必須特別注意：</p>
+<ul>
+<li>資料來源與時間戳。</li>
+<li>財務模型假設。</li>
+<li>consensus estimates 的來源與日期。</li>
+<li>估值敏感度。</li>
+<li>合規揭露與利益衝突。</li>
+<li>不應直接構成個別投資建議。</li>
+</ul>
+<h1>觀察結論</h1>
+<p>`anthropics/financial-services` 代表 AI 金融工作流的一個重要方向：不是讓 AI 隨口分析股票，而是把專業投研拆成可審查、可重複、可維護的 skills 與 agents。</p>
+<p>對價值投資者而言，這套工具真正提升的是「研究速度」與「流程一致性」：它可以在財報季快速建構前瞻、更新模型、維護論點、追蹤催化事件，讓投資者把更多時間花在判斷假設是否合理，而不是被 PDF、Excel 與逐字稿淹沒。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-05 · LINE message + GitHub · link-archive</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Finance</span><span class="tag">Claude Skills</span><span class="tag">Financial Services</span><span class="tag">Equity Research</span><span class="tag">Stock Analysis</span><span class="tag">Value Investing</span><span class="tag">Earnings Analysis</span><span class="tag">Investment Research</span><span class="tag">投資研究</span><h3>原始連結</h3><p><a href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener">https://github.com/anthropics/financial-services</a></p><p><a href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener">https://github.com/anthropics/financial-services</a></p><p><a href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener">https://github.com/anthropics/financial-services</a></p><p><a href="https://github.com/anthropics/financial-services/tree/main/plugins/vertical-plugins/equity-research" target="_blank" rel="noopener">https://github.com/anthropics/financial-services/tree/main/plugins/vertical-plugins/equity-research</a></p><p><a href="https://github.com/anthropics/financial-services/tree/main/plugins/vertical-plugins/financial-analysis" target="_blank" rel="noopener">https://github.com/anthropics/financial-services/tree/main/plugins/vertical-plugins/financial-analysis</a></p><p><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins" target="_blank" rel="noopener">https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

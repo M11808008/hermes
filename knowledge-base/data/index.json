@@ -1,5 +1,39 @@
 [
   {
+    "title": "Anthropic Financial Services｜AI 金融技能庫：把財報季、股票研究與價值投資工作流指令化",
+    "date": "2026-07-05",
+    "source": "LINE message + GitHub",
+    "author": "欒帥／Anthropic",
+    "type": "link-archive",
+    "topics": [
+      "AI",
+      "Finance",
+      "Claude Skills",
+      "Financial Services",
+      "Equity Research",
+      "Stock Analysis",
+      "Value Investing",
+      "Earnings Analysis",
+      "Investment Research",
+      "投資研究"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/anthropics/financial-services",
+      "https://github.com/anthropics/financial-services",
+      "https://github.com/anthropics/financial-services",
+      "https://github.com/anthropics/financial-services/tree/main/plugins/vertical-plugins/equity-research",
+      "https://github.com/anthropics/financial-services/tree/main/plugins/vertical-plugins/financial-analysis",
+      "https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins"
+    ],
+    "excerpt": "AI 正在把金融研究從「人工讀資料、手動整理、慢慢建模型」推向「資料收集、財報判讀、估值模型、投資論點與催化事件追蹤」的技能化工作流；Anthropic `financial-services` repo 是目前很值得研究的官方範例。",
+    "slug": "2026-07-05-anthropic-financial-services-ai-stock-analysis-skills",
+    "html": "articles/2026-07-05-anthropic-financial-services-ai-stock-analysis-skills.html",
+    "markdown": "articles/2026/07/2026-07-05-anthropic-financial-services-ai-stock-analysis-skills.md"
+  },
+  {
     "title": "朱騏｜一人營運系統：用 SOP、Checklist 與 Playbook 降低記憶成本",
     "date": "2026-07-05",
     "source": "Facebook",
