@@ -32,6 +32,40 @@
     "markdown": "articles/2026/07/2026-07-05-chuchi-one-person-operating-system-memory-cost-sop-checklist.md"
   },
   {
+    "title": "Cognitive Supply｜GLM-5.2：中國開源權重模型逼近前沿閉源模型後的成本與地緣政治轉折",
+    "date": "2026-07-05",
+    "source": "Threads",
+    "author": "Cognitive Supply（@cognitive_supply）",
+    "type": "social-post",
+    "topics": [
+      "AI",
+      "GLM-5.2",
+      "Z.ai",
+      "Open Weight Models",
+      "Open Source AI",
+      "Coding Agent",
+      "Frontier Models",
+      "AI Infrastructure",
+      "AI Geopolitics",
+      "資料主權"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@cognitive_supply/post/DaWkerdD-IM?xmt=AQG04ZXCZnHiwRP0vICBWKM_GfSBPb4mfuxrdCYFIGJte1zoZ9W8o7s2ieXelIxO5q8hXn7F&slof=1",
+      "https://www.threads.com/@cognitive_supply/post/DaWkerdD-IM",
+      "https://www.threads.com/@cognitive_supply/post/DaWkerdD-IM",
+      "https://www.reuters.com/world/china/a-new-inexpensive-chinese-ai-model-is-catching-up-with-anthropic-openai-their-2026-07-02/",
+      "https://huggingface.co/zai-org/GLM-5.2",
+      "https://huggingface.co/blog/zai-org/glm-52-blog"
+    ],
+    "excerpt": "GLM-5.2 的重點不只是「又一個中國模型變強」，而是它把原本「便宜可控但能力落後」與「能力最強但昂貴閉源」之間的距離壓縮到足以改變採購、架構與備援策略。",
+    "slug": "2026-07-05-cognitive-supply-glm-5-2-open-weight-frontier-model-cost-geopolitics",
+    "html": "articles/2026-07-05-cognitive-supply-glm-5-2-open-weight-frontier-model-cost-geopolitics.html",
+    "markdown": "articles/2026/07/2026-07-05-cognitive-supply-glm-5-2-open-weight-frontier-model-cost-geopolitics.md"
+  },
+  {
     "title": "股股學院｜AI 替你上班：零代碼打造 AI 自動化辦公室",
     "date": "2026-07-05",
     "source": "股股學院",
