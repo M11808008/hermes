@@ -131,6 +131,41 @@
     "markdown": "articles/2026/07/2026-07-05-jamemo-all-about-pho-cerritos-short-rib-pho.md"
   },
   {
+    "title": "傑森所長 Jason Tsai｜用 NotebookLM 打造 Claude 技能工廠：把知識資料轉成可重複執行的 skill.md",
+    "date": "2026-07-05",
+    "source": "Threads",
+    "author": "傑森所長 Jason Tsai（@jasonxtsai）",
+    "type": "social-post",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Claude Skills",
+      "NotebookLM",
+      "Skill.md",
+      "Agent Skills",
+      "知識管理",
+      "SOP",
+      "自媒體",
+      "工作流自動化"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY?xmt=AQG0mNOiSI1-ISkzOzB_hDSCSRT4sS_Qk8lfR_xraQJh6tc9x44q7WRotifnEumEbGrIn2su",
+      "https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY",
+      "https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY",
+      "https://evoke728.github.io/jason-pages/skill-factory",
+      "https://code.claude.com/docs/en/skills",
+      "https://github.com/anthropics/skills",
+      "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills"
+    ],
+    "excerpt": "這篇的核心是「知識蒸餾成技能」：先用 NotebookLM 從大量範例與來源中萃取規則，再把規則寫成 Claude Code 可讀的 `skill.md`，讓 Claude 每次處理同類任務時都有固定食譜，不必從零開始教。",
+    "slug": "2026-07-05-jason-tsai-notebooklm-claude-code-skill-factory",
+    "html": "articles/2026-07-05-jason-tsai-notebooklm-claude-code-skill-factory.html",
+    "markdown": "articles/2026/07/2026-07-05-jason-tsai-notebooklm-claude-code-skill-factory.md"
+  },
+  {
     "title": "Laban｜Hermes Bible 繁體中文版：Hermes Agent 文件與社群 Flows 的非官方繁中翻譯站",
     "date": "2026-07-05",
     "source": "Threads",

@@ -1,0 +1,103 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>傑森所長 Jason Tsai｜用 NotebookLM 打造 Claude 技能工廠：把知識資料轉成可重複執行的 skill.md</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>傑森所長 Jason Tsai｜用 NotebookLM 打造 Claude 技能工廠：把知識資料轉成可重複執行的 skill.md</h1><h1>傑森所長 Jason Tsai｜用 NotebookLM 打造 Claude 技能工廠：把知識資料轉成可重複執行的 skill.md</h1>
+<h1>一句話摘要</h1>
+<p>這篇的核心是「知識蒸餾成技能」：先用 NotebookLM 從大量範例與來源中萃取規則，再把規則寫成 Claude Code 可讀的 `skill.md`，讓 Claude 每次處理同類任務時都有固定食譜，不必從零開始教。</p>
+<h1>Threads 貼文重點</h1>
+<p>傑森所長 Jason Tsai（@jasonxtsai）在 Threads 提到：</p>
+<ul>
+<li>NotebookLM 幫 Claude 寫技能這件事，還沒有太多人使用。</li>
+<li>做法是把自己熟悉主題的資料丟進 NotebookLM，請它輸出 `skill.md`。</li>
+<li>再把 `skill.md` 放進 Claude Code 的技能資料夾。</li>
+<li>之後同樣類型的任務，Claude 可以每次跑出更一致的結果，不必反覆重新解釋規則、語氣與格式。</li>
+<li>作者在置頂留言補上完整教學頁：</li>
+</ul>
+<p><a href="https://evoke728.github.io/jason-pages/skill-factory" target="_blank" rel="noopener">https://evoke728.github.io/jason-pages/skill-factory</a></p>
+<p>留言討論中，有人問「為什麼不直接叫 Claude Code 寫？」作者補充得很清楚：</p>
+<ul>
+<li>資料少的任務，直接叫 Claude Code 寫就好，NotebookLM 不必硬插一層。</li>
+<li>這套流程適合資料很多又很雜的情況。</li>
+<li>NotebookLM 的角色是先整理來源、保留引用、確認規則。</li>
+<li>再交給 Claude Code 做成可重複執行的 skill。</li>
+<li>優勢不在省 token，而在降低漏資料與亂整理。</li>
+</ul>
+<h1>教學頁內容整理</h1>
+<p>作者的教學頁標題是「用 NotebookLM 打造你的 Claude 技能工廠｜一次設定，永久生效」。它把問題定義為：Claude 不是不強，而是每次都從零開始。</p>
+<p>常見痛點包括：</p>
+<ul>
+<li>每次叫 Claude 寫 Email，都要重新解釋語氣與格式。</li>
+<li>每次叫 Claude 做 FAQ，輸出的品質忽好忽壞。</li>
+<li>明明 AI 可以省時間，但每次都要重新「調教」。</li>
+</ul>
+<p>教學頁提出的解法是 Claude Code 的 Skill：放在技能資料夾裡的 `.md` 檔案，讓 Claude 在執行任務前先讀取任務標準，包括輸出格式、語氣、必守規則與範例。</p>
+<h1>5 步驟流程</h1>
+<h1>Step 1：開啟 NotebookLM，上傳最佳資料來源</h1>
+<p>目標是讓 NotebookLM 有足夠的原料理解任務標準。教學頁建議依任務類型準備資料：</p>
+<ul>
+<li>電子郵件：過去寫過的優質 Email 範例 5–10 封。</li>
+<li>落地頁文案：覺得寫得好的落地頁截圖或文字稿。</li>
+<li>FAQ：客戶常問問題清單與標準回覆。</li>
+<li>客服回覆：已脫敏的客服對話紀錄。</li>
+<li>社群貼文：高互動貼文 10–20 篇。</li>
+<li>課程講義：課程大綱、簡報、教學影片逐字稿。</li>
+</ul>
+<p>關鍵原則是品質比數量重要：要上傳自己認為「這就是好輸出」的範例，若有固定格式也要一起放入。</p>
+<h1>Step 2：請 NotebookLM 撰寫 skill.md</h1>
+<p>NotebookLM 的價值在於根據使用者提供的來源整理，不是憑空發揮。它適合先從來源萃取：</p>
+<ul>
+<li>任務目標</li>
+<li>輸出格式</li>
+<li>語氣與風格</li>
+<li>禁止事項</li>
+<li>必備檢查清單</li>
+<li>正反範例</li>
+<li>常見錯誤</li>
+</ul>
+<h1>Step 3：把 skill.md 放進 Claude Code 技能資料夾</h1>
+<p>完成後，把技能文件放到 Claude Code 可讀取的技能位置。官方 Claude Code docs 對 Skills 的描述是：建立一個 `SKILL.md` 檔案放入技能資料夾，Claude 會在相關任務時把它加入工具箱，也可以用 `/skill-name` 直接呼叫。</p>
+<h1>Step 4：Claude 讀取技能，照著食譜執行</h1>
+<p>技能不是一次性 prompt，而是可重複使用的任務說明書。對於需要固定風格、固定格式、固定判斷規則的工作，它能讓輸出穩定度提高。</p>
+<h1>Step 5：每種任務建立一個技能</h1>
+<p>這個方法最適合把常做工作拆成多個可維護的技能，例如：</p>
+<ul>
+<li>品牌電子報</li>
+<li>FAQ 回覆</li>
+<li>客服訊息</li>
+<li>社群貼文</li>
+<li>課程講義整理</li>
+<li>落地頁文案</li>
+<li>會議摘要</li>
+<li>銷售回覆</li>
+</ul>
+<h1>官方資料交叉確認</h1>
+<p>Brave Search 交叉查詢 Claude Skills 後，找到官方與社群資料佐證：</p>
+<ul>
+<li>Claude Code Docs：Skills extend what Claude can do；建立 `SKILL.md` 後，Claude 會在相關時使用，也可直接用 `/skill-name` 呼叫。</li>
+<li>Anthropic 官方 `anthropics/skills` GitHub repo：每個 skill 是自含資料夾，裡面有 `SKILL.md`，提供 Claude 使用的 instructions 與 metadata。</li>
+<li>Anthropic engineering blog 提到，當 `SKILL.md` 太大時，可拆成多個檔案再引用，以降低 token 使用並提升結構可維護性。</li>
+</ul>
+<p>這與 Jason Tsai 教學頁的方向一致：不要把所有背景都塞進一次性 prompt，而是把可重複任務整理成可維護的技能包。</p>
+<h1>實務價值</h1>
+<h1>1. 把「會做」變成「可複製」</h1>
+<p>許多知識工作者不是缺 AI 工具，而是缺一套把個人經驗標準化的方法。NotebookLM 可以先把散落資料整理成規則，Skill 則把規則變成 Claude 可重複執行的操作手冊。</p>
+<h1>2. 降低反覆講 prompt 的成本</h1>
+<p>同一件事做三次以上、每次都要貼長指令或補充格式時，就值得做成 Skill。這能減少「每次重講第七次」的摩擦。</p>
+<h1>3. 適合資料多又雜的任務</h1>
+<p>作者特別提醒：資料少時直接用 Claude Code 即可。NotebookLM 這一層真正適合：</p>
+<ul>
+<li>來源很多</li>
+<li>需要保留引用</li>
+<li>有很多範例要抽象化</li>
+<li>規則容易漏</li>
+<li>輸出品質需要長期一致</li>
+</ul>
+<h1>4. 對自媒體與課程產品特別有用</h1>
+<p>這篇雖然以 Claude Skill 教學為主，但背後其實是自媒體工作流產品化：把個人語氣、內容結構、銷售話術與教學標準整理成技能，後續就能更快產出電子報、貼文、課程講義與客服回覆。</p>
+<h1>注意事項</h1>
+<ul>
+<li>不要把所有任務都硬做成 Skill；太細會造成管理成本。</li>
+<li>Skill 應保持 500–1500 字左右，太短不夠清楚，太長可能難以維護。</li>
+<li>應附上好範例與反例，比單純寫抽象規則更有效。</li>
+<li>若處理客服、報名名單或客戶資料，必須先脫敏再上傳 NotebookLM。</li>
+<li>Skill 建好後要用真實任務測試，依結果持續修正。</li>
+</ul>
+<h1>結論</h1>
+<p>Jason Tsai 這篇的價值在於把 NotebookLM 與 Claude Code Skills 接成一條「知識蒸餾管線」：NotebookLM 負責從大量來源萃取規則，Claude Code Skill 負責讓規則在日常任務中穩定重用。對需要經常產出內容、客服、FAQ、講義或品牌文案的人來說，這是一個把個人工作方法系統化的低成本入口。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-05 · Threads · social-post</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Claude Code</span><span class="tag">Claude Skills</span><span class="tag">NotebookLM</span><span class="tag">Skill.md</span><span class="tag">Agent Skills</span><span class="tag">知識管理</span><span class="tag">SOP</span><span class="tag">自媒體</span><span class="tag">工作流自動化</span><h3>原始連結</h3><p><a href="https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY?xmt=AQG0mNOiSI1-ISkzOzB_hDSCSRT4sS_Qk8lfR_xraQJh6tc9x44q7WRotifnEumEbGrIn2su" target="_blank" rel="noopener">https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY?xmt=AQG0mNOiSI1-ISkzOzB_hDSCSRT4sS_Qk8lfR_xraQJh6tc9x44q7WRotifnEumEbGrIn2su</a></p><p><a href="https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY" target="_blank" rel="noopener">https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY</a></p><p><a href="https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY" target="_blank" rel="noopener">https://www.threads.com/@jasonxtsai/post/DaXdQK0kYxY</a></p><p><a href="https://evoke728.github.io/jason-pages/skill-factory" target="_blank" rel="noopener">https://evoke728.github.io/jason-pages/skill-factory</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">https://github.com/anthropics/skills</a></p><p><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener">https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
