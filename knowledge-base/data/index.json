@@ -66,6 +66,38 @@
     "markdown": "articles/2026/07/2026-07-05-cognitive-supply-glm-5-2-open-weight-frontier-model-cost-geopolitics.md"
   },
   {
+    "title": "金融分析與股票研究 Claude Skills 地圖：55 個 Finance Skill 覆蓋 7 大領域",
+    "date": "2026-07-05",
+    "source": "LINE image upload",
+    "author": "未標示",
+    "type": "image-note",
+    "topics": [
+      "AI",
+      "Claude Skills",
+      "Finance",
+      "Equity Research",
+      "Financial Analysis",
+      "Investment Banking",
+      "Private Equity",
+      "Wealth Management",
+      "Fund Admin",
+      "Operations",
+      "股票研究"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "local-image-upload",
+      "local-image-upload",
+      "[]"
+    ],
+    "excerpt": "這組截圖像是一套「金融工作流技能庫」：把投研、財務分析、投行、私募、財富管理、基金行政與合規營運拆成可呼叫的 AI skills，尤其適合用來設計金融 KOL、投資研究助理或企業內部分析 agent。",
+    "slug": "2026-07-05-finance-claude-skills-taxonomy-equity-research-financial-analysis",
+    "html": "articles/2026-07-05-finance-claude-skills-taxonomy-equity-research-financial-analysis.html",
+    "markdown": "articles/2026/07/2026-07-05-finance-claude-skills-taxonomy-equity-research-financial-analysis.md"
+  },
+  {
     "title": "股股學院｜AI 替你上班：零代碼打造 AI 自動化辦公室",
     "date": "2026-07-05",
     "source": "股股學院",
