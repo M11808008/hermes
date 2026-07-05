@@ -163,6 +163,39 @@
     "markdown": "articles/2026/07/2026-07-05-lion-ip-monetization-ai-automation-content-market-positioning.md"
   },
   {
+    "title": "Leo Wu｜Browser Use video-use：讓 Codex、Claude Code、Hermes 等 Coding Agent 具備影片剪輯能力",
+    "date": "2026-07-05",
+    "source": "Threads",
+    "author": "Leo Wu（@wutsungtse）",
+    "type": "social-post",
+    "topics": [
+      "AI",
+      "AI Agent",
+      "Coding Agent",
+      "Video Editing",
+      "video-use",
+      "Browser Use",
+      "Claude Code",
+      "Codex",
+      "Hermes Agent",
+      "ffmpeg",
+      "剪輯自動化"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@wutsungtse/post/DaYGxOlCe6X?xmt=AQG058rW4xBxgw1Va5cEJWNkfpWUFimvdyZiWWJ_fexMQ0EKbvBmd6V4XwlNbYuTbusZKngUTg&slof=1",
+      "https://www.threads.com/@wutsungtse/post/DaYGxOlCe6X",
+      "https://www.threads.com/@wutsungtse/post/DaYGxOlCe6X",
+      "https://github.com/browser-use/video-use"
+    ],
+    "excerpt": "video-use 是「AI agent 影片剪輯」很值得追蹤的開源案例：它不是讓模型逐幀看完整支影片，而是把影片轉成文字、時間軸、波形與必要視覺切片，讓 coding agent 透過腳本與 ffmpeg 做可控剪輯。",
+    "slug": "2026-07-05-wutsungtse-browser-use-video-use-ai-agent-video-editing-skill",
+    "html": "articles/2026-07-05-wutsungtse-browser-use-video-use-ai-agent-video-editing-skill.html",
+    "markdown": "articles/2026/07/2026-07-05-wutsungtse-browser-use-video-use-ai-agent-video-editing-skill.md"
+  },
+  {
     "title": "AI Observer｜Hermes Agent iMessage 與桌面寵物更新：AI 工具開始競爭情感介面",
     "date": "2026-07-03",
     "source": "https://www.threads.com/@the.ai.observer/post/DaRr2UEkuv6?xmt=AQG0WBRWC9hORX83x6jChpdG5jRfSOyLQGCgX30w1D6rSzgNyUT6Vy4NaNZpiv5v4uxf37KGlw&slof=1",
