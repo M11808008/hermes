@@ -32,6 +32,40 @@
     "markdown": "articles/2026/07/2026-07-05-chuchi-one-person-operating-system-memory-cost-sop-checklist.md"
   },
   {
+    "title": "股股學院｜AI 替你上班：零代碼打造 AI 自動化辦公室",
+    "date": "2026-07-05",
+    "source": "股股學院",
+    "author": "股股學院 / Danny Yang",
+    "type": "course-page",
+    "topics": [
+      "AI Agent",
+      "AI 自動化",
+      "零代碼",
+      "辦公室自動化",
+      "Claude Code",
+      "Codex",
+      "Hermes Agent",
+      "OpenClaw",
+      "NotebookLM",
+      "AI 課程",
+      "一人公司",
+      "工作流自動化"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://school.gugu.fund/p/L010004",
+      "https://school.gugu.fund/p/L010004",
+      "https://school.gugu.fund/p/L010004",
+      "https://school.gugu.fund/p/L010004/chapters#course-nav"
+    ],
+    "excerpt": "這個課程頁值得收錄為「AI Agent 大眾化課程包裝」案例：它不只賣工具教學，而是把 AI 能力包裝成一套從思維、工具、流程、助理群到持續迭代的自動化辦公室系統。",
+    "slug": "2026-07-05-gugu-ai-office-no-code-agent-automation-course",
+    "html": "articles/2026-07-05-gugu-ai-office-no-code-agent-automation-course.html",
+    "markdown": "articles/2026/07/2026-07-05-gugu-ai-office-no-code-agent-automation-course.md"
+  },
+  {
     "title": "AI Observer｜Hermes Agent iMessage 與桌面寵物更新：AI 工具開始競爭情感介面",
     "date": "2026-07-03",
     "source": "https://www.threads.com/@the.ai.observer/post/DaRr2UEkuv6?xmt=AQG0WBRWC9hORX83x6jChpdG5jRfSOyLQGCgX30w1D6rSzgNyUT6Vy4NaNZpiv5v4uxf37KGlw&slof=1",
