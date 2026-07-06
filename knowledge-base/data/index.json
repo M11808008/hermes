@@ -1,5 +1,43 @@
 [
   {
+    "title": "陳盟升｜LM Studio 本地 AI 部署：未審查 GGUF 模型、RAG 與私密知識庫",
+    "date": "2026-07-06",
+    "source": "Facebook",
+    "author": "陳盟升",
+    "type": "social-post",
+    "topics": [
+      "Local LLM",
+      "LM Studio",
+      "GGUF",
+      "Hugging Face",
+      "Uncensored Model",
+      "RAG",
+      "AnythingLLM",
+      "私密知識庫",
+      "本地部署",
+      "AI Safety"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/1E4LASvLJj/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=1550206580074172&set=a.118972106530967&type=3&mibextid=wwXIfr&rdid=LrGaENolXUuOrbol&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E4LASvLJj%2F%3Fmibextid%3DwwXIfr",
+      "https://www.facebook.com/share/1E4LASvLJj/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=1550206580074172&set=a.118972106530967&type=3&mibextid=wwXIfr&rdid=LrGaENolXUuOrbol&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E4LASvLJj%2F%3Fmibextid%3DwwXIfr",
+      "https://lmstudio.ai/docs/app",
+      "https://lmstudio.ai/models",
+      "https://docs.anythingllm.com/introduction",
+      "https://docs.anythingllm.com/chatting-with-documents/introduction",
+      "https://huggingface.co/llmfan46/gemma-4-26B-A4B-it-uncensored-heretic-GGUF",
+      "https://huggingface.co/llmfan46/gemma-4-26B-A4B-it-ultra-uncensored-heretic-GGUF"
+    ],
+    "excerpt": "這則貼文把「本地端 AI」整理成一條實用路徑：用 LM Studio 直接載入 GGUF 模型，在 Hugging Face 找合適模型，再用內建 RAG 或 AnythingLLM 串接私密文件；但歸檔時必須補上安全提醒：未審查模型降低拒答，不代表更準確、更安全或更適合所有場景。",
+    "slug": "2026-07-06-chen-meng-sheng-lm-studio-uncensored-local-ai-rag",
+    "html": "articles/2026-07-06-chen-meng-sheng-lm-studio-uncensored-local-ai-rag.html",
+    "markdown": "articles/2026/07/2026-07-06-chen-meng-sheng-lm-studio-uncensored-local-ai-rag.md"
+  },
+  {
     "title": "林啟維｜Claude Fable 5 兩天窗口：AI Vault、知識庫更新與大型文件任務清單",
     "date": "2026-07-06",
     "source": "Facebook",
