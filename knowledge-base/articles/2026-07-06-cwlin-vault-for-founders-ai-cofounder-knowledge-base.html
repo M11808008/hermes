@@ -1,0 +1,126 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CW Lin｜Vault for Founders：用 Obsidian + Git 打造 AI Cofounder 的創辦人知識庫</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>CW Lin｜Vault for Founders：用 Obsidian + Git 打造 AI Cofounder 的創辦人知識庫</h1><h1>CW Lin｜Vault for Founders：用 Obsidian + Git 打造 AI Cofounder 的創辦人知識庫</h1>
+<h1>一句話摘要</h1>
+<p>Vault for Founders 把「AI 長期記憶」從聊天平台內建 memory 拉回到使用者可控的 Markdown 檔案系統：用 Obsidian 編輯、Git 版控、GitHub 備份，讓 Claude Cowork、Claude Code、OpenClaw 或未來任何 agent 都能讀同一套創辦人與公司決策脈絡。</p>
+<h1>專案定位</h1>
+<p>Vault for Founders 是 CW Lin（Portaly CEO &amp; Founder）整理的 AI 知識庫框架。它不是單一 App，而是一套「資料夾架構 + 模板 + 操作指南 + 維護原則」，目標是讓創辦人把自己的身份、公司背景、決策紀錄、SOP、專案、關係網與長期記憶整理成 AI agent 可讀、可維護、可版本回復的 Vault。</p>
+<p>Repo README 將最終的 AI 夥伴稱為 Cub：不是單純照指令做事的工具，而是累積公司決策上下文、能討論想法、挑戰思考、協助創辦人做更好判斷的 AI cofounder / second-in-command。</p>
+<h1>為什麼不是只用 Claude / ChatGPT 內建 memory</h1>
+<p>專案指出，聊天平台內建 memory 在早期使用時很方便，但當 AI 開始接觸公司核心決策脈絡時，風險會變大：</p>
+<ul>
+<li>平台鎖定：Claude 的記憶 GPT 讀不到，反之亦然。</li>
+<li>不透明：使用者不知道模型到底記住什麼、何時被摘要或刪除。</li>
+<li>脆弱：沒有完整版本控制，記錯或帳號出問題時難以回復。</li>
+<li>無法擴張：知識結構不可控，資料越多越容易混在一起。</li>
+</ul>
+<p>自建 Vault 的優勢是：資料是自己的 Markdown 檔案，可在本機保存，可跨帳號、跨工具、跨裝置遷移；AI 工具換了，只要把新工具指向同一個 Vault 即可。</p>
+<h1>技術與工具堆疊</h1>
+<p>| 工具 | 角色 |</p>
+<p>|---|---|</p>
+<p>| Obsidian | 本機 Markdown 編輯器，用來瀏覽、撰寫與維護 Vault。 |</p>
+<p>| Git | 版本控制，記錄每次檔案變更，可回溯與比較。 |</p>
+<p>| GitHub private repo | 私有備份與跨裝置同步，不是公開發布資料庫。 |</p>
+<p>| Obsidian Git plugin | 讓 Obsidian 自動 commit / sync，降低非工程使用者操作 Git 的門檻。 |</p>
+<p>| Claude Cowork / Claude Code / OpenClaw | 可讀寫 Vault 的 AI agent 或桌面/CLI 工具。 |</p>
+<h1>核心架構</h1>
+<p>官方範例的 Vault 結構如下：</p>
+<p>```text</p>
+<p>Your Vault/</p>
+<p>├── README.md              ← Vault index，agent 第一個讀的導航圖</p>
+<p>├── agent-persona.md       ← AI 角色、協作方式與行為邊界</p>
+<p>├── memory-summary.md      ← 長期記憶摘要與近期重點</p>
+<p>├── launch-dashboard.md    ← 可選：目前最重要專案的一頁式 cockpit</p>
+<p>├── identity/              ← 創辦人的價值觀、決策風格、卡點</p>
+<p>├── context/               ← 公司背景、產品策略、競爭、訊息</p>
+<p>├── memory/                ← 重要決策與會議結論，累積後要有 INDEX.md</p>
+<p>├── sop/                   ← 標準作業流程與 vault-changelog</p>
+<p>├── operations/            ← 公司營運資料，如設立、銀行、稅務</p>
+<p>├── projects/              ← 進行中專案，封存後移到 archive/</p>
+<p>├── people/                ← 關鍵人脈與互動背景</p>
+<p>└── skills/                ← 自己撰寫的技能，不複製工具內建 skills</p>
+<p>```</p>
+<p>設計原則是「AI agent 是主要讀者」。因此檔名、索引與 frontmatter 的重點不是人類瀏覽美觀，而是讓模型快速判斷哪些檔案需要讀、哪些不需要讀。</p>
+<h1>Setup Guide 重點</h1>
+<p>使用者分享的是 `en/setup-guide.md`。這份文件把建立 Vault 拆成八個步驟：</p>
+<ul>
+<li>安裝 Git，並設定 `git config --global user.email` / `user.name`。</li>
+<li>安裝 Obsidian，建立新 vault，記住路徑。</li>
+<li>在 GitHub 建立 private repo。</li>
+<li>在 vault 目錄執行 `git init`、設定 remote、切到 main branch。</li>
+<li>建立 `.gitattributes` 與 `.gitignore`，避免跨裝置 line ending 與 Obsidian 本機設定造成假 diff。</li>
+<li>建立資料夾與核心檔案：README、agent-persona、memory-summary、identity、context、memory、sop、operations、projects、people。</li>
+<li>第一次 `git add .`、`git commit -m &quot;init vault&quot;`、`git push -u origin main`。</li>
+<li>安裝 Obsidian Git plugin，設定自動 commit-and-sync interval，例如 30 分鐘。</li>
+</ul>
+<p>其中最重要的提醒是：`agent-persona.md` 與 `voice-and-tone.md` 不能像表單一樣填空，應該由 AI 與使用者對話產生，因為這些檔案會決定 AI 夥伴的靈魂、協作方式與公開語氣。</p>
+<h1>v2.0 的四個關鍵升級</h1>
+<p>Repo 目前 v2.0 更新於 2026/07/05，作者說這些升級來自三個月每日使用後的實戰修正。</p>
+<h1>1. 索引分層：Root README 不應無限變胖</h1>
+<p>當 vault 從十幾個檔案長到 250+ 檔案時，單一 README 索引會失效。v2 將資料夾分成兩類：</p>
+<ul>
+<li>慢變動資料夾：identity/、context/、operations/，可在 root README 詳列檔案。</li>
+<li>高成長資料夾：memory/、projects/、hr/，各自建立 `INDEX.md`；root README 只留一行指向。</li>
+</ul>
+<p>Agent 的檢索層變成：Root README → folder INDEX.md → individual file YAML frontmatter。</p>
+<h1>2. 三個啟動必讀檔有 attention budget</h1>
+<p>README.md、agent-persona.md、memory-summary.md 每次 agent 啟動都會讀，因此每一行都是固定成本。v2 設定外部化觸發條件：</p>
+<ul>
+<li>段落超過約 5 行。</li>
+<li>不是每次 session 都需要。</li>
+</ul>
+<p>符合條件就搬到 identity/ 或 sop/，核心檔只留一行 pointer。這點非常適合 Hermes Agent / Claude Code 類工作流，避免把所有規則塞進長長的 system prompt 或記憶摘要。</p>
+<h1>3. Update-log rule：核心檔只留最後兩筆更新</h1>
+<p>核心檔常慢慢累積一長串「last updated」歷史，最後變成每次啟動都要讀的垃圾上下文。v2 規則是：只保留 last updated 與 previous update；更舊的結構變更移到 `sop/vault-changelog.md`。</p>
+<h1>4. 多層防禦維護：不要只靠一條規則</h1>
+<p>專案指出，單一句「記得同步 index」不可靠。v2 採四層防禦：</p>
+<ul>
+<li>Global instructions 的 forced rules：改檔同一回合就同步 index。</li>
+<li>After-action review：任務收尾時檢查 index 與相關文件。</li>
+<li>Periodic vault audit：定期比對實際檔案與索引。</li>
+<li>Vault README 內建 forced rules：agent 每次啟動都會重新讀到。</li>
+</ul>
+<h1>對 Luarn-Pin / Hermes 工作流的可用價值</h1>
+<h1>1. 可作為 AI 學習雷達的私密版架構參考</h1>
+<p>目前 AI 學習雷達偏向公開知識庫與社群分享內容歸檔；Vault for Founders 則更適合私密資料：課程規劃、報名名單處理 SOP、合作夥伴背景、決策紀錄、專案 cockpit、個人 voice-and-tone、長期策略與內部營運資料。</p>
+<h1>2. 可把 Hermes memory / skills / KB 分層治理</h1>
+<p>這套框架的精神可映射到 Hermes：</p>
+<ul>
+<li>`memory-summary.md` 類似長期 user profile / durable memory，但應保持短小。</li>
+<li>`sop/` 類似 Hermes skills，保存可重複工作流。</li>
+<li>`projects/INDEX.md` 類似專案狀態索引。</li>
+<li>`voice-and-tone.md` 可保存公開內容語氣規則。</li>
+<li>`vault-audit.md` 可變成定期 cron job 或手動維護流程。</li>
+</ul>
+<h1>3. 可作為課程案例</h1>
+<p>對非工程師教學來說，這個 repo 很適合拿來說明：</p>
+<ul>
+<li>為什麼 AI 記憶不該只放在模型平台。</li>
+<li>Markdown + Git 為什麼是可攜且可審計的底層格式。</li>
+<li>AI agent 為什麼需要 README、INDEX、frontmatter 與命名規則。</li>
+<li>個人知識管理如何升級成「AI 可執行的工作系統」。</li>
+</ul>
+<h1>風險與限制</h1>
+<ul>
+<li>GitHub repo 未標示 license。若要商用改作教材、模板或產品功能，需先確認授權或取得作者同意。</li>
+<li>使用 Git / GitHub 對非技術使用者仍有門檻，雖然 Obsidian Git 可降低日常同步負擔。</li>
+<li>Private repo 不代表絕對安全；API keys、密碼、機密合約與高敏個資仍不應直接放入，或至少要有加密與存取治理。</li>
+<li>Agent 讀寫 vault 時若工具權限過大，仍可能誤刪、誤改或提交不該提交的資料；需要 Git 回復、審計與人工確認流程。</li>
+<li>模板不能機械填空。身份、persona、voice-and-tone 必須透過對話釐清，否則會產生表面完整但不貼合使用者的假記憶。</li>
+</ul>
+<h1>未來使用第一步</h1>
+<p>若之後要真的替 Luarn-Pin 建立一個「私密 AI Vault」，建議不要直接複製整包模板後填空，而是採三階段：</p>
+<ul>
+<li>架構初始化：建立 Obsidian vault、private GitHub repo、`.gitattributes`、`.gitignore`、README、基本資料夾。</li>
+<li>核心對話：用訪談方式建立 agent-persona、memory-summary、voice-and-tone、decision-style。</li>
+<li>運維化：加入 forced rules、INDEX 分層、frontmatter、after-action、vault-audit 與 changelog，避免三個月後開始漂移。</li>
+</ul>
+<h1>與前一則 Fable 5 貼文的關聯</h1>
+<p>林啟維 Fable 5 貼文提到「如果想建立 AI Vault，可以 +1」；留言中的 repo 正是 Vault for Founders。這篇應視為前一則「高能力模型窗口期任務清單」的落地資源：Fable 5 / Claude Code / Hermes 這類 agent 若要變成長期工作夥伴，底層需要可讀、可維護、可版本控管的知識庫。</p>
+<h1>原始素材摘要</h1>
+<ul>
+<li>原始連結：`en/setup-guide.md`，Vault for Founders 的英文設定指南。</li>
+<li>Repo 定位：Build your AI co-founder。</li>
+<li>作者：CW Lin，Portaly CEO &amp; Founder。</li>
+<li>架構：Obsidian + Git + GitHub + Markdown templates。</li>
+<li>v2.0 重點：index layering、attention budget、update-log rule、layered-defense maintenance。</li>
+<li>檢視日期 GitHub metadata：277 stars、55 forks、1 open issue、未標示 license、main branch、最近 push 2026-07-05。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-06 · GitHub · github-repo</div><h3>標籤</h3><span class="tag">AI Vault</span><span class="tag">個人知識庫</span><span class="tag">Obsidian</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">AI Agent</span><span class="tag">AI Cofounder</span><span class="tag">Founder OS</span><span class="tag">SOP</span><span class="tag">Knowledge Management</span><span class="tag">Claude Code</span><span class="tag">Claude Cowork</span><h3>原始連結</h3><p><a href="https://github.com/cwlin0131/Vault-for-Founders/blob/main/en/setup-guide.md" target="_blank" rel="noopener">https://github.com/cwlin0131/Vault-for-Founders/blob/main/en/setup-guide.md</a></p><p><a href="https://github.com/cwlin0131/Vault-for-Founders" target="_blank" rel="noopener">https://github.com/cwlin0131/Vault-for-Founders</a></p><p><a href="https://github.com/cwlin0131/Vault-for-Founders" target="_blank" rel="noopener">https://github.com/cwlin0131/Vault-for-Founders</a></p><p><a href="https://github.com/cwlin0131/Vault-for-Founders/blob/main/en/setup-guide.md" target="_blank" rel="noopener">https://github.com/cwlin0131/Vault-for-Founders/blob/main/en/setup-guide.md</a></p><p><a href="https://github.com/cwlin0131/Vault-for-Founders/blob/main/en/architecture.md" target="_blank" rel="noopener">https://github.com/cwlin0131/Vault-for-Founders/blob/main/en/architecture.md</a></p><p><a href="https://github.com/cwlin0131/Vault-for-Founders/blob/main/en/optimization-guide.md" target="_blank" rel="noopener">https://github.com/cwlin0131/Vault-for-Founders/blob/main/en/optimization-guide.md</a></p><p><a href="https://github.com/cwlin0131/Vault-for-Founders/blob/main/CHANGELOG.md" target="_blank" rel="noopener">https://github.com/cwlin0131/Vault-for-Founders/blob/main/CHANGELOG.md</a></p><p><a href="https://obsidian.md" target="_blank" rel="noopener">https://obsidian.md</a></p><p><a href="https://github.com/Vinzent03/obsidian-git" target="_blank" rel="noopener">https://github.com/Vinzent03/obsidian-git</a></p><p><a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</a></p><p><a href="https://github.com/frank890417/muse-crystal-seed" target="_blank" rel="noopener">https://github.com/frank890417/muse-crystal-seed</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
