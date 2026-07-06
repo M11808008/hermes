@@ -134,6 +134,45 @@
     "markdown": "articles/2026/07/2026-07-07-lun-claude-agent-instagram-dm-restaurant-ordering.md"
   },
   {
+    "title": "Nexus.AI Club｜Codex 必裝十大 Skills：從技能數量轉向工作流適配的選型指南",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "nexus.ai_club / Nexus.AI Club",
+    "type": "social-post",
+    "topics": [
+      "Codex",
+      "Agent Skills",
+      "Skills Selection",
+      "Superpowers",
+      "SuperClaude",
+      "MCP",
+      "Context Engineering",
+      "AI Coding"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@nexus.ai_club/post/DacrC9Sme6c?xmt=AQG0CAw-7Ddu5SZrbjG4Sf7-kxY0bBVb18IWoK2QC2k33AMjPOZkdCtwE7378l6TmVy0kVJY&slof=1",
+      "https://www.threads.com/@nexus.ai_club/post/DacrC9Sme6c",
+      "https://www.threads.com/@nexus.ai_club/post/DacrC9Sme6c",
+      "https://github.com/obra/superpowers",
+      "https://github.com/SuperClaude-Org/SuperClaude_Framework",
+      "https://github.com/MiniMax-AI/skills",
+      "https://github.com/anthropics/skills",
+      "https://github.com/vercel-labs/agent-skills",
+      "https://github.com/othmanadi/planning-with-files",
+      "https://github.com/muratcankoylan/agent-skills-for-context-engineering",
+      "https://github.com/ComposioHQ/skills",
+      "https://github.com/antfu/skills",
+      "https://github.com/VoltAgent/awesome-agent-skills"
+    ],
+    "excerpt": "Codex 的差距不只來自模型能力，更來自 Skills 是否把需求理解、流程規劃、上下文管理、外部工具與工程紀律固定成可重複的工作流。",
+    "slug": "2026-07-07-nexus-ai-club-top-10-codex-skills-selection-guide",
+    "html": "articles/2026-07-07-nexus-ai-club-top-10-codex-skills-selection-guide.html",
+    "markdown": "articles/2026/07/2026-07-07-nexus-ai-club-top-10-codex-skills-selection-guide.md"
+  },
+  {
     "title": "Nicky Hsieh｜Claude Fable 5 短期開放：五個高槓桿用法與省額度策略",
     "date": "2026-07-07",
     "source": "Threads",
