@@ -1,5 +1,42 @@
 [
   {
+    "title": "林啟維｜Claude Fable 5 兩天窗口：AI Vault、知識庫更新與大型文件任務清單",
+    "date": "2026-07-06",
+    "source": "Facebook",
+    "author": "林啟維",
+    "type": "social-post",
+    "topics": [
+      "Claude",
+      "Fable 5",
+      "Anthropic",
+      "AI Agent",
+      "AI Vault",
+      "個人知識庫",
+      "Claude Code",
+      "Claude Cowork",
+      "長任務",
+      "文件工作流",
+      "生產力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/1Hd9Bf2sfv/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=10163637510543937&set=a.10150639772578937&type=3&mibextid=wwXIfr&rdid=xt4GLlp8o4H0fK8N&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Hd9Bf2sfv%2F%3Fmibextid%3DwwXIfr",
+      "https://www.facebook.com/share/1Hd9Bf2sfv/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=10163637510543937&set=a.10150639772578937&type=3&mibextid=wwXIfr&rdid=xt4GLlp8o4H0fK8N&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Hd9Bf2sfv%2F%3Fmibextid%3DwwXIfr",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://www.anthropic.com/claude/fable",
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://github.com/cwlin0131/Vault-for-Founders"
+    ],
+    "excerpt": "這則貼文值得收進 AI 學習雷達，因為它把「高能力模型短期開放」轉成可執行清單：不要只測模型聊天能力，而是把 Fable 5 用在 AI Vault、知識庫整理、官網重寫、模板化與大型計畫書這類需要長上下文、多步驟推理與文件輸出的任務。",
+    "slug": "2026-07-06-lin-chi-wei-claude-fable-5-two-day-ai-vault-workflow",
+    "html": "articles/2026-07-06-lin-chi-wei-claude-fable-5-two-day-ai-vault-workflow.html",
+    "markdown": "articles/2026/07/2026-07-06-lin-chi-wei-claude-fable-5-two-day-ai-vault-workflow.md"
+  },
+  {
     "title": "Medium DevOps AI Decoded｜7 個免費開源 Claude Code 替代方案：OpenCode、Aider、Plandex、Void、Zed、Cline、Kilo Code",
     "date": "2026-07-06",
     "source": "Medium",
