@@ -33,6 +33,44 @@
     "markdown": "articles/2026/07/2026-07-07-aiposthub-codex-plugin-cc-claude-code-codex-hybrid-workflow.md"
   },
   {
+    "title": "AI郵報｜去 AI 味完全指南 2026：從平均答案拉回具體現場的 Humanizer / Skill 生態",
+    "date": "2026-07-07",
+    "source": "Threads / AI郵報",
+    "author": "aiposthub / AI郵報",
+    "type": "article",
+    "topics": [
+      "去 AI 味",
+      "Humanizer",
+      "Writing Skills",
+      "AI Writing",
+      "中文 NLP",
+      "Content Creation",
+      "Agent Skills",
+      "AI Detection"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DaavXrIgWV4?xmt=AQG0mhXUUK7XZuiKv5QVEmjxcBV23p0hC-ztwmLwWXOK-lFzXqTo6gqvOXJ6VlxdSbkyDNrpog&slof=1",
+      "https://www.threads.com/@aiposthub/post/DaavXrIgWV4",
+      "https://www.threads.com/@aiposthub/post/DaavXrIgWV4",
+      "https://www.aiposthub.com/remove-ai-flavor-complete-guide-2026/",
+      "https://github.com/leonxlnx/taste-skill",
+      "https://github.com/blader/humanizer",
+      "https://github.com/op7418/Humanizer-zh",
+      "https://github.com/alchaincyf/nuwa-skill",
+      "https://github.com/pencil20388-eng/stop-slop-zh",
+      "https://github.com/MrGeDiao/shuorenhua",
+      "https://github.com/hardikpandya/stop-slop",
+      "https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/"
+    ],
+    "excerpt": "「去 AI 味」的重點不是逃避檢測器，而是把 AI 產生的平均答案，重新改回有數字、有場景、有判斷、有個人經驗的人話。",
+    "slug": "2026-07-07-aiposthub-remove-ai-flavor-humanizer-skills-guide",
+    "html": "articles/2026-07-07-aiposthub-remove-ai-flavor-humanizer-skills-guide.html",
+    "markdown": "articles/2026/07/2026-07-07-aiposthub-remove-ai-flavor-humanizer-skills-guide.md"
+  },
+  {
     "title": "Govin.AI｜如何正確設定 Claude Code 專案：把 .claude/ 當作基礎建設",
     "date": "2026-07-07",
     "source": "Threads",
