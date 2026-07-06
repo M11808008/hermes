@@ -38,6 +38,48 @@
     "markdown": "articles/2026/07/2026-07-06-chen-meng-sheng-lm-studio-uncensored-local-ai-rag.md"
   },
   {
+    "title": "朱騏｜Obsidian 搭配 Claude Code / Codex 建立個人知識庫：10 個容易被低估的功能",
+    "date": "2026-07-06",
+    "source": "Facebook",
+    "author": "朱騏",
+    "type": "social-post",
+    "topics": [
+      "Obsidian",
+      "Claude Code",
+      "Codex",
+      "個人知識庫",
+      "AI Agent",
+      "Daily Note",
+      "Bases",
+      "Canvas",
+      "Dataview",
+      "Excalidraw",
+      "知識管理",
+      "PKM"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1aurY8cr7W/?mibextid=wwXIfr",
+      "https://www.facebook.com/story.php?story_fbid=28002748582665616&id=100000715490868&mibextid=wwXIfr&rdid=cg6S8ec52JyXRLtK",
+      "https://www.facebook.com/share/p/1aurY8cr7W/?mibextid=wwXIfr",
+      "https://obsidian.md/help/plugins/daily-notes",
+      "https://obsidian.md/help/plugins/canvas",
+      "https://obsidian.md/help/plugins/file-recovery",
+      "https://obsidian.md/help/plugins/note-composer",
+      "https://obsidian.md/help/plugins/outline",
+      "https://obsidian.md/help/plugins/file-explorer",
+      "https://github.com/blacksmithgu/obsidian-dataview",
+      "https://github.com/zsviczian/obsidian-excalidraw-plugin",
+      "https://www.obsidianstats.com/plugins/file-explorer-note-count"
+    ],
+    "excerpt": "這則貼文值得歸檔，因為它把「Obsidian + Claude Code / Codex」從單純存 Markdown，提升到可被 AI agent 使用的完整知識作業系統：每日入口、資料庫、白板、版本救援、拆分、查詢、圖解與檔案管理都會影響 AI 能否快速找到正確上下文。",
+    "slug": "2026-07-06-chuchi-obsidian-claude-code-codex-knowledge-base-features",
+    "html": "articles/2026-07-06-chuchi-obsidian-claude-code-codex-knowledge-base-features.html",
+    "markdown": "articles/2026/07/2026-07-06-chuchi-obsidian-claude-code-codex-knowledge-base-features.md"
+  },
+  {
     "title": "CW Lin｜Vault for Founders：用 Obsidian + Git 打造 AI Cofounder 的創辦人知識庫",
     "date": "2026-07-06",
     "source": "GitHub",
