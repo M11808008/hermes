@@ -1,0 +1,133 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>sliven0722｜claude-video / watch：讓 Claude Code 看懂影片的 Agent Skill 與影片創作分析工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>sliven0722｜claude-video / watch：讓 Claude Code 看懂影片的 Agent Skill 與影片創作分析工作流</h1><h1>sliven0722｜claude-video / watch：讓 Claude Code 看懂影片的 Agent Skill 與影片創作分析工作流</h1>
+<h1>一句話摘要</h1>
+<p>`claude-video` 的重點不是「幫你摘要影片」而已，而是把影片拆成影格、場景、字幕與時間戳，讓 Claude Code 能像看過影片一樣回答問題；這讓影片內容可以被 agent 轉成可分析、可學習、可重用的創作方法。</p>
+<h1>Threads 貼文重點</h1>
+<p>sliven0722 在 Threads 分享 GitHub 熱門專案 `claude-video`，指出它目前已累積超過 3,400 顆 star。貼文強調，這個工具的重點不是單純摘要影片，而是讓 Claude / Claude Code 更完整理解影片內容。</p>
+<p>使用方式是提供 YouTube、TikTok 或其他影片連結，工具會自動：</p>
+<ul>
+<li>下載影片。</li>
+<li>擷取關鍵影格並分析場景變化。</li>
+<li>轉錄音訊內容。</li>
+<li>將視覺與語音資訊整理成 Claude 可以直接理解的內容。</li>
+</ul>
+<p>貼文最值得保存的觀點是：這提供了一種新的影片分析工作流。使用者可以分析爆紅影片，研究：</p>
+<ul>
+<li>開頭幾秒如何吸引觀眾。</li>
+<li>鏡頭切換與節奏如何安排。</li>
+<li>畫面、字幕與旁白如何互相配合。</li>
+<li>哪些內容可能提升觀看完成率。</li>
+</ul>
+<p>接著再交給 AI：「根據這支影片的節奏與敘事方式，重新規劃我們產品的影片腳本。」這不是複製別人的內容，而是把影片拆解成可分析、可學習、可重複運用的創作方法。</p>
+<h1>GitHub 專案檢視</h1>
+<p>我已淺層 clone 並檢視 `bradautomates/claude-video`。GitHub metadata 顯示：</p>
+<ul>
+<li>Repo：`bradautomates/claude-video`</li>
+<li>描述：Give Claude the ability to watch any video. `/watch` downloads, extracts frames, transcribes, hands it all to Claude.</li>
+<li>Stars：4013</li>
+<li>Forks：582</li>
+<li>Open issues：31</li>
+<li>Language：Python</li>
+<li>License：MIT</li>
+<li>Default branch：main</li>
+<li>Created：2026-04-24</li>
+<li>Latest push：2026-07-01</li>
+</ul>
+<p>Repo 的產品名稱實際是 `/watch`，主要是一個 Agent Skill / Claude Code plugin，而不只是一般 CLI。</p>
+<h1>它如何運作</h1>
+<p>README 描述的流程如下：</p>
+<ul>
+<li>使用者貼上影片 URL 或本機影片路徑，並提出問題。</li>
+<li>`yt-dlp` 先檢查影片是否有字幕。若只需要 transcript 且有字幕，就不下載完整影片。</li>
+<li>需要視覺資訊時，`ffmpeg` 依 detail mode 擷取影格：可用 keyframes、scene-change frames 或 uniform fallback。</li>
+<li>轉錄來源優先用平台原生字幕；若沒有字幕，則抽取音訊並用 Whisper API fallback。Groq Whisper 是偏好選項，OpenAI Whisper 是替代選項。</li>
+<li>工具輸出 timestamped transcript 與帶時間戳的 frame paths，Claude 再讀取影格圖像並結合逐字稿回答。</li>
+<li>工作目錄最後可清理；若使用者可能追問可保留。</li>
+</ul>
+<p>這個設計讓 agent 的回答能同時 grounded in：</p>
+<ul>
+<li>影片畫面：每個 timestamp 的截圖。</li>
+<li>音訊內容：字幕或 Whisper 逐字稿。</li>
+<li>使用者問題：例如某個時間點、開場 hook、視覺節奏、UI bug、影片摘要等。</li>
+</ul>
+<h1>安裝方式</h1>
+<p>README 提供幾種安裝面：</p>
+<p>Claude Code：</p>
+<p>```text</p>
+<p>/plugin marketplace add bradautomates/claude-video</p>
+<p>/plugin install watch@claude-video</p>
+<p>```</p>
+<p>Codex、Cursor、Copilot、Gemini CLI 或其他 Agent Skills hosts：</p>
+<p>```bash</p>
+<p>npx skills add bradautomates/claude-video -g</p>
+<p>```</p>
+<p>claude.ai web：下載 release 裡的 `watch.skill`，到 Settings → Capabilities → Skills 上傳。</p>
+<p>第一次執行時，skill 會檢查 `yt-dlp` 與 `ffmpeg`。macOS 可透過 Homebrew 自動安裝；Linux / Windows 會印出對應安裝指令。Whisper API key 不是必須，但影片沒有字幕時需要 Groq 或 OpenAI key 才能轉錄音訊。</p>
+<h1>Detail modes 與 token 成本</h1>
+<p>`/watch` 有多種 detail mode，這是它很值得學習的設計：</p>
+<p>| Mode | 用途 | 成本特性 |</p>
+<p>|---|---|---|</p>
+<p>| transcript | 只取字幕或逐字稿，不取影格 | 最省 token，適合純內容摘要。 |</p>
+<p>| efficient | 快速 keyframe pass，最多約 50 frames | 速度快，適合初步掃描。 |</p>
+<p>| balanced | 預設，scene-aware frames，最多約 100 frames | 品質與成本折衷。 |</p>
+<p>| token-burner | scene-aware uncapped | 最完整但高 token 成本。 |</p>
+<p>README 特別提醒，影格是主要 token 成本來源。長影片若超過 10 分鐘，預設模式會變成稀疏掃描；若問題集中在某段，應使用 `--start` / `--end` 聚焦，讓同樣 token 花在更密集的時間區間。</p>
+<h1>為什麼這很重要</h1>
+<h1>1. 影片從「黑盒內容」變成可檢索素材</h1>
+<p>過去 AI 對影片常只能讀標題、描述或字幕。`claude-video` 讓 agent 同時讀到畫面與語音，影片就可以被拆成：</p>
+<ul>
+<li>開場 hook。</li>
+<li>場景切換。</li>
+<li>字幕與旁白搭配。</li>
+<li>畫面上的 UI / code / slide。</li>
+<li>節奏、段落與敘事結構。</li>
+</ul>
+<p>這對創作者、課程設計、產品行銷、競品研究都很有價值。</p>
+<h1>2. 它示範了「multimodal skill」的標準寫法</h1>
+<p>這個 repo 的重點不只是能看影片，而是把多媒體處理封裝成 agent skill：</p>
+<ul>
+<li>skill contract 寫在 `skills/watch/SKILL.md`。</li>
+<li>runtime script 在同一個 self-contained skill folder 內。</li>
+<li>支援 Claude Code plugin、Codex / Cursor / Copilot Agent Skills CLI、claude.ai web bundle。</li>
+<li>有 setup preflight、dependency installer、detail mode、token budget、cleanup 與安全說明。</li>
+</ul>
+<p>對 AI 學習雷達來說，這是很好的「Agent Skill 工程化」案例。</p>
+<h1>3. 影片創作可以從模仿變成結構學習</h1>
+<p>Threads 貼文的判讀很關鍵：使用這種工具不是要抄別人的內容，而是把影片拆解成可遷移的方法。例如：</p>
+<ul>
+<li>為什麼前 3 秒有吸引力。</li>
+<li>每幾秒切一次鏡頭。</li>
+<li>字幕出現的節奏。</li>
+<li>旁白如何鋪陳問題與轉折。</li>
+<li>視覺示例如何支撐文字主張。</li>
+</ul>
+<p>這些可以轉成自己的產品影片、課程短影音、教學腳本或社群內容設計。</p>
+<h1>可轉成 Luarn-Pin 工作流的地方</h1>
+<ul>
+<li>AI 課程影片研究：把 YouTube / TikTok / Reels 教學影片拆成開場、段落、視覺設計與 CTA 模板。</li>
+<li>產品短影音腳本：先分析爆紅案例的節奏，再讓 agent 依 Luarn-Pin 的課程或工具重新規劃腳本。</li>
+<li>Bug reproduction：學生或使用者傳螢幕錄影時，可讓 agent 直接定位畫面哪裡出錯。</li>
+<li>課程知識庫：把長影片拆成 timestamped notes，加入 Obsidian / AI 學習雷達私密區，而不是只留影片連結。</li>
+<li>Agent skill 設計教材：用 `/watch` 做示範，說明好的 skill 應該包含 setup、依賴、成本模式、失敗處理、安全界線與跨工具安裝面。</li>
+</ul>
+<h1>風險與限制</h1>
+<ul>
+<li>長影片預設 frame cap 會造成稀疏掃描；分析細節時應聚焦片段。</li>
+<li>原生字幕可能不準，Whisper fallback 需要 API key 並會上傳抽取音訊。</li>
+<li>工具會在本機下載影片與產生影格，需注意版權、平台條款與本機暫存資料清理。</li>
+<li>影片分析不能取代人類對創意、品牌調性與倫理的判斷。</li>
+<li>對他人爆紅影片做結構分析可以學習方法，但不應複製內容、畫面或腳本。</li>
+</ul>
+<h1>後續可追蹤</h1>
+<ul>
+<li>Agent Skills CLI 與 Claude Code plugin 生態是否會讓這類 multimodal skills 普及。</li>
+<li>`/watch` 是否能與 Obsidian / AI Vault 直接串接，將分析輸出變成結構化筆記。</li>
+<li>是否能加入「影片腳本重寫模板」或「短影音節奏評分」等上層 skill。</li>
+<li>對中文影片與繁中字幕的支援品質，以及 Groq / OpenAI Whisper 的成本與準確度差異。</li>
+</ul>
+<h1>原始素材摘要</h1>
+<ul>
+<li>Threads 貼文：sliven0722 介紹 GitHub 熱門專案 `claude-video`。</li>
+<li>專案：`bradautomates/claude-video`，MIT license，Python，超過 4,000 stars。</li>
+<li>核心功能：下載影片、擷取影格、取得字幕或 Whisper 轉錄，把視覺與語音資訊交給 Claude。</li>
+<li>核心洞察：影片可以被拆成可分析、可學習、可重用的創作方法，而不是只做摘要。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-06 · Threads / GitHub · social-post</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">Agent Skill</span><span class="tag">Video Analysis</span><span class="tag">yt-dlp</span><span class="tag">ffmpeg</span><span class="tag">Whisper</span><span class="tag">影片分析</span><span class="tag">創作者工具</span><span class="tag">AI Agent</span><span class="tag">Multimodal AI</span><h3>原始連結</h3><p><a href="https://www.threads.com/@sliven0722/post/Dab-7EQk20U?xmt=AQG0TEbe5KixqZmI8B0qKVv9YEVgwAIJVTwrvHnJwzRDdkBddL18T0m9Aso4G-jStffF6RiX&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@sliven0722/post/Dab-7EQk20U?xmt=AQG0TEbe5KixqZmI8B0qKVv9YEVgwAIJVTwrvHnJwzRDdkBddL18T0m9Aso4G-jStffF6RiX&amp;slof=1</a></p><p><a href="https://github.com/bradautomates/claude-video" target="_blank" rel="noopener">https://github.com/bradautomates/claude-video</a></p><p><a href="https://www.threads.com/@sliven0722/post/Dab-7EQk20U?xmt=AQG0TEbe5KixqZmI8B0qKVv9YEVgwAIJVTwrvHnJwzRDdkBddL18T0m9Aso4G-jStffF6RiX&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@sliven0722/post/Dab-7EQk20U?xmt=AQG0TEbe5KixqZmI8B0qKVv9YEVgwAIJVTwrvHnJwzRDdkBddL18T0m9Aso4G-jStffF6RiX&amp;slof=1</a></p><p><a href="https://github.com/bradautomates/claude-video" target="_blank" rel="noopener">https://github.com/bradautomates/claude-video</a></p><p><a href="https://github.com/bradautomates/claude-video/blob/main/README.md" target="_blank" rel="noopener">https://github.com/bradautomates/claude-video/blob/main/README.md</a></p><p><a href="https://github.com/bradautomates/claude-video/blob/main/skills/watch/SKILL.md" target="_blank" rel="noopener">https://github.com/bradautomates/claude-video/blob/main/skills/watch/SKILL.md</a></p><p><a href="https://github.com/bradautomates/claude-video/releases/latest" target="_blank" rel="noopener">https://github.com/bradautomates/claude-video/releases/latest</a></p><p><a href="https://agentskills.io" target="_blank" rel="noopener">https://agentskills.io</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

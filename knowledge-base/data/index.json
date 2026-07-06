@@ -204,6 +204,42 @@
     "markdown": "articles/2026/07/2026-07-06-medium-open-source-claude-code-alternatives.md"
   },
   {
+    "title": "sliven0722｜claude-video / watch：讓 Claude Code 看懂影片的 Agent Skill 與影片創作分析工作流",
+    "date": "2026-07-06",
+    "source": "Threads / GitHub",
+    "author": "sliven0722 / bradautomates",
+    "type": "social-post",
+    "topics": [
+      "Claude Code",
+      "Agent Skill",
+      "Video Analysis",
+      "yt-dlp",
+      "ffmpeg",
+      "Whisper",
+      "影片分析",
+      "創作者工具",
+      "AI Agent",
+      "Multimodal AI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@sliven0722/post/Dab-7EQk20U?xmt=AQG0TEbe5KixqZmI8B0qKVv9YEVgwAIJVTwrvHnJwzRDdkBddL18T0m9Aso4G-jStffF6RiX&slof=1",
+      "https://github.com/bradautomates/claude-video",
+      "https://www.threads.com/@sliven0722/post/Dab-7EQk20U?xmt=AQG0TEbe5KixqZmI8B0qKVv9YEVgwAIJVTwrvHnJwzRDdkBddL18T0m9Aso4G-jStffF6RiX&slof=1",
+      "https://github.com/bradautomates/claude-video",
+      "https://github.com/bradautomates/claude-video/blob/main/README.md",
+      "https://github.com/bradautomates/claude-video/blob/main/skills/watch/SKILL.md",
+      "https://github.com/bradautomates/claude-video/releases/latest",
+      "https://agentskills.io"
+    ],
+    "excerpt": "`claude-video` 的重點不是「幫你摘要影片」而已，而是把影片拆成影格、場景、字幕與時間戳，讓 Claude Code 能像看過影片一樣回答問題；這讓影片內容可以被 agent 轉成可分析、可學習、可重用的創作方法。",
+    "slug": "2026-07-06-sliven-claude-video-watch-agent-skill-video-analysis-workflow",
+    "html": "articles/2026-07-06-sliven-claude-video-watch-agent-skill-video-analysis-workflow.html",
+    "markdown": "articles/2026/07/2026-07-06-sliven-claude-video-watch-agent-skill-video-analysis-workflow.md"
+  },
+  {
     "title": "楊俊益｜AI Stock Report Generator Skill：台股財務模型、投資簡報與技術圖表生成器",
     "date": "2026-07-06",
     "source": "Facebook / GitHub",
