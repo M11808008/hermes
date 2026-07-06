@@ -165,6 +165,40 @@
     "markdown": "articles/2026/07/2026-07-07-nickyhsieh-claude-fable-5-five-use-cases-token-strategy.md"
   },
   {
+    "title": "Prompt Case｜Superpowers 6.0：Codex 高頻使用的 Agentic Skills 方法論與低 token 開發流程",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "prompt_case / Prompt Case",
+    "type": "social-post",
+    "topics": [
+      "Superpowers",
+      "Agentic Skills",
+      "Codex",
+      "Claude Code",
+      "Subagent Driven Development",
+      "TDD",
+      "AI Coding",
+      "Fable 5"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/DabzX7TFBEg?xmt=AQG08cXnU-BdFVTYvYuBA-bqscDCnYpRpsMsY0HQIPOXZ7KrXK7MU7R1u2LFc0EeLoKc-bTQ&slof=1",
+      "https://www.threads.com/@prompt_case/post/DabzX7TFBEg",
+      "https://www.threads.com/@prompt_case/post/DabzX7TFBEg",
+      "https://github.com/obra/superpowers",
+      "https://raw.githubusercontent.com/obra/superpowers/main/README.md",
+      "https://raw.githubusercontent.com/obra/superpowers/main/RELEASE-NOTES.md",
+      "https://blog.fsck.com/2026/06/15/Superpowers-6/",
+      "https://primeradiant.com/blog/2026/superpowers-6.html"
+    ],
+    "excerpt": "Superpowers 不是單一 prompt，而是一套把 coding agent 拉回工程流程的方法論：先釐清需求、寫 spec、做計畫、跑 TDD、派 subagents、審查變更；6.0 版則把這套流程進一步壓低 token 與時間成本。",
+    "slug": "2026-07-07-prompt-case-superpowers-6-agentic-skills-framework-codex",
+    "html": "articles/2026-07-07-prompt-case-superpowers-6-agentic-skills-framework-codex.html",
+    "markdown": "articles/2026/07/2026-07-07-prompt-case-superpowers-6-agentic-skills-framework-codex.md"
+  },
+  {
     "title": "TopMediai｜AI 聲音克隆：30 秒複製聲線的多語言語音生成工具",
     "date": "2026-07-07",
     "source": "TopMediai",

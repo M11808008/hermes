@@ -1,0 +1,77 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prompt Case｜Superpowers 6.0：Codex 高頻使用的 Agentic Skills 方法論與低 token 開發流程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Prompt Case｜Superpowers 6.0：Codex 高頻使用的 Agentic Skills 方法論與低 token 開發流程</h1><h1>Prompt Case｜Superpowers 6.0：Codex 高頻使用的 Agentic Skills 方法論與低 token 開發流程</h1>
+<h1>一句話摘要</h1>
+<p>Superpowers 不是單一 prompt，而是一套把 coding agent 拉回工程流程的方法論：先釐清需求、寫 spec、做計畫、跑 TDD、派 subagents、審查變更；6.0 版則把這套流程進一步壓低 token 與時間成本。</p>
+<h1>Threads 貼文重點</h1>
+<p>Prompt Case 分享 Superpowers Skill 是一套開發方法論與技能指令包，也是他在 Codex 上使用密度最高的 Skill，佔所有 skills 的 60% 以上。貼文提到，Superpowers 近期經 Fable 5 優化後推出 6.0，運行速度提升 50%，token 消耗減少 60%；如果電腦 format，這會是他第一時間裝回去的 skill 之一。</p>
+<p>貼文留言提供 GitHub：`<a href="https://github.com/obra/superpowers`。" target="_blank" rel="noopener">https://github.com/obra/superpowers`。</a></p>
+<h1>官方資料交叉驗證</h1>
+<p>GitHub repo `obra/superpowers` 的描述是：「An agentic skills framework &amp; software development methodology that works.」README 進一步說明：Superpowers 是一套給 coding agents 使用的完整軟體開發方法論，建立在 composable skills 與初始指令上，確保 agent 會使用這些技能。</p>
+<p>官方 README 描述它的核心流程：</p>
+<ul>
+<li>Agent 一看到你要建東西，不會立刻寫 code，而是先退一步問清楚真正要做什麼。</li>
+<li>從對話中萃取 spec，並以容易閱讀的 chunks 呈現給使用者確認。</li>
+<li>使用者同意設計後，產生足夠清楚、可讓低上下文工程師照做的 implementation plan。</li>
+<li>計畫強調 red/green TDD、YAGNI 與 DRY。</li>
+<li>使用者說 go 後，進入 subagent-driven-development，讓 agents 逐項完成工程任務、檢查與審查自己的成果。</li>
+</ul>
+<p>官方 Superpowers 6 文章也驗證了貼文中的效能主張：Superpowers 6 的 builds 可最高快 50%、最高便宜 60%。文章說明這些改進來自 Fable 對 Subagent Driven Development 的優化，例如壓縮 reviewer handoff、改用預先產生 review package 的 script、合併 code reviewer 與 spec-compliance reviewer、建立 autoresearch harness 進行多次實驗。</p>
+<h1>這套方法論真正解決的問題</h1>
+<p>一般 vibe coding 容易出現幾個問題：</p>
+<ul>
+<li>使用者需求還不清楚，agent 就開始改檔。</li>
+<li>沒有 spec，最後很難判斷是否真的做對。</li>
+<li>沒有 TDD，功能看似完成但邊界條件與回歸風險不明。</li>
+<li>任務太大時，單一 agent 容易上下文漂移。</li>
+<li>缺少審查機制，agent 可能「看起來完成」但留下技術債。</li>
+</ul>
+<p>Superpowers 的價值是把「工程紀律」包成 skills，讓 agent 自動觸發，而不是靠使用者每次都記得提醒。</p>
+<h1>Superpowers 6 的關鍵變化</h1>
+<p>根據官方 release notes 與 Superpowers 6 文章，6.x 的方向主要是降低每個 session 的 token 成本與改善跨 harness 支援：</p>
+<ul>
+<li>壓縮 `using-superpowers` bootstrap，因為它每個 session 都會被注入。</li>
+<li>修剪 per-harness tool-mapping references，只保留真正有價值的平台差異。</li>
+<li>Codex 支援 marketplace 安裝，並移除 Codex SessionStart hook，因為 Codex 已能原生觸發 skills。</li>
+<li>SDD scratch files 從 `.git/` 移到 `.superpowers/sdd/`，避免 Claude Code 對 `.git/` 保護路徑造成寫入阻擋。</li>
+<li>新增 deterministic Codex portal package 打包腳本與相關測試。</li>
+</ul>
+<h1>支援的平台 / harness</h1>
+<p>README 顯示 Superpowers 可安裝到多種 coding agent 環境，包括：</p>
+<ul>
+<li>Claude Code</li>
+<li>Antigravity</li>
+<li>Codex App</li>
+<li>Codex CLI</li>
+<li>Cursor</li>
+<li>Factory Droid</li>
+<li>GitHub Copilot CLI</li>
+<li>Kimi Code</li>
+<li>OpenCode</li>
+<li>Pi</li>
+</ul>
+<p>這也是它值得收錄的原因：它不是只針對某個模型，而是把 agentic coding 的工作流抽象成可移植的方法論。</p>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇與最近幾則 Claude Code + Codex、Fable 規劃 / Codex 執行、多模型協作的主題相互呼應。Superpowers 提供的是更底層的「工作流作業系統」：</p>
+<ul>
+<li>讓強模型負責設計、拆解與審查。</li>
+<li>讓 subagents 處理局部工程任務。</li>
+<li>用 TDD 與 reviewer gate 降低幻覺式完成。</li>
+<li>用 skills 把流程固化，避免每次重新教 agent。</li>
+<li>用 release engineering 壓低 token 成本，讓嚴謹流程更可負擔。</li>
+</ul>
+<p>對欒帥的課程或實作教學，可延伸成：「從 vibe coding 到 agentic engineering：用 Superpowers 把 AI coding 變成可審查、可測試、可複製的流程。」</p>
+<h1>安裝與使用提醒</h1>
+<ul>
+<li>Claude Code 可透過官方 plugin marketplace 安裝：`/plugin install superpowers@claude-plugins-official`。</li>
+<li>也可加入 Superpowers marketplace：`/plugin marketplace add obra/superpowers-marketplace` 後安裝。</li>
+<li>Codex App / Codex CLI 可從 OpenAI 官方 plugin marketplace 搜尋 Superpowers。</li>
+<li>Cursor 可用 `/add-plugin superpowers` 或 marketplace 搜尋。</li>
+<li>Superpowers 會讓流程變嚴謹；對小修小補可能顯得慢，但對複雜任務、長時間 autonomous build、需要 TDD 與審查的專案更有價值。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads：Prompt Case 分享 Superpowers 6.0 與 Codex 使用經驗。</li>
+<li>GitHub：obra/superpowers。</li>
+<li>README：描述 Superpowers 的完整軟體開發方法論與安裝方式。</li>
+<li>RELEASE-NOTES：驗證 6.1.x 以後的 Codex、token cost、packaging 與 SDD 改動。</li>
+<li>官方文章：Superpowers 6 宣稱 builds 最高快 50%、最高便宜 60%，並描述 Fable 優化過程。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-07 · Threads · social-post</div><h3>標籤</h3><span class="tag">Superpowers</span><span class="tag">Agentic Skills</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Subagent Driven Development</span><span class="tag">TDD</span><span class="tag">AI Coding</span><span class="tag">Fable 5</span><h3>原始連結</h3><p><a href="https://www.threads.com/@prompt_case/post/DabzX7TFBEg?xmt=AQG08cXnU-BdFVTYvYuBA-bqscDCnYpRpsMsY0HQIPOXZ7KrXK7MU7R1u2LFc0EeLoKc-bTQ&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DabzX7TFBEg?xmt=AQG08cXnU-BdFVTYvYuBA-bqscDCnYpRpsMsY0HQIPOXZ7KrXK7MU7R1u2LFc0EeLoKc-bTQ&amp;slof=1</a></p><p><a href="https://www.threads.com/@prompt_case/post/DabzX7TFBEg" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DabzX7TFBEg</a></p><p><a href="https://www.threads.com/@prompt_case/post/DabzX7TFBEg" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DabzX7TFBEg</a></p><p><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">https://github.com/obra/superpowers</a></p><p><a href="https://raw.githubusercontent.com/obra/superpowers/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/obra/superpowers/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/obra/superpowers/main/RELEASE-NOTES.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/obra/superpowers/main/RELEASE-NOTES.md</a></p><p><a href="https://blog.fsck.com/2026/06/15/Superpowers-6/" target="_blank" rel="noopener">https://blog.fsck.com/2026/06/15/Superpowers-6/</a></p><p><a href="https://primeradiant.com/blog/2026/superpowers-6.html" target="_blank" rel="noopener">https://primeradiant.com/blog/2026/superpowers-6.html</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
