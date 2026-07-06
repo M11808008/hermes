@@ -1,0 +1,80 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Medium DevOps AI Decoded｜7 個免費開源 Claude Code 替代方案：OpenCode、Aider、Plandex、Void、Zed、Cline、Kilo Code</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Medium DevOps AI Decoded｜7 個免費開源 Claude Code 替代方案：OpenCode、Aider、Plandex、Void、Zed、Cline、Kilo Code</h1><h1>Medium DevOps AI Decoded｜7 個免費開源 Claude Code 替代方案：OpenCode、Aider、Plandex、Void、Zed、Cline、Kilo Code</h1>
+<h1>一句話摘要</h1>
+<p>這篇文章的重點不是「免費取代 Claude Code」，而是建立一套可切換模型、可脫離單一供應商路線圖與價格政策的 AI coding workflow；軟體本身免費開源，但若接 Claude、GPT 等商用模型，token 成本仍然存在。</p>
+<h1>原文定位</h1>
+<p>Jay Dobariya 在 Medium / DevOps AI Decoded 發表〈7 free open-source alternatives to Claude Code〉，主張多數開發者只熟悉 Claude Code 或 Cursor，但其實已有一批開源 AI coding agent / editor 可以承接相似工作，並讓使用者自行選擇模型供應商。</p>
+<p>原文把 7 個工具分成三類：</p>
+<ul>
+<li>終端機優先代理：OpenCode、Aider、Plandex。</li>
+<li>完整編輯器：Void、Zed。</li>
+<li>既有編輯器外掛 / 跨環境代理：Cline、Kilo Code。</li>
+</ul>
+<h1>為什麼要看 Claude Code 替代方案</h1>
+<p>文章的核心論點是：Claude Code 很好，但風險在於它仍綁定單一模型家族、單一供應商價格頁與額度政策。</p>
+<p>值得注意的幾個判斷：</p>
+<ul>
+<li>「免費」通常只代表工具本身免費，不代表模型推理免費。</li>
+<li>多數工具採 BYOK（Bring Your Own Key），接 Claude 或 GPT 時仍會產生 API token 費用。</li>
+<li>開源與 model-agnostic 的價值在於 optionality：模型變慢、變貴、被限流或品質下降時，可以改一行設定切換模型，而不是整套 workflow 卡住。</li>
+<li>不需要 7 個都裝，重點是找一個貼近自己既有工作方式的替代選項，先在真實任務上跑過。</li>
+</ul>
+<h1>7 個工具整理</h1>
+<h2>1. OpenCode：最接近 Claude Code 體感的開源替代</h2>
+<p>OpenCode 是終端機導向的 AI coding agent，也可搭配 IDE 使用，支援多模型供應商與多代理工作流。原文認為它的優勢在於架構像一個本地 agent server，上層可以由 terminal client、VS Code 或 API 操作，因此同一個 session 可跨環境延續。</p>
+<p>適合：想要 Claude Code 類似操作感，但不想綁定單一供應商的開發者。</p>
+<p>提醒：原文特別提醒不要用 Claude Pro 訂閱去繞接第三方 harness，應使用正式 API key，避免帳號風險。</p>
+<p>GitHub：</p>
+<p><a href="https://github.com/opencode-ai/opencode" target="_blank" rel="noopener">https://github.com/opencode-ai/opencode</a></p>
+<h2>2. Aider：git-aware 的終端機結對程式設計師</h2>
+<p>Aider 是早於 Claude Code 成熟的終端機 pair programmer。它的特色不是華麗 UI，而是每次變更都和 git 工作流緊密結合，讓 AI 改動可審查、可回退、可用 commit 留痕。</p>
+<p>適合：習慣終端機、重視版本控制與可重現性的開發者，尤其是 refactor、debugging、需要逐步審核修改的任務。</p>
+<p>GitHub：</p>
+<p><a href="https://github.com/aider-ai/aider" target="_blank" rel="noopener">https://github.com/aider-ai/aider</a></p>
+<h2>3. Plandex：為大型專案與長時間 session 設計</h2>
+<p>Plandex 的定位是處理大 codebase 與多小時任務，強調 diff review sandbox、auto mode，以及大型 context 管理。原文指出，很多 agent 在長任務中容易忘記前面決策並反覆打架；Plandex 的價值是讓代理更能維持長程一致性。</p>
+<p>適合：大型專案、多步驟改造、需要長時間上下文保持的任務。</p>
+<p>提醒：原文提到 Plandex Cloud 正在收尾，應預設自架或 BYOK。</p>
+<p>GitHub：</p>
+<p><a href="https://github.com/plandex-ai/plandex" target="_blank" rel="noopener">https://github.com/plandex-ai/plandex</a></p>
+<h2>4. Void：可檢視原始碼的開源 Cursor 路線</h2>
+<p>Void 是基於 VS Code 形態的 AI code editor，包含 agent mode、inline editing、autocomplete 與多模型支援。它的價值在於保留 Cursor 類似使用體驗，但讓使用者可檢查程式碼與掌控模型後端。</p>
+<p>適合：喜歡 Cursor 產品型態，但在意閉源與後端不可見性的開發者。</p>
+<p>GitHub：</p>
+<p><a href="https://github.com/voideditor/void" target="_blank" rel="noopener">https://github.com/voideditor/void</a></p>
+<h2>5. Zed：速度優先的 AI 編輯器</h2>
+<p>Zed 是 Rust 寫成的高效能編輯器，內建 AI agent、多人協作與 Git。原文把它定位為「速度差異非常有感」的選項，尤其對大型專案與不想忍受 Electron 編輯器延遲的人有吸引力。</p>
+<p>適合：大型 codebase、重視編輯器速度、想在快速環境中加入 AI assistance 的開發者。</p>
+<p>GitHub：</p>
+<p><a href="https://github.com/zed-industries/zed" target="_blank" rel="noopener">https://github.com/zed-industries/zed</a></p>
+<h2>6. Cline：住在 VS Code 裡的成熟自主代理</h2>
+<p>Cline 是 VS Code 內很成熟的開源 coding agent，可改檔、跑終端機指令、開瀏覽器協助 debug。原文特別肯定它的 Plan-then-Act 模式：先蒐集脈絡與提出計畫，再讓使用者核准後執行。</p>
+<p>適合：留在 VS Code 中做安全、可審查、代理式開發的團隊或個人。</p>
+<p>成本提醒：Cline 本身免費，但若使用 Sonnet / Opus 等商用模型，每日或每月 token 支出可能不小；原文提醒不要把「免費工具」誤解成「免費推理」。</p>
+<p>GitHub：</p>
+<p><a href="https://github.com/cline/cline" target="_blank" rel="noopener">https://github.com/cline/cline</a></p>
+<h2>7. Kilo Code：跨 IDE、CLI 與多模型的全能型代理</h2>
+<p>Kilo Code 支援 VS Code、JetBrains 與 CLI，並支援大量模型。它的特色是跨環境與模式分工：planning、coding、debugging、orchestration 都有對應使用方式。</p>
+<p>適合：會在本機 IDE、遠端 SSH、CLI 與不同開發環境間切換，希望同一套 agent 能跟著工作流移動的人。</p>
+<p>GitHub：</p>
+<p><a href="https://github.com/Kilo-Org/kilocode/" target="_blank" rel="noopener">https://github.com/Kilo-Org/kilocode/</a></p>
+<h1>取代建議速查</h1>
+<ul>
+<li>想要最像 Claude Code：OpenCode。</li>
+<li>想要所有改動可審查、可回退：Aider。</li>
+<li>想要處理大型專案與長任務：Plandex。</li>
+<li>想要開源 Cursor：Void。</li>
+<li>想要最快的 AI 編輯器體感：Zed。</li>
+<li>想要 VS Code 內的成熟代理：Cline。</li>
+<li>想要跨 VS Code、JetBrains、CLI：Kilo Code。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇值得收進「AI coding agent 工具地圖」，原因是它把 Claude Code 替代方案從「工具清單」提升到「架構風險管理」：</p>
+<ul>
+<li>若工作流只押單一供應商，真正的風險會在價格調整、模型限流、品質波動或政策變更時出現。</li>
+<li>開源工具未必比較省錢，但通常更容易替換模型、保留本地控制權、讓團隊建立自己的 fallback path。</li>
+<li>對課程或顧問服務而言，可以把這 7 個工具整理成「依工作型態選 AI coding agent」的比較表，而不是只教 Claude Code。</li>
+<li>對 Hermes / Codex / Claude Code 使用者而言，OpenCode、Aider、Cline、Kilo Code 特別值得做實測對照。</li>
+</ul>
+<h1>原始連結</h1>
+<p>Medium 原文：</p>
+<p><a href="https://medium.com/devops-ai-decoded/7-free-open-source-alternatives-to-claude-code-948772986e7e" target="_blank" rel="noopener">https://medium.com/devops-ai-decoded/7-free-open-source-alternatives-to-claude-code-948772986e7e</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-06 · Medium · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">Claude Code</span><span class="tag">Open Source</span><span class="tag">AI Coding Agent</span><span class="tag">Coding Agent</span><span class="tag">OpenCode</span><span class="tag">Aider</span><span class="tag">Plandex</span><span class="tag">Void</span><span class="tag">Zed</span><span class="tag">Cline</span><span class="tag">Kilo Code</span><span class="tag">開源工具</span><span class="tag">開發工作流</span><h3>原始連結</h3><p><a href="https://medium.com/devops-ai-decoded/7-free-open-source-alternatives-to-claude-code-948772986e7e" target="_blank" rel="noopener">https://medium.com/devops-ai-decoded/7-free-open-source-alternatives-to-claude-code-948772986e7e</a></p><p><a href="https://medium.com/devops-ai-decoded/7-free-open-source-alternatives-to-claude-code-948772986e7e" target="_blank" rel="noopener">https://medium.com/devops-ai-decoded/7-free-open-source-alternatives-to-claude-code-948772986e7e</a></p><p><a href="https://medium.com/devops-ai-decoded/7-free-open-source-alternatives-to-claude-code-948772986e7e" target="_blank" rel="noopener">https://medium.com/devops-ai-decoded/7-free-open-source-alternatives-to-claude-code-948772986e7e</a></p><p><a href="https://github.com/opencode-ai/opencode" target="_blank" rel="noopener">https://github.com/opencode-ai/opencode</a></p><p><a href="https://opencode.ai/" target="_blank" rel="noopener">https://opencode.ai/</a></p><p><a href="https://github.com/aider-ai/aider" target="_blank" rel="noopener">https://github.com/aider-ai/aider</a></p><p><a href="https://aider.chat/docs/" target="_blank" rel="noopener">https://aider.chat/docs/</a></p><p><a href="https://github.com/plandex-ai/plandex" target="_blank" rel="noopener">https://github.com/plandex-ai/plandex</a></p><p><a href="https://github.com/voideditor/void" target="_blank" rel="noopener">https://github.com/voideditor/void</a></p><p><a href="https://github.com/zed-industries/zed" target="_blank" rel="noopener">https://github.com/zed-industries/zed</a></p><p><a href="https://zed.dev/ai" target="_blank" rel="noopener">https://zed.dev/ai</a></p><p><a href="https://github.com/cline/cline" target="_blank" rel="noopener">https://github.com/cline/cline</a></p><p><a href="https://github.com/Kilo-Org/kilocode/" target="_blank" rel="noopener">https://github.com/Kilo-Org/kilocode/</a></p><p><a href="https://kilo.ai/" target="_blank" rel="noopener">https://kilo.ai/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
