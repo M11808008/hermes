@@ -1,0 +1,68 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Keith Rumjahn｜Quickchat AI Agent 變 MCP Server：讓 ChatGPT、Claude、Cursor 呼叫你的知識庫代理</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Keith Rumjahn｜Quickchat AI Agent 變 MCP Server：讓 ChatGPT、Claude、Cursor 呼叫你的知識庫代理</h1><h1>Keith Rumjahn｜Quickchat AI Agent 變 MCP Server：讓 ChatGPT、Claude、Cursor 呼叫你的知識庫代理</h1>
+<h1>一句話摘要</h1>
+<p>Quickchat 的 MCP 整合把「一個獨立 AI Agent」變成可被 ChatGPT、Claude、Cursor 等工具呼叫的 server，讓 agent 從孤島型聊天介面升級為 AI 工具鏈中的可重用端點。</p>
+<h1>Threads 貼文重點</h1>
+<p>Keith Rumjahn 分享 Quickchat 的新玩法：把自己的 AI agent 直接變成 MCP server，讓 Claude、ChatGPT、Cursor 都能把它當工具呼叫。貼文的核心句是：「以前你的 agent 是孤島，現在它變成其他 AI 可以調用的工具。」</p>
+<p>附圖文字顯示：</p>
+<ul>
+<li>Quickchat AI Tutorial</li>
+<li>Your AI Agent as an MCP Server</li>
+<li>ChatGPT, Claude and Cursor call it as a tool.</li>
+<li>It answers from your knowledge base.</li>
+<li>app.quickchat.ai/mcp/your-agent</li>
+<li>private by default</li>
+</ul>
+<p>這張圖明確把 Quickchat agent 定位成「由外部 AI app 呼叫、從你的知識庫回答」的 MCP 工具端點。</p>
+<h1>官方資料交叉驗證</h1>
+<p>Brave Search 驗證到 Quickchat 官方文件、官方部落格與 GitHub repo：</p>
+<ul>
+<li>Quickchat AI MCP server 允許使用者把 Quickchat AI Agent 插入 Claude Desktop、Cursor、VS Code、Windsurf 等 MCP client。</li>
+<li>官方教學指出可在 Quickchat AI app 的 MCP 頁面啟用 MCP，設定 Name、Description 與 optional Command。</li>
+<li>GitHub repo `quickchatai/quickchat-ai-mcp` 提供 MCP server 的開源實作與設定方式，傳統安裝可用 `SCENARIO_ID` 與 `API_KEY`。</li>
+<li>官方文章「Manage Your AI Agent from ChatGPT, Claude, and Codex with MCP」則描述另一種 remote MCP：以 Streamable HTTP 運作，支援 OAuth，不必自行安裝或託管，可從 ChatGPT、Claude、Cursor、Codex 管理 Quickchat agents。</li>
+</ul>
+<h1>這代表什麼</h1>
+<p>Quickchat 的重點不是又多一個 chatbot builder，而是把 agent 做成「可被其他 agent / AI app 使用的工具」。這符合 MCP 的主要價值：將能力、資料與操作封裝成標準介面，讓不同 AI client 可以共同呼叫。</p>
+<p>實務上會形成三層：</p>
+<ul>
+<li>Quickchat Agent：保存業務知識、對話規則、資料來源與任務邏輯。</li>
+<li>MCP Server：把 agent 暴露成標準化工具介面，供其他 AI app 連線。</li>
+<li>MCP Client：ChatGPT、Claude、Cursor、VS Code、Windsurf、Codex 等前端工作環境。</li>
+</ul>
+<h1>適合的使用場景</h1>
+<h1>1. 公司內部知識庫助理</h1>
+<p>把產品文件、客服 FAQ、銷售話術、SOP、技術文件放進 Quickchat agent，再讓員工從 Claude / ChatGPT / Cursor 直接呼叫。使用者不必切換到 Quickchat dashboard，也能在既有工作流中取得公司知識。</p>
+<h1>2. 客製化領域專家工具</h1>
+<p>例如：法律條款查詢、醫療行政 SOP、課程助教、餐廳菜單與訂單規則、房仲物件知識庫。這些 agent 原本只能在某個網站或聊天視窗使用，透過 MCP 後可被各種 AI 工具當成專家插件。</p>
+<h1>3. Agent 管理與維運</h1>
+<p>官方 remote MCP 文章提到可管理 analytics、conversation transcripts、knowledge base updates、retraining 與建立新 agent。這表示 MCP 不只是「問 agent 問題」，也可以成為 agent ops 的自然語言控制介面。</p>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇值得收錄，因為它把 MCP 從開發者工具推向產品化 agent 平台。未來的關鍵不只是「我有一個 agent」，而是：</p>
+<ul>
+<li>這個 agent 是否能被其他 AI 工具調用？</li>
+<li>是否能在使用者原本工作的地方出現？</li>
+<li>是否能用標準 protocol 接入不同 client？</li>
+<li>知識庫、對話紀錄、分析、重訓與管理是否能自動化？</li>
+</ul>
+<p>對欒帥的知識庫與課程應用來說，這可以延伸成一個教學主題：「如何把自己的知識庫助理從聊天機器人變成 MCP 工具」。</p>
+<h1>實作觀察</h1>
+<ul>
+<li>MCP 名稱與 description 很重要，因為 client 需要理解何時該呼叫這個 agent。</li>
+<li>若 agent 連接公司內部知識庫，必須檢查 private by default、OAuth、API key 權限、資料外洩邊界與 audit log。</li>
+<li>若開放給外部使用者，應清楚區分 public knowledge、private knowledge 與可執行 command。</li>
+<li>對 Cursor / Claude Desktop 類工具，MCP server 的描述會直接影響模型是否正確路由任務。</li>
+</ul>
+<h1>可延伸的課程或實驗</h1>
+<ul>
+<li>建立一個「AI 學習雷達 Q&amp;A agent」，再用 MCP 接到 Claude Desktop / Cursor。</li>
+<li>比較 Quickchat remote MCP 與自架 MCP server 的部署差異。</li>
+<li>設計 MCP tool description，測試不同 client 是否會正確呼叫。</li>
+<li>把知識庫更新、重訓與 analytics 做成 agent ops workflow。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads：Keith Rumjahn（@krumjahn）分享 Quickchat AI MCP server。</li>
+<li>官方文件：Quickchat AI Documentation / Channels / MCP。</li>
+<li>官方文章：How to launch your Quickchat AI MCP；Manage Your AI Agent from ChatGPT, Claude, and Codex with MCP。</li>
+<li>GitHub：quickchatai/quickchat-ai-mcp。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-07 · Threads · social-post</div><h3>標籤</h3><span class="tag">Quickchat AI</span><span class="tag">MCP</span><span class="tag">Model Context Protocol</span><span class="tag">AI Agent</span><span class="tag">Knowledge Base</span><span class="tag">Claude</span><span class="tag">ChatGPT</span><span class="tag">Cursor</span><h3>原始連結</h3><p><a href="https://www.threads.com/@krumjahn/post/DacTgB9m7cf?xmt=AQG0gGg2vqE4sABYzKjJflM5AlizIc6W0RhmvHZNdfnLxtdxapzh7tW8ZPvHK_NwfVjHKMqn3g&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@krumjahn/post/DacTgB9m7cf?xmt=AQG0gGg2vqE4sABYzKjJflM5AlizIc6W0RhmvHZNdfnLxtdxapzh7tW8ZPvHK_NwfVjHKMqn3g&amp;slof=1</a></p><p><a href="https://www.threads.com/@krumjahn/post/DacTgB9m7cf" target="_blank" rel="noopener">https://www.threads.com/@krumjahn/post/DacTgB9m7cf</a></p><p><a href="https://www.threads.com/@krumjahn/post/DacTgB9m7cf" target="_blank" rel="noopener">https://www.threads.com/@krumjahn/post/DacTgB9m7cf</a></p><p><a href="https://quickchat.ai/post/how-to-launch-your-quickchat-ai-mcp" target="_blank" rel="noopener">https://quickchat.ai/post/how-to-launch-your-quickchat-ai-mcp</a></p><p><a href="https://quickchat.ai/post/manage-ai-agent-from-chatgpt" target="_blank" rel="noopener">https://quickchat.ai/post/manage-ai-agent-from-chatgpt</a></p><p><a href="https://docs.quickchat.ai/channels/mcp/" target="_blank" rel="noopener">https://docs.quickchat.ai/channels/mcp/</a></p><p><a href="https://github.com/quickchatai/quickchat-ai-mcp" target="_blank" rel="noopener">https://github.com/quickchatai/quickchat-ai-mcp</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

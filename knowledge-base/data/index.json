@@ -34,6 +34,39 @@
     "markdown": "articles/2026/07/2026-07-07-govin-claude-code-project-claude-folder-setup.md"
   },
   {
+    "title": "Keith Rumjahn｜Quickchat AI Agent 變 MCP Server：讓 ChatGPT、Claude、Cursor 呼叫你的知識庫代理",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "krumjahn / Keith Rumjahn",
+    "type": "social-post",
+    "topics": [
+      "Quickchat AI",
+      "MCP",
+      "Model Context Protocol",
+      "AI Agent",
+      "Knowledge Base",
+      "Claude",
+      "ChatGPT",
+      "Cursor"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@krumjahn/post/DacTgB9m7cf?xmt=AQG0gGg2vqE4sABYzKjJflM5AlizIc6W0RhmvHZNdfnLxtdxapzh7tW8ZPvHK_NwfVjHKMqn3g&slof=1",
+      "https://www.threads.com/@krumjahn/post/DacTgB9m7cf",
+      "https://www.threads.com/@krumjahn/post/DacTgB9m7cf",
+      "https://quickchat.ai/post/how-to-launch-your-quickchat-ai-mcp",
+      "https://quickchat.ai/post/manage-ai-agent-from-chatgpt",
+      "https://docs.quickchat.ai/channels/mcp/",
+      "https://github.com/quickchatai/quickchat-ai-mcp"
+    ],
+    "excerpt": "Quickchat 的 MCP 整合把「一個獨立 AI Agent」變成可被 ChatGPT、Claude、Cursor 等工具呼叫的 server，讓 agent 從孤島型聊天介面升級為 AI 工具鏈中的可重用端點。",
+    "slug": "2026-07-07-krumjahn-quickchat-ai-agent-mcp-server",
+    "html": "articles/2026-07-07-krumjahn-quickchat-ai-agent-mcp-server.html",
+    "markdown": "articles/2026/07/2026-07-07-krumjahn-quickchat-ai-agent-mcp-server.md"
+  },
+  {
     "title": "侖｜Claude Agent 接管 Instagram DM 點餐：餐廳固定菜單的 AI 訂單自動化架構",
     "date": "2026-07-07",
     "source": "Threads",
@@ -66,6 +99,37 @@
     "slug": "2026-07-07-lun-claude-agent-instagram-dm-restaurant-ordering",
     "html": "articles/2026-07-07-lun-claude-agent-instagram-dm-restaurant-ordering.html",
     "markdown": "articles/2026/07/2026-07-07-lun-claude-agent-instagram-dm-restaurant-ordering.md"
+  },
+  {
+    "title": "Nicky Hsieh｜Claude Fable 5 短期開放：五個高槓桿用法與省額度策略",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "nickyhsieh / Nicky PeiFang Hsieh",
+    "type": "social-post",
+    "topics": [
+      "Claude Fable 5",
+      "Anthropic",
+      "Token Strategy",
+      "AI Workflow",
+      "AI Agent",
+      "Code Review",
+      "Business Strategy"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@nickyhsieh/post/DadL-f_AbHM?xmt=AQG0QZJu2pWj9rzfPjb9ncylnJdNY-SbdcIbENxPGByvsfXJuKzS_Nkl60_62G-Yi8IRbj0vXw&slof=1",
+      "https://www.threads.com/@nickyhsieh/post/DadL-f_AbHM",
+      "https://www.threads.com/@nickyhsieh/post/DadL-f_AbHM",
+      "https://www.youtube.com/watch?v=5CBnWGP5vIs",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://x.com/claudeai/status/2072402639644766602"
+    ],
+    "excerpt": "Claude Fable 5 這類稀缺高階模型不該拿來做一般雜務，而應該用在「吃大量上下文、做深度判斷、產生可交給便宜模型執行的決策與計畫」上。",
+    "slug": "2026-07-07-nickyhsieh-claude-fable-5-five-use-cases-token-strategy",
+    "html": "articles/2026-07-07-nickyhsieh-claude-fable-5-five-use-cases-token-strategy.html",
+    "markdown": "articles/2026/07/2026-07-07-nickyhsieh-claude-fable-5-five-use-cases-token-strategy.md"
   },
   {
     "title": "TopMediai｜AI 聲音克隆：30 秒複製聲線的多語言語音生成工具",
