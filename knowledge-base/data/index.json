@@ -1,5 +1,41 @@
 [
   {
+    "title": "TopMediai｜AI 聲音克隆：30 秒複製聲線的多語言語音生成工具",
+    "date": "2026-07-07",
+    "source": "TopMediai",
+    "author": "TopMediai",
+    "type": "tool",
+    "topics": [
+      "AI Voice Cloning",
+      "AI Voice",
+      "Text to Speech",
+      "Voiceover",
+      "Multilingual AI",
+      "Creator Tools",
+      "TopMediai",
+      "語音克隆",
+      "配音工具"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://tw.topmediai.com/app/ai-voice-cloning/",
+      "https://tw.topmediai.com/app/ai-voice-cloning/",
+      "https://tw.topmediai.com/app/ai-voice-cloning/",
+      "https://www.topmediai.com/voice-cloning/",
+      "https://www.topmediai.com/voice-cloning/purchase/",
+      "https://www.topmediai.com/pricing/",
+      "https://www.topmediai.com/support/voice-cloning/",
+      "https://docs.topmediai.com/clone-voice",
+      "https://www.topmediai.com/terms-conditions/"
+    ],
+    "excerpt": "TopMediai AI Voice Cloning 是一個線上聲音克隆工具，適合快速製作旁白、教學配音、品牌語音與角色聲音；但它屬於高風險的聲音仿真工具，實務上必須把「本人同意、素材授權、用途揭露與商用權」列為第一優先。",
+    "slug": "2026-07-07-topmediai-ai-voice-cloning-tool",
+    "html": "articles/2026-07-07-topmediai-ai-voice-cloning-tool.html",
+    "markdown": "articles/2026/07/2026-07-07-topmediai-ai-voice-cloning-tool.md"
+  },
+  {
     "title": "陳盟升｜LM Studio 本地 AI 部署：未審查 GGUF 模型、RAG 與私密知識庫",
     "date": "2026-07-06",
     "source": "Facebook",
