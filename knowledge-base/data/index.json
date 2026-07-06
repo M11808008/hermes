@@ -162,6 +162,44 @@
     "markdown": "articles/2026/07/2026-07-06-medium-open-source-claude-code-alternatives.md"
   },
   {
+    "title": "楊俊益｜AI Stock Report Generator Skill：台股財務模型、投資簡報與技術圖表生成器",
+    "date": "2026-07-06",
+    "source": "Facebook / GitHub",
+    "author": "楊俊益",
+    "type": "social-post",
+    "topics": [
+      "AI Agent",
+      "Agent Skill",
+      "Codex",
+      "Claude Code",
+      "台股",
+      "財務模型",
+      "投資簡報",
+      "Excel",
+      "PowerPoint",
+      "技術分析",
+      "KD",
+      "MACD",
+      "AI Finance"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1KBT5kvJgu/?mibextid=wwXIfr",
+      "https://github.com/yangchunyi0814/ai-stock-report-generator",
+      "https://www.facebook.com/share/p/1KBT5kvJgu/?mibextid=wwXIfr",
+      "https://github.com/yangchunyi0814/ai-stock-report-generator",
+      "https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/README.md",
+      "https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/docs/INSTALL.md",
+      "https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/skills/ai-stock-report-generator/SKILL.md"
+    ],
+    "excerpt": "`ai-stock-report-generator` 是一個把「台股代號」轉成完整財務模型、投資分析簡報與技術圖表的 agent skill；它的價值不在自動喊買賣，而在把公開資料整理成可稽核、可調假設、可教學展示的 Excel / PPTX 分析素材。",
+    "slug": "2026-07-06-yang-chunyi-ai-stock-report-generator-skill",
+    "html": "articles/2026-07-06-yang-chunyi-ai-stock-report-generator-skill.html",
+    "markdown": "articles/2026/07/2026-07-06-yang-chunyi-ai-stock-report-generator-skill.md"
+  },
+  {
     "title": "4foodie｜南加州 Laguna Beach 一日自駕：海灘、披薩、Gelato、夕陽與 Pho 79",
     "date": "2026-07-05",
     "source": "Instagram Reel",

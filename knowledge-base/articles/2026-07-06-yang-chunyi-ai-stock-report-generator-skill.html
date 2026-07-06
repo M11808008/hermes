@@ -1,0 +1,170 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>楊俊益｜AI Stock Report Generator Skill：台股財務模型、投資簡報與技術圖表生成器</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>楊俊益｜AI Stock Report Generator Skill：台股財務模型、投資簡報與技術圖表生成器</h1><h1>楊俊益｜AI Stock Report Generator Skill：台股財務模型、投資簡報與技術圖表生成器</h1>
+<h1>一句話摘要</h1>
+<p>`ai-stock-report-generator` 是一個把「台股代號」轉成完整財務模型、投資分析簡報與技術圖表的 agent skill；它的價值不在自動喊買賣，而在把公開資料整理成可稽核、可調假設、可教學展示的 Excel / PPTX 分析素材。</p>
+<h1>貼文重點</h1>
+<p>楊俊益在 Facebook「MQTT 與 AIoT 整合運用」公開社團分享自己修改完成的「AI Stock Report Generator Skill」，並提供 GitHub repo：</p>
+<p>`<a href="https://github.com/yangchunyi0814/ai-stock-report-generator`" target="_blank" rel="noopener">https://github.com/yangchunyi0814/ai-stock-report-generator`</a></p>
+<p>貼文說明這個 skill 可產出：</p>
+<ul>
+<li>14 頁 PPTX 投資分析簡報。</li>
+<li>Excel 10 張工作表。</li>
+<li>MACD / KD 圖表。</li>
+<li>以貼文圖片示例，輸出可包含公司財務模型總覽、股價、估值、EPS、P/B、情境合理價、技術指標與風險提示。</li>
+</ul>
+<p>留言中也有人提到「opencode 交作業」，顯示這類 skill 正被社群用在 Codex / Claude Code / OpenCode 類 agent 工具的實作練習。</p>
+<h1>GitHub repo 檢視</h1>
+<p>我已淺層 clone 並檢視 repo。GitHub metadata 顯示：</p>
+<ul>
+<li>Repo：`yangchunyi0814/ai-stock-report-generator`</li>
+<li>描述：台股分析報告</li>
+<li>Stars：12</li>
+<li>Forks：5</li>
+<li>Open issues：0</li>
+<li>Default branch：main</li>
+<li>License：未標示</li>
+<li>Created：2026-07-05</li>
+<li>Latest push：2026-07-05</li>
+</ul>
+<p>Repo 結構很精簡：</p>
+<p>```text</p>
+<p>README.md</p>
+<p>README.md                    ← 專案定位與輸出說明</p>
+<p>docs/INSTALL.md              ← Codex / Claude Code 安裝方式</p>
+<p>skills/ai-stock-report-generator/SKILL.md</p>
+<p>                              ← 核心 agent skill 指令</p>
+<p>```</p>
+<h1>這個 Skill 會做什麼</h1>
+<p>README 將它定位為「給 Claude / Codex 使用的 Agent Skill」，目標是把台股代號轉成完整分析素材。觸發方式包括：</p>
+<p>```text</p>
+<p>2303 //ai-stock-report-generator</p>
+<p>幫我做 2303 的估值和簡報</p>
+<p>建立 6116 財務模型</p>
+<p>2330 財務模型整理成 PPT</p>
+<p>```</p>
+<p>Skill 要求 agent 完成：</p>
+<ul>
+<li>即時搜尋公開財務資料與近期日線資料。</li>
+<li>建立 Excel 財務模型。</li>
+<li>建立投資分析 PowerPoint 簡報。</li>
+<li>產出 KD / MACD 技術指標。</li>
+<li>產出 K 線型態圖表。</li>
+<li>製作成長預測儀表板。</li>
+<li>製作 DCF + 相對估值分析頁。</li>
+<li>保留資料來源與檢查結果。</li>
+</ul>
+<h1>主要輸出規格</h1>
+<p>典型輸出檔案：</p>
+<p>```text</p>
+<p>{代號}_{名稱}_財務模型.xlsx</p>
+<p>{代號}_{名稱}_投資分析簡報.pptx</p>
+<p>{代號}_{名稱}_K線型態圖表.html</p>
+<p>{代號}_{名稱}_K線型態圖表.png</p>
+<p>```</p>
+<p>Excel 至少包含：</p>
+<ul>
+<li>Cover / 總覽</li>
+<li>Assumptions / 假設</li>
+<li>Historical / 歷史財務</li>
+<li>Forecast / 三情境預測</li>
+<li>Valuation / 估值</li>
+<li>Sensitivity / 敏感度</li>
+<li>Technical / 技術指標</li>
+<li>RiskMatrix / 風險矩陣</li>
+<li>Sources / 資料來源</li>
+<li>Checks / 檢查表</li>
+</ul>
+<p>PPTX 至少包含 14 頁：公司概況、歷史財務、最新營運動能、成長動能、成長預測儀表板、三情境預測、DCF + 相對估值、估值分析、財務指標健檢、KD/MACD、K 線型態、風險矩陣、結論等。</p>
+<h1>Skill 指令設計亮點</h1>
+<h1>1. 強制「即時搜尋」而不是靠模型記憶</h1>
+<p>`SKILL.md` 明確要求第 1 步用 web search 搜尋公開資料，不可依賴訓練記憶。建議查詢包含：</p>
+<ul>
+<li>股票代號 + 公司名 + 全年財報 EPS 營收</li>
+<li>公司名 + 股價 / 今日 / 每股淨值</li>
+<li>公司名 + 股價大漲 / 展望 / 產業</li>
+<li>最新季度財報分析</li>
+</ul>
+<p>必蒐集清單包括最新收盤股價、市值、近三年營收與 EPS、近五季 EPS、月營收、BVPS、成長題材與風險觀察指標。</p>
+<h1>2. Excel 要可稽核、可調假設</h1>
+<p>Skill 要求：</p>
+<ul>
+<li>藍字為輸入，黑字為公式，綠字為跨表連結。</li>
+<li>三情境預測要引用假設表。</li>
+<li>敏感度表、風險值與估值計算要用 Excel 公式。</li>
+<li>每個硬編碼數字都要在備註或來源表標註來源與日期。</li>
+<li>Excel 公式錯誤需檢查，避免只產出漂亮但不可驗證的檔案。</li>
+</ul>
+<p>這點很重要：真正可用的財務模型不是一張圖片，而是能被使用者改假設、追資料源、檢查公式的工作簿。</p>
+<h1>3. 台股圖表色彩規範</h1>
+<p>Skill 特別寫出台股慣例：</p>
+<ul>
+<li>紅色 = 上漲 / 正值 / 偏多。</li>
+<li>綠色 = 下跌 / 負值 / 偏空。</li>
+<li>K 線、成交量與 MACD 柱狀體不得做成美股常見的綠漲紅跌。</li>
+</ul>
+<p>這是很實用的在地化細節，能避免 AI 直接套用英文金融圖表慣例造成錯誤解讀。</p>
+<h1>4. 技術指標只是短線補充</h1>
+<p>Skill 規定 KD、MACD、K 線型態只能作為短線位置補充，不取代基本面估值；若 K 線型態為規則式偵測，必須明確標註「適合教學與快速觀察，不等同投資建議」。</p>
+<h1>安裝方式</h1>
+<p>Repo 的 `docs/INSTALL.md` 提供 Codex 與 Claude Code 安裝方式。</p>
+<p>Codex macOS / Linux：</p>
+<p>```bash</p>
+<p>mkdir -p ~/.codex/skills/ai-stock-report-generator</p>
+<p>cp skills/ai-stock-report-generator/SKILL.md ~/.codex/skills/ai-stock-report-generator/SKILL.md</p>
+<p>```</p>
+<p>Claude Code 使用者層級：</p>
+<p>```bash</p>
+<p>mkdir -p ~/.claude/skills/ai-stock-report-generator</p>
+<p>cp skills/ai-stock-report-generator/SKILL.md ~/.claude/skills/ai-stock-report-generator/SKILL.md</p>
+<p>```</p>
+<p>使用方式：</p>
+<p>```text</p>
+<p>2303 //ai-stock-report-generator</p>
+<p>```</p>
+<p>或：</p>
+<p>```text</p>
+<p>使用 ai-stock-report-generator，幫我產出 2303 的財務模型與投資簡報</p>
+<p>```</p>
+<h1>對 Luarn-Pin / AI 學習雷達的價值</h1>
+<h1>1. 這是「Agent Skill 商品化」的好例子</h1>
+<p>這個 repo 不是完整 SaaS，而是一個高密度 `SKILL.md`。它示範了如何把一個專業任務拆成 agent 可執行流程：資料蒐集、模型建構、檔案產出、圖表規範、QA、交付話術與免責聲明。</p>
+<p>對 AI 課程設計來說，它適合作為「如何寫一個可交付檔案的 agent skill」案例。</p>
+<h1>2. 財務分析任務很適合測 agent 是否真的能工作</h1>
+<p>台股分析報告需要同時處理：</p>
+<ul>
+<li>即時資料搜尋。</li>
+<li>Excel 公式與多工作表連動。</li>
+<li>PPTX 版面設計。</li>
+<li>技術指標計算。</li>
+<li>資料來源標註。</li>
+<li>免責與風險邊界。</li>
+</ul>
+<p>這比單純聊天或摘要更能測出 agent 的工具使用、格式控制、資料誠信與交付能力。</p>
+<h1>3. 可延伸成「可稽核 AI 報告」課程模組</h1>
+<p>若之後做 AI 財務 / 商業分析課程，可以用這個 skill 的結構說明：</p>
+<ul>
+<li>Prompt 不是只寫「幫我分析股票」，而是寫成完整作業規格。</li>
+<li>好的 agent skill 要明確規定輸出檔案、來源、檢查、色彩、免責。</li>
+<li>專業領域 agent 必須把「不能做什麼」寫清楚，例如不能給保證收益、不能把技術指標當買賣建議。</li>
+</ul>
+<h1>風險與限制</h1>
+<ul>
+<li>Repo 未標示 license。若要改作教材、商用模板或整合到服務，需先確認授權。</li>
+<li>Skill 本身是指令規格，不代表每個 agent 執行都一定能產出正確檔案；實際品質仍取決於模型、工具環境、搜尋資料來源、Excel/PPTX 能力與 QA 流程。</li>
+<li>財務資料來源可能彼此矛盾或延遲，使用者需自行確認正確性。</li>
+<li>估值、DCF、相對估值、KD/MACD 都是分析工具，不構成投資建議。</li>
+<li>若 agent 能寫檔、抓網路與產生報告，需注意資料來源版權、錯誤引用、幻覺與報告被誤用為投資建議的風險。</li>
+</ul>
+<h1>後續可追蹤</h1>
+<ul>
+<li>是否有人 fork 後加入台股資料 API、TWSE / TPEx 官方資料抓取、TEJ / Yahoo / Goodinfo 等資料源整合。</li>
+<li>是否支援 Claude Skills / Codex Skills / OpenCode skills 的跨工具格式差異。</li>
+<li>是否能加入測試案例，例如固定股票代號的 regression test，確保 Excel 公式、PPT 頁數與圖表色彩不退化。</li>
+<li>是否能拆成更通用的「可稽核商業報告生成 skill」模板，用在公司研究、產業報告、競品分析與標案簡報。</li>
+</ul>
+<h1>原始素材摘要</h1>
+<ul>
+<li>Facebook 貼文：楊俊益在「MQTT 與 AIoT 整合運用」社團分享 AI Stock Report Generator Skill。</li>
+<li>GitHub repo：`yangchunyi0814/ai-stock-report-generator`。</li>
+<li>核心輸出：Excel 財務模型、PPTX 投資分析簡報、KD / MACD、K 線 HTML/PNG 圖表。</li>
+<li>定位：分析與教學輔助，不構成投資建議。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-06 · Facebook / GitHub · social-post</div><h3>標籤</h3><span class="tag">AI Agent</span><span class="tag">Agent Skill</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">台股</span><span class="tag">財務模型</span><span class="tag">投資簡報</span><span class="tag">Excel</span><span class="tag">PowerPoint</span><span class="tag">技術分析</span><span class="tag">KD</span><span class="tag">MACD</span><span class="tag">AI Finance</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1KBT5kvJgu/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1KBT5kvJgu/?mibextid=wwXIfr</a></p><p><a href="https://github.com/yangchunyi0814/ai-stock-report-generator" target="_blank" rel="noopener">https://github.com/yangchunyi0814/ai-stock-report-generator</a></p><p><a href="https://www.facebook.com/share/p/1KBT5kvJgu/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1KBT5kvJgu/?mibextid=wwXIfr</a></p><p><a href="https://github.com/yangchunyi0814/ai-stock-report-generator" target="_blank" rel="noopener">https://github.com/yangchunyi0814/ai-stock-report-generator</a></p><p><a href="https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/README.md" target="_blank" rel="noopener">https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/README.md</a></p><p><a href="https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/docs/INSTALL.md" target="_blank" rel="noopener">https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/docs/INSTALL.md</a></p><p><a href="https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/skills/ai-stock-report-generator/SKILL.md" target="_blank" rel="noopener">https://github.com/yangchunyi0814/ai-stock-report-generator/blob/main/skills/ai-stock-report-generator/SKILL.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
