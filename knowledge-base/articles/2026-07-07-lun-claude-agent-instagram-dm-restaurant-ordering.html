@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>侖｜Claude Agent 接管 Instagram DM 點餐：餐廳固定菜單的 AI 訂單自動化架構</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>侖｜Claude Agent 接管 Instagram DM 點餐：餐廳固定菜單的 AI 訂單自動化架構</h1><h1>侖｜Claude Agent 接管 Instagram DM 點餐：餐廳固定菜單的 AI 訂單自動化架構</h1>
+<h1>一句話摘要</h1>
+<p>固定菜單餐廳若大量訂單來自 Instagram DM，可以用 Meta webhook + Claude API + 結構化菜單知識庫，把「詢問、推薦、確認、輸出訂單」變成可部署的 AI 訂單助理。</p>
+<h1>Threads 貼文重點</h1>
+<p>侖分享一個餐廳 AI automation 場景：一間有七個據點的壽司連鎖店，約九成訂單從 Instagram DM 進來，原本靠一個人全天手動回覆。現在改由 Claude Agent 接管：Meta API 監聽新訊息，模型讀取包含菜單、過敏原、配送範圍、營業時間的知識庫，直接與顧客對話、確認訂單並處理完整流程。</p>
+<p>貼文強調：這個架構不需要特殊基礎設施。只要有固定菜單、Instagram 商業帳號、能呼叫 Claude API，就能開始做第一版。</p>
+<h1>四層架構</h1>
+<h1>1. 訊息監聽層</h1>
+<p>使用 Meta Graph API / Instagram Messaging API 訂閱 Instagram DM webhook。顧客傳入新訊息時，webhook 觸發後續流程。</p>
+<p>這層的重點是即時性與成本：webhook 比輪詢更快，也比較省 API 成本。官方文件也說明，Instagram 使用者傳訊息給 app user 時會觸發 webhook notification，內容包含 Instagram-scoped ID 與訊息。</p>
+<h1>2. 知識庫建立</h1>
+<p>把餐廳營運資訊整理成結構化知識來源：</p>
+<ul>
+<li>菜單與品項選項</li>
+<li>食材與過敏原</li>
+<li>配送區域與外送限制</li>
+<li>各據點營業時間</li>
+<li>目前促銷</li>
+<li>加購品、套餐規則、最低訂購金額</li>
+<li>缺貨 / 售完狀態</li>
+</ul>
+<p>貼文指出，這是整個專案最花時間的地方；但只要整理一次，後續維護成本較低。實務上這層可以先用 Markdown / JSON / Google Sheets 起步，再逐步升級到資料庫或 RAG。</p>
+<h1>3. 對話與確認邏輯</h1>
+<p>呼叫 Claude API，讓模型扮演點餐人員：</p>
+<ul>
+<li>引導顧客選餐</li>
+<li>補問缺少資訊</li>
+<li>確認數量與客製化需求</li>
+<li>核對配送地址與取餐時間</li>
+<li>檢查菜單限制與過敏原提醒</li>
+<li>產生最後確認訊息</li>
+</ul>
+<p>貼文的關鍵觀點是：不需要完全手寫對話流程，模型可根據知識庫判斷下一步該問什麼。不過實務上仍建議加入 schema、狀態機與 human handoff，以避免漏問地址、時間、數量或付款方式。</p>
+<h1>4. 訂單輸出與通知</h1>
+<p>訂單確認後，把結構化資料推進現有流程：</p>
+<ul>
+<li>POS 系統</li>
+<li>Google Sheets</li>
+<li>Airtable / Notion</li>
+<li>店內 LINE / Slack / Telegram 通知</li>
+<li>Email 或列印單</li>
+</ul>
+<p>貼文建議先從最輕量的輸出格式開始，例如 Google Sheets。等流程跑通後，再對接正式 POS 或 ERP。</p>
+<h1>最小可行版本（MVP）</h1>
+<p>第一版不必追求完整 POS 整合，可以設計成：</p>
+<ul>
+<li>Instagram 商業帳號收到 DM。</li>
+<li>Webhook 傳到一個輕量 API server。</li>
+<li>Server 讀取菜單 JSON / Google Sheet。</li>
+<li>Claude 生成回覆並維持 session state。</li>
+<li>顧客確認後，AI 產生標準 JSON 訂單。</li>
+<li>JSON 寫入 Google Sheets。</li>
+<li>店員在 Google Sheets 或通知頻道人工確認。</li>
+</ul>
+<p>這樣能最快驗證：顧客是否願意與 AI 點餐、模型是否能正確處理菜單限制、店員是否能接住輸出格式。</p>
+<h1>實作時要補上的安全線</h1>
+<p>餐飲點餐看似低風險，但仍有幾個必要保護：</p>
+<ul>
+<li>價格與促銷必須由資料來源決定，不讓模型自由編造。</li>
+<li>過敏原與素食資訊需要結構化欄位，避免只靠自然語言推理。</li>
+<li>地址、電話等個資需有保存期限與存取權限。</li>
+<li>付款資訊不要直接在 DM 中收信用卡資料；應導向正式付款連結或店內流程。</li>
+<li>超出菜單、客訴、取消、退款、特殊大量訂單應轉人工。</li>
+<li>Instagram Messaging API 有平台政策與視窗限制，需依 Meta 最新文件設計。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇值得收錄，因為它把「AI Agent」落到非常具體的小型商業流程：不是抽象客服，而是固定菜單 + 高頻 DM + 可結構化輸出的訂單自動化。</p>
+<p>可轉成教學或顧問案例：</p>
+<ul>
+<li>用一張圖說明 DM → Webhook → Claude → Knowledge Base → Order JSON → Sheets/POS。</li>
+<li>示範如何把菜單轉成 agent-readable schema。</li>
+<li>示範如何讓 Claude 先收集必要欄位，再產生訂單 JSON。</li>
+<li>示範從 Google Sheets MVP 逐步升級到正式 POS。</li>
+</ul>
+<h1>建議後續延伸</h1>
+<ul>
+<li>建立一份「餐廳點餐 Agent schema」：品項、規格、數量、取餐方式、地址、備註、過敏原確認。</li>
+<li>做一個 n8n / Cloudflare Workers / FastAPI 的範例架構。</li>
+<li>加上人工接手規則與訂單審核 dashboard。</li>
+<li>測試多語言顧客、錯字、口語化品項名稱、菜單缺貨、促銷變動。</li>
+</ul>
+<h1>原始素材</h1>
+<ul>
+<li>Threads：侖（@11.6_d_m_b_）分享 Claude Agent 接管 Instagram DM 點餐架構。</li>
+<li>交叉驗證：Meta Instagram webhook / messaging API 文件、Claude Platform model docs。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-07 · Threads · social-post</div><h3>標籤</h3><span class="tag">Claude Agent</span><span class="tag">Instagram DM</span><span class="tag">Meta Graph API</span><span class="tag">Restaurant Automation</span><span class="tag">AI Ordering</span><span class="tag">Customer Support Automation</span><span class="tag">RAG</span><span class="tag">POS</span><h3>原始連結</h3><p><a href="https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW?xmt=AQG0E8VXrt1xlL7MDzhkERj2Ns7YdBA54L7WC4PlxzHETgz6FnUn7pf5yREDCh9DMocG2--2QQ&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW?xmt=AQG0E8VXrt1xlL7MDzhkERj2Ns7YdBA54L7WC4PlxzHETgz6FnUn7pf5yREDCh9DMocG2--2QQ&amp;slof=1</a></p><p><a href="https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW" target="_blank" rel="noopener">https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW</a></p><p><a href="https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW" target="_blank" rel="noopener">https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW</a></p><p><a href="https://developers.facebook.com/docs/instagram-platform/webhooks" target="_blank" rel="noopener">https://developers.facebook.com/docs/instagram-platform/webhooks</a></p><p><a href="https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/messaging-api/" target="_blank" rel="noopener">https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/messaging-api/</a></p><p><a href="https://developers.facebook.com/documentation/business-messaging/instagram-messaging/webhooks" target="_blank" rel="noopener">https://developers.facebook.com/documentation/business-messaging/instagram-messaging/webhooks</a></p><p><a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/about-claude/models/overview</a></p><p><a href="https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions" target="_blank" rel="noopener">https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

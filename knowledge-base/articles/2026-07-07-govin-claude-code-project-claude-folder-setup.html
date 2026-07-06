@@ -1,0 +1,156 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Govin.AI｜如何正確設定 Claude Code 專案：把 .claude/ 當作基礎建設</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Govin.AI｜如何正確設定 Claude Code 專案：把 .claude/ 當作基礎建設</h1><h1>Govin.AI｜如何正確設定 Claude Code 專案：把 .claude/ 當作基礎建設</h1>
+<h1>一句話摘要</h1>
+<p>Claude Code 的生產力不只來自模型，而是來自專案內的 `.claude/` 基礎建設：把規則、指令、技能、子代理與權限設定好，才不會每次都靠臨場 prompt 補救。</p>
+<h1>Threads 貼文重點</h1>
+<p>Govin.AI 分享「如何正確設定 Claude Code 專案」：多數開發者跳過設定就直接開始下指令，這是最大的錯誤。</p>
+<p>貼文指出，一個完整的 Claude Code 專案核心在 `.claude/` 資料夾：</p>
+<ul>
+<li>先寫 `CLAUDE.md` 作為操作手冊。</li>
+<li>專案長大後，再把規則拆到 `rules/`。</li>
+<li>用 `commands/` 放重複性工作流程。</li>
+<li>用 `skills/` 做情境觸發自動化。</li>
+<li>用 `agents/` 放隔離子代理。</li>
+<li>用 `settings.json` 鎖好權限。</li>
+</ul>
+<p>另有兩層 `.claude/`：一個跟著 repo 提交，另一個全域 `~/.claude/` 放個人偏好與跨專案自動記憶。貼文的核心觀點是：`.claude/` 不是雜物資料夾，而是 coding agent 的基礎建設。</p>
+<h1>建議的 Claude Code 專案結構</h1>
+<p>可把專案設計成：</p>
+<p>```text</p>
+<p>project/</p>
+<p>  CLAUDE.md</p>
+<p>  .claude/</p>
+<p>    settings.json</p>
+<p>    settings.local.json</p>
+<p>    commands/</p>
+<p>      test.md</p>
+<p>      review.md</p>
+<p>      deploy.md</p>
+<p>    skills/</p>
+<p>      database-migration.md</p>
+<p>      api-contract.md</p>
+<p>    agents/</p>
+<p>      security-reviewer.md</p>
+<p>      frontend-reviewer.md</p>
+<p>    rules/</p>
+<p>      backend.md</p>
+<p>      frontend.md</p>
+<p>      testing.md</p>
+<p>```</p>
+<p>實際路徑仍需依 Claude Code 版本與官方文件調整；但這個架構思路是正確的：把常態規則與工作流放進檔案，而不是每次在對話中重講。</p>
+<h1>各元件的角色</h1>
+<h1>1. CLAUDE.md：專案操作手冊</h1>
+<p>`CLAUDE.md` 是 Claude Code 進入專案後最重要的上下文。建議包含：</p>
+<ul>
+<li>專案目的與產品背景</li>
+<li>架構概覽</li>
+<li>重要資料夾與檔案</li>
+<li>本地開發、測試、lint、build 指令</li>
+<li>code style 與命名規範</li>
+<li>安全限制與禁止事項</li>
+<li>PR / commit 規則</li>
+<li>常見陷阱與已知問題</li>
+</ul>
+<p>重點是「具體可執行」，不要只寫「請寫好程式」。例如應寫：測試用 `pnpm test`、API schema 在 `packages/api/schema`、修改 migration 後需跑 `pnpm db:check`。</p>
+<h1>2. rules/：大型專案的規則拆分</h1>
+<p>當 `CLAUDE.md` 變得太長，可把規則拆到 `rules/` 或等價的模組化文件：</p>
+<ul>
+<li>backend.md</li>
+<li>frontend.md</li>
+<li>database.md</li>
+<li>testing.md</li>
+<li>security.md</li>
+<li>design-system.md</li>
+</ul>
+<p>這能降低單檔混亂，也方便團隊分工維護。</p>
+<h1>3. commands/：重複流程變 slash command</h1>
+<p>`commands/` 適合放重複性流程，例如：</p>
+<ul>
+<li>`/test`：跑測試、整理失敗原因、修復後重跑。</li>
+<li>`/review`：做 PR 前檢查，包含安全、效能、測試覆蓋。</li>
+<li>`/deploy`：跑 build、檢查環境、生成部署摘要。</li>
+<li>`/changelog`：根據 git diff 生成變更紀錄。</li>
+</ul>
+<p>判斷標準：同一件事做超過三次、每次 prompt 超過五行，就值得做成 command。</p>
+<h1>4. skills/：情境觸發的自動化知識</h1>
+<p>Skills 與 commands 不同：commands 偏手動呼叫，skills 偏「任務符合時自動套用的程序知識」。例如：</p>
+<ul>
+<li>database migration skill</li>
+<li>API contract update skill</li>
+<li>design token update skill</li>
+<li>test-driven bugfix skill</li>
+</ul>
+<p>好的 skill 應包含觸發條件、步驟、驗證方法與常見陷阱。</p>
+<h1>5. agents/：隔離子代理</h1>
+<p>`agents/` 適合把任務拆給專門角色：</p>
+<ul>
+<li>security-reviewer：只看資安風險。</li>
+<li>performance-reviewer：找效能瓶頸。</li>
+<li>frontend-reviewer：檢查 UI / accessibility。</li>
+<li>test-writer：補測試。</li>
+<li>database-expert：看 schema、migration、query。</li>
+</ul>
+<p>子代理的價值在於隔離視角與工具權限，不讓所有事情都塞給同一個主 agent。</p>
+<h1>6. settings.json：權限與安全邊界</h1>
+<p>`settings.json` 應管理 Claude Code 能做什麼：</p>
+<ul>
+<li>允許哪些工具與 shell command。</li>
+<li>哪些操作需要詢問。</li>
+<li>哪些檔案或命令禁止碰。</li>
+<li>hooks 是否在讀寫前後自動跑檢查。</li>
+</ul>
+<p>這對正式專案很重要：如果沒有設定，agent 很容易在高自治狀態下碰到不該碰的憑證、環境檔或破壞性指令。</p>
+<h1>repo .claude/ vs 全域 ~/.claude/</h1>
+<p>貼文提到有兩個層級：</p>
+<h1>repo 內 `.claude/`</h1>
+<p>適合提交到版本控制，讓團隊共享：</p>
+<ul>
+<li>專案規則</li>
+<li>團隊共用 commands</li>
+<li>專案專用 agents</li>
+<li>安全權限預設</li>
+<li>hooks 與檢查流程</li>
+</ul>
+<h1>全域 `~/.claude/`</h1>
+<p>適合個人使用：</p>
+<ul>
+<li>個人偏好</li>
+<li>跨專案 commands</li>
+<li>常用 agents</li>
+<li>個人 memory / settings</li>
+<li>不應提交到團隊 repo 的私有設定</li>
+</ul>
+<p>這個分層非常重要：團隊規則要進 repo，個人習慣要留在 user 層，避免把個人偏好污染專案。</p>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇值得收錄，因為它把 Claude Code 從「聊天式 coding 工具」提升到「可配置的工程系統」。真正的差別不只是會不會叫 Claude 改檔，而是有沒有讓它在每次任務開始時自動知道：</p>
+<ul>
+<li>這個專案是什麼。</li>
+<li>該怎麼跑測試。</li>
+<li>哪些檔案不能碰。</li>
+<li>該用哪些流程完成任務。</li>
+<li>哪些檢查必須通過。</li>
+<li>哪些任務應交給專門 subagent。</li>
+</ul>
+<p>這也是從 vibe coding 走向 agentic software engineering 的關鍵。</p>
+<h1>可轉成 Luarn-Pin 工作流的清單</h1>
+<p>新專案初始化時，可用以下 checklist：</p>
+<ul>
+<li>建立 `CLAUDE.md`，寫清楚專案目的、架構、指令、規範。</li>
+<li>建立 `.claude/settings.json`，先限制危險命令與敏感檔案。</li>
+<li>把常做流程整理成 `.claude/commands/`。</li>
+<li>把高頻但需判斷的任務整理成 `.claude/skills/`。</li>
+<li>把 review / security / tests 拆成 `.claude/agents/`。</li>
+<li>專案規則進 repo；個人偏好放 `~/.claude/`。</li>
+<li>每次任務完成後，把新發現的專案規則回寫到 `CLAUDE.md` 或對應 rule。</li>
+</ul>
+<h1>後續可追蹤</h1>
+<ul>
+<li>Claude Code 官方對 skills、agents、settings、hooks 的語法是否持續變動。</li>
+<li>`.claude/` 結構如何與 MCP、CI、GitHub Actions、pre-commit 結合。</li>
+<li>團隊共用的 `.claude/` 是否需要 code review 與版本控管。</li>
+<li>是否可建立一套「Claude Code 專案初始化模板」給教學或顧問案使用。</li>
+</ul>
+<h1>原始素材</h1>
+<ul>
+<li>Threads：Govin.AI（@govin999999）分享 Claude Code 專案設定觀念。</li>
+<li>交叉驗證：Claude Code docs / best practices、Claude Code orchestration skill notes。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-07 · Threads · social-post</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">CLAUDE.md</span><span class="tag">.claude</span><span class="tag">Agents</span><span class="tag">Skills</span><span class="tag">Slash Commands</span><span class="tag">Settings</span><span class="tag">Coding Agent</span><h3>原始連結</h3><p><a href="https://www.threads.com/@govin999999/post/Dac99VDGJ_x?xmt=AQG084qloyT40halwZkrAKrdSeMWSiRtcrwjP0RSzCjaZauWgLM-OlyB4oofAT1cTG6bj0-hOg&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/Dac99VDGJ_x?xmt=AQG084qloyT40halwZkrAKrdSeMWSiRtcrwjP0RSzCjaZauWgLM-OlyB4oofAT1cTG6bj0-hOg&amp;slof=1</a></p><p><a href="https://www.threads.com/@govin999999/post/Dac99VDGJ_x" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/Dac99VDGJ_x</a></p><p><a href="https://www.threads.com/@govin999999/post/Dac99VDGJ_x" target="_blank" rel="noopener">https://www.threads.com/@govin999999/post/Dac99VDGJ_x</a></p><p><a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">https://code.claude.com/docs/en/best-practices</a></p><p><a href="https://code.claude.com/docs/en/cli-reference" target="_blank" rel="noopener">https://code.claude.com/docs/en/cli-reference</a></p><p><a href="https://code.claude.com/docs/en/settings" target="_blank" rel="noopener">https://code.claude.com/docs/en/settings</a></p><p><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">https://code.claude.com/docs/en/memory</a></p><p><a href="https://code.claude.com/docs/en/hooks" target="_blank" rel="noopener">https://code.claude.com/docs/en/hooks</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

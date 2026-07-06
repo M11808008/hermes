@@ -1,5 +1,73 @@
 [
   {
+    "title": "Govin.AI｜如何正確設定 Claude Code 專案：把 .claude/ 當作基礎建設",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "Govin.AI / govin999999",
+    "type": "social-post",
+    "topics": [
+      "Claude Code",
+      "CLAUDE.md",
+      ".claude",
+      "Agents",
+      "Skills",
+      "Slash Commands",
+      "Settings",
+      "Coding Agent"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@govin999999/post/Dac99VDGJ_x?xmt=AQG084qloyT40halwZkrAKrdSeMWSiRtcrwjP0RSzCjaZauWgLM-OlyB4oofAT1cTG6bj0-hOg&slof=1",
+      "https://www.threads.com/@govin999999/post/Dac99VDGJ_x",
+      "https://www.threads.com/@govin999999/post/Dac99VDGJ_x",
+      "https://code.claude.com/docs/en/best-practices",
+      "https://code.claude.com/docs/en/cli-reference",
+      "https://code.claude.com/docs/en/settings",
+      "https://code.claude.com/docs/en/memory",
+      "https://code.claude.com/docs/en/hooks"
+    ],
+    "excerpt": "Claude Code 的生產力不只來自模型，而是來自專案內的 `.claude/` 基礎建設：把規則、指令、技能、子代理與權限設定好，才不會每次都靠臨場 prompt 補救。",
+    "slug": "2026-07-07-govin-claude-code-project-claude-folder-setup",
+    "html": "articles/2026-07-07-govin-claude-code-project-claude-folder-setup.html",
+    "markdown": "articles/2026/07/2026-07-07-govin-claude-code-project-claude-folder-setup.md"
+  },
+  {
+    "title": "侖｜Claude Agent 接管 Instagram DM 點餐：餐廳固定菜單的 AI 訂單自動化架構",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "11.6_d_m_b_ / 侖",
+    "type": "social-post",
+    "topics": [
+      "Claude Agent",
+      "Instagram DM",
+      "Meta Graph API",
+      "Restaurant Automation",
+      "AI Ordering",
+      "Customer Support Automation",
+      "RAG",
+      "POS"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW?xmt=AQG0E8VXrt1xlL7MDzhkERj2Ns7YdBA54L7WC4PlxzHETgz6FnUn7pf5yREDCh9DMocG2--2QQ&slof=1",
+      "https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW",
+      "https://www.threads.com/@11.6_d_m_b_/post/DachT0HmxlW",
+      "https://developers.facebook.com/docs/instagram-platform/webhooks",
+      "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/messaging-api/",
+      "https://developers.facebook.com/documentation/business-messaging/instagram-messaging/webhooks",
+      "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions"
+    ],
+    "excerpt": "固定菜單餐廳若大量訂單來自 Instagram DM，可以用 Meta webhook + Claude API + 結構化菜單知識庫，把「詢問、推薦、確認、輸出訂單」變成可部署的 AI 訂單助理。",
+    "slug": "2026-07-07-lun-claude-agent-instagram-dm-restaurant-ordering",
+    "html": "articles/2026-07-07-lun-claude-agent-instagram-dm-restaurant-ordering.html",
+    "markdown": "articles/2026/07/2026-07-07-lun-claude-agent-instagram-dm-restaurant-ordering.md"
+  },
+  {
     "title": "TopMediai｜AI 聲音克隆：30 秒複製聲線的多語言語音生成工具",
     "date": "2026-07-07",
     "source": "TopMediai",
