@@ -1,5 +1,38 @@
 [
   {
+    "title": "AI郵報｜codex-plugin-cc 衝上 Trending：Claude Code + Codex 的 Tech Lead / Engineer 混合工作流",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "aiposthub / AI郵報",
+    "type": "social-post",
+    "topics": [
+      "Claude Code",
+      "Codex",
+      "codex-plugin-cc",
+      "OpenAI",
+      "Multi-Agent Workflow",
+      "Code Review",
+      "AI Agent",
+      "Fable 5"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DaaiU4qAb0T?xmt=AQG0L5TDQz79D-7LP3gymL26_kydsLoHwi1h-Hvr7gtLxOq067SwhnMJFS8wOoY_L5EJFmyZ&slof=1",
+      "https://www.threads.com/@aiposthub/post/DaaiU4qAb0T",
+      "https://www.threads.com/@aiposthub/post/DaaiU4qAb0T",
+      "https://github.com/openai/codex-plugin-cc",
+      "https://raw.githubusercontent.com/openai/codex-plugin-cc/main/README.md",
+      "https://community.openai.com/t/introducing-codex-plugin-for-claude-code/1378186",
+      "https://developers.openai.com/codex/pricing"
+    ],
+    "excerpt": "codex-plugin-cc 的走紅代表 AI coding workflow 正從「單一模型從頭做到尾」轉向「高階模型負責規劃與風險判斷，執行型模型負責具體實作與審查」的多模型協作模式。",
+    "slug": "2026-07-07-aiposthub-codex-plugin-cc-claude-code-codex-hybrid-workflow",
+    "html": "articles/2026-07-07-aiposthub-codex-plugin-cc-claude-code-codex-hybrid-workflow.html",
+    "markdown": "articles/2026/07/2026-07-07-aiposthub-codex-plugin-cc-claude-code-codex-hybrid-workflow.md"
+  },
+  {
     "title": "Govin.AI｜如何正確設定 Claude Code 專案：把 .claude/ 當作基礎建設",
     "date": "2026-07-07",
     "source": "Threads",

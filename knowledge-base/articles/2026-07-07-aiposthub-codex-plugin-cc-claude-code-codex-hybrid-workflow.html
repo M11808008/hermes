@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI郵報｜codex-plugin-cc 衝上 Trending：Claude Code + Codex 的 Tech Lead / Engineer 混合工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI郵報｜codex-plugin-cc 衝上 Trending：Claude Code + Codex 的 Tech Lead / Engineer 混合工作流</h1><h1>AI郵報｜codex-plugin-cc 衝上 Trending：Claude Code + Codex 的 Tech Lead / Engineer 混合工作流</h1>
+<h1>一句話摘要</h1>
+<p>codex-plugin-cc 的走紅代表 AI coding workflow 正從「單一模型從頭做到尾」轉向「高階模型負責規劃與風險判斷，執行型模型負責具體實作與審查」的多模型協作模式。</p>
+<h1>Threads 串文重點</h1>
+<p>AI郵報觀察到，在 Fable 5 回歸後，OpenAI 的 Claude Code 插件 `codex-plugin-cc` 衝上 GitHub Trending 第一名，反映 Claude Code + Codex 的混合工作流重新變熱。</p>
+<p>串文提出一個清楚分工：</p>
+<ul>
+<li>讓 Fable 5 / Claude Code 負責思考。</li>
+<li>讓 Codex 負責執行。</li>
+</ul>
+<p>在 Claude Code 裡直接呼叫 Codex，可用於任務委派、程式碼審查、局部實作，以及把重複性工程工作拆出去處理。</p>
+<h1>Fable / Claude Code：像 Tech Lead</h1>
+<p>貼文把 Fable 5 或 Claude Code 的角色比喻為 Tech Lead，負責：</p>
+<ul>
+<li>理解複雜需求</li>
+<li>拆解底層任務</li>
+<li>規劃執行策略</li>
+<li>判斷潛在風險</li>
+<li>控制任務優先級</li>
+</ul>
+<p>這類工作需要較強的上下文整合、系統設計與取捨能力，因此適合交給更高階的模型或主控 agent。</p>
+<h1>Codex：像高執行力工程師</h1>
+<p>Codex 的定位則更接近執行型工程師，負責：</p>
+<ul>
+<li>撰寫與修改程式碼</li>
+<li>Code Review</li>
+<li>執行局部任務</li>
+<li>補完細節實作</li>
+<li>處理重複性工程工作</li>
+</ul>
+<p>這種分工的價值在於避免昂貴模型花大量 token 做低層次改檔，也避免單一模型在大型任務中同時承擔規劃、實作、審查與收尾而失焦。</p>
+<h1>官方資料交叉驗證</h1>
+<p>Brave Search 與 GitHub README 驗證，`openai/codex-plugin-cc` 是 OpenAI 官方 repo，描述為：Use Codex from inside Claude Code for code reviews or to delegate tasks to Codex。</p>
+<p>README 顯示它提供：</p>
+<ul>
+<li>`/codex:review`：一般唯讀 Codex code review。</li>
+<li>`/codex:adversarial-review`：可引導的挑戰式審查，用來質疑設計、假設、取捨與風險。</li>
+<li>`/codex:rescue`、`/codex:transfer`、`/codex:status`、`/codex:result`、`/codex:cancel`：用於委派工作、交接 session 與管理背景任務。</li>
+</ul>
+<p>安裝方式也在 README 中列出：</p>
+<p>```bash</p>
+<p>/plugin marketplace add openai/codex-plugin-cc</p>
+<p>/plugin install codex@openai-codex</p>
+<p>/reload-plugins</p>
+<p>/codex:setup</p>
+<p>```</p>
+<p>需求包含 ChatGPT subscription（含 Free）或 OpenAI API key，且會計入 Codex usage limits；另需 Node.js 18.18 或以上。</p>
+<h1>與「Fable 規劃、便宜模型執行」的關係</h1>
+<p>這篇與前一則 Fable 5 額度策略高度呼應：最強模型稀缺時，應該把它放在任務路由、計畫、風險控管與驗收，而不是所有細節都親手做完。</p>
+<p>可形成一個標準流程：</p>
+<ul>
+<li>Claude / Fable 讀取需求與 codebase，產生任務拆解。</li>
+<li>Claude 決定哪些子任務適合 Codex。</li>
+<li>用 `/codex:transfer` 或相關指令把局部任務交給 Codex。</li>
+<li>Codex 完成實作或 review。</li>
+<li>Claude 彙整結果、做風險判斷與最終驗收。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇值得收錄，因為它把「多模型協作」從抽象概念變成開發者可安裝的實際工作流。它也提供一個可教學的框架：</p>
+<ul>
+<li>不再問「Claude Code 還是 Codex 哪個比較好」。</li>
+<li>改問「這個任務該交給誰」。</li>
+<li>主控模型負責決策，執行模型負責落地。</li>
+<li>審查型模型負責挑戰假設與找風險。</li>
+</ul>
+<p>這正是 agentic engineering 從單人單模型走向「模型團隊」的早期樣貌。</p>
+<h1>實務注意事項</h1>
+<ul>
+<li>Codex usage 會計入 Codex 額度，不是免費外掛。</li>
+<li>Code review 建議背景執行，尤其多檔案變更會花時間。</li>
+<li>`/codex:review` 是唯讀審查；若要質疑特定風險或設計，應使用 adversarial review。</li>
+<li>交給 Codex 的任務要局部、明確、可驗收，避免把整個模糊專案丟給執行型 agent。</li>
+<li>主控模型應在最後做整合驗收，避免多代理改動造成方向漂移。</li>
+</ul>
+<h1>可延伸的課程 / 工作坊題目</h1>
+<ul>
+<li>Claude Code 裡安裝 codex-plugin-cc，示範 `/codex:review --background`。</li>
+<li>用 Claude 先產生 implementation plan，再把單一 task 交給 Codex。</li>
+<li>比較一般 review 與 adversarial review 找到的問題差異。</li>
+<li>設計一套「Tech Lead agent + Executor agent + Reviewer agent」的 AI coding workflow。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads：AI郵報（@aiposthub）分享 Claude Code + Codex 混合工作流。</li>
+<li>GitHub：openai/codex-plugin-cc。</li>
+<li>README：提供安裝方式、指令與需求。</li>
+<li>OpenAI Developer Community：Introducing Codex Plugin for Claude Code。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-07 · Threads · social-post</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">codex-plugin-cc</span><span class="tag">OpenAI</span><span class="tag">Multi-Agent Workflow</span><span class="tag">Code Review</span><span class="tag">AI Agent</span><span class="tag">Fable 5</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aiposthub/post/DaaiU4qAb0T?xmt=AQG0L5TDQz79D-7LP3gymL26_kydsLoHwi1h-Hvr7gtLxOq067SwhnMJFS8wOoY_L5EJFmyZ&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DaaiU4qAb0T?xmt=AQG0L5TDQz79D-7LP3gymL26_kydsLoHwi1h-Hvr7gtLxOq067SwhnMJFS8wOoY_L5EJFmyZ&amp;slof=1</a></p><p><a href="https://www.threads.com/@aiposthub/post/DaaiU4qAb0T" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DaaiU4qAb0T</a></p><p><a href="https://www.threads.com/@aiposthub/post/DaaiU4qAb0T" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DaaiU4qAb0T</a></p><p><a href="https://github.com/openai/codex-plugin-cc" target="_blank" rel="noopener">https://github.com/openai/codex-plugin-cc</a></p><p><a href="https://raw.githubusercontent.com/openai/codex-plugin-cc/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/openai/codex-plugin-cc/main/README.md</a></p><p><a href="https://community.openai.com/t/introducing-codex-plugin-for-claude-code/1378186" target="_blank" rel="noopener">https://community.openai.com/t/introducing-codex-plugin-for-claude-code/1378186</a></p><p><a href="https://developers.openai.com/codex/pricing" target="_blank" rel="noopener">https://developers.openai.com/codex/pricing</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
