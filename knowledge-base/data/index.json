@@ -105,6 +105,40 @@
     "markdown": "articles/2026/07/2026-07-07-aiposthub-remove-ai-flavor-humanizer-skills-guide.md"
   },
   {
+    "title": "李安｜NotebookLM 固定背景風格簡報：用模板來源與設定降低隨機設計",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "bboy_anlee / 李安",
+    "type": "social-post",
+    "topics": [
+      "NotebookLM",
+      "Slide Decks",
+      "AI Presentation",
+      "Template",
+      "Google Slides",
+      "AI Teaching",
+      "Prompt Workflow"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z?xmt=AQG0SQ9Hc4cYLlAOIm1mlUN_YLNAY761LEQqZMAAR46qURN-0r_yv0aibnQSec2AHY3B1lt_6w&slof=1",
+      "https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z",
+      "https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z",
+      "https://www.threads.com/@bboy_anlee/post/Dadl7tAEyGK",
+      "https://www.skool.com/aiskool-3431/about",
+      "https://support.google.com/notebooklm/answer/16757456?hl=en",
+      "https://support.google.com/notebooklm/answer/16215270?hl=en&co=GENIE.Platform%3DDesktop",
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/",
+      "https://blog.google/technology/ai/notebooklm-goes-global-support-for-websites-slides-fact-check/"
+    ],
+    "excerpt": "NotebookLM 生成簡報時若風格太隨機，可以把模板 / 品牌規範當成來源，並在 Slide Deck 設定中明確指定風格，讓 AI 產出的簡報更像同一套設計系統。",
+    "slug": "2026-07-07-bboy-anlee-notebooklm-slide-deck-template-style",
+    "html": "articles/2026-07-07-bboy-anlee-notebooklm-slide-deck-template-style.html",
+    "markdown": "articles/2026/07/2026-07-07-bboy-anlee-notebooklm-slide-deck-template-style.md"
+  },
+  {
     "title": "Aden Chen｜三個官方 AI 學習資源：Anthropic Academy、OpenAI Academy、Google AI Essentials",
     "date": "2026-07-07",
     "source": "Threads / fucell.us",

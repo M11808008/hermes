@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>李安｜NotebookLM 固定背景風格簡報：用模板來源與設定降低隨機設計</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>李安｜NotebookLM 固定背景風格簡報：用模板來源與設定降低隨機設計</h1><h1>李安｜NotebookLM 固定背景風格簡報：用模板來源與設定降低隨機設計</h1>
+<h1>一句話摘要</h1>
+<p>NotebookLM 生成簡報時若風格太隨機，可以把模板 / 品牌規範當成來源，並在 Slide Deck 設定中明確指定風格，讓 AI 產出的簡報更像同一套設計系統。</p>
+<h1>Threads 貼文重點</h1>
+<p>李安這則 Threads 的主文很短，核心操作是：</p>
+<ul>
+<li>NotebookLM 可製作固定背景風格簡報。</li>
+<li>如果不希望每次生成都是隨機風格，可以在資料來源上傳自己的模板。</li>
+<li>在簡報設定介面指定模板，生成更一致的簡報。</li>
+</ul>
+<p>續串補充：更多 NotebookLM 學習影片可在免費入群後觀看，連到「AI 執行力私酷群」。Skool 頁面驗證該社群為公開、免費，主打 35～55 歲職場人的 AI 基本功、AI 應用技巧影片與提示詞。</p>
+<h1>圖片 / 影片封面觀察</h1>
+<p>Threads 的主要媒體是一張 NotebookLM 操作畫面，截圖可見：</p>
+<ul>
+<li>NotebookLM 筆記本標題疑似為「China’s Company Law and the Evolution of One-Person Enterprises」。</li>
+<li>左側是 Sources / 來源列表，含多筆與中國公司法、一人公司、企業登記相關資料。</li>
+<li>中央是 NotebookLM 產出的中文結構化內容，像是根據來源整理的研究報告或章節摘要。</li>
+<li>右側是 Studio / 工作室面板，可見多個 NotebookLM 產出功能卡片。</li>
+<li>畫面呈現的是「來源 → 問答 / 整理 → Studio 產出」的 NotebookLM 工作流。</li>
+</ul>
+<p>由於截圖解析度較低，無法完整 OCR 所有小字；但它與主文描述一致：先準備來源，再在 NotebookLM Studio 生成簡報或延伸輸出。</p>
+<h1>官方資料交叉驗證</h1>
+<p>Google NotebookLM Help 的「Generate a Slide Deck in NotebookLM」說明：</p>
+<ul>
+<li>Slide Deck 可把 sources 轉成 polished presentation。</li>
+<li>使用者需在 notebook 中上傳 sources。</li>
+<li>在 Studio panel 選擇 Slide Deck，或用 pencil icon 在生成前自訂。</li>
+<li>customization panel 可設定 format、output language、length，也可以輸入 prompt 描述想要的簡報。</li>
+<li>prompt 可指定 audience、style、focus；官方範例為「Create a deck for beginners using a bold and playful style with a focus on step-by-step instructions.」</li>
+<li>Slide Deck 可在 NotebookLM 內播放，也可下載為 PDF。</li>
+<li>AI 生成簡報可能有視覺或事實錯誤，需要檢查。</li>
+</ul>
+<p>Google NotebookLM sources help 也驗證 NotebookLM 支援 Google Slides 作為來源，且每個 Google Slides 來源最多 100 slides；同時也支援 PDF、PowerPoint、Google Docs、web URLs、YouTube、圖片、音訊等來源。</p>
+<p>Google Blog 的 Slide Decks 使用建議進一步提到：NotebookLM 可把 dense research、rough notes、brainstorm 轉成 custom slide decks，也可以用 project sources 加入 brand styling 與 visuals。這與貼文所說「把模板上傳為資料來源，再指定模板」的做法方向一致。</p>
+<h1>這個技巧真正解決的問題</h1>
+<p>NotebookLM 的 Slide Deck 很適合快速把資料變成簡報，但如果每次都只讓模型自由發揮，常見問題是：</p>
+<ul>
+<li>背景與配色每次都不同，無法形成品牌一致性。</li>
+<li>版型、字級、留白、標題層級不穩定。</li>
+<li>教學簡報或企業簡報需要固定識別，但 AI 可能改成隨機視覺。</li>
+<li>同一系列課程 / 社群教學影片需要風格一致，否則看起來像不同來源拼接。</li>
+</ul>
+<p>把模板、品牌規範或上一份成功簡報當作 NotebookLM source，再在 Slide Deck prompt 中指定「依照此模板的背景、色彩、版面密度與標題風格」，等於給 NotebookLM 一個風格參考錨點，降低每次重抽設計的隨機性。</p>
+<h1>建議操作流程</h1>
+<p>可把這則貼文整理成一個可複製流程：</p>
+<ul>
+<li>準備資料內容來源：文件、文章、研究資料、課程大綱、影片逐字稿。</li>
+<li>準備模板來源：Google Slides / PowerPoint / PDF，內含品牌色、背景、標題頁、章節頁、內容頁樣式。</li>
+<li>上傳到同一個 NotebookLM notebook。</li>
+<li>在 sources panel 勾選「內容來源」與「模板來源」。</li>
+<li>到 Studio 選 Slide Deck。</li>
+<li>在 customization prompt 中明確寫：</li>
+</ul>
+<p>   - 請根據內容來源生成簡報。</p>
+<p>   - 視覺風格請參考模板來源。</p>
+<p>   - 保持固定背景、色彩、字級階層、頁首 / 頁尾與留白邏輯。</p>
+<p>   - 不要發明模板中沒有的品牌元素。</p>
+<p>   - 若模板與內容衝突，優先保持可讀性。</p>
+<ul>
+<li>生成後下載 PDF 或在 NotebookLM 檢視。</li>
+<li>人工檢查：事實、引用、中文字、圖表、對齊、頁面密度與品牌一致性。</li>
+</ul>
+<h1>可用提示詞範例</h1>
+<p>```text</p>
+<p>請根據已選取的內容來源製作一份簡報。視覺風格請參考「簡報模板」來源：保持相同背景風格、主色與輔色、標題層級、留白比例、頁碼 / 頁尾邏輯與章節分隔方式。請不要每頁生成完全不同的風格。若需要新增圖像或視覺元素，請優先使用與模板一致的扁平化 / 簡潔風格。輸出對象是初學者，內容要清楚、分段、有教學節奏。</p>
+<p>```</p>
+<h1>使用限制與注意事項</h1>
+<ul>
+<li>官方文件確認可以用 prompt 指定 style，但 NotebookLM 是否能完全照著模板輸出，仍取決於模型理解與當下功能狀態。</li>
+<li>Slide Deck 目前可能產生視覺或事實錯誤，不能直接當成最終交付版。</li>
+<li>若模板含商標、受保護圖片、客戶資料或內部簡報，需確認有權上傳到 NotebookLM。</li>
+<li>官方說明提到 revision 階段目前 sources 不會被納入修訂考量；若要大幅改風格，可能要重新生成，而不是只靠逐頁 revision。</li>
+<li>NotebookLM 輸出多為 PDF / 內部播放；若需要可完全編輯的 PPTX，可能還要搭配 Google Slides、PowerPoint 或其他工具後製。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則內容很適合放進「AI 簡報工作流」脈絡：它不是討論模型有多強，而是抓到實務簡報最常見的痛點——一致性。對欒帥的課程、講座、AI 學習雷達與高質感設計需求，可延伸成：</p>
+<ul>
+<li>用 NotebookLM 快速把資料變簡報初稿。</li>
+<li>用模板來源控制品牌與課程風格。</li>
+<li>用人工 QA 把 AI 初稿提升到可上台版本。</li>
+<li>將固定模板整理成可重複使用的「簡報風格資產」。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads：李安分享 NotebookLM 固定背景風格簡報做法。</li>
+<li>Skool：AI 執行力私酷群，驗證其免費社群與 NotebookLM 教學導流。</li>
+<li>Google NotebookLM Help：驗證 Slide Deck 生成、customization panel、style prompt、PDF 下載與 AI 生成錯誤提醒。</li>
+<li>Google NotebookLM Sources Help：驗證 Google Slides / PowerPoint / PDF / web URLs 等來源支援。</li>
+<li>Google Blog：驗證 NotebookLM Slide Decks 可用 project sources 加入 brand styling 與 visuals。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-07 · Threads · social-post</div><h3>標籤</h3><span class="tag">NotebookLM</span><span class="tag">Slide Decks</span><span class="tag">AI Presentation</span><span class="tag">Template</span><span class="tag">Google Slides</span><span class="tag">AI Teaching</span><span class="tag">Prompt Workflow</span><h3>原始連結</h3><p><a href="https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z?xmt=AQG0SQ9Hc4cYLlAOIm1mlUN_YLNAY761LEQqZMAAR46qURN-0r_yv0aibnQSec2AHY3B1lt_6w&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z?xmt=AQG0SQ9Hc4cYLlAOIm1mlUN_YLNAY761LEQqZMAAR46qURN-0r_yv0aibnQSec2AHY3B1lt_6w&amp;slof=1</a></p><p><a href="https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z" target="_blank" rel="noopener">https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z</a></p><p><a href="https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z" target="_blank" rel="noopener">https://www.threads.com/@bboy_anlee/post/DadlqgqjB3z</a></p><p><a href="https://www.threads.com/@bboy_anlee/post/Dadl7tAEyGK" target="_blank" rel="noopener">https://www.threads.com/@bboy_anlee/post/Dadl7tAEyGK</a></p><p><a href="https://www.skool.com/aiskool-3431/about" target="_blank" rel="noopener">https://www.skool.com/aiskool-3431/about</a></p><p><a href="https://support.google.com/notebooklm/answer/16757456?hl=en" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16757456?hl=en</a></p><p><a href="https://support.google.com/notebooklm/answer/16215270?hl=en&amp;co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16215270?hl=en&amp;co=GENIE.Platform%3DDesktop</a></p><p><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/</a></p><p><a href="https://blog.google/technology/ai/notebooklm-goes-global-support-for-websites-slides-fact-check/" target="_blank" rel="noopener">https://blog.google/technology/ai/notebooklm-goes-global-support-for-websites-slides-fact-check/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
