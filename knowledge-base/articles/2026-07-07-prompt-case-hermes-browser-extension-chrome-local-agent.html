@@ -1,0 +1,110 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prompt Case｜Hermes Browser Extension：把 Chrome 變成本機 Hermes Agent 終端</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Prompt Case｜Hermes Browser Extension：把 Chrome 變成本機 Hermes Agent 終端</h1><h1>Prompt Case｜Hermes Browser Extension：把 Chrome 變成本機 Hermes Agent 終端</h1>
+<h1>一句話摘要</h1>
+<p>Hermes Browser Extension 的重點不是「瀏覽器裡多一個聊天機器人」，而是把 Chrome / Edge / Chromium 的網頁上下文接到真正的 Hermes Agent runtime，讓瀏覽器成為本機 agent 工作流的入口。</p>
+<h1>Threads 貼文重點</h1>
+<p>Prompt Case 以「當 Chrome 遇上 Hermes Agent，我的瀏覽器直接進化成本機 AI 終端」為主軸，描述自己在 Perplexity / Comet 使用體驗下降後回到 Chrome，發現 `Hermes Agent Chrome Extension` 推出，安裝綁定後認為它與市面上常見 AI 瀏覽器不同。</p>
+<p>貼文的核心判斷是：一般 AI 瀏覽器多半是在網頁上加一層摘要、問答或側欄；Hermes Browser Extension 則是把全能本機 Hermes Agent 塞進瀏覽器，讓它除了看網頁、開分頁與一般瀏覽任務外，還能串接 Hermes 已有的本機能力：讀寫檔案、跑終端、寫程式、跑測試、使用記憶系統、skills、自動化任務等。</p>
+<p>作者在續串補充 GitHub 連結：`<a href="https://github.com/abundantbeing/hermes-browser-extension`，並提醒安裝不算複雜，可以把專案連結交給" target="_blank" rel="noopener">https://github.com/abundantbeing/hermes-browser-extension`，並提醒安裝不算複雜，可以把專案連結交給</a> Hermes Agent，請它協助 clone、安裝、設定 API 並寫一份簡短教學；但也必須注意安全，包含提示詞注入、權限設定與隔離保護。</p>
+<p>另一則續串提到，如果想安裝 Hermes Agent，本身已有電腦端應用程式與安裝文章可參考。</p>
+<h1>官方 / GitHub 交叉驗證</h1>
+<p>GitHub repo `abundantbeing/hermes-browser-extension` 的描述是：Browser-native side panel for Hermes Agent — connect web context to your local Hermes runtime。GitHub API 驗證：</p>
+<ul>
+<li>專案名稱：`abundantbeing/hermes-browser-extension`。</li>
+<li>作者 / 建立者：README 標示 Created by Jon Komet (`@abundantbeing`)。</li>
+<li>授權：MIT License。</li>
+<li>狀態：Public alpha。</li>
+<li>預設分支：main。</li>
+<li>觀察時間點 repo 約有 681 stars、53 forks。</li>
+</ul>
+<p>README 明確說明：Hermes Browser Extension 不是 browser chatbot，而是 Chrome / Edge / Chromium side panel，連到真正的 Hermes Agent runtime。它會與 Hermes Gateway / API server 溝通，預設連到本機，也可以設定遠端 URL；因此可使用 Hermes 中已設定好的 models、tools、skills、sessions、memory、MCP servers。</p>
+<p>`manifest.json` 驗證目前版本為 `0.1.9`，最低 Chrome 版本為 114，使用 Manifest V3，包含 `activeTab`、`scripting`、`sidePanel`、`storage`、`tabs` 權限；可選 `audioCapture`；並宣告 localhost / 127.0.0.1 與 http / https host permissions。</p>
+<h1>主要能力整理</h1>
+<p>根據 README 與 manifest，這個 extension 的能力可拆成幾層：</p>
+<ul>
+<li>瀏覽器上下文層</li>
+</ul>
+<p>   - 擷取活動分頁標題、URL、選取文字、可讀頁面文字、metadata、headings、forms、links、buttons。</p>
+<p>   - 可選擇 Chat only、跟隨 active tab、固定特定 tab 或選擇哪些開啟分頁進入 prompt。</p>
+<ul>
+<li>Hermes runtime 層</li>
+</ul>
+<p>   - 不是在 extension 內跑一個小模型，而是把請求送到 Hermes Gateway / API server。</p>
+<p>   - 因此可沿用 Hermes 的模型 provider、sessions、skills、memory、MCP、工具與本機工作流。</p>
+<ul>
+<li>工作流層</li>
+</ul>
+<p>   - 提供 `/summarize`、`/explain`、`/rewrite`、`/tabs`、`/action-items` 等 quick commands。</p>
+<p>   - 顯示「What Hermes saw」收據，讓使用者知道本回合帶入了哪些上下文。</p>
+<p>   - 串流 Hermes 回覆，並在必要時 fallback 到非串流 chat。</p>
+<ul>
+<li>安全 / 相容層</li>
+</ul>
+<p>   - 頁面內容會以 untrusted context 包裝，再送進 Hermes。</p>
+<p>   - 目前 v0.1.9 沒有 browser control / Runs UI / debugger / nativeMessaging。</p>
+<p>   - 有相容性面板與 diagnostics，讓較舊 gateway 以 fallback / manual 模式降級，而不是直接壞掉。</p>
+<h1>安裝與連線方式</h1>
+<p>README 的 quick start 是：</p>
+<ul>
+<li>`git clone <a href="https://github.com/abundantbeing/hermes-browser-extension.git`" target="_blank" rel="noopener">https://github.com/abundantbeing/hermes-browser-extension.git`</a></li>
+<li>`cd hermes-browser-extension`</li>
+<li>`npm install`</li>
+<li>`npm run build`</li>
+<li>在 Chrome / Edge 開 `chrome://extensions` 或 `edge://extensions`。</li>
+<li>啟用 Developer mode。</li>
+<li>Load unpacked，選擇產生的 `dist/` 資料夾，不是 repo root，也不是 `extension/`。</li>
+<li>開啟 side panel，連到 Hermes。</li>
+</ul>
+<p>本機 Hermes API server 建議設定在 `~/.hermes/.env`：</p>
+<ul>
+<li>`API_SERVER_ENABLED=true`</li>
+<li>`API_SERVER_HOST=127.0.0.1`</li>
+<li>`API_SERVER_PORT=8642`</li>
+<li>`API_SERVER_KEY=&lt;your-api-server-key&gt;`</li>
+<li>`API_SERVER_CORS_ORIGINS=chrome-extension://&lt;your-extension-id&gt;`</li>
+</ul>
+<p>README 也強調：遠端 API server 可以使用 LAN、Tailscale、VPN 或可信任 HTTPS reverse proxy，但不要把 Hermes API server 裸露到公網，因為它能存取真正的 Hermes runtime 與工具。</p>
+<h1>與一般 AI 瀏覽器的差異</h1>
+<p>Prompt Case 的觀察可以整理成一個判斷框架：</p>
+<ul>
+<li>一般 AI 瀏覽器：通常以「看目前網頁、摘要、問答、改寫」為主。</li>
+<li>Hermes Browser Extension：把網頁上下文接入本機 agent runtime，讓後續動作可以落到檔案、終端、程式碼、測試、skills、記憶、cron、MCP 與其他工具。</li>
+</ul>
+<p>因此它真正打破的是「網頁資料」與「本機工作流」之間的牆。看到一篇文件、issue、PR、dashboard、競品頁或課程頁時，使用者不必手動複製貼上到終端 agent；extension 可把可讀上下文送進 Hermes，再由 Hermes 做後續處理。</p>
+<h1>安全判讀與風險</h1>
+<p>這類工具的強大之處也是風險來源。建議使用時至少注意：</p>
+<ul>
+<li>不要截圖、列印、commit API key；安裝指令也應明確要求 agent 不得揭露 key。</li>
+<li>CORS origins 應只允許自己的 extension ID，不要放寬成萬用來源。</li>
+<li>遠端 API server 只放在可信任 LAN / Tailscale / VPN / HTTPS reverse proxy 後面，不要裸奔公網。</li>
+<li>把網頁內容視為不可信輸入，尤其是文件頁、論壇、issue、email、CRM、金融或付款相關頁面可能含提示詞注入。</li>
+<li>目前 public alpha 且未上架 Chrome Web Store，應以開源 repo / load unpacked 的實驗工具看待，定期檢查更新與 permissions。</li>
+<li>涉及本機檔案、終端、程式碼修改與測試時，仍應保留權限邊界、review 與 rollback 機制。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則貼文值得高優先度保存，因為它代表 Hermes 生態的一個重要方向：把 agent 從聊天平台與 CLI 擴展到瀏覽器現場。對欒帥的工作流來說，可延伸成幾個使用情境：</p>
+<ul>
+<li>看技術文章時，一鍵讓 Hermes 歸檔、驗證外部連結、產生知識庫筆記。</li>
+<li>看 GitHub repo 時，讓 Hermes 讀 README、檢查 install、建立本機 spike 或測試。</li>
+<li>看課程 / 活動 / landing page 時，直接整理成課程設計參考或市場案例。</li>
+<li>看錯誤訊息、文件或 SaaS dashboard 時，讓 Hermes 把網頁資訊和本機終端除錯串起來。</li>
+<li>在 Chrome 中把 Claude / Codex / Hermes 的分工變成一條可操作的 agentic workflow。</li>
+</ul>
+<h1>建議後續實作</h1>
+<p>若要實際採用，建議先走保守模式：</p>
+<ul>
+<li>只連本機 `127.0.0.1:8642`，不要先開遠端。</li>
+<li>產生獨立 API key，並限制 CORS 到 extension ID。</li>
+<li>先在低風險網頁測試 `/summarize`、`/explain`、`/action-items`。</li>
+<li>確認「What Hermes saw」內容合理，不把敏感資料送入 session。</li>
+<li>再逐步測試 GitHub repo、文件、知識庫歸檔等高價值工作流。</li>
+<li>若要接遠端 Hermes，優先用 Tailscale / VPN，不要裸露 API。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads：Prompt Case 分享 Hermes Agent Chrome Extension 使用體驗與 GitHub 連結。</li>
+<li>GitHub：`abundantbeing/hermes-browser-extension`。</li>
+<li>README：驗證 public alpha、load unpacked、local / remote Hermes API、完整 Hermes runtime tools、安全模型與 quick start。</li>
+<li>`manifest.json`：驗證 extension 版本、MV3、Chrome 114+、權限與 side panel 設定。</li>
+<li>`package.json`：驗證 npm scripts、Node &gt;= 20、MIT license 與 repo metadata。</li>
+<li>Hermes 官方文件：驗證 Hermes Agent 的 runtime、Gateway、tools、skills、memory、MCP 等能力基礎。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-07 · Threads · social-post</div><h3>標籤</h3><span class="tag">Hermes Agent</span><span class="tag">Hermes Browser Extension</span><span class="tag">Chrome Extension</span><span class="tag">AI Browser</span><span class="tag">Local Agent</span><span class="tag">Browser Automation</span><span class="tag">Codex</span><span class="tag">Skills</span><span class="tag">MCP</span><h3>原始連結</h3><p><a href="https://www.threads.com/@prompt_case/post/Daecxt4jcnE?xmt=AQG08AqQ9ATTVXYl6RetJhuuquPwJrORAVzLrNnP_Sa6SEpJaJ96gjj3BAEHlq4HLpJi_9uo&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/Daecxt4jcnE?xmt=AQG08AqQ9ATTVXYl6RetJhuuquPwJrORAVzLrNnP_Sa6SEpJaJ96gjj3BAEHlq4HLpJi_9uo&amp;slof=1</a></p><p><a href="https://www.threads.com/@prompt_case/post/Daecxt4jcnE" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/Daecxt4jcnE</a></p><p><a href="https://www.threads.com/@prompt_case/post/Daecxt4jcnE" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/Daecxt4jcnE</a></p><p><a href="https://www.threads.com/@prompt_case/post/Daec_sVlEY4" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/Daec_sVlEY4</a></p><p><a href="https://www.threads.com/@prompt_case/post/DaeeK0TFP1O" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DaeeK0TFP1O</a></p><p><a href="https://github.com/abundantbeing/hermes-browser-extension" target="_blank" rel="noopener">https://github.com/abundantbeing/hermes-browser-extension</a></p><p><a href="https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/manifest.json" target="_blank" rel="noopener">https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/manifest.json</a></p><p><a href="https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/package.json" target="_blank" rel="noopener">https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/package.json</a></p><p><a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

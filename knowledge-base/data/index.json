@@ -388,6 +388,43 @@
     "markdown": "articles/2026/07/2026-07-07-nickyhsieh-claude-fable-5-five-use-cases-token-strategy.md"
   },
   {
+    "title": "Prompt Case｜Hermes Browser Extension：把 Chrome 變成本機 Hermes Agent 終端",
+    "date": "2026-07-07",
+    "source": "Threads",
+    "author": "prompt_case / Prompt Case",
+    "type": "social-post",
+    "topics": [
+      "Hermes Agent",
+      "Hermes Browser Extension",
+      "Chrome Extension",
+      "AI Browser",
+      "Local Agent",
+      "Browser Automation",
+      "Codex",
+      "Skills",
+      "MCP"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/Daecxt4jcnE?xmt=AQG08AqQ9ATTVXYl6RetJhuuquPwJrORAVzLrNnP_Sa6SEpJaJ96gjj3BAEHlq4HLpJi_9uo&slof=1",
+      "https://www.threads.com/@prompt_case/post/Daecxt4jcnE",
+      "https://www.threads.com/@prompt_case/post/Daecxt4jcnE",
+      "https://www.threads.com/@prompt_case/post/Daec_sVlEY4",
+      "https://www.threads.com/@prompt_case/post/DaeeK0TFP1O",
+      "https://github.com/abundantbeing/hermes-browser-extension",
+      "https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/README.md",
+      "https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/manifest.json",
+      "https://raw.githubusercontent.com/abundantbeing/hermes-browser-extension/main/package.json",
+      "https://hermes-agent.nousresearch.com/docs"
+    ],
+    "excerpt": "Hermes Browser Extension 的重點不是「瀏覽器裡多一個聊天機器人」，而是把 Chrome / Edge / Chromium 的網頁上下文接到真正的 Hermes Agent runtime，讓瀏覽器成為本機 agent 工作流的入口。",
+    "slug": "2026-07-07-prompt-case-hermes-browser-extension-chrome-local-agent",
+    "html": "articles/2026-07-07-prompt-case-hermes-browser-extension-chrome-local-agent.html",
+    "markdown": "articles/2026/07/2026-07-07-prompt-case-hermes-browser-extension-chrome-local-agent.md"
+  },
+  {
     "title": "Prompt Case｜Superpowers 6.0：Codex 高頻使用的 Agentic Skills 方法論與低 token 開發流程",
     "date": "2026-07-07",
     "source": "Threads",
