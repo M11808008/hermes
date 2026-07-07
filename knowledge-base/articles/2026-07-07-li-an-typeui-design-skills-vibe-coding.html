@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>李安｜TypeUI Design Skills：讓 Vibe Coding 網站少一點 AI 味</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>李安｜TypeUI Design Skills：讓 Vibe Coding 網站少一點 AI 味</h1><h1>李安｜TypeUI Design Skills：讓 Vibe Coding 網站少一點 AI 味</h1>
+<h1>一句話摘要</h1>
+<p>TypeUI 的價值不是「再給 AI 一段漂亮 prompt」，而是把網站設計風格整理成可安裝、可重複引用的 design skill，讓 agent 生成 UI 時少一點模板感、多一點一致設計語言。</p>
+<h1>Facebook Reel 重點</h1>
+<p>這支 Reel 的貼文文字為：「讓 Vibe coding 網頁少一點 AI 味。TypeUI 有現成的網頁設計風格 skill，下載後再安裝到 AI Agent 生成網站。TypeUI 免費帳號有額度使用限制。」</p>
+<p>影片畫面可見 AI coding / agent 介面提示「What should we get done?」，整體是在示範把 TypeUI 的設計風格 skill 導入 AI Agent，讓 agent 產出的網站不只完成結構，也能帶入特定視覺風格。</p>
+<h1>官方資料交叉驗證</h1>
+<p>TypeUI 官方定位是「Build better UI with AI」：提供 design skills、UI prompts 與其他資源，強化 AI 在建立網站與應用程式介面時的設計能力。GitHub README 說明，TypeUI 資源可搭配任何支援 Markdown 檔或一般 prompting 的 AI provider。</p>
+<p>官方 GitHub repo `bergside/typeui` 驗證幾個重點：</p>
+<ul>
+<li>TypeUI 可用於 Codex、Claude、Cursor、Grok、Z.ai、Hermes、OpenCode、VS Code、GitHub Copilot、Windsurf、Zed 等工具。</li>
+<li>TypeUI 提供 hosted Streamable HTTP MCP server：`<a href="https://mcp.typeui.sh`。" target="_blank" rel="noopener">https://mcp.typeui.sh`。</a></li>
+<li>`package.json` 顯示 npm package `typeui.sh` 用途是「Generate design system specifications and style guides as skill files for AI coding providers」。</li>
+<li>`REGISTRY.md` 顯示 CLI 的 `list` 與 `pull` 會從 `bergside/awesome-design-skills` 的 index 讀取 design skill，並可抓取 `SKILL.md` 或 `DESIGN.md`。</li>
+<li>`DESIGN.md` 是 design system skill blueprint，要求設計規則包含 tokens、元件狀態、accessibility、anti-patterns 與 QA checklist。</li>
+</ul>
+<h1>它解決的 Vibe Coding 問題</h1>
+<p>一般 AI 生成網頁常見問題不是「做不出來」，而是：</p>
+<ul>
+<li>視覺語言過於平均，像同一批 AI landing page 模板。</li>
+<li>版面、字級、間距、色彩、元件狀態缺乏一致規範。</li>
+<li>使用者只描述「做得高級一點」，agent 難以轉成可執行規則。</li>
+<li>同一專案多次生成時，風格容易漂移。</li>
+</ul>
+<p>TypeUI 的 design skill 把風格變成可重複載入的規格，讓 agent 從「自由發揮」變成「在某個設計系統內生成」。這對 landing page、課程頁、SaaS dashboard、活動頁、個人品牌頁都很實用。</p>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則內容適合放在「從 vibe coding 到可控 UI 生成」的教學脈絡：</p>
+<ul>
+<li>初學者可以先選一個 TypeUI design skill，讓 AI 產出更穩定的第一版。</li>
+<li>進階使用者可把自己的品牌風格整理成 `DESIGN.md` 或 skill file，交給 Claude / Codex / Cursor 等 agent 固定遵守。</li>
+<li>課程示範可做成對照：同一個網站需求，一次不用 design skill，一次套用 TypeUI，讓學生直觀看出差異。</li>
+<li>對欒帥的高質感設計偏好，TypeUI 可作為「生成式 UI 的風格控制層」，補足純 prompt 不穩定的問題。</li>
+</ul>
+<h1>實作提醒</h1>
+<ul>
+<li>不要只下載 skill 後就期待 agent 一定做對；仍應要求 agent 產出設計意圖、tokens、元件狀態與響應式規則。</li>
+<li>若用於商業案，需確認 TypeUI 免費 / Pro 資源、下載額度與授權限制；Reel 也提醒免費帳號有額度限制。</li>
+<li>若網站已有品牌規範，應把 TypeUI skill 當作初稿或補強，而不是覆蓋既有品牌手冊。</li>
+<li>最佳做法是把 design skill 放進專案規則或 agent 可讀取的位置，並在任務中明確要求：「依照此 design skill 生成 UI，完成後列出遵守哪些規則。」</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Facebook Reel：李安分享 TypeUI design skill 可讓 vibe coding 網頁少一點 AI 味。</li>
+<li>TypeUI 官方網站：定位為 AI-first UI 平台，提供 design skills、UI prompts 與 MCP / plugin 整合。</li>
+<li>GitHub：`bergside/typeui`，提供 README、MCP 安裝說明、registry 規則、package 與 design-system skill blueprint。</li>
+<li>Brave Search 驗證：官方搜尋結果顯示 TypeUI design skills 頁面面向 Claude、Codex、Cursor 等 AI coding tools，並提供多種設計風格 skill。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-07 · Facebook Reel · social-video</div><h3>標籤</h3><span class="tag">TypeUI</span><span class="tag">Design Skills</span><span class="tag">Vibe Coding</span><span class="tag">AI Coding</span><span class="tag">Web Design</span><span class="tag">UI Design</span><span class="tag">Claude</span><span class="tag">Codex</span><span class="tag">MCP</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/v/17hgA375x9/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/17hgA375x9/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/1756438159113406" target="_blank" rel="noopener">https://www.facebook.com/reel/1756438159113406</a></p><p><a href="https://www.facebook.com/reel/1756438159113406" target="_blank" rel="noopener">https://www.facebook.com/reel/1756438159113406</a></p><p><a href="https://www.typeui.sh/" target="_blank" rel="noopener">https://www.typeui.sh/</a></p><p><a href="https://www.typeui.sh/design-skills" target="_blank" rel="noopener">https://www.typeui.sh/design-skills</a></p><p><a href="https://www.typeui.sh/blog/design-skills-for-claude" target="_blank" rel="noopener">https://www.typeui.sh/blog/design-skills-for-claude</a></p><p><a href="https://github.com/bergside/typeui" target="_blank" rel="noopener">https://github.com/bergside/typeui</a></p><p><a href="https://raw.githubusercontent.com/bergside/typeui/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/bergside/typeui/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/bergside/typeui/main/REGISTRY.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/bergside/typeui/main/REGISTRY.md</a></p><p><a href="https://raw.githubusercontent.com/bergside/typeui/main/llms-install.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/bergside/typeui/main/llms-install.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

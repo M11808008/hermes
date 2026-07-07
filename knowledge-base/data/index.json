@@ -213,6 +213,43 @@
     "markdown": "articles/2026/07/2026-07-07-krumjahn-quickchat-ai-agent-mcp-server.md"
   },
   {
+    "title": "李安｜TypeUI Design Skills：讓 Vibe Coding 網站少一點 AI 味",
+    "date": "2026-07-07",
+    "source": "Facebook Reel",
+    "author": "李安",
+    "type": "social-video",
+    "topics": [
+      "TypeUI",
+      "Design Skills",
+      "Vibe Coding",
+      "AI Coding",
+      "Web Design",
+      "UI Design",
+      "Claude",
+      "Codex",
+      "MCP"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/17hgA375x9/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1756438159113406",
+      "https://www.facebook.com/reel/1756438159113406",
+      "https://www.typeui.sh/",
+      "https://www.typeui.sh/design-skills",
+      "https://www.typeui.sh/blog/design-skills-for-claude",
+      "https://github.com/bergside/typeui",
+      "https://raw.githubusercontent.com/bergside/typeui/main/README.md",
+      "https://raw.githubusercontent.com/bergside/typeui/main/REGISTRY.md",
+      "https://raw.githubusercontent.com/bergside/typeui/main/llms-install.md"
+    ],
+    "excerpt": "TypeUI 的價值不是「再給 AI 一段漂亮 prompt」，而是把網站設計風格整理成可安裝、可重複引用的 design skill，讓 agent 生成 UI 時少一點模板感、多一點一致設計語言。",
+    "slug": "2026-07-07-li-an-typeui-design-skills-vibe-coding",
+    "html": "articles/2026-07-07-li-an-typeui-design-skills-vibe-coding.html",
+    "markdown": "articles/2026/07/2026-07-07-li-an-typeui-design-skills-vibe-coding.md"
+  },
+  {
     "title": "侖｜Claude Agent 接管 Instagram DM 點餐：餐廳固定菜單的 AI 訂單自動化架構",
     "date": "2026-07-07",
     "source": "Threads",
