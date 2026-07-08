@@ -34,6 +34,44 @@
     "markdown": "articles/2026/07/2026-07-08-ai-mastery-claude-phd-research-nine-prompts.md"
   },
   {
+    "title": "數位時代｜ChatGPT Agent 使用教學：開啟方式、方案額度、4 個工作情境與安全限制",
+    "date": "2026-07-08",
+    "source": "數位時代 / Brave Search / OpenAI Help Center",
+    "author": "蘇柔瑋",
+    "type": "article",
+    "topics": [
+      "ChatGPT Agent",
+      "OpenAI",
+      "AI Agent",
+      "Operator",
+      "Deep Research",
+      "Connectors",
+      "Workflow Automation",
+      "AI Productivity",
+      "Prompt Engineering",
+      "AI Safety"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial",
+      "https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial",
+      "https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial",
+      "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+      "https://openai.com/index/introducing-chatgpt-agent/",
+      "https://openai.com/index/chatgpt-agent-system-card/",
+      "https://www.bnext.com.tw/article/83918/chatgpt-agent-openai",
+      "https://www.bnext.com.tw/article/90840/getting-started-with-codex-as-your-ai-work-agent",
+      "https://www.bnext.com.tw/article/91400/chatgpt-memory-tutorial",
+      "https://www.bnext.com.tw/article/91370/chatgpt-projects-tutorial"
+    ],
+    "excerpt": "ChatGPT Agent 的重點不是「回答得更完整」，而是把研究、瀏覽、檔案處理、資料分析與部分操作放進同一個可監督的工作環境；但它越能代勞，越需要清楚的任務邊界、資料權限與人工確認。",
+    "slug": "2026-07-08-bnext-chatgpt-agent-tutorial-usage-limits-safety",
+    "html": "articles/2026-07-08-bnext-chatgpt-agent-tutorial-usage-limits-safety.html",
+    "markdown": "articles/2026/07/2026-07-08-bnext-chatgpt-agent-tutorial-usage-limits-safety.md"
+  },
+  {
     "title": "數位時代｜Physical AI 應用崛起：勤崴國際如何打造台灣智慧移動國家隊",
     "date": "2026-07-08",
     "source": "數位時代 BusinessNext / Sponsored",

@@ -1,0 +1,159 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>數位時代｜ChatGPT Agent 使用教學：開啟方式、方案額度、4 個工作情境與安全限制</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>數位時代｜ChatGPT Agent 使用教學：開啟方式、方案額度、4 個工作情境與安全限制</h1><h1>數位時代｜ChatGPT Agent 使用教學：開啟方式、方案額度、4 個工作情境與安全限制</h1>
+<h1>一句話摘要</h1>
+<p>ChatGPT Agent 的重點不是「回答得更完整」，而是把研究、瀏覽、檔案處理、資料分析與部分操作放進同一個可監督的工作環境；但它越能代勞，越需要清楚的任務邊界、資料權限與人工確認。</p>
+<h1>來源脈絡</h1>
+<p>數位時代於 2026-07-07 發布〈ChatGPT Agent怎麼用？3步驟開啟、免費付費版限制、4個好用情境指令教學一次看〉，定位為上班族入門教學，內容涵蓋：</p>
+<ul>
+<li>ChatGPT Agent 與一般 ChatGPT 對話的差異。</li>
+<li>免費版、Go、Plus、Pro、Business、Enterprise / Edu 的可用性與額度。</li>
+<li>如何從工具選單或 `/agent` 開啟 Agent 模式。</li>
+<li>4 個常見工作情境的指令範例。</li>
+<li>使用 Agent 前應知道的安全限制。</li>
+<li>如何搭配 ChatGPT 記憶與 Projects 功能提升穩定度。</li>
+</ul>
+<p>本筆記使用 Brave Search 交叉查核 OpenAI Help Center、OpenAI 官方發布文與 System Card，確認方案額度、工具能力與安全限制。</p>
+<h1>ChatGPT Agent 是什麼</h1>
+<p>數位時代文章把一般 ChatGPT 與 Agent 模式的差異說得很直觀：</p>
+<ul>
+<li>一般 ChatGPT：主要回答問題、整理資訊、產生文字。</li>
+<li>ChatGPT Agent：在虛擬環境中代替使用者執行任務。</li>
+</ul>
+<p>OpenAI 官方說法也一致：ChatGPT agent 可協助完成複雜線上任務，包含 reasoning、researching 與 taking actions。它可使用的工具包括：</p>
+<ul>
+<li>Visual browser：互動式瀏覽網站。</li>
+<li>Text / web browsing：搜尋與讀取網頁資訊。</li>
+<li>Code interpreter / terminal：執行程式、資料分析、產生檔案。</li>
+<li>Apps / Connectors：連接 Gmail、Google Drive、GitHub 等外部資料源，視方案與權限而定。</li>
+<li>檔案處理：讀取上傳檔案，產出簡報、試算表或報告。</li>
+</ul>
+<p>OpenAI 官方發布文則說，ChatGPT Agent 是把 Operator 的網站操作能力、Deep Research 的多步研究能力、ChatGPT 的對話能力與工具使用整合成 unified agentic system。</p>
+<h1>方案與額度：官方 Help Center 驗證</h1>
+<p>數位時代整理的方案限制與 OpenAI Help Center 大致一致。依官方 Help Center 觀察：</p>
+<p>| 方案 | Agent 可用性 / 額度 |</p>
+<p>| --- | --- |</p>
+<p>| Free | 目前不支援 Agent mode |</p>
+<p>| Go | 數位時代列為不支援；實際仍應以 ChatGPT 介面與官方說明為準 |</p>
+<p>| Plus | 每月 40 次 Agent messages / requests |</p>
+<p>| Pro | 每月 400 次 Agent messages / requests |</p>
+<p>| Business / Enterprise | 每月 40 次；若採 Flexible Pricing，則每次 30 credits |</p>
+<p>| Enterprise / Edu | 組織管理員可控管啟用與權限 |</p>
+<p>重要細節：</p>
+<ul>
+<li>只有「使用者初始發起的 Agent 任務」計入每月額度。</li>
+<li>同一任務中的中途澄清、登入確認、人工接管等不另計一次。</li>
+<li>每個 unique agent invocation 都會計入，包含 Scheduled Tasks 觸發的 agent requests。</li>
+<li>實際限制可能受服務狀況、區域、方案與 OpenAI 調整影響，需以官方 Help Center 和帳號介面為準。</li>
+</ul>
+<h1>開啟方式：3 步驟</h1>
+<p>數位時代文章整理的啟動流程如下：</p>
+<h2>Step 1：從工具選單或 `/agent` 啟動</h2>
+<p>在 ChatGPT 對話框下方工具列選擇「智慧體模式 / Agent mode」，或在輸入框輸入 `/agent`。</p>
+<p>若看不到 Agent 選項，通常代表：</p>
+<ul>
+<li>帳號方案尚不支援。</li>
+<li>功能尚未開放到該帳號或地區。</li>
+<li>組織管理員未啟用。</li>
+</ul>
+<h2>Step 2：輸入任務</h2>
+<p>Agent 適合接「有明確成果物」的任務，例如：整理資料、比較產品、規劃行程、製作簡報、分析表格、撰寫報告。</p>
+<p>範例：</p>
+<p>&gt; 幫我整理今天 AI 領域的重要新聞，找出五篇最值得看的報導，整理重點，最後做成一份 10 頁簡報。</p>
+<h2>Step 3：監看進度、補充需求、必要時接手</h2>
+<p>Agent 執行時會顯示處理進度。使用者可中途補充條件，例如「再加入台灣媒體的觀點」。若遇到登入、付款、送出表單或其他敏感操作，Agent 會暫停，要求使用者接手或確認。</p>
+<h1>4 個工作情境與指令範例</h1>
+<p>數位時代列出 4 個上班族常見情境，可視為 Agent prompt 起手式：</p>
+<h2>1. 數據截圖轉簡報</h2>
+<p>用途：把儀表板或報表截圖轉成可簡報的內容。</p>
+<p>範例：</p>
+<p>&gt; 把這張儀表板螢幕截圖整理成 5 頁簡報，每頁聚焦一個重點，並附上對應的具體數字。</p>
+<h2>2. 主題深度研究報告</h2>
+<p>用途：會議前快速補背景、整理多方資料來源。</p>
+<p>範例：</p>
+<p>&gt; 幫我查「2026 年台灣電動機車市場」的最新市占率與補助政策，整理成一份 1,000 字摘要，並明確列出資料來源。</p>
+<h2>3. 旅遊行程規劃與篩選</h2>
+<p>用途：查詢最新價格、空房、地點條件，產出候選清單。</p>
+<p>範例：</p>
+<p>&gt; 幫我規劃 8 月中旬東京 4 天 3 夜行程，找兩間車站附近、每晚台幣 4,000 元以內的旅館，列出選項讓我挑。</p>
+<h2>4. 摘要信件與行事曆</h2>
+<p>用途：搭配 Connectors，彙整信件、會議與待辦。</p>
+<p>範例：</p>
+<p>&gt; 摘要我今天收到的未讀郵件重點，並整理出需要我優先回覆的三封信。</p>
+<h1>安全限制：越能代勞，越要管權限</h1>
+<p>OpenAI Help Center 與 System Card 都強調，Agent 的能力越接近「替你操作電腦」，風險也越高。應特別注意：</p>
+<h2>1. 敏感動作需人工授權</h2>
+<p>登入帳號、下載檔案、送出資料、付款下單、修改設定等高影響操作，Agent 應先請求使用者確認。OpenAI 也提供 takeover mode，讓使用者在虛擬瀏覽器中自行輸入密碼或敏感資訊。</p>
+<h2>2. Prompt injection 風險</h2>
+<p>Agent 會讀網頁、信件、文件與外部資料。若外部內容包含惡意指令，可能試圖誘導 Agent 洩漏資料或執行不該做的事。官方建議：</p>
+<ul>
+<li>不要給過於模糊、開放式的任務，例如「檢查我的 email 並處理所有事情」。</li>
+<li>停用不必要的 connectors / apps。</li>
+<li>避免登入高敏感帳號。</li>
+<li>使用後清除遠端瀏覽器資料。</li>
+</ul>
+<h2>3. Connectors 與雲端資料限制</h2>
+<p>官方 Help Center 提到 Agent 可透過 apps / connectors 使用額外資料源；但某些即時同步型資料或企業控管資料可能受限制。Enterprise / Edu 工作區也可由管理員控制 Agent mode、app availability、RBAC 與資料保留策略。</p>
+<h2>4. Plus / Pro 與企業資料處理差異</h2>
+<p>官方說明中，Business / Enterprise / Edu 預設不使用企業資料訓練模型；Plus / Pro 的資料與 screenshots 則依 OpenAI 隱私政策與 Data Controls 設定處理。若使用 Agent 處理公司資料，應優先使用企業方案或至少確認資料控制設定。</p>
+<h1>進階用法：記憶 + Projects + Agent</h1>
+<p>數位時代建議搭配 ChatGPT 記憶與 Projects 功能，這點很實用：</p>
+<ul>
+<li>記憶：保存個人背景、偏好語氣、常用格式、職務脈絡。</li>
+<li>Projects：把特定品牌素材、專案資料、固定指令、風格規範集中在同一工作區。</li>
+<li>Agent：在上述脈絡中執行研究、整理、產出與操作。</li>
+</ul>
+<p>這相當於把「一次性的代理任務」升級成「有上下文的工作流」。對 AI 學習雷達來說，可對應到：</p>
+<ul>
+<li>每次歸檔都使用固定 frontmatter、標籤、驗證來源與部署流程。</li>
+<li>每次課程頁或報名名單處理都使用固定隱私邊界與輸出格式。</li>
+<li>每次新聞整理都要求引用來源、交叉驗證與行動建議。</li>
+</ul>
+<h1>AI 學習雷達的實踐判讀</h1>
+<p>這篇是入門教學，但背後可延伸成更重要的 agent 使用原則：</p>
+<h2>適合交給 Agent 的任務</h2>
+<ul>
+<li>需要多步搜尋、比對與整理。</li>
+<li>需要產出具體檔案：簡報、試算表、報告、清單。</li>
+<li>需要跨網站蒐集資料，但不涉及高風險交易。</li>
+<li>使用者能清楚定義驗收標準。</li>
+</ul>
+<h2>不適合完全放手的任務</h2>
+<ul>
+<li>金融交易、付款、訂票下單、法律或醫療決策。</li>
+<li>需要登入高度敏感帳號的任務。</li>
+<li>權限邊界不清的「幫我處理所有 email / drive / files」。</li>
+<li>結果需要專業責任背書，但缺乏人類 review 的任務。</li>
+</ul>
+<h2>好的 Agent 任務格式</h2>
+<p>建議使用：</p>
+<ul>
+<li>目標：要完成什麼。</li>
+<li>範圍：可查哪些來源、不可碰哪些資料。</li>
+<li>成果物：要交出簡報、表格、報告或清單。</li>
+<li>驗收條件：字數、頁數、格式、引用、檢查項目。</li>
+<li>風險邊界：登入、付款、送出表單前必須停下確認。</li>
+</ul>
+<p>範例：</p>
+<p>&gt; 請研究 2026 年台灣電動機車市場。只使用政府、車廠公告與主流媒體來源；不要登入任何網站。輸出一份 1,000 字摘要、5 點趨勢、3 個風險與來源表格。若需要下載檔案或提交表單，先停下問我。</p>
+<h1>與前一篇 Fable / Codex Orchestrator 工作流的關聯</h1>
+<p>今天稍早歸檔的「Fable 5 orchestrator + Codex executor + Gemini reviewer」貼文談的是工程型 multi-agent 分工；這篇 ChatGPT Agent 則是一般使用者的 agentic task 入門。</p>
+<p>兩者共同點：</p>
+<ul>
+<li>不要只把 AI 當聊天機器人。</li>
+<li>任務要有明確 done definition。</li>
+<li>外部工具與瀏覽器能力會放大產能，也放大風險。</li>
+<li>人類仍需掌握授權、驗收、風險與最終責任。</li>
+</ul>
+<p>差異在於：</p>
+<ul>
+<li>ChatGPT Agent：適合一般知識工作、研究、整理、文件與輕量操作。</li>
+<li>Fable / Codex multi-agent workflow：適合大型工程任務、跨檔案修復、測試、review 與部署收斂。</li>
+</ul>
+<h1>原始連結與驗證來源</h1>
+<ul>
+<li>數位時代原文：<a href="https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial</a></li>
+<li>OpenAI Help Center：ChatGPT agent：<a href="https://help.openai.com/en/articles/11752874-chatgpt-agent" target="_blank" rel="noopener">https://help.openai.com/en/articles/11752874-chatgpt-agent</a></li>
+<li>OpenAI 官方發布：Introducing ChatGPT agent：<a href="https://openai.com/index/introducing-chatgpt-agent/" target="_blank" rel="noopener">https://openai.com/index/introducing-chatgpt-agent/</a></li>
+<li>OpenAI System Card：<a href="https://openai.com/index/chatgpt-agent-system-card/" target="_blank" rel="noopener">https://openai.com/index/chatgpt-agent-system-card/</a></li>
+</ul>
+<h1>保存價值</h1>
+<p>這篇適合放入 AI 學習雷達的「Agent 入門與工作流設計」類別，作為一般使用者理解 ChatGPT Agent 的基礎參考。它補上了方案額度、開啟方式與日常情境；而官方文件交叉驗證則補上安全、資料權限與 prompt injection 風險，避免只把 Agent 視為「會自動幫我做事」的萬能工具。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · 數位時代 / Brave Search / OpenAI Help Center · article</div><h3>標籤</h3><span class="tag">ChatGPT Agent</span><span class="tag">OpenAI</span><span class="tag">AI Agent</span><span class="tag">Operator</span><span class="tag">Deep Research</span><span class="tag">Connectors</span><span class="tag">Workflow Automation</span><span class="tag">AI Productivity</span><span class="tag">Prompt Engineering</span><span class="tag">AI Safety</span><h3>原始連結</h3><p><a href="https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial</a></p><p><a href="https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial</a></p><p><a href="https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91417/chatgpt-agent-tutorial</a></p><p><a href="https://help.openai.com/en/articles/11752874-chatgpt-agent" target="_blank" rel="noopener">https://help.openai.com/en/articles/11752874-chatgpt-agent</a></p><p><a href="https://openai.com/index/introducing-chatgpt-agent/" target="_blank" rel="noopener">https://openai.com/index/introducing-chatgpt-agent/</a></p><p><a href="https://openai.com/index/chatgpt-agent-system-card/" target="_blank" rel="noopener">https://openai.com/index/chatgpt-agent-system-card/</a></p><p><a href="https://www.bnext.com.tw/article/83918/chatgpt-agent-openai" target="_blank" rel="noopener">https://www.bnext.com.tw/article/83918/chatgpt-agent-openai</a></p><p><a href="https://www.bnext.com.tw/article/90840/getting-started-with-codex-as-your-ai-work-agent" target="_blank" rel="noopener">https://www.bnext.com.tw/article/90840/getting-started-with-codex-as-your-ai-work-agent</a></p><p><a href="https://www.bnext.com.tw/article/91400/chatgpt-memory-tutorial" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91400/chatgpt-memory-tutorial</a></p><p><a href="https://www.bnext.com.tw/article/91370/chatgpt-projects-tutorial" target="_blank" rel="noopener">https://www.bnext.com.tw/article/91370/chatgpt-projects-tutorial</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
