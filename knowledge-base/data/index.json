@@ -147,6 +147,43 @@
     "markdown": "articles/2026/07/2026-07-08-chichieh-huang-mcp-productization-capability-surface-agent-backed-tools.md"
   },
   {
+    "title": "零度博客｜OpenAI Codex + Ollama：本地模型接管 AI 編程 Agent 的免費工作流判讀",
+    "date": "2026-07-08",
+    "source": "零度博客 / Brave Search / Ollama Docs / OpenAI Developers",
+    "author": "零度解說",
+    "type": "article",
+    "topics": [
+      "Codex CLI",
+      "Ollama",
+      "Local LLM",
+      "AI Coding Agent",
+      "Open Source Models",
+      "GPT OSS",
+      "Developer Tools",
+      "Agentic Coding",
+      "BYOK"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.freedidi.com/24310.html",
+      "https://www.freedidi.com/24310.html",
+      "https://www.freedidi.com/24310.html",
+      "https://docs.ollama.com/integrations/codex",
+      "https://ollama.com/blog/codex",
+      "https://developers.openai.com/codex/cli/reference",
+      "https://developers.openai.com/codex/config-advanced",
+      "https://developers.openai.com/codex/config-reference",
+      "https://ollama.com/library/gpt-oss",
+      "https://www.npmjs.com/package/@openai/codex"
+    ],
+    "excerpt": "這篇的核心價值是：Codex CLI 現在可以透過 Ollama 跑本地開源模型，讓 AI coding agent 不一定依賴 OpenAI API；但「徹底免費」是行銷式說法，正確理解應是「本地推理免 API token，但要自行承擔硬體、速度、模型品質與安全邊界」。",
+    "slug": "2026-07-08-freedidi-openai-codex-ollama-local-ai-coding-agent",
+    "html": "articles/2026-07-08-freedidi-openai-codex-ollama-local-ai-coding-agent.html",
+    "markdown": "articles/2026/07/2026-07-08-freedidi-openai-codex-ollama-local-ai-coding-agent.md"
+  },
+  {
     "title": "黃仁靖｜Fable 5 省 Token 工作流：最強模型當 Orchestrator，Codex 寫 Code，Gemini 做 Reviewer",
     "date": "2026-07-08",
     "source": "Facebook / Brave Search",

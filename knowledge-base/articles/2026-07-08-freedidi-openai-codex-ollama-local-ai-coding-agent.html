@@ -1,0 +1,195 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>零度博客｜OpenAI Codex + Ollama：本地模型接管 AI 編程 Agent 的免費工作流判讀</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>零度博客｜OpenAI Codex + Ollama：本地模型接管 AI 編程 Agent 的免費工作流判讀</h1><h1>零度博客｜OpenAI Codex + Ollama：本地模型接管 AI 編程 Agent 的免費工作流判讀</h1>
+<h1>一句話摘要</h1>
+<p>這篇的核心價值是：Codex CLI 現在可以透過 Ollama 跑本地開源模型，讓 AI coding agent 不一定依賴 OpenAI API；但「徹底免費」是行銷式說法，正確理解應是「本地推理免 API token，但要自行承擔硬體、速度、模型品質與安全邊界」。</p>
+<h1>來源與擷取狀態</h1>
+<p>使用者分享連結：</p>
+<p><a href="https://www.freedidi.com/24310.html" target="_blank" rel="noopener">https://www.freedidi.com/24310.html</a></p>
+<p>直接抓取與 Jina Reader 皆遇到 Cloudflare security verification，因此無法完整取得原文正文。Brave Search 可驗證文章標題與摘要片段：</p>
+<ul>
+<li>標題：OpenAI Codex 彻底免费了！Ollama 接管 AI 编程 Agent，本地大模型开始自动干活！真爽</li>
+<li>摘要重點：過去很多人認為 OpenAI Codex、Claude Code、Cursor Agent 等 AI 編程工具必須依賴雲端 API；現在最新版 Ollama 已正式支援接入 Codex App / Codex CLI，本地模型可以直接變成 AI 自動編程 Agent。</li>
+</ul>
+<p>本筆記依 Brave Search 片段確認主題，再交叉查核 Ollama 官方文件、Ollama Blog 與 OpenAI Developers Codex CLI 文件，不將未能抓取的原文細節當成已驗證事實。</p>
+<h1>文章主張：Codex 不一定要走雲端 API</h1>
+<p>零度博客這篇文章的主張可整理為：</p>
+<ul>
+<li>AI 編程 Agent 過去多半綁定雲端模型與 API 額度。</li>
+<li>Codex / Claude Code / Cursor Agent 等工具之所以強，是因為背後有高能力模型與工具執行環境。</li>
+<li>Ollama 新增與 Codex 的整合後，本地開源模型可以被 Codex CLI / Codex App 調用。</li>
+<li>因此，本地模型也能讀取專案、建立檔案、修改 HTML / CSS / JavaScript、執行任務，變成「可自動幹活」的 coding agent。</li>
+</ul>
+<p>這對 AI 學習雷達來說值得保存，因為它代表 AI coding agent 正在從「雲端訂閱 / API token」擴展到「本地模型 + agent shell」的混合架構。</p>
+<h1>官方驗證：Ollama 確實支援 Codex CLI</h1>
+<p>Ollama 官方文件〈Codex CLI - Ollama〉給出明確用法：</p>
+<p>```bash</p>
+<p>npm install -g @openai/codex</p>
+<p>```</p>
+<p>快速啟動：</p>
+<p>```bash</p>
+<p>ollama launch codex</p>
+<p>```</p>
+<p>手動用 Codex CLI 走 Ollama / open-source provider：</p>
+<p>```bash</p>
+<p>codex --oss</p>
+<p>```</p>
+<p>指定模型：</p>
+<p>```bash</p>
+<p>codex --oss -m gpt-oss:120b</p>
+<p>```</p>
+<p>也可建立 profile，例如 `~/.codex/ollama-launch.config.toml`：</p>
+<p>```toml</p>
+<p>model = &quot;gpt-oss:120b&quot;</p>
+<p>model_provider = &quot;ollama-launch&quot;</p>
+<p>model_catalog_json = &quot;/Users/you/.codex/model.json&quot;</p>
+<p>[model_providers.ollama-launch]</p>
+<p>name = &quot;Ollama&quot;</p>
+<p>base_url = &quot;<a href="http://localhost:11434/v1/&quot;" target="_blank" rel="noopener">http://localhost:11434/v1/&quot;</a></p>
+<p>wire_api = &quot;responses&quot;</p>
+<p>```</p>
+<p>然後執行：</p>
+<p>```bash</p>
+<p>codex --profile ollama-launch</p>
+<p>```</p>
+<p>Ollama Blog 也說明：Open models can be used with OpenAI’s Codex CLI through Ollama；Codex 可以 read、modify、execute code in your working directory。預設使用 local `gpt-oss:20b`，也可切換 `gpt-oss:120b` 或其他 open-weight alternatives。</p>
+<h1>OpenAI 官方文件：`--oss` 是 Codex CLI 支援的模式</h1>
+<p>OpenAI Developers 的 Codex CLI reference 中，`--oss` 被描述為：</p>
+<p>&gt; Use the local open source model provider，等同於 `-c model_provider=&quot;oss&quot;`，並會驗證 Ollama 是否正在執行。</p>
+<p>OpenAI Codex advanced configuration 也提供 model provider、profile、`model_provider`、`base_url`、`wire_api` 等進階設定方式。這確認了：Codex CLI 不只是一個 OpenAI 雲端模型前端，也能接入本地或自訂 provider。</p>
+<h1>正確理解「免費」</h1>
+<p>原文標題使用「OpenAI Codex 徹底免費」很吸睛，但知識庫應做更精準判讀。</p>
+<h2>真的免費的部分</h2>
+<ul>
+<li>不一定需要 OpenAI API token 才能跑 Codex CLI agentic coding。</li>
+<li>使用 Ollama 本地模型時，推理不按 OpenAI API 計費。</li>
+<li>可使用 open-weight 模型，例如 `gpt-oss:20b`、`gpt-oss:120b` 或其他 Ollama 支援模型。</li>
+<li>程式碼與資料可留在本機，對隱私與離線工作流有吸引力。</li>
+</ul>
+<h2>仍然有成本的部分</h2>
+<ul>
+<li>本機硬體：大模型需要 CPU / GPU / RAM / VRAM。</li>
+<li>上下文長度：Ollama Blog 建議 Codex 至少需要 32K context window。</li>
+<li>速度：本地模型速度取決於硬體，未必能接近雲端 frontier model。</li>
+<li>模型能力：本地 open-weight coding model 不一定能達到 GPT-5.5 / Claude Opus / Fable 等高階雲端模型的推理與收斂能力。</li>
+<li>維護成本：要管理 Ollama、模型版本、Codex CLI config、profiles、工作目錄權限。</li>
+<li>風險成本：agent 能修改與執行程式碼，仍需要 sandbox、approval、git diff、測試與人工 review。</li>
+</ul>
+<p>因此，最準確的說法是：「Codex 的 agent shell 可以接本地模型，降低 API 成本並提升資料控制；但不是所有成本都消失。」</p>
+<h1>適合使用 Codex + Ollama 的情境</h1>
+<h2>1. 學習與實驗</h2>
+<p>對想練習 AI coding agent 工作流的人，Codex + Ollama 很適合：</p>
+<ul>
+<li>不怕 API token 消耗。</li>
+<li>可反覆測試 prompt、AGENTS.md、profile、sandbox 設定。</li>
+<li>可在小型 repo 觀察 agent 如何讀檔、改檔、跑測試。</li>
+</ul>
+<h2>2. 隱私敏感但低風險的本地專案</h2>
+<p>若資料不適合丟雲端，但任務又不需要 frontier model，則可用本地模型處理：</p>
+<ul>
+<li>內部工具。</li>
+<li>個人筆記 / 自動化腳本。</li>
+<li>小型前端 demo。</li>
+<li>文件整理與格式轉換。</li>
+</ul>
+<h2>3. 大量機械式改動</h2>
+<p>本地模型可負責低風險、可驗收、重複性強的工作：</p>
+<ul>
+<li>批次改命名。</li>
+<li>簡單重構。</li>
+<li>補測試樣板。</li>
+<li>轉換格式。</li>
+<li>建立小型 HTML / CSS / JS demo。</li>
+</ul>
+<h2>4. 混合架構：本地 executor + 雲端 orchestrator</h2>
+<p>更進階的用法是：</p>
+<ul>
+<li>高階雲端模型負責規劃、拆工單、仲裁與 review。</li>
+<li>本地 Codex + Ollama 負責低階實作、跑測試、批次修改。</li>
+</ul>
+<p>這與先前歸檔的「Fable 5 orchestrator + Codex executor」工作流一致，只是 executor 可以替換成更低成本的本地模型。</p>
+<h1>不適合完全依賴本地 Codex 的情境</h1>
+<ul>
+<li>複雜跨服務架構與高風險 migration。</li>
+<li>安全敏感、金融、身份驗證、權限模型修改。</li>
+<li>需要強產品判斷、設計品味或長程規劃的任務。</li>
+<li>巨大 codebase 且需要超長 context 的任務。</li>
+<li>沒有測試、沒有 git、沒有 sandbox 的專案。</li>
+</ul>
+<p>本地模型可幫忙，但不應被視為「免費高階工程師」。</p>
+<h1>建議的安全操作方式</h1>
+<p>若要嘗試 Codex + Ollama，建議採用以下守則：</p>
+<ul>
+<li>在乾淨 git branch 中操作。</li>
+<li>先用小型 toy repo 測試，不要直接丟 production repo。</li>
+<li>明確限制可修改檔案範圍。</li>
+<li>開啟 human approval，不要一開始就使用 yolo / bypass sandbox。</li>
+<li>每輪都看 git diff。</li>
+<li>每輪要求 agent 回報 plan、modified files、tests、remaining risks。</li>
+<li>任何敏感設定、金鑰、部署腳本、資料庫 migration 都要人工確認。</li>
+<li>本地模型若 hallucinate 指令或亂改檔，立即停止並重設工作樹。</li>
+</ul>
+<h1>與 AI 學習雷達既有脈絡的關聯</h1>
+<p>這篇可以放在「AI coding agent 成本下降」與「本地化 agentic workflow」脈絡中看。</p>
+<p>近期已歸檔的相關筆記：</p>
+<ul>
+<li>黃仁靖｜Fable 5 省 Token 工作流：最強模型當 Orchestrator，Codex 寫 Code，Gemini 做 Reviewer。</li>
+<li>張維峰｜Fable 實戰手冊：用 Unknowns 四象限與 Blindspot Pass 改善 Claude 協作。</li>
+<li>朱騏｜用 Claude Code 自動剪短影音：錄完丟給 AI 就出片的工作流拆解。</li>
+</ul>
+<p>這篇補上的角度是：當 agent shell 可以接本地模型後，未來可能形成三層架構：</p>
+<ul>
+<li>Frontier model：做高階判斷、未知管理、任務切分與最終仲裁。</li>
+<li>Local coding model：做低成本 executor，處理可驗收的小工單。</li>
+<li>Objective gates：git diff、tests、smoke、lint、human review，防止低成本執行變成高成本重工。</li>
+</ul>
+<h1>對欒帥 / Hermes 的實踐價值</h1>
+<p>這篇值得保存，因為它可能影響未來 Hermes 本機工作流：</p>
+<ul>
+<li>用本地模型處理低敏感、可驗收的程式或文件任務。</li>
+<li>用 Codex CLI profile 分離雲端模型與本地 Ollama 模型。</li>
+<li>將本地 agent 作為批次 executor，減少雲端 token 消耗。</li>
+<li>對私密資料或課程文件，可考慮本地模型做初步整理，再由高階模型做摘要與驗收。</li>
+</ul>
+<p>但要注意，Hermes 現有工作流重視穩定部署、私密資料邊界與高質感輸出；本地模型導入前，需要先用小型任務測試品質與安全性。</p>
+<h1>可落地測試指令</h1>
+<p>官方文件給出的最小測試流程：</p>
+<p>```bash</p>
+<p>npm install -g @openai/codex</p>
+<p>ollama launch codex</p>
+<p>```</p>
+<p>或：</p>
+<p>```bash</p>
+<p>codex --oss</p>
+<p>codex --oss -m gpt-oss:120b</p>
+<p>```</p>
+<p>若使用 profile：</p>
+<p>```toml</p>
+<p>model = &quot;gpt-oss:120b&quot;</p>
+<p>model_provider = &quot;ollama-launch&quot;</p>
+<p>model_catalog_json = &quot;/Users/you/.codex/model.json&quot;</p>
+<p>[model_providers.ollama-launch]</p>
+<p>name = &quot;Ollama&quot;</p>
+<p>base_url = &quot;<a href="http://localhost:11434/v1/&quot;" target="_blank" rel="noopener">http://localhost:11434/v1/&quot;</a></p>
+<p>wire_api = &quot;responses&quot;</p>
+<p>```</p>
+<p>```bash</p>
+<p>codex --profile ollama-launch</p>
+<p>```</p>
+<p>測試任務建議從低風險開始：</p>
+<p>&gt; 請建立一個單檔 HTML todo list demo，只能新增 `index.html`，不要修改其他檔案。完成後說明 diff 與如何在瀏覽器打開。</p>
+<h1>風險與限制</h1>
+<ul>
+<li>原文網站被 Cloudflare 擋住，本文未完整引用原文，只保存經搜尋與官方文件驗證的主題脈絡。</li>
+<li>「Codex 徹底免費」不應理解為沒有任何成本；只是可改用本地 / open-weight 模型避開 OpenAI API token。</li>
+<li>本地模型能力差異很大，尤其在大型 codebase、長上下文、複雜 debugging、架構判斷上可能明顯弱於 frontier models。</li>
+<li>Agent 能改檔與執行命令，仍需 sandbox、approval、git diff、測試與人工驗收。</li>
+<li>大模型本地推理可能需要大量 RAM / VRAM，對一般筆電未必流暢。</li>
+</ul>
+<h1>原始連結與驗證來源</h1>
+<ul>
+<li>零度博客原文：<a href="https://www.freedidi.com/24310.html" target="_blank" rel="noopener">https://www.freedidi.com/24310.html</a></li>
+<li>Ollama Codex CLI integration：<a href="https://docs.ollama.com/integrations/codex" target="_blank" rel="noopener">https://docs.ollama.com/integrations/codex</a></li>
+<li>Ollama Blog：OpenAI Codex with Ollama：<a href="https://ollama.com/blog/codex" target="_blank" rel="noopener">https://ollama.com/blog/codex</a></li>
+<li>OpenAI Codex CLI reference：<a href="https://developers.openai.com/codex/cli/reference" target="_blank" rel="noopener">https://developers.openai.com/codex/cli/reference</a></li>
+<li>OpenAI Codex advanced configuration：<a href="https://developers.openai.com/codex/config-advanced" target="_blank" rel="noopener">https://developers.openai.com/codex/config-advanced</a></li>
+<li>OpenAI Codex configuration reference：<a href="https://developers.openai.com/codex/config-reference" target="_blank" rel="noopener">https://developers.openai.com/codex/config-reference</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · 零度博客 / Brave Search / Ollama Docs / OpenAI Developers · article</div><h3>標籤</h3><span class="tag">Codex CLI</span><span class="tag">Ollama</span><span class="tag">Local LLM</span><span class="tag">AI Coding Agent</span><span class="tag">Open Source Models</span><span class="tag">GPT OSS</span><span class="tag">Developer Tools</span><span class="tag">Agentic Coding</span><span class="tag">BYOK</span><h3>原始連結</h3><p><a href="https://www.freedidi.com/24310.html" target="_blank" rel="noopener">https://www.freedidi.com/24310.html</a></p><p><a href="https://www.freedidi.com/24310.html" target="_blank" rel="noopener">https://www.freedidi.com/24310.html</a></p><p><a href="https://www.freedidi.com/24310.html" target="_blank" rel="noopener">https://www.freedidi.com/24310.html</a></p><p><a href="https://docs.ollama.com/integrations/codex" target="_blank" rel="noopener">https://docs.ollama.com/integrations/codex</a></p><p><a href="https://ollama.com/blog/codex" target="_blank" rel="noopener">https://ollama.com/blog/codex</a></p><p><a href="https://developers.openai.com/codex/cli/reference" target="_blank" rel="noopener">https://developers.openai.com/codex/cli/reference</a></p><p><a href="https://developers.openai.com/codex/config-advanced" target="_blank" rel="noopener">https://developers.openai.com/codex/config-advanced</a></p><p><a href="https://developers.openai.com/codex/config-reference" target="_blank" rel="noopener">https://developers.openai.com/codex/config-reference</a></p><p><a href="https://ollama.com/library/gpt-oss" target="_blank" rel="noopener">https://ollama.com/library/gpt-oss</a></p><p><a href="https://www.npmjs.com/package/@openai/codex" target="_blank" rel="noopener">https://www.npmjs.com/package/@openai/codex</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
