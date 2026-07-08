@@ -1,0 +1,191 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>張維峰｜Fable 實戰手冊：用 Unknowns 四象限與 Blindspot Pass 改善 Claude 協作</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>張維峰｜Fable 實戰手冊：用 Unknowns 四象限與 Blindspot Pass 改善 Claude 協作</h1><h1>張維峰｜Fable 實戰手冊：用 Unknowns 四象限與 Blindspot Pass 改善 Claude 協作</h1>
+<h1>一句話摘要</h1>
+<p>Fable 5 的關鍵不是「模型終於什麼都會」，而是瓶頸轉移了：模型能力足夠強後，真正影響品質的是你能不能把地圖與地形之間的 unknowns 先挖出來、說清楚、留下紀錄並事後驗收。</p>
+<h1>來源脈絡</h1>
+<p>張維峰在 Facebook 整理 Claude / Fable 工程師 Thariq Shihipar 的 X 長文〈A Field Guide to Fable: Finding Your Unknowns〉。貼文將英文原文轉成一套中文實戰手冊，重點是如何在與 Fable / Claude 協作時，主動發掘自己沒有說清楚、甚至自己也沒意識到的未知領域。</p>
+<p>Brave Search 驗證到：</p>
+<ul>
+<li>原始 X 貼文：Thariq (@trq212)〈A Field Guide to Fable: Finding Your Unknowns〉。</li>
+<li>Rattibha 有可讀鏡像，發布時間為 2026-07-03。</li>
+<li>另有 Thariq GitHub Pages 範例頁〈Blindspot pass — Know your unknowns〉，頁面標示 Copyright 2026 Anthropic PBC、SPDX-License-Identifier: Apache-2.0。</li>
+</ul>
+<p>本篇與先前已歸檔的 Meicy Huang「Field Guide to Fable」屬於同一原始思想脈絡；本筆記特別保存張維峰版本的中文實戰拆解與 prompt 範例。</p>
+<h1>核心隱喻：地圖不是真正的地形</h1>
+<p>Thariq 用「the map is not the territory」說明 AI 協作的落差：</p>
+<ul>
+<li>地圖：你給 Claude 的 prompt、skills、context、參考資料、任務描述。</li>
+<li>地形：真實 codebase、產品限制、使用者情境、組織規則、尚未被寫下的判斷標準。</li>
+<li>unknowns：地圖與地形之間的落差，也就是你沒交代、Claude 也不知道，只能用猜的地方。</li>
+</ul>
+<p>當任務越大、越跨檔案、越接近真實產品，unknowns 就越多。過去模型常卡在能力不足；但 Fable 5 這類更強模型出現後，失敗原因更常變成：使用者沒有把真正重要的未知與限制講清楚。</p>
+<h1>四種「不知道」</h1>
+<p>張維峰整理 Thariq 的 2x2 unknown matrix，這是本篇最值得保存的框架。</p>
+<h2>1. Known Knowns：已知的已知</h2>
+<p>你知道，而且已經寫進 prompt 的東西。例如需求、輸入、輸出格式、指定檔案、驗收條件。</p>
+<p>這是最容易處理的區域，但也最容易讓人誤以為「我已經講清楚了」。</p>
+<h2>2. Known Unknowns：已知的未知</h2>
+<p>你知道自己還沒想清楚的地方。例如你知道某個 auth flow 有 edge case，但還沒決定怎麼處理；你知道某個設計有取捨，但還沒選定方向。</p>
+<p>這類問題適合在 implementation plan 前先請 Claude 問你，避免開始寫 code 後才發現地基不穩。</p>
+<h2>3. Unknown Knowns：未知的已知</h2>
+<p>你其實知道、看到就能判斷，但平常不會想到要寫下來的標準。例如「好的設計我看到就知道」、「這個 tone 不對」、「這個互動不像我們產品」。</p>
+<p>這類 tacit knowledge 很難直接寫成規格，適合用 brainstorm、prototype、參考範例與多版本比較來逼自己說出偏好。</p>
+<h2>4. Unknown Unknowns：未知的未知</h2>
+<p>你連自己不知道什麼都不知道。這是最危險的區域，因為你不會主動補 context，也不會在 prompt 裡提醒 Claude。</p>
+<p>這類問題需要 blindspot pass：請 Claude 主動找你可能忽略的風險、前提、依賴、邊界條件與決策點。</p>
+<h1>太具體與太模糊都會失敗</h1>
+<p>貼文指出，與 Claude 協作有一個平衡問題：</p>
+<ul>
+<li>指令太具體：Claude 可能照單全收，即使中途發現應該轉彎，也會硬做下去。</li>
+<li>指令太模糊：Claude 會套用 industry best practices，但通用最佳實踐不一定適合你的 codebase 或產品脈絡。</li>
+</ul>
+<p>因此，好的 prompt 不是越長越好，也不是越開放越好，而是要讓模型知道：</p>
+<ul>
+<li>哪些地方你已經決定。</li>
+<li>哪些地方你還沒決定。</li>
+<li>哪些地方要先問。</li>
+<li>哪些地方可以保守前進但要記錄。</li>
+<li>哪些 finding 需要人類仲裁。</li>
+</ul>
+<h1>動手前：五件事</h1>
+<h2>1. Blindspot Pass：找未知的未知</h2>
+<p>用途：對付 Unknown Unknowns。</p>
+<p>張維峰強調 Thariq 建議直接使用「blindspot pass」與「unknown unknowns」這兩個詞，因為 Claude 對這類語彙有較明確的反應模式。</p>
+<p>範例：</p>
+<p>&gt; 我在做 auth 相關功能，但我完全不懂這個 codebase 裡 auth 模組是怎麼設計的。幫我做一次 blindspot pass，找出我的 unknown unknowns。</p>
+<p>更好的版本應補上：</p>
+<ul>
+<li>你是誰。</li>
+<li>你已經知道什麼。</li>
+<li>你不知道什麼。</li>
+<li>任務範圍。</li>
+<li>你希望 Claude 輸出哪些盲點類型。</li>
+</ul>
+<h2>2. Brainstorms / Prototypes：用看見來找 Unknown Knowns</h2>
+<p>用途：對付 Unknown Knowns。</p>
+<p>如果你講不出想要什麼，就不要硬寫抽象規格；先讓 Claude 產出多個方向，讓你用「看到」來反應。</p>
+<p>範例：</p>
+<p>&gt; 給我 4 個風格完全不一樣的設計方向，我看了之後跟你說感覺。</p>
+<p>&gt; 先不要接真實系統，做一個單純 HTML，用假資料模擬 toolbar，我想先看版面感覺。</p>
+<p>&gt; 腦力激盪列出 10 個可介入位置，從最便宜到最有野心排序，我會告訴你哪些有感覺。</p>
+<p>這對設計、影片、UX flow、內容風格尤其重要。</p>
+<h2>3. Interviews：讓 Claude 反過來問你</h2>
+<p>用途：逼出 Known Unknowns 與模糊決策。</p>
+<p>範例：</p>
+<p>&gt; 一次問我一個問題，針對任何還模糊不清的地方。優先問那些「我的答案會改變架構設計」的問題。</p>
+<p>這個 prompt 的關鍵是「一次問一題」與「優先問會改變架構的問題」。前者降低溝通負擔；後者讓 Claude 不要浪費時間問低價值細節。</p>
+<h2>4. References：給 Claude 看實際參考</h2>
+<p>用途：把模糊標準轉成具體樣本。</p>
+<p>Thariq 認為程式碼本身是很好的參考材料，甚至可以跨語言讀取邏輯。</p>
+<p>範例：</p>
+<p>&gt; 這個 Rust crate 實作了我要的 backoff 行為。讀懂它，然後用 TypeScript 重新做一次。</p>
+<p>這個方法也可延伸到設計稿、影片模板、Remotion 範例、知識庫文章格式、課程頁版型。</p>
+<h2>5. Implementation Plans：先討論最可能改變的決策</h2>
+<p>正式實作前，請 Claude 先列計畫，而且要把最可能影響方向的決策放前面：</p>
+<ul>
+<li>data models</li>
+<li>type interfaces</li>
+<li>UX flows</li>
+<li>API contracts</li>
+<li>permission / auth boundaries</li>
+<li>deployment / migration risks</li>
+</ul>
+<p>機械性重構或低風險改動可以放後面。理由很簡單：越可能被推翻的東西，越要早點攤開。</p>
+<h1>動手中：維護 implementation-notes.md</h1>
+<p>Thariq 建議在長任務中讓 Claude 維護 implementation-notes.md，記錄：</p>
+<ul>
+<li>做了哪些決策。</li>
+<li>哪些地方偏離原計畫。</li>
+<li>遇到哪些 edge cases。</li>
+<li>為什麼選保守做法。</li>
+<li>哪些地方需要人類事後檢查。</li>
+</ul>
+<p>範例：</p>
+<p>&gt; 請維護一份 implementation-notes.md。如果你碰到邊界情況、必須偏離原計畫，先選保守的做法，把這個決定記在 Deviations 底下，然後繼續做下去，不要停下來等我。</p>
+<p>這個模式很適合長時間 agentic coding，因為它允許模型前進，但也留下審計軌跡。對欒帥的知識庫 / 課程頁 / PDF pipeline 這類多步任務，也能降低「做到後面不知道為什麼這樣改」的風險。</p>
+<h1>做完後：Pitch / Explainer / Quiz</h1>
+<h2>1. Pitch / Explainer：把成果變成可溝通文件</h2>
+<p>完成後，不只交 diff 或成品，而是把 prototype、spec、implementation notes 打包成可分享的說明文件。</p>
+<p>範例：</p>
+<p>&gt; 把這些打包成一份文件，我要拿去 Slack 上爭取大家買單。開頭放一個 demo GIF。</p>
+<p>這能把「AI 做完了」轉成「團隊能理解、能 review、能採納」。</p>
+<h2>2. Quiz：確認人類真的理解改動</h2>
+<p>Thariq 的做法是，長 session 做完後請 Claude 出小測驗，測你是否真的理解這次改動；答對後才 merge。</p>
+<p>範例：</p>
+<p>&gt; 給我一份 HTML 報告，說明這次改動內容、背景脈絡、為什麼這樣做的直覺判斷。報告最後附一個小測驗，我必須答對才能過。</p>
+<p>這點非常重要：human-in-the-loop 不只是按同意，而是要能理解與承擔最後責任。</p>
+<h1>實際案例：Fable 發表影片</h1>
+<p>貼文提到 Thariq 用這套方法製作 Fable 發表影片時的例子：</p>
+<ul>
+<li>他知道 Claude 可以剪輯影片、轉錄逐字稿，但不確定 Whisper 轉錄準確度是否足夠。</li>
+<li>因此先請 Claude 解釋 Whisper 原理與限制。</li>
+<li>他想要文字與語音同步出現，因此請 Claude 用 Remotion 做原型，先看效果。</li>
+<li>影片完成後覺得畫面灰、不夠亮眼；他知道問題是 color grading，但說不出好看的標準。</li>
+<li>一開始請 Claude 做幾個調色版本，但發現自己沒有判斷標準。</li>
+<li>於是改請 Claude 教他 color grading，先建立判斷語彙，再回來討論調色方向。</li>
+</ul>
+<p>這正是 Unknown Knowns 的典型：你以為自己知道要什麼，但其實缺少足夠語彙與判準，所以需要先學會看。</p>
+<h1>和近期 AI 學習雷達筆記的關聯</h1>
+<p>這篇可和兩篇既有筆記串起來：</p>
+<h2>1. Meicy Huang｜Field Guide to Fable</h2>
+<p>Meicy 版本偏向原始框架與「Unknown Matrix / Stay in the Loop」的概念整理；張維峰版本則更像中文實戰手冊，保留大量可直接複製的 prompt 與工作階段安排。</p>
+<h2>2. 黃仁靖｜Fable 5 Orchestrator 工作流</h2>
+<p>黃仁靖版本談的是大型 AI coding 團隊分工：Fable 做 orchestrator、Codex 做 executor、Gemini 做 reviewer。張維峰這篇補上 orchestrator 要如何先找 unknowns、如何問人類、如何留下 implementation notes、如何事後驗收。</p>
+<p>兩篇合起來看，可以形成完整流程：</p>
+<ul>
+<li>Fable 先做 blindspot pass。</li>
+<li>透過 brainstorm / interview / references 釐清需求。</li>
+<li>產出 implementation plan。</li>
+<li>Codex 或 executor 依低熵工單執行。</li>
+<li>Reviewer 挑風險，但由 Fable 仲裁。</li>
+<li>實作中維護 implementation-notes.md。</li>
+<li>完成後輸出 explainer 與 quiz。</li>
+<li>人類理解後才合併或發布。</li>
+</ul>
+<h1>AI 學習雷達的實踐價值</h1>
+<p>這篇值得高優先保存，因為它把「提示工程」推進到「未知管理」：</p>
+<ul>
+<li>prompt 不只是描述想要什麼，也要探索自己不知道什麼。</li>
+<li>context 不只是塞資料，也要標註決策、限制與模糊區。</li>
+<li>agentic workflow 不只是自動執行，也要有事前探索、事中紀錄、事後考核。</li>
+<li>人類不是退出流程，而是從微控每一步，轉成定義邊界、回應問題、理解改動與承擔責任。</li>
+</ul>
+<h1>可直接保存的 SOP</h1>
+<h2>動手前</h2>
+<ul>
+<li>請 Claude 做 blindspot pass。</li>
+<li>請 Claude 一次問一題，優先問會改變架構的問題。</li>
+<li>給 Claude 參考範例或請它產生 3–5 個 prototype。</li>
+<li>請 Claude 寫 implementation plan，把高變動決策放前面。</li>
+<li>明確列出哪些地方可以自行保守決策、哪些地方必須停下問人。</li>
+</ul>
+<h2>動手中</h2>
+<ul>
+<li>維護 implementation-notes.md。</li>
+<li>所有偏離原計畫的地方放在 Deviations。</li>
+<li>遇到不確定但低風險問題，選保守做法並記錄。</li>
+<li>遇到高風險、資料、付款、權限、產品方向問題，停下問人。</li>
+</ul>
+<h2>做完後</h2>
+<ul>
+<li>產出 explainer：改了什麼、為什麼這樣改、哪些地方有風險。</li>
+<li>產出 review checklist。</li>
+<li>請 Claude 出小測驗，確認人類理解主要改動。</li>
+<li>通過測試、smoke、diff review 與人類驗收後才 merge / deploy。</li>
+</ul>
+<h1>風險與判讀</h1>
+<ul>
+<li>Fable 5 相關說法多來自 Thariq 的個人實務經驗與社群分享，不等同正式 benchmark。</li>
+<li>「blindspot pass」是一個有效工作語彙，但不能保證找出所有 unknown unknowns。</li>
+<li>讓 Claude 自行保守前進時，必須有 implementation-notes.md 與事後 review，否則仍可能累積隱性決策。</li>
+<li>Quiz 不能取代測試、security review、產品驗收與合規檢查。</li>
+<li>Unknowns 管理越成熟，越需要良好的外部記憶與定期摘要，避免 notes 無限膨脹。</li>
+</ul>
+<h1>原始連結與驗證來源</h1>
+<ul>
+<li>Facebook 原文：<a href="https://www.facebook.com/share/p/1EDD5yZQnv/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EDD5yZQnv/</a></li>
+<li>Thariq X 原文：<a href="https://x.com/trq212/status/2073100352921215386" target="_blank" rel="noopener">https://x.com/trq212/status/2073100352921215386</a></li>
+<li>Rattibha 可讀鏡像：<a href="https://en.rattibha.com/thread/2073100352921215386" target="_blank" rel="noopener">https://en.rattibha.com/thread/2073100352921215386</a></li>
+<li>Blindspot pass 範例頁：<a href="https://thariqs.github.io/html-effectiveness/unknowns/01-blindspot-pass.html" target="_blank" rel="noopener">https://thariqs.github.io/html-effectiveness/unknowns/01-blindspot-pass.html</a></li>
+<li>Whisper 官方 repo：<a href="https://github.com/openai/whisper" target="_blank" rel="noopener">https://github.com/openai/whisper</a></li>
+<li>Remotion 官方網站：<a href="https://www.remotion.dev/" target="_blank" rel="noopener">https://www.remotion.dev/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · Facebook / X / Rattibha / Brave Search · social-post</div><h3>標籤</h3><span class="tag">Fable</span><span class="tag">Claude</span><span class="tag">Claude Code</span><span class="tag">Thariq Shihipar</span><span class="tag">Unknown Unknowns</span><span class="tag">Blindspot Pass</span><span class="tag">Prompt Engineering</span><span class="tag">Context Engineering</span><span class="tag">AI Coding</span><span class="tag">Human in the Loop</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1EDD5yZQnv/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EDD5yZQnv/</a></p><p><a href="https://www.facebook.com/jerry.chang.505523/posts/pfbid02pDFugqqteg6wat8kX5NRNGa1HUALGyzEknDAzVwYc6MjN49Ladox3zxKnpPfE1D5l" target="_blank" rel="noopener">https://www.facebook.com/jerry.chang.505523/posts/pfbid02pDFugqqteg6wat8kX5NRNGa1HUALGyzEknDAzVwYc6MjN49Ladox3zxKnpPfE1D5l</a></p><p><a href="https://www.facebook.com/share/p/1EDD5yZQnv/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EDD5yZQnv/</a></p><p><a href="https://x.com/trq212/status/2073100352921215386" target="_blank" rel="noopener">https://x.com/trq212/status/2073100352921215386</a></p><p><a href="https://en.rattibha.com/thread/2073100352921215386" target="_blank" rel="noopener">https://en.rattibha.com/thread/2073100352921215386</a></p><p><a href="https://thariqs.github.io/html-effectiveness/unknowns/01-blindspot-pass.html" target="_blank" rel="noopener">https://thariqs.github.io/html-effectiveness/unknowns/01-blindspot-pass.html</a></p><p><a href="https://github.com/openai/whisper" target="_blank" rel="noopener">https://github.com/openai/whisper</a></p><p><a href="https://www.remotion.dev/" target="_blank" rel="noopener">https://www.remotion.dev/</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix.html</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-huang-renjing-fable-5-orchestrator-codex-executor-token-saving.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-huang-renjing-fable-5-orchestrator-codex-executor-token-saving.html</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

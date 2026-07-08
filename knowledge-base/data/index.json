@@ -298,6 +298,44 @@
     "markdown": "articles/2026/07/2026-07-08-youtube-chu-chi-claude-code-automated-short-video-editing-workflow.md"
   },
   {
+    "title": "張維峰｜Fable 實戰手冊：用 Unknowns 四象限與 Blindspot Pass 改善 Claude 協作",
+    "date": "2026-07-08",
+    "source": "Facebook / X / Rattibha / Brave Search",
+    "author": "張維峰",
+    "type": "social-post",
+    "topics": [
+      "Fable",
+      "Claude",
+      "Claude Code",
+      "Thariq Shihipar",
+      "Unknown Unknowns",
+      "Blindspot Pass",
+      "Prompt Engineering",
+      "Context Engineering",
+      "AI Coding",
+      "Human in the Loop"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1EDD5yZQnv/",
+      "https://www.facebook.com/jerry.chang.505523/posts/pfbid02pDFugqqteg6wat8kX5NRNGa1HUALGyzEknDAzVwYc6MjN49Ladox3zxKnpPfE1D5l",
+      "https://www.facebook.com/share/p/1EDD5yZQnv/",
+      "https://x.com/trq212/status/2073100352921215386",
+      "https://en.rattibha.com/thread/2073100352921215386",
+      "https://thariqs.github.io/html-effectiveness/unknowns/01-blindspot-pass.html",
+      "https://github.com/openai/whisper",
+      "https://www.remotion.dev/",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix.html",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-huang-renjing-fable-5-orchestrator-codex-executor-token-saving.html"
+    ],
+    "excerpt": "Fable 5 的關鍵不是「模型終於什麼都會」，而是瓶頸轉移了：模型能力足夠強後，真正影響品質的是你能不能把地圖與地形之間的 unknowns 先挖出來、說清楚、留下紀錄並事後驗收。",
+    "slug": "2026-07-08-zhang-weifeng-fable-field-guide-finding-your-unknowns",
+    "html": "articles/2026-07-08-zhang-weifeng-fable-field-guide-finding-your-unknowns.html",
+    "markdown": "articles/2026/07/2026-07-08-zhang-weifeng-fable-field-guide-finding-your-unknowns.md"
+  },
+  {
     "title": "AI 網絡自由創業｜讓 ChatGPT 先認識你：AI 記憶、個人化與服務變現分享會導流",
     "date": "2026-07-07",
     "source": "Facebook Reel",
