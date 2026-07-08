@@ -1,0 +1,145 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI Mastery｜Claude PhD-level Research：9 個研究型 Prompt 與可信度檢查用法</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI Mastery｜Claude PhD-level Research：9 個研究型 Prompt 與可信度檢查用法</h1><h1>AI Mastery｜Claude PhD-level Research：9 個研究型 Prompt 與可信度檢查用法</h1>
+<h1>一句話摘要</h1>
+<p>這組 prompt 的價值不在「保證 PhD 等級」，而在把研究任務拆成 9 種可重複模式：深度研究、文獻回顧、反方壓力測試、來源查核、競品分析、趨勢掃描、資料解讀、概念教學與決策簡報。</p>
+<h1>貼文重點</h1>
+<p>AI Mastery 的 Facebook 貼文主張「Claude now delivers PhD level research in minutes」，並在留言中提供 9 個研究型 prompt。貼文互動高，主文是典型 prompt roundup；真正有保存價值的是這 9 種研究任務分類，而不是「PhD level」這個行銷標語。</p>
+<p>使用 Brave Search 交叉驗證後，Anthropic 官方確實提供 Claude Research / web search / citations 相關能力：</p>
+<ul>
+<li>Claude Research：官方說法是可在數分鐘內產生 thorough answers，並附 easy-to-check citations。</li>
+<li>Claude web search tool：讓 Claude 存取即時 web content，並在回覆中附來源引用。</li>
+<li>Claude citations：可把回答 grounded in source documents，回傳支撐 claim 的 passages。</li>
+</ul>
+<p>因此這組 prompt 可視為「研究流程模板」，但仍需搭配可驗證來源、日期、引用與人工檢查。</p>
+<h1>9 個 Prompt 模板整理</h1>
+<h2>1. Deep Research Master</h2>
+<p>Prompt：</p>
+<p>Research [topic] like a world class expert. Find the highest credibility sources, compare opposing viewpoints, identify the current expert consensus, clearly separate established facts from ongoing debates, and cite every claim with reliable references.</p>
+<p>適用：</p>
+<ul>
+<li>需要建立完整主題地圖。</li>
+<li>想區分共識、爭議與未定論。</li>
+<li>適合做課程備課、產業研究、政策議題初探。</li>
+</ul>
+<p>改良建議：加上「限定資料期間、語言、地區、來源層級」與「列出不能確認的部分」。</p>
+<h2>2. Literature Review Pro</h2>
+<p>Prompt：</p>
+<p>I&#x27;m researching [topic]. Find the most influential studies, peer reviewed papers, and expert opinions from the last 5 years. Summarize each in 2 to 3 sentences, highlight any findings that challenge the mainstream consensus, and explain why those differences matter.</p>
+<p>適用：</p>
+<ul>
+<li>快速找近 5 年關鍵研究。</li>
+<li>找出挑戰主流共識的新證據。</li>
+<li>產出文獻回顧初稿。</li>
+</ul>
+<p>風險：AI 可能高估「最有影響力」或產生不完整清單；需要指定資料庫，例如 PubMed、Semantic Scholar、Google Scholar、arXiv 或官方報告。</p>
+<h2>3. Counter Argument Stress Test</h2>
+<p>Prompt：</p>
+<p>Here is my thesis: [paste your argument]. Challenge it from every angle. Find the strongest counterarguments, the best evidence against it, logical flaws, hidden assumptions, and blind spots I&#x27;m missing. Be ruthless and show exactly where my argument could fail before anyone else does.</p>
+<p>適用：</p>
+<ul>
+<li>商業企劃、論文論點、課程主張、產品定位。</li>
+<li>需要找盲點與反方證據。</li>
+<li>可作為 pre-mortem / red-team prompt。</li>
+</ul>
+<p>改良建議：要求輸出「反方證據強度、可修補方式、仍無法修補的風險」。</p>
+<h2>4. Source Credibility Checker</h2>
+<p>Prompt：</p>
+<p>I found these claims about [topic]: [paste claims]. Verify each one and label it as true, partially true, or false. Identify the original source, publication date, and whether the evidence has been updated. Flag anything that is commonly misquoted, misleading, or taken out of context.</p>
+<p>適用：</p>
+<ul>
+<li>社群貼文查核。</li>
+<li>課程教材前的事實確認。</li>
+<li>新聞、研究、AI 工具宣稱驗證。</li>
+</ul>
+<p>這是 9 個 prompt 中最值得優先保存的一個，因為它要求 original source、publication date、updated evidence 與 misquote / context flags。</p>
+<h2>5. Competitive Intelligence Report</h2>
+<p>Prompt：</p>
+<p>Research [company or product] and its top 5 competitors. Compare their pricing, standout features, biggest weaknesses, customer sentiment, and the most common complaints. Present everything in a clear decision ready comparison table with actionable insights and recommendations.</p>
+<p>適用：</p>
+<ul>
+<li>AI 工具選型。</li>
+<li>SaaS 競品分析。</li>
+<li>課程工具推薦與採購前比較。</li>
+</ul>
+<p>改良建議：要求「價格觀察日期」、「官方 pricing URL」、「評論來源類型」與「不可直接比較之限制」。</p>
+<h2>6. Trend Spotter</h2>
+<p>Prompt：</p>
+<p>What are the most important developments in [industry or topic] from the last 90 days? Focus on long term shifts, not short lived hype. For each trend, explain who it impacts, why it matters, what is changing, and the actions I should take over the next 12 months.</p>
+<p>適用：</p>
+<ul>
+<li>產業雷達。</li>
+<li>每月 / 每季策略摘要。</li>
+<li>AI 學習雷達週報或課程更新。</li>
+</ul>
+<p>改良建議：加入「排除單一公司宣傳」、「至少 3 種來源類型交叉驗證」、「列出短期 hype 與長期 shift 的判準」。</p>
+<h2>7. Data Interpretation Expert</h2>
+<p>Prompt：</p>
+<p>Here is a dataset or report: [paste or upload]. Analyze it like a professional research analyst. Identify the 3 most important patterns, the biggest anomaly, hidden insights, and the most valuable conclusion that is not obvious at first glance. Explain your reasoning step by step.</p>
+<p>適用：</p>
+<ul>
+<li>報表摘要。</li>
+<li>問卷資料、報名資料、營運數據初探。</li>
+<li>PDF 報告或表格解讀。</li>
+</ul>
+<p>注意：若是含個資資料，應在本機私密處理，不公開部署；分析時要求模型不要輸出可識別個人資料。</p>
+<h2>8. Expert Level Breakdown</h2>
+<p>Prompt：</p>
+<p>Explain [complex topic] the way a PhD advisor would teach a first year student. Start with why it matters, then build the core concepts step by step using real world examples instead of analogies. Finish with the biggest misconception beginners have and how to avoid it.</p>
+<p>適用：</p>
+<ul>
+<li>教學講義。</li>
+<li>初學者課程設計。</li>
+<li>把複雜 AI / 技術概念拆成學習階梯。</li>
+</ul>
+<p>改良建議：請模型先列「先備知識假設」，再產出分層教學；避免用過度簡化的 analogy 取代真實概念。</p>
+<h2>9. Decision Ready Research Brief</h2>
+<p>Prompt：</p>
+<p>I need to make a decision about [describe the decision]. Create a concise research brief covering the key facts, potential risks, available alternatives, and what the strongest evidence recommends. Keep it under 500 words and write it so I can read it once and make a confident decision.</p>
+<p>適用：</p>
+<ul>
+<li>快速決策摘要。</li>
+<li>工具採購、課程方向、專案取捨。</li>
+<li>高層 / 團隊會議前 briefing。</li>
+</ul>
+<p>改良建議：要求附「recommendation confidence」、「decision reversibility」、「what would change my mind」。</p>
+<h1>更可靠的研究 Prompt 寫法</h1>
+<p>這組 prompt 可再加上共同品質條款，讓 Claude 的輸出更可檢查：</p>
+<ul>
+<li>每個重要 claim 都要引用來源。</li>
+<li>標示來源日期與是否為官方 / peer-reviewed / media / social source。</li>
+<li>區分 established facts、expert consensus、active debate、speculation。</li>
+<li>若找不到可靠來源，直接說 unknown，不要補腦。</li>
+<li>對重要結論列出 strongest counterargument。</li>
+<li>對過時資訊標示 observed date。</li>
+<li>最後附「需要人工驗證的 3 件事」。</li>
+</ul>
+<p>可加入的通用尾句：</p>
+<p>Before finalizing, audit your answer for unsupported claims. For every major claim, provide a source link, publication date, and confidence level. If evidence is weak or outdated, label it clearly instead of presenting it as fact.</p>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇可保存為「研究型 prompt 模板庫」：</p>
+<ul>
+<li>Deep Research Master：主題全景。</li>
+<li>Literature Review Pro：近年文獻。</li>
+<li>Counter Argument Stress Test：反方壓力測試。</li>
+<li>Source Credibility Checker：來源查核。</li>
+<li>Competitive Intelligence Report：競品分析。</li>
+<li>Trend Spotter：近期趨勢。</li>
+<li>Data Interpretation Expert：報告 / 資料解讀。</li>
+<li>Expert Level Breakdown：教學拆解。</li>
+<li>Decision Ready Research Brief：決策簡報。</li>
+</ul>
+<p>特別適合後續做成課程活動：讓學員先用原 prompt，接著加入「來源、日期、反方、不確定性、人工驗證」條款，比較輸出品質差異。</p>
+<h1>風險與限制</h1>
+<ul>
+<li>「PhD level research in minutes」是行銷式說法，不應照字面理解。</li>
+<li>Prompt 不能取代資料庫檢索、文獻品質評讀與人工判斷。</li>
+<li>Claude / web search / citations 可以加速研究，但引用仍需人工抽查。</li>
+<li>研究型任務最好明確指定資料範圍、時間範圍、來源層級與輸出格式。</li>
+<li>對醫療、法律、投資、政策等高風險主題，必須額外加上專業審查。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Facebook：AI Mastery 貼文與留言列出 9 個 prompts。</li>
+<li>Brave Search：驗證 Claude Research、web search tool 與 citations 的官方說明。</li>
+<li>Anthropic Help Center：Claude Research 可產生附 citations 的研究回答，但需開啟 web search。</li>
+<li>Anthropic Platform Docs：web search tool 與 citations 可用於即時資料與來源 grounding。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · Facebook / Brave Search · social-post</div><h3>標籤</h3><span class="tag">Claude</span><span class="tag">Research Prompts</span><span class="tag">Deep Research</span><span class="tag">Prompt Engineering</span><span class="tag">Source Verification</span><span class="tag">Literature Review</span><span class="tag">Competitive Intelligence</span><span class="tag">Decision Brief</span><span class="tag">AI Learning Radar</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1PVBeMrEKv/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1PVBeMrEKv/</a></p><p><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0mE3vbQ6PrB3GrgtvBMmGwBtECpdzY3AWLGy2iGU3z74qHJBrosENwFp1ZfVTur9Hl&amp;id=61585600673719" target="_blank" rel="noopener">https://www.facebook.com/permalink.php?story_fbid=pfbid0mE3vbQ6PrB3GrgtvBMmGwBtECpdzY3AWLGy2iGU3z74qHJBrosENwFp1ZfVTur9Hl&amp;id=61585600673719</a></p><p><a href="https://www.facebook.com/share/p/1PVBeMrEKv/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1PVBeMrEKv/</a></p><p><a href="https://support.claude.com/en/articles/11088861-using-research-on-claude" target="_blank" rel="noopener">https://support.claude.com/en/articles/11088861-using-research-on-claude</a></p><p><a href="https://www.anthropic.com/news/research" target="_blank" rel="noopener">https://www.anthropic.com/news/research</a></p><p><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool</a></p><p><a href="https://platform.claude.com/docs/en/build-with-claude/citations" target="_blank" rel="noopener">https://platform.claude.com/docs/en/build-with-claude/citations</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

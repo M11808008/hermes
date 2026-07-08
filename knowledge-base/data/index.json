@@ -1,5 +1,39 @@
 [
   {
+    "title": "AI Mastery｜Claude PhD-level Research：9 個研究型 Prompt 與可信度檢查用法",
+    "date": "2026-07-08",
+    "source": "Facebook / Brave Search",
+    "author": "AI Mastery",
+    "type": "social-post",
+    "topics": [
+      "Claude",
+      "Research Prompts",
+      "Deep Research",
+      "Prompt Engineering",
+      "Source Verification",
+      "Literature Review",
+      "Competitive Intelligence",
+      "Decision Brief",
+      "AI Learning Radar"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1PVBeMrEKv/",
+      "https://www.facebook.com/permalink.php?story_fbid=pfbid0mE3vbQ6PrB3GrgtvBMmGwBtECpdzY3AWLGy2iGU3z74qHJBrosENwFp1ZfVTur9Hl&id=61585600673719",
+      "https://www.facebook.com/share/p/1PVBeMrEKv/",
+      "https://support.claude.com/en/articles/11088861-using-research-on-claude",
+      "https://www.anthropic.com/news/research",
+      "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool",
+      "https://platform.claude.com/docs/en/build-with-claude/citations"
+    ],
+    "excerpt": "這組 prompt 的價值不在「保證 PhD 等級」，而在把研究任務拆成 9 種可重複模式：深度研究、文獻回顧、反方壓力測試、來源查核、競品分析、趨勢掃描、資料解讀、概念教學與決策簡報。",
+    "slug": "2026-07-08-ai-mastery-claude-phd-research-nine-prompts",
+    "html": "articles/2026-07-08-ai-mastery-claude-phd-research-nine-prompts.html",
+    "markdown": "articles/2026/07/2026-07-08-ai-mastery-claude-phd-research-nine-prompts.md"
+  },
+  {
     "title": "Chichieh Huang｜MCP 產品化：從 Connector 到 Agent Infrastructure 的 Capability Surface 設計",
     "date": "2026-07-08",
     "source": "Facebook / AILogora / Brave Search",
