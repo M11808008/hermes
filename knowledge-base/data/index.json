@@ -109,6 +109,42 @@
     "markdown": "articles/2026/07/2026-07-08-chichieh-huang-mcp-productization-capability-surface-agent-backed-tools.md"
   },
   {
+    "title": "黃仁靖｜Fable 5 省 Token 工作流：最強模型當 Orchestrator，Codex 寫 Code，Gemini 做 Reviewer",
+    "date": "2026-07-08",
+    "source": "Facebook / Brave Search",
+    "author": "黃仁靖",
+    "type": "social-post",
+    "topics": [
+      "Fable",
+      "Codex",
+      "Gemini",
+      "AI Coding",
+      "Multi-Agent Workflow",
+      "Agent Orchestration",
+      "Token Efficiency",
+      "Human in the Loop",
+      "Code Review",
+      "Context Engineering"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/19N3Z4FQgC/",
+      "https://www.facebook.com/groups/1224997379198346/permalink/1335910774773672/",
+      "https://www.facebook.com/share/p/19N3Z4FQgC/",
+      "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "https://openai.github.io/openai-agents-python/multi_agent/",
+      "https://developers.openai.com/api/docs/guides/agents/orchestration",
+      "https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/connected-agents",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix.html"
+    ],
+    "excerpt": "這篇的重點不是「Fable 5 很會寫 code」，而是「Fable 5 最值得放在控制平面」：讓它切工單、定義 done、仲裁 reviewer、讀 diff 與決定是否 close，反而比親自寫大量 code 更省 token、更能收斂。",
+    "slug": "2026-07-08-huang-renjing-fable-5-orchestrator-codex-executor-token-saving",
+    "html": "articles/2026-07-08-huang-renjing-fable-5-orchestrator-codex-executor-token-saving.html",
+    "markdown": "articles/2026/07/2026-07-08-huang-renjing-fable-5-orchestrator-codex-executor-token-saving.md"
+  },
+  {
     "title": "Meicy Huang｜Field Guide to Fable：用 Unknown Matrix 與 Stay in the Loop 重新設計提示方式",
     "date": "2026-07-08",
     "source": "Facebook / YouTube / Brave Search",

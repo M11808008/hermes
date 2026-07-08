@@ -1,0 +1,146 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>黃仁靖｜Fable 5 省 Token 工作流：最強模型當 Orchestrator，Codex 寫 Code，Gemini 做 Reviewer</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>黃仁靖｜Fable 5 省 Token 工作流：最強模型當 Orchestrator，Codex 寫 Code，Gemini 做 Reviewer</h1><h1>黃仁靖｜Fable 5 省 Token 工作流：最強模型當 Orchestrator，Codex 寫 Code，Gemini 做 Reviewer</h1>
+<h1>一句話摘要</h1>
+<p>這篇的重點不是「Fable 5 很會寫 code」，而是「Fable 5 最值得放在控制平面」：讓它切工單、定義 done、仲裁 reviewer、讀 diff 與決定是否 close，反而比親自寫大量 code 更省 token、更能收斂。</p>
+<h1>貼文脈絡</h1>
+<p>黃仁靖在 Claude Taiwan 分享一次 AI coding workflow 實驗：三個專案同時開 Fable 5 Ultracode，連續跑約 8 小時，據作者描述 Fable 5 額度只燒約 20%，卻把原本可能要一週、甚至 Codex 卡關兩天的工程問題推進完成。</p>
+<p>作者強調，這次不是讓 Fable 5 直接大量寫 code，而是讓它當 tech lead / orchestrator：</p>
+<ul>
+<li>Fable 5：最高層 orchestrator / arbitrator。</li>
+<li>Codex 5.5：executor，跑 /goal 長模式。</li>
+<li>Gemini 3.1 Pro / AGY：reviewer，只負責懷疑與挑毛病。</li>
+<li>測試與 smoke：客觀驗證。</li>
+<li>人類：最終產品驗收與方向判斷。</li>
+</ul>
+<p>這篇與前一篇「Field Guide to Fable」可接在一起看：前者談 context、unknown matrix、stay in the loop；這篇則把「最強模型應放在哪」落到 AI coding 團隊分工。</p>
+<h1>Codex 單獨跑長任務的痛點</h1>
+<p>作者指出，Codex 不是不強，而是單獨跑大型工程任務時容易卡在最後 20%：</p>
+<ul>
+<li>測試是否真的通過？</li>
+<li>服務是否真的重啟？</li>
+<li>curl smoke 是否成功？</li>
+<li>真實檔案是否跑過？</li>
+<li>review finding 是真 bug 還是假陽性？</li>
+<li>改動是否該 commit？</li>
+<li>任務到底算不算 close？</li>
+</ul>
+<p>問題不在前 80% 的 code，而在最後的收斂、驗收、邊界與完工定義。Codex 單獨跑時，容易一直做、一直加、一直修、一直報進展，但 diff 越滾越大，PLAN / REPORT 越來越多，任務仍 close 不起來。</p>
+<h1>Fable 5 的高槓桿位置：控制平面</h1>
+<p>作者認為 Fable 5 最值錢的地方不是當「廉價碼農」，而是做最貴、最關鍵的判斷：</p>
+<ul>
+<li>先診斷問題。</li>
+<li>把任務切成很窄的工單。</li>
+<li>定義驗收條件。</li>
+<li>指定禁區，哪些檔案不能碰。</li>
+<li>逐條查證 reviewer 的指控。</li>
+<li>否決假的 finding。</li>
+<li>把真的 finding 交給 Codex 修。</li>
+<li>讀 diff，不信完工報告。</li>
+<li>決定下一輪是否繼續。</li>
+<li>負責把任務 close 起來。</li>
+</ul>
+<p>這其實是 AI coding 的控制平面 / 執行平面分離：</p>
+<ul>
+<li>控制平面：方向、邊界、驗收、仲裁、收斂。</li>
+<li>執行平面：改 code、跑測試、回報 diff 與風險。</li>
+</ul>
+<h1>Codex 5.5 的位置：低熵工單 executor</h1>
+<p>Codex 在這個配置中不是被丟一個大任務，而是接收 Fable 5 壓縮後的低熵 goal：</p>
+<ul>
+<li>只做這件事。</li>
+<li>只碰這幾個檔案。</li>
+<li>驗收條件是這些。</li>
+<li>不能放鬆 gate。</li>
+<li>不能順手重構。</li>
+<li>不能擴大 scope。</li>
+<li>做完回報 plan、diff、測試結果、剩下風險。</li>
+</ul>
+<p>這比「幫我把 workflow 修好」更容易成功，因為 executor 不必同時猜根因、驗收標準、產品意圖與 reviewer 哪些說法可信。Fable 5 先把大任務壓成小、清楚、可驗收的任務，Codex 就能專注執行。</p>
+<h1>Gemini / AGY 的位置：異質 Reviewer，但沒有決策權</h1>
+<p>貼文中特別重要的一點是：reviewer 只負責懷疑，不負責拍板。</p>
+<p>Gemini 3.1 Pro / AGY 可以 aggressive 地報問題、P1、contract risk、edge case；但 Fable 5 必須逐條查證：</p>
+<ul>
+<li>真的 finding → 交給 Codex 修。</li>
+<li>假陽性 → 直接否決。</li>
+</ul>
+<p>作者提醒，很多 multi-agent workflow 失敗，是因為 reviewer 一講話，executor 就開始亂修。假陽性沒被擋掉，任務會越修越歪。</p>
+<p>這個分工可濃縮成：</p>
+<ul>
+<li>Gemini 負責懷疑。</li>
+<li>Fable 負責仲裁。</li>
+<li>Codex 負責修復。</li>
+<li>測試與 smoke 負責客觀驗證。</li>
+<li>人類負責最後產品驗收。</li>
+</ul>
+<h1>七個關鍵原則</h1>
+<p>作者整理這套流程的七個關鍵，可保存為 AI coding checklist：</p>
+<h2>1. Fable 5 不做苦工，只做控制平面</h2>
+<p>不要讓最強模型親自寫最多 code。讓它負責方向、切工單、驗收與仲裁，才能把 token 用在高槓桿判斷。</p>
+<h2>2. Codex 5.5 變成執行平面</h2>
+<p>Codex 適合做 executor，尤其是 /goal 長模式。只要上層 goal 寫得夠精確，就能發揮改 code、跑檢查、整理回報的能力。</p>
+<h2>3. Gemini 3.1 Pro / AGY 當異質 reviewer</h2>
+<p>同模型自審容易盲點重疊。異質 reviewer 的價值在於錯誤分布不同，可抓到不同類型問題。</p>
+<h2>4. Reviewer 沒有決策權</h2>
+<p>Reviewer 可以報問題，但不能直接指揮修復。所有 finding 需由 orchestrator 查證，避免假陽性帶偏 executor。</p>
+<h2>5. Done definition 放在模型外面</h2>
+<p>SPEC、PLAN、REPORT、HANDOFF、MEMORY、測試結果、commit 不是裝飾，而是讓每一輪不用只靠模型記憶，避免 context 變長後漂移。</p>
+<h2>6. 每一輪都要能收斂</h2>
+<p>不能只叫 agent「繼續努力」。每一輪都要有明確驗收：測試、smoke、真檔、diff review、commit 邊界。過了就收；不過就開下一個窄任務修。</p>
+<h2>7. 人類還是終審</h2>
+<p>AI 可以高速推進，但產品行為、商業判斷、風險接受，最後仍由人類決定。</p>
+<h1>為什麼 token 反而省</h1>
+<p>作者指出，舊流程最貴的不是 token，而是重工：</p>
+<ul>
+<li>卡死一小時沒產出。</li>
+<li>朝錯方向修一輪。</li>
+<li>把假 bug 當真 bug 修。</li>
+<li>scope 越改越大。</li>
+<li>測試沒跑就說完成。</li>
+<li>下一輪重新理解上下文。</li>
+<li>diff 爆炸，任務沒人敢收。</li>
+</ul>
+<p>因此，多花一些 orchestrator / reviewer token，如果能減少重工、錯方向與假陽性，整體反而更省。Fable 5 看似昂貴，但放在最高槓桿位置時，是在放大 Codex，而不是取代 Codex。</p>
+<p>作者的核心句：</p>
+<p>Fable 5 不是拿來取代 Codex 5.5 的；Fable 5 是拿來放大 Codex 5.5 的。</p>
+<h1>分流表</h1>
+<p>貼文最後給出簡明分流：</p>
+<ul>
+<li>小而明確的單點修改：直接丟 Codex。</li>
+<li>需要跨檔案、跨服務、驗收、部署、close 的任務：走 Fable 5 orchestrator。</li>
+<li>需要找風險與盲點：丟 Gemini 3.1 Pro / AGY review。</li>
+<li>最後人類只看結果、產品行為、風險是否可接受。</li>
+</ul>
+<p>這張表很適合轉成 AI coding 工作流 SOP。</p>
+<h1>與公開 multi-agent 架構的對照</h1>
+<p>使用 Brave Search 交叉驗證，這篇的實務經驗與多個公開 multi-agent pattern 呼應：</p>
+<ul>
+<li>Anthropic 的 multi-agent research system：lead agent 規劃、派生 subagents、綜合結果並決定是否需要更多研究。</li>
+<li>OpenAI Agents SDK：multi-agent orchestration 中，agents as tools 適合讓 specialist 幫忙 bounded subtask，但不接管整體對話。</li>
+<li>OpenAI orchestration 文件：第一個設計選擇是決定每個 workflow branch 由誰擁有最終回答 / 決策權。</li>
+<li>Microsoft Foundry connected agents：primary agent delegates to purpose-built subagents。</li>
+</ul>
+<p>這些文件都支持一個方向：多 agent 不是越多越好，而是要有明確 owner、delegation boundary、specialist role 與決策權設計。</p>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇值得高優先保存，因為它把「AI coding 團隊」從口號落到可操作分工：</p>
+<ul>
+<li>最強模型不一定該做所有事。</li>
+<li>高能力模型更適合放在 control plane。</li>
+<li>coding 模型應接低熵、窄範圍、可驗收工單。</li>
+<li>reviewer 必須與 arbitrator 分離。</li>
+<li>done definition 要外部化，不靠模型記憶。</li>
+<li>human-in-the-loop 不只是審美，而是最終風險與產品責任。</li>
+</ul>
+<p>這也可延伸為欒帥 / Hermes 的工作流設計：歸檔、部署、PDF 處理、課程頁、私密名單等任務，都可以用「orchestrator → executor → reviewer → objective gates → human final acceptance」來設計。</p>
+<h1>風險與限制</h1>
+<ul>
+<li>數字如「8 小時、Fable 20%、Codex 40%、三個專案」是作者個人實驗與自述，樣本數有限，不能視為通用 benchmark。</li>
+<li>Fable 5、Codex 5.5、Gemini 3.1 Pro / AGY 的版本與帳號額度條件會影響結果。</li>
+<li>這套流程需要紀律：SPEC、PLAN、REPORT、HANDOFF、MEMORY、測試、smoke、commit 邊界缺一不可。</li>
+<li>多 agent workflow 若沒有清楚 owner 與仲裁者，仍可能變成噪音與重工。</li>
+<li>外部記憶檔案會累積，需定期摘要 / 精簡，避免每輪讀取造成 context 膨脹。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Facebook：黃仁靖在 Claude Taiwan 分享 Fable 5 作為 orchestrator 的 AI coding workflow 經驗。</li>
+<li>Brave Search：交叉查詢 Anthropic multi-agent research system、OpenAI Agents SDK orchestration / agents as tools、Microsoft Foundry connected agents 等公開 multi-agent 架構。</li>
+<li>相關 KB：Meicy Huang｜Field Guide to Fable：用 Unknown Matrix 與 Stay in the Loop 重新設計提示方式。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · Facebook / Brave Search · social-post</div><h3>標籤</h3><span class="tag">Fable</span><span class="tag">Codex</span><span class="tag">Gemini</span><span class="tag">AI Coding</span><span class="tag">Multi-Agent Workflow</span><span class="tag">Agent Orchestration</span><span class="tag">Token Efficiency</span><span class="tag">Human in the Loop</span><span class="tag">Code Review</span><span class="tag">Context Engineering</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/19N3Z4FQgC/" target="_blank" rel="noopener">https://www.facebook.com/share/p/19N3Z4FQgC/</a></p><p><a href="https://www.facebook.com/groups/1224997379198346/permalink/1335910774773672/" target="_blank" rel="noopener">https://www.facebook.com/groups/1224997379198346/permalink/1335910774773672/</a></p><p><a href="https://www.facebook.com/share/p/19N3Z4FQgC/" target="_blank" rel="noopener">https://www.facebook.com/share/p/19N3Z4FQgC/</a></p><p><a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener">https://www.anthropic.com/engineering/multi-agent-research-system</a></p><p><a href="https://openai.github.io/openai-agents-python/multi_agent/" target="_blank" rel="noopener">https://openai.github.io/openai-agents-python/multi_agent/</a></p><p><a href="https://developers.openai.com/api/docs/guides/agents/orchestration" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents/orchestration</a></p><p><a href="https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/connected-agents" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/connected-agents</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix.html</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
