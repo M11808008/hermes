@@ -34,6 +34,43 @@
     "markdown": "articles/2026/07/2026-07-08-ai-mastery-claude-phd-research-nine-prompts.md"
   },
   {
+    "title": "數位時代｜Physical AI 應用崛起：勤崴國際如何打造台灣智慧移動國家隊",
+    "date": "2026-07-08",
+    "source": "數位時代 BusinessNext / Sponsored",
+    "author": "數位時代 / sponsored by 勤崴國際",
+    "type": "article",
+    "topics": [
+      "Physical AI",
+      "Autonomous Driving",
+      "Smart Mobility",
+      "Kingwaytek",
+      "Digital Twin",
+      "World Model",
+      "智慧移動",
+      "自駕車",
+      "智慧城市",
+      "AI與大數據"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/91363/kingwaytek115232",
+      "https://www.bnext.com.tw/article/91363/kingwaytek115232",
+      "https://www.bnext.com.tw/article/91363/kingwaytek115232",
+      "https://www.kingwaytek.com/",
+      "https://www.kingwaytek.com/eng/index.html",
+      "https://smartdriving.kingwaytek.com/",
+      "https://esg.gvm.com.tw/article/17665",
+      "https://udn.com/news/story/7325/7842574",
+      "https://smartdriving.kingwaytek.com/cht/index.html"
+    ],
+    "excerpt": "這篇 sponsored article 把自駕車放在 Physical AI 的脈絡中：未來競爭不只比模型或演算法，而是比誰能累積真實場域資料、建立可複製平台，並串聯智慧移動生態系。",
+    "slug": "2026-07-08-bnext-kingwaytek-physical-ai-autonomous-driving-smart-mobility",
+    "html": "articles/2026-07-08-bnext-kingwaytek-physical-ai-autonomous-driving-smart-mobility.html",
+    "markdown": "articles/2026/07/2026-07-08-bnext-kingwaytek-physical-ai-autonomous-driving-smart-mobility.md"
+  },
+  {
     "title": "Chichieh Huang｜MCP 產品化：從 Connector 到 Agent Infrastructure 的 Capability Surface 設計",
     "date": "2026-07-08",
     "source": "Facebook / AILogora / Brave Search",
