@@ -1,5 +1,43 @@
 [
   {
+    "title": "Chichieh Huang｜MCP 產品化：從 Connector 到 Agent Infrastructure 的 Capability Surface 設計",
+    "date": "2026-07-08",
+    "source": "Facebook / AILogora / Brave Search",
+    "author": "Chichieh Huang",
+    "type": "social-post",
+    "topics": [
+      "MCP",
+      "Agent Infrastructure",
+      "Agentic Workflow",
+      "Capability Surface",
+      "Tool Search",
+      "Code Execution",
+      "MCP Gateway",
+      "Agents as Tools",
+      "Product Design",
+      "Context Engineering"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1BV3mtE53A/",
+      "https://www.facebook.com/groups/aigctw/permalink/3321488378035051/",
+      "https://www.facebook.com/share/p/1BV3mtE53A/",
+      "https://ailogora.com/card/f9ca4cc8-9fb7-4e21-8090-90768c1329f4",
+      "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "https://developers.openai.com/api/docs/guides/tools-tool-search",
+      "https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/",
+      "https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/",
+      "https://openai.github.io/openai-agents-python/",
+      "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/connected-agents"
+    ],
+    "excerpt": "MCP 產品化的核心，不是把所有工具都接給 Agent，而是設計「Agent 看得見的能力表面」：前台越乾淨，後台越可控，production 才不會被 context、權限與多步驟調度拖垮。",
+    "slug": "2026-07-08-chichieh-huang-mcp-productization-capability-surface-agent-backed-tools",
+    "html": "articles/2026-07-08-chichieh-huang-mcp-productization-capability-surface-agent-backed-tools.html",
+    "markdown": "articles/2026/07/2026-07-08-chichieh-huang-mcp-productization-capability-surface-agent-backed-tools.md"
+  },
+  {
     "title": "Meicy Huang｜Field Guide to Fable：用 Unknown Matrix 與 Stay in the Loop 重新設計提示方式",
     "date": "2026-07-08",
     "source": "Facebook / YouTube / Brave Search",

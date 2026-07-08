@@ -1,0 +1,154 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Chichieh Huang｜MCP 產品化：從 Connector 到 Agent Infrastructure 的 Capability Surface 設計</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Chichieh Huang｜MCP 產品化：從 Connector 到 Agent Infrastructure 的 Capability Surface 設計</h1><h1>Chichieh Huang｜MCP 產品化：從 Connector 到 Agent Infrastructure 的 Capability Surface 設計</h1>
+<h1>一句話摘要</h1>
+<p>MCP 產品化的核心，不是把所有工具都接給 Agent，而是設計「Agent 看得見的能力表面」：前台越乾淨，後台越可控，production 才不會被 context、權限與多步驟調度拖垮。</p>
+<h1>Facebook 貼文重點</h1>
+<p>Chichieh Huang 在 GenAI &amp; Agentic AI 論壇分享「淺談 MCP 產品化：當工具越接越多，我們要怎麼設計邊界？」。貼文主張：MCP 正在從單純 Connector，逐漸往 Agent Infrastructure 方向成長。</p>
+<p>作者認為，MCP 真正進入 production 後，最棘手的已經不是能不能接工具，而是：</p>
+<ul>
+<li>產品中有大量功能想開給 Agent 時，該讓 LLM 看見多少？</li>
+<li>哪些工具要對外曝光，哪些應該包在後端？</li>
+<li>細粒度 tool 與高階 action 該如何取捨？</li>
+<li>多步驟流程要讓前端 LLM 自己組合，還是後端 workflow / agent 接手？</li>
+</ul>
+<p>留言區提供 AILogora 易讀版：</p>
+<ul>
+<li><a href="https://ailogora.com/card/f9ca4cc8-9fb7-4e21-8090-90768c1329f4" target="_blank" rel="noopener">https://ailogora.com/card/f9ca4cc8-9fb7-4e21-8090-90768c1329f4</a></li>
+</ul>
+<h1>Production 會撞上的三面牆</h1>
+<p>作者用客服系統 MCP Server 作例子：如果把 search_knowledge_base、get_customer_orders、check_delivery_status、calculate_refund_amount、issue_refund、update_ticket_status、send_notification_email 等 granular tools 全部開給 Agent，看似彈性最高，但很快會撞上三面牆。</p>
+<h2>1. Context：工具定義與中間結果塞爆上下文</h2>
+<p>LLM 會先看到大量 tool name、description、input schema。這些不是實際內容，卻仍會消耗 context window，也可能干擾模型判斷。</p>
+<p>當工具數量從十幾個變成幾百、幾千個時，模型可能還沒讀使用者問題，就先吃下一大堆工具說明。</p>
+<h2>2. Exposure：內外邊界與封裝問題</h2>
+<p>從 internal 走向 external 時，產品底層 API、內部權限控管、防詐欺邏輯，不應毫無防備地暴露給外部 LLM。</p>
+<p>產品必須能決定：</p>
+<ul>
+<li>哪些工具可以對外開放。</li>
+<li>哪些 internal tools 只能給內部 agent / workflow 使用。</li>
+<li>哪些能力只應被包成高階 action。</li>
+</ul>
+<h2>3. Orchestration：多步驟流程調度問題</h2>
+<p>許多任務不是單一工具呼叫，而是固定且繁瑣的流程。若讓前端 LLM 自己串：撈訂單 → 從大量資料找特定訂單 → 試算退款 → 執行退款 → 更新工單 → 通知客戶，中間任何一步都可能失敗，且大量中間資料會反覆進出 context。</p>
+<p>因此 MCP 的重點應從「如何把工具接起來」轉為「如何設計 Agent 看得見的 Capability Surface」。</p>
+<h1>解法一：Code Execution with MCP</h1>
+<p>作者引用 Anthropic 的 Code Execution with MCP。Brave Search 驗證官方文章指出：MCP client 會把 tool definitions 載入 model context，並讓每次 tool call / result 都經過模型；code execution 則讓 agent 寫程式，在 execution environment 裡呼叫 MCP tools。</p>
+<p>核心價值不是「code API 比較高級」，而是：</p>
+<ul>
+<li>大量中間資料可以留在 execution environment 的變數裡。</li>
+<li>只要不 console.log、return 或放回 message，中間資料就不會被塞回模型 context。</li>
+<li>對長文件搬運、資料轉換、批次操作特別有價值。</li>
+</ul>
+<p>貼文例子：</p>
+<ul>
+<li>從 Google Drive 取 transcript。</li>
+<li>直接把 transcript 寫入 Salesforce record。</li>
+<li>transcript 不必完整回到 LLM context。</li>
+</ul>
+<h1>解法二：Tool Search / Deferred Tool Loading</h1>
+<p>為了解決 tool definitions 太多，OpenAI 的 Tool Search 讓模型在需要時才動態搜尋並載入工具。</p>
+<p>Brave Search 驗證 OpenAI 文件指出：Tool Search 可用於 deferred large tool surfaces、group related tools with namespaces，並只在 runtime 載入 relevant functions。</p>
+<p>這與 Skills 的 progressive disclosure 精神相近：</p>
+<ul>
+<li>Skills 漸進揭露 workflow instruction。</li>
+<li>Tool Search 漸進揭露 tool definitions。</li>
+<li>MCP protocol 本身專注 context exchange，不直接等於 Skill 或 Tool Search；這些多屬平台層 / 周邊層的 context management。</li>
+</ul>
+<h1>解法三：MCP Gateway 作為產品化控制層</h1>
+<p>當產品內部有許多 internal MCP servers 與流程，但不想讓 external client 看光，MCP Gateway 就成為必要控制層。</p>
+<p>作者把它比喻成「公司總機」：外部不需要拿到全公司通訊錄，也不需要知道內部流程，只需要知道要做某件事可以走哪個入口。</p>
+<p>Gateway 的作用包括：</p>
+<ul>
+<li>access control / auth</li>
+<li>routing</li>
+<li>logging / call tracing</li>
+<li>tool exposure / allowlist</li>
+<li>context optimization</li>
+<li>DLP / audit / security policy</li>
+</ul>
+<p>Brave Search 驗證：</p>
+<ul>
+<li>Docker MCP Gateway 文件將它定位為 secure, centralized, scalable orchestration of AI tools through containerized MCP servers。</li>
+<li>Cloudflare MCP server portals 提供 centralized gateway，並可透過 Cloudflare Gateway 做 HTTP logging 與 DLP scanning。</li>
+</ul>
+<h1>解法四：Agent-backed MCP Tool</h1>
+<p>作者提出最值得保存的產品化 pattern：Agent-backed MCP Tool。</p>
+<p>它不是把 MCP tool 後面接普通 function，而是讓 MCP tool 成為一個高階 action 入口；背後由 workflow、specialist agent 或一組 agentic backend 負責完成多步驟流程。</p>
+<p>客服退款例子：</p>
+<ul>
+<li>對外只暴露 process_customer_refund()</li>
+<li>後台實際流程包含：</li>
+</ul>
+<p>  - 撈取與分析歷史訂單</p>
+<p>  - 判斷退款政策</p>
+<p>  - 試算退款金額</p>
+<p>  - 執行退款金流</p>
+<p>  - 更新工單</p>
+<p>  - 寄信通知</p>
+<p>對前端 LLM 來說，這只是一個穩定能力；對後端產品而言，則可以保留內部流程、權限、政策、例外處理與審計紀錄。</p>
+<p>作者也區分 Code Execution 與 Agent-backed MCP Tool：</p>
+<ul>
+<li>Code Execution：模型寫 code 去使用 MCP。</li>
+<li>Agent-backed MCP Tool：MCP tool 後面養一組 agent / workflow。</li>
+</ul>
+<p>對自有產品而言，後者更適合外部暴露，因為外部 LLM 不必知道退款政策如何判斷、多步驟流程如何跑。</p>
+<h1>相關概念：Agents as Tools / Connected Agents</h1>
+<p>作者指出 Agent-backed MCP Tool 似乎尚未有公認名稱，但有相近鄰居：</p>
+<ul>
+<li>OpenAI Agents SDK：agents as tools，主 agent 可把 specialist agents 當成工具 / capability 呼叫。</li>
+<li>Microsoft Foundry connected agents：primary agent delegates to purpose-built subagents。</li>
+</ul>
+<p>這些不等於 Agent-backed MCP Tool，但方向接近：主系統不必把所有細節攤在前端模型面前，而是用更穩定的能力入口委派給專門流程。</p>
+<h1>什麼時候該用 Agent，什麼時候不要</h1>
+<p>作者提醒：不是每個 MCP tool 背後都要硬塞 agent，否則容易變成 multi-agent 大拜拜。</p>
+<p>可採用以下切分：</p>
+<ul>
+<li>單純查資料：普通 MCP tool，例如 get_order_status()、search_knowledge_base()。</li>
+<li>固定多步驟流程：寫死成 workflow。</li>
+<li>需要處理龐大資料：用 code execution 在模型外跑。</li>
+<li>需要判斷、吃上下文、處理例外：用 Agent-backed tool。</li>
+<li>牽涉跨團隊記憶與來源比對：再考慮 Memory-aware agent。</li>
+</ul>
+<p>這套分類很實用，因為它避免把「Agent」當成萬能解，也避免為了架構漂亮而增加 debug 難度。</p>
+<h1>MCP 的四個演進階段</h1>
+<p>貼文最後將 MCP 發展整理成四階段：</p>
+<ul>
+<li>Connector</li>
+</ul>
+<p>   - 解決破碎化整合問題，讓工具與資料源有標準接法。</p>
+<ul>
+<li>Capability Management</li>
+</ul>
+<p>   - 工具越來越多，開始需要 Tool Search、Code Execution 等方式管理 context 與能力載入。</p>
+<ul>
+<li>Product Gateway</li>
+</ul>
+<p>   - 進入產品後，需要 internal / external 邊界、權限、log、routing 與 tool exposure 控制。</p>
+<ul>
+<li>Agentic Backend</li>
+</ul>
+<p>   - 對外只開乾淨穩定的高階 action，對內由 workflow 或 specialist agents 扛起複雜流程。</p>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇是 MCP / Agent 產品化的重要架構筆記，特別適合延伸成課程或內部技術討論：</p>
+<ul>
+<li>不要把 MCP 等同「工具越多越好」。</li>
+<li>工具粒度是產品設計問題，不只是工程問題。</li>
+<li>外部 LLM 不應看見所有 internal tools。</li>
+<li>Capability Surface 決定 Agent 以為自己能做什麼。</li>
+<li>Production agent 系統需要 gateway、audit、權限、context management 與高階 action 設計。</li>
+<li>Agent-backed MCP Tool 是值得追蹤的 pattern，尤其適合客服、退款、報價、文件審核、跨系統營運流程。</li>
+</ul>
+<h1>可轉用到 Hermes / 欒帥工作流的思考</h1>
+<p>對 Hermes 這類長期運作的 agent 系統，這篇提供很直接的架構提醒：</p>
+<ul>
+<li>不必把所有細工具都塞到每個任務 context。</li>
+<li>對外工作流應暴露高階能力，例如 archive_shared_link()、deploy_knowledge_base()、process_private_roster()。</li>
+<li>內部可以由工具、腳本、子代理、驗證器組合完成，但使用者不需要看到全部細節。</li>
+<li>對私密課程資料、個資名單、群組內容，應特別注意 Exposure 與 Capability Surface 邊界。</li>
+<li>長文件 / PDF / 社群串資料應盡量留在 execution environment 或本機檔案中處理，只把摘要與決策點交給模型。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Facebook：GenAI &amp; Agentic AI 論壇，Chichieh Huang 發文。</li>
+<li>AILogora：留言區易讀版，title 與內容可公開讀取。</li>
+<li>Brave Search：驗證 Anthropic Code Execution with MCP、OpenAI Tool Search、Docker MCP Gateway、Cloudflare MCP server portals、OpenAI Agents SDK、Microsoft Foundry connected agents 等相關官方文件與描述。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · Facebook / AILogora / Brave Search · social-post</div><h3>標籤</h3><span class="tag">MCP</span><span class="tag">Agent Infrastructure</span><span class="tag">Agentic Workflow</span><span class="tag">Capability Surface</span><span class="tag">Tool Search</span><span class="tag">Code Execution</span><span class="tag">MCP Gateway</span><span class="tag">Agents as Tools</span><span class="tag">Product Design</span><span class="tag">Context Engineering</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1BV3mtE53A/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1BV3mtE53A/</a></p><p><a href="https://www.facebook.com/groups/aigctw/permalink/3321488378035051/" target="_blank" rel="noopener">https://www.facebook.com/groups/aigctw/permalink/3321488378035051/</a></p><p><a href="https://www.facebook.com/share/p/1BV3mtE53A/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1BV3mtE53A/</a></p><p><a href="https://ailogora.com/card/f9ca4cc8-9fb7-4e21-8090-90768c1329f4" target="_blank" rel="noopener">https://ailogora.com/card/f9ca4cc8-9fb7-4e21-8090-90768c1329f4</a></p><p><a href="https://www.anthropic.com/engineering/code-execution-with-mcp" target="_blank" rel="noopener">https://www.anthropic.com/engineering/code-execution-with-mcp</a></p><p><a href="https://developers.openai.com/api/docs/guides/tools-tool-search" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/tools-tool-search</a></p><p><a href="https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/" target="_blank" rel="noopener">https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/</a></p><p><a href="https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/" target="_blank" rel="noopener">https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/</a></p><p><a href="https://openai.github.io/openai-agents-python/" target="_blank" rel="noopener">https://openai.github.io/openai-agents-python/</a></p><p><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/connected-agents" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/connected-agents</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
