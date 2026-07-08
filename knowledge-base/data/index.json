@@ -1,5 +1,77 @@
 [
   {
+    "title": "Meicy Huang｜Field Guide to Fable：用 Unknown Matrix 與 Stay in the Loop 重新設計提示方式",
+    "date": "2026-07-08",
+    "source": "Facebook / YouTube / Brave Search",
+    "author": "Meicy Huang / Thariq Shihipar",
+    "type": "social-post",
+    "topics": [
+      "Claude",
+      "Fable",
+      "Anthropic",
+      "Prompt Engineering",
+      "Unknown Matrix",
+      "Claude Code",
+      "AI Engineer World Fair",
+      "Human in the Loop",
+      "Agentic Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/18ZcojnamW/",
+      "https://www.facebook.com/groups/1224997379198346/permalink/1340618967636186/",
+      "https://www.facebook.com/share/p/18ZcojnamW/",
+      "https://www.youtube.com/watch?v=9fubhllmsBU",
+      "https://x.com/trq212/status/2074163788853760175",
+      "https://thenewstack.io/anthropic-extends-fable-5/",
+      "https://www.forbes.com/sites/sandycarter/2026/07/07/claude-fable-5-extends-by-five-more-days-10-moves-to-make-now/",
+      "https://www.startuphub.ai/ai-news/ai-research/2026/anthropic-s-thariq-shihipar-on-fable-a-field-guide"
+    ],
+    "excerpt": "Fable 這類更強模型的提示策略，不只是把規格寫更死，而是用更多脈絡、更少限制、主動探索未知，並用報告與測驗讓人類始終保有判斷權。",
+    "slug": "2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix",
+    "html": "articles/2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix.html",
+    "markdown": "articles/2026/07/2026-07-08-meicy-huang-field-guide-to-fable-unknown-matrix.md"
+  },
+  {
+    "title": "陳柏威｜claude-paper-tools：把 journal club 評讀與論文吸收寫成 Claude Code Skills",
+    "date": "2026-07-08",
+    "source": "Facebook / GitHub / Blog",
+    "author": "陳柏威 Po-Wei Chen, MD",
+    "type": "social-post",
+    "topics": [
+      "Claude Code",
+      "Agent Skills",
+      "Paper Review",
+      "Literature Review",
+      "Evidence Based Medicine",
+      "CrossRef",
+      "GRADE",
+      "Obsidian",
+      "Zotero",
+      "AI Learning Radar"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/19KiR2caNx/",
+      "https://www.facebook.com/paul.chen.pwc/posts/pfbid0ywsiFriskmZTuxNj4hRvN7qKAMy3dSgbigzujKEPEzoQm4MDLLqo7c1feZLew6cnl",
+      "https://www.facebook.com/share/p/19KiR2caNx/",
+      "https://github.com/drpwchen/claude-paper-tools",
+      "https://drpwchen.com/posts/paper-tools/",
+      "https://github.com/drpwchen/paper-radar",
+      "https://github.com/htlin222/robust-lit-review",
+      "https://docs.anthropic.com/en/docs/claude-code",
+      "https://api.crossref.org/"
+    ],
+    "excerpt": "這是一個把臨床 journal club 的讀論文流程封裝成 Claude Code skills 的案例：讓模型負責讀懂語意，讓小程式負責不可妥協的邏輯、引用與證據等級檢查。",
+    "slug": "2026-07-08-powei-chen-claude-paper-tools-paper-review-digest",
+    "html": "articles/2026-07-08-powei-chen-claude-paper-tools-paper-review-digest.html",
+    "markdown": "articles/2026/07/2026-07-08-powei-chen-claude-paper-tools-paper-review-digest.md"
+  },
+  {
     "title": "AI 網絡自由創業｜讓 ChatGPT 先認識你：AI 記憶、個人化與服務變現分享會導流",
     "date": "2026-07-07",
     "source": "Facebook Reel",

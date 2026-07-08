@@ -1,0 +1,139 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Meicy Huang｜Field Guide to Fable：用 Unknown Matrix 與 Stay in the Loop 重新設計提示方式</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Meicy Huang｜Field Guide to Fable：用 Unknown Matrix 與 Stay in the Loop 重新設計提示方式</h1><h1>Meicy Huang｜Field Guide to Fable：用 Unknown Matrix 與 Stay in the Loop 重新設計提示方式</h1>
+<h1>一句話摘要</h1>
+<p>Fable 這類更強模型的提示策略，不只是把規格寫更死，而是用更多脈絡、更少限制、主動探索未知，並用報告與測驗讓人類始終保有判斷權。</p>
+<h1>Facebook 貼文重點</h1>
+<p>Meicy Huang 在 Claude Taiwan 社團分享 Anthropic 延長 Fable 可用時間到 7 月 12 日，並整理 Thariq Shihipar 在 AI Engineer World’s Fair 的「Field Guide to Fable」演講。</p>
+<p>貼文主軸：</p>
+<ul>
+<li>Fable 代表更強、更開放的模型能力，應該重新理解提示與協作方式。</li>
+<li>不要只給一堆 constraints，而要提供更多 context。</li>
+<li>用 Unknown Matrix 找出需求、設計、架構與盲點中的未知。</li>
+<li>AI 可以協助探索人類尚未想像到的方向，但人類必須 stay in the loop。</li>
+<li>讓 AI 在大改動後產生 HTML report、implementation notes 與 quiz，確保人類理解變更。</li>
+</ul>
+<h1>來源驗證</h1>
+<p>使用 Brave Search 與 YouTube metadata / transcript 交叉驗證：</p>
+<ul>
+<li>YouTube oEmbed 顯示影片標題為「Field Guide to Fable — Thariq Shihipar, Anthropic」，頻道為 AI Engineer。</li>
+<li>transcript 開場確認講者為 Anthropic technical staff，主題是如何與 Fable 這類新模型工作。</li>
+<li>Thariq Shihipar 的 X 貼文搜尋結果顯示：「my keynote at AI Engineer World Fair: A Field Guide to Fable is live on YouTube」。</li>
+<li>The New Stack 與 Forbes 均報導 Anthropic 將 Fable included access 延長至 July 12。</li>
+</ul>
+<p>限制：Facebook 留言中的影片連結未在未登入狀態完整顯示；此篇以貼文內容、YouTube oEmbed / transcript、Brave Search 結果與公開報導做交叉整理。</p>
+<h1>Thariq 的四段框架</h1>
+<p>YouTube transcript 中，Thariq 把 Field Guide to Fable 分成四段：</p>
+<ul>
+<li>Unhobbling Claude：解除模型被工具與提示框架限制的狀態。</li>
+<li>Finding your unknowns：找出自己沒有寫進 prompt、甚至沒有意識到的未知。</li>
+<li>Dealing with the grief：面對模型能力上升後，過去做事方式被改寫的落差。</li>
+<li>Being unreasonable：重新想像 good / fast / cheap 的權衡，讓自己更有企圖心。</li>
+</ul>
+<p>他用「Pokémon 名稱結尾 aw」例子說明 capability overhang：聊天模型可能答不出來，但 Claude Code 若能抓資料、寫 script 過濾，就能解出。重點不是模型「記得更多」，而是工具與工作方式讓能力被釋放。</p>
+<h1>Context &gt; Constraints</h1>
+<p>貼文與 transcript 都指向同一個觀念：新模型不一定需要更大的限制網，反而需要更好的脈絡。</p>
+<p>Thariq 提到：</p>
+<ul>
+<li>models are grown, not designed。</li>
+<li>prompt / harness 其實反映了人類對模型的理解。</li>
+<li>新一代模型更有想像力，過多 examples 或「不要做 X」可能反而限制它。</li>
+<li>與其把模型綁死，不如給它更完整的 context，讓它探索可行路徑。</li>
+</ul>
+<p>這並不代表不設邊界，而是把「限制」轉成「任務脈絡、目標、評估標準、已知資源與人類偏好」。</p>
+<h1>Unknown Matrix：四種未知與對應提示</h1>
+<p>貼文整理了 known / unknown 四象限，可保存為 prompt 設計框架：</p>
+<h2>Known Knowns：已知已知</h2>
+<p>你已經清楚知道的需求，可以直接寫進 prompt。</p>
+<p>例：用 Python 寫一個排序演算法。</p>
+<h2>Unknown Knowns：未知已知</h2>
+<p>你其實有偏好，但無法用文字描述；常見於視覺、美感、互動設計。</p>
+<p>建議方式：brainstorms and prototypes。</p>
+<p>貼文範例：</p>
+<ul>
+<li>“I want a dashboard for this data but I have no visual taste and don&#x27;t know what&#x27;s possible. Make me an HTML page with 4 wildly different design directions so I can react to them.”</li>
+</ul>
+<p>重點：不是要求 AI 猜中你的美感，而是先產生多個極端原型，讓人類透過反應把隱性偏好顯性化。</p>
+<h2>Known Unknowns：已知未知</h2>
+<p>你知道自己有些地方不清楚，例如資料庫架構、需求邊界、使用情境。</p>
+<p>建議方式：interviews / references。</p>
+<p>貼文範例：</p>
+<ul>
+<li>“Interview me one question at a time about anything ambiguous — prioritize questions where my answer would change the architecture.”</li>
+<li>“This Rust crate in vendor/rate-limiter implements the exact backoff behavior I want. Read it and reimplement the same semantics in our TypeScript API client.”</li>
+</ul>
+<p>重點：讓 AI 優先問會改變架構的問題；或把既有程式 / 文件當作「舊地圖」，讓模型畫出新地圖。</p>
+<h2>Unknown Unknowns：未知未知</h2>
+<p>你不知道自己不知道的盲點，是最危險區域。</p>
+<p>建議方式：blindspot pass。</p>
+<p>貼文範例：</p>
+<ul>
+<li>“I&#x27;m working on adding a new auth provider but I know nothing about the auth modules in this codebase. Can you do a blindspot pass to help me figure out my relevant unknown unknowns and help me prompt you better?”</li>
+</ul>
+<p>重點：不要只叫 AI 找 bug，而是請它找出你還沒意識到的架構盲點、風險與接下來應該如何提問。</p>
+<h1>Stay in the Loop：人類仍是決策核心</h1>
+<p>Fable 能探索未知，不代表可以放手讓模型決定一切。貼文中特別保存了「保持人類在迴圈中」的操作方法：</p>
+<ul>
+<li>大改動後請模型產生 HTML report。</li>
+<li>report 應包含 context、intuition、what was done、影響範圍。</li>
+<li>底部加入 quiz，讓人類確認自己真的理解。</li>
+</ul>
+<p>貼文範例：</p>
+<ul>
+<li>“I want to make sure I understand everything that&#x27;s happened in this change. Give me a HTML report on the changes for me to read and understand with context, intuition, what was done, etc. and a quiz at the bottom on the changes that I must pass.”</li>
+</ul>
+<p>Transcript 也提到 implementation notes：當 Fable 遇到未知或偏離原計畫時，要求它記錄下來，讓人知道 deviation 發生在哪裡、為什麼發生。</p>
+<h1>「規格派」不會消失，但要升級</h1>
+<p>貼文提出「規格派會式微」的觀點：模型越強，越不應只把它關在非常細的指令裡。更準確地說，規格派不是消失，而是升級成：</p>
+<ul>
+<li>用 context 描述世界，而不是只列規則。</li>
+<li>用 prototype 暴露隱性需求。</li>
+<li>用 interview 釐清架構關鍵問題。</li>
+<li>用 references 讓模型讀既有範例。</li>
+<li>用 blindspot pass 找未知風險。</li>
+<li>用 report / quiz 保留人類理解與決策權。</li>
+</ul>
+<p>這比傳統「把每一步都規定死」更適合高能力 agentic model。</p>
+<h1>Pick Three：重新想像 good / fast / cheap</h1>
+<p>Thariq 在 transcript 中提到，Fable 改變了對 trade-off 的想像：過去常說 good / fast / cheap 只能選二，現在應該更常思考「pick three」。</p>
+<p>但貼文也提醒：建立東西變簡單，不等於創造價值變簡單。真正困難的仍是：</p>
+<ul>
+<li>找到值得做的問題。</li>
+<li>讓產出對人或組織產生價值。</li>
+<li>讓人類保有理解、判斷與責任。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇可作為「高能力模型提示策略」課程單元：</p>
+<ul>
+<li>從 constraints prompt 轉向 context-rich collaboration。</li>
+<li>用 Unknown Matrix 設計不同類型的提示。</li>
+<li>把 prompt 從一次性指令升級成互動式需求發現流程。</li>
+<li>讓 AI agent 在大改動後自動輸出 report、implementation notes、quiz。</li>
+<li>把人類在迴圈中具體化，而不是只喊口號。</li>
+</ul>
+<h1>可直接複用的提示模板</h1>
+<ul>
+<li>多方向原型</li>
+</ul>
+<p>“I want a dashboard for this data but I have no visual taste and don&#x27;t know what&#x27;s possible. Make me an HTML page with 4 wildly different design directions so I can react to them.”</p>
+<ul>
+<li>架構訪談</li>
+</ul>
+<p>“Interview me one question at a time about anything ambiguous — prioritize questions where my answer would change the architecture.”</p>
+<ul>
+<li>參考既有實作</li>
+</ul>
+<p>“This Rust crate in vendor/rate-limiter implements the exact backoff behavior I want. Read it and reimplement the same semantics in our TypeScript API client.”</p>
+<ul>
+<li>盲點掃描</li>
+</ul>
+<p>“I&#x27;m working on adding a new auth provider but I know nothing about the auth modules in this codebase. Can you do a blindspot pass to help me figure out my relevant unknown unknowns and help me prompt you better?”</p>
+<ul>
+<li>變更報告與測驗</li>
+</ul>
+<p>“I want to make sure I understand everything that&#x27;s happened in this change. Give me a HTML report on the changes for me to read and understand with context, intuition, what was done, etc. and a quiz at the bottom on the changes that I must pass.”</p>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Facebook：Meicy Huang 在 Claude Taiwan 分享 Fable 延長與 Field Guide to Fable 摘要。</li>
+<li>YouTube oEmbed：確認影片標題、頻道與 URL。</li>
+<li>YouTube transcript：確認演講四段框架、unhobbling Claude、unknowns、context vs constraints、quiz / implementation notes、pick three 等主題。</li>
+<li>Brave Search：驗證 Thariq X 貼文、YouTube 影片、The New Stack / Forbes 對 Fable 延長至 July 12 的報導。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · Facebook / YouTube / Brave Search · social-post</div><h3>標籤</h3><span class="tag">Claude</span><span class="tag">Fable</span><span class="tag">Anthropic</span><span class="tag">Prompt Engineering</span><span class="tag">Unknown Matrix</span><span class="tag">Claude Code</span><span class="tag">AI Engineer World Fair</span><span class="tag">Human in the Loop</span><span class="tag">Agentic Workflow</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/18ZcojnamW/" target="_blank" rel="noopener">https://www.facebook.com/share/p/18ZcojnamW/</a></p><p><a href="https://www.facebook.com/groups/1224997379198346/permalink/1340618967636186/" target="_blank" rel="noopener">https://www.facebook.com/groups/1224997379198346/permalink/1340618967636186/</a></p><p><a href="https://www.facebook.com/share/p/18ZcojnamW/" target="_blank" rel="noopener">https://www.facebook.com/share/p/18ZcojnamW/</a></p><p><a href="https://www.youtube.com/watch?v=9fubhllmsBU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=9fubhllmsBU</a></p><p><a href="https://x.com/trq212/status/2074163788853760175" target="_blank" rel="noopener">https://x.com/trq212/status/2074163788853760175</a></p><p><a href="https://thenewstack.io/anthropic-extends-fable-5/" target="_blank" rel="noopener">https://thenewstack.io/anthropic-extends-fable-5/</a></p><p><a href="https://www.forbes.com/sites/sandycarter/2026/07/07/claude-fable-5-extends-by-five-more-days-10-moves-to-make-now/" target="_blank" rel="noopener">https://www.forbes.com/sites/sandycarter/2026/07/07/claude-fable-5-extends-by-five-more-days-10-moves-to-make-now/</a></p><p><a href="https://www.startuphub.ai/ai-news/ai-research/2026/anthropic-s-thariq-shihipar-on-fable-a-field-guide" target="_blank" rel="noopener">https://www.startuphub.ai/ai-news/ai-research/2026/anthropic-s-thariq-shihipar-on-fable-a-field-guide</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

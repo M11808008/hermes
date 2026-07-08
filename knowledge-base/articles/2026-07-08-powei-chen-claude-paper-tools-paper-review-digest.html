@@ -1,0 +1,125 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>陳柏威｜claude-paper-tools：把 journal club 評讀與論文吸收寫成 Claude Code Skills</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>陳柏威｜claude-paper-tools：把 journal club 評讀與論文吸收寫成 Claude Code Skills</h1><h1>陳柏威｜claude-paper-tools：把 journal club 評讀與論文吸收寫成 Claude Code Skills</h1>
+<h1>一句話摘要</h1>
+<p>這是一個把臨床 journal club 的讀論文流程封裝成 Claude Code skills 的案例：讓模型負責讀懂語意，讓小程式負責不可妥協的邏輯、引用與證據等級檢查。</p>
+<h1>Facebook 貼文重點</h1>
+<p>陳柏威延續前一篇「論文學習小站」分享，公開背後兩個後端 Claude Code skills：</p>
+<ul>
+<li>paper-review：回答「這篇可不可信、做得好不好？」</li>
+<li>paper-digest：回答「這篇講了什麼、怎麼最快吸收？」</li>
+</ul>
+<p>貼文中特別強調，這比較像個人系統的一個案例，不是下載後就能無腦跑的產品；但可作為把臨床評讀、EBM 與 AI agent 工作流結合的參考實作。</p>
+<p>留言區補充兩個重要連結：</p>
+<ul>
+<li>GitHub：drpwchen/claude-paper-tools</li>
+<li>完整部落格：我把 journal club 的「讀論文腦」寫成了 AI skill，還逼它不能靠印象唬爛</li>
+</ul>
+<h1>專案定位</h1>
+<p>GitHub README 將專案定位為「Two Claude Code skills for reading a single academic paper properly」：</p>
+<ul>
+<li>由臨床醫師為 journal club 與臨床使用建立，再抽掉私人設定後分享。</li>
+<li>兩個 skills 可獨立使用，也可針對同一篇論文先做內容整理，再做品質評讀。</li>
+<li>paper-review / paper-digest 是「閱讀端」；README 另提到探索端可搭配 paper-radar，從期刊 feed / PubMed 搜尋挑選論文，再派送給 review 或 digest。</li>
+</ul>
+<p>GitHub metadata 觀察：</p>
+<ul>
+<li>repo：drpwchen/claude-paper-tools</li>
+<li>license：MIT</li>
+<li>default branch：main</li>
+<li>created：2026-07-07</li>
+<li>GitHub API 觀察時 stars 5、forks 2、open issues 0</li>
+</ul>
+<h1>paper-review：可信度與評讀</h1>
+<p>paper-review 不是單純叫 AI 寫一篇心得，而是把 journal club 會問的問題拆成一套流程：</p>
+<ul>
+<li>期刊可信度：impact metrics、indexing、peer review、predatory / retraction red flags。</li>
+<li>作者與背景：作者 track record、COI、相關研究脈絡。</li>
+<li>引用查核：先用 CrossRef 檢查引用文獻是否真的存在，再做語意層面的引用是否被正確表述。</li>
+<li>研究設計路由：依研究型態選擇適合工具，而不是一張萬用 checklist。</li>
+<li>論證與 spin 稽核：檢查結論是否超出資料能支持的範圍。</li>
+<li>GRADE：把模型的證據等級判斷交給程式重算。</li>
+</ul>
+<h1>研究設計路由：不是萬用 checklist</h1>
+<p>README 與 skill 文件列出不同研究型態對應工具：</p>
+<ul>
+<li>RCT：Cochrane RoB 2</li>
+<li>世代 / 病例對照 / 橫斷：ROBINS-I / Newcastle-Ottawa</li>
+<li>系統性回顧 / 統合分析：AMSTAR-2 + per-outcome GRADE，另檢查 PRISMA 2020 報告完整性</li>
+<li>診斷準確度：QUADAS-2</li>
+<li>預測模型：PROBAST</li>
+<li>臨床指引：AGREE II</li>
+<li>敘事型回顧：SANRA + cherry-picking check</li>
+<li>病例系列 / case report：JBI checklist</li>
+</ul>
+<p>這對 AI 學習雷達很重要：AI 不是只要「看起來有分析」，而是應該先判斷任務類型，再套用對應工具。</p>
+<h1>確定性 gate：避免 AI 憑印象唬爛</h1>
+<p>最值得保存的架構是「模型與程式分工」：</p>
+<ul>
+<li>LLM 做語意判斷，例如辨識研究結論、前提類型、GRADE 五個 domain 的嚴重程度。</li>
+<li>Python 程式做確定性計算與規則檢查。</li>
+</ul>
+<p>兩支代表性程式：</p>
+<ul>
+<li>grade_judge.py</li>
+</ul>
+<p>   - 模型只評 risk of bias、inconsistency、indirectness、imprecision、publication bias。</p>
+<p>   - 程式根據起始等級與升降級規則重算最終 GRADE。</p>
+<p>   - 模型自報等級只當參考，與程式不一致時要回頭檢查。</p>
+<p>   - 可擋掉模型容易記錯的規則，例如觀察性研究只要有降級就不能再升級。</p>
+<ul>
+<li>argdown_lint.py</li>
+</ul>
+<p>   - 模型標註每個 premise 類型，例如 direct RCT、association、surrogate outcome、single study、subgroup、secondary outcome。</p>
+<p>   - 程式檢查不合法推論跳躍，例如：</p>
+<p>     - 替代指標改善 → 宣稱 hard endpoint / causal benefit</p>
+<p>     - 相關性 → 宣稱因果</p>
+<p>     - 單一研究 → 宣稱「一致地顯示」</p>
+<p>     - 次族群或次要 outcome → 過度宣稱療效</p>
+<p>這種設計可直接遷移到其他 AI 工作流：任何「看似主觀但其實有規則」的任務，都可以讓 AI 做標註、讓程式做 gate。</p>
+<h1>CrossRef gate：先確認引用真的存在</h1>
+<p>paper-review 的引用查核有一個便宜但高價值的第一關：</p>
+<ul>
+<li>對 DOI 呼叫 CrossRef API。</li>
+<li>404 或無 message 就標示為 fabricated / unresolvable DOI。</li>
+<li>若 DOI 可解析，再用標題 token overlap 檢查是否 DOI 對到不同論文。</li>
+<li>CrossRef 通過只代表「存在」，不代表引用語意正確；仍需進入語意查核。</li>
+</ul>
+<p>這個設計特別適合防止 AI 產生假 DOI、張冠李戴引用，或把存在的文獻講成它沒有說過的內容。</p>
+<h1>paper-digest：內容吸收與主動回憶</h1>
+<p>paper-digest 完全不評好壞，只做「怎麼最快把全文內容吸收進腦袋」。它採三層漸進揭露：</p>
+<ul>
+<li>30 秒層：一句話重點 + 3–5 個最高價值事實。</li>
+<li>5 分鐘層：每一節開頭都有要點摘要。</li>
+<li>完整層：依 paper type 重新組織內容與細節。</li>
+</ul>
+<p>它還要求生成自我測驗卡，目標是把整理導向主動回憶，而不是只產生漂亮筆記。</p>
+<p>重要硬規則：拿不到全文就停，不准只靠 abstract 生成一份看起來完整的內容整理。這點非常值得保留，因為「摘要型幻覺」最容易讓人誤以為自己已經讀懂全文。</p>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這篇與近期 Agent Skills / Codex / Claude Code 主題形成連續脈絡：</p>
+<ul>
+<li>Skills 的價值不是把 prompt 寫長，而是把可重複流程、檢查點、失敗處理與工具調用固定下來。</li>
+<li>高風險任務不應完全交給 LLM「憑整體感覺」評分。</li>
+<li>好的 AI 工作流會區分語意判斷與確定性驗證。</li>
+<li>任何需要可信度的學習內容，都應設計「引用存在性、邏輯跳躍、來源品質」的 gate。</li>
+<li>對課程或企業導入而言，這可做為「從 prompt 到 skill，再到可驗證流程」的案例。</li>
+</ul>
+<h1>可借用到 Hermes / 欒帥工作流的模式</h1>
+<ul>
+<li>文章歸檔：模型擷取與摘要，程式驗證 URL、metadata、部署結果。</li>
+<li>課程頁生成：模型設計內容，程式檢查連結、表單、SEO metadata、無障礙結構。</li>
+<li>AI 工具評測：模型整理功能，程式查 pricing、docs、API availability、版本日期。</li>
+<li>文件審查：模型判斷語意，程式做格式、欄位、隱私與發布範圍 gate。</li>
+</ul>
+<h1>風險與限制</h1>
+<ul>
+<li>作者明確說這是 reference implementation，不是長期維護產品。</li>
+<li>部分流程深度綁定作者自己的 Obsidian、Zotero、複習網站與臨床 persona；使用者需要改 config.yaml。</li>
+<li>醫療與論文評讀不可視為醫療建議，也不能取代自己閱讀全文。</li>
+<li>citation / author / PubPeer 等 fan-out 查核若失敗，應明確標為缺口，不可當作「沒找到問題」。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Facebook 貼文：陳柏威分享 paper-review / paper-digest，留言區提供 GitHub 與完整部落格。</li>
+<li>GitHub：drpwchen/claude-paper-tools，README 與 SKILL.md 說明兩個 Claude Code skills、安裝、限制與程式架構。</li>
+<li>Blog：drpwchen.com/posts/paper-tools/ 補充設計動機與臨床 journal club 脈絡。</li>
+<li>GitHub API：驗證 repo metadata、MIT license、建立與更新時間。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · Facebook / GitHub / Blog · social-post</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">Agent Skills</span><span class="tag">Paper Review</span><span class="tag">Literature Review</span><span class="tag">Evidence Based Medicine</span><span class="tag">CrossRef</span><span class="tag">GRADE</span><span class="tag">Obsidian</span><span class="tag">Zotero</span><span class="tag">AI Learning Radar</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/19KiR2caNx/" target="_blank" rel="noopener">https://www.facebook.com/share/p/19KiR2caNx/</a></p><p><a href="https://www.facebook.com/paul.chen.pwc/posts/pfbid0ywsiFriskmZTuxNj4hRvN7qKAMy3dSgbigzujKEPEzoQm4MDLLqo7c1feZLew6cnl" target="_blank" rel="noopener">https://www.facebook.com/paul.chen.pwc/posts/pfbid0ywsiFriskmZTuxNj4hRvN7qKAMy3dSgbigzujKEPEzoQm4MDLLqo7c1feZLew6cnl</a></p><p><a href="https://www.facebook.com/share/p/19KiR2caNx/" target="_blank" rel="noopener">https://www.facebook.com/share/p/19KiR2caNx/</a></p><p><a href="https://github.com/drpwchen/claude-paper-tools" target="_blank" rel="noopener">https://github.com/drpwchen/claude-paper-tools</a></p><p><a href="https://drpwchen.com/posts/paper-tools/" target="_blank" rel="noopener">https://drpwchen.com/posts/paper-tools/</a></p><p><a href="https://github.com/drpwchen/paper-radar" target="_blank" rel="noopener">https://github.com/drpwchen/paper-radar</a></p><p><a href="https://github.com/htlin222/robust-lit-review" target="_blank" rel="noopener">https://github.com/htlin222/robust-lit-review</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code</a></p><p><a href="https://api.crossref.org/" target="_blank" rel="noopener">https://api.crossref.org/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
