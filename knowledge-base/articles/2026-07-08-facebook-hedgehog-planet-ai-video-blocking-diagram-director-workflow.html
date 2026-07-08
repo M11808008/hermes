@@ -1,0 +1,158 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>刺蝟星球｜AI 影片場面調度圖：從抽盲盒到 AI 導演的空間控制工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>刺蝟星球｜AI 影片場面調度圖：從抽盲盒到 AI 導演的空間控制工作流</h1><h1>刺蝟星球｜AI 影片場面調度圖：從抽盲盒到 AI 導演的空間控制工作流</h1>
+<h1>一句話摘要</h1>
+<p>AI 短劇要從「抽盲盒」升級成可控創作，關鍵不是更長的提示詞，而是把角色站位、移動路徑、鏡頭運動與場景資產畫成 AI 能理解的「場面調度圖」。</p>
+<h1>來源與抓取狀態</h1>
+<p>來源：Facebook Reel</p>
+<p>作者：刺蝟星球</p>
+<p>Canonical URL： <a href="https://www.facebook.com/reel/1727472581900796" target="_blank" rel="noopener">https://www.facebook.com/reel/1727472581900796</a></p>
+<p>抓取方式：Facebook 未登入頁面可讀完整貼文文案；另使用 browser vision 讀取可見影片畫面文字與 UI。</p>
+<p>此筆記依貼文全文、可見影片畫面、Brave Search，以及影視 blocking / storyboarding 與 AI 影片工具官方來源交叉整理。</p>
+<h1>Reel 主張整理</h1>
+<p>貼文開頭指出，做 AI 短劇時常見三種崩潰：</p>
+<ul>
+<li>角色走位總是「亂跳」</li>
+<li>鏡頭語言支離破碎</li>
+<li>場景切換像在玩「大家來找碴」</li>
+</ul>
+<p>貼文認為，這不只是 AI 模型不夠聰明，而是創作者還沒學會下達「空間指令」。因此提出一張神級工具：場面調度圖。</p>
+<p>貼文把場面調度圖稱為 AI 的「片場劇本」，用途包括：</p>
+<ul>
+<li>控制角色動線</li>
+<li>控制角色站位</li>
+<li>控制攝影機運動路徑</li>
+<li>維持場景與角色之間的空間連貫性</li>
+<li>讓 AI 從隨機生成轉向可規劃的導演式生成</li>
+</ul>
+<h1>三步驟工作流</h1>
+<h2>1. 資產準備</h2>
+<p>貼文主張先建立包含角色、場景、道具與色板的資產庫。這是穩定輸出的基礎。</p>
+<p>對 AI 影片來說，資產庫的價值在於降低模型每一鏡重新發明世界的機率：</p>
+<ul>
+<li>角色：外觀、服裝、髮型、比例、表情基準。</li>
+<li>場景：地點、空間格局、背景物件、光線方向。</li>
+<li>道具：關鍵物件的位置、大小、用途。</li>
+<li>色板：整支影片的色彩、光影與風格連貫性。</li>
+</ul>
+<p>如果沒有資產庫，後續即使 prompt 很長，角色與場景也容易在不同鏡頭之間漂移。</p>
+<h2>2. 調度規劃</h2>
+<p>第二步是在俯視圖中標註角色站位與移動軌跡，並用不同顏色線條區分不同角色。這其實對應傳統影視製作中的 blocking diagram / overhead plot diagram。</p>
+<p>傳統電影導演與攝影指導會用俯視圖規劃：</p>
+<ul>
+<li>演員 A 站在哪裡、何時移動。</li>
+<li>演員 B 從哪個方向進入畫面。</li>
+<li>攝影機從哪裡開始、往哪裡推進或跟拍。</li>
+<li>道具與場景物件會不會阻擋動線。</li>
+</ul>
+<p>把這套方法搬到 AI 影片生成時，調度圖就變成一種視覺化 prompt：它補足文字難以精準描述空間關係的問題。</p>
+<h2>3. 模型投餵</h2>
+<p>第三步是把調度圖與劇本提示詞一起給 AI。貼文的想法是：讓模型不只讀文字劇本，也讀「空間劇本」。</p>
+<p>實務上可拆成：</p>
+<ul>
+<li>文字 prompt：描述劇情、情緒、角色行為、鏡頭風格。</li>
+<li>參考圖：角色圖、場景圖、道具圖、色板圖。</li>
+<li>調度圖：俯視動線、站位、攝影機路徑。</li>
+<li>分鏡表：每一鏡的時長、鏡頭大小、轉場與動作重點。</li>
+</ul>
+<p>這樣的多模態提示，比單純寫「角色走向窗邊，攝影機跟拍」更可控。</p>
+<h1>官方與外部來源驗證</h1>
+<h2>場面調度不是新概念，而是老方法的新用途</h2>
+<p>Brave Search 顯示，影視領域早已有 blocking diagram、storyboard blocking、overhead plot diagram 等做法。這些圖用來表示演員位置、攝影機位置與運動路徑。工具如 StudioBinder 的 storyboard blocking 與 Hollywood Camera Work 的 Shot Designer，也都圍繞「用圖規劃演員與攝影機」這件事。</p>
+<p>因此，Reel 的新意不在於發明場面調度，而是把傳統導演方法轉譯成 AI 影片生成的控制介面。</p>
+<h2>Midjourney V1：Image-to-Video 脈絡</h2>
+<p>貼文 hashtag 提到 Midjourney。Midjourney 官方更新文〈Introducing Our V1 Video Model〉指出，其 V1 Video workflow 是 Image-to-Video：先在 Midjourney 生成或上傳圖片，再按 Animate 讓圖片動起來。</p>
+<p>這意味著：如果創作者能先做出穩定角色圖、場景圖與調度圖，Midjourney 類 I2V 工具就可以成為「把靜態設計轉成動態片段」的環節。</p>
+<h2>Seedance：文字／影像到影片</h2>
+<p>貼文 hashtag 也提到 Seedance。公開 API 與模型平台資料顯示，ByteDance Seedance 系列常被包裝為 text-to-video / image-to-video 模型，支援以文字或圖片作為影片生成輸入。這與「把調度圖、場景圖、角色圖一起納入生成流程」的方向一致。</p>
+<p>但需注意：不同平台包裝的 Seedance 版本、解析度、時長、可控參數與商用條款可能不同，不能只憑短影片宣稱就假設所有版本都能穩定複製複雜動線。</p>
+<h1>可操作模板：AI 影片場面調度圖該包含什麼？</h1>
+<p>一張有效的 AI 場面調度圖可以包含：</p>
+<ul>
+<li>場景俯視圖</li>
+</ul>
+<p>   - 房間、街道、門窗、桌椅、障礙物。</p>
+<p>   - 用簡單幾何圖形即可，不必精美。</p>
+<ul>
+<li>角色標記</li>
+</ul>
+<p>   - A / B / C 或不同顏色圓點。</p>
+<p>   - 標明初始位置、終點位置、面向方向。</p>
+<ul>
+<li>移動路徑</li>
+</ul>
+<p>   - 用箭頭標註每個角色的動線。</p>
+<p>   - 區分「走、跑、停、轉身、互動」。</p>
+<ul>
+<li>攝影機路徑</li>
+</ul>
+<p>   - 標明 camera start / camera end。</p>
+<p>   - 說明 push in、pull back、pan、tracking、orbit 等運鏡。</p>
+<ul>
+<li>時間節點</li>
+</ul>
+<p>   - 0s：角色 A 在門口。</p>
+<p>   - 2s：角色 B 從右側進入。</p>
+<p>   - 4s：攝影機推近到特寫。</p>
+<ul>
+<li>對應劇本</li>
+</ul>
+<p>   - 每一段動線對應一句簡短動作描述。</p>
+<p>   - 避免只畫圖不解釋，或只寫字不畫圖。</p>
+<h1>實作 Prompt 骨架</h1>
+<p>可把調度圖與提示詞搭配成以下結構：</p>
+<p>```text</p>
+<p>請根據我提供的場景資產、角色參考圖與俯視場面調度圖，生成一段 6 秒的電影感 AI 影片。</p>
+<p>角色：</p>
+<ul>
+<li>A：紅色外套女性，站在圖中 A1 位置，面向窗戶。</li>
+<li>B：黑色西裝男性，從 B1 位置進入，走向 B2。</li>
+</ul>
+<p>場景：</p>
+<ul>
+<li>小型辦公室，窗戶在畫面左側，桌子位於中央。</li>
+</ul>
+<p>動線：</p>
+<ul>
+<li>0-2 秒：A 從 A1 慢慢轉身看向門口。</li>
+<li>2-4 秒：B 從門口進入並走到桌旁。</li>
+<li>4-6 秒：A 與 B 在桌前對視。</li>
+</ul>
+<p>攝影機：</p>
+<ul>
+<li>起點 C1，中景，略低角度。</li>
+<li>0-3 秒緩慢 push in。</li>
+<li>3-6 秒向右 tracking，保持兩位角色同框。</li>
+</ul>
+<p>風格：</p>
+<ul>
+<li>寫實電影感，柔和室內光，低飽和色調。</li>
+<li>保持角色外觀、服裝與場景佈局一致。</li>
+</ul>
+<p>```</p>
+<h1>與既有 AI 學習雷達筆記的連結</h1>
+<p>這則 Reel 可接到幾個已歸檔脈絡：</p>
+<ul>
+<li>「Claude Code 自動剪短影音」：偏向剪輯、字幕、B-roll 與素材 pipeline。</li>
+<li>「SubEasy AI 配音」：偏向字幕、翻譯、配音與跨語言在地化。</li>
+<li>「HyperFrames x Codex」：偏向 HTML-native motion graphics 與影片即程式碼。</li>
+<li>本篇「場面調度圖」：補上 AI 影片生成前期的導演規劃與空間控制。</li>
+</ul>
+<p>四者合起來，就是一條更完整的 AI 影片製作鏈：前期調度 → 生成畫面 → 工程化剪輯 → 配音在地化 → 程式化動畫與再輸出。</p>
+<h1>判讀提醒</h1>
+<p>這支 Reel 的「AI 能 1:1 復刻路徑」應視為教學與行銷語言，而不是每次都能穩定達成的保證。現階段 AI 影片模型仍可能出現：</p>
+<ul>
+<li>角色外觀漂移</li>
+<li>動線理解錯誤</li>
+<li>鏡頭運動過度或不足</li>
+<li>空間關係前後不一致</li>
+<li>多角色互動混亂</li>
+</ul>
+<p>但「場面調度圖」仍是非常值得採用的控制策略，因為它把創作者的想法從抽象文字提升為可檢查、可討論、可迭代的視覺規格。</p>
+<h1>原始連結</h1>
+<ul>
+<li>Facebook Reel： <a href="https://www.facebook.com/reel/1727472581900796" target="_blank" rel="noopener">https://www.facebook.com/reel/1727472581900796</a></li>
+<li>Midjourney V1 Video Model： <a href="https://updates.midjourney.com/introducing-our-v1-video-model/" target="_blank" rel="noopener">https://updates.midjourney.com/introducing-our-v1-video-model/</a></li>
+<li>StudioBinder Storyboard Blocking： <a href="https://www.studiobinder.com/storyboard-blocking/" target="_blank" rel="noopener">https://www.studiobinder.com/storyboard-blocking/</a></li>
+<li>Hollywood Camera Work Shot Designer： <a href="https://www.hollywoodcamerawork.com/shot-designer.html" target="_blank" rel="noopener">https://www.hollywoodcamerawork.com/shot-designer.html</a></li>
+<li>MindStudio：Storyboards and Character Sheets for AI Video： <a href="https://www.mindstudio.ai/blog/storyboards-character-sheets-ai-video-generation" target="_blank" rel="noopener">https://www.mindstudio.ai/blog/storyboards-character-sheets-ai-video-generation</a></li>
+<li>Seedance image-to-video API example： <a href="https://fal.ai/models/fal-ai/bytedance/seedance/v1/pro/image-to-video" target="_blank" rel="noopener">https://fal.ai/models/fal-ai/bytedance/seedance/v1/pro/image-to-video</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · Facebook Reel / Brave Search · social-video</div><h3>標籤</h3><span class="tag">Facebook Reel</span><span class="tag">AI Video</span><span class="tag">AI短劇</span><span class="tag">場面調度</span><span class="tag">Blocking Diagram</span><span class="tag">Storyboard</span><span class="tag">Midjourney</span><span class="tag">Seedance</span><span class="tag">AI導演</span><span class="tag">視覺敘事</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/v/18eTyNEHy3/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/18eTyNEHy3/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/1727472581900796" target="_blank" rel="noopener">https://www.facebook.com/reel/1727472581900796</a></p><p><a href="https://www.facebook.com/reel/1727472581900796" target="_blank" rel="noopener">https://www.facebook.com/reel/1727472581900796</a></p><p><a href="https://updates.midjourney.com/introducing-our-v1-video-model/" target="_blank" rel="noopener">https://updates.midjourney.com/introducing-our-v1-video-model/</a></p><p><a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></p><p><a href="https://www.studiobinder.com/storyboard-blocking/" target="_blank" rel="noopener">https://www.studiobinder.com/storyboard-blocking/</a></p><p><a href="https://www.hollywoodcamerawork.com/shot-designer.html" target="_blank" rel="noopener">https://www.hollywoodcamerawork.com/shot-designer.html</a></p><p><a href="https://www.mindstudio.ai/blog/storyboards-character-sheets-ai-video-generation" target="_blank" rel="noopener">https://www.mindstudio.ai/blog/storyboards-character-sheets-ai-video-generation</a></p><p><a href="https://fal.ai/models/fal-ai/bytedance/seedance/v1/pro/image-to-video" target="_blank" rel="noopener">https://fal.ai/models/fal-ai/bytedance/seedance/v1/pro/image-to-video</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

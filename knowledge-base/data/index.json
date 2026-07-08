@@ -215,6 +215,43 @@
     "markdown": "articles/2026/07/2026-07-08-chichieh-huang-mcp-productization-capability-surface-agent-backed-tools.md"
   },
   {
+    "title": "刺蝟星球｜AI 影片場面調度圖：從抽盲盒到 AI 導演的空間控制工作流",
+    "date": "2026-07-08",
+    "source": "Facebook Reel / Brave Search",
+    "author": "刺蝟星球",
+    "type": "social-video",
+    "topics": [
+      "Facebook Reel",
+      "AI Video",
+      "AI短劇",
+      "場面調度",
+      "Blocking Diagram",
+      "Storyboard",
+      "Midjourney",
+      "Seedance",
+      "AI導演",
+      "視覺敘事"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/18eTyNEHy3/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1727472581900796",
+      "https://www.facebook.com/reel/1727472581900796",
+      "https://updates.midjourney.com/introducing-our-v1-video-model/",
+      "https://hyperframes.heygen.com/",
+      "https://www.studiobinder.com/storyboard-blocking/",
+      "https://www.hollywoodcamerawork.com/shot-designer.html",
+      "https://www.mindstudio.ai/blog/storyboards-character-sheets-ai-video-generation",
+      "https://fal.ai/models/fal-ai/bytedance/seedance/v1/pro/image-to-video"
+    ],
+    "excerpt": "AI 短劇要從「抽盲盒」升級成可控創作，關鍵不是更長的提示詞，而是把角色站位、移動路徑、鏡頭運動與場景資產畫成 AI 能理解的「場面調度圖」。",
+    "slug": "2026-07-08-facebook-hedgehog-planet-ai-video-blocking-diagram-director-workflow",
+    "html": "articles/2026-07-08-facebook-hedgehog-planet-ai-video-blocking-diagram-director-workflow.html",
+    "markdown": "articles/2026/07/2026-07-08-facebook-hedgehog-planet-ai-video-blocking-diagram-director-workflow.md"
+  },
+  {
     "title": "零度博客｜OpenAI Codex + Ollama：本地模型接管 AI 編程 Agent 的免費工作流判讀",
     "date": "2026-07-08",
     "source": "零度博客 / Brave Search / Ollama Docs / OpenAI Developers",
