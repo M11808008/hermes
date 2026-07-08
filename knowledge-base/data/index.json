@@ -1,5 +1,37 @@
 [
   {
+    "title": "阿朱的日常｜上順興香Q飯糰：市政府站巨無霸飯糰與蔥油餅二合一早餐攻略",
+    "date": "2026-07-08",
+    "source": "阿朱的日常 / Brave Search",
+    "author": "Achu",
+    "type": "article",
+    "topics": [
+      "台北美食",
+      "市政府站",
+      "信義區早餐",
+      "上順興香Q飯糰",
+      "飯糰",
+      "蔥油餅",
+      "生活雷達"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://achu.tw/shang-shun-xing/",
+      "https://achu.tw/shang-shun-xing/",
+      "https://achu.tw/shang-shun-xing/",
+      "https://shotfunlady.com/shang-shun-xing-xiang-fan-tuan/",
+      "https://appletrees.tw/blog/post/shangshunxing",
+      "https://kkmurmur.com/shang-shun-xing-xiang-fan-tuan/",
+      "https://lordcat.net/archives/118202"
+    ],
+    "excerpt": "上順興香Q飯糰是信義區／市政府站一帶的高份量早餐口袋名單，重點不是精緻擺盤，而是糯米飯糰、油條、酸菜、菜脯、肉鬆與現煎蔥油餅組成的「飽到可以抵兩餐」型早餐。",
+    "slug": "2026-07-08-achu-shang-shun-xing-rice-ball-breakfast-taipei-city-hall",
+    "html": "articles/2026-07-08-achu-shang-shun-xing-rice-ball-breakfast-taipei-city-hall.html",
+    "markdown": "articles/2026/07/2026-07-08-achu-shang-shun-xing-rice-ball-breakfast-taipei-city-hall.md"
+  },
+  {
     "title": "AI Mastery｜Claude PhD-level Research：9 個研究型 Prompt 與可信度檢查用法",
     "date": "2026-07-08",
     "source": "Facebook / Brave Search",
@@ -32,6 +64,42 @@
     "slug": "2026-07-08-ai-mastery-claude-phd-research-nine-prompts",
     "html": "articles/2026-07-08-ai-mastery-claude-phd-research-nine-prompts.html",
     "markdown": "articles/2026/07/2026-07-08-ai-mastery-claude-phd-research-nine-prompts.md"
+  },
+  {
+    "title": "AI郵報｜HyperFrames x Codex 快速上手：用 HTML 寫畫面、用 Agent 渲染影片",
+    "date": "2026-07-08",
+    "source": "AI郵報 / Brave Search / HyperFrames 官方文件",
+    "author": "Philo / AI郵報",
+    "type": "article",
+    "topics": [
+      "HyperFrames",
+      "Codex",
+      "HeyGen",
+      "Video as Code",
+      "AI Coding Agent",
+      "GSAP",
+      "FFmpeg",
+      "Remotion",
+      "Content Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.aiposthub.com/hyperframes-codex-quickstart-guide/",
+      "https://www.aiposthub.com/hyperframes-codex-quickstart-guide/",
+      "https://www.aiposthub.com/hyperframes-codex-quickstart-guide/",
+      "https://hyperframes.heygen.com/",
+      "https://hyperframes.heygen.com/quickstart",
+      "https://github.com/heygen-com/hyperframes",
+      "https://raw.githubusercontent.com/heygen-com/hyperframes/main/.codex-plugin/plugin.json",
+      "https://hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+      "https://luma.com/ybz0ofv9"
+    ],
+    "excerpt": "HyperFrames 把影片製作從傳統剪輯時間軸轉成「HTML + CSS + JS + 可 seek 動畫」的工程問題，再讓 Codex、Claude Code、Cursor、Gemini CLI 等 agent 依專用 skills 建立、預覽、修正並渲染 MP4。",
+    "slug": "2026-07-08-aiposthub-hyperframes-codex-video-as-code-quickstart",
+    "html": "articles/2026-07-08-aiposthub-hyperframes-codex-video-as-code-quickstart.html",
+    "markdown": "articles/2026/07/2026-07-08-aiposthub-hyperframes-codex-video-as-code-quickstart.md"
   },
   {
     "title": "數位時代｜ChatGPT Agent 使用教學：開啟方式、方案額度、4 個工作情境與安全限制",

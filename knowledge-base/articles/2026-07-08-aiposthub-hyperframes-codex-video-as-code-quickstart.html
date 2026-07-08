@@ -1,0 +1,87 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI郵報｜HyperFrames x Codex 快速上手：用 HTML 寫畫面、用 Agent 渲染影片</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI郵報｜HyperFrames x Codex 快速上手：用 HTML 寫畫面、用 Agent 渲染影片</h1><h1>AI郵報｜HyperFrames x Codex 快速上手：用 HTML 寫畫面、用 Agent 渲染影片</h1>
+<h1>一句話摘要</h1>
+<p>HyperFrames 把影片製作從傳統剪輯時間軸轉成「HTML + CSS + JS + 可 seek 動畫」的工程問題，再讓 Codex、Claude Code、Cursor、Gemini CLI 等 agent 依專用 skills 建立、預覽、修正並渲染 MP4。</p>
+<h1>來源與限制</h1>
+<p>原文：〈HyperFrames x Codex 快速上手：安裝、工作流、案例分享〉</p>
+<p>作者：Philo / AI郵報</p>
+<p>發布時間：2026-05-07</p>
+<p>原文狀態：公開頁面可讀開頭、定位、課程資訊與安裝前準備；後半段顯示「This post is for subscribers only」。</p>
+<p>因此本筆記不宣稱已完整閱讀付費／註冊牆內容，而是依公開段落與官方來源補強：HyperFrames 官網、Quickstart、GitHub README、`.codex-plugin/plugin.json`、以及 HyperFrames vs Remotion 官方比較頁。</p>
+<h1>文章核心脈絡</h1>
+<p>AI郵報公開段落將 HyperFrames 定位為 HeyGen 推出的開源影片渲染框架，核心概念是「用 HTML 寫畫面，再把它渲染成影片」。文章提到官方 Quickstart 直接把 Codex、Claude Code、Cursor、Gemini CLI 等列為可搭配的 AI coding agent，並用 `npx skills add heygen-com/hyperframes` 讓 agent 取得 HyperFrames 專用知識。</p>
+<p>這和近期內容自動化趨勢一致：影片不再只是剪輯軟體中的時間軸，而可以變成可版本控管、可 prompt 修改、可 CI 重跑、可由 agent 審查與渲染的程式碼產物。</p>
+<h1>官方驗證：HyperFrames 是什麼？</h1>
+<p>HyperFrames 官方首頁描述為：讓 AI agents 透過 HTML、CSS、JS compose videos。GitHub README 則更精準地寫成：將 HTML、CSS、media 與 seekable animations 轉成 deterministic MP4 videos 的開源框架。</p>
+<p>官方 repo：`heygen-com/hyperframes`</p>
+<p>授權：Apache-2.0</p>
+<p>基本需求：Node.js 22+、FFmpeg</p>
+<p>常見技術組合：HTML、CSS、Tailwind v4 browser-runtime、GSAP、Lottie、Three.js、Anime.js、WAAPI、FFmpeg。</p>
+<h1>為什麼適合搭配 Codex？</h1>
+<p>HyperFrames 的重點不是讓 Codex「隨便寫網頁」，而是透過 skills 告訴 agent 影片 composition 的規則。</p>
+<p>官方 Quickstart 中列出的 core skills 包含：</p>
+<ul>
+<li>`/hyperframes`：入口 skill，負責理解整個 capability surface 並把任務路由到正確 workflow。</li>
+<li>`/hyperframes-core`：composition contract，例如 HTML 結構、`data-*` timing attributes、clips、tracks。</li>
+<li>`/hyperframes-animation`：GSAP、Lottie、Three.js、Anime.js、CSS、WAAPI 等動畫 runtime adapter。</li>
+<li>`/hyperframes-creative`：設計方向、配色、字體、旁白與節奏規劃。</li>
+<li>`/hyperframes-cli`：init、lint、preview、render、doctor 等 dev loop。</li>
+<li>`/media-use`：TTS、transcription、background removal 等素材預處理。</li>
+<li>`/hyperframes-registry`：安裝 catalog blocks 與 components。</li>
+<li>`/general-video`：通用影片 authoring workflow。</li>
+</ul>
+<p>這些 skills 使 Codex 更像「影片工程工作台」：能規劃影片、寫 valid HTML、接 seekable animation、加素材、lint、preview、render，而不只是單純補 code。</p>
+<h1>安裝與工作流重點</h1>
+<p>原文公開段落提到官方必要條件包括 Node.js 22 以上、npm 或 bun，以及 FFmpeg；官方 Quickstart 也確認 Node.js 22+ 與 FFmpeg 是本機 render 的前置條件。</p>
+<p>典型流程可拆成：</p>
+<ul>
+<li>安裝 HyperFrames skills：`npx skills add heygen-com/hyperframes`</li>
+<li>在 agent 中以 `/hyperframes` 描述影片需求。</li>
+<li>Agent 產生 composition HTML 與必要 assets。</li>
+<li>使用 CLI lint / preview 檢查。</li>
+<li>Render 成 MP4。</li>
+<li>根據預覽結果反覆提示 agent 修改畫面、節奏、字幕與動畫。</li>
+</ul>
+<p>GitHub README 目前也提到較新的安裝建議，例如 `--full-depth` 可避免 skills registry blob 落後 main 分支數小時；這是實作時很值得注意的細節。</p>
+<h1>Codex plugin 驗證</h1>
+<p>Brave Search 與 GitHub raw 檔案都能確認 HyperFrames repo 內含 `.codex-plugin/plugin.json`。其描述為：</p>
+<p>「Write HTML, render video. Compositions, Tailwind v4 styles, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.」</p>
+<p>這證實文章提到「HyperFrames 成為 Codex plugin / 可在 Codex 工作流中使用」不是單純社群傳言，而是 repo 中已有 Codex plugin metadata。</p>
+<h1>與 Remotion 的差異</h1>
+<p>HyperFrames 官方比較頁明確承認 Remotion 對 code-to-video 的貢獻，也說 HyperFrames 在 Chrome flags、FFmpeg pipe、frame buffering 等模式上承襲 Remotion 經驗。不過兩者下注不同：</p>
+<p>| 面向 | HyperFrames | Remotion |</p>
+<p>| --- | --- | --- |</p>
+<p>| Authoring | HTML + CSS + GSAP | React / TSX components |</p>
+<p>| Source of truth | DOM / HTML 可直接作為可視化編輯基礎 | React code + build step |</p>
+<p>| Agent 友善度 | LLM 對 HTML/CSS/JS 較熟，較容易直接產出視覺 draft | React composition 需要更多 guardrails |</p>
+<p>| 動畫 | 強調 GSAP、Anime.js 等 seekable runtime adapter | React per-frame model 成熟但有不同限制 |</p>
+<p>| 生態成熟度 | 新興、agent-native | 成熟、Production tested |</p>
+<p>判讀上不應把 HyperFrames 視為 Remotion 的簡單替代品。更合理的看法是：Remotion 適合 React/工程團隊既有成熟 pipeline；HyperFrames 則更靠近 AI agent、HTML-native visual editing 與 prompt-to-video 的快速原型場景。</p>
+<h1>對內容創作者的價值</h1>
+<p>HyperFrames + Codex 的真正價值，是讓影片製作變成可迭代的工程流程：</p>
+<ul>
+<li>產品短片：用 prompt 生成 10-30 秒產品 intro，再微調節奏與視覺。</li>
+<li>解說動畫：把腳本拆成 scene / beat / caption / motion blocks。</li>
+<li>社群短影音：快速套用字幕、B-roll、CTA、品牌色與版型。</li>
+<li>資料視覺化影片：把 chart、dashboard、網站截圖轉成動態片段。</li>
+<li>內部 demo：用程式碼快速產出可分享的功能介紹影片。</li>
+</ul>
+<p>對 AI 學習雷達來說，這篇文章與先前「Claude Code 自動剪短影音」、「SubEasy AI 配音」可串成完整內容自動化鏈：剪輯與素材工程化、跨語言配音、再到 HTML-native motion graphics。</p>
+<h1>實作提醒</h1>
+<ul>
+<li>先從小影片開始：10-20 秒、單一主題、少量 scenes，比一次做長片穩定。</li>
+<li>明確指定尺寸與平台：16:9、9:16、1:1 會影響排版與動畫。</li>
+<li>要求 agent 先 storyboard：不要直接 render，先產生 scene list、timing、copy、assets。</li>
+<li>保存中間檔：composition HTML、assets、prompts、rendered MP4 都要保留。</li>
+<li>預覽後再 render：先 lint / preview，避免反覆浪費 render 時間。</li>
+<li>不要把「影片即程式碼」誤解成不用審美：agent 能產出初稿，但節奏、字級、留白、動線仍需要人類品味驗收。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>AI郵報原文： <a href="https://www.aiposthub.com/hyperframes-codex-quickstart-guide/" target="_blank" rel="noopener">https://www.aiposthub.com/hyperframes-codex-quickstart-guide/</a></li>
+<li>HyperFrames 官網： <a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></li>
+<li>HyperFrames Quickstart： <a href="https://hyperframes.heygen.com/quickstart" target="_blank" rel="noopener">https://hyperframes.heygen.com/quickstart</a></li>
+<li>GitHub repo： <a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></li>
+<li>Codex plugin metadata： <a href="https://raw.githubusercontent.com/heygen-com/hyperframes/main/.codex-plugin/plugin.json" target="_blank" rel="noopener">https://raw.githubusercontent.com/heygen-com/hyperframes/main/.codex-plugin/plugin.json</a></li>
+<li>HyperFrames vs Remotion： <a href="https://hyperframes.heygen.com/guides/hyperframes-vs-remotion" target="_blank" rel="noopener">https://hyperframes.heygen.com/guides/hyperframes-vs-remotion</a></li>
+<li>AI郵報 Luma 課程頁： <a href="https://luma.com/ybz0ofv9" target="_blank" rel="noopener">https://luma.com/ybz0ofv9</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · AI郵報 / Brave Search / HyperFrames 官方文件 · article</div><h3>標籤</h3><span class="tag">HyperFrames</span><span class="tag">Codex</span><span class="tag">HeyGen</span><span class="tag">Video as Code</span><span class="tag">AI Coding Agent</span><span class="tag">GSAP</span><span class="tag">FFmpeg</span><span class="tag">Remotion</span><span class="tag">Content Workflow</span><h3>原始連結</h3><p><a href="https://www.aiposthub.com/hyperframes-codex-quickstart-guide/" target="_blank" rel="noopener">https://www.aiposthub.com/hyperframes-codex-quickstart-guide/</a></p><p><a href="https://www.aiposthub.com/hyperframes-codex-quickstart-guide/" target="_blank" rel="noopener">https://www.aiposthub.com/hyperframes-codex-quickstart-guide/</a></p><p><a href="https://www.aiposthub.com/hyperframes-codex-quickstart-guide/" target="_blank" rel="noopener">https://www.aiposthub.com/hyperframes-codex-quickstart-guide/</a></p><p><a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></p><p><a href="https://hyperframes.heygen.com/quickstart" target="_blank" rel="noopener">https://hyperframes.heygen.com/quickstart</a></p><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p><p><a href="https://raw.githubusercontent.com/heygen-com/hyperframes/main/.codex-plugin/plugin.json" target="_blank" rel="noopener">https://raw.githubusercontent.com/heygen-com/hyperframes/main/.codex-plugin/plugin.json</a></p><p><a href="https://hyperframes.heygen.com/guides/hyperframes-vs-remotion" target="_blank" rel="noopener">https://hyperframes.heygen.com/guides/hyperframes-vs-remotion</a></p><p><a href="https://luma.com/ybz0ofv9" target="_blank" rel="noopener">https://luma.com/ybz0ofv9</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
