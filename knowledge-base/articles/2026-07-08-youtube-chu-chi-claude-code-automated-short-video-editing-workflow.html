@@ -1,0 +1,206 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>朱騏｜用 Claude Code 自動剪短影音：錄完丟給 AI 就出片的工作流拆解</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>朱騏｜用 Claude Code 自動剪短影音：錄完丟給 AI 就出片的工作流拆解</h1><h1>朱騏｜用 Claude Code 自動剪短影音：錄完丟給 AI 就出片的工作流拆解</h1>
+<h1>一句話摘要</h1>
+<p>這支影片的核心不是「AI 一鍵剪片魔法」，而是把短影音製作拆成 Claude Code 能操作的工程流程：轉字幕、切停頓、抓 B-roll、套模板、輸出檔案、再由人類微調與驗收。</p>
+<h1>來源與限制</h1>
+<p>影片：〈用 Claude Code 自動剪短影音：錄完丟給 AI 就出片（不會剪輯也能做）〉</p>
+<p>頻道：跟朱騏一起打造知識型一人公司</p>
+<p>發布時間：2026-07-07</p>
+<p>影片長度：約 52 分 43 秒</p>
+<p>觀看數：抓取時 YouTube metadata 顯示約 1,218 次</p>
+<p>重要限制：此影片未開放 YouTube transcript，因此本筆記不是逐字稿摘要，而是依 YouTube oEmbed / metadata / 影片描述章節，再搭配 Brave Search 驗證官方工具來源後整理。</p>
+<h1>影片章節</h1>
+<p>根據影片描述，主題脈絡如下：</p>
+<ul>
+<li>00:00 從 IG 看到有人用 Claude Code 剪短影音，決定自己研究</li>
+<li>00:44 拆解整套自動剪輯背後的工具，其實沒有魔法</li>
+<li>01:31 第一步：用 Whisper 自動轉出字幕稿</li>
+<li>01:49 上字幕原理：把 SRT 做成一張張 PNG 燒上去</li>
+<li>02:30 用 Auto-Editor 自動剪掉停頓、加推鏡頭特效</li>
+<li>03:39 最麻煩的 B-roll：用 Pexels 免費素材庫讓 AI 自動抓</li>
+<li>05:41 錄影只要開 QuickTime 加提詞機，照念即可</li>
+<li>07:38 Demo：把影片丟給 Claude Code 自動剪一支出來</li>
+<li>11:40 剪完的檔案管理：六個資料夾結構</li>
+<li>14:04 每天剪很多支怎麼存：只留 SRT，影片上傳社群當儲藏庫</li>
+<li>19:00 三區式版面：上標題、中影片、下 CTA，用截圖讓 AI 仿版</li>
+<li>22:38 第二種模板：隨手自拍風 + 封面遮罩壓字</li>
+<li>27:46 用 Remotion / Hyperframes 讓 AI 做動畫特效</li>
+<li>30:09 CapCut Lab 課程：用 Mega Prompt 自動生 Motion Graphics</li>
+<li>36:49 自己寫本地網頁編輯器，手動微調字幕與大字</li>
+<li>39:54 買剪輯課真正的價值：學會用技術名詞跟 AI 溝通</li>
+</ul>
+<h1>工作流拆解</h1>
+<h2>1. 錄製：先把內容輸入標準化</h2>
+<p>影片中提到的起點不是複雜攝影棚，而是 QuickTime + 提詞機。重點是先降低錄製摩擦：</p>
+<ul>
+<li>用提詞機讓內容結構更穩定。</li>
+<li>用固定版面或直式影片格式降低後製變因。</li>
+<li>不追求一次完美，後面交給剪輯流程處理停頓與字幕。</li>
+</ul>
+<p>對一人公司 / 知識創作者來說，這是一個很好的原則：錄製端只要穩定產出素材，不要把所有品質壓力放在拍攝當下。</p>
+<h2>2. Whisper：把口語內容轉成 SRT</h2>
+<p>第一個技術節點是語音轉文字。影片提到用 Whisper 產生字幕稿 / SRT。</p>
+<p>官方驗證：OpenAI Whisper 是開源語音辨識模型，官方 GitHub repo 為 `openai/whisper`，OpenAI 也有 Introducing Whisper 發布文。</p>
+<p>在短影音流程中，SRT 不只是字幕，而是整個自動化的時間軸資料：</p>
+<ul>
+<li>可用來找停頓。</li>
+<li>可用來切分段落。</li>
+<li>可用來產生大字標題。</li>
+<li>可作為日後重新輸出影片的最小保存格式。</li>
+</ul>
+<h2>3. 字幕燒錄：把 SRT 變成可控版面</h2>
+<p>影片描述提到「把 SRT 做成一張張 PNG 燒上去」。這代表字幕不是單純交給剪輯軟體自動疊字，而是把字幕視為可程式化的視覺元素：</p>
+<ul>
+<li>每段字幕對應時間戳。</li>
+<li>每段文字可轉成圖片或 HTML canvas。</li>
+<li>可控制字體、大小、顏色、描邊、位置。</li>
+<li>可做成品牌一致的模板。</li>
+</ul>
+<p>這讓 Claude Code 能處理字幕版面，而不需要懂傳統剪輯 GUI 操作。</p>
+<h2>4. Auto-Editor：自動剪掉停頓</h2>
+<p>影片提到用 Auto-Editor 自動剪掉停頓並加入推鏡頭效果。</p>
+<p>官方驗證：常見的 auto-editor 專案為 WyattBlue/auto-editor，定位是 effort-free video editing，可依音量、靜音、動作等條件自動剪輯。</p>
+<p>這一步的價值在於：</p>
+<ul>
+<li>去掉口語錄製中的空白與停頓。</li>
+<li>讓剪輯節奏更接近短影音平台期待。</li>
+<li>把粗剪從人工時間軸操作，轉成程式規則。</li>
+</ul>
+<p>但實務上仍需人工抽查，因為自動剪停頓可能切掉語氣、反應時間或重要轉折。</p>
+<h2>5. Pexels API：讓 AI 自動抓 B-roll</h2>
+<p>B-roll 通常是短影音最花時間的部分。影片提到用 Pexels 免費素材庫，並申請 API Key 讓 AI 自動抓 B-roll。</p>
+<p>官方驗證：Pexels API 可程式化存取 Pexels photo / video library，官方文件說內容可免費使用，但仍需遵守 API terms、credit、logo、request limit 等規則。</p>
+<p>這一步的核心不是「素材免費」，而是把 B-roll 搜尋變成機器可執行任務：</p>
+<ul>
+<li>從字幕或腳本抽關鍵詞。</li>
+<li>查 Pexels 影片素材。</li>
+<li>依主題、畫面方向、長度挑候選。</li>
+<li>下載並插入對應段落。</li>
+</ul>
+<p>風險：AI 可能挑到語意相近但情境不準的素材，因此 B-roll 仍需要人工快速檢查。</p>
+<h2>6. Claude Code：把整套流程接成可執行 pipeline</h2>
+<p>Claude Code 在這個工作流中的角色，不是單純寫一個腳本，而是把素材處理、字幕、剪輯、資料夾管理、模板輸出串成 pipeline。</p>
+<p>適合交給 Claude Code 的任務包括：</p>
+<ul>
+<li>讀取原始影片與音訊。</li>
+<li>呼叫 Whisper 產生 SRT。</li>
+<li>呼叫 Auto-Editor 產出粗剪。</li>
+<li>呼叫 Pexels API 搜尋與下載素材。</li>
+<li>依模板疊字幕、大字與 CTA。</li>
+<li>建立輸出資料夾。</li>
+<li>產出可人工檢查的中間檔與成品。</li>
+</ul>
+<p>這很符合近期 AI coding 的趨勢：把創作流程工程化，讓 AI 代理人處理重複、可規則化、可驗收的部分。</p>
+<h1>檔案管理：六個資料夾的思路</h1>
+<p>影片章節提到「剪完的檔案怎麼管理：六個資料夾結構」。雖未能取得逐字稿細節，但可推定這類流程應至少區分：</p>
+<ul>
+<li>input：原始錄影 / 音訊。</li>
+<li>transcript：SRT / TXT / 分段稿。</li>
+<li>b-roll：下載或生成的素材。</li>
+<li>intermediate：粗剪、字幕圖層、暫存檔。</li>
+<li>output：最終輸出影片。</li>
+<li>templates / config：版型、字體、配色、CTA、參數。</li>
+</ul>
+<p>AI 自動化最怕檔案混亂。若沒有資料夾約定，Claude Code 很容易把輸出、暫存與素材混在一起，後續很難重跑或修正。</p>
+<h1>儲存策略：只留 SRT，把社群當影片儲藏庫？</h1>
+<p>影片章節提到「每天剪很多支怎麼存？只留 SRT，影片上傳社群當儲藏庫」。這是一個很值得討論的知識工作流觀點。</p>
+<p>好處：</p>
+<ul>
+<li>節省本機硬碟空間。</li>
+<li>SRT 保留了內容、時間軸與可再加工文本。</li>
+<li>影片成品由社群平台承擔儲存與分發。</li>
+</ul>
+<p>限制與風險：</p>
+<ul>
+<li>社群平台不是可靠長期備份，可能壓縮、下架、限流或帳號風險。</li>
+<li>只留 SRT 無法完整保留畫面、B-roll、剪輯節奏與版型。</li>
+<li>若未保存 config / prompt / template，未來很難重現同一版本。</li>
+</ul>
+<p>建議：至少保存 SRT、final prompt、config、模板、成品低解析 proxy，以及重要原始素材索引。</p>
+<h1>模板化：三區式版面與自拍風模板</h1>
+<p>影片提到兩種短影音版面：</p>
+<h2>三區式版面</h2>
+<ul>
+<li>上方：標題 / hook。</li>
+<li>中間：影片主畫面。</li>
+<li>下方：CTA 或重點文字。</li>
+</ul>
+<p>這類模板適合資訊型短影音，因為觀眾一眼能知道主題，畫面與文字也能分工。</p>
+<h2>隨手自拍風 + 封面遮罩壓字</h2>
+<p>這類模板更接近社群原生感：</p>
+<ul>
+<li>看起來不像過度製作。</li>
+<li>容易保留真人感。</li>
+<li>可用封面遮罩與大字強化點擊率。</li>
+</ul>
+<p>重點是：作者不是要 AI 從零發明美術，而是給 AI 截圖 / 樣式參考，讓它仿版。這跟設計工作流中的 style reference / visual target 很接近。</p>
+<h1>Remotion / Hyperframes：把 motion graphics 變成程式</h1>
+<p>影片後段提到用 Remotion / Hyperframes 讓 AI 做動畫特效。</p>
+<p>官方驗證：</p>
+<ul>
+<li>Remotion：官方定位是用 React programmatically make videos，可把 React component 渲染成真實 MP4。</li>
+<li>Hyperframes：官方站與 HeyGen HyperFrames 皆將它描述為用 HTML / CSS / JS 讓 AI agents compose videos 的方向，適合 browser-based motion graphics。</li>
+</ul>
+<p>這代表短影音製作正在從剪輯軟體 GUI，轉向「可程式化影片」：</p>
+<ul>
+<li>字幕是資料。</li>
+<li>版面是 component。</li>
+<li>動畫是 code。</li>
+<li>輸出是 render pipeline。</li>
+</ul>
+<p>對 Claude Code 這類 coding agent 來說，這比操作傳統 timeline 更友善。</p>
+<h1>CapCut Lab 與 Mega Prompt</h1>
+<p>影片章節提到 CapCut Lab 課程與 Mega Prompt 自動生成 Motion Graphics。Brave Search 可驗證 CapCut 官方有 AI design / motion graphics 相關資源，也具備 text-to-video、auto captions、模板與 4K export 等 AI-first video editing 能力。</p>
+<p>但「CapCut Lab 課程」與「Mega Prompt」本身較像教學產品 / 課程方法，應視為創作者的工作流設計，而不是 CapCut 官方單一標準功能。保存時應避免把它寫成已被官方完整驗證的產品特性。</p>
+<h1>最值得保存的洞見：買剪輯課是在買「語言」</h1>
+<p>影片最後的章節標題很重要：買剪輯課真正的價值，是學會用技術名詞跟 AI 溝通。</p>
+<p>這點非常符合 AI 時代的學習重點：</p>
+<ul>
+<li>不一定每個人都要成為專業剪輯師。</li>
+<li>但要知道剪輯語彙：B-roll、jump cut、caption burn-in、mask、CTA、motion graphics、push-in、SRT、render、template。</li>
+<li>有了專業詞彙，才能把需求精準交給 Claude Code 或其他 agent。</li>
+<li>AI 不是替代所有專業，而是放大懂流程、懂語彙、懂驗收的人。</li>
+</ul>
+<h1>對 AI 學習雷達的實踐價值</h1>
+<p>這支影片可放入「AI 內容工作流 / 一人公司自動化」類別，保存價值高，原因如下：</p>
+<ul>
+<li>它把短影音製作從剪輯軟體操作，轉成可被 AI coding agent 執行的 pipeline。</li>
+<li>它示範了 Claude Code 不只適合寫產品程式，也可用於創作者後製流程。</li>
+<li>它把影音素材、字幕、B-roll、模板、motion graphics 都轉成可管理的資料與程式。</li>
+<li>它提醒「自動化」不是取消人類，而是讓人類從時間軸苦工移到版型、風格、驗收與策略。</li>
+<li>它能延伸到課程短影音、AI 學習雷達精華切片、社群貼文再利用等場景。</li>
+</ul>
+<h1>建議的可落地 SOP</h1>
+<p>若要把這套流程落到欒帥 / Hermes 的內容產線，可設計為：</p>
+<ul>
+<li>錄製原始影片：QuickTime + 提詞機 + 固定收音。</li>
+<li>產生字幕：Whisper → SRT。</li>
+<li>清理文本：修正專有名詞、斷句與標點。</li>
+<li>粗剪：Auto-Editor 去停頓。</li>
+<li>抽重點：Claude Code 依 SRT 找 hook、章節與短影音片段。</li>
+<li>B-roll：Pexels API 依段落關鍵詞抓候選素材。</li>
+<li>套模板：三區式版面 / 自拍風 / 課程宣傳版。</li>
+<li>動畫：Remotion 或 Hyperframes 產生 motion graphics。</li>
+<li>人工 review：檢查字幕、素材語意、版權、CTA 與輸出規格。</li>
+<li>發布與歸檔：保存 SRT、prompt、config、template、成品 URL。</li>
+</ul>
+<h1>風險與注意事項</h1>
+<ul>
+<li>影片未提供 transcript，本筆記依 metadata 與章節整理，細節可能不如逐字稿完整。</li>
+<li>Pexels 素材雖可免費使用，但仍需遵守授權、API terms 與 attribution 指引。</li>
+<li>Whisper 轉寫需人工校正專有名詞，尤其是中文人名、產品名與英文術語。</li>
+<li>Auto-Editor 自動去停頓可能破壞語氣與敘事節奏，需抽查。</li>
+<li>AI 自動抓 B-roll 可能語意不準或風格不一致，需人工驗收。</li>
+<li>Remotion / Hyperframes 偏工程化，初期建置成本高，但長期可重複使用。</li>
+<li>社群平台不應是唯一影片備份；至少保存 SRT、模板、config 與成品索引。</li>
+</ul>
+<h1>原始連結與驗證來源</h1>
+<ul>
+<li>YouTube 原片：<a href="https://www.youtube.com/watch?v=RCTRS_1YuvA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=RCTRS_1YuvA</a></li>
+<li>朱騏頻道：<a href="https://www.youtube.com/@imchichu" target="_blank" rel="noopener">https://www.youtube.com/@imchichu</a></li>
+<li>Pexels API：<a href="https://www.pexels.com/api/documentation/" target="_blank" rel="noopener">https://www.pexels.com/api/documentation/</a></li>
+<li>OpenAI Whisper：<a href="https://github.com/openai/whisper" target="_blank" rel="noopener">https://github.com/openai/whisper</a></li>
+<li>Auto-Editor：<a href="https://github.com/WyattBlue/auto-editor" target="_blank" rel="noopener">https://github.com/WyattBlue/auto-editor</a></li>
+<li>Remotion：<a href="https://www.remotion.dev/" target="_blank" rel="noopener">https://www.remotion.dev/</a></li>
+<li>Hyperframes：<a href="https://hyperframes.app/" target="_blank" rel="noopener">https://hyperframes.app/</a> 與 <a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></li>
+<li>CapCut AI motion graphics 相關頁：<a href="https://www.capcut.com/ideas/ai-design/ai-design-for-motion-graphics" target="_blank" rel="noopener">https://www.capcut.com/ideas/ai-design/ai-design-for-motion-graphics</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · YouTube / Brave Search · video</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">AI Video Editing</span><span class="tag">Short Video</span><span class="tag">Whisper</span><span class="tag">Auto-Editor</span><span class="tag">Pexels API</span><span class="tag">Remotion</span><span class="tag">Hyperframes</span><span class="tag">CapCut</span><span class="tag">一人公司</span><span class="tag">Content Workflow</span><h3>原始連結</h3><p><a href="https://www.youtube.com/watch?v=RCTRS_1YuvA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=RCTRS_1YuvA</a></p><p><a href="https://www.youtube.com/watch?v=RCTRS_1YuvA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=RCTRS_1YuvA</a></p><p><a href="https://www.youtube.com/watch?v=RCTRS_1YuvA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=RCTRS_1YuvA</a></p><p><a href="https://www.youtube.com/@imchichu" target="_blank" rel="noopener">https://www.youtube.com/@imchichu</a></p><p><a href="https://www.pexels.com" target="_blank" rel="noopener">https://www.pexels.com</a></p><p><a href="https://www.pexels.com/api/documentation/" target="_blank" rel="noopener">https://www.pexels.com/api/documentation/</a></p><p><a href="https://github.com/openai/whisper" target="_blank" rel="noopener">https://github.com/openai/whisper</a></p><p><a href="https://openai.com/index/whisper/" target="_blank" rel="noopener">https://openai.com/index/whisper/</a></p><p><a href="https://github.com/WyattBlue/auto-editor" target="_blank" rel="noopener">https://github.com/WyattBlue/auto-editor</a></p><p><a href="https://www.remotion.dev/" target="_blank" rel="noopener">https://www.remotion.dev/</a></p><p><a href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener">https://github.com/remotion-dev/remotion</a></p><p><a href="https://hyperframes.app/" target="_blank" rel="noopener">https://hyperframes.app/</a></p><p><a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></p><p><a href="https://www.capcut.com/ideas/ai-design/ai-design-for-motion-graphics" target="_blank" rel="noopener">https://www.capcut.com/ideas/ai-design/ai-design-for-motion-graphics</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
