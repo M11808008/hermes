@@ -1,0 +1,176 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI超元域｜Codex Record &amp; Replay：錄一次操作流程，自動生成可複用 Skill 的工作流實測</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI超元域｜Codex Record &amp; Replay：錄一次操作流程，自動生成可複用 Skill 的工作流實測</h1><h1>AI超元域｜Codex Record &amp; Replay：錄一次操作流程，自動生成可複用 Skill 的工作流實測</h1>
+<h1>一句話摘要</h1>
+<p>Codex Record &amp; Replay 的關鍵不是「錄屏回放」本身，而是把一段人工示範轉成可檢查、可編輯、可重複調用的 agent skill，讓不擅長寫長 prompt 的使用者也能把複雜工作流產品化。</p>
+<h1>來源與限制</h1>
+<p>影片：〈AI通过录屏学习复杂操作？Codex新增录制回放神器：Record &amp; Replay插件实测！〉</p>
+<p>頻道：AI超元域</p>
+<p>發布時間：2026-06-20</p>
+<p>影片長度：約 12 分 57 秒</p>
+<p>觀看數：抓取時 YouTube metadata 顯示約 21,237 次</p>
+<p>重要限制：此影片未開放 YouTube transcript，因此本筆記不是逐字稿摘要，而是依 YouTube oEmbed / metadata / 影片描述章節，再搭配 Brave Search 與 OpenAI Developers 官方文件交叉驗證整理。</p>
+<h1>影片主題</h1>
+<p>影片介紹 OpenAI Codex 的 Record &amp; Replay（錄製與回放）插件。根據影片描述，其核心流程是：</p>
+<ul>
+<li>使用者簡單描述要建立的工作流。</li>
+<li>開始錄製一遍實際操作。</li>
+<li>Codex 觀察流程，調用 skill creator。</li>
+<li>生成可複用的 skill。</li>
+<li>之後使用者可直接調用該 skill 重跑工作流。</li>
+<li>若 skill 跑偏，可要求 Codex 修改與優化，直到流程更穩定。</li>
+</ul>
+<p>這個功能對不擅長寫提示詞、也不熟悉 skill 結構的人有吸引力，因為它把「示範」變成「可執行的文字流程與資源包」。</p>
+<h1>影片章節</h1>
+<p>根據 YouTube 影片描述，章節如下：</p>
+<ul>
+<li>00:00 開場介紹：Record &amp; Replay 錄製回放插件功能概述</li>
+<li>00:38 插件安裝：在側邊欄搜尋並一鍵安裝 Record 插件</li>
+<li>01:01 案例一開始錄製：錄製調用 Claude Design 建立 PPT 的工作流</li>
+<li>02:31 生成 PPT 技能：Codex 讀取 skill Creator 自動建立 skill</li>
+<li>03:09 查看技能文件：解析工作流步驟與技能命名</li>
+<li>03:48 調用技能測試：自動生成並下載 5 頁 AI 趨勢報告 PPT</li>
+<li>05:31 案例二升級：讓 Codex 調用 Gemini 的影片生成功能</li>
+<li>05:57 錄製影片流程：生成、下載、上傳發布全流程演示</li>
+<li>07:08 生成影片技能：約 2 分 46 秒自動完成 skill 建立</li>
+<li>07:40 測試影片技能：火星探測器影片自動生成並發布</li>
+<li>08:51 案例三進階：突破 Claude Code 非互動模式調用限制</li>
+<li>09:16 錄製深度研究：互動模式下成功調出 deep research</li>
+<li>10:42 調用與驗證技能：限定 subagents 數量執行深度研究</li>
+<li>11:33 修改技能優化：指定命令避免每次重複授權</li>
+<li>12:01 總結：插件價值與對開發者提效的意義</li>
+</ul>
+<h1>官方文件驗證：Record &amp; Replay 是什麼</h1>
+<p>OpenAI Developers 的 Record &amp; Replay 文件明確說明：</p>
+<ul>
+<li>Record &amp; Replay is a fast way to create a skill from a demonstrated workflow。</li>
+<li>使用者可在 Codex app 的 Plugins 中選擇 Record a skill。</li>
+<li>錄製結束後，Codex 會檢查 captured workflow 並草擬 skill。</li>
+<li>Skill 會描述何時使用、需要哪些輸入、要遵循哪些步驟，以及如何驗證結果。</li>
+<li>之後 Codex 可將該 skill 作為 reusable context，並用當前環境可用工具完成工作流，例如 Computer Use、browser actions、installed plugins。</li>
+</ul>
+<p>官方文件也列出適合的示範案例：報支出、訂停車位、建立 issue、發布影片、下載定期報告等。這些都符合「流程固定、輸入可變、結果可驗證」的特徵。</p>
+<h1>可用性與限制</h1>
+<p>OpenAI 官方文件指出：</p>
+<ul>
+<li>Record &amp; Replay available on macOS。</li>
+<li>初期可用性排除 EEA、United Kingdom、Switzerland。</li>
+<li>Computer Use 必須可用且已啟用。</li>
+<li>若組織用 `requirements.toml` 管理 Codex，`[features].computer_use` 也會控制 Record &amp; Replay；若 `computer_use = false`，兩者都不可用。</li>
+</ul>
+<p>因此這支影片中的示範應被理解為：在符合環境、地區、權限與 Codex app 條件下可用；不代表所有 Codex CLI / Windows / Linux / 企業工作區都一定可直接使用。</p>
+<h1>Codex Skills 的定位</h1>
+<p>OpenAI Developers 的 Agent Skills 文件說明：</p>
+<ul>
+<li>Skill 是 Codex 的 reusable workflow authoring format。</li>
+<li>Skill 可包含 instructions、resources、optional scripts。</li>
+<li>Skill 目錄通常包含 `SKILL.md`，可選 `scripts/`、`references/`、`assets/`、`agents/openai.yaml`。</li>
+<li>Codex CLI、IDE extension、Codex app 都支援 skills。</li>
+<li>Skills 使用 progressive disclosure：Codex 一開始只看到名稱、描述與路徑，只有決定使用某個 skill 時才讀完整 `SKILL.md`。</li>
+<li>若已知工作流且「示範比描述更容易」，官方建議使用 Record &amp; Replay；若想用文字描述 skill，可使用 built-in `$skill-creator`。</li>
+</ul>
+<p>這點很重要：Record &amp; Replay 不是取代 skill，而是降低 skill authoring 的門檻。</p>
+<h1>三個實戰案例判讀</h1>
+<h2>案例一：Claude Design 生成 5 頁 AI 趨勢 PPT</h2>
+<p>影片第一個案例錄製「調用 Claude Design 建立 PPT」的流程，接著讓 Codex 產生對應 skill，再測試自動生成與下載 5 頁 AI 趨勢報告 PPT。</p>
+<p>這類流程適合 Record &amp; Replay，因為它包含：</p>
+<ul>
+<li>固定入口：打開特定工具或 plugin。</li>
+<li>可變輸入：主題、頁數、風格、內容重點。</li>
+<li>固定產出：PPT / slides / downloadable file。</li>
+<li>可驗證結果：是否生成 5 頁、是否下載成功、檔名是否符合規則。</li>
+</ul>
+<p>但實務上必須補上 hidden preferences：檔名規則、版面風格、是否要繁中、是否要引用來源、輸出放哪個資料夾。</p>
+<h2>案例二：Gemini 影片生成與發布</h2>
+<p>第二個案例把流程升級到 Gemini 影片生成、下載、上傳與發布。這比 PPT 更高風險，因為它涉及外部平台、檔案上傳與公開發布。</p>
+<p>適合保存的判讀：</p>
+<ul>
+<li>Record &amp; Replay 可以記住 GUI / web app 操作流程。</li>
+<li>影片生成流程若固定，可被包裝成 skill。</li>
+<li>但「發布」屬於高影響操作，應保留人工確認。</li>
+<li>Skill 應明確要求在公開發布、上傳或提交前停下等待使用者核准。</li>
+</ul>
+<p>這類流程若沒有 approval gate，很容易把測試內容誤發到公開平台。</p>
+<h2>案例三：Claude Code 互動模式與 Deep Research</h2>
+<p>第三個案例嘗試突破 Claude Code 非互動模式限制，在互動模式中調出 deep research，並透過 skill 設定限定 subagents 數量與避免每次重複授權。</p>
+<p>這個案例的價值在於：Record &amp; Replay 不只適合「表單式 GUI 操作」，也能捕捉較難用一般非互動 CLI 表達的流程。當某些工具必須透過互動式操作才能觸發，錄製流程可能比手寫腳本更快。</p>
+<p>但風險也更高：</p>
+<ul>
+<li>互動模式中的狀態與權限可能不穩定。</li>
+<li>deep research 可能消耗大量額度或啟動多個 subagents。</li>
+<li>Skill 需明確設定 subagents 上限、停止條件、輸出格式與驗收方式。</li>
+</ul>
+<h1>為什麼這件事重要</h1>
+<p>Record &amp; Replay 代表 agent workflow 的一個轉折：</p>
+<ul>
+<li>以前：你要會寫 prompt、會寫 skill、會描述每個步驟。</li>
+<li>現在：你可以先做一遍，讓 Codex 把示範轉成 skill，再由人類審修。</li>
+</ul>
+<p>這降低了工作流自動化門檻，尤其適合「我做得出來，但說不清楚每一步」的場景。</p>
+<p>它也和近期 Fable / Unknowns 脈絡呼應：很多人其實有 tacit knowledge，知道怎麼做，但不知道怎麼寫成規格。Record &amp; Replay 把 tacit workflow 先外化成可讀 skill，再讓人補 hidden preferences 與 verification gates。</p>
+<h1>最適合 Record &amp; Replay 的任務</h1>
+<h2>適合</h2>
+<ul>
+<li>重複性高的瀏覽器或桌面工作流。</li>
+<li>需要多個工具串接，但步驟相對固定。</li>
+<li>產出可明確驗證：檔案、表單、報告、影片、issue、下載檔。</li>
+<li>使用者示範比寫 prompt 更快。</li>
+<li>需要把個人 workflow 分享給團隊或重複使用。</li>
+</ul>
+<h2>不適合直接全自動</h2>
+<ul>
+<li>金流、付款、公開發布、寄信、刪除資料。</li>
+<li>權限敏感或涉及個資的流程。</li>
+<li>每次決策都高度依賴人類判斷的流程。</li>
+<li>沒有穩定 UI 或頻繁變動的網站。</li>
+<li>需要大量創意取捨但沒有明確驗收標準的任務。</li>
+</ul>
+<h1>Skill 生成後一定要補的內容</h1>
+<p>官方文件也提醒：錄製後應 refine skill，標註 hidden preferences，例如 naming conventions、field defaults、decision points。</p>
+<p>建議每個 Record &amp; Replay skill 都補上：</p>
+<ul>
+<li>何時觸發：哪些任務適用，哪些不適用。</li>
+<li>必要輸入：主題、檔名、輸出位置、帳號、平台。</li>
+<li>禁止事項：不可付款、不可公開發布、不可刪除、不可改權限。</li>
+<li>人工確認點：上傳前、發布前、寄出前、提交表單前。</li>
+<li>驗收條件：頁數、格式、是否下載成功、是否有來源、是否有截圖證據。</li>
+<li>失敗處理：登入失敗、UI 找不到、生成內容跑偏、外部平台錯誤時要停下回報。</li>
+<li>隱私邊界：不要記錄密碼、token、個資與不必要的截圖。</li>
+</ul>
+<h1>對欒帥 / Hermes 的實踐價值</h1>
+<p>這支影片很值得保存，因為它與 Hermes 的「可複用技能」概念高度一致。</p>
+<p>可延伸到：</p>
+<ul>
+<li>錄製一次「AI 學習雷達歸檔 → 建置 → 部署 → 驗證」流程，轉成 skill checklist。</li>
+<li>錄製一次「課程頁內容整理 → 本機預覽 → GitHub Pages 部署」流程。</li>
+<li>錄製一次「YouTube 影片 metadata / transcript / 官方驗證 → KB 筆記」流程。</li>
+<li>錄製一次「私密名單處理」流程，但必須加上不可公開部署與個資保護 gate。</li>
+<li>錄製一次「簡報 / 圖卡 / 課程宣傳素材」流程，讓設計偏好外化成可檢查 skill。</li>
+</ul>
+<p>尤其對欒帥偏好的「高自治、低摩擦、可重複、可驗證」工作流，Record &amp; Replay 的概念可以作為未來 Hermes skill authoring 的參考。</p>
+<h1>與既有 AI 學習雷達脈絡的連結</h1>
+<p>這篇可接在近期幾篇筆記之後：</p>
+<ul>
+<li>張維峰｜Fable 實戰手冊：用 Unknowns 四象限與 Blindspot Pass 改善 Claude 協作。</li>
+<li>黃仁靖｜Fable 5 省 Token 工作流：最強模型當 Orchestrator，Codex 寫 Code，Gemini 做 Reviewer。</li>
+<li>零度博客｜OpenAI Codex + Ollama：本地模型接管 AI 編程 Agent 的免費工作流判讀。</li>
+<li>朱騏｜用 Claude Code 自動剪短影音：錄完丟給 AI 就出片的工作流拆解。</li>
+</ul>
+<p>共同趨勢是：AI agent 正在從「單次對話」變成「可保存、可審查、可重用的流程資產」。</p>
+<h1>風險與注意事項</h1>
+<ul>
+<li>影片未提供 transcript，本筆記依 metadata / 章節 / 官方文件整理，非逐字稿摘要。</li>
+<li>Record &amp; Replay 初期可用性有限，官方文件標示 macOS 且排除部分地區；也需要 Computer Use 可用並啟用。</li>
+<li>錄製工作流可能捕捉敏感資訊，需避免密碼、token、個資與機密資料入鏡。</li>
+<li>自動發布、上傳、提交表單等高影響動作必須有人工 approval gate。</li>
+<li>自動生成的 skill 不應直接信任，需人工 review `SKILL.md`，補上 hidden preferences、禁止事項與驗收條件。</li>
+<li>UI 變動會造成 skill 失效，需定期維護。</li>
+<li>Skill 可以降低 prompt 門檻，但不能取代測試、差異檢查與人類最終驗收。</li>
+</ul>
+<h1>原始連結與驗證來源</h1>
+<ul>
+<li>YouTube 原片：<a href="https://www.youtube.com/watch?v=-fG08KLeh6c" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-fG08KLeh6c</a></li>
+<li>AI超元域頻道：<a href="https://www.youtube.com/@AIsuperdomain" target="_blank" rel="noopener">https://www.youtube.com/@AIsuperdomain</a></li>
+<li>OpenAI Codex Record &amp; Replay：<a href="https://developers.openai.com/codex/record-and-replay" target="_blank" rel="noopener">https://developers.openai.com/codex/record-and-replay</a></li>
+<li>OpenAI Codex Agent Skills：<a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></li>
+<li>OpenAI Codex Plugins：<a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">https://developers.openai.com/codex/plugins</a></li>
+<li>OpenAI Skills Catalog：<a href="https://github.com/openai/skills" target="_blank" rel="noopener">https://github.com/openai/skills</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-08 · YouTube / OpenAI Developers / Brave Search · video</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">Record &amp; Replay</span><span class="tag">Agent Skills</span><span class="tag">Skill Creator</span><span class="tag">Workflow Automation</span><span class="tag">Computer Use</span><span class="tag">Claude Design</span><span class="tag">Gemini</span><span class="tag">Claude Code</span><span class="tag">AI Coding</span><span class="tag">Reusable Workflow</span><h3>原始連結</h3><p><a href="https://www.youtube.com/watch?v=-fG08KLeh6c" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-fG08KLeh6c</a></p><p><a href="https://www.youtube.com/watch?v=-fG08KLeh6c" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-fG08KLeh6c</a></p><p><a href="https://www.youtube.com/watch?v=-fG08KLeh6c" target="_blank" rel="noopener">https://www.youtube.com/watch?v=-fG08KLeh6c</a></p><p><a href="https://www.youtube.com/@AIsuperdomain" target="_blank" rel="noopener">https://www.youtube.com/@AIsuperdomain</a></p><p><a href="https://developers.openai.com/codex/record-and-replay" target="_blank" rel="noopener">https://developers.openai.com/codex/record-and-replay</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">https://developers.openai.com/codex/plugins</a></p><p><a href="https://developers.openai.com/codex/agent-approvals-security" target="_blank" rel="noopener">https://developers.openai.com/codex/agent-approvals-security</a></p><p><a href="https://github.com/openai/skills" target="_blank" rel="noopener">https://github.com/openai/skills</a></p><p><a href="https://github.com/win4r/" target="_blank" rel="noopener">https://github.com/win4r/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

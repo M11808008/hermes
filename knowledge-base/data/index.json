@@ -292,6 +292,45 @@
     "markdown": "articles/2026/07/2026-07-08-powei-chen-claude-paper-tools-paper-review-digest.md"
   },
   {
+    "title": "AI超元域｜Codex Record & Replay：錄一次操作流程，自動生成可複用 Skill 的工作流實測",
+    "date": "2026-07-08",
+    "source": "YouTube / OpenAI Developers / Brave Search",
+    "author": "AI超元域",
+    "type": "video",
+    "topics": [
+      "Codex",
+      "Record & Replay",
+      "Agent Skills",
+      "Skill Creator",
+      "Workflow Automation",
+      "Computer Use",
+      "Claude Design",
+      "Gemini",
+      "Claude Code",
+      "AI Coding",
+      "Reusable Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=-fG08KLeh6c",
+      "https://www.youtube.com/watch?v=-fG08KLeh6c",
+      "https://www.youtube.com/watch?v=-fG08KLeh6c",
+      "https://www.youtube.com/@AIsuperdomain",
+      "https://developers.openai.com/codex/record-and-replay",
+      "https://developers.openai.com/codex/skills",
+      "https://developers.openai.com/codex/plugins",
+      "https://developers.openai.com/codex/agent-approvals-security",
+      "https://github.com/openai/skills",
+      "https://github.com/win4r/"
+    ],
+    "excerpt": "Codex Record & Replay 的關鍵不是「錄屏回放」本身，而是把一段人工示範轉成可檢查、可編輯、可重複調用的 agent skill，讓不擅長寫長 prompt 的使用者也能把複雜工作流產品化。",
+    "slug": "2026-07-08-youtube-ai-superdomain-codex-record-replay-reusable-skills",
+    "html": "articles/2026-07-08-youtube-ai-superdomain-codex-record-replay-reusable-skills.html",
+    "markdown": "articles/2026/07/2026-07-08-youtube-ai-superdomain-codex-record-replay-reusable-skills.md"
+  },
+  {
     "title": "朱騏｜用 Claude Code 自動剪短影音：錄完丟給 AI 就出片的工作流拆解",
     "date": "2026-07-08",
     "source": "YouTube / Brave Search",
