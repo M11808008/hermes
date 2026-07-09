@@ -33,6 +33,92 @@
     "markdown": "articles/2026/07/2026-07-10-orange-teacher-gpts-gems-to-agent-skill-mckinsey-presentation.md"
   },
   {
+    "title": "Threads 提示詞案例：ChatGPT 生旅遊海報圖，再用 CapCut 做短動畫",
+    "date": "2026-07-10",
+    "source": "Threads",
+    "author": "chow615",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@chow615/post/DajiSVpAeCi"
+    ],
+    "excerpt": "# Threads 提示詞案例：ChatGPT 生旅遊海報圖，再用 CapCut 做短動畫 這則 Threads 由 `@chow615` 分享，感謝原創脆友 `@pound0423` 提供指令。內容是一個很實用的短影音素材工作流：先用 ChatGPT 生成一張「旅遊動態海報」風格圖片，再把圖片丟進 CapCut 產生",
+    "slug": "2026-07-10-threads-chow615-chatgpt-capcut-travel-poster-animation",
+    "html": "articles/2026-07-10-threads-chow615-chatgpt-capcut-travel-poster-animation.html",
+    "markdown": "articles/2026/07/2026-07-10-threads-chow615-chatgpt-capcut-travel-poster-animation.md"
+  },
+  {
+    "title": "Threads｜Marble 開放小學課程 DAG：1,590 個微主題與先備知識圖譜，可作教育 Agent 學習地圖",
+    "date": "2026-07-10",
+    "source": "Threads / GitHub / Marble official site",
+    "author": "手癢實驗室 / 凡事想試試（@heroman1916）",
+    "type": "social-post",
+    "topics": [
+      "AI Education",
+      "Education Agent",
+      "Knowledge Graph",
+      "DAG",
+      "Curriculum",
+      "Open Data",
+      "GitHub",
+      "Learning Map"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@heroman1916/post/DakpX-DgW_3?xmt=AQG0OrBpuFYjSjg-0KSJsJGpl_MyUpas8ra3S0RjEWL16kWqh8pjqf9l7DGVTfnW42pZ8zO_gA&slof=1",
+      "https://www.threads.com/@heroman1916/post/DakpX-DgW_3",
+      "https://www.threads.com/@heroman1916/post/DakpX-DgW_3",
+      "https://github.com/withmarbleapp/os-taxonomy",
+      "https://withmarble.com/curriculum",
+      "https://withmarble.com"
+    ],
+    "excerpt": "Marble 的 os-taxonomy 將小學階段知識拆成微主題節點與先備知識邊，讓教育 agent 可以從「內容推薦」升級為「依先備能力規劃學習路徑」。",
+    "slug": "2026-07-10-threads-heroman-marble-open-primary-school-dag-taxonomy",
+    "html": "articles/2026-07-10-threads-heroman-marble-open-primary-school-dag-taxonomy.html",
+    "markdown": "articles/2026/07/2026-07-10-threads-heroman-marble-open-primary-school-dag-taxonomy.md"
+  },
+  {
+    "title": "Threads 觀察：PAPAYA Obsidian LLM Wiki，把 AI 筆記工作流變成可查詢知識庫",
+    "date": "2026-07-10",
+    "source": "Threads",
+    "author": "prompt_case",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/DaiTAvcFNdO"
+    ],
+    "excerpt": "# Threads 觀察：PAPAYA Obsidian LLM Wiki，把 AI 筆記工作流變成可查詢知識庫 這則 Threads 由 `@prompt_case` 分享，核心是 PAPAYA 電腦教室近期介紹的 Obsidian + LLM Wiki 筆記工作流。貼文引發討論的原因，是它把「用 AI 做筆記」從單",
+    "slug": "2026-07-10-threads-prompt-case-papaya-obsidian-llm-wiki",
+    "html": "articles/2026-07-10-threads-prompt-case-papaya-obsidian-llm-wiki.html",
+    "markdown": "articles/2026/07/2026-07-10-threads-prompt-case-papaya-obsidian-llm-wiki.md"
+  },
+  {
+    "title": "Threads 觀察：Obsidian × Claude Code，把旅行足跡變成可互動地圖 Atlas",
+    "date": "2026-07-10",
+    "source": "Threads",
+    "author": "runghuang_z",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@runghuang_z/"
+    ],
+    "excerpt": "# Threads 觀察：Obsidian × Claude Code，把旅行足跡變成可互動地圖 Atlas 這則 Threads 分享的是一個很有代表性的「個人知識庫 + AI Coding Agent」工作流：使用者把多年旅行紀錄放在 Obsidian，接著交給 Claude Code 讀取、整理、抽取地點資訊，最",
+    "slug": "2026-07-10-threads-runghuang-obsidian-claude-code-travel-atlas",
+    "html": "articles/2026-07-10-threads-runghuang-obsidian-claude-code-travel-atlas.html",
+    "markdown": "articles/2026/07/2026-07-10-threads-runghuang-obsidian-claude-code-travel-atlas.md"
+  },
+  {
     "title": "阿朱的日常｜上順興香Q飯糰：市政府站巨無霸飯糰與蔥油餅二合一早餐攻略",
     "date": "2026-07-08",
     "source": "阿朱的日常 / Brave Search",

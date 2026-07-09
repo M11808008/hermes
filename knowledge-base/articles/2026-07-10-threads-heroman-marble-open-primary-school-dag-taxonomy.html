@@ -1,0 +1,103 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Marble 開放小學課程 DAG：1,590 個微主題與先備知識圖譜，可作教育 Agent 學習地圖</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Marble 開放小學課程 DAG：1,590 個微主題與先備知識圖譜，可作教育 Agent 學習地圖</h1><h1>Threads｜Marble 開放小學課程 DAG：1,590 個微主題與先備知識圖譜，可作教育 Agent 學習地圖</h1>
+<h1>一句話摘要</h1>
+<p>Marble 的 os-taxonomy 將小學階段知識拆成微主題節點與先備知識邊，讓教育 agent 可以從「內容推薦」升級為「依先備能力規劃學習路徑」。</p>
+<h1>Threads 貼文重點</h1>
+<p>@heroman1916 提醒台灣 AI 工程師與創作者：Marble 把小學課程，例如數學、科學、運算與生活技能，整理成開放 DAG 圖譜，並放在 GitHub 可直接下載。貼文指出，這可作為教育 agent 或兒童 AI 工具的可靠學習地圖。</p>
+<p>作者在延伸留言補充，這套資料的目標群組是小學／初等階段「學什麼」的微主題知識圖譜，例子包括：</p>
+<ul>
+<li>辨識日常生活中的 AI，例如手機人臉解鎖、影片推薦、自動門。</li>
+<li>能正確計算 2 位數加法並解釋過程。</li>
+<li>植物、動物生命週期。</li>
+</ul>
+<h1>圖片 OCR 與畫面內容</h1>
+<p>貼文附圖顯示 Marble 的互動式學習產品與課程圖譜：</p>
+<ul>
+<li>MARBLE：Everything a child learns.</li>
+<li>The open map of primary school, built from the US and UK curriculums.</li>
+<li>1,590 concepts and 3,221 prerequisite links（截圖 OCR 曾讀到 3,372，但 GitHub manifest 與 Marble 官方頁面目前一致為 3,221）。</li>
+<li>View on GitHub。</li>
+<li>OPEN DATA。</li>
+<li>互動提示：Drag to orbit、Scroll to zoom、Tap a dot, then follow its prerequisites。</li>
+</ul>
+<p>另一張附圖是互動科學教材畫面：</p>
+<ul>
+<li>What heat does to water.</li>
+<li>One glass of water. From frozen crystal to flying steam.</li>
+<li>Drag the slider to change the temperature.</li>
+<li>Tap Atoms to dive inside.</li>
+<li>狀態卡片：Liquid — Water。</li>
+<li>畫面用水杯、溫度滑桿、分子視窗呈現水在不同溫度下的狀態與分子運動。</li>
+</ul>
+<h1>官方 GitHub 驗證</h1>
+<p>GitHub repository：withmarbleapp/os-taxonomy</p>
+<p><a href="https://github.com/withmarbleapp/os-taxonomy" target="_blank" rel="noopener">https://github.com/withmarbleapp/os-taxonomy</a></p>
+<p>截至 2026-07-10 抓取時，GitHub API 顯示：</p>
+<ul>
+<li>stars：約 1,186。</li>
+<li>forks：約 226。</li>
+<li>created_at：2026-07-08。</li>
+<li>default branch：main。</li>
+<li>license：ODbL-1.0；package metadata 另標示 ODbL-1.0 AND CC-BY-SA-4.0。</li>
+</ul>
+<p>README 說明這是一個 open, structured taxonomy of what children learn across the primary/elementary years，將小學學習內容拆成 fine-grained micro-topics，接上 prerequisite graph，並對齊國家課綱標準。</p>
+<p>官方 manifest 顯示：</p>
+<ul>
+<li>topics：1,590。</li>
+<li>dependencies：3,221。</li>
+<li>curriculum standards：3,261。</li>
+<li>curricula：7。</li>
+<li>clusters：183。</li>
+<li>subjects：8。</li>
+</ul>
+<p>各科目 topics 數量：</p>
+<ul>
+<li>Science：547。</li>
+<li>Mathematics：503。</li>
+<li>English：286。</li>
+<li>History：90。</li>
+<li>Personal &amp; Social Development：88。</li>
+<li>Life Skills：37。</li>
+<li>Computing：21。</li>
+<li>Learning to Learn：18。</li>
+</ul>
+<h1>資料結構與可用檔案</h1>
+<p>README 列出的核心資料在 `data/`：</p>
+<ul>
+<li>`data/topics.json`：micro-topics，也就是圖譜節點。</li>
+<li>`data/dependencies.json`：prerequisite edges，也就是某主題依賴哪些先備主題。</li>
+<li>`data/curriculum-standards.json`：來源課綱標準。</li>
+<li>`data/manifest.json`：檔案大小、SHA-256、計數與生成資訊。</li>
+<li>`data/clusters.json`：主題群組摘要。</li>
+</ul>
+<p>每個 micro-topic 不只是標題，還包含 plain-language description、mastery evidence criteria、type、subject、domain、age range，以及對應課綱來源。這讓它比一般課綱條列更適合被 agent 查詢與推理。</p>
+<h1>對教育 Agent 的價值</h1>
+<p>這份資料可作為教育 agent 的四層基礎：</p>
+<ul>
+<li>診斷層：學生卡在某題時，回推可能缺少哪些先備概念。</li>
+<li>路徑層：從目標能力往前展開 prerequisite chain，產生學習順序。</li>
+<li>內容層：為每個 micro-topic 生成練習、講解、實驗或互動範例。</li>
+<li>追蹤層：把 mastery evidence 轉成檢核點，讓 agent 不只聊天，而能追蹤能力是否真的掌握。</li>
+</ul>
+<p>對兒童 AI 工具尤其重要，因為兒童學習不是單純「問什麼答什麼」；它需要知道學生現在在哪、下一步補什麼、哪些概念不能跳過。</p>
+<h1>可落地的應用想法</h1>
+<ul>
+<li>AI 家教：輸入學生錯題，回推先備知識並生成補強練習。</li>
+<li>課程設計：用 DAG 自動生成 4 週、8 週或一學期學習路徑。</li>
+<li>互動教材：把每個 micro-topic 接到一個模擬、故事或遊戲任務。</li>
+<li>親子學習儀表板：用節點圖顯示孩子已掌握、待補強、下一個可挑戰主題。</li>
+<li>台灣課綱對齊：以 Marble DAG 為骨架，再映射台灣國小領綱與年級能力指標。</li>
+</ul>
+<h1>使用限制與注意事項</h1>
+<ul>
+<li>Marble 的資料主要根據美國與英國課綱，不能直接等同台灣國小課綱。</li>
+<li>DAG 是學習路徑骨架，不是完整教材；仍需教案、例題、評量與在地語境。</li>
+<li>先備關係可能有 hard / soft 之分，教育 agent 實作時不應把所有邊都當作絕對門檻。</li>
+<li>若做兒童產品，需特別處理個資、學習紀錄、家長同意與內容安全。</li>
+<li>授權包含開放資料義務，商用或再發布前應確認 ODbL / CC-BY-SA 的 share-alike 與 attribution 要求。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@heroman1916/post/DakpX-DgW_3" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DakpX-DgW_3</a></li>
+<li>GitHub：<a href="https://github.com/withmarbleapp/os-taxonomy" target="_blank" rel="noopener">https://github.com/withmarbleapp/os-taxonomy</a></li>
+<li>Marble curriculum explorer：<a href="https://withmarble.com/curriculum" target="_blank" rel="noopener">https://withmarble.com/curriculum</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-10 · Threads / GitHub / Marble official site · social-post</div><h3>標籤</h3><span class="tag">AI Education</span><span class="tag">Education Agent</span><span class="tag">Knowledge Graph</span><span class="tag">DAG</span><span class="tag">Curriculum</span><span class="tag">Open Data</span><span class="tag">GitHub</span><span class="tag">Learning Map</span><h3>原始連結</h3><p><a href="https://www.threads.com/@heroman1916/post/DakpX-DgW_3?xmt=AQG0OrBpuFYjSjg-0KSJsJGpl_MyUpas8ra3S0RjEWL16kWqh8pjqf9l7DGVTfnW42pZ8zO_gA&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DakpX-DgW_3?xmt=AQG0OrBpuFYjSjg-0KSJsJGpl_MyUpas8ra3S0RjEWL16kWqh8pjqf9l7DGVTfnW42pZ8zO_gA&amp;slof=1</a></p><p><a href="https://www.threads.com/@heroman1916/post/DakpX-DgW_3" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DakpX-DgW_3</a></p><p><a href="https://www.threads.com/@heroman1916/post/DakpX-DgW_3" target="_blank" rel="noopener">https://www.threads.com/@heroman1916/post/DakpX-DgW_3</a></p><p><a href="https://github.com/withmarbleapp/os-taxonomy" target="_blank" rel="noopener">https://github.com/withmarbleapp/os-taxonomy</a></p><p><a href="https://withmarble.com/curriculum" target="_blank" rel="noopener">https://withmarble.com/curriculum</a></p><p><a href="https://withmarble.com" target="_blank" rel="noopener">https://withmarble.com</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
