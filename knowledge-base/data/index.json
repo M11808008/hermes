@@ -1,5 +1,38 @@
 [
   {
+    "title": "橘子腦師｜把 GPTs / Gems 轉成 Agent Skill：麥肯錫風格簡報工作流案例",
+    "date": "2026-07-10",
+    "source": "Facebook / browser OCR / OpenAI Codex docs context",
+    "author": "橘子腦師",
+    "type": "social-post",
+    "topics": [
+      "Agent Skills",
+      "Skill Creator",
+      "GPTs",
+      "Gemini Gems",
+      "Codex",
+      "Presentation",
+      "Workflow Automation",
+      "Knowledge Work"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/18verHgZ9z/?mibextid=wwXIfr",
+      "https://www.facebook.com/story.php?story_fbid=28387496504171927&id=100000148706980&mibextid=wwXIfr&rdid=vEl4uR7NT5JtQVAS#",
+      "https://www.facebook.com/share/p/18verHgZ9z/?mibextid=wwXIfr",
+      "https://www.facebook.com/story.php?story_fbid=28387496504171927&id=100000148706980&mibextid=wwXIfr&rdid=vEl4uR7NT5JtQVAS#",
+      "https://developers.openai.com/codex/skills",
+      "https://developers.openai.com/codex/record-and-replay",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-youtube-ai-superdomain-codex-record-replay-reusable-skills.html"
+    ],
+    "excerpt": "GPTs 與 Gemini Gems 不只是一段提示詞，而是可被「產品化」成 Agent Skill 的工作流資產；這篇貼文用「麥肯錫風格簡報」示範如何把既有提示詞轉成可安裝、可呼叫、可維護的 skill。",
+    "slug": "2026-07-10-orange-teacher-gpts-gems-to-agent-skill-mckinsey-presentation",
+    "html": "articles/2026-07-10-orange-teacher-gpts-gems-to-agent-skill-mckinsey-presentation.html",
+    "markdown": "articles/2026/07/2026-07-10-orange-teacher-gpts-gems-to-agent-skill-mckinsey-presentation.md"
+  },
+  {
     "title": "阿朱的日常｜上順興香Q飯糰：市政府站巨無霸飯糰與蔥油餅二合一早餐攻略",
     "date": "2026-07-08",
     "source": "阿朱的日常 / Brave Search",

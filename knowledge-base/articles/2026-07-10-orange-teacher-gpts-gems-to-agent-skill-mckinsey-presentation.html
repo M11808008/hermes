@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>橘子腦師｜把 GPTs / Gems 轉成 Agent Skill：麥肯錫風格簡報工作流案例</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>橘子腦師｜把 GPTs / Gems 轉成 Agent Skill：麥肯錫風格簡報工作流案例</h1><h1>橘子腦師｜把 GPTs / Gems 轉成 Agent Skill：麥肯錫風格簡報工作流案例</h1>
+<h1>一句話摘要</h1>
+<p>GPTs 與 Gemini Gems 不只是一段提示詞，而是可被「產品化」成 Agent Skill 的工作流資產；這篇貼文用「麥肯錫風格簡報」示範如何把既有提示詞轉成可安裝、可呼叫、可維護的 skill。</p>
+<h1>來源與擷取狀態</h1>
+<ul>
+<li>來源：橘子腦師 Facebook 公開貼文。</li>
+<li>擷取時間：2026-07-10。</li>
+<li>Facebook 文字與留言可由未登入瀏覽器讀取；四張截圖透過瀏覽器畫面 OCR 補充。</li>
+<li>留言區目前可見作者補充訂閱資訊，未看到公開下載連結；因此本筆記不收錄原始 skill 內容，只整理公開可見的流程與工作流意義。</li>
+</ul>
+<h1>貼文主題</h1>
+<p>作者表示自己把「麥肯錫風格簡報大師 GPTs」轉成了 SKILL，之後在 Agent 中可隨時呼叫，協助把資料製作成專業資料圖表簡報。作者也點出一個更通用的觀察：Gem 與 GPTs 本質上就是工作流，因此過去累積的各種 Gem / GPTs，都可以被轉換為 agent 系統可重複調用的 workflow skill。</p>
+<p>這與近期 Codex / Agent Skills 的趨勢一致：把 prompt、參考文件、步驟、輸出規格與驗證方式打包成一個可被模型按需載入的技能，而不是每次都重新貼一大段提示詞。</p>
+<h1>截圖中可見的流程線索</h1>
+<p>OCR 可見的關鍵文字包括：</p>
+<ul>
+<li>原始檔案：`麥肯錫風格簡報提示詞.txt`</li>
+<li>使用工具：`Skill Creator`</li>
+<li>工具說明：`將檔案內容轉成 skill`</li>
+<li>產出 skill 名稱：`mckinsey-style-presentation`</li>
+<li>可呼叫顯示名稱：`McKinsey Style Presentation`</li>
+<li>主要檔案：`SKILL.md`</li>
+<li>原始提示詞保存：`references/source-prompt.md`</li>
+<li>截圖中的安裝路徑示例：`C:\Users\user\.codex\skills\mckinsey-style-presentation\SKILL.md`</li>
+</ul>
+<p>這代表轉換過程不只是「把提示詞改名」，而是至少完成兩件事：</p>
+<ul>
+<li>把原始提示詞轉成 skill 的說明與觸發條件。</li>
+<li>把原始提示詞完整保留到 `references/`，避免日後想調整時失去來源脈絡。</li>
+</ul>
+<h1>可復用的工作流模式</h1>
+<p>這則貼文值得保存的原因，是它提供了一個可大量複製的技能化模式：</p>
+<ul>
+<li>盤點既有 GPTs / Gems / 長提示詞。</li>
+<li>判斷它們是否其實是一套穩定工作流，例如簡報生成、研究摘要、報告改寫、資料圖表化。</li>
+<li>將原始提示詞保存為 reference，而不是直接丟棄。</li>
+<li>建立 `SKILL.md`，寫清楚何時使用、輸入需求、輸出格式、步驟與驗證方式。</li>
+<li>在 agent 任務中用 skill 名稱觸發，讓模型只在需要時載入完整上下文。</li>
+<li>每次實戰後把失敗案例、格式偏差與偏好補回 skill，讓它逐步變成可維護資產。</li>
+</ul>
+<h1>對 AI 學習雷達的意義</h1>
+<p>這篇貼文很適合作為「Prompt 資產升級為 Agent 資產」的案例。過去很多人把知識工作自動化停在 GPTs / Gems / Custom Instructions；但 agent skill 的優勢在於：</p>
+<ul>
+<li>可版本化：skill 可以放在檔案系統或 repo 中管理。</li>
+<li>可引用資源：把長提示詞、範例、模板、腳本放進 `references/`、`templates/`、`scripts/`。</li>
+<li>可漸進載入：agent 先看到 skill 摘要，需要時才讀完整內容。</li>
+<li>可跨任務重用：不必每次從聊天視窗複製貼上。</li>
+<li>可維護：實戰後可補充 pitfalls、驗證步驟與風格規範。</li>
+</ul>
+<h1>實務提醒</h1>
+<ul>
+<li>不要只把 GPTs prompt 原封不動塞進 `SKILL.md`；應重寫成「觸發條件、輸入、步驟、輸出、驗證」結構。</li>
+<li>原始提示詞應放進 `references/source-prompt.md`，方便回溯但避免主 skill 過長。</li>
+<li>簡報類 skill 應明確定義交付物：大綱、頁面結構、圖表建議、視覺風格、speaker notes、資料來源標註。</li>
+<li>若 skill 會生成商業簡報，需額外檢查事實、數據、引用與圖表是否可追溯。</li>
+<li>Facebook 貼文目前未提供公開 skill 檔，因此本筆記僅保存公開可見流程，不複製或推測訂閱內容。</li>
+</ul>
+<h1>延伸閱讀</h1>
+<ul>
+<li>Codex Agent Skills 官方文件：<a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></li>
+<li>Codex Record &amp; Replay 官方文件：<a href="https://developers.openai.com/codex/record-and-replay" target="_blank" rel="noopener">https://developers.openai.com/codex/record-and-replay</a></li>
+<li>AI 學習雷達既有整理：Codex Record &amp; Replay：錄一次操作流程，自動生成可複用 Skill 的工作流實測</li>
+</ul>
+<p>  <a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-youtube-ai-superdomain-codex-record-replay-reusable-skills.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-youtube-ai-superdomain-codex-record-replay-reusable-skills.html</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-10 · Facebook / browser OCR / OpenAI Codex docs context · social-post</div><h3>標籤</h3><span class="tag">Agent Skills</span><span class="tag">Skill Creator</span><span class="tag">GPTs</span><span class="tag">Gemini Gems</span><span class="tag">Codex</span><span class="tag">Presentation</span><span class="tag">Workflow Automation</span><span class="tag">Knowledge Work</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/18verHgZ9z/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/18verHgZ9z/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/story.php?story_fbid=28387496504171927&amp;id=100000148706980&amp;mibextid=wwXIfr&amp;rdid=vEl4uR7NT5JtQVAS#" target="_blank" rel="noopener">https://www.facebook.com/story.php?story_fbid=28387496504171927&amp;id=100000148706980&amp;mibextid=wwXIfr&amp;rdid=vEl4uR7NT5JtQVAS#</a></p><p><a href="https://www.facebook.com/share/p/18verHgZ9z/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/18verHgZ9z/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/story.php?story_fbid=28387496504171927&amp;id=100000148706980&amp;mibextid=wwXIfr&amp;rdid=vEl4uR7NT5JtQVAS#" target="_blank" rel="noopener">https://www.facebook.com/story.php?story_fbid=28387496504171927&amp;id=100000148706980&amp;mibextid=wwXIfr&amp;rdid=vEl4uR7NT5JtQVAS#</a></p><p><a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener">https://developers.openai.com/codex/skills</a></p><p><a href="https://developers.openai.com/codex/record-and-replay" target="_blank" rel="noopener">https://developers.openai.com/codex/record-and-replay</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-youtube-ai-superdomain-codex-record-replay-reusable-skills.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-07-08-youtube-ai-superdomain-codex-record-replay-reusable-skills.html</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
