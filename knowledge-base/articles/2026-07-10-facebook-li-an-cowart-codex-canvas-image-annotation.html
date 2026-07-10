@@ -1,0 +1,110 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>李安 Facebook Reel｜Cowart：把 Codex 變成可標註圖片的無限畫布工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>李安 Facebook Reel｜Cowart：把 Codex 變成可標註圖片的無限畫布工作流</h1><h1>李安 Facebook Reel｜Cowart：把 Codex 變成可標註圖片的無限畫布工作流</h1>
+<h1>一句話摘要</h1>
+<p>Cowart 的價值是把「請把圖片左上角那塊改掉」這種難以用文字精準描述的需求，轉成 Codex 看得懂的畫布標註：直接在圖片上畫箭頭、圈選與註記，再讓 Codex 生成乾淨修正版。</p>
+<h1>來源與限制</h1>
+<p>來源：Facebook Reel</p>
+<p>作者：李安</p>
+<p>原始分享網址： <a href="https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr</a></p>
+<p>Canonical Reel： <a href="https://www.facebook.com/reel/2020863008536822" target="_blank" rel="noopener">https://www.facebook.com/reel/2020863008536822</a></p>
+<p>擷取限制：Facebook 未登入狀態下只能看到公開 Reel 畫面、貼文文字與目前影片幀；本筆記依 Facebook 可見文字、畫面 OCR / 視覺辨識，再搭配 Brave Search 與 Cowart GitHub README 交叉驗證整理。</p>
+<h1>Reel 內容</h1>
+<p>Facebook 可見貼文文字為：</p>
+<ul>
+<li>在 Codex 用繪圖標示修改圖片</li>
+<li>在 Codex 安裝 Cowart 外掛程式使用畫布</li>
+<li>把圖片放在畫布進行繪圖標示</li>
+<li>再丟給 Codex 依據圖片上標註生成圖片</li>
+</ul>
+<p>影片畫面顯示的是 Codex / 網頁工具操作教學型內容，核心概念是：不用只靠文字 prompt 描述圖片修改，而是在畫布中直接標出要改的位置，讓 Codex 依照標註理解修改意圖。</p>
+<h1>官方 / 原始碼驗證：Cowart 是什麼</h1>
+<p>Cowart GitHub README 說明：Cowart 是一個面向 Codex 的 native infinite-canvas widget plugin，基於 tldraw 提供可視化畫布，用於：</p>
+<ul>
+<li>視覺構思與草圖整理。</li>
+<li>在 Codex 中打開 tldraw 無限畫布 widget。</li>
+<li>把畫布頁面與圖片資源保存到目前使用者專案的 `canvas/` 目錄。</li>
+<li>在畫布中建立 AI 圖片框，輸入 prompt、選擇參考圖，讓 Codex 依選中框的比例生成圖片。</li>
+<li>對圖片做箭頭、圈選、文字標註後，將標註截圖送給 Codex，生成去掉標註痕跡的乾淨修正版，並放在原圖旁邊。</li>
+<li>透過 Cowart MCP tools 讀取選取狀態、保存畫布、插入圖片與管理頁面本地資源。</li>
+</ul>
+<p>換句話說，Cowart 不是單純的圖片生成器，而是把「畫布狀態、圖片版本、視覺標註、Codex 生成」整合在同一個專案工作區。</p>
+<h1>安裝與使用方式判讀</h1>
+<p>Cowart README 提供兩種安裝方式：</p>
+<ul>
+<li>讓 Codex 自動從 `<a href="https://github.com/zhongerxin/cowart.git`" target="_blank" rel="noopener">https://github.com/zhongerxin/cowart.git`</a> 安裝。</li>
+<li>手動 clone 到 `~/plugins/cowart`，執行 `npm install` / `npm run build`，再加入 Codex personal marketplace。</li>
+</ul>
+<p>README 中的典型命令包含：</p>
+<ul>
+<li>`codex plugin marketplace add ~`</li>
+<li>`codex plugin add cowart@personal`</li>
+</ul>
+<p>安裝後通常需要開啟新的 Codex 對話，讓新的 skills 與 MCP tools 完整載入。</p>
+<h1>可複用工作流</h1>
+<h2>圖片標註改版流程</h2>
+<ul>
+<li>在 Codex 中打開 Cowart canvas。</li>
+<li>將原圖放進畫布。</li>
+<li>在圖上用箭頭、圈選、框線、文字說明修改需求。</li>
+<li>選中被標註的圖片，觸發「按標註修改」或等效流程。</li>
+<li>Cowart 匯出包含原圖與標註的截圖，交給 Codex。</li>
+<li>Codex 依標註生成乾淨修正版。</li>
+<li>新圖放在原圖旁邊，保留 before / after 與標註脈絡。</li>
+<li>若結果不準，再在新版本上繼續標註迭代。</li>
+</ul>
+<h2>AI 圖片生成流程</h2>
+<ul>
+<li>在畫布建立 AI 圖片框。</li>
+<li>輸入 prompt 或指定參考圖。</li>
+<li>Codex 讀取圖片框尺寸與比例。</li>
+<li>生成圖片並替換該圖片框。</li>
+<li>繼續以畫布標註方式迭代。</li>
+</ul>
+<h1>為什麼這件事重要</h1>
+<p>圖片修改最大的問題常常不是模型不會改，而是使用者很難用文字準確描述空間關係。例如：</p>
+<ul>
+<li>「把右上角那個亮點拿掉」</li>
+<li>「這個人物的手不要擋住產品」</li>
+<li>「保留背景，只換中間標題」</li>
+<li>「箭頭指的地方加一點陰影」</li>
+</ul>
+<p>純文字 prompt 需要反覆補充位置與語義；Cowart 這類畫布工作流則把空間資訊直接留在圖上。這讓 Codex 不只讀文字，也能讀「你畫在哪裡」。</p>
+<h1>適合場景</h1>
+<ul>
+<li>社群貼圖、封面、廣告圖的局部修改。</li>
+<li>課程投影片、教學圖解、流程圖的視覺改版。</li>
+<li>網頁 mockup / UI 截圖的標註式修改。</li>
+<li>AI 生成圖的多版本對比與迭代。</li>
+<li>設計師與非設計師協作時，用畫面標註取代冗長文字描述。</li>
+<li>將圖片修改需求保存為專案內可追蹤的 before / after 歷史。</li>
+</ul>
+<h1>限制與風險</h1>
+<ul>
+<li>Cowart 是第三方 Codex plugin，不是 OpenAI 官方內建功能；導入前要檢查 repo、權限與維護狀態。</li>
+<li>需要 Codex plugin / MCP widget 相關環境可用；不同地區、帳號或版本可能不完全支援。</li>
+<li>圖片生成結果仍可能不穩定，尤其是文字、人物手部、品牌 logo、精準排版。</li>
+<li>若圖片含個資、客戶資料、未授權肖像或商業機密，不應直接丟給外部模型處理。</li>
+<li>外掛會在專案目錄保存 `canvas/` 資料與圖片資源，公開 repo 前要檢查是否含不該公開的素材。</li>
+</ul>
+<h1>對 AI 學習雷達的判讀</h1>
+<p>這支 Reel 延續近期「Codex 不只寫程式，而是變成可插外掛的工作台」的趨勢。Cowart 代表一種很實用的 Agent UI 方向：</p>
+<ul>
+<li>文字 prompt 負責意圖與規則。</li>
+<li>畫布負責空間與視覺脈絡。</li>
+<li>Codex / MCP tools 負責把畫布狀態轉成可執行操作。</li>
+<li>專案資料夾保存資產與版本，而不是散落在聊天紀錄裡。</li>
+</ul>
+<p>對欒帥的應用脈絡，這篇可作為：</p>
+<ul>
+<li>Codex plugin / MCP widget 教學案例。</li>
+<li>AI 圖像改版工作坊的可視化 prompt 範例。</li>
+<li>「用畫布降低 AI 溝通成本」的課程素材。</li>
+<li>之後比較 Cowart、Prompt Canvas、AI Canvas、Figma / Excalidraw + agent workflow 的基準筆記。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>Facebook 分享網址： <a href="https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr</a></li>
+<li>Facebook Reel： <a href="https://www.facebook.com/reel/2020863008536822" target="_blank" rel="noopener">https://www.facebook.com/reel/2020863008536822</a></li>
+<li>Cowart GitHub： <a href="https://github.com/zhongerxin/cowart" target="_blank" rel="noopener">https://github.com/zhongerxin/cowart</a></li>
+<li>Cowart README： <a href="https://raw.githubusercontent.com/zhongerxin/Cowart/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/zhongerxin/Cowart/main/README.md</a></li>
+<li>OpenAI Codex Plugins 文件： <a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">https://developers.openai.com/codex/plugins</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-10 · Facebook Reel / GitHub / Brave Search · social-video</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">Cowart</span><span class="tag">Codex Plugin</span><span class="tag">MCP Widget</span><span class="tag">tldraw</span><span class="tag">Image Generation</span><span class="tag">Image Editing</span><span class="tag">Visual Workflow</span><span class="tag">Annotation</span><span class="tag">AI Canvas</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/2020863008536822" target="_blank" rel="noopener">https://www.facebook.com/reel/2020863008536822</a></p><p><a href="https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/2020863008536822" target="_blank" rel="noopener">https://www.facebook.com/reel/2020863008536822</a></p><p><a href="https://github.com/zhongerxin/cowart" target="_blank" rel="noopener">https://github.com/zhongerxin/cowart</a></p><p><a href="https://raw.githubusercontent.com/zhongerxin/Cowart/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/zhongerxin/Cowart/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/zhongerxin/Cowart/main/README.en.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/zhongerxin/Cowart/main/README.en.md</a></p><p><a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">https://developers.openai.com/codex/plugins</a></p><p><a href="https://github.com/openai/plugins" target="_blank" rel="noopener">https://github.com/openai/plugins</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

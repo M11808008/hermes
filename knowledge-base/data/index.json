@@ -1,5 +1,42 @@
 [
   {
+    "title": "李安 Facebook Reel｜Cowart：把 Codex 變成可標註圖片的無限畫布工作流",
+    "date": "2026-07-10",
+    "source": "Facebook Reel / GitHub / Brave Search",
+    "author": "李安",
+    "type": "social-video",
+    "topics": [
+      "Codex",
+      "Cowart",
+      "Codex Plugin",
+      "MCP Widget",
+      "tldraw",
+      "Image Generation",
+      "Image Editing",
+      "Visual Workflow",
+      "Annotation",
+      "AI Canvas"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2020863008536822",
+      "https://www.facebook.com/share/v/18z5aGtypX/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2020863008536822",
+      "https://github.com/zhongerxin/cowart",
+      "https://raw.githubusercontent.com/zhongerxin/Cowart/main/README.md",
+      "https://raw.githubusercontent.com/zhongerxin/Cowart/main/README.en.md",
+      "https://developers.openai.com/codex/plugins",
+      "https://github.com/openai/plugins"
+    ],
+    "excerpt": "Cowart 的價值是把「請把圖片左上角那塊改掉」這種難以用文字精準描述的需求，轉成 Codex 看得懂的畫布標註：直接在圖片上畫箭頭、圈選與註記，再讓 Codex 生成乾淨修正版。",
+    "slug": "2026-07-10-facebook-li-an-cowart-codex-canvas-image-annotation",
+    "html": "articles/2026-07-10-facebook-li-an-cowart-codex-canvas-image-annotation.html",
+    "markdown": "articles/2026/07/2026-07-10-facebook-li-an-cowart-codex-canvas-image-annotation.md"
+  },
+  {
     "title": "橘子腦師｜把 GPTs / Gems 轉成 Agent Skill：麥肯錫風格簡報工作流案例",
     "date": "2026-07-10",
     "source": "Facebook / browser OCR / OpenAI Codex docs context",
