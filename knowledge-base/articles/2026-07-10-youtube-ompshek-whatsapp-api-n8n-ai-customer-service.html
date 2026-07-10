@@ -1,0 +1,153 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>阿石OMP｜WhatsApp API 認證、AI 客服免費窗口與 n8n 串接教學</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>阿石OMP｜WhatsApp API 認證、AI 客服免費窗口與 n8n 串接教學</h1><h1>阿石OMP｜WhatsApp API 認證、AI 客服免費窗口與 n8n 串接教學</h1>
+<h1>一句話摘要</h1>
+<p>這支影片適合想把 WhatsApp 變成 AI 客服入口的中小企：先完成 Meta WhatsApp Cloud API 與新電話號碼設定，再用 n8n 接 webhook、AI Agent 與公司知識庫；真正要注意的是 24 小時免費服務窗口、模板訊息計費與 access token 權限管理。</p>
+<h1>來源與限制</h1>
+<p>影片：〈最完整 WhatsApp API 認證教學~ 使用 AI 回覆要收費嗎？如何連結到 n8n〉</p>
+<p>頻道：阿石OMP</p>
+<p>發布時間：2025-05-07</p>
+<p>影片長度：約 19 分 19 秒</p>
+<p>觀看數：抓取時 YouTube metadata 顯示約 8,988 次</p>
+<p>重要限制：此影片未開放 YouTube transcript，因此本筆記不是逐字稿摘要，而是依 YouTube oEmbed / metadata / 影片描述章節，再搭配 Brave Search、Meta Developers 與 n8n 官方文件交叉驗證整理。</p>
+<h1>影片主題</h1>
+<p>影片圍繞三個實務問題：</p>
+<ul>
+<li>使用 WhatsApp API 做 AI 自動回覆是否需要付費。</li>
+<li>中小企如何申請與設定 Meta WhatsApp Business Platform / Cloud API。</li>
+<li>如何把 WhatsApp API 訊息接到 n8n，後續串 AI Agent、MCP 或 RAG，用公司資料回覆客戶。</li>
+</ul>
+<p>影片描述特別強調：AI 自動回覆本身不是 Meta 另收的「AI 費」，重點在 WhatsApp Business Platform 的訊息計費模型。若客戶先發訊息，企業通常可在 24 小時 customer service window 內免費回覆 service messages；若企業主動觸達或超出窗口，就會進入 template messages 與類別計費。</p>
+<h1>影片章節</h1>
+<p>根據 YouTube 影片描述，章節如下：</p>
+<ul>
+<li>00:00 WhatsApp API 政策混亂原因</li>
+<li>00:42 申請前準備：Facebook 帳號與新電話</li>
+<li>01:45 2025 最新收費與 24 小時免費窗口</li>
+<li>02:46 Template Message 三大類與單次費用</li>
+<li>03:52 教學流程總覽</li>
+<li>04:11 建立 Facebook App 與 Business Portfolio</li>
+<li>07:26 連接新電話號碼並測試訊息</li>
+<li>09:11 新增付款方式</li>
+<li>11:15 Permanent Access Token 產生與權限設定</li>
+<li>14:28 n8n 串接示範與 Webhook 驗證</li>
+</ul>
+<h1>官方文件驗證：收費邏輯</h1>
+<p>Meta Developers 的 WhatsApp pricing 文件與 Brave Search 摘要交叉驗證後，可整理成以下判讀：</p>
+<ul>
+<li>使用者主動傳訊息給企業後，會開啟 customer service window。</li>
+<li>在 24 小時 customer service window 內，企業可以用 service messages 回覆，通常不向 Meta 支付 service-message 費用。</li>
+<li>企業若要主動發送訊息，或在 24 小時窗口外重新聯絡客戶，通常需要使用 template messages。</li>
+<li>Template messages 依用途分類，例如 marketing、utility、authentication；類別不同，費率與審核重點也不同。</li>
+<li>Meta 的免費入口窗口與費率政策會變動，實作前應以 Meta 官方 pricing 頁面與所屬國家/地區費率表為準。</li>
+</ul>
+<p>因此，「AI 回覆是否收費」要拆成兩層：</p>
+<ul>
+<li>AI / n8n / LLM 成本：由你使用的 AI 模型、API 或自架系統決定。</li>
+<li>WhatsApp 訊息成本：由 Meta WhatsApp Business Platform 的 service window、template 類別與地區費率決定。</li>
+</ul>
+<h1>官方文件驗證：Template Message</h1>
+<p>Meta template fundamentals 文件指出，templates 是 WhatsApp Business Account 的資產，用於企業發起或超出服務窗口的訊息情境。實務上可把它想成「事先審核過的標準訊息」。</p>
+<p>對 AI 客服流程來說，這有兩個影響：</p>
+<ul>
+<li>客戶已經開啟對話時，AI Agent 可以在服務窗口內自然回覆，不一定每句都要 template。</li>
+<li>若要做行銷提醒、未付款提醒、身份驗證碼、訂單通知等主動訊息，就要設計對應 template，且注意分類、內容合規與費率。</li>
+</ul>
+<h1>n8n 串接重點</h1>
+<p>n8n 官方 WhatsApp Business Cloud credentials / node 文件顯示，串接通常需要：</p>
+<ul>
+<li>Access Token。</li>
+<li>WhatsApp Business Account ID。</li>
+<li>Phone Number ID 或 Cloud API 相關帳號資訊。</li>
+<li>Meta webhook 回調 URL 與驗證 token。</li>
+<li>可公開訪問的 n8n webhook endpoint；本機開發時常需 ngrok / tunnel，正式環境則應用 HTTPS 網域。</li>
+</ul>
+<p>影片的 n8n 示範位於 14:28 之後，重點是把 Meta 的 webhook 驗證與訊息事件接到 n8n，後續即可串：</p>
+<ul>
+<li>AI Agent 節點處理自然語言回覆。</li>
+<li>公司 FAQ / 文件 / 商品資料作為 RAG 知識庫。</li>
+<li>MCP 或其他 API 工具查詢訂單、庫存、預約、CRM。</li>
+<li>回覆節點再把結果送回 WhatsApp。</li>
+</ul>
+<h1>Access Token 與權限風險</h1>
+<p>Meta Access Tokens 文件與相關官方資料顯示，長效或永久 token 通常會牽涉 Business / System User / App 權限設定。常見權限包含：</p>
+<ul>
+<li>`whatsapp_business_messaging`：發送與接收 WhatsApp 訊息。</li>
+<li>`whatsapp_business_management`：管理 WhatsApp Business Account 相關資源。</li>
+</ul>
+<p>實務建議：</p>
+<ul>
+<li>不要把 token 寫死在前端或公開 repo。</li>
+<li>放在 n8n credentials、環境變數或 secret manager。</li>
+<li>只給必要權限，並記錄 token 由哪個 Business / System User 產生。</li>
+<li>團隊離職、權限調整或疑似外洩時要能快速輪替。</li>
+<li>n8n workflow 匯出分享前，確認 credentials 沒有一起外洩。</li>
+</ul>
+<h1>對中小企的導入價值</h1>
+<p>這類 WhatsApp + n8n + AI Agent 架構的價值，在於把高頻客服轉成可追蹤、可自動化的流程：</p>
+<ul>
+<li>售前：回答商品、方案、課程、價格與常見問題。</li>
+<li>售中：查詢訂單、預約、付款狀態或交付資訊。</li>
+<li>售後：提供操作指引、保固、退換貨與客服分流。</li>
+<li>內部：把 WhatsApp 對話事件同步到 CRM、Google Sheets、Notion 或 Airtable。</li>
+</ul>
+<p>若再加上 RAG，就能讓 AI 根據公司文件回覆，而不是只靠模型記憶。這特別適合資料分散但問題重複度高的團隊。</p>
+<h1>導入前檢查表</h1>
+<h2>帳號與電話</h2>
+<ul>
+<li>準備 Facebook / Meta 帳號與 Business Portfolio。</li>
+<li>使用可接收驗證的新電話號碼；避免拿既有私人 WhatsApp 號碼直接測試。</li>
+<li>確認該號碼未被其他 WhatsApp / WhatsApp Business App 綁定，或了解遷移限制。</li>
+</ul>
+<h2>訊息政策</h2>
+<ul>
+<li>分清楚 service messages 與 template messages。</li>
+<li>知道 24 小時 customer service window 何時開始、何時結束。</li>
+<li>主動訊息要先設計 template，避免被 Meta 拒審或歸到錯誤類別。</li>
+<li>定期回查官方 pricing 頁，因 Meta 計費政策會更新。</li>
+</ul>
+<h2>技術串接</h2>
+<ul>
+<li>n8n endpoint 必須可被 Meta webhook 連到。</li>
+<li>正式環境要使用 HTTPS 與穩定網域，不要長期依賴臨時 tunnel。</li>
+<li>AI Agent 要有明確 fallback：不知道時轉人工，不要亂編價格或承諾。</li>
+<li>RAG 文件需版本管理，避免 AI 用過期條款回覆客戶。</li>
+</ul>
+<h2>安全與治理</h2>
+<ul>
+<li>Token 與 webhook secret 不公開。</li>
+<li>對付款、退款、合約、醫療、法律等高風險問題保留人工確認。</li>
+<li>設定回覆紀錄與稽核，方便追查錯誤訊息。</li>
+<li>對客戶明確揭露可能由 AI 協助回覆。</li>
+</ul>
+<h1>可複用工作流設計</h1>
+<p>一個穩健的 WhatsApp AI 客服 n8n workflow 可拆成：</p>
+<ul>
+<li>Webhook 接收 Meta WhatsApp event。</li>
+<li>驗證來源與訊息類型。</li>
+<li>取出使用者 phone / message / timestamp。</li>
+<li>查 CRM 或資料庫確認客戶狀態。</li>
+<li>用 RAG 檢索公司 FAQ / 商品 / 政策文件。</li>
+<li>AI Agent 產生回覆草稿。</li>
+<li>用規則檢查敏感字、價格、承諾與信心分數。</li>
+<li>低風險自動回覆；高風險轉人工審核。</li>
+<li>寫回對話紀錄與後續任務。</li>
+</ul>
+<p>這比「收到訊息就丟給 ChatGPT 回覆」更安全，也更適合商業場景。</p>
+<h1>AI 學習雷達判讀</h1>
+<p>這支影片值得保存，因為它把「AI 客服」落到真正可部署的入口：WhatsApp。許多中小企的客戶已經在 WhatsApp / LINE / Messenger 裡，AI Agent 的價值不只是模型能力，而是能否接上既有對話渠道、遵守平台收費規則、管理權限，並把公司資料變成可靠回覆。</p>
+<p>對欒帥的應用脈絡，這篇可作為：</p>
+<ul>
+<li>n8n 工作坊或企業內訓的 WhatsApp API 範例。</li>
+<li>AI 客服報價前的技術與成本檢查清單。</li>
+<li>設計 LINE / WhatsApp 多渠道客服 agent 時的比較參考。</li>
+<li>課程中說明「AI 免費不等於平台訊息免費」的案例。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>YouTube： <a href="https://www.youtube.com/watch?v=3D6PayCOFww" target="_blank" rel="noopener">https://www.youtube.com/watch?v=3D6PayCOFww</a></li>
+<li>頻道： <a href="https://www.youtube.com/@ompshek" target="_blank" rel="noopener">https://www.youtube.com/@ompshek</a></li>
+<li>Meta WhatsApp Pricing： <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener">https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing</a></li>
+<li>Meta Template Fundamentals： <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview" target="_blank" rel="noopener">https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview</a></li>
+<li>Meta Access Tokens： <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens/" target="_blank" rel="noopener">https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens/</a></li>
+<li>n8n WhatsApp credentials： <a href="https://docs.n8n.io/integrations/builtin/credentials/whatsapp" target="_blank" rel="noopener">https://docs.n8n.io/integrations/builtin/credentials/whatsapp</a></li>
+<li>n8n WhatsApp node： <a href="https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp" target="_blank" rel="noopener">https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-10 · YouTube / Meta Developers / n8n Docs / Brave Search · video</div><h3>標籤</h3><span class="tag">WhatsApp API</span><span class="tag">Meta Business Platform</span><span class="tag">n8n</span><span class="tag">AI 客服</span><span class="tag">Customer Service Automation</span><span class="tag">Webhook</span><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">SMB Automation</span><h3>原始連結</h3><p><a href="https://www.youtube.com/watch?v=3D6PayCOFww" target="_blank" rel="noopener">https://www.youtube.com/watch?v=3D6PayCOFww</a></p><p><a href="https://www.youtube.com/watch?v=3D6PayCOFww" target="_blank" rel="noopener">https://www.youtube.com/watch?v=3D6PayCOFww</a></p><p><a href="https://www.youtube.com/watch?v=3D6PayCOFww" target="_blank" rel="noopener">https://www.youtube.com/watch?v=3D6PayCOFww</a></p><p><a href="https://www.youtube.com/@ompshek" target="_blank" rel="noopener">https://www.youtube.com/@ompshek</a></p><p><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener">https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing</a></p><p><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview" target="_blank" rel="noopener">https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview</a></p><p><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens/" target="_blank" rel="noopener">https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens/</a></p><p><a href="https://docs.n8n.io/integrations/builtin/credentials/whatsapp" target="_blank" rel="noopener">https://docs.n8n.io/integrations/builtin/credentials/whatsapp</a></p><p><a href="https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp" target="_blank" rel="noopener">https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

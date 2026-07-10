@@ -119,6 +119,42 @@
     "markdown": "articles/2026/07/2026-07-10-threads-runghuang-obsidian-claude-code-travel-atlas.md"
   },
   {
+    "title": "阿石OMP｜WhatsApp API 認證、AI 客服免費窗口與 n8n 串接教學",
+    "date": "2026-07-10",
+    "source": "YouTube / Meta Developers / n8n Docs / Brave Search",
+    "author": "阿石OMP",
+    "type": "video",
+    "topics": [
+      "WhatsApp API",
+      "Meta Business Platform",
+      "n8n",
+      "AI 客服",
+      "Customer Service Automation",
+      "Webhook",
+      "MCP",
+      "RAG",
+      "SMB Automation"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=3D6PayCOFww",
+      "https://www.youtube.com/watch?v=3D6PayCOFww",
+      "https://www.youtube.com/watch?v=3D6PayCOFww",
+      "https://www.youtube.com/@ompshek",
+      "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview",
+      "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens/",
+      "https://docs.n8n.io/integrations/builtin/credentials/whatsapp",
+      "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp"
+    ],
+    "excerpt": "這支影片適合想把 WhatsApp 變成 AI 客服入口的中小企：先完成 Meta WhatsApp Cloud API 與新電話號碼設定，再用 n8n 接 webhook、AI Agent 與公司知識庫；真正要注意的是 24 小時免費服務窗口、模板訊息計費與 access token 權限管理。",
+    "slug": "2026-07-10-youtube-ompshek-whatsapp-api-n8n-ai-customer-service",
+    "html": "articles/2026-07-10-youtube-ompshek-whatsapp-api-n8n-ai-customer-service.html",
+    "markdown": "articles/2026/07/2026-07-10-youtube-ompshek-whatsapp-api-n8n-ai-customer-service.md"
+  },
+  {
     "title": "阿朱的日常｜上順興香Q飯糰：市政府站巨無霸飯糰與蔥油餅二合一早餐攻略",
     "date": "2026-07-08",
     "source": "阿朱的日常 / Brave Search",
