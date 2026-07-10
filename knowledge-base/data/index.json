@@ -1,5 +1,44 @@
 [
   {
+    "title": "Bobby Neishman Facebook Reel｜Claude Code + 5 個免費 MCP Servers 與 MixRoute API 導流案例",
+    "date": "2026-07-11",
+    "source": "Facebook Reel / Anthropic Docs / Brave Search",
+    "author": "Bobby Neishman",
+    "type": "social-video",
+    "topics": [
+      "Claude Code",
+      "MCP",
+      "MCP Servers",
+      "Browser Automation",
+      "Web Search",
+      "Web Crawling",
+      "AI Image Generation",
+      "AI Video Generation",
+      "MixRoute",
+      "Social Lead Magnet"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1C4f7JRKWi/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1345055880417426",
+      "https://www.facebook.com/share/r/1C4f7JRKWi/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1345055880417426",
+      "https://code.claude.com/docs/en/mcp",
+      "https://platform.claude.com/docs/en/agents-and-tools/mcp-connector",
+      "https://modelcontextprotocol.io/",
+      "https://mixroute.ai/",
+      "https://github.com/firecrawl/firecrawl-mcp-server",
+      "https://www.firecrawl.dev/blog/best-web-search-mcp",
+      "https://github.com/RamboRogers/fal-image-video-mcp"
+    ],
+    "excerpt": "這支 Reel 的核心訊息是：Claude Code 若接上 MCP servers，就能從單純 coding agent 擴展成能搜尋網路、操作瀏覽器、爬網站、調用影像/影片模型的工具型 agent；但貼文沒有公開列出 5 個 server 名稱，留言「MCP」換連結屬於社群導流機制。",
+    "slug": "2026-07-11-facebook-bobby-neishman-claude-code-free-mcp-servers-mixroute",
+    "html": "articles/2026-07-11-facebook-bobby-neishman-claude-code-free-mcp-servers-mixroute.html",
+    "markdown": "articles/2026/07/2026-07-11-facebook-bobby-neishman-claude-code-free-mcp-servers-mixroute.md"
+  },
+  {
     "title": "Chase AI Facebook Reel｜Claude Code 指南與 n8n AI Agent 模板的社群導流案例",
     "date": "2026-07-11",
     "source": "Facebook Reel / Threads / Anthropic Docs / n8n / Brave Search",
