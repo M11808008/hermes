@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Salavat Shirgaleev Facebook Reel｜Claude Skill for Writing Like a Human：用 Skill 固化個人寫作風格</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Salavat Shirgaleev Facebook Reel｜Claude Skill for Writing Like a Human：用 Skill 固化個人寫作風格</h1><h1>Salavat Shirgaleev Facebook Reel｜Claude Skill for Writing Like a Human：用 Skill 固化個人寫作風格</h1>
+<h1>一句話摘要</h1>
+<p>這支 Reel 指向一個實用方向：與其每次要求 Claude「寫得像人」，不如把個人語氣、禁用 AI 腔、改寫規則與範例文章整理成 Claude Skill，讓模型在需要寫作或潤稿時自動載入同一套風格規範。</p>
+<h1>來源與限制</h1>
+<p>來源：Facebook Reel</p>
+<p>作者：Salavat Shirgaleev</p>
+<p>原始分享網址： <a href="https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr</a></p>
+<p>Canonical Reel： <a href="https://www.facebook.com/reel/26632989983024525" target="_blank" rel="noopener">https://www.facebook.com/reel/26632989983024525</a></p>
+<p>擷取限制：Facebook 未登入狀態下沒有顯示完整 caption；可見資訊主要來自 Reel 預覽圖與 metadata。預覽圖文字為「Claude Skill For Writing Like a Human」，但沒有公開列出該 skill 的下載連結、內容、授權或完整步驟。因此本筆記只整理可驗證的工作流方向，不聲稱已取得作者的原始 skill。</p>
+<h1>Reel 可見內容</h1>
+<p>預覽圖可辨識元素：</p>
+<ul>
+<li>一個資料夾圖示，標示 `CLAUDE SKILL`。</li>
+<li>Claude 風格的橘色放射狀圖形。</li>
+<li>大標題：`Claude Skill For Writing Like a Human`。</li>
+<li>下方為作者對鏡講解的短影音畫面。</li>
+</ul>
+<p>這表示主題很可能是：用 Claude Skill 改善 AI 寫作，使輸出更像人類文字，減少機械化、模板化、過度正式或典型 AI 風格。</p>
+<h1>官方驗證：Claude Skills 是什麼</h1>
+<p>Anthropic 的 Agent Skills / Claude Code Skills 文件與 `anthropics/skills` repo 說明，Skill 是一個包含 instructions、scripts、resources 的資料夾，Claude 會在特定任務中動態載入，以提升專門工作流的表現。</p>
+<p>官方 repo 的描述重點包括：</p>
+<ul>
+<li>Skills are folders of instructions, scripts, and resources。</li>
+<li>Claude 會在需要時載入技能，用於重複性、專門化任務。</li>
+<li>Skill 可用於文件產出、企業品牌規範、資料分析、個人自動化等。</li>
+<li>每個 skill 通常有 `SKILL.md`，描述何時使用、流程、規則與驗證方式。</li>
+</ul>
+<p>因此，把「寫得像某個人」變成 Claude Skill，在概念上是合理的：它把每次都要重講的寫作偏好變成可重用的上下文。</p>
+<h1>公開 Humanizer Skill 參考</h1>
+<p>Brave Search 與 GitHub 查到 `blader/humanizer` 這類公開 skill，可作為同類工作流的參考。其 `SKILL.md` 說明：</p>
+<ul>
+<li>目標是移除 AI-generated writing 的痕跡。</li>
+<li>會掃描 promotional language、過度象徵化、被動語態、rule of three、AI vocabulary、filler phrases、em dash overuse 等模式。</li>
+<li>要求 rewrite 而不是只刪除，並保留原意。</li>
+<li>支援 voice calibration：如果使用者提供自己的寫作樣本，skill 會分析句長、用字、段落開頭、標點習慣與常見語氣，再套用到改寫。</li>
+</ul>
+<p>這驗證了 Reel 主題背後的可行模式：不是只叫模型「更自然」，而是列出可檢查的反 AI 味規則與個人風格訊號。</p>
+<h1>可複用工作流：寫作型 Claude Skill</h1>
+<p>一個「Writing Like a Human」skill 可以包含：</p>
+<ul>
+<li>觸發條件：當使用者要求撰寫、改寫、潤稿、社群貼文、newsletter、文章摘要時使用。</li>
+<li>反 AI 味規則：避免空泛形容、過度條列、行銷腔、模板轉折、過度對稱句型。</li>
+<li>語氣規範：正式 / 口語 / 專業 / 幽默 / 犀利 / 高質感等。</li>
+<li>個人範例：收錄 2-5 篇真實文字，作為 voice DNA。</li>
+<li>改寫流程：先診斷 AI 味，再提出修改策略，最後輸出自然版本。</li>
+<li>驗證清單：是否像真人、有具體細節、有節奏變化、有立場，而不是安全但平板。</li>
+</ul>
+<h1>為什麼 Skill 比單次 prompt 更好</h1>
+<p>單次 prompt 的問題是：</p>
+<ul>
+<li>每次都要重貼規則。</li>
+<li>模型容易忘記語氣細節。</li>
+<li>不同任務會產生不一致風格。</li>
+<li>團隊成員各自寫 prompt，品牌聲音不穩定。</li>
+</ul>
+<p>Skill 的優勢是：</p>
+<ul>
+<li>可版本管理與持續迭代。</li>
+<li>可加入參考資料、範例與檢查表。</li>
+<li>可在 Claude Code / Claude 環境中重複觸發。</li>
+<li>適合把個人、品牌或課程的語氣規範產品化。</li>
+</ul>
+<h1>對 AI 學習雷達的判讀</h1>
+<p>這則 Reel 值得保存，因為它代表 AI 寫作工具從「提示詞技巧」走向「可維護的風格資產」。當內容產量增加時，最重要的不是每篇都重新 prompt，而是建立一個可複用、可修正、可審核的寫作 skill。</p>
+<p>對欒帥的應用脈絡，它可以延伸成：</p>
+<ul>
+<li>欒帥個人風格 Skill：固定繁中、專業優雅、高質感、少 AI 腔。</li>
+<li>課程文案 Skill：招生頁、講義、社群貼文維持一致語氣。</li>
+<li>AI 學習雷達摘要 Skill：新聞歸檔時維持同一種判讀框架。</li>
+<li>Humanizer / editor Skill：把初稿先寫快，再用 skill 進行人味化與審稿。</li>
+</ul>
+<h1>實作注意事項</h1>
+<ul>
+<li>不要只寫「make it human」；要列出具體可檢查的壞味道與替代策略。</li>
+<li>需要真實寫作樣本，否則模型只能套用泛用「自然」風格。</li>
+<li>風格 skill 應該保存偏好與範例，不應保存一次性任務細節。</li>
+<li>如果用於品牌或課程，需定期檢查是否過度口語、過度誇張或失去專業性。</li>
+<li>對外發布前仍應人工審稿，尤其是招生、商業承諾與敏感主題。</li>
+</ul>
+<h1>原始連結</h1>
+<ul>
+<li>Facebook 分享網址： <a href="https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr</a></li>
+<li>Facebook Reel： <a href="https://www.facebook.com/reel/26632989983024525" target="_blank" rel="noopener">https://www.facebook.com/reel/26632989983024525</a></li>
+<li>Anthropic Skills repo： <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">https://github.com/anthropics/skills</a></li>
+<li>Claude Agent Skills docs： <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview</a></li>
+<li>Claude Code Skills docs： <a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></li>
+<li>Humanizer skill 參考： <a href="https://github.com/blader/humanizer" target="_blank" rel="noopener">https://github.com/blader/humanizer</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-11 · Facebook Reel / Anthropic Skills / GitHub / Brave Search · social-video</div><h3>標籤</h3><span class="tag">Claude Skills</span><span class="tag">Agent Skills</span><span class="tag">Human Writing</span><span class="tag">Humanizer</span><span class="tag">Writing Workflow</span><span class="tag">Voice Calibration</span><span class="tag">Prompt Engineering</span><span class="tag">Content Creation</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/26632989983024525" target="_blank" rel="noopener">https://www.facebook.com/reel/26632989983024525</a></p><p><a href="https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/26632989983024525" target="_blank" rel="noopener">https://www.facebook.com/reel/26632989983024525</a></p><p><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">https://github.com/anthropics/skills</a></p><p><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://github.com/blader/humanizer" target="_blank" rel="noopener">https://github.com/blader/humanizer</a></p><p><a href="https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

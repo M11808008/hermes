@@ -78,6 +78,41 @@
     "markdown": "articles/2026/07/2026-07-11-facebook-chase-ai-claude-code-guides-n8n-agent-templates.md"
   },
   {
+    "title": "Salavat Shirgaleev Facebook Reel｜Claude Skill for Writing Like a Human：用 Skill 固化個人寫作風格",
+    "date": "2026-07-11",
+    "source": "Facebook Reel / Anthropic Skills / GitHub / Brave Search",
+    "author": "Salavat Shirgaleev",
+    "type": "social-video",
+    "topics": [
+      "Claude Skills",
+      "Agent Skills",
+      "Human Writing",
+      "Humanizer",
+      "Writing Workflow",
+      "Voice Calibration",
+      "Prompt Engineering",
+      "Content Creation"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/26632989983024525",
+      "https://www.facebook.com/share/r/1GgspyhT1r/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/26632989983024525",
+      "https://github.com/anthropics/skills",
+      "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "https://code.claude.com/docs/en/skills",
+      "https://github.com/blader/humanizer",
+      "https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md"
+    ],
+    "excerpt": "這支 Reel 指向一個實用方向：與其每次要求 Claude「寫得像人」，不如把個人語氣、禁用 AI 腔、改寫規則與範例文章整理成 Claude Skill，讓模型在需要寫作或潤稿時自動載入同一套風格規範。",
+    "slug": "2026-07-11-facebook-salavat-shirgaleev-claude-skill-writing-like-human",
+    "html": "articles/2026-07-11-facebook-salavat-shirgaleev-claude-skill-writing-like-human.html",
+    "markdown": "articles/2026/07/2026-07-11-facebook-salavat-shirgaleev-claude-skill-writing-like-human.md"
+  },
+  {
     "title": "李安 Facebook Reel｜Cowart：把 Codex 變成可標註圖片的無限畫布工作流",
     "date": "2026-07-10",
     "source": "Facebook Reel / GitHub / Brave Search",
