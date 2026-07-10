@@ -1,0 +1,84 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Jc Ming Threads｜video-autopilot-kit：CapCut JSON + ffmpeg 的短影音自動化開源框架</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Jc Ming Threads｜video-autopilot-kit：CapCut JSON + ffmpeg 的短影音自動化開源框架</h1><h1>Jc Ming Threads｜video-autopilot-kit：CapCut JSON + ffmpeg 的短影音自動化開源框架</h1>
+<h1>一句話摘要</h1>
+<p>這則 Threads 推薦的 `video-autopilot-kit` 是一套開源短影音/YouTube 製作框架：用 ffmpeg 與 Python 做可重現的自動剪輯，也保留 CapCut JSON 自動化路徑，適合把個人創作者的影片 SOP 轉成可維護的半自動系統。</p>
+<h1>Threads 貼文重點</h1>
+<p>Jc Ming 的原文重點：</p>
+<ul>
+<li>「真的佩服和感謝 hao大大，開源自動剪輯 和配字幕 git 還是免費的」</li>
+<li>連到 GitHub： <a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></li>
+<li>Threads 頁面預覽描述為：Fill-in-your-own-data framework for YouTube / short-form video automation: CapCut JSON + ffmpeg tooling + an onboarding questionnaire. Ships with zero private data.</li>
+</ul>
+<p>公開可見回覆中，`meta.ai` 帳號式回覆稱它是「CapCut JSON + ffmpeg 自動剪輯上字幕」工具。不過這類社群留言本身不等於技術驗證；真正可依據的是 GitHub repo、README、SETUP、TROUBLESHOOTING 與 examples。</p>
+<h1>GitHub 驗證</h1>
+<p>GitHub API 與 README 驗證到：</p>
+<ul>
+<li>Repo：`Hao0321/video-autopilot-kit`</li>
+<li>授權：MIT License</li>
+<li>主要語言：Python</li>
+<li>主題標籤：capcut、content-creation、creator-tools、ffmpeg、python、shorts、video-automation、youtube</li>
+<li>README 定位：YouTube / 短影音自動化工具 + 方法論模板</li>
+<li>核心聲明：不含原作者私人資料，voice / 策略 / 社群數字都是空白模板，由採用者自行填入</li>
+<li>2026-07-10 的 CHANGELOG 顯示 repo 近期把架構重新定位成兩條 first-class path，並強化跨平台支援</li>
+</ul>
+<h1>兩條路徑：Programmatic 與 CapCut-assisted</h1>
+<p>README 把工具分成兩條同等地位的路徑：</p>
+<h2>Path 1 — Programmatic</h2>
+<p>適合 Mac、Linux、Windows，主打可重現、自動化、無 GUI 依賴：</p>
+<ul>
+<li>`src/longform_maker/`：教學長片、premium motion、word captions、screen cleanup</li>
+<li>`src/silent_vlog_maker/`：純 ffmpeg pipeline，直式 Shorts、靜音 vlog、素材整理</li>
+<li>`src/capcut_helpers/` 中的 QA gates：交付前檢查頻閃、死空檔、字幕同步、b-roll 比例等</li>
+<li>examples 可直接跑：`examples/01_vertical_short.py`、`examples/02_caption_broll_match.py`</li>
+</ul>
+<p>這條路徑只需要 Python 3.9+ 與 ffmpeg/ffprobe，比較適合跨平台與批次化。</p>
+<h2>Path 2 — CapCut-assisted</h2>
+<p>適合真的需要 CapCut 花字、特效、雲端模板的創作者：</p>
+<ul>
+<li>透過 CapCut Desktop 草稿 JSON 直改來做剪輯自動化</li>
+<li>搭配 AI assistant + Computer Use 操作 CapCut 視窗套模板與匯出</li>
+<li>Windows-first，且版本敏感</li>
+<li>TROUBLESHOOTING 明確提醒剪映 CN 6.0+ 草稿加密不可直改；CapCut 國際版 6.x–9.x 通常仍是明文，但仍需先跑 `detect_draft_format()` 驗證</li>
+</ul>
+<h1>實務價值</h1>
+<p>這個 repo 的價值不在於「一鍵複製某位創作者的私有流程」，而在於把短影音製作拆成可問卷化、可配置、可測試的模組：</p>
+<ul>
+<li>讓創作者先填自己的品牌、niche、製作路徑、字體、BGM、b-roll 路徑</li>
+<li>用素材檔名或 keyword map 對齊 captions 與 b-roll</li>
+<li>用 ffmpeg pipeline 產出直式 Shorts</li>
+<li>用 QA gates 在交付前先抓死空檔、頻閃、螢幕錄影外框、字幕同步等常見問題</li>
+<li>有 CapCut 需求時，再把 CapCut 視為特效/模板層，而非唯一核心</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這是一個值得追蹤的「創作者作業系統」型 repo：它把 AI 內容生成之外的後段工作，也就是剪輯、字幕、b-roll、QA、模板化設定，變成可程式化的工作流。</p>
+<p>它特別適合用來觀察三個趨勢：</p>
+<ul>
+<li>AI agent 不只寫文案，也開始操作與維護創作管線</li>
+<li>短影音製作從手工剪輯走向「素材庫 + 配置檔 + QA gate」</li>
+<li>開源工具如果能把私有數據抽掉，只保留方法論骨架，會更容易被不同創作者採用</li>
+</ul>
+<h1>採用前檢查表</h1>
+<p>導入前建議先確認：</p>
+<ul>
+<li>是否願意把自己的品牌、語氣、素材命名與工作流整理成 `profiles/` 與 `config.py`</li>
+<li>是否可接受 Path 1 的純程式 pipeline，而不是一開始就追求 CapCut 花字</li>
+<li>若走 Path 2，CapCut 版本是否仍可讀寫明文 JSON</li>
+<li>是否有 ffmpeg/ffprobe、Python 3.9+ 與可用字型</li>
+<li>b-roll 檔名是否能描述內容，否則字幕對位會失準</li>
+<li>交付前是否願意跑 QA gates，而不是把「看起來能出片」當完成</li>
+</ul>
+<h1>限制與注意事項</h1>
+<ul>
+<li>Repo 是框架，不是可直接替你完成所有創作策略的 SaaS。</li>
+<li>CapCut-assisted 路徑版本敏感，剪映/CapCut 更新可能破壞 JSON 自動化。</li>
+<li>Mac 使用者較適合 Path 1；README 明確指出 Mac 上 CapCut GUI 自動化沒有等效機制。</li>
+<li>若要商業使用，仍需自行處理素材授權、音樂授權、字型授權與平台政策。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads 原文： <a href="https://www.threads.com/@jayc07/post/DanY_gOmMxd" target="_blank" rel="noopener">https://www.threads.com/@jayc07/post/DanY_gOmMxd</a></li>
+<li>GitHub repo： <a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></li>
+<li>README： <a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/README.md</a></li>
+<li>SETUP： <a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/SETUP.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/SETUP.md</a></li>
+<li>TROUBLESHOOTING： <a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/TROUBLESHOOTING.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/TROUBLESHOOTING.md</a></li>
+<li>Examples： <a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/examples/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/examples/README.md</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-11 · Threads / GitHub / Brave Search · social-post</div><h3>標籤</h3><span class="tag">Video Automation</span><span class="tag">Short Video</span><span class="tag">CapCut</span><span class="tag">ffmpeg</span><span class="tag">Python</span><span class="tag">Open Source</span><span class="tag">Creator Tools</span><span class="tag">AI Workflow</span><h3>原始連結</h3><p><a href="https://www.threads.com/@jayc07/post/DanY_gOmMxd?xmt=AQG0YRyIJg6shTcXYr-s0-dbRPiatf7DlJJ4OjwTdMlV_a58dIIdQX_EspqCOblpKDoM4cwI-g&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@jayc07/post/DanY_gOmMxd?xmt=AQG0YRyIJg6shTcXYr-s0-dbRPiatf7DlJJ4OjwTdMlV_a58dIIdQX_EspqCOblpKDoM4cwI-g&amp;slof=1</a></p><p><a href="https://www.threads.com/@jayc07/post/DanY_gOmMxd" target="_blank" rel="noopener">https://www.threads.com/@jayc07/post/DanY_gOmMxd</a></p><p><a href="https://www.threads.com/@jayc07/post/DanY_gOmMxd" target="_blank" rel="noopener">https://www.threads.com/@jayc07/post/DanY_gOmMxd</a></p><p><a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></p><p><a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/SETUP.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/SETUP.md</a></p><p><a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/TROUBLESHOOTING.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/TROUBLESHOOTING.md</a></p><p><a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/examples/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/examples/README.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

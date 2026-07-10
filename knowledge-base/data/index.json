@@ -153,6 +153,76 @@
     "markdown": "articles/2026/07/2026-07-11-facebook-salavat-shirgaleev-claude-skill-writing-like-human.md"
   },
   {
+    "title": "Jc Ming Threads｜video-autopilot-kit：CapCut JSON + ffmpeg 的短影音自動化開源框架",
+    "date": "2026-07-11",
+    "source": "Threads / GitHub / Brave Search",
+    "author": "Jc Ming (@jayc07)",
+    "type": "social-post",
+    "topics": [
+      "Video Automation",
+      "Short Video",
+      "CapCut",
+      "ffmpeg",
+      "Python",
+      "Open Source",
+      "Creator Tools",
+      "AI Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@jayc07/post/DanY_gOmMxd?xmt=AQG0YRyIJg6shTcXYr-s0-dbRPiatf7DlJJ4OjwTdMlV_a58dIIdQX_EspqCOblpKDoM4cwI-g&slof=1",
+      "https://www.threads.com/@jayc07/post/DanY_gOmMxd",
+      "https://www.threads.com/@jayc07/post/DanY_gOmMxd",
+      "https://github.com/Hao0321/video-autopilot-kit",
+      "https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/README.md",
+      "https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/SETUP.md",
+      "https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/TROUBLESHOOTING.md",
+      "https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/examples/README.md"
+    ],
+    "excerpt": "這則 Threads 推薦的 `video-autopilot-kit` 是一套開源短影音/YouTube 製作框架：用 ffmpeg 與 Python 做可重現的自動剪輯，也保留 CapCut JSON 自動化路徑，適合把個人創作者的影片 SOP 轉成可維護的半自動系統。",
+    "slug": "2026-07-11-threads-jayc07-video-autopilot-kit-capcut-ffmpeg-short-video-automation",
+    "html": "articles/2026-07-11-threads-jayc07-video-autopilot-kit-capcut-ffmpeg-short-video-automation.html",
+    "markdown": "articles/2026/07/2026-07-11-threads-jayc07-video-autopilot-kit-capcut-ffmpeg-short-video-automation.md"
+  },
+  {
+    "title": "SME Post Threads｜ChatGPT Work、Codex、Scheduled Tasks、Sites：ChatGPT 從聊天工具走向工作平台",
+    "date": "2026-07-11",
+    "source": "Threads / OpenAI official docs / Brave Search",
+    "author": "SME Post (@smepost.ai)",
+    "type": "social-post",
+    "topics": [
+      "ChatGPT Work",
+      "Codex",
+      "Scheduled Tasks",
+      "ChatGPT Sites",
+      "OpenAI",
+      "Agentic Workflow",
+      "Productivity",
+      "AI Work Platform"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@smepost.ai/post/DalO9wAE26I?xmt=AQG0ym8CVWim6uyqVEeeG6MhkmN9w6KdbKbzVGNNnmXMS8AMySg7StCDbf5iW5a_klXp84iIzA&slof=1",
+      "https://www.threads.com/@smepost.ai/post/DalO9wAE26I",
+      "https://www.threads.com/@smepost.ai/post/DalO9wAE26I",
+      "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+      "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+      "https://help.openai.com/en/articles/10291617-tasks-in-chatgpt",
+      "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
+      "https://openai.com/codex/",
+      "https://developers.openai.com/codex/sites",
+      "https://developers.openai.com/codex/changelog"
+    ],
+    "excerpt": "這則 Threads 把 ChatGPT 的近期變化解讀為「從聊天工具變成工作平台」：重點不再只是模型更強，而是 AI 能否跨資料、跨工具、可排程地產出可交付成果。",
+    "slug": "2026-07-11-threads-smepost-chatgpt-work-codex-scheduled-tasks-sites-work-platform",
+    "html": "articles/2026-07-11-threads-smepost-chatgpt-work-codex-scheduled-tasks-sites-work-platform.html",
+    "markdown": "articles/2026/07/2026-07-11-threads-smepost-chatgpt-work-codex-scheduled-tasks-sites-work-platform.md"
+  },
+  {
     "title": "李安 Facebook Reel｜Cowart：把 Codex 變成可標註圖片的無限畫布工作流",
     "date": "2026-07-10",
     "source": "Facebook Reel / GitHub / Brave Search",
