@@ -1,5 +1,44 @@
 [
   {
+    "title": "Chase AI Facebook Reel｜Claude Code 指南與 n8n AI Agent 模板的社群導流案例",
+    "date": "2026-07-11",
+    "source": "Facebook Reel / Threads / Anthropic Docs / n8n / Brave Search",
+    "author": "Chase AI",
+    "type": "social-video",
+    "topics": [
+      "Claude Code",
+      "AI Agent",
+      "n8n",
+      "Workflow Templates",
+      "Social Lead Magnet",
+      "Creator Funnel",
+      "Agent Templates",
+      "AI Automation",
+      "Claude Code Guides"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1DZBGHJgqr/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1396110759118164",
+      "https://www.facebook.com/share/r/1DZBGHJgqr/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1396110759118164",
+      "https://www.threads.com/@chase.h.ai/post/DTeE2yEjcvj",
+      "https://www.threads.com/@chase.h.ai",
+      "https://code.claude.com/docs/en/overview",
+      "https://claude.com/product/claude-code",
+      "https://github.com/anthropics/claude-code",
+      "https://n8n.io/ai-agents/",
+      "https://n8n.io/workflows/categories/ai/",
+      "https://n8n.io/workflows/6270-build-your-first-ai-agent/"
+    ],
+    "excerpt": "這支 Reel 的重點不是單一技術教學，而是一個很典型的 AI creator funnel：用 Claude Code guides + 100+ n8n AI agent templates 當誘因，要求觀眾留言「agent」來觸發資源領取或私訊導流。",
+    "slug": "2026-07-11-facebook-chase-ai-claude-code-guides-n8n-agent-templates",
+    "html": "articles/2026-07-11-facebook-chase-ai-claude-code-guides-n8n-agent-templates.html",
+    "markdown": "articles/2026/07/2026-07-11-facebook-chase-ai-claude-code-guides-n8n-agent-templates.md"
+  },
+  {
     "title": "李安 Facebook Reel｜Cowart：把 Codex 變成可標註圖片的無限畫布工作流",
     "date": "2026-07-10",
     "source": "Facebook Reel / GitHub / Brave Search",
