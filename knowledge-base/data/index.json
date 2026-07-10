@@ -39,6 +39,46 @@
     "markdown": "articles/2026/07/2026-07-11-facebook-bobby-neishman-claude-code-free-mcp-servers-mixroute.md"
   },
   {
+    "title": "Braydon Carter Facebook Reel｜Claude 連接 Higgsfield：把文字助理變成 AI 圖像生成工作流",
+    "date": "2026-07-11",
+    "source": "Facebook Reel / Higgsfield / GitHub / Brave Search",
+    "author": "Braydon Carter",
+    "type": "social-video",
+    "topics": [
+      "Claude",
+      "Higgsfield",
+      "MCP",
+      "AI Image",
+      "AI Photo",
+      "AI Video",
+      "Claude Code",
+      "TikTok",
+      "Creative Automation",
+      "API SDK"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1EmSvw3dKL/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2384913761992032",
+      "https://www.facebook.com/share/r/1EmSvw3dKL/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2384913761992032",
+      "https://higgsfield.ai/",
+      "https://higgsfield.ai/mcp",
+      "https://higgsfield.ai/claude-ai-image-generator",
+      "https://higgsfield.ai/claude-ai-video-generator",
+      "https://higgsfield.ai/ai-image",
+      "https://higgsfield.ai/ai-video",
+      "https://github.com/higgsfield-ai/higgsfield-js",
+      "https://raw.githubusercontent.com/higgsfield-ai/higgsfield-js/main/README.md"
+    ],
+    "excerpt": "這支 Reel 的重點是把 Claude 從純文字助理延伸成創意生成入口：Claude 負責構思、提示詞與流程編排，Higgsfield 負責圖像、照片與影片生成。",
+    "slug": "2026-07-11-facebook-braydon-carter-claude-higgsfield-ai-image-mcp",
+    "html": "articles/2026-07-11-facebook-braydon-carter-claude-higgsfield-ai-image-mcp.html",
+    "markdown": "articles/2026/07/2026-07-11-facebook-braydon-carter-claude-higgsfield-ai-image-mcp.md"
+  },
+  {
     "title": "Chase AI Facebook Reel｜Claude Code 指南與 n8n AI Agent 模板的社群導流案例",
     "date": "2026-07-11",
     "source": "Facebook Reel / Threads / Anthropic Docs / n8n / Brave Search",
