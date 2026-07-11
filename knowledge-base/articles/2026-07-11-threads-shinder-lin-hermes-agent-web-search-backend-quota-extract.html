@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Shinder Lin Threads｜Hermes Agent Web Search 後端選擇：搜尋、全文擷取與額度管理</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Shinder Lin Threads｜Hermes Agent Web Search 後端選擇：搜尋、全文擷取與額度管理</h1><h1>Shinder Lin Threads｜Hermes Agent Web Search 後端選擇：搜尋、全文擷取與額度管理</h1>
+<h1>一句話摘要</h1>
+<p>Hermes Agent 的網路工具不要只看「能不能搜尋」；更關鍵的是把 search、extract、額度、隱私與自架成本分開設計。</p>
+<h1>Threads 貼文重點</h1>
+<p>Shinder Lin 的貼文提醒：</p>
+<ul>
+<li>Hermes Agent 的 web search 若走 Nous Portal / Firecrawl 類代管服務，免費層額度可能很快撞牆。</li>
+<li>web backend 可以切換，包含 DDGS、SearXNG、Tavily、Exa、Brave 等選項。</li>
+<li>DDGS、SearXNG、Brave 偏「搜尋」；需要讀完整網頁內容時，仍要搭配 Tavily、Exa 或 Firecrawl 類 extract 能力。</li>
+<li>作者的建議組合是：搜尋走免費/低成本後端，少數需要讀全文時才吃 Tavily 額度。</li>
+<li>可改 `~/.hermes/config.yaml` 的 `web.backend`，或跑 `hermes tools` 精靈設定。</li>
+<li>作者回覆補充另一個解法：自架 Firecrawl。</li>
+</ul>
+<h1>官方文件校準</h1>
+<p>Hermes Agent 官方文件與 Brave Search 摘要可驗證：</p>
+<ul>
+<li>Hermes Web Search &amp; Extract 文件顯示可在 `~/.hermes/config.yaml` 設定：</li>
+</ul>
+<p>  - `web.backend: &quot;searxng&quot;`</p>
+<p>  - 可選後端包含 `firecrawl | searxng | brave-free | ddgs | tavily | exa | parallel | xai`</p>
+<ul>
+<li>Hermes Integrations 文件指出：如果 `web.backend` 未設定，會依可用 API key 自動偵測；也支援 self-hosted Firecrawl via `FIRECRAWL_API_URL`。</li>
+<li>Hermes Web Search Provider Plugins 文件指出，Firecrawl、SearXNG、Tavily、Exa、Parallel、Brave Search、xAI、DDGS 都是內建 web provider plugins。</li>
+<li>Firecrawl GitHub repo 描述為「The API to search, scrape, and interact with the web at scale」；GitHub API 查詢時約 149,239 stars。</li>
+</ul>
+<h1>更精準的後端分類</h1>
+<p>可把 Hermes web 後端分成四類：</p>
+<h2>1. 免金鑰 / 低摩擦搜尋</h2>
+<ul>
+<li>DDGS：適合低成本搜尋與快速查詢。</li>
+<li>SearXNG：適合自架、隱私與可控性。</li>
+</ul>
+<p>適合：大量搜尋、初步找來源、低成本探索。</p>
+<p>限制：不一定能穩定抽取整篇文章內容。</p>
+<h2>2. Search API 型</h2>
+<ul>
+<li>Brave Search：適合穩定搜尋、查官方頁、產品頁、新聞與文件入口。</li>
+</ul>
+<p>適合：需要較好的搜尋品質與可預期結果。</p>
+<p>限制：主要是搜尋，不等於全文擷取器。</p>
+<h2>3. Search + Extract / Content API 型</h2>
+<ul>
+<li>Tavily、Exa：適合搜尋同時抓內容，常用於 agent research。</li>
+</ul>
+<p>適合：需要較少工具拼接、直接拿可摘要內容。</p>
+<p>限制：免費額度有限，需管理用量。</p>
+<h2>4. Crawling / Scraping 型</h2>
+<ul>
+<li>Firecrawl：適合抓取網頁、爬站、把網頁轉成 LLM 可用內容。</li>
+<li>Self-hosted Firecrawl：可控性更高，但需要部署與維護。</li>
+</ul>
+<p>適合：需要大量 extract、反覆抓網站、內部流程穩定化。</p>
+<p>限制：代管額度、自架成本、反爬限制與站點規範都要考慮。</p>
+<h1>建議配置策略</h1>
+<p>貼文中的策略可以整理成一個實務框架：</p>
+<ul>
+<li>預設搜尋：用低成本搜尋後端，例如 DDGS、SearXNG 或 Brave。</li>
+<li>需要讀全文：再切到 Tavily、Exa 或 Firecrawl。</li>
+<li>需要大量爬取：考慮 self-hosted Firecrawl。</li>
+<li>需要隱私：優先 SearXNG 自架或內部可控方案。</li>
+<li>需要高品質搜尋：Brave Search 是較穩健的通用選項。</li>
+</ul>
+<h1>對欒帥目前工作流的提醒</h1>
+<p>欒帥偏好 Brave Search 優先，這個偏好仍合理：Brave 適合找官方來源、產品頁與新聞入口。真正要避免的是把「搜尋」誤當「已讀完整網頁」。</p>
+<p>AI 學習雷達歸檔流程可維持：</p>
+<ul>
+<li>搜尋與驗證：Brave Search。</li>
+<li>社群頁、YouTube、GitHub：用 DOM / oEmbed / GitHub API / transcript。</li>
+<li>反爬或長文章：必要時再用 Jina Reader、Tavily、Exa 或 Firecrawl 類 extract。</li>
+</ul>
+<h1>風險與注意事項</h1>
+<ul>
+<li>免費額度數字容易變動，任何「每月 X 次」都應以各服務官方頁或帳號 dashboard 為準。</li>
+<li>自架 Firecrawl 能提高可控性，但不等於可以無視網站 robots、授權與反爬限制。</li>
+<li>DDGS / SearXNG / Brave 的搜尋結果不保證等於完整正文，需要 extract 時要另設流程。</li>
+<li>Hermes 工具設定改完後，通常需要新 session 或 gateway restart 才能在實際 agent 中生效。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads 原文： <a href="https://www.threads.com/@shinder.lin/post/DapKOfJEcw8" target="_blank" rel="noopener">https://www.threads.com/@shinder.lin/post/DapKOfJEcw8</a></li>
+<li>Hermes Web Search &amp; Extract： <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/web-search" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/web-search</a></li>
+<li>Hermes Integrations： <a href="https://hermes-agent.nousresearch.com/docs/integrations/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/integrations/</a></li>
+<li>Web Search Provider Plugins： <a href="https://hermes-agent.nousresearch.com/docs/developer-guide/web-search-provider-plugin" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/developer-guide/web-search-provider-plugin</a></li>
+<li>Firecrawl： <a href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener">https://github.com/firecrawl/firecrawl</a></li>
+<li>Hermes Agent： <a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent</a></li>
+</ul>
+<h1>擷取限制</h1>
+<p>Threads 內容含作者回覆與 GitHub 連結可由 DOM 文字擷取；Hermes 後端支援項目以官方文件與已載入 Hermes Agent skill 校準。額度、預設後端與 provider 行為可能隨 Hermes 版本與帳號設定變動，實作前建議再跑 `hermes config`、`hermes tools` 與官方文件確認。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-11 · Threads / Hermes Agent docs / Brave Search / GitHub API · social-post</div><h3>標籤</h3><span class="tag">Hermes Agent</span><span class="tag">Web Search</span><span class="tag">Firecrawl</span><span class="tag">DDGS</span><span class="tag">SearXNG</span><span class="tag">Tavily</span><span class="tag">Exa</span><span class="tag">Brave Search</span><span class="tag">Configuration</span><h3>原始連結</h3><p><a href="https://www.threads.com/@shinder.lin/post/DapKOfJEcw8?xmt=AQG0nqc-f0jKR3UIAgN4Bf1p23NscAp9cyVNwfln_3eKJ5h8jeyBRNmHJ_y2Nsaa_6dnXAVf&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@shinder.lin/post/DapKOfJEcw8?xmt=AQG0nqc-f0jKR3UIAgN4Bf1p23NscAp9cyVNwfln_3eKJ5h8jeyBRNmHJ_y2Nsaa_6dnXAVf&amp;slof=1</a></p><p><a href="https://www.threads.com/@shinder.lin/post/DapKOfJEcw8" target="_blank" rel="noopener">https://www.threads.com/@shinder.lin/post/DapKOfJEcw8</a></p><p><a href="https://www.threads.com/@shinder.lin/post/DapKOfJEcw8" target="_blank" rel="noopener">https://www.threads.com/@shinder.lin/post/DapKOfJEcw8</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/web-search" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/web-search</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/integrations/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/integrations/</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/developer-guide/web-search-provider-plugin" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/developer-guide/web-search-provider-plugin</a></p><p><a href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener">https://github.com/firecrawl/firecrawl</a></p><p><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

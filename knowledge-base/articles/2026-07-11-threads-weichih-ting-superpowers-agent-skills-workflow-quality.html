@@ -1,0 +1,78 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>shooding Threads｜Superpowers 與 Agent Skills：2026 的重點從模型強弱轉向流程品質</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>shooding Threads｜Superpowers 與 Agent Skills：2026 的重點從模型強弱轉向流程品質</h1><h1>shooding Threads｜Superpowers 與 Agent Skills：2026 的重點從模型強弱轉向流程品質</h1>
+<h1>一句話摘要</h1>
+<p>這則貼文抓到一個重要趨勢：AI agent 的勝負不只看模型，而是看你有沒有把「好工程師的做事流程」寫成可重複執行的 skills。</p>
+<h1>Threads 貼文重點</h1>
+<p>shooding 的貼文主張：</p>
+<ul>
+<li>GitHub 上近期最紅的東西，居然是大家的 `.claude/skills` 資料夾。</li>
+<li>`superpowers` 已經約 25 萬顆星。</li>
+<li>它不是模型，而是一套「逼 agent 好好做事」的方法。</li>
+<li>流程包含：先問清楚需求、拆規格給使用者簽核、走 TDD，再讓 subagent 分工與互相 review。</li>
+<li>有時能讓 agent 自己跑一兩小時仍不偏離方向。</li>
+<li>2026 的重點可能已從「哪個模型最強」轉為「你給 agent 的流程有多好」。</li>
+</ul>
+<h1>圖片觀察</h1>
+<p>Threads 圖片是一張概念插畫：白色機器人披紅色披風、身上有類似超級英雄的 S 標誌，背景有拼圖圖示。圖片本身沒有重要可讀文字，主要是在視覺上呼應「Superpowers / skills / 能力拼圖」的概念。</p>
+<h1>交叉驗證</h1>
+<p>GitHub API 與 Brave Search 可驗證貼文方向：</p>
+<ul>
+<li>`obra/superpowers` GitHub repo 描述為「An agentic skills framework &amp; software development methodology that works」。查詢時約 252,277 stars、22,516 forks。</li>
+<li>Brave Search 摘要指出 Superpowers 是 agentic skills framework 與 software development methodology。</li>
+<li>Claude plugin 頁「Superpowers」描述其能力包含 brainstorming、subagent development with code review、debugging、TDD、skill authoring。</li>
+<li>搜尋結果也指出 Superpowers 支援 Claude Code、Antigravity、Codex App、Codex CLI、Cursor、GitHub Copilot CLI、OpenCode 等多種 agent / coding assistant 生態。</li>
+</ul>
+<p>因此，「不是模型，而是方法論 / skills framework」這個判斷成立。</p>
+<h1>為什麼這件事重要</h1>
+<p>Agent skills 的爆紅，反映的是一個產品與工程現實：</p>
+<ul>
+<li>模型越強，越需要流程約束，否則只是更快地亂做。</li>
+<li>長任務不只需要 prompt，還需要階段、退出條件、驗收點與回滾策略。</li>
+<li>TDD、code review、subagent 分工，其實是把人類工程團隊的管理模式移植到 agent。</li>
+<li>`.claude/skills`、`SKILL.md` 這類文件，把經驗變成可重用的行為規格。</li>
+</ul>
+<p>換句話說，skill 不是「讓模型多知道一點」，而是「讓模型用某種工作方式行動」。</p>
+<h1>可複用方法論</h1>
+<p>從貼文可整理出一個 agent skill 流程模板：</p>
+<ul>
+<li>需求釐清：agent 先問清楚目標、限制、驗收標準。</li>
+<li>規格拆解：把需求轉成可審核的小任務。</li>
+<li>使用者簽核：在動手前先確認方向。</li>
+<li>TDD：先寫測試或驗收條件，再實作。</li>
+<li>Subagent 分工：不同任務可平行處理，但要避免檔案衝突。</li>
+<li>Review gate：先檢查是否符合規格，再檢查品質、安全與維護性。</li>
+<li>收斂與交付：彙整結果、跑測試、列出已知限制。</li>
+</ul>
+<h1>對 Hermes / Codex 工作流的啟發</h1>
+<p>這則貼文也可以反向提醒 Hermes 與 Codex 使用者：</p>
+<ul>
+<li>只把 skill 當知識庫不夠，skill 應該寫出「何時使用、步驟、驗證、坑、退出條件」。</li>
+<li>若 agent 常常違反流程，問題可能不是模型不懂，而是技能觸發條件、強制驗收點、工具權限與上下文載入沒有設計好。</li>
+<li>長任務最好拆成可驗收階段，不要只給一句「幫我完成整個功能」。</li>
+<li>Subagent 有用，但必須搭配 review 與衝突管理，不然只是把混亂平行化。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則貼文值得保存，因為它把 AI agent 的下一個學習重點說清楚：</p>
+<ul>
+<li>Prompt engineering → Skill engineering</li>
+<li>Model selection → Workflow design</li>
+<li>One-shot output → Iterative verified work</li>
+<li>Single agent → Multi-agent orchestration</li>
+<li>靠聰明 → 靠制度</li>
+</ul>
+<p>未來真正有價值的 AI 能力，可能是把自己的專業 SOP 寫成 agent 能穩定遵守的技能包。</p>
+<h1>注意事項</h1>
+<ul>
+<li>GitHub stars 是注意力指標，不等於適合直接導入生產流程。</li>
+<li>外部 skill pack 應先檢查權限、安裝腳本、可讀性、維護狀態與是否會執行危險命令。</li>
+<li>TDD 與 review 能降低偏航，但不能保證安全；仍需人類檢查關鍵變更。</li>
+<li>`.claude/skills` 概念可移植到 Hermes、Codex、Cursor 等工具，但每個平台的載入機制與觸發規則不同。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads 原文： <a href="https://www.threads.com/@weichih.ting/post/DaotfN9lw5K" target="_blank" rel="noopener">https://www.threads.com/@weichih.ting/post/DaotfN9lw5K</a></li>
+<li>Superpowers GitHub： <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">https://github.com/obra/superpowers</a></li>
+<li>Superpowers community skills： <a href="https://github.com/obra/superpowers-skills" target="_blank" rel="noopener">https://github.com/obra/superpowers-skills</a></li>
+<li>Claude Superpowers plugin： <a href="https://claude.com/plugins/superpowers" target="_blank" rel="noopener">https://claude.com/plugins/superpowers</a></li>
+</ul>
+<h1>擷取限制</h1>
+<p>Threads 文字與圖片可由 DOM / browser vision 擷取；圖片為概念插畫，沒有額外可讀技術資料。GitHub stars 以 GitHub API 查詢當下約 252,277 為準，會隨時間變動。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-11 · Threads / Brave Search / GitHub API / Claude plugin page · social-post</div><h3>標籤</h3><span class="tag">Agent Skills</span><span class="tag">Superpowers</span><span class="tag">Claude Code</span><span class="tag">TDD</span><span class="tag">Subagents</span><span class="tag">Code Review</span><span class="tag">Workflow Design</span><span class="tag">AI Engineering</span><h3>原始連結</h3><p><a href="https://www.threads.com/@weichih.ting/post/DaotfN9lw5K?xmt=AQG01zhIQv3gbVLjfFdfbLtZ8BoPWTiKIlatGTyrlfd-sAMfD9Z0D_WDbqp9uiVQ83M1EFN_&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@weichih.ting/post/DaotfN9lw5K?xmt=AQG01zhIQv3gbVLjfFdfbLtZ8BoPWTiKIlatGTyrlfd-sAMfD9Z0D_WDbqp9uiVQ83M1EFN_&amp;slof=1</a></p><p><a href="https://www.threads.com/@weichih.ting/post/DaotfN9lw5K" target="_blank" rel="noopener">https://www.threads.com/@weichih.ting/post/DaotfN9lw5K</a></p><p><a href="https://www.threads.com/@weichih.ting/post/DaotfN9lw5K" target="_blank" rel="noopener">https://www.threads.com/@weichih.ting/post/DaotfN9lw5K</a></p><p><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">https://github.com/obra/superpowers</a></p><p><a href="https://github.com/obra/superpowers-skills" target="_blank" rel="noopener">https://github.com/obra/superpowers-skills</a></p><p><a href="https://claude.com/plugins/superpowers" target="_blank" rel="noopener">https://claude.com/plugins/superpowers</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

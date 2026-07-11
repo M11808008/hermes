@@ -225,6 +225,73 @@
     "markdown": "articles/2026/07/2026-07-11-threads-jayc07-video-autopilot-kit-capcut-ffmpeg-short-video-automation.md"
   },
   {
+    "title": "Prompt Case Threads｜Google AI Studio 自訂 ai.studio 網址：AI App 部署門檻再下降",
+    "date": "2026-07-11",
+    "source": "Threads / Brave Search / Google official docs",
+    "author": "Prompt Case (@prompt_case)",
+    "type": "social-post",
+    "topics": [
+      "Google AI Studio",
+      "ai.studio",
+      "App Deployment",
+      "Custom URL",
+      "Gemini",
+      "Prototype",
+      "AI App Builder"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/Daom3L9jcKO?xmt=AQG0ytSTj4U0jmz4J_Qr8ybvetLpe_C34Kx6ssc9jeUpK0ONkutLyOhCBEHq8hgB95pHrww2Og&slof=1",
+      "https://www.threads.com/@prompt_case/post/Daom3L9jcKO",
+      "https://www.threads.com/@prompt_case/post/Daom3L9jcKO",
+      "https://aistudio.google.com/welcome",
+      "https://ai.google.dev/gemini-api/docs/aistudio-build-mode",
+      "https://dev.to/googleai/give-your-ai-studio-deployed-app-a-custom-url-30f",
+      "https://cloud.google.com/blog/topics/developers-practitioners/the-starter-tier-for-google-ai-studio-explained"
+    ],
+    "excerpt": "Google AI Studio 的自訂 ai.studio 網址，把「用 AI 做出 app」到「拿出可分享作品連結」之間的摩擦再往下砍一層。",
+    "slug": "2026-07-11-threads-prompt-case-google-ai-studio-custom-url-deploy-apps",
+    "html": "articles/2026-07-11-threads-prompt-case-google-ai-studio-custom-url-deploy-apps.html",
+    "markdown": "articles/2026/07/2026-07-11-threads-prompt-case-google-ai-studio-custom-url-deploy-apps.md"
+  },
+  {
+    "title": "Shinder Lin Threads｜Hermes Agent Web Search 後端選擇：搜尋、全文擷取與額度管理",
+    "date": "2026-07-11",
+    "source": "Threads / Hermes Agent docs / Brave Search / GitHub API",
+    "author": "Shinder Lin (@shinder.lin)",
+    "type": "social-post",
+    "topics": [
+      "Hermes Agent",
+      "Web Search",
+      "Firecrawl",
+      "DDGS",
+      "SearXNG",
+      "Tavily",
+      "Exa",
+      "Brave Search",
+      "Configuration"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@shinder.lin/post/DapKOfJEcw8?xmt=AQG0nqc-f0jKR3UIAgN4Bf1p23NscAp9cyVNwfln_3eKJ5h8jeyBRNmHJ_y2Nsaa_6dnXAVf&slof=1",
+      "https://www.threads.com/@shinder.lin/post/DapKOfJEcw8",
+      "https://www.threads.com/@shinder.lin/post/DapKOfJEcw8",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/web-search",
+      "https://hermes-agent.nousresearch.com/docs/integrations/",
+      "https://hermes-agent.nousresearch.com/docs/developer-guide/web-search-provider-plugin",
+      "https://github.com/firecrawl/firecrawl",
+      "https://github.com/NousResearch/hermes-agent"
+    ],
+    "excerpt": "Hermes Agent 的網路工具不要只看「能不能搜尋」；更關鍵的是把 search、extract、額度、隱私與自架成本分開設計。",
+    "slug": "2026-07-11-threads-shinder-lin-hermes-agent-web-search-backend-quota-extract",
+    "html": "articles/2026-07-11-threads-shinder-lin-hermes-agent-web-search-backend-quota-extract.html",
+    "markdown": "articles/2026/07/2026-07-11-threads-shinder-lin-hermes-agent-web-search-backend-quota-extract.md"
+  },
+  {
     "title": "SME Post Threads｜ChatGPT Work、Codex、Scheduled Tasks、Sites：ChatGPT 從聊天工具走向工作平台",
     "date": "2026-07-11",
     "source": "Threads / OpenAI official docs / Brave Search",
@@ -259,6 +326,38 @@
     "slug": "2026-07-11-threads-smepost-chatgpt-work-codex-scheduled-tasks-sites-work-platform",
     "html": "articles/2026-07-11-threads-smepost-chatgpt-work-codex-scheduled-tasks-sites-work-platform.html",
     "markdown": "articles/2026/07/2026-07-11-threads-smepost-chatgpt-work-codex-scheduled-tasks-sites-work-platform.md"
+  },
+  {
+    "title": "shooding Threads｜Superpowers 與 Agent Skills：2026 的重點從模型強弱轉向流程品質",
+    "date": "2026-07-11",
+    "source": "Threads / Brave Search / GitHub API / Claude plugin page",
+    "author": "shooding (@weichih.ting)",
+    "type": "social-post",
+    "topics": [
+      "Agent Skills",
+      "Superpowers",
+      "Claude Code",
+      "TDD",
+      "Subagents",
+      "Code Review",
+      "Workflow Design",
+      "AI Engineering"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@weichih.ting/post/DaotfN9lw5K?xmt=AQG01zhIQv3gbVLjfFdfbLtZ8BoPWTiKIlatGTyrlfd-sAMfD9Z0D_WDbqp9uiVQ83M1EFN_&slof=1",
+      "https://www.threads.com/@weichih.ting/post/DaotfN9lw5K",
+      "https://www.threads.com/@weichih.ting/post/DaotfN9lw5K",
+      "https://github.com/obra/superpowers",
+      "https://github.com/obra/superpowers-skills",
+      "https://claude.com/plugins/superpowers"
+    ],
+    "excerpt": "這則貼文抓到一個重要趨勢：AI agent 的勝負不只看模型，而是看你有沒有把「好工程師的做事流程」寫成可重複執行的 skills。",
+    "slug": "2026-07-11-threads-weichih-ting-superpowers-agent-skills-workflow-quality",
+    "html": "articles/2026-07-11-threads-weichih-ting-superpowers-agent-skills-workflow-quality.html",
+    "markdown": "articles/2026/07/2026-07-11-threads-weichih-ting-superpowers-agent-skills-workflow-quality.md"
   },
   {
     "title": "歐那個 AJ YouTube｜NotebookLM Short Video Overview：把資料變短影音，再用 Antigravity / Codex 一條龍中文化",

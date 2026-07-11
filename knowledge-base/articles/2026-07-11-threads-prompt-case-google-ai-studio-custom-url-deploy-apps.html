@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prompt Case Threads｜Google AI Studio 自訂 ai.studio 網址：AI App 部署門檻再下降</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Prompt Case Threads｜Google AI Studio 自訂 ai.studio 網址：AI App 部署門檻再下降</h1><h1>Prompt Case Threads｜Google AI Studio 自訂 ai.studio 網址：AI App 部署門檻再下降</h1>
+<h1>一句話摘要</h1>
+<p>Google AI Studio 的自訂 ai.studio 網址，把「用 AI 做出 app」到「拿出可分享作品連結」之間的摩擦再往下砍一層。</p>
+<h1>Threads 貼文重點</h1>
+<p>Prompt Case 的貼文主張：</p>
+<ul>
+<li>Google AI Studio 新增「自訂網址」功能。</li>
+<li>用 AI Studio 建立並發布應用程式後，可設定專屬、容易記住的網址，例如 `your-name.ai.studio`。</li>
+<li>免費建立、免費部署，並可使用個人化網址。</li>
+<li>作品集、產品 Demo、AI 小工具，不一定要先買網域、設定主機或研究部署流程。</li>
+<li>從「我有一個網站想法」到「網站正式上線」，中間越來越像只差一個按鈕。</li>
+</ul>
+<h1>交叉驗證</h1>
+<p>Brave Search 找到幾個可對應的來源：</p>
+<ul>
+<li>Google AI Developers 文件「Build apps in Google AI Studio」指出，AI Studio 可將 app 部署到 Cloud Run，提供公開 URL，並把 API key 安全設定在 server-side environment。</li>
+<li>Google AI 官方 DEV Community 文章「Give your AI Studio deployed app a custom URL」描述 AI Studio 部署後可把難記的 Cloud Run URL 轉成更乾淨的 `ai.studio` 子網域。</li>
+<li>Google Cloud Blog 對 AI Studio Starter Tier 的介紹也強調，AI Studio 可以快速產生 live `.run.app` URL，降低部署與 Cloud Run 操作門檻。</li>
+</ul>
+<p>因此貼文的核心方向成立：AI Studio 正在把「生成 app」與「發布 app」包成更低門檻的流程。</p>
+<h1>更精準的理解</h1>
+<p>這不是傳統意義的「買網域、設 DNS、上主機」被消滅，而是 Google 在 AI Studio / Cloud Run 之上提供一層更易用的發布與命名體驗：</p>
+<ul>
+<li>原本：生成程式碼 → 找 host → 設環境變數 → 部署 → 拿 URL → 分享。</li>
+<li>現在：在 AI Studio 建 app → deploy → 設定可讀的 `*.ai.studio` URL → 分享。</li>
+</ul>
+<p>對非工程背景使用者，這個差異很大，因為 URL 可讀性會直接影響作品展示、客戶 Demo 與教學分享。</p>
+<h1>適合應用場景</h1>
+<ul>
+<li>個人作品集中的 AI 小工具。</li>
+<li>課堂 demo、活動報名小工具、互動式教材。</li>
+<li>客戶提案中的快速原型。</li>
+<li>內部工具 proof-of-concept。</li>
+<li>用 Gemini API 做的簡單互動 app。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則貼文值得保存，因為它代表 AI app builder 的競爭焦點正在往「部署體驗」移動：</p>
+<ul>
+<li>不只會生成 UI / code。</li>
+<li>還要能安全保存 API key。</li>
+<li>還要能一鍵部署。</li>
+<li>還要有能被客戶或同學記住的 URL。</li>
+</ul>
+<p>未來 AI 工具的勝負，不只在模型能力，也在「從想法到可分享 artifact」的完整路徑。</p>
+<h1>注意事項</h1>
+<ul>
+<li>`*.ai.studio` 是平台子網域，不等同於自有品牌網域；正式商業服務仍可能需要自有網域與更完整的資安/法務設定。</li>
+<li>免費部署與免費 URL 的可用性、配額與限制可能依 Google 帳號、地區、方案或產品政策變動。</li>
+<li>若 app 使用 API key 或使用者資料，仍需確認 server-side environment、權限、記錄與刪除策略。</li>
+<li>Demo 可快速發布，不代表可以直接當正式產品；仍需測試錯誤處理、成本、資安與資料保護。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads 原文： <a href="https://www.threads.com/@prompt_case/post/Daom3L9jcKO" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/Daom3L9jcKO</a></li>
+<li>Google AI Studio： <a href="https://aistudio.google.com/welcome" target="_blank" rel="noopener">https://aistudio.google.com/welcome</a></li>
+<li>Build apps in Google AI Studio： <a href="https://ai.google.dev/gemini-api/docs/aistudio-build-mode" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/aistudio-build-mode</a></li>
+<li>Google AI 官方 DEV Community：Give your AI Studio deployed app a custom URL： <a href="https://dev.to/googleai/give-your-ai-studio-deployed-app-a-custom-url-30f" target="_blank" rel="noopener">https://dev.to/googleai/give-your-ai-studio-deployed-app-a-custom-url-30f</a></li>
+<li>Google Cloud Blog：AI Studio Starter Tier： <a href="https://cloud.google.com/blog/topics/developers-practitioners/the-starter-tier-for-google-ai-studio-explained" target="_blank" rel="noopener">https://cloud.google.com/blog/topics/developers-practitioners/the-starter-tier-for-google-ai-studio-explained</a></li>
+</ul>
+<h1>擷取限制</h1>
+<p>Threads 內容可由 `document.body.innerText` 與 OG metadata 擷取；本文對官方產品能力以 Brave Search 找到的 Google 官方文件與 Google AI 官方文章摘要校準。實際發布畫面、免費額度與 URL 規則仍需以 AI Studio 帳號內當下顯示為準。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-11 · Threads / Brave Search / Google official docs · social-post</div><h3>標籤</h3><span class="tag">Google AI Studio</span><span class="tag">ai.studio</span><span class="tag">App Deployment</span><span class="tag">Custom URL</span><span class="tag">Gemini</span><span class="tag">Prototype</span><span class="tag">AI App Builder</span><h3>原始連結</h3><p><a href="https://www.threads.com/@prompt_case/post/Daom3L9jcKO?xmt=AQG0ytSTj4U0jmz4J_Qr8ybvetLpe_C34Kx6ssc9jeUpK0ONkutLyOhCBEHq8hgB95pHrww2Og&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/Daom3L9jcKO?xmt=AQG0ytSTj4U0jmz4J_Qr8ybvetLpe_C34Kx6ssc9jeUpK0ONkutLyOhCBEHq8hgB95pHrww2Og&amp;slof=1</a></p><p><a href="https://www.threads.com/@prompt_case/post/Daom3L9jcKO" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/Daom3L9jcKO</a></p><p><a href="https://www.threads.com/@prompt_case/post/Daom3L9jcKO" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/Daom3L9jcKO</a></p><p><a href="https://aistudio.google.com/welcome" target="_blank" rel="noopener">https://aistudio.google.com/welcome</a></p><p><a href="https://ai.google.dev/gemini-api/docs/aistudio-build-mode" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/aistudio-build-mode</a></p><p><a href="https://dev.to/googleai/give-your-ai-studio-deployed-app-a-custom-url-30f" target="_blank" rel="noopener">https://dev.to/googleai/give-your-ai-studio-deployed-app-a-custom-url-30f</a></p><p><a href="https://cloud.google.com/blog/topics/developers-practitioners/the-starter-tier-for-google-ai-studio-explained" target="_blank" rel="noopener">https://cloud.google.com/blog/topics/developers-practitioners/the-starter-tier-for-google-ai-studio-explained</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
