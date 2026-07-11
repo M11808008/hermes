@@ -1,5 +1,37 @@
 [
   {
+    "title": "AI郵報 Threads｜ChatCut Codex 外掛：把 NLE 影片剪輯搬進 Codex App",
+    "date": "2026-07-12",
+    "source": "Threads / ChatCut official site / GitHub API",
+    "author": "AI郵報 (@aiposthub)",
+    "type": "social-post",
+    "topics": [
+      "Codex",
+      "ChatCut",
+      "Video Editing",
+      "NLE",
+      "Agent Plugin",
+      "MCP",
+      "AI Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2?xmt=AQG0pstGfChVmvjaY8mAi8IxeQb4Omj1VhUXRJm7mQPUTiVszuZpvJVR0TDMrNznNX-Oossk&slof=1",
+      "https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2",
+      "https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2",
+      "https://chatcut.io/",
+      "https://chatcut.io/codex",
+      "https://chatcut.io/chatgpt",
+      "https://github.com/ChatCut-Inc/agent-plugin"
+    ],
+    "excerpt": "ChatCut 的 Codex / ChatGPT 外掛把「AI 影片剪輯」從聊天建議推向同介面協作：人類在時間軸上確認意圖，Agent 直接操作剪輯專案。",
+    "slug": "2026-07-12-threads-aiposthub-chatcut-codex-video-editor-plugin-nle",
+    "html": "articles/2026-07-12-threads-aiposthub-chatcut-codex-video-editor-plugin-nle.html",
+    "markdown": "articles/2026/07/2026-07-12-threads-aiposthub-chatcut-codex-video-editor-plugin-nle.md"
+  },
+  {
     "title": "柏燁 Threads｜MotionSites：AI 網站模板 Prompt Library 的一鍵複刻工作流",
     "date": "2026-07-12",
     "source": "Threads / MotionSites official site",

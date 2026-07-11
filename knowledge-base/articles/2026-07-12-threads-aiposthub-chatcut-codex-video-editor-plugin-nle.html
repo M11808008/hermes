@@ -1,0 +1,106 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI郵報 Threads｜ChatCut Codex 外掛：把 NLE 影片剪輯搬進 Codex App</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI郵報 Threads｜ChatCut Codex 外掛：把 NLE 影片剪輯搬進 Codex App</h1><h1>AI郵報 Threads｜ChatCut Codex 外掛：把 NLE 影片剪輯搬進 Codex App</h1>
+<h1>一句話摘要</h1>
+<p>ChatCut 的 Codex / ChatGPT 外掛把「AI 影片剪輯」從聊天建議推向同介面協作：人類在時間軸上確認意圖，Agent 直接操作剪輯專案。</p>
+<h1>Threads 貼文重點</h1>
+<p>AI郵報（@aiposthub）指出：</p>
+<ul>
+<li>Codex 現在連影片都能剪。</li>
+<li>ChatCut 推出新的 Codex 外掛，把完整的非線性剪輯器 NLE 搬進 Codex App。</li>
+<li>安裝後，使用者可以一邊在時間軸上調整素材，一邊讓 Codex 處理剪輯工作。</li>
+<li>可執行的工作包含：剪掉不要的片段、重新排列畫面、加入字幕與轉場、調整音訊與節奏、根據文字指令反覆修改。</li>
+<li>作者給的範例指令包括：</li>
+</ul>
+<p>  - 「把前 10 秒剪得更緊湊」</p>
+<p>  - 「刪掉所有停頓超過 2 秒的片段」</p>
+<p>  - 「幫我做成 60 秒直式短影音」</p>
+<ul>
+<li>貼文提到已付費使用 Codex 的用戶可免費使用這款外掛；安裝提示為：`Turn Codex into a Video Editor, read chatcut.io/codex`。</li>
+</ul>
+<h1>圖片 / 影片預覽辨識</h1>
+<p>Threads 主貼文附有影片縮圖；畫面本身未清楚呈現完整時間軸或字幕軌，但貼文文字明確提到：</p>
+<ul>
+<li>ChatCut</li>
+<li>Codex 外掛</li>
+<li>Codex App</li>
+<li>非線性剪輯器 NLE</li>
+<li>以自然語言驅動剪輯工作流</li>
+</ul>
+<p>因此本文重點以貼文文字、ChatCut 官方頁面與 GitHub repo 校準，而不把縮圖視為剪輯介面截圖證據。</p>
+<h1>官方來源交叉驗證</h1>
+<h2>ChatCut 官方網站</h2>
+<p>ChatCut 首頁標題為「ChatCut · AI Video Editor | Edit Videos with Prompts」，定位為 AI video editor。首頁文案描述：</p>
+<ul>
+<li>使用者告訴它想要什麼，它會判斷怎麼做並執行。</li>
+<li>可在瀏覽器中使用，也可透過 agent tools 使用。</li>
+<li>首頁提供「Use ChatCut in ChatGPT」提示：`Read chatcut.io/chatgpt to install the ChatCut plugin and set up a new task for me.`</li>
+<li>頁面呈現時間軸、video/audio tracks、graphics tracks 等 NLE 常見概念。</li>
+<li>官方功能文案涵蓋 transcript editing、auto captions、AI image generation、music、motion graphics、exports 等。</li>
+</ul>
+<h2>ChatCut Codex / ChatGPT 安裝指南</h2>
+<p>`chatcut.io/codex` 回傳的安裝指南顯示：</p>
+<ul>
+<li>安裝的是 ChatCut Codex plugin，公開 marketplace repository 為 `<a href="https://github.com/ChatCut-Inc/agent-plugin.git`。" target="_blank" rel="noopener">https://github.com/ChatCut-Inc/agent-plugin.git`。</a></li>
+<li>指南特別要求先確認使用環境：若在 web app 或 isolated remote workspace，不能直接修改桌面 App 的 local plugin directory；需在安裝目標機器上的 ChatGPT / Codex desktop app 內操作。</li>
+<li>指南要求使用 Codex desktop app bundled Codex CLI，而非隨機 PATH 中的 standalone Codex CLI。</li>
+<li>安裝流程包含 marketplace add、plugin list、plugin add、`mcp login chatcut` 與後續驗證。</li>
+<li>ChatCut MCP server 透過 hosted endpoint 連接：`<a href="https://api.chatcut.io/api/external-mcp/mcp`。" target="_blank" rel="noopener">https://api.chatcut.io/api/external-mcp/mcp`。</a></li>
+</ul>
+<h2>GitHub repo</h2>
+<p>GitHub API 驗證 `ChatCut-Inc/agent-plugin`：</p>
+<ul>
+<li>Repo：`ChatCut-Inc/agent-plugin`</li>
+<li>描述：Plugin for agents to interact with Chatcut</li>
+<li>預設分支：`beta`</li>
+<li>README 表示：ChatCut Agent Plugin connects Codex to ChatCut so you can edit ChatCut video projects with AI assistance.</li>
+<li>README 列出的能力包含：import media、change a project timeline、create motion graphics、generate assets、transcribe audio、add captions、export videos、verify edits are visible in the editor。</li>
+<li>Repo 內容包含 `chatcut/`、`.codex-plugin/plugin.json`、`.mcp.json`、skills 與 assets。</li>
+</ul>
+<h1>更精準的理解</h1>
+<p>這不是單純「AI 幫你想剪輯建議」，而是 agent 連到剪輯專案與工具介面後，直接參與時間軸操作。關鍵差異如下：</p>
+<ul>
+<li>傳統剪輯軟體：人類手動切片、拖移、對齊字幕、調整節奏。</li>
+<li>一般 AI 聊天：AI 給剪輯建議或腳本，但仍由人類回到剪輯軟體執行。</li>
+<li>ChatCut + Codex 外掛：人類用自然語言描述目標，Agent 可在 ChatCut 專案中執行剪輯、字幕、轉場、輸出與可視化驗證。</li>
+</ul>
+<p>這也讓 Codex 的邊界從 coding agent 擴張到 creative production agent：它不只改 repo，也能透過 plugin / MCP 操作媒體創作工具。</p>
+<h1>實務落地建議</h1>
+<p>適合嘗試的場景：</p>
+<ul>
+<li>長訪談或課程影片初剪：刪除停頓、口頭禪、空白片段。</li>
+<li>短影音轉製：把橫式長片整理成 60 秒直式版本。</li>
+<li>教學影片：自動產生字幕、章節、重點畫面與 B-roll 提示。</li>
+<li>社群內容 repurpose：同一素材輸出多版本比例與長度。</li>
+<li>團隊剪輯 SOP：把常見規則寫成可反覆執行的 prompt / skill。</li>
+</ul>
+<p>使用時應保留人工審核點：</p>
+<ul>
+<li>確認 cuts 是否破壞語意。</li>
+<li>檢查字幕錯字、專有名詞與時間軸同步。</li>
+<li>檢查音訊 loudness、轉場節奏與版權素材。</li>
+<li>輸出前確認平台比例、解析度、bitrate、檔名與封面。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則貼文值得高優先保存，因為它代表 agent plugin 的應用場景正在越過程式碼：</p>
+<ul>
+<li>Coding agent 變成「能操作專業工具的工作流 agent」。</li>
+<li>MCP / plugin marketplace 讓外部 SaaS 可被 agent 安全接入。</li>
+<li>影片剪輯這種高度時間軸、視覺與感覺導向的工作，也開始被自然語言與可視化驗證重組。</li>
+<li>未來課程與內容生產流程，可以把「拍攝 → 初剪 → 字幕 → 轉製 → 匯出」拆成 agent 可協作的子任務。</li>
+</ul>
+<h1>注意事項</h1>
+<ul>
+<li>貼文中的「已付費使用 Codex 的用戶可免費使用外掛」需以 ChatCut 與 Codex 當下方案政策為準；ChatCut 本身仍可能有帳號、credits、匯出與功能限制。</li>
+<li>安裝指南明確區分 web app / isolated workspace 與 desktop app；若環境不對，agent 無法替使用者安裝本機外掛。</li>
+<li>官方指南要求使用 desktop app bundled Codex CLI，不應直接拿 standalone npm / Homebrew Codex CLI 代替。</li>
+<li>影片剪輯輸出仍需人工 QC，尤其是語意切割、字幕、版權、音量與平台規格。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Threads 原文： <a href="https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2</a></li>
+<li>ChatCut 官方網站： <a href="https://chatcut.io/" target="_blank" rel="noopener">https://chatcut.io/</a></li>
+<li>ChatCut Codex 安裝指南： <a href="https://chatcut.io/codex" target="_blank" rel="noopener">https://chatcut.io/codex</a></li>
+<li>ChatCut ChatGPT 安裝指南： <a href="https://chatcut.io/chatgpt" target="_blank" rel="noopener">https://chatcut.io/chatgpt</a></li>
+<li>GitHub repo： <a href="https://github.com/ChatCut-Inc/agent-plugin" target="_blank" rel="noopener">https://github.com/ChatCut-Inc/agent-plugin</a></li>
+</ul>
+<h1>擷取限制</h1>
+<p>Threads 內容由 DOM 文字、OG metadata、可見連結與截圖辨識整理；ChatCut 產品能力以官方網站、安裝指南與 GitHub README 校準。本文不執行本機 Codex / ChatCut 安裝，只保存產品與工作流觀察。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-12 · Threads / ChatCut official site / GitHub API · social-post</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">ChatCut</span><span class="tag">Video Editing</span><span class="tag">NLE</span><span class="tag">Agent Plugin</span><span class="tag">MCP</span><span class="tag">AI Workflow</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2?xmt=AQG0pstGfChVmvjaY8mAi8IxeQb4Omj1VhUXRJm7mQPUTiVszuZpvJVR0TDMrNznNX-Oossk&amp;slof=1" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2?xmt=AQG0pstGfChVmvjaY8mAi8IxeQb4Omj1VhUXRJm7mQPUTiVszuZpvJVR0TDMrNznNX-Oossk&amp;slof=1</a></p><p><a href="https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2</a></p><p><a href="https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DaqXNRXEQ_2</a></p><p><a href="https://chatcut.io/" target="_blank" rel="noopener">https://chatcut.io/</a></p><p><a href="https://chatcut.io/codex" target="_blank" rel="noopener">https://chatcut.io/codex</a></p><p><a href="https://chatcut.io/chatgpt" target="_blank" rel="noopener">https://chatcut.io/chatgpt</a></p><p><a href="https://github.com/ChatCut-Inc/agent-plugin" target="_blank" rel="noopener">https://github.com/ChatCut-Inc/agent-plugin</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
