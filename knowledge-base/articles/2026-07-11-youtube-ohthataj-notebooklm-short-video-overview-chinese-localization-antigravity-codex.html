@@ -1,0 +1,144 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>歐那個 AJ YouTube｜NotebookLM Short Video Overview：把資料變短影音，再用 Antigravity / Codex 一條龍中文化</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>歐那個 AJ YouTube｜NotebookLM Short Video Overview：把資料變短影音，再用 Antigravity / Codex 一條龍中文化</h1><h1>歐那個 AJ YouTube｜NotebookLM Short Video Overview：把資料變短影音，再用 Antigravity / Codex 一條龍中文化</h1>
+<h1>一句話摘要</h1>
+<p>這支影片把 NotebookLM 的短影音生成、Google Antigravity / Codex 代理式工具、Gemini 語音 API 與 FFMPEG 串成一條「資料 → 英文短影音 → 繁中字幕與中文旁白影片」的工作流。</p>
+<h1>影片基本資料</h1>
+<p>YouTube oEmbed 顯示：</p>
+<ul>
+<li>標題：NotebookLM 可以做超強短影音了！一鍵把資料變成高質感影片，串聯 Codex、Antigravity 還能完全中文化！【歐那個AJ】</li>
+<li>頻道：歐那個AJ</li>
+<li>長度：10:44</li>
+<li>逐字稿段落數：313</li>
+</ul>
+<h1>核心流程</h1>
+<p>影片示範的流程可整理為六段：</p>
+<ul>
+<li>在 NotebookLM 建立新筆記本，匯入資料來源。</li>
+<li>切換 Google 帳戶語言到 English / United States，讓 NotebookLM 介面顯示尚未在中文介面開放的 Short Video Overview 選項。</li>
+<li>在 Video Overview / Short 格式中使用 Custom Topic 或提示詞，讓 NotebookLM 根據資料生成約一分鐘的英文短影音。</li>
+<li>下載 NotebookLM 產生的英文影片；影片本身已含壓入畫面的英文字幕。</li>
+<li>把影片交給 Antigravity 或 Codex，由 agent 規劃並執行在地化工作流：抽音訊、辨識英文、翻成繁中、生成中文旁白、用 FFMPEG 合成。</li>
+<li>產出含繁體中文字幕與中文 AI 旁白的新影片。</li>
+</ul>
+<h1>章節與重點</h1>
+<h2>0:00-0:56｜NotebookLM 開始做短影音</h2>
+<p>AJ 開場指出 NotebookLM 新增 Video Overview 裡的短影音生成，能把資料轉成高質感短影片；目前關鍵限制是輸出仍以英文為主，所以後段重點會放在如何一條龍轉為中文語音與字幕版本。</p>
+<h2>0:59-2:24｜啟用 Short Video Overview</h2>
+<p>流程包括：</p>
+<ul>
+<li>進入 NotebookLM。</li>
+<li>建立或開啟筆記本。</li>
+<li>匯入資料來源，影片示例使用 Google 的 Gemma 模型資料。</li>
+<li>如果中文介面看不到短影音功能，切到 Google 帳戶個人資訊中的語言設定，新增 English / United States 並置頂。</li>
+<li>回到筆記本後，Video Overview 內會出現 Short 相關選項。</li>
+</ul>
+<p>這是一個時效性技巧；日後 NotebookLM 若正式支援中文介面或中文版短影音，這段切語言流程可能不再需要。</p>
+<h2>2:24-3:39｜用 Custom Topic 生成短影音</h2>
+<p>NotebookLM 會根據匯入資料提出主題候選，也可自行在 Custom Topic 填入提示詞。AJ 建議：</p>
+<ul>
+<li>提示詞用英文效果較穩。</li>
+<li>不必寫得過度複雜。</li>
+<li>生成後可得到約一分鐘、含動畫與字幕的短影音。</li>
+</ul>
+<p>但目前下載下來的影片字幕是壓死在畫面上的英文字幕，因此後續中文化不是單純換字幕檔，而是要處理整段影片的在地化版本。</p>
+<h2>3:39-5:08｜Antigravity 與 Codex 作為 agentic media 工具</h2>
+<p>AJ 將 Antigravity 形容為「Google 版 Codex」：</p>
+<ul>
+<li>Codex 接 GPT 系列能力。</li>
+<li>Antigravity 接 Google Gemini 能力。</li>
+<li>兩者都可作為代理式工具，在本機執行任務、操作檔案與工具鏈。</li>
+<li>若公司使用 Google Workspace，Antigravity 可能更順；若使用 ChatGPT Business，Codex 可能更自然。</li>
+<li>個人使用者可兩者都試，因為都有一定免費額度。</li>
+</ul>
+<p>這段的重點不是兩者誰勝出，而是把「影片中文化」交給會操作本機工具的 agent。</p>
+<h2>5:08-7:02｜把任務交給 Agent：中英轉換工作流</h2>
+<p>影片中的任務目標是：</p>
+<ul>
+<li>將 NotebookLM 產生的英文 Video Overview 短影音轉成中文版短影音。</li>
+<li>產生自然口語的繁體中文字幕。</li>
+<li>產生中文 AI 旁白。</li>
+<li>盡量對齊原影片時間軸。</li>
+<li>由 agent 自行整理 1-7 步流程並執行。</li>
+</ul>
+<p>AJ 提醒：若在 Windows 環境缺 Python、FFMPEG、Node 等工具，AI 不一定能自動裝好；本機工具鏈仍是成功關鍵。</p>
+<h2>7:09-8:27｜Gemini API Key 與 AI Studio</h2>
+<p>Agent 會判斷需要 Gemini API Key。AJ 示範到 Google AI Studio 建立 API Key，並提醒：</p>
+<ul>
+<li>Google AI Studio 可建立 API Key。</li>
+<li>影片示範使用免費帳號產生 Key。</li>
+<li>這類 Key 不應公開貼到影片、前端或公開 repo。</li>
+</ul>
+<p>這段很適合延伸成課程中的「API Key 安全」教學點。</p>
+<h2>9:09-9:46｜產出三個結果檔</h2>
+<p>影片最後得到三類成果：</p>
+<ul>
+<li>SRT 字幕檔：先辨識英文語音，再翻譯成中文。</li>
+<li>中文語音檔：透過 Gemini TTS 生成中文旁白。</li>
+<li>合成後影片：用 FFMPEG 把新聲音與影片合成。</li>
+</ul>
+<p>這就是「NotebookLM 產出英文短影音 → Agent 轉成本地化短影音」的完整閉環。</p>
+<h1>官方驗證與校準</h1>
+<p>Brave Search 找到 Google 官方文件與部落格，可支持影片中多個方向：</p>
+<ul>
+<li>NotebookLM Help「Generate Video Overviews in NotebookLM」提到 Short 格式可快速把來源重點變成約 60 秒影片。</li>
+<li>Google Blog「Video Overviews and Studio upgrades」提到 Video Overview 可自訂 focus topic、learning goals、target audience 等。</li>
+<li>Google Blog「Video Overviews on NotebookLM get a major upgrade with Nano Banana」提到 NotebookLM Video Overviews 的視覺能力升級與 Nano Banana 相關。</li>
+<li>Google Antigravity 官方與 Google Developers Blog 將 Antigravity 定位為 agentic development platform，跨 macOS、Windows、Linux。</li>
+<li>Google AI for Developers 的 Gemini API 文件包含 Text-to-speech generation，可支持影片中「Gemini TTS 產中文語音」的方向。</li>
+</ul>
+<p>需要校準的部分：</p>
+<ul>
+<li>影片中「從頭到尾通通免費」應視為示範當下的可用情況；NotebookLM、Google AI Studio、Antigravity、Codex 的免費額度、方案與區域限制會變動。</li>
+<li>NotebookLM Short Video Overview 的語言支援與介面入口可能快速更新；切換英文介面只是當下 workaround。</li>
+<li>「Google 版 Codex」是易懂比喻，不是 Google 官方產品定位用語。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這支影片值得歸檔，因為它展示的是一種很實用的新型態工作流：</p>
+<ul>
+<li>NotebookLM 負責把來源資料摘要成影片素材。</li>
+<li>Agentic coding 工具負責本機自動化與媒體處理。</li>
+<li>Gemini API 負責語音生成。</li>
+<li>FFMPEG 負責音訊/影片合成。</li>
+<li>人類負責提供資料、設定目標、檢查字幕與成品品質。</li>
+</ul>
+<p>這代表知識工作者可以把「讀資料、做摘要、產影片、翻譯配音、合成輸出」拆成可由 agent 接手的管線。</p>
+<h1>適合應用場景</h1>
+<ul>
+<li>教師將講義、論文、課程資料轉成一分鐘複習短片。</li>
+<li>企業內訓把 SOP、產品文件、FAQ 轉成中文短影音教材。</li>
+<li>自媒體把英文研究報告轉成繁中科普短片。</li>
+<li>AI 課程示範從 NotebookLM 到 Codex / Antigravity 的跨工具工作流。</li>
+<li>團隊建立半自動「資料庫 → 短影音 → 在地化」內容生產線。</li>
+</ul>
+<h1>風險與注意事項</h1>
+<ul>
+<li>來源授權：NotebookLM 匯入的資料與產出的影片若要公開發布，仍需確認原始素材與文字授權。</li>
+<li>API Key 安全：Gemini API Key 不可放到公開影片、公開 repo、前端程式或截圖中。</li>
+<li>字幕品質：自動辨識與翻譯可能錯詞，特別是模型名、產品名、數字與專有名詞。</li>
+<li>語音同步：TTS 中文語速與原片時間軸可能不完全一致，需要人工微調。</li>
+<li>免費額度：Google AI Studio、NotebookLM、Antigravity / Codex 額度會變動，不應把「免費」當成永久承諾。</li>
+<li>工具鏈依賴：本機缺 Python、FFMPEG、Node 或權限不足時，agent 可能卡住。</li>
+</ul>
+<h1>可複用工作流筆記</h1>
+<p>最小可行流程：</p>
+<ul>
+<li>用 NotebookLM 建立筆記本並匯入資料。</li>
+<li>用 Short Video Overview 產生英文短影音。</li>
+<li>下載影片。</li>
+<li>在 Antigravity 或 Codex 中給任務：將影片轉為繁中字幕與中文旁白版，需保留原時間軸。</li>
+<li>提供 Gemini API Key，並要求 agent 使用安全的環境變數或本機設定，不要寫進程式碼。</li>
+<li>檢查產出的 SRT、中文旁白音檔與合成影片。</li>
+<li>人工修正專有名詞與字幕斷句後再發布。</li>
+</ul>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>YouTube： <a href="https://www.youtube.com/watch?v=FqqYoitaj3U" target="_blank" rel="noopener">https://www.youtube.com/watch?v=FqqYoitaj3U</a></li>
+<li>頻道： <a href="https://www.youtube.com/@ohthataj" target="_blank" rel="noopener">https://www.youtube.com/@ohthataj</a></li>
+<li>NotebookLM Help：Generate Video Overviews in NotebookLM： <a href="https://support.google.com/notebooklm/answer/16454555?hl=en" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16454555?hl=en</a></li>
+<li>Google Blog：NotebookLM Video Overviews and Studio upgrades： <a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-video-overviews-studio-upgrades/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-video-overviews-studio-upgrades/</a></li>
+<li>Google Blog：Video Overviews with Nano Banana： <a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/video-overviews-nano-banana/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/google-labs/video-overviews-nano-banana/</a></li>
+<li>Google Antigravity： <a href="https://antigravity.google/" target="_blank" rel="noopener">https://antigravity.google/</a></li>
+<li>Google Developers Blog：Build with Google Antigravity： <a href="https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/" target="_blank" rel="noopener">https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</a></li>
+<li>Gemini API TTS： <a href="https://ai.google.dev/gemini-api/docs/speech-generation" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/speech-generation</a></li>
+</ul>
+<h1>擷取限制</h1>
+<p>本篇已成功擷取 YouTube oEmbed 中繼資料與時間戳逐字稿；官方產品狀態以 Brave Search 找到的 Google 官方文件與摘要校準。NotebookLM、Antigravity、Gemini API 與 Codex 的可用性、免費額度與支援語言屬高變動資訊，後續實作前應再看帳號內實際狀態。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-11 · YouTube transcript / Brave Search / Google official docs · video</div><h3>標籤</h3><span class="tag">NotebookLM</span><span class="tag">Video Overview</span><span class="tag">Short Video Overview</span><span class="tag">Nano Banana</span><span class="tag">Antigravity</span><span class="tag">Codex</span><span class="tag">Gemini API</span><span class="tag">FFMPEG</span><span class="tag">AI Video</span><span class="tag">Localization</span><span class="tag">教學工作流</span><h3>原始連結</h3><p><a href="https://www.youtube.com/watch?v=FqqYoitaj3U" target="_blank" rel="noopener">https://www.youtube.com/watch?v=FqqYoitaj3U</a></p><p><a href="https://www.youtube.com/watch?v=FqqYoitaj3U" target="_blank" rel="noopener">https://www.youtube.com/watch?v=FqqYoitaj3U</a></p><p><a href="https://www.youtube.com/watch?v=FqqYoitaj3U" target="_blank" rel="noopener">https://www.youtube.com/watch?v=FqqYoitaj3U</a></p><p><a href="https://www.youtube.com/@ohthataj" target="_blank" rel="noopener">https://www.youtube.com/@ohthataj</a></p><p><a href="https://support.google.com/notebooklm/answer/16454555?hl=en" target="_blank" rel="noopener">https://support.google.com/notebooklm/answer/16454555?hl=en</a></p><p><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-video-overviews-studio-upgrades/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-video-overviews-studio-upgrades/</a></p><p><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/video-overviews-nano-banana/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/google-labs/video-overviews-nano-banana/</a></p><p><a href="https://antigravity.google/" target="_blank" rel="noopener">https://antigravity.google/</a></p><p><a href="https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/" target="_blank" rel="noopener">https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</a></p><p><a href="https://ai.google.dev/gemini-api/docs/speech-generation" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/speech-generation</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

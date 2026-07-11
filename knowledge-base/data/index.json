@@ -261,6 +261,45 @@
     "markdown": "articles/2026/07/2026-07-11-threads-smepost-chatgpt-work-codex-scheduled-tasks-sites-work-platform.md"
   },
   {
+    "title": "歐那個 AJ YouTube｜NotebookLM Short Video Overview：把資料變短影音，再用 Antigravity / Codex 一條龍中文化",
+    "date": "2026-07-11",
+    "source": "YouTube transcript / Brave Search / Google official docs",
+    "author": "歐那個AJ",
+    "type": "video",
+    "topics": [
+      "NotebookLM",
+      "Video Overview",
+      "Short Video Overview",
+      "Nano Banana",
+      "Antigravity",
+      "Codex",
+      "Gemini API",
+      "FFMPEG",
+      "AI Video",
+      "Localization",
+      "教學工作流"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=FqqYoitaj3U",
+      "https://www.youtube.com/watch?v=FqqYoitaj3U",
+      "https://www.youtube.com/watch?v=FqqYoitaj3U",
+      "https://www.youtube.com/@ohthataj",
+      "https://support.google.com/notebooklm/answer/16454555?hl=en",
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-video-overviews-studio-upgrades/",
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/video-overviews-nano-banana/",
+      "https://antigravity.google/",
+      "https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/",
+      "https://ai.google.dev/gemini-api/docs/speech-generation"
+    ],
+    "excerpt": "這支影片把 NotebookLM 的短影音生成、Google Antigravity / Codex 代理式工具、Gemini 語音 API 與 FFMPEG 串成一條「資料 → 英文短影音 → 繁中字幕與中文旁白影片」的工作流。",
+    "slug": "2026-07-11-youtube-ohthataj-notebooklm-short-video-overview-chinese-localization-antigravity-codex",
+    "html": "articles/2026-07-11-youtube-ohthataj-notebooklm-short-video-overview-chinese-localization-antigravity-codex.html",
+    "markdown": "articles/2026/07/2026-07-11-youtube-ohthataj-notebooklm-short-video-overview-chinese-localization-antigravity-codex.md"
+  },
+  {
     "title": "李安 Facebook Reel｜Cowart：把 Codex 變成可標註圖片的無限畫布工作流",
     "date": "2026-07-10",
     "source": "Facebook Reel / GitHub / Brave Search",
