@@ -153,6 +153,44 @@
     "markdown": "articles/2026/07/2026-07-11-facebook-salavat-shirgaleev-claude-skill-writing-like-human.md"
   },
   {
+    "title": "三師爸 Sense Bar Facebook｜ChatGPT APP / Codex 改版：GPT-5.6 Sol、Terra、Luna、Sites 與 Remote Control 的工作平台化",
+    "date": "2026-07-11",
+    "source": "Facebook / YouTube transcript / Brave Search / OpenAI official snippets",
+    "author": "三師爸Sense Bar",
+    "type": "social-post",
+    "topics": [
+      "ChatGPT APP",
+      "Codex",
+      "GPT-5.6",
+      "Sol",
+      "Terra",
+      "Luna",
+      "Codex Sites",
+      "Remote Control",
+      "AI Work Platform",
+      "Agentic Coding"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/1JJMLkzj9Z/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=1325512206461837&set=a.391054273240973&type=3&mibextid=wwXIfr&rdid=HJLpBJJNecRLPQ8o",
+      "https://www.facebook.com/share/1JJMLkzj9Z/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=1325512206461837&set=a.391054273240973&type=3&mibextid=wwXIfr&rdid=HJLpBJJNecRLPQ8o",
+      "https://youtu.be/yZlKpaGbbQY",
+      "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna",
+      "https://developers.openai.com/codex/sites",
+      "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+      "https://openai.com/codex/"
+    ],
+    "excerpt": "這則貼文值得歸檔，因為它把近期 ChatGPT / Codex 更新視為一個關鍵轉折：AI 工具正在從「聊天、寫程式」變成可規劃、可執行、可發布、可遠端控制的工作平台。",
+    "slug": "2026-07-11-facebook-sensebar-chatgpt-app-codex-gpt-5-6-sol-terra-luna-sites-remote-control",
+    "html": "articles/2026-07-11-facebook-sensebar-chatgpt-app-codex-gpt-5-6-sol-terra-luna-sites-remote-control.html",
+    "markdown": "articles/2026/07/2026-07-11-facebook-sensebar-chatgpt-app-codex-gpt-5-6-sol-terra-luna-sites-remote-control.md"
+  },
+  {
     "title": "Jc Ming Threads｜video-autopilot-kit：CapCut JSON + ffmpeg 的短影音自動化開源框架",
     "date": "2026-07-11",
     "source": "Threads / GitHub / Brave Search",
