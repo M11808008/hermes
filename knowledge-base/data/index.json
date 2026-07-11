@@ -33,6 +33,37 @@
     "markdown": "articles/2026/07/2026-07-12-facebook-reel-mahan-jafari-longcat-video-avatar-1-5-open-source-heygen-alternative.md"
   },
   {
+    "title": "超強系列 SuperAwesome Facebook Reel｜養一個 AI 團隊幫你開會做決策",
+    "date": "2026-07-12",
+    "source": "Facebook Reel / Anthropic docs / OpenAI docs",
+    "author": "超強系列 SuperAwesome",
+    "type": "social-post",
+    "topics": [
+      "AI Team",
+      "Multi-agent",
+      "Decision Making",
+      "Prompt Engineering",
+      "Agentic Workflow",
+      "Meeting Workflow",
+      "AI Council"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/17p2w9K54c/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1482912610258973",
+      "https://www.facebook.com/reel/1482912610258973",
+      "https://www.anthropic.com/engineering/building-effective-agents",
+      "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts",
+      "https://platform.openai.com/docs/guides/prompt-engineering"
+    ],
+    "excerpt": "把 AI 設計成「不同角色的會議團隊」可以幫助決策前的多角度思考，但真正可靠的是流程設計：角色分工、反方質疑、主席統整、證據檢查與人工最終裁決。",
+    "slug": "2026-07-12-facebook-reel-superawesome-ai-team-meeting-decision-making",
+    "html": "articles/2026-07-12-facebook-reel-superawesome-ai-team-meeting-decision-making.html",
+    "markdown": "articles/2026/07/2026-07-12-facebook-reel-superawesome-ai-team-meeting-decision-making.md"
+  },
+  {
     "title": "AI郵報 Threads｜ChatCut Codex 外掛：把 NLE 影片剪輯搬進 Codex App",
     "date": "2026-07-12",
     "source": "Threads / ChatCut official site / GitHub API",

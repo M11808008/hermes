@@ -1,0 +1,102 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>超強系列 SuperAwesome Facebook Reel｜養一個 AI 團隊幫你開會做決策</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>超強系列 SuperAwesome Facebook Reel｜養一個 AI 團隊幫你開會做決策</h1><h1>超強系列 SuperAwesome Facebook Reel｜養一個 AI 團隊幫你開會做決策</h1>
+<h1>一句話摘要</h1>
+<p>把 AI 設計成「不同角色的會議團隊」可以幫助決策前的多角度思考，但真正可靠的是流程設計：角色分工、反方質疑、主席統整、證據檢查與人工最終裁決。</p>
+<h1>Facebook Reel 重點</h1>
+<p>這則 Reel 由「超強系列 SuperAwesome」發布，Facebook metadata 與可見 caption 顯示主題為：</p>
+<ul>
+<li>「養一個AI團隊幫你開會做決策」</li>
+</ul>
+<p>影片畫面與字幕可辨識到：</p>
+<ul>
+<li>旁白字幕：「有時候就是要虛心接受別人的建議」</li>
+<li>角色標籤：「務實型」</li>
+<li>角色標籤：「主席」</li>
+<li>主席段落字幕：「並且最後會有個主席統整完所有的……」</li>
+<li>結尾段落字幕：「然後就可以去沖咖啡」</li>
+</ul>
+<p>Reel 沒有在公開畫面中顯示具體工具名稱，例如 ChatGPT、Claude、NotebookLM、Google 或某個 agent 平台；因此本文將它歸檔為「AI 會議 / 多角色決策工作流」概念，而非某個特定產品教學。</p>
+<h1>影片可推得的流程</h1>
+<p>從可見文字與畫面推測，這個工作流大致是：</p>
+<ul>
+<li>使用者提出一個需要決策的問題。</li>
+<li>建立一組 AI 角色，讓它們像會議成員一樣提出觀點。</li>
+<li>不同角色可能代表不同決策風格，例如務實型、風險控管、創意發想、反方質疑、財務成本等。</li>
+<li>最後由「主席」角色統整各方意見，形成建議、取捨與下一步行動。</li>
+<li>使用者不必一直盯著單一模型輸出，而是讓 AI 先跑完一輪內部討論，再回來看整理後結論。</li>
+</ul>
+<p>這種設計的價值不在於 AI 真的變成獨立專家，而是把「一人腦內思考」拆成可檢查的多視角流程。</p>
+<h1>與官方 / 技術概念的對應</h1>
+<h2>角色設定：讓模型以明確職責回應</h2>
+<p>Anthropic prompt engineering 文件指出，設定 role 可以聚焦 Claude 的行為與語氣；即使是一句角色設定，也會影響輸出方向。這可以對應到 Reel 裡的「務實型」「主席」等角色設計。</p>
+<p>重點不是角色名稱越多越好，而是每個角色要有明確責任：</p>
+<ul>
+<li>務實型：檢查可執行性、成本、時間、資源限制。</li>
+<li>反方 / 風險官：找盲點、失敗模式、法務與品牌風險。</li>
+<li>創意型：提出替代方案與非直覺做法。</li>
+<li>數據型：要求證據、指標、先驗資料與驗證方法。</li>
+<li>主席：整合分歧、列出決策選項與建議下一步。</li>
+</ul>
+<h2>多視角輸出：parallelization / voting</h2>
+<p>Anthropic「Building Effective AI Agents」文章提到 parallelization workflow：同一任務可由多個並行輸出提供不同觀點，再彙整結果；其中一種變體是 voting，讓多個輸出形成多樣化觀點。</p>
+<p>這可對應到「AI 團隊開會」：讓不同角色各自提出判斷，再比較一致與分歧處。</p>
+<h2>主席統整：orchestrator-workers</h2>
+<p>同一篇 Anthropic 文章也描述 orchestrator-workers workflow：中央 LLM 拆解任務、委派 worker LLM，並綜合結果。Reel 中的「主席」可視為 orchestrator：不一定最會提出所有觀點，但負責整合、裁剪與產生結論。</p>
+<h2>反覆修正：evaluator-optimizer</h2>
+<p>若決策風險較高，可以加入 evaluator-optimizer：一個角色提出方案，另一個角色用標準評估與回饋，再進行改版。這比單次「AI 會議」更適合用於企劃、課程、產品策略與投資判斷。</p>
+<h1>可重用 Prompt 架構</h1>
+<p>以下是可落地的「AI 團隊會議」prompt 骨架：</p>
+<p>```text</p>
+<p>我要做一個決策，請你模擬一場 AI 會議。</p>
+<p>決策問題：{填入問題}</p>
+<p>背景資料：{填入已知事實、限制、目標、時間、預算}</p>
+<p>不可假設：{列出不能編造的資訊}</p>
+<p>請建立以下角色：</p>
+<ul>
+<li>務實型：檢查成本、資源、時程與可執行性。</li>
+<li>風險型：指出法律、品牌、技術、資料與倫理風險。</li>
+<li>創意型：提出 3 個非直覺替代方案。</li>
+<li>數據型：要求證據，列出需要查證的資料與指標。</li>
+<li>主席：最後統整所有觀點，給出建議決策與下一步。</li>
+</ul>
+<p>流程：</p>
+<p>A. 每個角色先各自發言，最多 150 字。</p>
+<p>B. 每個角色指出其他角色觀點中的一個盲點。</p>
+<p>C. 主席整理共識、分歧與不可確定事項。</p>
+<p>D. 輸出：建議方案、備選方案、放棄方案、需查證清單、下一步行動。</p>
+<p>重要：如果資料不足，請標示「無法判斷」，不要編造事實。</p>
+<p>```</p>
+<h1>適合使用場景</h1>
+<ul>
+<li>課程或活動要不要開、怎麼定價、如何分眾。</li>
+<li>產品功能優先順序、MVP 取捨、roadmap 檢查。</li>
+<li>行銷企劃：主訊息、受眾、渠道、風險與備案。</li>
+<li>投資或採購前的利弊整理。</li>
+<li>會議前的預演：先讓 AI 找出可能被問倒的問題。</li>
+</ul>
+<h1>不適合直接相信的地方</h1>
+<p>AI 會議不是事實查核機制。多個角色輸出看起來像多人討論，但本質仍可能來自同一模型與同一上下文，因此會有共同盲點。</p>
+<p>使用時要避免：</p>
+<ul>
+<li>把角色數量當成可靠性。</li>
+<li>讓 AI 自行補齊不存在的市場數據。</li>
+<li>沒有要求引用來源或標示不確定性。</li>
+<li>沒有反方角色，只留下支持原本想法的意見。</li>
+<li>讓 AI 直接做高風險決策，例如法律、醫療、投資、人事解雇。</li>
+</ul>
+<h1>對 AI 學習雷達的價值</h1>
+<p>這則 Reel 值得保存，因為它把多 agent / multi-role prompting 用很直覺的方式轉譯給一般使用者：</p>
+<ul>
+<li>不必先理解複雜 agent framework。</li>
+<li>先從「開一場 AI 會議」的心智模型開始。</li>
+<li>再逐步升級成可驗證的工作流：角色設定、流程步驟、主席統整、反方質疑、證據清單。</li>
+</ul>
+<p>對課程設計來說，這是一個很好教的入門案例：讓學生把單一 prompt 改造成「有角色、有流程、有審查」的決策輔助系統。</p>
+<h1>原始素材與驗證</h1>
+<ul>
+<li>Facebook Reel： <a href="https://www.facebook.com/reel/1482912610258973" target="_blank" rel="noopener">https://www.facebook.com/reel/1482912610258973</a></li>
+<li>Anthropic：Building Effective AI Agents： <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">https://www.anthropic.com/engineering/building-effective-agents</a></li>
+<li>Anthropic：Prompting best practices / role setting： <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts</a></li>
+<li>OpenAI：Prompt engineering guide： <a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noopener">https://platform.openai.com/docs/guides/prompt-engineering</a></li>
+</ul>
+<h1>擷取限制</h1>
+<p>Facebook Reel 內容由公開頁面的 DOM metadata、可見 caption 與多個時間點畫面 OCR 整理；未登入狀態下無法取得完整留言串或私下提供的模板。本文不聲稱取得作者完整 prompt，只保存公開可見的「AI 團隊開會做決策」概念與可落地的通用流程。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-12 · Facebook Reel / Anthropic docs / OpenAI docs · social-post</div><h3>標籤</h3><span class="tag">AI Team</span><span class="tag">Multi-agent</span><span class="tag">Decision Making</span><span class="tag">Prompt Engineering</span><span class="tag">Agentic Workflow</span><span class="tag">Meeting Workflow</span><span class="tag">AI Council</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/r/17p2w9K54c/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/17p2w9K54c/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/1482912610258973" target="_blank" rel="noopener">https://www.facebook.com/reel/1482912610258973</a></p><p><a href="https://www.facebook.com/reel/1482912610258973" target="_blank" rel="noopener">https://www.facebook.com/reel/1482912610258973</a></p><p><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">https://www.anthropic.com/engineering/building-effective-agents</a></p><p><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts</a></p><p><a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noopener">https://platform.openai.com/docs/guides/prompt-engineering</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
