@@ -1,5 +1,38 @@
 [
   {
+    "title": "Mahan Jafari Facebook Reel｜LongCat-Video-Avatar 1.5：開源 HeyGen 替代方案與本機部署現實",
+    "date": "2026-07-12",
+    "source": "Facebook Reel / Notion guide / Hugging Face / GitHub API",
+    "author": "Mahan Jafari",
+    "type": "social-post",
+    "topics": [
+      "LongCat-Video-Avatar",
+      "HeyGen Alternative",
+      "Talking Avatar",
+      "Video Generation",
+      "Hugging Face",
+      "Open Source",
+      "Deepfake Ethics"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1HejwHHRB7/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1036425038896303",
+      "https://www.facebook.com/reel/1036425038896303",
+      "https://app.notion.com/p/LongCat-Video-Avatar-1-5-The-Free-Open-Source-HeyGen-Alternative-39a13313097a811faab5dee5cde98d06",
+      "https://huggingface.co/spaces/victor/LongCat-Video-Avatar-1.5",
+      "https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5",
+      "https://github.com/meituan-longcat/LongCat-Video",
+      "https://meigen-ai.github.io/LongCat-Video-Avatar-1.5-Page/"
+    ],
+    "excerpt": "LongCat-Video-Avatar 1.5 把「一張人像 + 一段聲音 → 對嘴 talking avatar」開源化，但它不是無限制免費 SaaS；真正可用性取決於 GPU 額度、本機硬體與肖像授權。",
+    "slug": "2026-07-12-facebook-reel-mahan-jafari-longcat-video-avatar-1-5-open-source-heygen-alternative",
+    "html": "articles/2026-07-12-facebook-reel-mahan-jafari-longcat-video-avatar-1-5-open-source-heygen-alternative.html",
+    "markdown": "articles/2026/07/2026-07-12-facebook-reel-mahan-jafari-longcat-video-avatar-1-5-open-source-heygen-alternative.md"
+  },
+  {
     "title": "AI郵報 Threads｜ChatCut Codex 外掛：把 NLE 影片剪輯搬進 Codex App",
     "date": "2026-07-12",
     "source": "Threads / ChatCut official site / GitHub API",
