@@ -1,0 +1,276 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HyperFrames 完整參考｜用 HTML、Agent Skills 與 CLI 建立可重現影片生產線</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>HyperFrames 完整參考｜用 HTML、Agent Skills 與 CLI 建立可重現影片生產線</h1><h1>HyperFrames 完整參考｜用 HTML、Agent Skills 與 CLI 建立可重現影片生產線</h1>
+<h1>一句話摘要</h1>
+<p>HyperFrames 把影片製作改寫成「HTML + CSS + JS + 可 seek 動畫 + CLI render」的工程流程，讓 Claude Code、Codex、Cursor、Gemini CLI 等 AI coding agent 可以像維護程式碼一樣規劃、產生、檢查、預覽與輸出 MP4。</p>
+<h1>來源定位</h1>
+<p>本篇由 LINE 上傳文件《hyperframes-參考文件.pdf》轉製為 AI 學習雷達知識庫文章。原 PDF 標示為莊哲昀（Andy Juang）於 2026-06-01 彙整，資料來源為 HyperFrames 產品首頁、官方文件與 GitHub repo，並註明為非官方彙整參考。本文將其內容整理成可公開閱讀的「完成版」知識庫文章，並以 Brave Search、GitHub README、官方首頁與 HeyGen Help Center 交叉驗證核心定位。</p>
+<h1>為什麼這份文件值得收錄</h1>
+<p>HyperFrames 不是又一個「文字生成影片」工具，而是一套更接近 agent-native video engineering 的框架。它的核心價值在於：</p>
+<ul>
+<li>影片內容可以被版本控管：composition 是 HTML，不是封閉剪輯軟體專案檔。</li>
+<li>Agent 比較容易操作：LLM 本來就擅長生成 HTML、CSS、JS 與結構化文件。</li>
+<li>輸出可重現：render 採逐影格 seek，不依賴即時播放時鐘。</li>
+<li>可納入自動化：CLI 支援 init、lint、preview、render、snapshot、transcribe、capture 等步驟。</li>
+<li>可延伸成內容工廠：同一份模板可套變數、資料、字幕、旁白與不同素材，批次輸出個人化影片。</li>
+</ul>
+<p>對 AI 學習雷達來說，HyperFrames 可以把「知識庫文章」往下游延伸成短影音、課程宣傳、產品 demo、教學動畫與社群摘要影片。</p>
+<h1>HyperFrames 是什麼</h1>
+<p>官方口號是：Write HTML. Render video. Built for agents.</p>
+<p>更具體地說，HyperFrames 讓開發者用標準 HTML、CSS、JavaScript 描述影片畫面，再透過 headless Chrome 與 FFmpeg 逐影格輸出 MP4。它不要求 React，也不建立專屬 DSL；composition 本身就是帶有 data 屬性的 HTML 檔。</p>
+<p>最小心智模型如下：</p>
+<ul>
+<li>HTML：定義畫面、clip、文字、媒體、圖層與時間。</li>
+<li>CSS / Tailwind：定義視覺風格、排版、品牌色、字體與響應式尺度。</li>
+<li>JS / GSAP / Lottie / Three.js：定義可 seek 的動畫 runtime。</li>
+<li>HyperFrames runtime：在特定時間點 seek 到正確狀態。</li>
+<li>Chrome：擷取每一影格。</li>
+<li>FFmpeg：把影格與音訊編碼成影片。</li>
+</ul>
+<p>因此，HyperFrames 的關鍵不是「播放動畫」，而是「在任何時間點都能 deterministic 地重建該影格應有的 DOM 狀態」。</p>
+<h1>三個主要受眾</h1>
+<h1>給開發者</h1>
+<p>開發者可以使用熟悉的 web stack 製作影片：HTML、CSS、JS、GSAP、Lottie、Three.js、Anime.js、WAAPI、FFmpeg。Composition 不需要進剪輯時間軸，也不需要學一套專屬元件系統。</p>
+<h1>給 AI 代理</h1>
+<p>AI coding agent 天然擅長產生 HTML 結構與修改程式碼。HyperFrames 的 CLI 預設可以非互動執行，輸入用 flags，輸出是純文字，錯誤直接停下，這正適合 agent 自動化操作。</p>
+<p>常見 agent 入口包含：</p>
+<ul>
+<li>Claude Code skills</li>
+<li>Codex skills / plugin metadata</li>
+<li>Cursor rules / skills</li>
+<li>Gemini CLI skills</li>
+<li>GitHub Copilot CLI 類似工作流</li>
+</ul>
+<h1>給自動化流程</h1>
+<p>HyperFrames 的 render 管線是 seek-driven，而不是 clock-driven。概念上可理解為：frame = floor(time * fps)。每一影格都由 renderer 主動 seek，並等 composition 宣告 ready 後才截圖，所以預覽卡頓不代表輸出會掉格。</p>
+<h1>Composition Contract：HTML 不是隨便寫，而是影片規格</h1>
+<p>HyperFrames composition 的 HTML 需要遵守一套 contract。核心元素通常包含：</p>
+<ul>
+<li>data-composition-id：composition 唯一識別。</li>
+<li>data-width / data-height：輸出解析度，例如 1920 × 1080。</li>
+<li>data-duration：影片或片段時長。</li>
+<li>data-fps：每秒影格數。</li>
+<li>class=&quot;clip&quot;：標示可被 HyperFrames runtime 控制時間顯示的元素。</li>
+<li>data-start：clip 起始秒數。</li>
+<li>data-duration：clip 顯示時長。</li>
+<li>data-track-index：軌道與 z-order 控制，數字越高通常越前景。</li>
+<li>data-media-start：媒體來源裁切起點。</li>
+<li>data-volume：音訊音量。</li>
+</ul>
+<p>實作時最重要的觀念是：元素如果需要被時間控制，就要成為 clip；如果只是一般 DOM 元素，可能會一直存在於畫面中，造成時間軸錯亂。</p>
+<h1>時間與軌道模型</h1>
+<p>HyperFrames 的時間線不是傳統剪輯軟體 UI，而是 HTML 屬性與解析規則。</p>
+<p>常見時間規則：</p>
+<ul>
+<li>data-start=&quot;0&quot;：絕對秒數。</li>
+<li>data-start=&quot;intro + 0.5&quot;：相對某個 clip 起點或結束點的偏移。</li>
+<li>data-duration=&quot;3&quot;：顯示三秒。</li>
+<li>同一 track 上 clip 不應重疊。</li>
+<li>track-index 可用來安排畫面層級與時間列分組。</li>
+<li>連鎖參照可以使用，但應控制在 3–4 層內，否則可讀性下降。</li>
+</ul>
+<p>實務上，agent 最容易犯的錯是把畫面寫得漂亮，卻沒有把 timing contract 寫完整。這會讓 lint、preview 或 render 出現錯誤，或讓某些元素全程顯示。</p>
+<h1>動畫 runtime：重點是可 seek</h1>
+<p>HyperFrames 可以接多種動畫方式，但共同要求是「能 seek 到任意時間點」。PDF 特別強調 GSAP 的使用方式：</p>
+<ul>
+<li>timeline 應以 paused: true 建立。</li>
+<li>timeline 要註冊到 window.__timelines 或 HyperFrames 可存取的位置。</li>
+<li>renderer 會控制 timeline.totalTime 或 seek，而不是讓動畫自己播放。</li>
+<li>如果 GSAP timeline 太短，即使 video data-duration 很長，畫面也可能提早被截斷或停住。</li>
+</ul>
+<p>最常見修法是用空 tween 延長 timeline，例如在最後時間點加一個不影響元素的 set / tween，讓 timeline duration 對齊影片總長。</p>
+<h1>Render Pipeline：為什麼可重現</h1>
+<p>HyperFrames 的輸出流程大致是：</p>
+<ul>
+<li>解析 composition HTML。</li>
+<li>啟動 Chrome / Puppeteer。</li>
+<li>載入頁面與所有 assets。</li>
+<li>等待 __playerReady 與 __renderReady 之類的 ready gate。</li>
+<li>依 fps 計算每個影格時間。</li>
+<li>對每個時間點 seek runtime 狀態。</li>
+<li>擷取 PNG frame。</li>
+<li>交給 FFmpeg 編碼。</li>
+<li>混合音訊、字幕或其他 media track。</li>
+<li>輸出 MP4 / WebM 等格式。</li>
+</ul>
+<p>這解釋了兩個重要現象：</p>
+<ul>
+<li>瀏覽器 preview 可能卡，但 final render 不一定掉格。</li>
+<li>local render 在不同機器可能因字體、Chrome、GPU 或系統 media codec 有細微差異；若要 CI/CD 完全一致，需要固定容器或雲端 render 環境。</li>
+</ul>
+<h1>CLI 地圖：從 init 到 render</h1>
+<p>PDF 整理了大量 CLI 能力。對入門者最重要的是這條 loop：</p>
+<p>```bash</p>
+<p>npx hyperframes init my-video</p>
+<p>cd my-video</p>
+<p>npx hyperframes lint</p>
+<p>npx hyperframes preview</p>
+<p>npx hyperframes render --output output.mp4</p>
+<p>```</p>
+<p>常用命令可整理如下：</p>
+<ul>
+<li>init：建立新專案，可選 blank、範例、Tailwind、帶入 video 等。</li>
+<li>lint：檢查 composition 結構、JSON、變數、clip、時間與 media 問題。</li>
+<li>preview：啟動本機預覽環境，快速檢查節奏與畫面。</li>
+<li>render：輸出 MP4 / WebM，可指定解析度、fps、變數、輸出檔。</li>
+<li>compositions：列出專案內 composition ID、時長、解析度與元素數。</li>
+<li>transcribe：把音訊或影片轉逐字時間戳，可用於字幕與旁白對齊。</li>
+<li>capture：擷取網站截圖、設計 token、字型、素材與動畫線索。</li>
+<li>snapshot：在指定秒數或影格輸出 PNG，便於 QA 與視覺審查。</li>
+<li>skills：安裝或同步 HyperFrames skills 到 Claude、Gemini、Codex、Cursor 等目標。</li>
+<li>doctor：檢查 Node、FFmpeg、Chrome、字體、相依套件等環境問題。</li>
+</ul>
+<h1>Variables：讓影片模板變成可批次生產的系統</h1>
+<p>HyperFrames composition 可以宣告變數，讓同一支影片模板套入不同文案、品牌、產品、CTA、角色或資料。</p>
+<p>典型變數欄位包含：</p>
+<ul>
+<li>id：變數名稱。</li>
+<li>type：string、number、boolean、color、select 等。</li>
+<li>label：給人或 agent 看的說明。</li>
+<li>default：預設值。</li>
+<li>options：select 類型的選項。</li>
+</ul>
+<p>變數覆寫來源通常有優先序：CLI --variables 最高，其次 variables file、composition default，最後落回宣告的 default。</p>
+<p>這讓 HyperFrames 很適合：</p>
+<ul>
+<li>每週知識庫摘要影片。</li>
+<li>多客戶版本的產品 demo。</li>
+<li>課程單元宣傳短片。</li>
+<li>活動倒數與講者介紹。</li>
+<li>資料驅動的圖表動畫影片。</li>
+</ul>
+<h1>Agent Workflow：不要直接叫 AI render，先叫它規劃</h1>
+<p>PDF 對 agent 操作的提醒非常實用：永遠先載入 HyperFrames skill，再讓 agent 進入影片製作流程。不要只說「幫我做一支影片」，而要要求它先產出 storyboard、frame plan 與 composition contract。</p>
+<p>建議提示骨架：</p>
+<p>```text</p>
+<p>Use /hyperframes to create a 20-second 16:9 explainer video.</p>
+<p>First produce a storyboard, scene timing table, visual direction, and frame.md plan.</p>
+<p>Use premium dark editorial style, strong Traditional Chinese typography, high contrast, and mobile-safe captions.</p>
+<p>Do not render yet. After the plan is checked, write valid HyperFrames HTML, run lint, preview, take snapshots, then render.</p>
+<p>```</p>
+<p>適合欒帥的繁中版本：</p>
+<p>```text</p>
+<p>請使用 /hyperframes，把這篇 AI 學習雷達文章改成 20 秒 16:9 解說短片。</p>
+<p>先不要渲染。請先輸出 storyboard、每幕秒數、畫面構圖、字幕文案、動效方向與 frame.md。</p>
+<p>風格：高質感深色 editorial、繁中字體清楚、手機觀看安全、留白充足、CTA 明確。</p>
+<p>確認後再撰寫 HyperFrames HTML，執行 lint、preview、snapshot，最後才 render MP4。</p>
+<p>```</p>
+<h1>七個實作原則</h1>
+<ul>
+<li>每支影片先定義比例、長度、fps、平台與受眾。</li>
+<li>每個 scene 都要有明確 start、duration、track 與目的。</li>
+<li>每個可視元素都要確認是否需要 class=&quot;clip&quot;。</li>
+<li>所有動畫 runtime 都要可 seek，不要依賴 setTimeout 或 real-time playback。</li>
+<li>先 lint，再 preview，再 snapshot，最後 render。</li>
+<li>每個場景都要有進場與退場，不要讓元素突然出現或消失。</li>
+<li>把 prompts、storyboard、frame.md、composition HTML、assets、render output 都保留下來，才能重現與迭代。</li>
+</ul>
+<h1>常見反模式與修法</h1>
+<h1>反模式一：把 HyperFrames 當 React / Vue app</h1>
+<p>HyperFrames composition 是 HTML + data attributes + 可 seek runtime，不是一般 SPA。不要讓 agent 產生過度複雜的框架依賴，除非已確定 render pipeline 能穩定載入。</p>
+<h1>反模式二：動畫自己播放</h1>
+<p>如果動畫依賴瀏覽器時間自行播放，render seek 到某個 frame 時可能狀態不一致。修法是使用 GSAP paused timeline 或其他可 seek runtime adapter。</p>
+<h1>反模式三：時間軸太短</h1>
+<p>影片 data-duration 是 30 秒，但 GSAP timeline 只有 8 秒，後段可能停住或被截斷。修法是延長 timeline 到影片總長。</p>
+<h1>反模式四：忘記 class=&quot;clip&quot;</h1>
+<p>需要依時間出現的元素若沒有 class=&quot;clip&quot;，可能全程可見。修法是補上 clip class 並設定 data-start / data-duration。</p>
+<h1>反模式五：同軌 clip 重疊</h1>
+<p>同一 track 的 clip 若重疊，可能造成解析或視覺意義混亂。修法是分軌或調整時間。</p>
+<h1>反模式六：一開始就做長片</h1>
+<p>新手不要從 60–180 秒開始。先做 10–20 秒、3–5 scene 的短片，比較容易建立穩定 loop。</p>
+<h1>Local、Lambda、Cloud Render 怎麼選</h1>
+<h1>Local Render</h1>
+<p>適合開發迭代。優點是啟動快、不需要雲端基礎設施，最適合 preview、snapshot、短片初稿。缺點是跨機器輸出可能因字體與環境不同而有差異。</p>
+<h1>Lambda Render</h1>
+<p>適合已有 AWS 基礎設施、需要分塊平行渲染或大量批次輸出的團隊。優點是可擴展，缺點是要管理 AWS、權限、儲存、佇列與成本。</p>
+<h1>Cloud Render</h1>
+<p>適合不想管理 Chrome、FFmpeg、容器或 AWS 的使用者。由 HeyGen / HyperFrames 雲端跑算繪，通常按 credit 或平台方案計費。適合把 render 從本機移出，但要注意成本、隱私、素材授權與上傳資料。</p>
+<h1>與 Remotion 的比較</h1>
+<p>HyperFrames 與 Remotion 都屬於 code-to-video / programmatic video 的脈絡，但下注不同。</p>
+<p>| 面向 | HyperFrames | Remotion |</p>
+<p>| --- | --- | --- |</p>
+<p>| Authoring | HTML + CSS + JS + GSAP | React / TSX |</p>
+<p>| Agent 友善度 | LLM 更容易直接產生 HTML 與 data attributes | 需要 React 元件、型別與 build guardrails |</p>
+<p>| 設計來源 | DOM 可成為 visual editor / agent 的共同事實來源 | React component tree 是主要事實來源 |</p>
+<p>| 成熟度 | 新興、agent-native、快速演化 | 生態較成熟、production use case 多 |</p>
+<p>| 適合場景 | AI agent 生成短片、HTML-native motion、快速模板化 | React 團隊、型別安全、既有 component system |</p>
+<p>判斷上不必把兩者當成單純替代品。若團隊已有成熟 React 設計系統，Remotion 仍很強；若目標是讓 agent 快速理解、修改、渲染影片，HyperFrames 的 HTML-first 方向很有吸引力。</p>
+<h1>官方套件與架構角色</h1>
+<p>PDF 提到 HyperFrames 生態可拆成幾個層次：</p>
+<ul>
+<li>@hyperframes/core：型別、parser、generator、adapter、composition contract。</li>
+<li>@hyperframes/engine：執行與 seek runtime，讓頁面能在指定時間點呈現正確狀態。</li>
+<li>@hyperframes/producer：完整 HTML 到影片管線，含 encoding、音訊混合、Docker / render orchestration。</li>
+<li>NLE / Studio 元件：如 timeline、preview、source editor、property panel、file tree、agent activity track 等，可用於建立 hosted authoring workflow。</li>
+</ul>
+<p>這代表 HyperFrames 不只是 CLI；它也能成為更大影片編輯器、agent 工作台或自動化內容平台的底層 render core。</p>
+<h1>可直接落地的 AI 學習雷達流程</h1>
+<h1>流程 A：知識庫文章轉短影音</h1>
+<ul>
+<li>選一篇 AI 學習雷達文章。</li>
+<li>擷取一句話摘要、三個重點、兩個應用場景、一個 CTA。</li>
+<li>產生 15–25 秒 storyboard。</li>
+<li>寫 frame.md：比例、字級、色彩、鏡頭語言、字幕規則。</li>
+<li>用 /hyperframes 產生 HTML composition。</li>
+<li>lint / preview / snapshot。</li>
+<li>render MP4。</li>
+<li>把影片與原文 URL 一起發佈。</li>
+</ul>
+<h1>流程 B：課程宣傳短片</h1>
+<ul>
+<li>輸入課程名稱、講師、日期、三個學習成果。</li>
+<li>用變數控制講師、時間、地點、CTA。</li>
+<li>套同一份品牌模板批次產出橫版與直版。</li>
+<li>render 16:9、9:16、1:1 三種尺寸。</li>
+<li>存回課程資料夾與 KB 文章。</li>
+</ul>
+<h1>流程 C：產品 demo / feature launch</h1>
+<ul>
+<li>用 capture 擷取產品頁、dashboard 或 design tokens。</li>
+<li>產出 before / after 或三段式功能解說。</li>
+<li>加入字幕、旁白、highlight box、cursor movement。</li>
+<li>用 snapshot 做視覺 QA。</li>
+<li>render 成社群短片或 landing page hero video。</li>
+</ul>
+<h1>快速檢查清單</h1>
+<p>開始前：</p>
+<ul>
+<li>Node.js 22+ 是否可用。</li>
+<li>FFmpeg 是否可用。</li>
+<li>專案是否有固定字體或 fallback。</li>
+<li>目標比例與輸出平台是否明確。</li>
+<li>是否已載入 HyperFrames skills。</li>
+</ul>
+<p>寫 composition 時：</p>
+<ul>
+<li>root composition 是否有 id、width、height、duration、fps。</li>
+<li>每個 clip 是否有 start、duration、track。</li>
+<li>需要 timing 的元素是否有 class=&quot;clip&quot;。</li>
+<li>動畫是否可 seek。</li>
+<li>音訊是否有 volume、media-start 與對齊策略。</li>
+</ul>
+<p>輸出前：</p>
+<ul>
+<li>lint 是否通過。</li>
+<li>preview 是否能看完。</li>
+<li>snapshot 是否涵蓋關鍵秒數。</li>
+<li>字幕是否手機可讀。</li>
+<li>CTA 與原文連結是否正確。</li>
+<li>render output 是否可播放。</li>
+</ul>
+<h1>對欒帥的採用建議</h1>
+<p>建議把 HyperFrames 放在「AI 學習雷達內容再製」而不是「一般影片生成」的位置：</p>
+<ul>
+<li>短期：挑 1 篇高價值 KB 文章，做 20 秒橫版 demo，驗證 agent loop。</li>
+<li>中期：建立 AI 學習雷達固定片頭、片尾、卡片版型與字幕規則。</li>
+<li>長期：把 weekly digest 自動轉成短影音草稿，讓 agent 每週產生 storyboard、composition 與 preview，再由人類審美把關。</li>
+</ul>
+<p>最值得先做的不是追求大片，而是固化一條可重複管線：Markdown article → storyboard → frame.md → HyperFrames HTML → lint → preview → snapshot → render → 發佈。</p>
+<h1>延伸閱讀與官方連結</h1>
+<ul>
+<li>HyperFrames 官方首頁： <a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></li>
+<li>GitHub repo： <a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></li>
+<li>Quickstart： <a href="https://hyperframes.heygen.com/quickstart" target="_blank" rel="noopener">https://hyperframes.heygen.com/quickstart</a></li>
+<li>HeyGen Help Center：HyperFrames x HeyGen： <a href="https://help.heygen.com/en/articles/15001510-hyperframes-x-heygen" target="_blank" rel="noopener">https://help.heygen.com/en/articles/15001510-hyperframes-x-heygen</a></li>
+<li>npm package： <a href="https://www.npmjs.com/package/hyperframes" target="_blank" rel="noopener">https://www.npmjs.com/package/hyperframes</a></li>
+</ul>
+<h1>本地來源保存</h1>
+<p>原始 PDF 已由 Hermes 抽取成純文字來源檔，保存在本機知識庫 source archive，以便後續搜尋、再整理或轉成教學模板。公開頁僅保留整理後的摘要、工作流與官方連結，不公開本機快取路徑。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-12 · LINE 上傳 PDF / HyperFrames 官方文件 / Brave Search / GitHub · article</div><h3>標籤</h3><span class="tag">HyperFrames</span><span class="tag">HeyGen</span><span class="tag">Video as Code</span><span class="tag">AI Agent</span><span class="tag">Agent Skills</span><span class="tag">HTML Video</span><span class="tag">GSAP</span><span class="tag">FFmpeg</span><span class="tag">Remotion</span><span class="tag">Content Workflow</span><h3>原始連結</h3><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p><p><a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></p><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p><p><a href="https://hyperframes.heygen.com/quickstart" target="_blank" rel="noopener">https://hyperframes.heygen.com/quickstart</a></p><p><a href="https://help.heygen.com/en/articles/15001510-hyperframes-x-heygen" target="_blank" rel="noopener">https://help.heygen.com/en/articles/15001510-hyperframes-x-heygen</a></p><p><a href="https://www.npmjs.com/package/hyperframes" target="_blank" rel="noopener">https://www.npmjs.com/package/hyperframes</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

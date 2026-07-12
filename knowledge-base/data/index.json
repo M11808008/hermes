@@ -64,6 +64,40 @@
     "markdown": "articles/2026/07/2026-07-12-facebook-reel-superawesome-ai-team-meeting-decision-making.md"
   },
   {
+    "title": "HyperFrames 完整參考｜用 HTML、Agent Skills 與 CLI 建立可重現影片生產線",
+    "date": "2026-07-12",
+    "source": "LINE 上傳 PDF / HyperFrames 官方文件 / Brave Search / GitHub",
+    "author": "莊哲昀（Andy Juang）整理；Hermes Agent 轉製",
+    "type": "article",
+    "topics": [
+      "HyperFrames",
+      "HeyGen",
+      "Video as Code",
+      "AI Agent",
+      "Agent Skills",
+      "HTML Video",
+      "GSAP",
+      "FFmpeg",
+      "Remotion",
+      "Content Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/heygen-com/hyperframes",
+      "https://hyperframes.heygen.com/",
+      "https://github.com/heygen-com/hyperframes",
+      "https://hyperframes.heygen.com/quickstart",
+      "https://help.heygen.com/en/articles/15001510-hyperframes-x-heygen",
+      "https://www.npmjs.com/package/hyperframes"
+    ],
+    "excerpt": "HyperFrames 把影片製作改寫成「HTML + CSS + JS + 可 seek 動畫 + CLI render」的工程流程，讓 Claude Code、Codex、Cursor、Gemini CLI 等 AI coding agent 可以像維護程式碼一樣規劃、產生、檢查、預覽與輸出 MP4。",
+    "slug": "2026-07-12-hyperframes-complete-reference-html-video-agent-workflow",
+    "html": "articles/2026-07-12-hyperframes-complete-reference-html-video-agent-workflow.html",
+    "markdown": "articles/2026/07/2026-07-12-hyperframes-complete-reference-html-video-agent-workflow.md"
+  },
+  {
     "title": "AI郵報 Threads｜ChatCut Codex 外掛：把 NLE 影片剪輯搬進 Codex App",
     "date": "2026-07-12",
     "source": "Threads / ChatCut official site / GitHub API",
