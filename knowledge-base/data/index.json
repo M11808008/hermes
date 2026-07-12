@@ -68,6 +68,31 @@
     "markdown": "articles/2026/07/2026-07-13-ai-video-editing-openreel-chatcut-codex-workflow.md"
   },
   {
+    "title": "用幾張照片生成 AI 探店影片｜豆包、Seedance 2.0 mini 與短影音量產工作流觀察",
+    "date": "2026-07-13",
+    "source": "X/Twitter video, frame OCR",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "AI影片",
+      "短影音",
+      "探店影片",
+      "豆包",
+      "Seedance",
+      "AI工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/WangNextDoor2/status/2075578877859205358"
+    ],
+    "excerpt": "# 用幾張照片生成 AI 探店影片｜豆包、Seedance 2.0 mini 與短影音量產工作流觀察 WangNextDoor 這則 X 影片展示了一個很直觀、也很值得放進 AI 學習雷達的短影音工作流：只靠幾張人物照片、餐點照片與店面照片，就能用國內 AI 影片模型生成一支「AI 探店」短片。 原始貼文的說法是：用幾",
+    "slug": "2026-07-13-x-wangnextdoor-ai-restaurant-review-video-doubao-seedance-workflow",
+    "html": "articles/2026-07-13-x-wangnextdoor-ai-restaurant-review-video-doubao-seedance-workflow.html",
+    "markdown": "articles/2026/07/2026-07-13-x-wangnextdoor-ai-restaurant-review-video-doubao-seedance-workflow.md"
+  },
+  {
     "title": "Mahan Jafari Facebook Reel｜LongCat-Video-Avatar 1.5：開源 HeyGen 替代方案與本機部署現實",
     "date": "2026-07-12",
     "source": "Facebook Reel / Notion guide / Hugging Face / GitHub API",
