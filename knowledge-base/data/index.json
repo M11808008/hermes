@@ -1,5 +1,37 @@
 [
   {
+    "title": "AI 影音與 Agentic 工作流雷達｜從瀏覽器剪輯、Codex 影片編輯到短影音自動化",
+    "date": "2026-07-13",
+    "source": "X/Twitter 貼文、GitHub、Brave Search、YouTube transcript",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "AI影片",
+      "Codex",
+      "Claude Code",
+      "Agentic Workflow",
+      "自媒體",
+      "開源工具"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/precisox/status/2076152320585343132",
+      "https://x.com/sairahul1/status/2075875493665198368",
+      "https://x.com/ponyodong/status/2076281910654054618",
+      "https://x.com/nini_incrypto_/status/2076244324216353259",
+      "https://x.com/IndieDevHailey/status/2076237910668714325",
+      "https://x.com/CycleDecoded/status/2076266598932021288",
+      "https://x.com/Vincent_AINotes/status/2075914839126610412",
+      "https://x.com/mattknowsai/status/2076002775545049566"
+    ],
+    "excerpt": "# AI 影音與 Agentic 工作流雷達｜從瀏覽器剪輯、Codex 影片編輯到短影音自動化 這批社群貼文共同指向同一個趨勢：AI 影音生產正在從「單點工具」進化成「可編排、可驗證、可交付的工作流」。過去需要剪輯軟體、字幕工具、素材管理、翻譯、上傳、封面與 QA 多段接力的任務，現在開始被包成 Codex Skill",
+    "slug": "2026-07-13-ai-video-agentic-media-workflow-radar",
+    "html": "articles/2026-07-13-ai-video-agentic-media-workflow-radar.html",
+    "markdown": "articles/2026/07/2026-07-13-ai-video-agentic-media-workflow-radar.md"
+  },
+  {
     "title": "Mahan Jafari Facebook Reel｜LongCat-Video-Avatar 1.5：開源 HeyGen 替代方案與本機部署現實",
     "date": "2026-07-12",
     "source": "Facebook Reel / Notion guide / Hugging Face / GitHub API",

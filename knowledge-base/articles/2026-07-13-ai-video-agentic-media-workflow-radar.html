@@ -1,0 +1,320 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 影音與 Agentic 工作流雷達｜從瀏覽器剪輯、Codex 影片編輯到短影音自動化</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI 影音與 Agentic 工作流雷達｜從瀏覽器剪輯、Codex 影片編輯到短影音自動化</h1><h1>AI 影音與 Agentic 工作流雷達｜從瀏覽器剪輯、Codex 影片編輯到短影音自動化</h1>
+<p>這批社群貼文共同指向同一個趨勢：AI 影音生產正在從「單點工具」進化成「可編排、可驗證、可交付的工作流」。過去需要剪輯軟體、字幕工具、素材管理、翻譯、上傳、封面與 QA 多段接力的任務，現在開始被包成 Codex Skill、MCP/插件、瀏覽器本地剪輯器、ffmpeg pipeline 與 agentic course。</p>
+<p>這篇不是單純收藏連結，而是把它整理成一份可執行的「AI 影音工作流地圖」。</p>
+<p>---</p>
+<h2>一句話結論</h2>
+<p>如果只看方向，這波工具可以分成四層：</p>
+<ul>
+<li>**本地剪輯層**：OpenReel Video，把 CapCut 類功能搬到瀏覽器端、本地處理。</li>
+<li>**Agent 控制剪輯層**：ChatCut Codex Plugin，讓 Codex 直接操作時間線、字幕、MG、混音與輸出。</li>
+<li>**字幕與搬運自動化層**：JZSub，把影片連結轉成最高畫質 MP4、封面與 GPT 雙語字幕成品。</li>
+<li>**短影音矩陣生產層**：video-autopilot-kit、Codex 自媒體 skills、Claude Code + Seedance 2.0，把選題、素材、生成、剪輯、上傳與回收變成流水線。</li>
+</ul>
+<p>真正值得注意的不是「又多了一個工具」，而是這些工具開始把影音生產拆成 agent 能理解的結構化任務：匯入、轉錄、配音、字幕、B-roll、轉場、動畫、封面、QA、輸出、發布與復盤。</p>
+<p>---</p>
+<h2>1. OpenReel Video：瀏覽器中的開源 CapCut 平替</h2>
+<p>來源：開發者 Hailey 的 X 貼文</p>
+<p>OpenReel Video 被描述為「開源 CapCut 平替」，核心特色是：</p>
+<ul>
+<li>100% 在瀏覽器端本地執行，影片不上傳雲端。</li>
+<li>不需安裝、不加水印、MIT 授權。</li>
+<li>多軌時間線、幀精準剪輯、轉場、嵌套序列。</li>
+<li>自動字幕、AI 去背景、AI 提詞、文字轉語音。</li>
+<li>色輪、HSL、曲線、LUT 等專業調色。</li>
+<li>3D 變換、關鍵幀動畫、文字動畫、SVG、形狀、貼紙。</li>
+<li>WebGPU / WebCodecs 加速，主打 4K 順暢剪輯與快速匯出。</li>
+</ul>
+<p>官方 GitHub / 網站搜尋結果顯示：</p>
+<ul>
+<li>GitHub：`<a href="https://github.com/Augani/openreel-video`" target="_blank" rel="noopener">https://github.com/Augani/openreel-video`</a></li>
+<li>Website：`<a href="https://openreel.video/`" target="_blank" rel="noopener">https://openreel.video/`</a></li>
+<li>技術棧：React、TypeScript、WebCodecs、WebGPU</li>
+<li>狀態：Beta、MIT、100% open source</li>
+</ul>
+<p>### AI 學習雷達判讀</p>
+<p>OpenReel 的意義在於「剪輯器本身變成可嵌入的網頁應用」。這會讓後續 agent workflow 更容易接上：</p>
+<ul>
+<li>若剪輯器 API / state model 開放，Agent 可以直接操作 timeline。</li>
+<li>若瀏覽器端保留本地處理，可降低素材外流疑慮。</li>
+<li>若未來支援 project JSON / plugin protocol，就能接到 Codex、Claude Code 或 Hermes 的自動化流程。</li>
+</ul>
+<p>適合關注：課程短片、社群短影音、低隱私風險的本地剪輯、開源剪輯工具研究。</p>
+<p>---</p>
+<h2>2. ChatCut Codex Plugin：把 Codex 變成可協作的影片剪輯器</h2>
+<p>來源：波妞 PONYO 的 X 貼文與 ChatCut 官方資料</p>
+<p>貼文展示「一句提示詞，Codex 也能直接剪影片」。範例中用 ChatCut Plugin 在 Codex 中完成：</p>
+<ul>
+<li>本地素材匯入</li>
+<li>口播策劃</li>
+<li>字幕生成</li>
+<li>MG 封面</li>
+<li>章節導航</li>
+<li>混音</li>
+<li>逐幀檢查</li>
+<li>最終仍可在時間線修改</li>
+</ul>
+<p>官方 GitHub README 說明 ChatCut Agent Plugin 連接 Codex 與 ChatCut，可用於：</p>
+<ul>
+<li>匯入 media</li>
+<li>修改 project timeline</li>
+<li>建立 motion graphics</li>
+<li>生成 assets</li>
+<li>轉錄 audio</li>
+<li>加 captions</li>
+<li>export videos</li>
+<li>驗證剪輯是否在 editor 中可見</li>
+</ul>
+<p>官方資源：</p>
+<ul>
+<li>GitHub：`<a href="https://github.com/ChatCut-Inc/agent-plugin`" target="_blank" rel="noopener">https://github.com/ChatCut-Inc/agent-plugin`</a></li>
+<li>Codex plugin 頁：`<a href="https://chatcut.io/codex-plugin`" target="_blank" rel="noopener">https://chatcut.io/codex-plugin`</a></li>
+<li>安裝來源：`<a href="https://github.com/ChatCut-Inc/agent-plugin.git`" target="_blank" rel="noopener">https://github.com/ChatCut-Inc/agent-plugin.git`</a></li>
+<li>MCP endpoint：`<a href="https://api.chatcut.io/api/external-mcp/mcp`" target="_blank" rel="noopener">https://api.chatcut.io/api/external-mcp/mcp`</a></li>
+</ul>
+<p>### AI 學習雷達判讀</p>
+<p>ChatCut 代表的是「NLE + Agent」的直接融合。對內容團隊來說，這比單純生影片更重要，因為它保留可編輯 timeline：</p>
+<ul>
+<li>Agent 可以先產出粗剪；人類再做審美微調。</li>
+<li>Agent 可以做機械性 QA：字幕同步、停頓、B-roll 缺口、音量峰值。</li>
+<li>成品不是黑盒影片檔，而是可迭代的剪輯工程。</li>
+</ul>
+<p>這很適合用在「AI 課程片段 → 社群短影音」的工作流，例如把長講座切成 5 支短片，產生字幕、封面、章節與口播摘要。</p>
+<p>---</p>
+<h2>3. JZSub：影片連結到 GPT 雙語字幕 MP4 的自動交付線</h2>
+<p>來源：CycleDecoded 的 X 貼文、JZSub GitHub README</p>
+<p>JZSub 的定位非常清楚：給它一條影片連結，拿回：</p>
+<ul>
+<li>最高畫質影片</li>
+<li>封面圖</li>
+<li>雙語字幕</li>
+<li>已燒錄字幕的 MP4</li>
+</ul>
+<p>官方 GitHub：`<a href="https://github.com/pengchujin/jzsub`" target="_blank" rel="noopener">https://github.com/pengchujin/jzsub`</a></p>
+<p>README 重點：</p>
+<ul>
+<li>支援 YouTube、Bilibili、Vimeo、Twitch、Dailymotion、TikTok，以及 yt-dlp 支援的其他站點。</li>
+<li>下載最佳 video/audio，盡可能無損封裝 MP4。</li>
+<li>使用 GPT 做雙語翻譯，包含分批翻譯、上下文銜接與句子邊界重切。</li>
+<li>用 MiSans、libass 渲染底部雙語字幕。</li>
+<li>可自動下載並轉換封面為 JPEG。</li>
+<li>需要時可讀 Chrome 登入態，但不導出 cookie。</li>
+<li>平台沒有字幕時，也可交付影片、MP4 與封面。</li>
+<li>可在 Codex 中作為 Skill 使用。</li>
+</ul>
+<p>依賴：Python 3.10+、yt-dlp、Deno 2.3+、FFmpeg/ffprobe（含 libass）、MiSans Bold。</p>
+<p>### AI 學習雷達判讀</p>
+<p>JZSub 是典型「內容攝取 / 翻譯 / 字幕燒錄」工具，適合：</p>
+<ul>
+<li>外語課程影片內化成中文學習材料。</li>
+<li>海外 AI 發表會、教學影片、demo 的快速雙語化。</li>
+<li>研究與教材整理前的素材預處理。</li>
+</ul>
+<p>但使用時要注意：只下載你有權存取、保存與再利用的內容；不要拿來繞過 DRM、付費牆、驗證碼或平台安全限制。</p>
+<p>---</p>
+<h2>4. video-autopilot-kit：短影音自動化流水線骨架</h2>
+<p>來源：Vincent 的 X 貼文、Brave Search、GitHub README、圖片 OCR</p>
+<p>video-autopilot-kit 被描述為一套 YouTube / 短影音自動化工具與方法論模板。官方 GitHub：</p>
+<p>`<a href="https://github.com/Hao0321/video-autopilot-kit`" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit`</a></p>
+<p>README 文字重點：</p>
+<ul>
+<li>一套框架式 YouTube / 短影音自動化工具 + 方法論模板。</li>
+<li>包含純程式 ffmpeg pipeline、CapCut 自動化程式碼，以及 onboarding questionnaire。</li>
+<li>不含任何原作者私人數據；voice、策略、社群數字都是空白模板，需使用者自行填寫。</li>
+</ul>
+<p>### 兩條路徑</p>
+<ul>
+<li>**Path 1 — Programmatic**</li>
+</ul>
+<p>   - Mac / Linux 預設推薦。</p>
+<p>   - 純程式、跨平台、不需 CapCut。</p>
+<p>   - 用 ffmpeg / Python pipeline 生成直式 Shorts、字幕、BGM、素材清理與 QA。</p>
+<ul>
+<li>**Path 2 — CapCut-assisted**</li>
+</ul>
+<p>   - 需要 CapCut 特效、花字、雲端模板時使用。</p>
+<p>   - Windows 優先。</p>
+<p>   - 版本敏感，需看 TROUBLESHOOTING 的相容性矩陣。</p>
+<p>### 可跑 demo</p>
+<p>README 提供 examples，可不用真素材、不用 CapCut，直接用 ffmpeg 合成測試素材：</p>
+<p>```bash</p>
+<p>python examples/01_vertical_short.py</p>
+<p>python examples/02_caption_broll_match.py</p>
+<p>```</p>
+<p>### AI 學習雷達判讀</p>
+<p>video-autopilot-kit 的重點不是「拿來直接複製別人的頻道」，而是它把短影音生產拆成可填表、可客製、可測試的 pipeline。這對課程團隊有價值：</p>
+<ul>
+<li>可把「課程素材 → 多平台短影音」標準化。</li>
+<li>可把旁白、字幕、B-roll、封面、QA 變成 SOP。</li>
+<li>可建立一套自己的內容系統，而不是買別人的黑盒設定。</li>
+</ul>
+<p>---</p>
+<h2>5. Codex 做自媒體必裝十大 Skill：內容工作流清單</h2>
+<p>來源：nini 的 X 圖片 OCR</p>
+<p>圖片標題為：「Codex 做自媒體必裝十大 Skill」。副標是：「從選題到發布，再到反饋回收」。</p>
+<p>OCR 結果整理如下：</p>
+<p>| 編號 | Skill | 用途 | 流程位置 |</p>
+<p>|---|---|---|---|</p>
+<p>| 01 | Agent-Reach | 搜國內外多平台熱點、收集素材 | 搜索 |</p>
+<p>| 02 | Horizon | 每天熱點和趨勢簡報、資訊雷達 | 趨勢 |</p>
+<p>| 03 | MediaCrawler | 採集公開內容與評論反饋 | 採集 |</p>
+<p>| 04 | huashu-design | 生成 HTML、原型、可編輯 PPT、動畫 | 設計 |</p>
+<p>| 05 | Auto-Redbook-Skills | 自動寫文案、長文章、生成配圖 | 創作 |</p>
+<p>| 06 | Generative-Media-Skills | 圖片、影片、音頻生成工作流 | 多模態 |</p>
+<p>| 07 | nuwa-skill | 固定文風、統一帳號表達風格 | 風格 |</p>
+<p>| 08 | guizang-social-card-skill | 生成圖文卡片和封面圖 | 封面 |</p>
+<p>| 09 | social-auto-upload | 多平台內容自動上傳 | 發布 |</p>
+<p>| 10 | MediaCrawler | 發布後繼續採集評論反饋 | 復盤 |</p>
+<p>### AI 學習雷達判讀</p>
+<p>這張圖的價值不在於每個 skill 都必裝，而是它呈現了一個完整內容閉環：</p>
+<p>選題 → 趨勢 → 採集 → 設計 → 創作 → 多模態 → 風格統一 → 封面 → 發布 → 評論回收</p>
+<p>對 AI 學習雷達來說，這可轉成更適合課程與知識庫的版本：</p>
+<p>來源監控 → 主題歸檔 → 教材摘要 → 視覺卡片 → 短影音 → 發布 → 學員回饋 → 知識庫更新。</p>
+<p>---</p>
+<h2>6. Google agentic engineering 一小時課程：agent 基礎結構入門</h2>
+<p>來源：Rahul 的 X 貼文、YouTube transcript</p>
+<p>貼文整理了一門約 1 小時的 agentic engineering 課程章節：</p>
+<ul>
+<li>00:00 — 如何建立第一個 AI agent</li>
+<li>08:24 — 建立 agent memory：short、persistent、long</li>
+<li>28:34 — Agentic loops、長時間運行的 AI agents</li>
+<li>40:04 — 如何建立 MCP：MCP vs API</li>
+<li>1:00:22 — Multi-agentic systems</li>
+</ul>
+<p>Brave Search 找到對應 YouTube：</p>
+<p>`<a href="https://www.youtube.com/watch?v=vE31B0D3n08`" target="_blank" rel="noopener">https://www.youtube.com/watch?v=vE31B0D3n08`</a></p>
+<p>Transcript 開頭顯示課程會用 Google ADK 實作第一個 AI agent，並介紹 agent 如何 reason、act、adapt；也引用 ReAct：reasoning and acting in language models 的概念。</p>
+<p>### AI 學習雷達判讀</p>
+<p>這是適合放在「Agent 工程入門」路線的素材，尤其適合搭配這篇中的影音工具：</p>
+<ul>
+<li>先用課程理解 agent loop / memory / MCP。</li>
+<li>再用 ChatCut、JZSub、video-autopilot-kit 看 agent 如何落地到內容生產。</li>
+<li>最後用 Hermes / Codex / Claude Code 把工具串成可驗證 pipeline。</li>
+</ul>
+<p>---</p>
+<h2>7. Hermes Agent masterclass：sleep、dream、自我改善的代理架構想像</h2>
+<p>來源：precisox 的 X 貼文與 YouTube transcript</p>
+<p>這支 Hermes Agent masterclass 的社群敘事重點是：Hermes 可以透過長期記憶、skills、任務排程與後台流程，形成類似「睡眠 / 夢境 / 自我改善」的代理體驗。</p>
+<p>需要特別分辨：</p>
+<ul>
+<li>「sleep / dream」多半是社群敘事或比喻，不應直接當成官方功能名稱。</li>
+<li>可驗證的核心元件是：Memory、Skills、Cron、Curator、Gateway、工具使用與多平台交付。</li>
+<li>對使用者真正有用的是：讓 agent 在未來任務中載入已學會的程序，並定期整理技能與知識。</li>
+</ul>
+<p>### AI 學習雷達判讀</p>
+<p>這與本文其他工具的連結是：影音工作流若要長期可用，不能只靠一次性 prompt，而要沉澱成 skills、定時任務、檢查表與回饋迴圈。</p>
+<p>---</p>
+<h2>8. Claude Code + Seedance 2.0：影片生成與上傳自動化案例</h2>
+<p>來源：matt 的 X 貼文</p>
+<p>貼文主旨是「7 分鐘學會用 AI 上傳影片」，工具組合是：</p>
+<ul>
+<li>Claude Code</li>
+<li>Seedance 2.0</li>
+<li>自動化影片上傳流程</li>
+</ul>
+<p>貼文語言是西班牙文，核心句是：「Todo automatizado. Sin tocar nada.」也就是整個流程自動化、幾乎不用手動操作。</p>
+<p>### AI 學習雷達判讀</p>
+<p>這類案例表示「AI 生成影片」正在往「生成後自動發布」延伸。對實務團隊來說，這裡要補上的不是模型能力，而是治理：</p>
+<ul>
+<li>發布前審稿</li>
+<li>版權與素材來源檢查</li>
+<li>品牌語氣一致性</li>
+<li>平台格式驗證</li>
+<li>發布後數據回收</li>
+</ul>
+<p>若沒有這些欄位，自動上傳很容易變成放大錯誤的機器。</p>
+<p>---</p>
+<h2>工具地圖：怎麼放進同一條 AI 影音生產線？</h2>
+<p>可以把這批工具整理成一條實務 pipeline：</p>
+<ul>
+<li>**趨勢與選題**</li>
+</ul>
+<p>   - Agent-Reach、Horizon、MediaCrawler</p>
+<p>   - 產出：每日 AI 趨勢、可做成短片的主題清單</p>
+<ul>
+<li>**素材攝取與翻譯**</li>
+</ul>
+<p>   - JZSub</p>
+<p>   - 產出：影片、封面、雙語字幕、可閱讀 transcript</p>
+<ul>
+<li>**腳本與結構**</li>
+</ul>
+<p>   - Codex / Claude Code / Hermes Skills</p>
+<p>   - 產出：短影音腳本、分鏡、旁白、章節</p>
+<ul>
+<li>**生成與剪輯**</li>
+</ul>
+<p>   - OpenReel Video、ChatCut Codex Plugin、video-autopilot-kit、Seedance 2.0</p>
+<p>   - 產出：可編輯 project / MP4 / short clips</p>
+<ul>
+<li>**封面與社群素材**</li>
+</ul>
+<p>   - huashu-design、guizang-social-card-skill、Generative-Media-Skills</p>
+<p>   - 產出：封面圖、社群卡片、PPT、動畫</p>
+<ul>
+<li>**發布與回饋**</li>
+</ul>
+<p>   - social-auto-upload、MediaCrawler</p>
+<p>   - 產出：多平台發布、評論回收、下一輪選題依據</p>
+<p>---</p>
+<h2>對課程與知識庫的應用建議</h2>
+<p>若要用在 AI 學習雷達或課程營運，我建議優先做三件事：</p>
+<p>### A. 建立「長影片 → 短影音」標準流程</p>
+<p>把每堂課或直播整理成：</p>
+<ul>
+<li>3 個核心概念</li>
+<li>5 個短影音切點</li>
+<li>1 張知識卡</li>
+<li>1 篇知識庫文章</li>
+<li>1 份課後延伸閱讀</li>
+</ul>
+<p>工具可用：JZSub + ChatCut + OpenReel / video-autopilot-kit。</p>
+<p>### B. 把 prompt 升級成 skill</p>
+<p>不要每次重新寫提示詞。把可重複流程拆成：</p>
+<ul>
+<li>擷取來源</li>
+<li>摘要與判讀</li>
+<li>產生腳本</li>
+<li>產生封面</li>
+<li>剪輯 QA</li>
+<li>發布檢查</li>
+<li>回收評論</li>
+</ul>
+<p>這樣才會累積成團隊能力。</p>
+<p>### C. 保留人類審稿點</p>
+<p>AI 影音工具越自動，越需要固定人工關卡：</p>
+<ul>
+<li>課程內容是否準確</li>
+<li>是否誇大工具能力</li>
+<li>是否引用來源完整</li>
+<li>是否有素材授權問題</li>
+<li>是否符合品牌語氣</li>
+</ul>
+<p>---</p>
+<h2>風險提醒</h2>
+<ul>
+<li>**社群貼文常有誇飾**：例如「取代 10 門付費課」「月入十萬」這類句子應視為行銷語氣，不應直接當成事實。</li>
+<li>**影片下載與搬運需確認權利**：JZSub、yt-dlp 類工具只應用於你有權保存與再利用的內容。</li>
+<li>**自動發布要有審稿機制**：不要讓 agent 直接無人審核發布到品牌帳號。</li>
+<li>**插件與 MCP 要注意權限**：ChatCut 這類工具會連接 project 與帳號，安裝前需確認來源與授權範圍。</li>
+<li>**本地剪輯不等於零風險**：即使 OpenReel 本地處理，仍要檢查瀏覽器權限、來源碼與第三方依賴。</li>
+</ul>
+<p>---</p>
+<h2>來源連結</h2>
+<ul>
+<li>Hermes Agent masterclass X：`<a href="https://x.com/precisox/status/2076152320585343132`" target="_blank" rel="noopener">https://x.com/precisox/status/2076152320585343132`</a></li>
+<li>Google agentic engineering course X：`<a href="https://x.com/sairahul1/status/2075875493665198368`" target="_blank" rel="noopener">https://x.com/sairahul1/status/2075875493665198368`</a></li>
+<li>Google agentic engineering YouTube：`<a href="https://www.youtube.com/watch?v=vE31B0D3n08`" target="_blank" rel="noopener">https://www.youtube.com/watch?v=vE31B0D3n08`</a></li>
+<li>ChatCut Codex workflow X：`<a href="https://x.com/ponyodong/status/2076281910654054618`" target="_blank" rel="noopener">https://x.com/ponyodong/status/2076281910654054618`</a></li>
+<li>ChatCut Agent Plugin：`<a href="https://github.com/ChatCut-Inc/agent-plugin`" target="_blank" rel="noopener">https://github.com/ChatCut-Inc/agent-plugin`</a></li>
+<li>Codex 自媒體十大 Skill X：`<a href="https://x.com/nini_incrypto_/status/2076244324216353259`" target="_blank" rel="noopener">https://x.com/nini_incrypto_/status/2076244324216353259`</a></li>
+<li>OpenReel Video X：`<a href="https://x.com/IndieDevHailey/status/2076237910668714325`" target="_blank" rel="noopener">https://x.com/IndieDevHailey/status/2076237910668714325`</a></li>
+<li>OpenReel Video GitHub：`<a href="https://github.com/Augani/openreel-video`" target="_blank" rel="noopener">https://github.com/Augani/openreel-video`</a></li>
+<li>JZSub X：`<a href="https://x.com/CycleDecoded/status/2076266598932021288`" target="_blank" rel="noopener">https://x.com/CycleDecoded/status/2076266598932021288`</a></li>
+<li>JZSub GitHub：`<a href="https://github.com/pengchujin/jzsub`" target="_blank" rel="noopener">https://github.com/pengchujin/jzsub`</a></li>
+<li>video-autopilot-kit X：`<a href="https://x.com/Vincent_AINotes/status/2075914839126610412`" target="_blank" rel="noopener">https://x.com/Vincent_AINotes/status/2075914839126610412`</a></li>
+<li>video-autopilot-kit GitHub：`<a href="https://github.com/Hao0321/video-autopilot-kit`" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit`</a></li>
+<li>Claude Code + Seedance 2.0 X：`<a href="https://x.com/mattknowsai/status/2076002775545049566`" target="_blank" rel="noopener">https://x.com/mattknowsai/status/2076002775545049566`</a></li>
+</ul>
+<p>---</p>
+<h2>歸檔狀態</h2>
+<p>本篇已將社群貼文、GitHub README、YouTube transcript 與圖片 OCR 重點整理為 AI 學習雷達文章。原始 X/Twitter URL 已轉為去除追蹤參數的 canonical URL，避免保存不必要的分享追蹤參數。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-13 · X/Twitter 貼文、GitHub、Brave Search、YouTube transcript · article</div><h3>標籤</h3><span class="tag">AI影片</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Agentic Workflow</span><span class="tag">自媒體</span><span class="tag">開源工具</span><h3>原始連結</h3><p><a href="https://x.com/precisox/status/2076152320585343132" target="_blank" rel="noopener">https://x.com/precisox/status/2076152320585343132</a></p><p><a href="https://x.com/sairahul1/status/2075875493665198368" target="_blank" rel="noopener">https://x.com/sairahul1/status/2075875493665198368</a></p><p><a href="https://x.com/ponyodong/status/2076281910654054618" target="_blank" rel="noopener">https://x.com/ponyodong/status/2076281910654054618</a></p><p><a href="https://x.com/nini_incrypto_/status/2076244324216353259" target="_blank" rel="noopener">https://x.com/nini_incrypto_/status/2076244324216353259</a></p><p><a href="https://x.com/IndieDevHailey/status/2076237910668714325" target="_blank" rel="noopener">https://x.com/IndieDevHailey/status/2076237910668714325</a></p><p><a href="https://x.com/CycleDecoded/status/2076266598932021288" target="_blank" rel="noopener">https://x.com/CycleDecoded/status/2076266598932021288</a></p><p><a href="https://x.com/Vincent_AINotes/status/2075914839126610412" target="_blank" rel="noopener">https://x.com/Vincent_AINotes/status/2075914839126610412</a></p><p><a href="https://x.com/mattknowsai/status/2076002775545049566" target="_blank" rel="noopener">https://x.com/mattknowsai/status/2076002775545049566</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
