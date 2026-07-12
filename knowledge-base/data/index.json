@@ -32,6 +32,40 @@
     "markdown": "articles/2026/07/2026-07-13-ai-video-agentic-media-workflow-radar.md"
   },
   {
+    "title": "AI 影片剪輯工具鏈觀察｜OpenReel、ChatCut × Codex 與自媒體工作流重組",
+    "date": "2026-07-13",
+    "source": "X/Twitter posts, GitHub, Brave Search",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "AI影片",
+      "影片剪輯",
+      "Codex",
+      "ChatCut",
+      "OpenReel",
+      "JZSub",
+      "自媒體"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/IndieDevHailey/status/2076237910668714325",
+      "https://x.com/SjwEsther/status/2075972177095246205",
+      "https://x.com/ponyodong/status/2076281910654054618",
+      "https://x.com/CycleDecoded/status/2076266598932021288",
+      "https://github.com/Augani/openreel-video",
+      "https://openreel.video/",
+      "https://github.com/ChatCut-Inc/agent-plugin",
+      "https://chatcut.io/codex",
+      "https://github.com/pengchujin/jzsub"
+    ],
+    "excerpt": "# AI 影片剪輯工具鏈觀察｜OpenReel、ChatCut × Codex 與自媒體工作流重組 近期 X 上幾則中文 AI 影片工具分享，指向同一個趨勢：影片創作不再只是「剪輯軟體變聰明」，而是剪輯流程正在被改寫成 agent 可以理解、執行、修正、沉澱的工作流。 這篇整理三個互補方向： 1. OpenReel V",
+    "slug": "2026-07-13-ai-video-editing-openreel-chatcut-codex-workflow",
+    "html": "articles/2026-07-13-ai-video-editing-openreel-chatcut-codex-workflow.html",
+    "markdown": "articles/2026/07/2026-07-13-ai-video-editing-openreel-chatcut-codex-workflow.md"
+  },
+  {
     "title": "Mahan Jafari Facebook Reel｜LongCat-Video-Avatar 1.5：開源 HeyGen 替代方案與本機部署現實",
     "date": "2026-07-12",
     "source": "Facebook Reel / Notion guide / Hugging Face / GitHub API",
