@@ -61,6 +61,35 @@
     "markdown": "articles/2026/07/2026-07-14-threads-iluciddreaming-gpt-sovits-local-voice-cloning-tts.md"
   },
   {
+    "title": "1-800-CHATGPT 與 WhatsApp 入口觀察｜Prompt Case 分享與 2026 可用性校正",
+    "date": "2026-07-14",
+    "source": "Threads post, Brave Search, OpenAI Help Center",
+    "author": "Prompt Case (@prompt_case)",
+    "type": "article",
+    "topics": [
+      "ChatGPT",
+      "WhatsApp",
+      "OpenAI",
+      "AI入口",
+      "產品更新",
+      "事實查核"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/DavOKBqFH-1",
+      "https://www.threads.com/@prompt_case/post/DavOKBqFH-1",
+      "https://www.threads.com/@prompt_case/post/DavOKBqFH-1",
+      "https://help.openai.com/en/articles/10193193-1-800-chatgpt-calling-and-messaging-chatgpt-with-your-phone",
+      "https://openai.com/index/chatgpt-whatsapp-transition/"
+    ],
+    "excerpt": "Prompt Case 分享「把 `1-800-CHATGPT` 存到電話簿，就能在 WhatsApp 免費和 ChatGPT 5.5 對話、甚至生成圖片」。但這則資訊需要加上 2026 年可用性校正：OpenAI 官方 Help Center 與轉移公告顯示，ChatGPT 的 WhatsApp integration 已於 2026-01-15 起停止提供。 原文： https://www.threads.com/@prompt_case/post/DavOKBqFH-1 ---",
+    "slug": "2026-07-14-threads-prompt-case-1800-chatgpt-whatsapp-deprecated",
+    "html": "articles/2026-07-14-threads-prompt-case-1800-chatgpt-whatsapp-deprecated.html",
+    "markdown": "articles/2026/07/2026-07-14-threads-prompt-case-1800-chatgpt-whatsapp-deprecated.md"
+  },
+  {
     "title": "Claudex 工作流觀察｜用 CLIProxyAPI 讓 Claude Code 透過 GPT-5.6 Sol 運行",
     "date": "2026-07-14",
     "source": "Threads post, Brave Search, GitHub",
