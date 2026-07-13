@@ -30,6 +30,37 @@
     "markdown": "articles/2026/07/2026-07-14-openclaw-libtv-skill-install-access-key-guide.md"
   },
   {
+    "title": "Claudex 工作流觀察｜用 CLIProxyAPI 讓 Claude Code 透過 GPT-5.6 Sol 運行",
+    "date": "2026-07-14",
+    "source": "Threads post, Brave Search, GitHub",
+    "author": "Prompt Case (@prompt_case)",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "Codex",
+      "GPT-5.6 Sol",
+      "CLIProxyAPI",
+      "Agentic Coding",
+      "開發工具",
+      "工作流"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/DascVdxlPAn",
+      "https://www.threads.com/@prompt_case/post/DascVdxlPAn",
+      "https://www.threads.com/@prompt_case/post/DascVdxlPAn",
+      "https://x.com/thsottiaux/status/2076119366647894371",
+      "https://github.com/router-for-me/CLIProxyAPI",
+      "https://www.explainx.ai/blog/gpt-5-6-sol-claude-code-claudex-setup-guide-july-2026"
+    ],
+    "excerpt": "Prompt Case 這篇 Threads 分享的是一套「Claudex」思路：保留 Claude Code 作為 coding agent 的操作介面與工具調度層，但透過 CLIProxyAPI 把模型後端導向 OpenAI / Codex OAuth 可用的 `gpt-5.6-sol`，並建立獨立的 `claudex` 指令，避免污染原本的 `claude` 設定。 原文： https://www.threads.com/@prompt_case/post/DascVdxlPAn ---",
+    "slug": "2026-07-14-threads-prompt-case-claudex-cliproxyapi-gpt-5-6-sol-claude-code",
+    "html": "articles/2026-07-14-threads-prompt-case-claudex-cliproxyapi-gpt-5-6-sol-claude-code.html",
+    "markdown": "articles/2026/07/2026-07-14-threads-prompt-case-claudex-cliproxyapi-gpt-5-6-sol-claude-code.md"
+  },
+  {
     "title": "AI 影音與 Agentic 工作流雷達｜從瀏覽器剪輯、Codex 影片編輯到短影音自動化",
     "date": "2026-07-13",
     "source": "X/Twitter 貼文、GitHub、Brave Search、YouTube transcript",

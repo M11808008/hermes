@@ -1,0 +1,93 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claudex 工作流觀察｜用 CLIProxyAPI 讓 Claude Code 透過 GPT-5.6 Sol 運行</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claudex 工作流觀察｜用 CLIProxyAPI 讓 Claude Code 透過 GPT-5.6 Sol 運行</h1><h1>Claudex 工作流觀察｜用 CLIProxyAPI 讓 Claude Code 透過 GPT-5.6 Sol 運行</h1>
+<h2>一句話摘要</h2>
+<p>Prompt Case 這篇 Threads 分享的是一套「Claudex」思路：保留 Claude Code 作為 coding agent 的操作介面與工具調度層，但透過 CLIProxyAPI 把模型後端導向 OpenAI / Codex OAuth 可用的 `gpt-5.6-sol`，並建立獨立的 `claudex` 指令，避免污染原本的 `claude` 設定。</p>
+<p>原文：</p>
+<p><a href="https://www.threads.com/@prompt_case/post/DascVdxlPAn" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DascVdxlPAn</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>Prompt Case 轉述 Codex 開發者 Tibo 的做法：近期網路上不少人討論「Claude Code + GPT-5.6 Sol」是否比直接用 Fable、Sol + Codex 更有感。Tibo 分享的簡化版流程可以濃縮為三步：</p>
+<ul>
+<li>安裝 CLIProxyAPI：作為本機 proxy，讓 Claude Code 能連到 OpenAI / Codex 端的模型。</li>
+<li>設定 proxy：把 Claude Code 的請求轉給 GPT-5.6 Sol。</li>
+<li>建立 alias：新增獨立 `claudex` 指令，執行時才套用 proxy 與模型設定。</li>
+</ul>
+<p>Prompt Case 也在留言中補上一段可直接交給 Agent 執行的安裝提示詞，目標是讓 AI 自動完成跨平台偵測、CLIProxyAPI 安裝、本機服務啟動、Codex OAuth 登入、shell alias / PowerShell function 設定，以及最後驗證。</p>
+<p>---</p>
+<h2>設計核心：不要改壞原本的 Claude Code</h2>
+<p>這份 prompt 最值得保存的不是單一命令，而是它對「安全改設定」的要求很完整：</p>
+<ul>
+<li>建立永久可用的新指令 `claudex`。</li>
+<li>原本 `claude` 指令與設定不得被覆蓋。</li>
+<li>shell 設定檔修改前必須備份。</li>
+<li>若 alias / function 已存在，需更新而不是重複追加。</li>
+<li>OAuth token、認證檔案與敏感資料不得輸出。</li>
+<li>完成後需驗證 proxy、port、alias、模型與普通 `claude` 是否仍未被污染。</li>
+</ul>
+<p>這很適合作為「讓 Agent 修改本機開發環境」時的提示詞範本：不是只叫它安裝，而是要求它偵測、備份、最小影響、驗證與回報。</p>
+<p>---</p>
+<h2>原文 prompt 的目標結構</h2>
+<p>Prompt Case 留言中的 prompt 可整理為以下任務規格：</p>
+<p>### 目標</p>
+<ul>
+<li>建立永久可用的 `claudex` 指令。</li>
+<li>執行 `claudex` 時，Claude Code 透過本機 CLIProxyAPI 使用 `gpt-5.6-sol`。</li>
+<li>原本 `claude` 指令和設定不受影響。</li>
+</ul>
+<p>### 主要步驟</p>
+<ul>
+<li>自動偵測作業系統、CPU 架構與 shell，需支援 macOS、Linux、Windows PowerShell。</li>
+<li>檢查 Claude Code、CLIProxyAPI 與作業系統套件管理工具是否已安裝。</li>
+<li>若尚未安裝 CLIProxyAPI，使用該作業系統適用的官方方式安裝。</li>
+<li>啟動 CLIProxyAPI，設定為本機服務並監聽 `<a href="http://127.0.0.1:8317`。" target="_blank" rel="noopener">http://127.0.0.1:8317`。</a></li>
+<li>執行 Codex OAuth 登入；需要使用者瀏覽器授權時，清楚等待使用者完成。</li>
+<li>設定本機認證值 `sk-dummy`。</li>
+<li>建立永久 `claudex` 指令；修改 shell 設定前先備份。</li>
+<li>bash / zsh 使用 alias；PowerShell 使用 function，且執行完需恢復原環境變數。</li>
+<li>驗證 CLIProxyAPI 運行、port 可連、`claudex` 存在、模型為 `gpt-5.6-sol`，且普通 `claude` 未被改寫。</li>
+</ul>
+<p>---</p>
+<h2>技術脈絡：為什麼這件事重要？</h2>
+<p>這篇貼文背後的趨勢是 AI coding stack 的拆層：</p>
+<ul>
+<li>Claude Code：負責 agent loop、工具調度、檔案修改、互動式開發體驗。</li>
+<li>CLIProxyAPI：負責把不同 CLI / OAuth / API 介面轉成相容端點。</li>
+<li>GPT-5.6 Sol：作為實際推理與 coding 模型後端。</li>
+<li>alias / function：把上述設定包成可重複啟動的本機指令。</li>
+</ul>
+<p>換句話說，開發者開始不再把「coding agent 工具」與「模型供應商」綁死，而是把 harness、proxy、模型、shell 啟動器組合成自己的本機工作流。</p>
+<p>---</p>
+<h2>補充來源與交叉驗證</h2>
+<p>Brave Search 可找到 Tibo 的 X 貼文與相關教學文章，重點與 Threads 原文一致：</p>
+<ul>
+<li>Tibo 提到可用 CLIProxyAPI，把 Claude Code 指向 GPT-5.6 Sol。</li>
+<li>CLIProxyAPI GitHub 專案描述其用途是把 Antigravity、ChatGPT Codex、Claude Code、Grok Build 等 CLI 包成 OpenAI / Gemini / Claude / Codex compatible API service。</li>
+<li>ExplainX 也整理了 Claudex setup guide，指出可用 `ANTHROPIC_BASE_URL`、`ANTHROPIC_AUTH_TOKEN` 等方式讓 Claude Code 指向本機 proxy。</li>
+</ul>
+<p>相關來源：</p>
+<ul>
+<li>Tibo X： <a href="https://x.com/thsottiaux/status/2076119366647894371" target="_blank" rel="noopener">https://x.com/thsottiaux/status/2076119366647894371</a></li>
+<li>CLIProxyAPI： <a href="https://github.com/router-for-me/CLIProxyAPI" target="_blank" rel="noopener">https://github.com/router-for-me/CLIProxyAPI</a></li>
+<li>ExplainX guide： <a href="https://www.explainx.ai/blog/gpt-5-6-sol-claude-code-claudex-setup-guide-july-2026" target="_blank" rel="noopener">https://www.explainx.ai/blog/gpt-5-6-sol-claude-code-claudex-setup-guide-july-2026</a></li>
+</ul>
+<p>---</p>
+<h2>風險與實務提醒</h2>
+<p>這類 proxy / OAuth / alias 工作流雖然方便，但實作時應特別注意：</p>
+<ul>
+<li>不要把 OAuth token、cookie、認證檔案或 access token 貼到聊天、GitHub 或公開文件。</li>
+<li>任何修改 `~/.zshrc`、`~/.bashrc`、PowerShell `$PROFILE` 的操作都應先備份。</li>
+<li>應建立獨立指令，例如 `claudex`，不要覆蓋 `claude`。</li>
+<li>本機 proxy port 只應綁定 `127.0.0.1`，避免暴露到區網或公網。</li>
+<li>需要留意 Claude Code、OpenAI / Codex、CLIProxyAPI 各自的服務條款與帳號風險。</li>
+<li>若只是實驗，建議先在可還原的 shell profile 或測試帳號中跑通。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 學習雷達的價值</h2>
+<p>這篇貼文可歸入「Agentic Coding 工具混搭」類。它示範的不只是 Claude Code 或 GPT-5.6 Sol 單點能力，而是未來 AI coding 環境可能變成：</p>
+<ul>
+<li>coding agent harness 可替換；</li>
+<li>模型後端可替換；</li>
+<li>proxy / gateway 成為重要基礎設施；</li>
+<li>開發者用 shell alias / function 封裝多模型工作流；</li>
+<li>安裝與驗證本身也交給 Agent 自動完成。</li>
+</ul>
+<p>對進階使用者來說，值得關注的是「可逆、安全、最小侵入」的本機 Agent 環境配置模式；對課程或教學而言，則可把這篇當作 AI coding stack 拆解與 proxy-based workflow 的案例。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-14 · Threads post, Brave Search, GitHub · article</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">GPT-5.6 Sol</span><span class="tag">CLIProxyAPI</span><span class="tag">Agentic Coding</span><span class="tag">開發工具</span><span class="tag">工作流</span><h3>原始連結</h3><p><a href="https://www.threads.com/@prompt_case/post/DascVdxlPAn" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DascVdxlPAn</a></p><p><a href="https://www.threads.com/@prompt_case/post/DascVdxlPAn" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DascVdxlPAn</a></p><p><a href="https://www.threads.com/@prompt_case/post/DascVdxlPAn" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DascVdxlPAn</a></p><p><a href="https://x.com/thsottiaux/status/2076119366647894371" target="_blank" rel="noopener">https://x.com/thsottiaux/status/2076119366647894371</a></p><p><a href="https://github.com/router-for-me/CLIProxyAPI" target="_blank" rel="noopener">https://github.com/router-for-me/CLIProxyAPI</a></p><p><a href="https://www.explainx.ai/blog/gpt-5-6-sol-claude-code-claudex-setup-guide-july-2026" target="_blank" rel="noopener">https://www.explainx.ai/blog/gpt-5-6-sol-claude-code-claudex-setup-guide-july-2026</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
