@@ -152,6 +152,106 @@
     "markdown": "articles/2026/07/2026-07-14-threads-prompt-case-claudex-cliproxyapi-gpt-5-6-sol-claude-code.md"
   },
   {
+    "title": "Palmier Pro 觀察｜讓 Codex、Claude Code、Cursor 直接操作時間線的開源 AI 剪輯器",
+    "date": "2026-07-14",
+    "source": "X/Twitter post, Brave Search, GitHub, Y Combinator",
+    "author": "阿西_出海 (@axichuhai)",
+    "type": "article",
+    "topics": [
+      "Palmier Pro",
+      "AI影片",
+      "影片剪輯",
+      "MCP",
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "開源工具",
+      "Agentic Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/axichuhai/status/2076506494812529050",
+      "https://x.com/axichuhai/status/2076506494812529050",
+      "https://x.com/axichuhai/status/2076506494812529050",
+      "https://github.com/palmier-io/palmier-pro",
+      "https://www.ycombinator.com/launches/QtT-palmier-pro-an-open-source-video-editor-your-agents-can-operate",
+      "https://www.ycombinator.com/companies/palmier"
+    ],
+    "excerpt": "阿西_出海分享 Palmier Pro：一款由 YC 團隊推出的開源 macOS 影片剪輯器，核心亮點是讓 Codex、Claude Code、Cursor 透過 MCP 直接操作專業時間線；使用者一句話，agent 就能在同一個剪輯專案裡加素材、生成畫面、調整剪輯點與鋪設片段。 原文： https://x.com/axichuhai/status/2076506494812529050 ---",
+    "slug": "2026-07-14-x-axichuhai-palmier-pro-ai-video-editor-mcp",
+    "html": "articles/2026-07-14-x-axichuhai-palmier-pro-ai-video-editor-mcp.html",
+    "markdown": "articles/2026/07/2026-07-14-x-axichuhai-palmier-pro-ai-video-editor-mcp.md"
+  },
+  {
+    "title": "ChatCut × Codex 快速教學觀察｜MCP + Skill 安裝後用自然語言剪產品介紹影片",
+    "date": "2026-07-14",
+    "source": "X/Twitter posts, Brave Search, ChatCut GitHub",
+    "author": "向阳乔木 (@vista8), 阿囤囤 (@Panggungun24)",
+    "type": "article",
+    "topics": [
+      "ChatCut",
+      "Codex",
+      "MCP",
+      "Agent Skill",
+      "AI影片",
+      "影片剪輯",
+      "產品介紹影片",
+      "Agentic Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/vista8/status/2076494081207992657",
+      "https://x.com/vista8/status/2076494081207992657",
+      "https://x.com/vista8/status/2076494081207992657",
+      "https://x.com/Panggungun24/status/2076242016124723290",
+      "https://github.com/ChatCut-Inc/agent-plugin",
+      "https://chatcut.io/codex",
+      "https://chatcut.io/codex-plugin"
+    ],
+    "excerpt": "向阳乔木與阿囤囤分別分享 ChatCut × Codex 的入門用法：把 ChatCut plugin 安裝到 Codex，完成 MCP、Skill 與 OAuth 授權後，就能用自然語言要求 Codex 直接操作 ChatCut 影片時間線，生成產品介紹、配音解說、字幕與圖文並茂的功能演示影片。 原文： https://x.com/vista8/status/2076494081207992657 相關貼文： https://x.com/Panggungun24/status/2076242016124723290 ---",
+    "slug": "2026-07-14-x-vista8-panggungun24-chatcut-codex-mcp-skill-video-editing",
+    "html": "articles/2026-07-14-x-vista8-panggungun24-chatcut-codex-mcp-skill-video-editing.html",
+    "markdown": "articles/2026/07/2026-07-14-x-vista8-panggungun24-chatcut-codex-mcp-skill-video-editing.md"
+  },
+  {
+    "title": "MotionSites AI 網站提示詞庫觀察｜用高端網站 Prompt 快速生成動畫落地頁、SaaS 與作品集",
+    "date": "2026-07-14",
+    "source": "X/Twitter post, Brave Search",
+    "author": "雨哥向前冲 (@xiangxiang103)",
+    "type": "article",
+    "topics": [
+      "MotionSites",
+      "AI網站",
+      "Prompt Library",
+      "Landing Page",
+      "SaaS",
+      "作品集",
+      "Claude",
+      "Cursor",
+      "Lovable",
+      "Bolt"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/xiangxiang103/status/2076337459915633130",
+      "https://x.com/xiangxiang103/status/2076337459915633130",
+      "https://x.com/xiangxiang103/status/2076337459915633130",
+      "https://motionsites.ai/",
+      "https://www.motionsite.ai/",
+      "https://github.com/aayushsoam/motionsites.ai"
+    ],
+    "excerpt": "雨哥向前冲分享 MotionSites.ai：一個面向 AI 網站生成工具的高端 prompt / template library。使用者可挑選 landing page、SaaS、portfolio、hero section 等類型，把提示詞貼給 Claude、Cursor、Lovable、Bolt 等 AI 開發工具，快速產出有動畫與高質感視覺的網站。 原文： https://x.com/xiangxiang103/status/2076337459915633130 ---",
+    "slug": "2026-07-14-x-xiangxiang103-motionsites-ai-website-prompt-library",
+    "html": "articles/2026-07-14-x-xiangxiang103-motionsites-ai-website-prompt-library.html",
+    "markdown": "articles/2026/07/2026-07-14-x-xiangxiang103-motionsites-ai-website-prompt-library.md"
+  },
+  {
     "title": "AI 影音與 Agentic 工作流雷達｜從瀏覽器剪輯、Codex 影片編輯到短影音自動化",
     "date": "2026-07-13",
     "source": "X/Twitter 貼文、GitHub、Brave Search、YouTube transcript",
