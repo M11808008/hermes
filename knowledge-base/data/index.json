@@ -185,6 +185,67 @@
     "markdown": "articles/2026/07/2026-07-14-x-axichuhai-palmier-pro-ai-video-editor-mcp.md"
   },
   {
+    "title": "MoneyPrinterTurbo 觀察｜一鍵生成高清短視頻的開源 AI 自媒體流水線",
+    "date": "2026-07-14",
+    "source": "X/Twitter post, Brave Search, GitHub",
+    "author": "智享 (@CycleDecoded)",
+    "type": "article",
+    "topics": [
+      "MoneyPrinterTurbo",
+      "AI影片",
+      "短影音",
+      "自媒體",
+      "TTS",
+      "字幕",
+      "開源工具",
+      "自動化"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/CycleDecoded/status/2076642075018477966",
+      "https://x.com/CycleDecoded/status/2076642075018477966",
+      "https://x.com/CycleDecoded/status/2076642075018477966",
+      "https://github.com/harry0703/MoneyPrinterTurbo",
+      "https://github.com/harry0703/MoneyPrinterTurbo/blob/main/README-en.md"
+    ],
+    "excerpt": "智享分享 MoneyPrinterTurbo：一個名字很誇張、但功能很完整的開源 AI 短視頻生成流水線。輸入主題後，它可自動產生腳本、配音、素材、字幕與影片合成，面向 YouTube Shorts、TikTok、Reels、抖音式短影音與無臉頻道自動化。 原文： https://x.com/CycleDecoded/status/2076642075018477966 ---",
+    "slug": "2026-07-14-x-cycledecoded-moneyprinterturbo-ai-short-video-pipeline",
+    "html": "articles/2026-07-14-x-cycledecoded-moneyprinterturbo-ai-short-video-pipeline.html",
+    "markdown": "articles/2026/07/2026-07-14-x-cycledecoded-moneyprinterturbo-ai-short-video-pipeline.md"
+  },
+  {
+    "title": "ChatCut × Codex 實測流程｜把 AI 影片素材整理成古裝仙俠運鏡教學",
+    "date": "2026-07-14",
+    "source": "X/Twitter post, ChatCut references",
+    "author": "探路AI (@TanLuAI)",
+    "type": "article",
+    "topics": [
+      "ChatCut",
+      "Codex",
+      "AI影片",
+      "影片剪輯",
+      "MCP",
+      "運鏡教學",
+      "Agentic Workflow"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/TanLuAI/status/2076549903049011399",
+      "https://x.com/TanLuAI/status/2076549903049011399",
+      "https://x.com/TanLuAI/status/2076549903049011399",
+      "https://chatcut.io/chatgpt",
+      "https://github.com/ChatCut-Inc/agent-plugin"
+    ],
+    "excerpt": "探路AI 的貼文提供了一個比「安裝 ChatCut」更具體的實戰案例：把既有 AI 影片素材交給 Codex + ChatCut，要求它整理成古裝 / 仙俠影視劇運鏡教學合集，並加入字幕、旁白、背景音樂與動畫效果；生成後再用提示詞做第二輪修正，最後人工微調收尾。 原文： https://x.com/TanLuAI/status/2076549903049011399 ---",
+    "slug": "2026-07-14-x-tanluai-chatcut-codex-xianxia-camera-movement-tutorial",
+    "html": "articles/2026-07-14-x-tanluai-chatcut-codex-xianxia-camera-movement-tutorial.html",
+    "markdown": "articles/2026/07/2026-07-14-x-tanluai-chatcut-codex-xianxia-camera-movement-tutorial.md"
+  },
+  {
     "title": "ChatCut × Codex 快速教學觀察｜MCP + Skill 安裝後用自然語言剪產品介紹影片",
     "date": "2026-07-14",
     "source": "X/Twitter posts, Brave Search, ChatCut GitHub",
