@@ -1,5 +1,35 @@
 [
   {
+    "title": "OpenClaw × LibTV Skill 安裝與 Access Key 配置指南",
+    "date": "2026-07-14",
+    "source": "LINE shared note, GitHub, Brave Search",
+    "author": "LibTV / OpenClaw 社群",
+    "type": "article",
+    "topics": [
+      "OpenClaw",
+      "LibTV",
+      "LiblibAI",
+      "Agent Skill",
+      "AI影片",
+      "AI生圖",
+      "AI生視頻",
+      "工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/libtv-labs/libtv-skills",
+      "https://github.com/libtv-labs/libtv-skills/blob/main/skills/libtv-skill/SKILL.md",
+      "https://clawhub.ai/haofanwang/libtv-skill",
+      "https://www.liblib.tv"
+    ],
+    "excerpt": "LibTV Skill 把 Liblib.tv / LibTV 的 AI 生圖、生視頻與影片編輯能力包成 OpenClaw Skill；使用者只要完成技能安裝與 `LIBTV_ACCESS_KEY` 設定，就能用自然語言讓 Agent 建立會話、上傳素材、生成或修改影片、查詢進度並下載成果。 ---",
+    "slug": "2026-07-14-openclaw-libtv-skill-install-access-key-guide",
+    "html": "articles/2026-07-14-openclaw-libtv-skill-install-access-key-guide.html",
+    "markdown": "articles/2026/07/2026-07-14-openclaw-libtv-skill-install-access-key-guide.md"
+  },
+  {
     "title": "AI 影音與 Agentic 工作流雷達｜從瀏覽器剪輯、Codex 影片編輯到短影音自動化",
     "date": "2026-07-13",
     "source": "X/Twitter 貼文、GitHub、Brave Search、YouTube transcript",

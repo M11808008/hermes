@@ -1,0 +1,123 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OpenClaw × LibTV Skill 安裝與 Access Key 配置指南</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>OpenClaw × LibTV Skill 安裝與 Access Key 配置指南</h1><h1>OpenClaw × LibTV Skill 安裝與 Access Key 配置指南</h1>
+<h2>一句話摘要</h2>
+<p>LibTV Skill 把 Liblib.tv / LibTV 的 AI 生圖、生視頻與影片編輯能力包成 OpenClaw Skill；使用者只要完成技能安裝與 `LIBTV_ACCESS_KEY` 設定，就能用自然語言讓 Agent 建立會話、上傳素材、生成或修改影片、查詢進度並下載成果。</p>
+<p>---</p>
+<h2>為什麼值得收進 AI 學習雷達？</h2>
+<p>這份安裝流程代表一個重要趨勢：AI 影音工具正在從「單一網頁產品」變成「Agent 可調用的 Skill」。</p>
+<p>對課程、短影音、品牌內容與知識型創作來說，價值不只是能生成影片，而是可以把「劇本 → 分鏡 → 參考圖 / 影片 → 生成 → 修改 → 下載」串成可重複的 Agent 工作流。官方 Skill 描述也明確覆蓋：</p>
+<ul>
+<li>文生圖、文生視頻、圖生視頻、影片續寫。</li>
+<li>局部修改、元素替換、鏡頭調整、風格遷移。</li>
+<li>一句話生成短劇 / 短漫劇。</li>
+<li>復刻既有影片風格製作 TVC / 宣傳片。</li>
+<li>音樂 MV、產品展示片、教育影片與短視頻製作。</li>
+</ul>
+<p>這和近期 AI 影片工具鏈的方向一致：使用者不再只是在剪輯器中手動操作，而是把創作意圖交給 Agent，再由 Skill 調用後端模型與工作流。</p>
+<p>---</p>
+<h2>前置準備</h2>
+<p>先完成 OpenClaw 基礎環境部署。可使用：</p>
+<ul>
+<li>終端版 OpenClaw。</li>
+<li>飛書插件版 OpenClaw。</li>
+</ul>
+<p>對新手而言，飛書插件版通常較簡單；對開發者與需要本地自動化的人，終端版較容易整合到既有工作流。</p>
+<p>---</p>
+<h2>第一步：安裝 LibTV Skill</h2>
+<p>官方與社群常見安裝方式可分成四種；實務上選一種即可。</p>
+<p>### 方式一：npx 一鍵安裝（終端版推薦）</p>
+<p>在終端執行：</p>
+<p>```bash</p>
+<p>npx skills add libtv-labs/libtv-skills --skill libtv-skill</p>
+<p>```</p>
+<p>這會自動從 GitHub 倉庫拉取指定 Skill。若想先互動式選擇，也可執行：</p>
+<p>```bash</p>
+<p>npx skills add libtv-labs/libtv-skills</p>
+<p>```</p>
+<p>### 方式二：ClawHub 圖形化安裝</p>
+<p>前往 ClawHub 的 LibTV API Skills 頁面，點擊安裝即可同步到 OpenClaw 環境。這適合不想碰命令列、或希望透過平台管理 Skill 的使用者。</p>
+<p>ClawHub 頁面：</p>
+<p><a href="https://clawhub.ai/haofanwang/libtv-skill" target="_blank" rel="noopener">https://clawhub.ai/haofanwang/libtv-skill</a></p>
+<p>### 方式三：手動離線安裝</p>
+<p>從 GitHub 倉庫下載壓縮包：</p>
+<p><a href="https://github.com/libtv-labs/libtv-skills" target="_blank" rel="noopener">https://github.com/libtv-labs/libtv-skills</a></p>
+<p>解壓後，把其中的 `libtv-skill` 資料夾放到 OpenClaw 本地技能目錄：</p>
+<ul>
+<li>macOS / Linux：`~/.openclaw/skills/`</li>
+<li>Windows：`C:\Users\你的使用者名稱\.openclaw\skills\`</li>
+</ul>
+<p>### 方式四：飛書插件版簡化安裝</p>
+<p>若使用飛書 OpenClaw 機器人，可直接在對話中發送安裝指令，由機器人自動部署。這是最適合非工程背景使用者的入口。</p>
+<p>---</p>
+<h2>第二步：配置 Access Key</h2>
+<p>### 1. 取得 Access Key</p>
+<p>登入 LibTV / Liblib.tv：</p>
+<p><a href="https://www.liblib.tv" target="_blank" rel="noopener">https://www.liblib.tv</a></p>
+<p>進入右上角「LibTV Skills」入口，建立並複製專屬 Access Key。</p>
+<p>### 2. 設定環境變數</p>
+<p>Skill 必要環境變數為：</p>
+<p>```bash</p>
+<p>LIBTV_ACCESS_KEY=你的密鑰</p>
+<p>```</p>
+<p>macOS / Linux 臨時生效：</p>
+<p>```bash</p>
+<p>export LIBTV_ACCESS_KEY=&quot;你的密鑰&quot;</p>
+<p>```</p>
+<p>Windows CMD 臨時生效：</p>
+<p>```bat</p>
+<p>set LIBTV_ACCESS_KEY=&quot;你的密鑰&quot;</p>
+<p>```</p>
+<p>若要讓設定永久保留，可在 `libtv-skill` 資料夾內新增 `.env`：</p>
+<p>```plaintext</p>
+<p>LIBTV_ACCESS_KEY=你的密鑰</p>
+<p>```</p>
+<p>官方 README 也列出可選的 IM 服務端點設定，通常不必更動：</p>
+<ul>
+<li>`OPENAPI_IM_BASE`：預設 `<a href="https://im.liblib.tv`" target="_blank" rel="noopener">https://im.liblib.tv`</a></li>
+<li>`IM_BASE_URL`：預設 `<a href="https://im.liblib.tv`" target="_blank" rel="noopener">https://im.liblib.tv`</a></li>
+</ul>
+<p>---</p>
+<h2>第三步：驗證安裝</h2>
+<p>終端執行：</p>
+<p>```bash</p>
+<p>openclaw skills list</p>
+<p>```</p>
+<p>若清單中出現 `libtv-skill`，即代表安裝成功。</p>
+<p>完成後即可用自然語言呼叫，例如：</p>
+<ul>
+<li>「用 LibTV 把這段小說文案生成完整漫劇成片」</li>
+<li>「用這張參考圖生成 15 秒舞蹈分鏡視頻」</li>
+<li>「把這段產品介紹做成短視頻廣告」</li>
+<li>「把這個影片改成賽博龐克風格」</li>
+</ul>
+<p>---</p>
+<h2>技術拆解：Skill 實際提供哪些腳本？</h2>
+<p>根據 `libtv-labs/libtv-skills` README，`libtv-skill` 主要包含：</p>
+<ul>
+<li>`create_session.py`：建立會話或向既有會話發送生成 / 編輯指令。</li>
+<li>`query_session.py`：查詢會話進度與訊息列表，適合輪詢長任務。</li>
+<li>`change_project.py`：切換目前 Access Key 綁定的專案。</li>
+<li>`upload_file.py`：上傳圖片或影片素材。</li>
+<li>`download_results.py`：批量下載會話中的生成結果。</li>
+</ul>
+<p>這表示它不是單純的「提示詞模板」，而是有完整 I/O 能力的 Agent Skill：能建立專案、傳素材、發任務、查進度、拉結果。</p>
+<p>---</p>
+<h2>實務注意事項</h2>
+<ul>
+<li>Access Key 屬於敏感憑證，不應貼到公開文件、截圖或 GitHub repo。</li>
+<li>`.env` 若放在專案內，需確認 `.gitignore` 已排除。</li>
+<li>影片與短劇生成通常耗時較長，Agent 應輪詢 `query_session.py`，不要假設立即完成。</li>
+<li>若要編輯既有圖片 / 影片，需先透過 `upload_file.py` 上傳素材，取得可存取 URL。</li>
+<li>生成完成後，應使用 `download_results.py` 保存成品，避免只依賴會話頁面。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 影音工作流的啟發</h2>
+<p>LibTV Skill 的關鍵不是「又多一個 AI 影片平台」，而是把影音創作包成 Agent 可以理解與調用的技能。這種模式很適合延伸成：</p>
+<ul>
+<li>課程宣傳短片自動生成。</li>
+<li>小說 / 腳本轉漫劇。</li>
+<li>商品素材轉廣告片。</li>
+<li>教學文案轉分鏡影片。</li>
+<li>多版本 A/B 創意測試。</li>
+<li>社群貼文、短影音與封面的一體化生產。</li>
+</ul>
+<p>若未來搭配 OpenClaw、Codex、Claude Code 或其他 Skill 生態，影音創作會更接近「可編排的內容工廠」：腳本、分鏡、素材、模型選型、生成、修改、審核與下載都能變成一條可沉澱的 SOP。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-14 · LINE shared note, GitHub, Brave Search · article</div><h3>標籤</h3><span class="tag">OpenClaw</span><span class="tag">LibTV</span><span class="tag">LiblibAI</span><span class="tag">Agent Skill</span><span class="tag">AI影片</span><span class="tag">AI生圖</span><span class="tag">AI生視頻</span><span class="tag">工作流</span><h3>原始連結</h3><p><a href="https://github.com/libtv-labs/libtv-skills" target="_blank" rel="noopener">https://github.com/libtv-labs/libtv-skills</a></p><p><a href="https://github.com/libtv-labs/libtv-skills/blob/main/skills/libtv-skill/SKILL.md" target="_blank" rel="noopener">https://github.com/libtv-labs/libtv-skills/blob/main/skills/libtv-skill/SKILL.md</a></p><p><a href="https://clawhub.ai/haofanwang/libtv-skill" target="_blank" rel="noopener">https://clawhub.ai/haofanwang/libtv-skill</a></p><p><a href="https://www.liblib.tv" target="_blank" rel="noopener">https://www.liblib.tv</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
