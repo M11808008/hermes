@@ -30,6 +30,37 @@
     "markdown": "articles/2026/07/2026-07-14-openclaw-libtv-skill-install-access-key-guide.md"
   },
   {
+    "title": "GPT-SoVITS 本地聲音複製觀察｜1 分鐘樣本、少量訓練與開源 TTS 工作流",
+    "date": "2026-07-14",
+    "source": "Threads post, GitHub, Brave Search",
+    "author": "土豆哥 (@iluciddreaming)",
+    "type": "article",
+    "topics": [
+      "GPT-SoVITS",
+      "TTS",
+      "聲音複製",
+      "Voice Cloning",
+      "ElevenLabs",
+      "開源工具",
+      "本地 AI",
+      "AI語音"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@iluciddreaming/post/Dat5XRHFBCS",
+      "https://www.threads.com/@iluciddreaming/post/Dat5XRHFBCS",
+      "https://www.threads.com/@iluciddreaming/post/Dat5XRHFBCS",
+      "https://github.com/RVC-Boss/GPT-SoVITS",
+      "https://raw.githubusercontent.com/RVC-Boss/GPT-SoVITS/main/README.md"
+    ],
+    "excerpt": "土豆哥在 Threads 分享 GPT-SoVITS：不用每月訂閱 ElevenLabs，只要少量聲音樣本就能做音色複製與文字轉語音；重點是它可本地運行、免費開源，讓個人創作者能把自己的聲音 IP 掌握在自己設備與工作流中。 原文： https://www.threads.com/@iluciddreaming/post/Dat5XRHFBCS ---",
+    "slug": "2026-07-14-threads-iluciddreaming-gpt-sovits-local-voice-cloning-tts",
+    "html": "articles/2026-07-14-threads-iluciddreaming-gpt-sovits-local-voice-cloning-tts.html",
+    "markdown": "articles/2026/07/2026-07-14-threads-iluciddreaming-gpt-sovits-local-voice-cloning-tts.md"
+  },
+  {
     "title": "Claudex 工作流觀察｜用 CLIProxyAPI 讓 Claude Code 透過 GPT-5.6 Sol 運行",
     "date": "2026-07-14",
     "source": "Threads post, Brave Search, GitHub",
