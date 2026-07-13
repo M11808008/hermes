@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ChatGPT/Codex Sites 插件｜五分鐘零程式碼上線網站的新部署入口</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>ChatGPT/Codex Sites 插件｜五分鐘零程式碼上線網站的新部署入口</h1><h1>ChatGPT/Codex Sites 插件｜五分鐘零程式碼上線網站的新部署入口</h1>
+<h2>一句話摘要</h2>
+<p>AI少年實測 ChatGPT / Codex 的 Sites 插件，主張可從零、不寫一行程式碼，在約五分鐘內生成並上線一個可用網址的網站。這代表 OpenAI 正把「寫程式」往後延伸到「託管、部署、檢查與分享」，直接切入 Vercel、Cloudflare Pages 這類前端部署平台的入門場景。</p>
+<p>原文：</p>
+<p><a href="https://x.com/aehyok/status/2076471245345001850" target="_blank" rel="noopener">https://x.com/aehyok/status/2076471245345001850</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>AI少年在 X 貼文中提到：</p>
+<ul>
+<li>「勇哥」使用 Vercel 約十分鐘可上線網站。</li>
+<li>他改用 ChatGPT / Codex 中的 Sites 插件實測。</li>
+<li>從零開始、不寫一行程式碼開發網站。</li>
+<li>約五分鐘即可上線，並取得可訪問網址。</li>
+<li>他認為 Vercel 與 Cloudflare 在網站部署領域迎來 OpenAI 自研 Sites 插件這個新競爭者。</li>
+<li>貼文附帶影片，展示 Sites 插件功能。</li>
+</ul>
+<p>貼文也引用了 Modengsir AI 的 Vercel 教學文章作為對照脈絡：傳統免費建站流程通常需要 GitHub 存放程式碼，再透過 Vercel 部署成公開網站。</p>
+<p>---</p>
+<h2>OpenAI 官方文件交叉查核</h2>
+<p>Brave Search 與 OpenAI / ChatGPT Learn 文件顯示，Sites 是 Codex / ChatGPT 近期新增的 hosted website 能力，官方描述重點包括：</p>
+<ul>
+<li>Sites 目前是 public beta。</li>
+<li>可用性取決於 ChatGPT 方案、所在地區與 workspace 設定。</li>
+<li>Sites 讓 ChatGPT 建立、託管、精修與分享網站、web apps 與 games。</li>
+<li>適合把一段 prompt 或相容的既有專案轉成 hosted experience。</li>
+<li>使用者不需要另外設定獨立部署 workflow。</li>
+<li>可在 ChatGPT 桌面版或網頁介面中建立、保存、部署與管理 Sites 專案。</li>
+<li>Codex CLI 仍可用於本地編輯與測試，但 Sites 的管理視圖主要在 ChatGPT 介面中完成。</li>
+</ul>
+<p>Codex Releases 先前也宣布：Sites plugin 可用來 create、save、deploy、inspect websites、dashboards、internal tools、web apps 與 games，並由 OpenAI 託管。</p>
+<p>---</p>
+<h2>和 Vercel / Cloudflare Pages 的差異</h2>
+<p>Sites 的切入點不是取代專業部署平台的完整 DevOps 能力，而是大幅降低「把想法變成可訪問網站」的第一步摩擦。</p>
+<p>| 面向 | ChatGPT / Codex Sites | Vercel / Cloudflare Pages |</p>
+<p>|---|---|---|</p>
+<p>| 主要入口 | 自然語言與 Codex agent | Git repo、build setting、部署平台 |</p>
+<p>| 適合對象 | 非工程背景、快速 prototype、內部工具 | 正式產品、前端工程、團隊協作 |</p>
+<p>| 核心價值 | 生成、修正、託管一條龍 | 可攜性、CI/CD、環境變數、domain、edge 設定 |</p>
+<p>| 學習成本 | 低，偏 no-code / agentic workflow | 中，需要 Git / framework / build 知識 |</p>
+<p>| 風險 | beta、平台限制、可控性未知 | 需要配置與除錯，但控制權較完整 |</p>
+<p>對初學者來說，Sites 很像「AI 版 Netlify Drop + agent 修站」：先讓網站能活起來，再決定是否遷移到 GitHub + Vercel / Cloudflare 的工程化流程。</p>
+<p>---</p>
+<h2>為什麼值得關注？</h2>
+<p>這則貼文值得收錄，原因不只在於「五分鐘上線網站」，而是 OpenAI 正在把 Codex 從 coding agent 推進到 deployment agent：</p>
+<ul>
+<li>**AI agent 的邊界擴張**：不再只產生程式碼，而是負責生成、部署、檢查與迭代。</li>
+<li>**網站製作入口重新洗牌**：對非工程使用者，prompt-first 的部署體驗可能比學 Git / Vercel 更直覺。</li>
+<li>**教學流程可改寫**：AI 課程可先用 Sites 快速做成果展示，再補 GitHub / Vercel / Cloudflare 的正式部署概念。</li>
+<li>**內部工具原型更快**：dashboard、活動頁、簡易互動工具、課程 Demo 可直接由 ChatGPT/Codex 起草並託管。</li>
+<li>**部署平台競爭加劇**：Vercel / Cloudflare 的優勢仍在 production 與工程控制，但 OpenAI 可吃下 prototype 與新手市場。</li>
+</ul>
+<p>---</p>
+<h2>實務使用提醒</h2>
+<ul>
+<li>**先確認帳號與地區可用性**：官方文件指出 Sites 可用性依方案、區域與 workspace 設定而定。</li>
+<li>**不要把 beta 當正式 production 依賴**：若是正式商業網站，仍建議保留原始碼、部署流程與可遷移方案。</li>
+<li>**檢查自訂網域與資料控制**：不同階段的 Sites 可能在 custom domain、資料儲存、export、server-side 能力上有限制。</li>
+<li>**敏感資料不要直接貼進 prompt**：若要做內部工具，應留意 API key、個資與企業資料外流風險。</li>
+<li>**成果仍需人工驗收**：AI 生成網站常見問題包含版面跑版、無障礙不足、SEO metadata 不完整、行動版未測試。</li>
+<li>**與 Vercel / Cloudflare 互補使用**：先用 Sites 做 demo，再把成熟專案搬到 GitHub + Vercel / Cloudflare 做正式營運。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 學習雷達的結論</h2>
+<p>ChatGPT / Codex Sites 是 AI agent 產品化的重要訊號：OpenAI 不只要讓使用者「寫出程式」，也要讓使用者「直接得到可分享的產品」。</p>
+<p>對欒帥的課程與知識庫工作流而言，Sites 很適合放在「AI 快速原型」單元：讓學員先用自然語言完成可展示網站，再回頭理解 GitHub、Vercel、Cloudflare Pages 與正式部署流程。這樣可降低入門門檻，同時保留往工程化流程升級的路徑。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-14 · X/Twitter post, Brave Search, OpenAI Docs · article</div><h3>標籤</h3><span class="tag">OpenAI Sites</span><span class="tag">Codex</span><span class="tag">ChatGPT</span><span class="tag">網站部署</span><span class="tag">Vercel</span><span class="tag">Cloudflare Pages</span><span class="tag">No-code</span><span class="tag">AI Agent</span><h3>原始連結</h3><p><a href="https://x.com/aehyok/status/2076471245345001850" target="_blank" rel="noopener">https://x.com/aehyok/status/2076471245345001850</a></p><p><a href="https://x.com/aehyok/status/2076471245345001850" target="_blank" rel="noopener">https://x.com/aehyok/status/2076471245345001850</a></p><p><a href="https://x.com/aehyok/status/2076471245345001850" target="_blank" rel="noopener">https://x.com/aehyok/status/2076471245345001850</a></p><p><a href="https://learn.chatgpt.com/docs/sites" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/sites</a></p><p><a href="https://developers.openai.com/codex/sites" target="_blank" rel="noopener">https://developers.openai.com/codex/sites</a></p><p><a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">https://developers.openai.com/codex/plugins</a></p><p><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener">https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan</a></p><p><a href="https://x.com/CodexReleases/status/2061846140258033905" target="_blank" rel="noopener">https://x.com/CodexReleases/status/2061846140258033905</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

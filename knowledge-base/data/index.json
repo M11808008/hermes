@@ -152,6 +152,40 @@
     "markdown": "articles/2026/07/2026-07-14-threads-prompt-case-claudex-cliproxyapi-gpt-5-6-sol-claude-code.md"
   },
   {
+    "title": "ChatGPT/Codex Sites 插件｜五分鐘零程式碼上線網站的新部署入口",
+    "date": "2026-07-14",
+    "source": "X/Twitter post, Brave Search, OpenAI Docs",
+    "author": "AI少年 (@aehyok)",
+    "type": "article",
+    "topics": [
+      "OpenAI Sites",
+      "Codex",
+      "ChatGPT",
+      "網站部署",
+      "Vercel",
+      "Cloudflare Pages",
+      "No-code",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/aehyok/status/2076471245345001850",
+      "https://x.com/aehyok/status/2076471245345001850",
+      "https://x.com/aehyok/status/2076471245345001850",
+      "https://learn.chatgpt.com/docs/sites",
+      "https://developers.openai.com/codex/sites",
+      "https://developers.openai.com/codex/plugins",
+      "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
+      "https://x.com/CodexReleases/status/2061846140258033905"
+    ],
+    "excerpt": "AI少年實測 ChatGPT / Codex 的 Sites 插件，主張可從零、不寫一行程式碼，在約五分鐘內生成並上線一個可用網址的網站。這代表 OpenAI 正把「寫程式」往後延伸到「託管、部署、檢查與分享」，直接切入 Vercel、Cloudflare Pages 這類前端部署平台的入門場景。 原文： https://x.com/aehyok/status/2076471245345001850 ---",
+    "slug": "2026-07-14-x-aehyok-chatgpt-codex-sites-plugin",
+    "html": "articles/2026-07-14-x-aehyok-chatgpt-codex-sites-plugin.html",
+    "markdown": "articles/2026/07/2026-07-14-x-aehyok-chatgpt-codex-sites-plugin.md"
+  },
+  {
     "title": "Palmier Pro 觀察｜讓 Codex、Claude Code、Cursor 直接操作時間線的開源 AI 剪輯器",
     "date": "2026-07-14",
     "source": "X/Twitter post, Brave Search, GitHub, Y Combinator",
