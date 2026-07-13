@@ -30,6 +30,37 @@
     "markdown": "articles/2026/07/2026-07-14-openclaw-libtv-skill-install-access-key-guide.md"
   },
   {
+    "title": "Grok Voice Agent Builder 觀察｜註冊送美國電話號碼與無程式語音代理趨勢",
+    "date": "2026-07-14",
+    "source": "Threads post, Brave Search, xAI references",
+    "author": "Boom (@hintfuck)",
+    "type": "article",
+    "topics": [
+      "Grok",
+      "xAI",
+      "Voice Agent",
+      "語音代理",
+      "電話代理",
+      "AI客服",
+      "AI入口",
+      "No-code"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@hintfuck/post/Dato5SpDzC5",
+      "https://www.threads.com/@hintfuck/post/Dato5SpDzC5",
+      "https://www.threads.com/@hintfuck/post/Dato5SpDzC5",
+      "https://x.ai/voice",
+      "https://x.ai/news/grok-voice-agent-builder"
+    ],
+    "excerpt": "Boom 在 Threads 分享：「Grok 又出了 voice agent，註冊就送一個美國電話號碼。」這指向 xAI 的 Voice Agent Builder：一個 no-code 語音代理平台，讓使用者在瀏覽器中建立可接電話的 AI agent，並由平台提供測試 / 部署用電話號碼。 原文： https://www.threads.com/@hintfuck/post/Dato5SpDzC5 ---",
+    "slug": "2026-07-14-threads-hintfuck-grok-voice-agent-builder-phone-number",
+    "html": "articles/2026-07-14-threads-hintfuck-grok-voice-agent-builder-phone-number.html",
+    "markdown": "articles/2026/07/2026-07-14-threads-hintfuck-grok-voice-agent-builder-phone-number.md"
+  },
+  {
     "title": "GPT-SoVITS 本地聲音複製觀察｜1 分鐘樣本、少量訓練與開源 TTS 工作流",
     "date": "2026-07-14",
     "source": "Threads post, GitHub, Brave Search",
