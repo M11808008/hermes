@@ -1,0 +1,63 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude Code In-App Browser｜Claude 桌面版可直接讀網頁、點擊與填表單</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claude Code In-App Browser｜Claude 桌面版可直接讀網頁、點擊與填表單</h1><h1>Claude Code In-App Browser｜Claude 桌面版可直接讀網頁、點擊與填表單</h1>
+<h2>一句話摘要</h2>
+<p>這則 Threads 記錄的是 Claude Code 從「能寫程式的助理」進一步走向「能看見並操作網頁的 agent」：它可以在桌面版內建瀏覽器或透過 Chrome 連接，讀網頁、點擊、填表單、測試 web app、抓資料與回報結果。</p>
+<p>原文：</p>
+<p><a href="https://www.threads.com/@karte_tw/post/DaxUZGCAeCK" target="_blank" rel="noopener">https://www.threads.com/@karte_tw/post/DaxUZGCAeCK</a></p>
+<p>留言補充的 YouTube：</p>
+<p><a href="https://www.youtube.com/watch?v=_lVGyB-LXTs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=_lVGyB-LXTs</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>Chuan Master（@karte_tw）在 Threads 表示：</p>
+<p>&gt; Claude 現在有瀏覽器了！！！不只能聊天，還能替你截圖、點擊、填表單、爬資料。</p>
+<p>貼文的想像場景是：使用者說「幫我查這個網站」，Claude 會自己打開網頁、找資訊並回覆答案。作者後續留言補充 YouTube 影片 `Claude Code: In-App Browser — Claude Browses the Web With You`。</p>
+<p>擷取時的可見互動：約 3,312 次瀏覽、28 個讚、1 則回覆、10 次轉發／分享類互動。</p>
+<p>---</p>
+<h2>官方與 Brave Search 交叉查證</h2>
+<p>Brave Search 找到 ClaudeDevs 在 X 的官方公告：</p>
+<p><a href="https://x.com/ClaudeDevs/status/2075635283211772279" target="_blank" rel="noopener">https://x.com/ClaudeDevs/status/2075635283211772279</a></p>
+<p>公告文字重點是：Claude Code on desktop now has an in-app browser；Claude 可以開啟 docs、designs 或其他網站，並像操作 local dev servers 一樣 read、click through、interact；同時它是 sandboxed and configurable，使用者可選擇 sessions 是否持久保存。</p>
+<p>Claude Code 官方文件也提供相鄰能力的確認：</p>
+<ul>
+<li>Claude Code overview：Claude Code 是 agentic coding tool，可讀 codebase、編輯檔案、執行命令，並整合 terminal、IDE、desktop app 與 browser。</li>
+<li>Claude Code with Chrome 文件：可連接 Chrome，用於測試 web apps、debug console logs、自動填表單與從網頁抽取資料。</li>
+</ul>
+<p>因此，原文「截圖、點擊、填表單、爬資料」的方向大致成立；但更精準的說法是：這是 Claude Code desktop / browser integration 的受控瀏覽器操作能力，而不是一般聊天版 Claude 無條件可任意操作全網。</p>
+<p>---</p>
+<h2>這代表什麼工作流變化</h2>
+<p>Claude Code 的瀏覽器能力讓原本需要在「聊天視窗、瀏覽器、開發工具、終端機」之間來回切換的流程，變成更接近閉環 agent workflow：</p>
+<ul>
+<li>讀需求或 bug report。</li>
+<li>打開網站或本機 dev server。</li>
+<li>視覺檢查畫面、點擊流程、填表單。</li>
+<li>讀 console log / network feedback。</li>
+<li>修改程式碼或文件。</li>
+<li>再次打開頁面驗證結果。</li>
+</ul>
+<p>這對前端開發、QA、表單測試、文件查找、資料蒐集與競品研究都很重要，因為 AI 不再只依賴文字描述，而能把「實際頁面狀態」納入推理。</p>
+<p>---</p>
+<h2>對 AI 學習雷達的價值</h2>
+<p>這篇值得保存的地方，不是「Claude 可以上網」這句話本身，而是它反映出 2026 年 AI 工具的競爭方向：</p>
+<ul>
+<li>從 pure chat 轉向 browser-operating agent。</li>
+<li>從回答問題轉向執行跨工具流程。</li>
+<li>從單次生成轉向看畫面、點操作、驗證結果的迭代閉環。</li>
+<li>從開發者手動貼錯誤訊息，轉向 agent 自己讀 console、重現問題、修正再測。</li>
+</ul>
+<p>這也能放進課程的「AI 工作流自動化」與「Agentic browser / computer use」單元，讓學員理解：AI 真正的效率提升常發生在它能接觸工作現場，而不只是在聊天框裡產生答案。</p>
+<p>---</p>
+<h2>實務提醒與風險</h2>
+<ul>
+<li>權限邊界要清楚：能開網頁與點擊，不代表應讓 AI 操作所有帳號、後台或付款流程。</li>
+<li>表單與資料抽取要注意隱私：若頁面含個資、客戶資料或內部文件，應確認資料政策與操作範圍。</li>
+<li>網站 Terms / robots / rate limit 仍需遵守：瀏覽器自動化不等於可任意大量爬取。</li>
+<li>重要操作應保留人工確認：送出表單、修改設定、發布內容、付款與刪除資料等高風險行為不應全自動。</li>
+<li>對外教學時要區分：Claude Code desktop in-app browser、Chrome extension / browser connection、一般 Claude web chat 是不同使用情境。</li>
+</ul>
+<p>---</p>
+<h2>可用於課程 / 工作坊的角度</h2>
+<ul>
+<li>Demo：讓 Claude Code 開本機 web app，重現一個 UI bug，讀 console log，再修正程式。</li>
+<li>練習：讓 agent 從官方文件網站中找 API 用法，但要求附來源與截圖驗證。</li>
+<li>討論：哪些任務可以交給 browser agent，哪些必須人類確認。</li>
+<li>延伸：比較 Claude Code、Codex、ChatGPT desktop / agent browser 在開發流程中的角色差異。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · Threads post, YouTube, Brave Search, Claude Code Docs, ClaudeDevs X post · article</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">AI Browser</span><span class="tag">Web Automation</span><span class="tag">Agentic Workflow</span><span class="tag">Browser Use</span><span class="tag">Computer Use</span><span class="tag">Developer Tools</span><h3>原始連結</h3><p><a href="https://www.threads.com/@karte_tw/post/DaxUZGCAeCK" target="_blank" rel="noopener">https://www.threads.com/@karte_tw/post/DaxUZGCAeCK</a></p><p><a href="https://www.threads.com/@karte_tw/post/DaxUZGCAeCK" target="_blank" rel="noopener">https://www.threads.com/@karte_tw/post/DaxUZGCAeCK</a></p><p><a href="https://www.threads.com/@karte_tw/post/DaxUZGCAeCK" target="_blank" rel="noopener">https://www.threads.com/@karte_tw/post/DaxUZGCAeCK</a></p><p><a href="https://www.youtube.com/watch?v=_lVGyB-LXTs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=_lVGyB-LXTs</a></p><p><a href="https://x.com/ClaudeDevs/status/2075635283211772279" target="_blank" rel="noopener">https://x.com/ClaudeDevs/status/2075635283211772279</a></p><p><a href="https://code.claude.com/docs/en/chrome" target="_blank" rel="noopener">https://code.claude.com/docs/en/chrome</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/overview</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
