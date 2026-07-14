@@ -1,0 +1,81 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>scroll-world｜用 Agent Skill 把品牌變成可捲動的 3D 世界 landing page</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>scroll-world｜用 Agent Skill 把品牌變成可捲動的 3D 世界 landing page</h1><h1>scroll-world｜用 Agent Skill 把品牌變成可捲動的 3D 世界 landing page</h1>
+<h2>一句話摘要</h2>
+<p>`scroll-world` 把原本需要 3D / WebGL / motion design 團隊協作的「捲動式沉浸品牌世界」拆成 Agent Skill：讓 AI 先訪談品牌與故事，再生成場景、鏡頭飛行影片與可嵌入前端的 scroll-scrub engine。</p>
+<p>原文：</p>
+<p><a href="https://www.threads.com/@leeunhn/post/Dawsk_lkopg" target="_blank" rel="noopener">https://www.threads.com/@leeunhn/post/Dawsk_lkopg</a></p>
+<p>GitHub：</p>
+<p><a href="https://github.com/oso95/scroll-world" target="_blank" rel="noopener">https://github.com/oso95/scroll-world</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>李昀翰在 Threads 提到：過去要做「滑鼠往下滾、整個品牌世界跟著轉」的 3D 網站，通常需要完整前端團隊與長工期；現在有人把它做成 skill，只要丟進品牌名，就能輸出可捲動的 3D 世界。貼文當時引用的 GitHub star 數為 1678，並附上 `oso95/scroll-world`。</p>
+<p>留言中也有兩個值得保留的補充：</p>
+<ul>
+<li>有人標註作者 `@oso_cy`，作者回覆「該換跑道了嗎😎」。</li>
+<li>`ch88un` 提到用 Codex 開發效果不錯，但一個 project 會消耗約 200 Higgsfield credits。這與 GitHub README 的「需要 Higgsfield CLI 並有 credits」相互呼應。</li>
+</ul>
+<p>---</p>
+<h2>GitHub / Brave Search 交叉驗證</h2>
+<p>Brave Search 與 GitHub API 均指向官方 repo：</p>
+<p><a href="https://github.com/oso95/scroll-world" target="_blank" rel="noopener">https://github.com/oso95/scroll-world</a></p>
+<p>查證到的目前狀態：</p>
+<ul>
+<li>repo：`oso95/scroll-world`</li>
+<li>description：`A skill that turn any brand into a scrollable 3D world`</li>
+<li>language：JavaScript</li>
+<li>license：MIT</li>
+<li>created：2026-07-06</li>
+<li>default branch：`main`</li>
+<li>GitHub API 查到的 star 數：2094（高於貼文擷取時提到的 1678，代表熱度仍在上升）</li>
+<li>repo 內有 `.claude-plugin`，可作為 Claude Code plugin；也有 `skills/scroll-world/SKILL.md`，可作為 drop-in Agent Skill。</li>
+</ul>
+<p>README 的安裝方式包含：</p>
+<p>```bash</p>
+<p>/plugin marketplace add oso95/scroll-world</p>
+<p>/plugin install scroll-world@scroll-world</p>
+<p>```</p>
+<p>以及使用 Vercel skills CLI 安裝到 Codex 或其他 agent：</p>
+<p>```bash</p>
+<p>npx skills add oso95/scroll-world</p>
+<p>npx skills add oso95/scroll-world -a codex</p>
+<p>```</p>
+<p>---</p>
+<h2>它實際做的是什麼</h2>
+<p>`scroll-world` 的核心不是「讓瀏覽器即時算 3D」，而是「用生成式影片 + scroll scrub 偽裝成連續鏡頭飛行」。官方 SKILL.md 說明的 pipeline 是：</p>
+<ul>
+<li>訪談使用者：產業／品牌、brand kit、藝術方向、旅程段落與 CTA。</li>
+<li>用 Higgsfield 生成每個場景的 cohesive isometric diorama stills。</li>
+<li>為每個場景生成「dive-in」鏡頭影片。</li>
+<li>為相鄰場景生成 connector clips，讓上一段最後一幀與下一段第一幀接近 frame-identical，避免切換時跳動。</li>
+<li>用 portable vanilla JS scrub engine 將影片時間軸綁到 scroll position。</li>
+<li>輸出可放進 plain HTML、Next.js、Vue 或其他前端框架的互動頁面。</li>
+</ul>
+<p>官方特別強調：成敗關鍵是 seams 必須 frame-identical；如果 connector 沒做好，捲動時會看到明顯 pop。</p>
+<p>---</p>
+<h2>為什麼這件事重要</h2>
+<p>這個專案代表 Agent Skill 正在從「指令模板」進化成「完整創意製作流程」。它不是只給一句 prompt，而是把製作沉浸式 landing page 所需的專業知識包進 workflow：</p>
+<ul>
+<li>如何訪談品牌與故事段落；</li>
+<li>如何保持每個場景的 visual style 一致；</li>
+<li>如何規劃鏡頭進出與段落銜接；</li>
+<li>如何處理影片素材、frame extraction、encoding；</li>
+<li>如何把生成素材封裝成可嵌入網站的 runtime。</li>
+</ul>
+<p>對 AI 學習雷達來說，這是「creative agent as production pipeline」的好案例：AI 不是取代單一工具，而是把多工具流程、決策順序與品質檢查變成可重複執行的技能。</p>
+<p>---</p>
+<h2>實務提醒與限制</h2>
+<ul>
+<li>這不是完全免費的一鍵工具：README 明確要求 Higgsfield CLI、登入認證與 credits。</li>
+<li>它依賴預渲染影片，不是可互動探索的真 3D 場景；適合品牌敘事 landing page，不適合需要自由操作的 3D 應用。</li>
+<li>生成時間可能很長：SKILL.md 提到 Higgsfield generation 可能每個 3–8 分鐘，需用背景任務與輪詢處理。</li>
+<li>手機版仍是 beta：官方 skill 要求明確詢問是否產出 mobile-optimized version，且提醒 16:9 影片在手機直式裁切可能失焦或卡頓。</li>
+<li>專案價值不只在視覺酷炫，而在「prompt → assets → scroll runtime → QA」的完整封裝方式。</li>
+</ul>
+<p>---</p>
+<h2>可用於課程 / 工作坊的角度</h2>
+<p>這篇適合放在「Agent Skills 與 AI 網頁設計」單元：</p>
+<ul>
+<li>讓學員比較傳統 WebGL / R3F 製作與 pre-rendered scroll-scrub pipeline 的差異。</li>
+<li>拆解 SKILL.md 如何把訪談、生成、轉檔、接縫 QA 與前端嵌入寫成可執行流程。</li>
+<li>討論 AI 生成式網站的成本模型：人力成本下降，但 credits、等待時間與品質檢查仍不可忽略。</li>
+<li>延伸到品牌敘事、展覽導覽、產品發表頁與教育互動教材等場景。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · Threads post, GitHub repository, Brave Search · article</div><h3>標籤</h3><span class="tag">Agent Skills</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Higgsfield</span><span class="tag">3D Web</span><span class="tag">Landing Page</span><span class="tag">Creative Coding</span><span class="tag">AI Web Design</span><h3>原始連結</h3><p><a href="https://www.threads.com/@leeunhn/post/Dawsk_lkopg" target="_blank" rel="noopener">https://www.threads.com/@leeunhn/post/Dawsk_lkopg</a></p><p><a href="https://www.threads.com/@leeunhn/post/Dawsk_lkopg" target="_blank" rel="noopener">https://www.threads.com/@leeunhn/post/Dawsk_lkopg</a></p><p><a href="https://www.threads.com/@leeunhn/post/Dawsk_lkopg" target="_blank" rel="noopener">https://www.threads.com/@leeunhn/post/Dawsk_lkopg</a></p><p><a href="https://github.com/oso95/scroll-world" target="_blank" rel="noopener">https://github.com/oso95/scroll-world</a></p><p><a href="https://github.com/oso95/scroll-world/tree/main/skills/scroll-world" target="_blank" rel="noopener">https://github.com/oso95/scroll-world/tree/main/skills/scroll-world</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

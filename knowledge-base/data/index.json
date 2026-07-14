@@ -98,6 +98,37 @@
     "markdown": "articles/2026/07/2026-07-15-threads-andrew-cc-switch-cliproxyapi-claude-code-gpt.md"
   },
   {
+    "title": "scroll-world｜用 Agent Skill 把品牌變成可捲動的 3D 世界 landing page",
+    "date": "2026-07-15",
+    "source": "Threads post, GitHub repository, Brave Search",
+    "author": "李昀翰 (@leeunhn)",
+    "type": "article",
+    "topics": [
+      "Agent Skills",
+      "Claude Code",
+      "Codex",
+      "Higgsfield",
+      "3D Web",
+      "Landing Page",
+      "Creative Coding",
+      "AI Web Design"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@leeunhn/post/Dawsk_lkopg",
+      "https://www.threads.com/@leeunhn/post/Dawsk_lkopg",
+      "https://www.threads.com/@leeunhn/post/Dawsk_lkopg",
+      "https://github.com/oso95/scroll-world",
+      "https://github.com/oso95/scroll-world/tree/main/skills/scroll-world"
+    ],
+    "excerpt": "`scroll-world` 把原本需要 3D / WebGL / motion design 團隊協作的「捲動式沉浸品牌世界」拆成 Agent Skill：讓 AI 先訪談品牌與故事，再生成場景、鏡頭飛行影片與可嵌入前端的 scroll-scrub engine。 原文： https://www.threads.com/@leeunhn/post/Dawsk_lkopg GitHub： https://github.com/oso95/scroll-world ---",
+    "slug": "2026-07-15-threads-leeunhn-scroll-world-higgsfield-3d-landing-skill",
+    "html": "articles/2026-07-15-threads-leeunhn-scroll-world-higgsfield-3d-landing-skill.html",
+    "markdown": "articles/2026/07/2026-07-15-threads-leeunhn-scroll-world-higgsfield-3d-landing-skill.md"
+  },
+  {
     "title": "paper-fetch｜從 DOI 合法抓取全文 PDF 的 publisher-aware 論文流程補件",
     "date": "2026-07-15",
     "source": "Threads post, GitHub, Brave Search",
