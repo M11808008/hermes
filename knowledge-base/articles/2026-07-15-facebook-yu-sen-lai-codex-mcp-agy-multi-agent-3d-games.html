@@ -1,0 +1,71 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook 社群案例｜Codex + 自製 MCP + AGY CLI 多代理協作產出 3D 網頁遊戲</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook 社群案例｜Codex + 自製 MCP + AGY CLI 多代理協作產出 3D 網頁遊戲</h1><h1>Facebook 社群案例｜Codex + 自製 MCP + AGY CLI 多代理協作產出 3D 網頁遊戲</h1>
+<h2>一句話摘要</h2>
+<p>這則 Facebook 貼文展示一種進階 agentic coding 編排法：以 ChatGPT / Codex 側較強模型作為總指揮，透過自製 MCP 連接本機開發環境，再啟動多個 AGY CLI / Gemini 類子代理平行完成任務，最後做出兩款可玩的 3D 網頁遊戲。</p>
+<p>原文：</p>
+<p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773346353799041/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773346353799041/</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>Yu-Sen Lai 分享的實驗流程可整理為：</p>
+<ul>
+<li>先用 Codex 裡的新 GPT‑5.6 Sol 強化一套給 ChatGPT 使用的自製 MCP。</li>
+<li>讓 ChatGPT 在一般 Chat 模式中，透過 MCP 操作本機開發環境。</li>
+<li>同時啟動多個 AGY CLI，由 Gemini 3.5 Flash 擔任子代理並行處理任務。</li>
+<li>由較強模型擔任總指揮，負責拆任務、分工、整合、測試與部署。</li>
+<li>最後產出兩款可玩的 3D 網頁遊戲：太空賽車與 3D 射擊。</li>
+</ul>
+<p>貼文作者特別強調，這次體驗讓他意識到「子模型是否好用」高度取決於總指揮是否會拆解任務、安排流程與檢查結果。換句話說，Gemini 3.5 Flash 類模型在被放到合適位置、由更強模型協調後，能成為高性價比的平行工作者。</p>
+<p>---</p>
+<h2>已驗證的輸出</h2>
+<p>貼文附上的兩個預覽網址在 2026-07-15 檢查時皆可連線：</p>
+<ul>
+<li>Cosmic Frontier Racer： <a href="https://cosmic-frontier-racer.preview.tenonry.net/" target="_blank" rel="noopener">https://cosmic-frontier-racer.preview.tenonry.net/</a></li>
+<li>VOIDSTRIKE：黑域圍城： <a href="https://voidstrike-fps-preview.preview.tenonry.net/" target="_blank" rel="noopener">https://voidstrike-fps-preview.preview.tenonry.net/</a></li>
+</ul>
+<p>頁面標題與 HTTP 回應皆確認是可公開開啟的 3D 網頁遊戲預覽頁。這讓貼文從「工作流心得」更進一步成為一個可觀察的產出案例。</p>
+<p>---</p>
+<h2>交叉查證與脈絡</h2>
+<p>Brave Search 查到的公開來源可支持幾個背景脈絡：</p>
+<ul>
+<li>Google Developers Blog 曾說明 Gemini 3 Flash 進入 Gemini CLI，且付費層用戶可在 Gemini CLI / Code Assist 取得更高使用限制。</li>
+<li>Google 官方部落格也提到 Google AI Pro / Ultra 訂閱者取得 Gemini CLI 與 Gemini Code Assist 的 higher limits，這呼應貼文中「Google AI Pro 找到實際用途」的說法。</li>
+<li>Google Cloud Community / Medium 與社群資料把 Antigravity / AGY CLI 描述為可在終端機中呼叫、監控與操作 AI agents 的 CLI / TUI 形式，與貼文中的「啟動多個 AGY CLI 子代理」相符。</li>
+<li>「GPT‑5.6 Sol」與「Gemini 3.5 Flash」屬於快速變動的模型命名與可用性脈絡；本筆歸檔保留貼文原稱呼，但實務導入時仍應以當下 CLI / API 實際可列出的模型為準。</li>
+</ul>
+<p>---</p>
+<h2>為什麼值得放進 AI 學習雷達？</h2>
+<p>這則貼文的價值不是「AI 做了兩款小遊戲」而已，而是它示範了 coding agent stack 的新分工：</p>
+<ul>
+<li>ChatGPT / Codex：高階規劃、任務拆解、整合與品質把關。</li>
+<li>MCP：把 ChatGPT 的一般對話模式接到本機工具與開發環境。</li>
+<li>AGY CLI / Gemini 類子代理：負責可平行化的子任務，例如模組開發、素材整合、測試修復、部署檢查。</li>
+<li>預覽部署平台：讓每輪工作結果能立刻在瀏覽器驗證。</li>
+</ul>
+<p>這其實很接近「一個總工 + 多位 junior engineer + CI / preview environment」的結構。真正的能力不只來自模型本身，而來自任務切分、上下文隔離、成果回收、測試與整合的 orchestration。</p>
+<p>---</p>
+<h2>實務啟發</h2>
+<p>若要把這個案例轉成可重複的內部工作流，可抽成以下設計原則：</p>
+<ul>
+<li>總指揮模型只做高槓桿工作：拆任務、定介面、合併結果、跑測試、做最終判斷。</li>
+<li>子代理要給明確邊界：每個代理負責單一模組、檔案範圍或驗證任務，避免互相覆寫。</li>
+<li>每個子任務都要產出可驗證 artifact：檔案 diff、測試結果、preview URL、截圖或 log。</li>
+<li>MCP / CLI bridge 必須有權限邊界：避免一般 Chat 模式取得過寬的本機操作權限。</li>
+<li>模型名稱與額度池不可假設永久有效：應在啟動前自動檢查目前可用模型與 quota / plan 限制。</li>
+</ul>
+<p>---</p>
+<h2>風險與注意事項</h2>
+<ul>
+<li>自製 MCP 若能操作本機開發環境，需小心檔案、shell、token 與瀏覽器憑證權限。</li>
+<li>多代理並行容易產生衝突修改，最好搭配 git worktree、明確檔案邊界或 patch review。</li>
+<li>「不消耗 Work / Codex agentic 額度池」是貼文作者的實測感受；不同帳號、方案與時點可能不同，不能當成永久保證。</li>
+<li>對外部署 preview 時，應確認沒有洩漏 API key、OAuth token、內部 endpoint 或私人資料。</li>
+<li>若用於課程示範，建議強調 orchestration、驗證與安全，而不是鼓勵學生盲目同時開很多代理。</li>
+</ul>
+<p>---</p>
+<h2>對課程 / 工作坊的可用角度</h2>
+<p>這個案例很適合放進「AI agent 協作工程」單元：</p>
+<ul>
+<li>示範 MCP 如何把聊天介面變成工具操作入口。</li>
+<li>比較單代理 vibe coding 與多代理 orchestration 的差異。</li>
+<li>設計一個小型實作：一位總指揮 agent 拆出 UI、game logic、測試、部署四個子任務，再由子代理各自完成。</li>
+<li>讓學員觀察：好的任務拆解與驗證標準，往往比單純換更貴模型更重要。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · Facebook post, Brave Search, live preview verification · article</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">ChatGPT</span><span class="tag">MCP</span><span class="tag">AGY CLI</span><span class="tag">Gemini</span><span class="tag">Multi-Agent Workflow</span><span class="tag">3D Web Games</span><span class="tag">Agentic Coding</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1DQsGBa6sw/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1DQsGBa6sw/</a></p><p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773346353799041/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773346353799041/</a></p><p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773346353799041/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773346353799041/</a></p><p><a href="https://cosmic-frontier-racer.preview.tenonry.net/" target="_blank" rel="noopener">https://cosmic-frontier-racer.preview.tenonry.net/</a></p><p><a href="https://voidstrike-fps-preview.preview.tenonry.net/" target="_blank" rel="noopener">https://voidstrike-fps-preview.preview.tenonry.net/</a></p><p><a href="https://developers.googleblog.com/gemini-3-flash-is-now-available-in-gemini-cli/" target="_blank" rel="noopener">https://developers.googleblog.com/gemini-3-flash-is-now-available-in-gemini-cli/</a></p><p><a href="https://blog.google/technology/developers/gemini-cli-code-assist-higher-limits/" target="_blank" rel="noopener">https://blog.google/technology/developers/gemini-cli-code-assist-higher-limits/</a></p><p><a href="https://medium.com/google-cloud/getting-started-with-antigravity-cli-26c5da90951f" target="_blank" rel="noopener">https://medium.com/google-cloud/getting-started-with-antigravity-cli-26c5da90951f</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
