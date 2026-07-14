@@ -1,0 +1,84 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Grok Build Connector Skill｜把 Grok 4.5 接進 Codex / Claude Code 的 Agent-to-Agent 協作</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Grok Build Connector Skill｜把 Grok 4.5 接進 Codex / Claude Code 的 Agent-to-Agent 協作</h1><h1>Grok Build Connector Skill｜把 Grok 4.5 接進 Codex / Claude Code 的 Agent-to-Agent 協作</h1>
+<h2>一句話摘要</h2>
+<p>Prompt Case 這則 Threads 介紹的是一個新開源的 `Grok Build Connector` Skill：讓 Codex、Claude Code 等 Agent 不必手動複製貼上，就能直接呼叫 Grok Build / Grok 4.5 取得第二意見、審查程式碼、討論計畫，並透過 Live UI 看見 agent-to-agent 對話過程。</p>
+<p>原文：</p>
+<p><a href="https://www.threads.com/@prompt_case/post/DaxPoM2jRWw" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DaxPoM2jRWw</a></p>
+<p>GitHub：</p>
+<p><a href="https://github.com/Toolsai/Grok-Build-Connector" target="_blank" rel="noopener">https://github.com/Toolsai/Grok-Build-Connector</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>Prompt Case 的主張可整理為：</p>
+<ul>
+<li>Grok 4.5 在 Grok Build 中限時免費開放，且作者實測速度與表現不錯。</li>
+<li>但同時操作多個 Agent 時，常見痛點是：視窗切換、複製貼上、建立中介文件、人工搬運上下文。</li>
+<li>作者因此開源 `Grok-Build-Connector Skill`，讓 Codex / Claude Code 等 Agent 可用自然語言直接呼叫 Grok。</li>
+<li>這不是單向發指令，而是雙向溝通：Codex 可請 Grok 審查程式碼、評估計畫、從另一角度分析文章，再把結果帶回討論。</li>
+<li>Skill 加入 Live UI，使用者可即時查看 Agent 之間的對話、任務進度，必要時介入。</li>
+<li>若電腦尚未安裝 Grok Build，Skill 初始化時會引導安裝。</li>
+<li>作者也在回覆中提醒可輸入 `Grok : /privacy opt-out` 嘗試關閉 Grok 程式碼資料分享；但這類隱私設定仍應以 xAI / Grok Build 當下官方說明為準。</li>
+</ul>
+<p>---</p>
+<h2>GitHub 交叉驗證</h2>
+<p>GitHub repository `Toolsai/Grok-Build-Connector` 可公開存取。README 的重點與 Threads 原文一致：</p>
+<ul>
+<li>這是一個 Agent Skill，用來讓 AI agent 直接與 Grok 對話、交換想法、挑戰結論、審查專案。</li>
+<li>提供 Live UI，讓使用者即時看見 agent-to-agent conversation。</li>
+<li>每個主題會保留獨立對話歷史，方便之後延續或刪除。</li>
+<li>支援「第二意見、短辯論、專案 review、腦力激盪、延續先前 Grok conversation」等 prompt 模式。</li>
+<li>安裝方式包含：讓 AI Agent 安裝 GitHub Skill、`npx skills add Toolsai/Grok-Build-Connector`、或 git clone 後加入 skills folder。</li>
+<li>需求包含：支援 Agent Skills 並可執行本機命令的 AI agent、Python 3.10+、xAI account、Grok Build CLI、Node.js（若使用 npx）、瀏覽器 / in-app browser。</li>
+</ul>
+<p>GitHub API 在 2026-07-15 查到的 repo 狀態：</p>
+<ul>
+<li>full name：`Toolsai/Grok-Build-Connector`</li>
+<li>default branch：`main`</li>
+<li>created：2026-07-14</li>
+<li>stars：約 37</li>
+<li>forks：約 3</li>
+</ul>
+<p>---</p>
+<h2>xAI / Grok Build 官方脈絡</h2>
+<p>Brave Search 找到 xAI 官方頁面：</p>
+<ul>
+<li>`x.ai/news/grok-4-5`：說明 Grok 4.5，並提到 Grok 4.5 可在 Grok Build、Cursor 與 xAI console 使用；搜尋摘要也明確指出 Grok Build / Cursor 中有期間限定免費使用。</li>
+<li>`x.ai/cli`：Grok Build CLI 頁面，說明 Grok Build 已由 Grok 4.5 驅動，並提供 CLI 安裝命令。</li>
+</ul>
+<p>這可確認原文中「Grok 4.5 進入 Grok Build / 免費使用」有官方脈絡，但免費額度、區域、限制與模型可用性都可能變動，實作前仍需以當下官方頁面與帳號實際顯示為準。</p>
+<p>---</p>
+<h2>為什麼值得放進 AI 學習雷達？</h2>
+<p>這個 Skill 的價值不只是「把 Grok 接到 Codex」，而是代表 Agent workflow 正在從單一代理走向可組合的多代理架構：</p>
+<ul>
+<li>Codex / Claude Code：保持原本熟悉的 coding agent 介面與工具操作能力。</li>
+<li>Grok Build / Grok 4.5：扮演獨立第二腦，提供不同模型視角、審查與反駁。</li>
+<li>Skill：把跨 Agent 溝通流程封裝成可重複使用的工作流。</li>
+<li>Live UI：讓多代理互動不再是黑箱，使用者可旁觀與介入。</li>
+</ul>
+<p>這也呼應近期 AI coding 的一個重要方向：不是只追求「一個模型全做完」，而是把不同 agent / model 放在合適角色，由主 agent 負責 orchestration、驗證與最終交付。</p>
+<p>---</p>
+<h2>可用工作流範例</h2>
+<p>可把這個 Skill 用在以下場景：</p>
+<ul>
+<li>程式碼審查：請 Grok 對 Codex 的實作提出安全、架構或邊界案例問題。</li>
+<li>計畫評估：讓 Grok 挑戰 implementation plan，要求指出未考慮的依賴、風險與測試缺口。</li>
+<li>文章分析：讓 Grok 從不同立場找出推論漏洞，再由 Codex 整理成最終判斷。</li>
+<li>多方案比較：Codex 提案 A，Grok 提案 B，最後由主 agent 合併成推薦方案。</li>
+<li>創意生成：用 Grok Imagine / Grok Build 生成素材方向，再由主 agent 整理 pipeline。</li>
+</ul>
+<p>---</p>
+<h2>風險與注意事項</h2>
+<ul>
+<li>隱私與資料外流：不要把機敏 repo、客戶資料、API key、token、商業機密丟給外部模型或 Grok Build。</li>
+<li>opt-out 不等於絕對保證：貼文提到 `/privacy opt-out`，但實務上仍應查官方隱私政策、CLI 設定與帳號頁面，不能只靠社群說法。</li>
+<li>主 agent 要負責驗證：Grok 給出的審查或建議仍可能錯，最後需由 Codex / Claude Code 與測試結果驗證。</li>
+<li>本機 server / Live UI 要綁 loopback：若 Skill 開本機 UI 或 server，應避免暴露到區網 / 公網。</li>
+<li>免費額度會變：Grok 4.5 在 Grok Build 的免費使用、地區與限制由 xAI 控制，可能隨時調整。</li>
+</ul>
+<p>---</p>
+<h2>對課程 / 工作坊的可用角度</h2>
+<p>這篇很適合放進「多代理協作與 Agent Skills」單元：</p>
+<ul>
+<li>讓學員理解 agent-to-agent collaboration 與單純 chat copy-paste 的差異。</li>
+<li>示範 Skill 如何把一套跨工具流程封裝成可重複能力。</li>
+<li>設計練習：主 agent 寫 plan，Grok agent 負責 review，最後主 agent 根據 review 修正並跑測試。</li>
+<li>討論隱私與資料權限：哪些內容可以交給外部模型，哪些必須用本機或私有模型處理。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · Threads post, Brave Search, GitHub, xAI official pages · article</div><h3>標籤</h3><span class="tag">Grok Build</span><span class="tag">Grok 4.5</span><span class="tag">Codex</span><span class="tag">Claude Code</span><span class="tag">Agent Skills</span><span class="tag">Multi-Agent Workflow</span><span class="tag">Agent-to-Agent</span><span class="tag">開發工具</span><h3>原始連結</h3><p><a href="https://www.threads.com/@prompt_case/post/DaxPoM2jRWw" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DaxPoM2jRWw</a></p><p><a href="https://www.threads.com/@prompt_case/post/DaxPoM2jRWw" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DaxPoM2jRWw</a></p><p><a href="https://www.threads.com/@prompt_case/post/DaxPoM2jRWw" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DaxPoM2jRWw</a></p><p><a href="https://github.com/Toolsai/Grok-Build-Connector" target="_blank" rel="noopener">https://github.com/Toolsai/Grok-Build-Connector</a></p><p><a href="https://x.ai/news/grok-4-5" target="_blank" rel="noopener">https://x.ai/news/grok-4-5</a></p><p><a href="https://x.ai/cli" target="_blank" rel="noopener">https://x.ai/cli</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
