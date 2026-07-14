@@ -65,6 +65,100 @@
     "markdown": "articles/2026/07/2026-07-15-facebook-yu-sen-lai-codex-mcp-agy-multi-agent-3d-games.md"
   },
   {
+    "title": "cc-switch 與 CLIProxyAPI｜讓 Claude Code 跑 GPT 模型時，先理解 proxy 翻譯層",
+    "date": "2026-07-15",
+    "source": "Threads post, Dawson Wang article, Brave Search, GitHub",
+    "author": "王拐子 (@andrew54068)",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "Codex",
+      "GPT-5.6 Sol",
+      "CLIProxyAPI",
+      "cc-switch",
+      "Agentic Coding",
+      "開發工具",
+      "本機代理"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6",
+      "https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6",
+      "https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6",
+      "https://dawsonwang.com/day/196",
+      "https://github.com/farion1231/cc-switch",
+      "https://github.com/router-for-me/CLIProxyAPI",
+      "https://x.com/thsottiaux/status/2076119366647894371"
+    ],
+    "excerpt": "這則 Threads 的重點不是「哪個工具一定比較好」，而是把 Claude Code 接到 GPT / Codex 模型時，真正關鍵的是中間那層 proxy / router：它負責把 Anthropic 風格請求翻譯成 GPT / Codex 可理解的格式。 原文： https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6 延伸文章： https://dawsonwang.com/day/196 ---",
+    "slug": "2026-07-15-threads-andrew-cc-switch-cliproxyapi-claude-code-gpt",
+    "html": "articles/2026-07-15-threads-andrew-cc-switch-cliproxyapi-claude-code-gpt.html",
+    "markdown": "articles/2026/07/2026-07-15-threads-andrew-cc-switch-cliproxyapi-claude-code-gpt.md"
+  },
+  {
+    "title": "paper-fetch｜從 DOI 合法抓取全文 PDF 的 publisher-aware 論文流程補件",
+    "date": "2026-07-15",
+    "source": "Threads post, GitHub, Brave Search",
+    "author": "陳柏威 (@paul.chen.pwc)",
+    "type": "article",
+    "topics": [
+      "AI Research Workflow",
+      "Academic Papers",
+      "DOI",
+      "PDF Retrieval",
+      "Open Access",
+      "Publisher TDM",
+      "Institutional Proxy",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@paul.chen.pwc/post/DawRt1TGgqp",
+      "https://www.threads.com/@paul.chen.pwc/post/DawRt1TGgqp",
+      "https://www.threads.com/@paul.chen.pwc/post/DawRt1TGgqp",
+      "https://github.com/drpwchen/paper-fetch"
+    ],
+    "excerpt": "`paper-fetch` 是一個「DOI in, PDF out」的論文全文抓取工具：先找開放取用版本，再試出版社官方文字探勘 API，仍失敗才走使用者自己的機構圖書館 proxy；它補上 AI 論文閱讀管線中最麻煩、也最容易被忽略的「合法拿到全文 PDF」這一段。 原文： https://www.threads.com/@paul.chen.pwc/post/DawRt1TGgqp GitHub： https://github.com/drpwchen/paper-fetch ---",
+    "slug": "2026-07-15-threads-paul-chen-paper-fetch-doi-fulltext-pdf-pipeline",
+    "html": "articles/2026-07-15-threads-paul-chen-paper-fetch-doi-fulltext-pdf-pipeline.html",
+    "markdown": "articles/2026/07/2026-07-15-threads-paul-chen-paper-fetch-doi-fulltext-pdf-pipeline.md"
+  },
+  {
+    "title": "Extract Clothing Skill｜用 Codex + GPT-Image 從生活照建立個人 AI 衣櫥",
+    "date": "2026-07-15",
+    "source": "Threads post, X post, GitHub Gist, Brave Search",
+    "author": "Prompt Case (@prompt_case)",
+    "type": "article",
+    "topics": [
+      "Codex",
+      "GPT-Image",
+      "Agent Skills",
+      "Computer Vision",
+      "AI Wardrobe",
+      "Fashion Tech",
+      "Image Generation",
+      "Personal Automation"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/DawuacfDcR9",
+      "https://www.threads.com/@prompt_case/post/DawuacfDcR9",
+      "https://www.threads.com/@prompt_case/post/DawuacfDcR9",
+      "https://x.com/cdngdev/status/2076812846793650485",
+      "https://gist.github.com/tandpfun/b73063c8be8fc46644da9925d48b3240"
+    ],
+    "excerpt": "這則 Threads 保存的是一個很好的「個人資料庫 + 影像生成 + Agent Skill」案例：從手機相簿裡散落的生活照，自動抽取衣物、重建成乾淨商品圖，再進一步做穿搭推薦與虛擬試穿。 原文： https://www.threads.com/@prompt_case/post/DawuacfDcR9 X 原始案例： https://x.com/cdngdev/status/2076812846793650485 Skill Gist： https://gist.github.com/tandpfun/b73063c8be8fc46644da9925d48b3240 ---",
+    "slug": "2026-07-15-threads-prompt-case-extract-clothing-skill-ai-wardrobe",
+    "html": "articles/2026-07-15-threads-prompt-case-extract-clothing-skill-ai-wardrobe.html",
+    "markdown": "articles/2026/07/2026-07-15-threads-prompt-case-extract-clothing-skill-ai-wardrobe.md"
+  },
+  {
     "title": "Grok Build Connector Skill｜把 Grok 4.5 接進 Codex / Claude Code 的 Agent-to-Agent 協作",
     "date": "2026-07-15",
     "source": "Threads post, Brave Search, GitHub, xAI official pages",

@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>cc-switch 與 CLIProxyAPI｜讓 Claude Code 跑 GPT 模型時，先理解 proxy 翻譯層</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>cc-switch 與 CLIProxyAPI｜讓 Claude Code 跑 GPT 模型時，先理解 proxy 翻譯層</h1><h1>cc-switch 與 CLIProxyAPI｜讓 Claude Code 跑 GPT 模型時，先理解 proxy 翻譯層</h1>
+<h2>一句話摘要</h2>
+<p>這則 Threads 的重點不是「哪個工具一定比較好」，而是把 Claude Code 接到 GPT / Codex 模型時，真正關鍵的是中間那層 proxy / router：它負責把 Anthropic 風格請求翻譯成 GPT / Codex 可理解的格式。</p>
+<p>原文：</p>
+<p><a href="https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6" target="_blank" rel="noopener">https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6</a></p>
+<p>延伸文章：</p>
+<p><a href="https://dawsonwang.com/day/196" target="_blank" rel="noopener">https://dawsonwang.com/day/196</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>王拐子回應近期社群熱議的 CLIProxyAPI 工作流：OpenAI Codex 團隊的 Tibo 曾推薦用 CLIProxyAPI，讓 Claude Code 介面直接跑 GPT-5.6 Sol 類模型。社群常把它說成三步驟：安裝、連上、設 alias。</p>
+<p>但作者實際安裝後認為沒那麼簡單：</p>
+<ul>
+<li>CLIProxyAPI 是自架伺服器，需要先跑起來。</li>
+<li>每個帳號都要做授權。</li>
+<li>要把 Claude Code 指到本機 proxy。</li>
+<li>還要設定假 token / 環境變數。</li>
+<li>官方文件有些細節寫得很省，對只想試模型的人來說偏麻煩。</li>
+</ul>
+<p>作者建議先理解中間 proxy 到底做什麼，再決定要走 CLIProxyAPI 還是 cc-switch。</p>
+<p>---</p>
+<h2>為什麼需要 proxy？</h2>
+<p>Claude Code 對外說的是 Anthropic API / Claude 風格的請求格式；GPT / Codex 模型端則使用另一套格式。兩邊不能直接相接。</p>
+<p>proxy / router 的角色像翻譯員：</p>
+<ul>
+<li>Claude Code 把請求送到本機一個「看起來像 Anthropic」的 endpoint。</li>
+<li>proxy 把請求即時翻譯成 GPT / Codex provider 可理解的格式。</li>
+<li>模型回覆後，再翻譯回 Claude Code 能顯示的格式。</li>
+<li>對 Claude Code 來說，它以為自己仍在跟 Claude-compatible endpoint 溝通。</li>
+</ul>
+<p>理解這件事後，就能看懂：真正有價值的是協定翻譯與 provider 管理，而不是某一串 alias 本身。</p>
+<p>---</p>
+<h2>CLIProxyAPI vs cc-switch</h2>
+<p>作者的判斷是：</p>
+<ul>
+<li>CLIProxyAPI：適合想自架 gateway、寫腳本、自動化、多帳號或深入客製的人。彈性高，但需要自己跑 server、設定環境變數與處理授權。</li>
+<li>cc-switch：適合只想在 Claude Code / Codex / Gemini CLI 間快速切換 provider，降低設定摩擦的人。它以桌面 app 形式提供本地 router，透過 UI 點選完成切換。</li>
+</ul>
+<p>GitHub / Brave Search 交叉驗證：</p>
+<ul>
+<li>`farion1231/cc-switch`：描述為跨平台 desktop all-in-one assistant，支援 Claude Code、Codex、OpenCode、OpenClaw、Gemini CLI、Hermes Agent 等工具。</li>
+<li>`router-for-me/CLIProxyAPI`：描述為把 Antigravity、ChatGPT Codex、Claude Code、Grok Build 等包成 OpenAI / Gemini / Claude / Codex compatible API service。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 學習雷達的價值</h2>
+<p>這篇值得保存，因為它把「模型混搭」從炫技拉回工程現實：</p>
+<ul>
+<li>一個 agent UI 不等於一個模型後端。</li>
+<li>Claude Code 的互動體驗可以和 GPT / Codex 後端拆開。</li>
+<li>但拆開後一定需要協定翻譯、授權、token、環境變數與本機安全邊界。</li>
+<li>工具選型要看目標：快速試用、長期自動化、多人共享、多帳號管理或企業導入，答案不同。</li>
+</ul>
+<p>這也呼應近期 AI coding stack 的拆層趨勢：harness / agent loop、model provider、proxy/router、skills、MCP、local credential store 會逐漸變成可組合元件。</p>
+<p>---</p>
+<h2>實務提醒</h2>
+<ul>
+<li>不要把 OAuth token、API key、cookie 或 proxy config 貼到公開 repo / 社群。</li>
+<li>本機 proxy 應綁定 loopback，例如 `127.0.0.1`，避免暴露到區網或公網。</li>
+<li>alias / shell profile 修改前應備份，避免污染原本 Claude Code / Codex 設定。</li>
+<li>先確認帳號方案、模型名稱與額度池，避免以為能用 GPT-5.6 Sol 但實際帳號不可用。</li>
+<li>若只是試用，cc-switch 類 UI 工具可降低摩擦；若要自動化或整合多帳號，CLIProxyAPI 類 gateway 較有彈性。</li>
+</ul>
+<p>---</p>
+<h2>可用於課程 / 工作坊的角度</h2>
+<p>這篇可放進「AI coding stack 拆層」單元：</p>
+<ul>
+<li>比較 Claude Code、Codex、Gemini CLI 這些 agent harness 與底層模型的差異。</li>
+<li>畫出 proxy / router 如何轉換 Anthropic-compatible 與 OpenAI-compatible 請求。</li>
+<li>讓學員討論何時該用 GUI switcher，何時該自架 proxy。</li>
+<li>強調憑證、安全邊界與可逆設定比「三步驟裝起來」更重要。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · Threads post, Dawson Wang article, Brave Search, GitHub · article</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">GPT-5.6 Sol</span><span class="tag">CLIProxyAPI</span><span class="tag">cc-switch</span><span class="tag">Agentic Coding</span><span class="tag">開發工具</span><span class="tag">本機代理</span><h3>原始連結</h3><p><a href="https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6" target="_blank" rel="noopener">https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6</a></p><p><a href="https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6" target="_blank" rel="noopener">https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6</a></p><p><a href="https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6" target="_blank" rel="noopener">https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6</a></p><p><a href="https://dawsonwang.com/day/196" target="_blank" rel="noopener">https://dawsonwang.com/day/196</a></p><p><a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener">https://github.com/farion1231/cc-switch</a></p><p><a href="https://github.com/router-for-me/CLIProxyAPI" target="_blank" rel="noopener">https://github.com/router-for-me/CLIProxyAPI</a></p><p><a href="https://x.com/thsottiaux/status/2076119366647894371" target="_blank" rel="noopener">https://x.com/thsottiaux/status/2076119366647894371</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
