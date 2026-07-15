@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook 社群案例｜Three.js Object Sculptor：用 Codex plugin 從物件照片生成程式化 3D 模型</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook 社群案例｜Three.js Object Sculptor：用 Codex plugin 從物件照片生成程式化 3D 模型</h1><h1>Facebook 社群案例｜Three.js Object Sculptor：用 Codex plugin 從物件照片生成程式化 3D 模型</h1>
+<h2>一句話摘要</h2>
+<p>Three.js Object Sculptor 是一個 Codex plugin，目標是讓 Codex 依照單張物件參考圖，先建立物件規格與品質關卡，再用 Three.js 程式碼重建可互動、可動畫化的 3D 物件；它適合做瀏覽器原型、遊戲道具與課程示範，但不是從照片直接抽出精準 mesh 的 photogrammetry 工具。</p>
+<p>原文：</p>
+<p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/</a></p>
+<p>GitHub：</p>
+<p><a href="https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin" target="_blank" rel="noopener">https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>Codex 中文社群貼文引用 GitHub 專案並附上 Om Patel 的貼文截圖。截圖主張可整理為：</p>
+<ul>
+<li>用 GPT‑5.6 SOL / Codex 類模型打造工具，將任意物件照片重建成 3D 模型。</li>
+<li>與手工建模或掃描相比，只需提供圖片，就能把物件轉為 Three.js 程式碼模型。</li>
+<li>輸出是由程式碼撰寫的 procedural 3D，而非單純貼圖或下載模型。</li>
+<li>專案開源，因此可整合進自己的專案。</li>
+<li>作者以船隻參考圖測試，認為對「純程式碼構成」的結果來說相當出色。</li>
+</ul>
+<p>Facebook metadata 擷取到的原文補充是：「有興趣的朋友參考看看」，主連結指向 GitHub repository。</p>
+<p>---</p>
+<h2>GitHub / Brave Search 查證</h2>
+<p>Brave Search 的第一結果與 GitHub repository 一致：`vinhhien112/Three.js-Object-Sculptor-Codex-Plugin`，描述為「Codex plugin that turns attached object images into code-only, animation-ready procedural Three.js models」。GitHub API 檢查時顯示：</p>
+<ul>
+<li>repository：`vinhhien112/Three.js-Object-Sculptor-Codex-Plugin`</li>
+<li>語言：Python</li>
+<li>GitHub 描述：把附加的物件圖片轉成 code-only、animation-ready 的 procedural Three.js models</li>
+<li>README 提供兩個 demo：Tower Ship 與 Ancient Autumn Tree</li>
+<li>README 明確說明：不是 photogrammetry、不是從單張圖抽出完美 mesh、也不是下載 art pack，而是引導 Codex 走「規格化、分階段雕塑、截圖比對、自我修正」的程式化建模流程。</li>
+</ul>
+<p>這表示社群貼文的方向大致成立，但「拍任何物件照片就能重建為完全真實 3D 模型」需要降溫理解：目前更精準的說法是「用 Codex 依照片推論並生成可用的 procedural Three.js 近似模型」。</p>
+<p>---</p>
+<h2>工作流拆解</h2>
+<p>README 描述的流程比一般 image-to-3D 更工程化：</p>
+<ul>
+<li>檢查圖片是否適合 procedural reconstruction。</li>
+<li>做 complexity assessment 與品質契約。</li>
+<li>產生 `ObjectSculptSpec`，描述部件階層、材質、光照、pivot、socket、動畫錨點、破壞錨點與品質目標。</li>
+<li>分階段生成：blockout、結構、形體 refinement、材質、表面、光照、互動、最佳化。</li>
+<li>在瀏覽器渲染後與原圖合成 comparison sheet。</li>
+<li>透過 AI vision review 評分並回饋修正。</li>
+</ul>
+<p>這種設計的價值在於把「AI 一次生成 3D」改成「AI 依規格逐層 sculpt，並以可視化比對把關」。</p>
+<p>---</p>
+<h2>適合場景</h2>
+<ul>
+<li>AI coding / Codex plugin 課程：示範 skill / plugin 如何把模型能力封裝成工作流。</li>
+<li>Three.js 原型：快速做遊戲道具、場景裝飾、產品概念物件、互動展示。</li>
+<li>Agentic coding 練習：讓學生觀察規格、品質關卡、瀏覽器截圖驗證、AI vision review 如何串成閉環。</li>
+<li>創意 demo：將一張船、車、樹、機械零件或風格化物件圖片，轉成可改程式碼的 browser prop。</li>
+</ul>
+<p>---</p>
+<h2>限制與風險</h2>
+<ul>
+<li>不是 photogrammetry：無法保證從單張照片得到精準尺寸、隱藏背面或 production-ready mesh。</li>
+<li>輸出主要是 Three.js code factory 與 spec，不是預設 GLB / FBX 檔案。</li>
+<li>需要 Codex 本機 plugin 支援與 Three.js 專案環境；安裝方式可能隨 Codex plugin 系統變動。</li>
+<li>品質高度依賴提示、參考圖清晰度、模型能力與多輪修正；社群截圖中的模型名稱與能力主張需以當下實際可用版本為準。</li>
+<li>若用於商業素材，需要確認參考圖授權、品牌外觀、肖像權與衍生模型使用權。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 學習雷達的保存價值</h2>
+<p>這篇值得收錄，因為它代表 agentic coding 從「寫網頁 / 修 bug」往「可驗證的程序化內容生成」延伸。重點不是單純把圖片變 3D，而是把建模拆成可檢查的工程流程：spec、階段任務、render、comparison、vision review、修正。這種模式未來可套用到更多生成式設計任務，例如 UI 還原、動畫素材、教具模擬、品牌展示物件與課堂互動 demo。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · Facebook post, Brave Search, GitHub repository · article</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">Codex Plugin</span><span class="tag">Three.js</span><span class="tag">Procedural 3D</span><span class="tag">Image-to-3D</span><span class="tag">Agentic Coding</span><span class="tag">GitHub</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1CjRtivRYi/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1CjRtivRYi/</a></p><p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/</a></p><p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/</a></p><p><a href="https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin" target="_blank" rel="noopener">https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin</a></p><p><a href="https://3dship.harrysoftware.com" target="_blank" rel="noopener">https://3dship.harrysoftware.com</a></p><p><a href="https://tree.harrysoftware.com/" target="_blank" rel="noopener">https://tree.harrysoftware.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

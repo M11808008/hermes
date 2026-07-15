@@ -1,5 +1,36 @@
 [
   {
+    "title": "Facebook 社群案例｜Three.js Object Sculptor：用 Codex plugin 從物件照片生成程式化 3D 模型",
+    "date": "2026-07-15",
+    "source": "Facebook post, Brave Search, GitHub repository",
+    "author": "Codex 中文社群 / 史壯拜",
+    "type": "article",
+    "topics": [
+      "Codex",
+      "Codex Plugin",
+      "Three.js",
+      "Procedural 3D",
+      "Image-to-3D",
+      "Agentic Coding",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1CjRtivRYi/",
+      "https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/",
+      "https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/",
+      "https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin",
+      "https://3dship.harrysoftware.com",
+      "https://tree.harrysoftware.com/"
+    ],
+    "excerpt": "Three.js Object Sculptor 是一個 Codex plugin，目標是讓 Codex 依照單張物件參考圖，先建立物件規格與品質關卡，再用 Three.js 程式碼重建可互動、可動畫化的 3D 物件；它適合做瀏覽器原型、遊戲道具與課程示範，但不是從照片直接抽出精準 mesh 的 photogrammetry 工具。 原文： https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/ GitHub： https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin ---",
+    "slug": "2026-07-15-facebook-codex-chinese-threejs-object-sculptor-plugin",
+    "html": "articles/2026-07-15-facebook-codex-chinese-threejs-object-sculptor-plugin.html",
+    "markdown": "articles/2026/07/2026-07-15-facebook-codex-chinese-threejs-object-sculptor-plugin.md"
+  },
+  {
     "title": "Meta Ads AI Connectors｜用 MCP 把廣告後台接進 Claude / ChatGPT 的官方路線",
     "date": "2026-07-15",
     "source": "Facebook post, Brave Search, Meta official docs",
