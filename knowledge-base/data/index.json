@@ -31,6 +31,40 @@
     "markdown": "articles/2026/07/2026-07-16-facebook-niyitech-prompt-master-claude-skill.md"
   },
   {
+    "title": "X｜ChatCut + Codex：把 ChatGPT 變成可由 AI 操控的影片剪輯工作台",
+    "date": "2026-07-16",
+    "source": "https://x.com/so_ainsight/status/2077183939098419389",
+    "author": "そう｜Claude Codeで始めるAI自動化 (@so_ainsight)",
+    "type": "article",
+    "topics": [
+      "AI工具",
+      "ChatGPT Plugins",
+      "Codex",
+      "ChatCut",
+      "AI影片剪輯",
+      "X",
+      "生成式AI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/so_ainsight/status/2077183939098419389",
+      "https://x.com/so_ainsight/status/2077183939098419389",
+      "https://x.com/so_ainsight/status/2077184035298910581",
+      "https://x.com/chatcutapp/status/2076703877932687665",
+      "https://chatcut.io/chatgpt-plugin",
+      "https://chatcut.io/agent-plugin",
+      "https://chatcut.io/",
+      "https://learn.chatgpt.com/docs/plugins",
+      "https://learn.chatgpt.com/docs/app"
+    ],
+    "excerpt": "ChatCut 代表「AI 代理 + 專業領域 UI」的新型態：不是只讓模型吐出剪輯建議，而是把可編輯的 NLE timeline、逐字稿剪輯、motion graphics 與素材生成包成 ChatGPT/Codex plugin，讓 AI 能操作剪輯工作台、人也能隨時接手。",
+    "slug": "2026-07-16-x-so-ainsight-chatcut-codex-video-editor-plugin",
+    "html": "articles/2026-07-16-x-so-ainsight-chatcut-codex-video-editor-plugin.html",
+    "markdown": "articles/2026/07/2026-07-16-x-so-ainsight-chatcut-codex-video-editor-plugin.md"
+  },
+  {
     "title": "板橋府中高記生炒魷魚｜黃石市場排隊小吃、銅板菜單與拜訪策略",
     "date": "2026-07-15",
     "source": "https://nash.tw/kaosquid2026071521/",

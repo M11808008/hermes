@@ -1,0 +1,55 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>X｜ChatCut + Codex：把 ChatGPT 變成可由 AI 操控的影片剪輯工作台</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>X｜ChatCut + Codex：把 ChatGPT 變成可由 AI 操控的影片剪輯工作台</h1><p>來源：日本 X 帳號 そう｜Claude Codeで始めるAI自動化 分享 ChatCut 外掛，並在下一則回覆引用 ChatCut 官方 X 貼文。主張重點是：把影片拖進 ChatGPT，讓 Codex / ChatGPT 開啟 ChatCut 影片剪輯介面，用自然語言與逐字稿完成剪輯，再保留 timeline 供人工細修。</p>
+<h1>一句話摘要</h1>
+<p>ChatCut 代表「AI 代理 + 專業領域 UI」的新型態：不是只讓模型吐出剪輯建議，而是把可編輯的 NLE timeline、逐字稿剪輯、motion graphics 與素材生成包成 ChatGPT/Codex plugin，讓 AI 能操作剪輯工作台、人也能隨時接手。</p>
+<h1>原 X 貼文重點</h1>
+<p>so_ainsight 的貼文說明：</p>
+<ul>
+<li>將影片拖到 ChatGPT 並輸入「請編輯這個」，畫面右側會像影片剪輯軟體一樣展開。</li>
+<li>ChatCut plugin 於 2026-07-09 公開。</li>
+<li>可從逐字稿刪除不需要的片段，對應影片片段也會一起被移除，並聲稱支援 100+ 語言。</li>
+<li>可生成 motion graphics、AI 影片、音樂、旁白、音效。</li>
+<li>timeline 可以手動調整，人工剪輯本身不消耗 ChatCut credits。</li>
+<li>作者稱 ChatGPT desktop app 下，免費方案也可安裝。</li>
+</ul>
+<p>作者下一則貼文補充「參考 post」，引用 ChatCut 官方帳號。ChatCut 官方貼文稱：Codex (ChatGPT) + ChatCut 可提供 GPT 5.6 能原生操作的完整 NLE，包含逐字稿 talking head 剪輯、真實軌道 timeline、可編輯 motion graphics、Seedance 2.0 影片生成、音樂、旁白與音效；剪輯操作本身主要消耗使用者自己的 GPT tokens，ChatCut credits 主要用於生成式素材。</p>
+<h1>查證結果</h1>
+<p>| 主張 | 查證狀態 | 說明 |</p>
+<p>|---|---|---|</p>
+<p>| ChatCut 有 ChatGPT/Codex plugin | 已確認 | ChatCut 官方頁與 Brave Search 結果皆提供 `chatcut.io/chatgpt-plugin`、`agent-plugin` 與安裝說明 |</p>
+<p>| 可在 ChatGPT desktop app / Work / Codex 使用 plugins | 已確認 | OpenAI Learn 的 Plugins 文件說明：Plugins 可在 ChatGPT Work web、desktop app 的 Work 或 Codex、Codex CLI/IDE extension 中瀏覽與安裝 |</p>
+<p>| ChatCut 是 AI video editor | 已確認 | ChatCut 官方首頁描述為 prompt-based AI video editor，可在瀏覽器或 agent tools 中使用 |</p>
+<p>| 逐字稿剪輯與 timeline 同步 | 已確認但以官方產品描述為準 | ChatCut 首頁描述「edit your video like a doc」，刪字/刪句或移除 filler words 後 timeline 跟隨 |</p>
+<p>| 100+ 語言 | 部分確認 | 官方首頁明確寫 auto captions in 100+ languages；部分功能頁也出現 32 languages 等不同描述，應視功能模組而定 |</p>
+<p>| 免費方案也可安裝/使用 | 部分確認 | ChatCut plugin 頁稱 ChatGPT desktop app every plan including Free；ChatCut 首頁也列 Free plan，但生成式素材仍可能受 credits/方案限制 |</p>
+<p>| 手動剪輯不消耗 ChatCut credits | 部分確認 | ChatCut 官方 X 與 Product Hunt 討論指向「剪輯/agent 操作成本較小，生成素材才消耗 credits」；實際仍可能消耗 ChatGPT/Codex token 或受方案限制 |</p>
+<p>| GPT 5.6 | 保守標註 | X 貼文和 ChatCut 官方文案使用 GPT 5.6；本文只記錄為其當下文案，不延伸成模型能力保證 |</p>
+<h1>為什麼值得放進 AI 學習雷達</h1>
+<h2>1. 「AI 剪輯」開始從文字輸出走向可操作 UI</h2>
+<p>傳統 AI 影片工具多半是：輸入 prompt → 生成片段 → 下載成品。ChatCut 的路線更像 agentic workspace：AI 不是只產出影片，而是在一個真正的剪輯介面中操作 clip、caption、motion graphics、audio、timeline。這對教學很重要，因為它展示了 AI 應用的下一步：模型 + 專業工具介面 + 可回退人工操作。</p>
+<h2>2. 逐字稿剪輯是最容易落地的影片自動化入口</h2>
+<p>對課程錄影、訪談、短影音、talking head 內容來說，最耗時間的通常不是炫技特效，而是刪停頓、刪重複、整理段落與加字幕。ChatCut 把逐字稿、timeline 與 caption 綁在同一工作流中，這比單純「請 AI 幫我剪影片」更具可驗證性。</p>
+<h2>3. Credits 與 token 成本要拆開看</h2>
+<p>貼文容易讓人以為「AI 剪輯免費」。更準確的說法是：</p>
+<ul>
+<li>手動 timeline 編輯與部分 agent 操作可能不消耗 ChatCut credits。</li>
+<li>但 ChatGPT/Codex 本身可能消耗 token/方案額度。</li>
+<li>生成式素材如 Seedance 影片、AI music、voiceover、sound effects、image/video generation 通常會消耗 ChatCut credits 或方案額度。</li>
+</ul>
+<h1>欒帥可採用的情境</h1>
+<p>| 情境 | 建議 |</p>
+<p>|---|---|</p>
+<p>| AI 課程側錄剪輯 | 可測試逐字稿刪除 filler words、分章、字幕與講者重點 highlight |</p>
+<p>| 短影音製作 | 先讓 AI 產生 rough cut，再人工調整節奏與視覺風格 |</p>
+<p>| 教學示範 | 很適合展示「AI 操作專業軟體」而非「AI 直接取代創作者」 |</p>
+<p>| 內容團隊流程 | 可分工：AI 初剪、人工校對、再用 ChatCut/其他工具產生字幕與 motion graphics |</p>
+<p>| 成本控管 | 先用非生成式剪輯功能測試，再開啟影片/音樂/旁白生成，避免 credits 失控 |</p>
+<h1>風險與注意事項</h1>
+<ul>
+<li>**隱私與素材授權**：上傳課程影片、學員畫面、客戶素材前，需確認授權、個資與雲端處理條款。</li>
+<li>**字幕與逐字稿錯誤**：100+ 語言不代表所有語言都同等準確；繁中、日文、混語、專有名詞仍需人工校對。</li>
+<li>**生成素材版權**：AI 音樂、旁白、影片、B-roll 是否可商用，需看 ChatCut 當前服務條款與所用模型。</li>
+<li>**桌面 App / plugin 權限**：外掛安裝、local plugin directory、Codex CLI 與 MCP/工具權限都應檢查來源與安全性。</li>
+<li>**不要把 prototype 當 final cut**：AI 初剪可節省時間，但品牌影片、課程招生素材、商業廣告仍需人工審片、調音、調色與事實校對。</li>
+</ul>
+<h1>結論</h1>
+<p>ChatCut + Codex 的重點不是「ChatGPT 會剪影片」這句話本身，而是它把影片剪輯拆成 AI 可操作的結構：逐字稿、timeline、caption、motion graphics、生成素材與人工可接手的編輯器。這類工具會讓未來的 AI 課程、工作坊與內容團隊更容易示範「人機協作剪輯」：AI 先做 rough cut，人再做創意與品質把關。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-16 · https://x.com/so_ainsight/status/2077183939098419389 · article</div><h3>標籤</h3><span class="tag">AI工具</span><span class="tag">ChatGPT Plugins</span><span class="tag">Codex</span><span class="tag">ChatCut</span><span class="tag">AI影片剪輯</span><span class="tag">X</span><span class="tag">生成式AI</span><h3>原始連結</h3><p><a href="https://x.com/so_ainsight/status/2077183939098419389" target="_blank" rel="noopener">https://x.com/so_ainsight/status/2077183939098419389</a></p><p><a href="https://x.com/so_ainsight/status/2077183939098419389" target="_blank" rel="noopener">https://x.com/so_ainsight/status/2077183939098419389</a></p><p><a href="https://x.com/so_ainsight/status/2077184035298910581" target="_blank" rel="noopener">https://x.com/so_ainsight/status/2077184035298910581</a></p><p><a href="https://x.com/chatcutapp/status/2076703877932687665" target="_blank" rel="noopener">https://x.com/chatcutapp/status/2076703877932687665</a></p><p><a href="https://chatcut.io/chatgpt-plugin" target="_blank" rel="noopener">https://chatcut.io/chatgpt-plugin</a></p><p><a href="https://chatcut.io/agent-plugin" target="_blank" rel="noopener">https://chatcut.io/agent-plugin</a></p><p><a href="https://chatcut.io/" target="_blank" rel="noopener">https://chatcut.io/</a></p><p><a href="https://learn.chatgpt.com/docs/plugins" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/plugins</a></p><p><a href="https://learn.chatgpt.com/docs/app" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/app</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
