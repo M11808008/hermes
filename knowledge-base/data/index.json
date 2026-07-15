@@ -31,6 +31,39 @@
     "markdown": "articles/2026/07/2026-07-16-facebook-niyitech-prompt-master-claude-skill.md"
   },
   {
+    "title": "X｜淘沙者：Codex 做影片的 6 個必裝 Skills 與 Video SOP",
+    "date": "2026-07-16",
+    "source": "X, fxtwitter, video OCR, Brave Search, GitHub, Remotion docs",
+    "author": "淘沙者(TheSandPicker) (@Etudecn)",
+    "type": "social-post",
+    "topics": [
+      "Codex",
+      "AI Video",
+      "Agent Skills",
+      "Remotion",
+      "HyperFrames",
+      "Video Editing"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/Etudecn/status/2077418732356587619",
+      "https://x.com/Etudecn/status/2077418732356587619",
+      "https://x.com/Etudecn/status/2077418732356587619",
+      "https://github.com/heygen-com/hyperframes",
+      "https://hyperframes.heygen.com/",
+      "https://github.com/browser-use/video-use",
+      "https://github.com/remotion-dev/codex-plugin",
+      "https://github.com/Agentchengfeng/chengfeng-videocut-skills",
+      "https://www.remotion.dev/docs/ai/coding-agents"
+    ],
+    "excerpt": "這則貼文把 Codex 做影片的工作流整理成「6 個模組 + 一條 SOP」：用不同 skill 分別處理動效、素材整理、程式化渲染、AI 生成影片、中文剪輯與數字人口播，最後由 Codex 串接成從選題、分鏡、提示詞、素材、剪輯、字幕到包裝的完整影片流程。 原始貼文： https://x.com/Etudecn/status/2077418732356587619 ---",
+    "slug": "2026-07-16-x-etudecn-codex-video-skills-sop",
+    "html": "articles/2026-07-16-x-etudecn-codex-video-skills-sop.html",
+    "markdown": "articles/2026/07/2026-07-16-x-etudecn-codex-video-skills-sop.md"
+  },
+  {
     "title": "X｜OfficeCLI：讓 AI Agent 操作 Word、Excel、PowerPoint 的開源 Office 工具鏈",
     "date": "2026-07-16",
     "source": "https://x.com/369Serena/status/2076856524161388823",
@@ -96,6 +129,38 @@
     "slug": "2026-07-16-x-so-ainsight-chatcut-codex-video-editor-plugin",
     "html": "articles/2026-07-16-x-so-ainsight-chatcut-codex-video-editor-plugin.html",
     "markdown": "articles/2026/07/2026-07-16-x-so-ainsight-chatcut-codex-video-editor-plugin.md"
+  },
+  {
+    "title": "X｜Rachel：Codex + Remotion 影片日更管線升級到數字人自動化",
+    "date": "2026-07-16",
+    "source": "X, fxtwitter, Brave Search, Remotion docs, GitHub, HeyGen HyperFrames",
+    "author": "Rachel🥥 (@Zesee)",
+    "type": "social-post",
+    "topics": [
+      "Codex",
+      "Remotion",
+      "AI Video",
+      "Digital Human",
+      "Creator Workflow",
+      "Agent Skills"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/Zesee/status/2077292396065198208",
+      "https://x.com/Zesee/status/2077292396065198208",
+      "https://x.com/Zesee/status/2077292396065198208",
+      "https://x.com/Zesee/status/2072417062165635433",
+      "https://www.remotion.dev/docs/ai/coding-agents",
+      "https://github.com/remotion-dev/codex-plugin",
+      "https://github.com/openai/plugins",
+      "https://github.com/heygen-com/hyperframes"
+    ],
+    "excerpt": "Rachel 的貼文把「Codex + Remotion 做影片」從模板化剪輯再推進一步：影片成品不再依賴本人錄製口播，而是用數字人/虛擬人出鏡，讓選題、腳本、分鏡、字幕、動畫、渲染與出片更接近可維護的內容生產線。 原始貼文： https://x.com/Zesee/status/2077292396065198208 引用文章： https://x.com/Zesee/status/2072417062165635433 ---",
+    "slug": "2026-07-16-x-zesee-codex-remotion-digital-human-video-pipeline",
+    "html": "articles/2026-07-16-x-zesee-codex-remotion-digital-human-video-pipeline.html",
+    "markdown": "articles/2026/07/2026-07-16-x-zesee-codex-remotion-digital-human-video-pipeline.md"
   },
   {
     "title": "板橋府中高記生炒魷魚｜黃石市場排隊小吃、銅板菜單與拜訪策略",

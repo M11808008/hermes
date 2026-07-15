@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>X｜淘沙者：Codex 做影片的 6 個必裝 Skills 與 Video SOP</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>X｜淘沙者：Codex 做影片的 6 個必裝 Skills 與 Video SOP</h1><h2>一句話摘要</h2>
+<p>這則貼文把 Codex 做影片的工作流整理成「6 個模組 + 一條 SOP」：用不同 skill 分別處理動效、素材整理、程式化渲染、AI 生成影片、中文剪輯與數字人口播，最後由 Codex 串接成從選題、分鏡、提示詞、素材、剪輯、字幕到包裝的完整影片流程。</p>
+<p>原始貼文：</p>
+<p><a href="https://x.com/Etudecn/status/2077418732356587619" target="_blank" rel="noopener">https://x.com/Etudecn/status/2077418732356587619</a></p>
+<p>---</p>
+<h2>貼文內容與擷取資訊</h2>
+<p>貼文文字：</p>
+<p>「这个真得存一下。用 Codex 做视频的话，这几个 skills 基本属于必装。不是那种‘可有可无的小插件’，是你装完会明显感觉：哦，原来它还能这么干。尤其是做视频流程里那些反复折腾的部分，能省很多手工活。我先记下来，免得下次又到处翻。AI 圈最烦的不是没工具，是好东西刷过去就找不到了。」</p>
+<p>擷取到的 metadata：</p>
+<ul>
+<li>作者：淘沙者(TheSandPicker) (@Etudecn)。</li>
+<li>發布時間：2026-07-15 15:43:17 UTC。</li>
+<li>擷取互動：約 1,022 views、13 likes、2 reposts、24 bookmarks、3 replies。</li>
+<li>媒體：44.95 秒直式影片，標籤顯示 9:16 Remotion。</li>
+</ul>
+<p>---</p>
+<h2>影片 OCR：6 個 Skills</h2>
+<p>影片截圖可讀到的清單如下：</p>
+<ul>
+<li>HyperFrames：一句話生成動效視頻。示例用途包含文章推文、產品介紹、直接渲染 MP4。</li>
+<li>Video Use：素材自動整理剪輯。示例用途包含刪除停頓、添加字幕、調色做動效。</li>
+<li>Remotion：用代碼批量製作視頻。示例用途包含排行榜、數據周報、固定欄目批量出片。</li>
+<li>Jiuma AI Video Generation Skill：免費生成 AI 視頻。畫面列出圖片、視頻兩類輸入/產出。</li>
+<li>Video Cut Skills：更懂中文剪輯需求。示例用途包含口播節奏、中文斷句。</li>
+<li>jiuma-free-meta-human：自定義口播數字人。</li>
+</ul>
+<p>影片後段把 6 個模組組合成「視頻 SOP」：選題、分鏡、提示詞、素材、剪輯、字幕、包裝都可以交給 Codex 串接與調度。</p>
+<p>---</p>
+<h2>Brave Search / GitHub 查證</h2>
+<p>可確認或部分確認的來源：</p>
+<ul>
+<li>HyperFrames：HeyGen 官方站與 `heygen-com/hyperframes` repo 均描述「Write HTML. Render video. Built for agents」，可用 HTML/CSS/JS、Tailwind、GSAP、字幕、旁白與 website-to-video capture 生成影片；repo metadata 擷取時約 35k stars。</li>
+<li>Video Use：`browser-use/video-use` repo 描述為「Edit videos with coding agents」，README 顯示可讓 Claude Code、Codex、Hermes、OpenClaw 等 shell agent 安裝，並使用 ffmpeg、轉寫與渲染 helper；repo metadata 擷取時約 16.9k stars。</li>
+<li>Remotion：Remotion 官方文件有「Prompting videos with coding agents」，`remotion-dev/codex-plugin` repo 也存在；這確認了用 Codex / coding agent 操作 Remotion 的方向。</li>
+<li>Video Cut Skills：Brave Search 與 GitHub API 可找到 `Agentchengfeng/chengfeng-videocut-skills`，描述為「用 Claude Code Skills 做的視頻剪輯 Agent」，聚焦中文口播、字幕、審核頁與剪輯流程；repo metadata 擷取時約 2.6k stars。</li>
+<li>Jiuma / jiuma-free-meta-human：搜尋結果可找到 Jimeng / 即夢 AI 影片生成與多個 digital-human / meta-human 類 repo，但未在本次公開搜尋中穩定確認到影片中同名 skill 的唯一官方 repo。應視為第三方/作者工作流，需要使用前確認來源、授權、API 成本與輸出條款。</li>
+</ul>
+<p>---</p>
+<h2>為什麼這個 SOP 重要</h2>
+<p>這張清單的價值不在於「每個人都要照單全裝」，而是把 AI 影片製作拆成可替換模組：</p>
+<ul>
+<li>HyperFrames / Remotion：負責程式化視覺與可重複渲染。</li>
+<li>Video Use / Video Cut Skills：負責素材整理、停頓刪除、字幕與中文剪輯節奏。</li>
+<li>Jiuma / meta-human：負責 AI 影像素材與數字人口播層。</li>
+<li>Codex：負責讀取任務、調用工具、修錯、串接步驟、保存 SOP。</li>
+</ul>
+<p>對內容團隊來說，這是「技能庫化」的影片工廠概念：不要讓每次影片都從剪輯軟體空白專案開始，而是把常見動作封裝成 skill，讓 agent 依規則執行與驗證。</p>
+<p>---</p>
+<h2>實作建議</h2>
+<ul>
+<li>先選一條固定欄目，例如「AI 工具 60 秒快報」或「一週模型更新」。</li>
+<li>用 Remotion 或 HyperFrames 建立 9:16 模板，固定字體、色彩、字幕區與 CTA。</li>
+<li>用 Video Use / Video Cut 類 skill 處理原始素材、口播節奏、字幕與停頓。</li>
+<li>若使用數字人，先建立授權、聲音與肖像規範，避免未同意的 voice clone / avatar。</li>
+<li>把每次出錯與驗收標準寫入 AGENTS.md / SKILL.md，讓 Codex 下次不用重新理解。</li>
+</ul>
+<p>---</p>
+<h2>Caveats</h2>
+<ul>
+<li>「必裝」是作者推薦，不是 OpenAI、Remotion 或 HeyGen 官方最佳實踐。</li>
+<li>各 skill 對 Node.js、ffmpeg、API key、ElevenLabs / TTS、影像生成服務、GPU 或雲端渲染可能有不同需求。</li>
+<li>中文剪輯、字幕斷句與口播節奏仍需要人工抽查，尤其是多音字、專有名詞與語氣停頓。</li>
+<li>數字人與 AI 影像輸出要確認肖像、聲音、素材、商用授權與平台揭露要求。</li>
+<li>影片量產管線容易放大錯誤；最終發布前必須保留人工審核。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-16 · X, fxtwitter, video OCR, Brave Search, GitHub, Remotion docs · social-post</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">AI Video</span><span class="tag">Agent Skills</span><span class="tag">Remotion</span><span class="tag">HyperFrames</span><span class="tag">Video Editing</span><h3>原始連結</h3><p><a href="https://x.com/Etudecn/status/2077418732356587619" target="_blank" rel="noopener">https://x.com/Etudecn/status/2077418732356587619</a></p><p><a href="https://x.com/Etudecn/status/2077418732356587619" target="_blank" rel="noopener">https://x.com/Etudecn/status/2077418732356587619</a></p><p><a href="https://x.com/Etudecn/status/2077418732356587619" target="_blank" rel="noopener">https://x.com/Etudecn/status/2077418732356587619</a></p><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p><p><a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></p><p><a href="https://github.com/browser-use/video-use" target="_blank" rel="noopener">https://github.com/browser-use/video-use</a></p><p><a href="https://github.com/remotion-dev/codex-plugin" target="_blank" rel="noopener">https://github.com/remotion-dev/codex-plugin</a></p><p><a href="https://github.com/Agentchengfeng/chengfeng-videocut-skills" target="_blank" rel="noopener">https://github.com/Agentchengfeng/chengfeng-videocut-skills</a></p><p><a href="https://www.remotion.dev/docs/ai/coding-agents" target="_blank" rel="noopener">https://www.remotion.dev/docs/ai/coding-agents</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
