@@ -480,6 +480,41 @@
     "markdown": "articles/2026/07/2026-07-15-youtube-codex-ten-plugins-ai-agent-workflow.md"
   },
   {
+    "title": "YouTube｜GPT 5.5 + Codex 接管電腦與瀏覽器：Computer Use、Browser 與 Agent 框架比較",
+    "date": "2026-07-15",
+    "source": "YouTube, Brave Search, OpenAI docs, OpenClaw docs, Hermes docs",
+    "author": "松小鼠呀",
+    "type": "video",
+    "topics": [
+      "Codex",
+      "GPT-5.5",
+      "Computer Use",
+      "Browser Agent",
+      "OpenClaw",
+      "Hermes Agent",
+      "AI Agent",
+      "Automation Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=QE_8Ua5eMiE",
+      "https://www.youtube.com/watch?v=QE_8Ua5eMiE",
+      "https://www.youtube.com/watch?v=QE_8Ua5eMiE",
+      "https://developers.openai.com/codex/app/computer-use",
+      "https://developers.openai.com/codex/app/browser",
+      "https://developers.openai.com/codex/app/chrome-extension",
+      "https://developers.openai.com/codex/plugins",
+      "https://docs.openclaw.ai/plugins/codex-harness",
+      "https://hermes-agent.nousresearch.com/docs"
+    ],
+    "excerpt": "這支影片的保存價值在於：它把 Codex 從「coding agent」推進到「可操作電腦與瀏覽器的 general-purpose agent」來理解。對 AI 學習雷達而言，重點不是單純相信「取代 OpenClaw / Hermes」這種標題，而是辨認出 AI Agent 正在往三個方向收斂：桌面控制、瀏覽器控制、以及可安裝工具 / plugin 的工作平台。 原始影片： https://www.youtube.com/watch?v=QE_8Ua5eMiE 注意：YouTube 顯示沒有可用字幕，transcript API 也回傳 transcripts disabled。因此本文是 metadata / 描述 / 官方來源交叉整理，不是逐字稿摘要。 ---",
+    "slug": "2026-07-15-youtube-gpt55-codex-computer-browser-openclaw-hermes",
+    "html": "articles/2026-07-15-youtube-gpt55-codex-computer-browser-openclaw-hermes.html",
+    "markdown": "articles/2026/07/2026-07-15-youtube-gpt55-codex-computer-browser-openclaw-hermes.md"
+  },
+  {
     "title": "OpenClaw × LibTV Skill 安裝與 Access Key 配置指南",
     "date": "2026-07-14",
     "source": "LINE shared note, GitHub, Brave Search",

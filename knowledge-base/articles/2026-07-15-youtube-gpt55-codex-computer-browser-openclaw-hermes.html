@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>YouTube｜GPT 5.5 + Codex 接管電腦與瀏覽器：Computer Use、Browser 與 Agent 框架比較</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>YouTube｜GPT 5.5 + Codex 接管電腦與瀏覽器：Computer Use、Browser 與 Agent 框架比較</h1><h2>一句話摘要</h2>
+<p>這支影片的保存價值在於：它把 Codex 從「coding agent」推進到「可操作電腦與瀏覽器的 general-purpose agent」來理解。對 AI 學習雷達而言，重點不是單純相信「取代 OpenClaw / Hermes」這種標題，而是辨認出 AI Agent 正在往三個方向收斂：桌面控制、瀏覽器控制、以及可安裝工具 / plugin 的工作平台。</p>
+<p>原始影片：</p>
+<p><a href="https://www.youtube.com/watch?v=QE_8Ua5eMiE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=QE_8Ua5eMiE</a></p>
+<p>注意：YouTube 顯示沒有可用字幕，transcript API 也回傳 transcripts disabled。因此本文是 metadata / 描述 / 官方來源交叉整理，不是逐字稿摘要。</p>
+<p>---</p>
+<h2>影片 metadata</h2>
+<ul>
+<li>標題：【保姆级教程】GPT5.5+Codex接管电脑和浏览器，全自动完成复杂任务｜取代OpenClaw和Hermes</li>
+<li>作者 / 頻道：松小鼠呀</li>
+<li>片長：約 9 分 8 秒</li>
+<li>YouTube 擷取觀看數：約 5838</li>
+<li>YouTube upload date：2026-04-29T02:48:31-07:00</li>
+<li>類別：Education</li>
+</ul>
+<p>影片描述主張：GPT 5.5 最重要的變化是「真的開始會操作電腦」，影片用 5 個真實場景實測，最後提供保姆級教程，讓使用者跑通 Codex 接管電腦與瀏覽器的流程。</p>
+<p>---</p>
+<h2>影片可歸納的核心主張</h2>
+<ul>
+<li>Codex 不再只是處理程式碼，而是能透過電腦 / 瀏覽器控制完成更複雜的任務。</li>
+<li>Computer Use 類能力讓 agent 可以操作桌面 app、視窗、鍵盤與滑鼠。</li>
+<li>Browser / Chrome extension 類能力讓 agent 能處理登入後網站、跨分頁資料、DevTools、網站測試與資料蒐集。</li>
+<li>若 Codex 能直接使用這些能力，部分原本需要 OpenClaw、Hermes 或其他 automation agent 的場景，可能可以改由 Codex 完成。</li>
+<li>真正的落地重點在於：任務設計、授權範圍、帳號隔離、人工 approval 與結果驗證，而不是只看模型名稱。</li>
+</ul>
+<p>---</p>
+<h2>官方 / Brave Search 查證</h2>
+<p>Brave Search 與官方文件可確認以下方向：</p>
+<ul>
+<li>OpenAI Codex Computer Use docs：確認 ChatGPT desktop app 的 Work / Codex 可安裝或啟用 Computer Use plugin，讓 agent 執行電腦操作類任務。</li>
+<li>OpenAI Codex Browser docs：確認 Codex / ChatGPT 具備 Browser 相關能力，且 Developer mode 可與 Computer Use、built-in browser 搭配，讓 agent 透過 Chrome DevTools Protocol 取得受控存取。</li>
+<li>OpenAI Codex Chrome extension docs：確認 ChatGPT desktop app 可透過 Chrome extension 讓 Work / Codex 使用瀏覽器情境；搜尋摘要也提到 browser control 不會另外儲存完整 Chrome action record，但會受 Memories 設定影響。</li>
+<li>OpenAI Codex Plugins docs：確認 plugins 可封裝 skills、apps、MCP、hooks、scheduled task templates 等能力，並在 Work / Codex 內安裝使用。</li>
+<li>OpenClaw docs 有 Codex harness 相關文件，代表 OpenClaw 不是單純被取代的對象，也可以把 Codex 作為 harness / runtime 的一部分整合。</li>
+<li>Hermes Agent 則是本機 / 多平台 agent 工作流系統，包含 skills、工具、cron、訊息平台與個人知識庫等長流程能力；是否被 Codex 取代，取決於使用者需要的是桌面 app automation、開源可改造框架，還是長期個人工作流中樞。</li>
+</ul>
+<p>因此，影片中「Codex 可操作電腦與瀏覽器」這個方向是有官方來源支持的；但「取代 OpenClaw 和 Hermes」比較像創作者標題與立場，不能當成客觀評測結論。</p>
+<p>---</p>
+<h2>對 OpenClaw / Hermes 的更精準比較</h2>
+<p>可把三者想成不同層級：</p>
+<ul>
+<li>Codex / ChatGPT desktop：偏向使用者可立即使用的商業 agent app，強項是模型能力、官方 plugins、Computer Use、Chrome / Browser 整合與 ChatGPT 帳號體驗。</li>
+<li>OpenClaw：偏向開源 agent / automation framework，可整合不同 model provider、harness、Computer Use 與自訂 runtime，適合想改造底層與自建工作流的人。</li>
+<li>Hermes Agent：偏向個人 / 團隊 agent operating layer，強項是持久記憶、skills、訊息平台整合、定時任務、檔案與知識庫自動化、以及可在 LINE / Telegram 等渠道中長期服務使用者。</li>
+</ul>
+<p>若任務是「在桌面上臨時操作一個網站或 app」，Codex Computer Use 可能非常方便。若任務是「長期自動接收連結、歸檔、部署、跨平台回報、排程監控」，Hermes / OpenClaw 類框架仍有不同價值。</p>
+<p>---</p>
+<h2>實務風險與安全提醒</h2>
+<ul>
+<li>電腦與瀏覽器控制比一般聊天更高風險，因為 agent 可能接觸登入狀態、cookie、密碼管理器、下載檔案、本機資料與付款頁面。</li>
+<li>建議使用 sandbox browser profile、demo 帳號、低權限帳號與獨立測試資料，不要直接讓 agent 操作主帳號或生產環境。</li>
+<li>需要明確設定人工 approval：送出表單、下單、刪檔、寄信、發文、提交 PR、改 production config 前都應停下確認。</li>
+<li>對企業或課堂環境，應建立操作日誌、螢幕錄影或可回放紀錄，方便事後追蹤 agent 做了什麼。</li>
+<li>標題中的「全自動完成複雜任務」要保守理解：越複雜的任務越需要中途驗證、錯誤恢復與人類判斷。</li>
+</ul>
+<p>---</p>
+<h2>可轉成課堂練習的方式</h2>
+<p>任務：設計一個「Browser / Computer Use 安全實驗」。</p>
+<ul>
+<li>準備一個 sandbox Chrome profile 與 demo 帳號。</li>
+<li>指派任務：登入測試網站、下載範例 CSV、整理成表格、產生簡報或簡短報告。</li>
+<li>要求學生列出 agent 可能接觸到的敏感資訊。</li>
+<li>設定三個必須人工確認的 checkpoint：登入後、下載前、提交/發送前。</li>
+<li>最後比較 Codex、OpenClaw、Hermes 類工具在「立即可用性、可自訂性、長期自動化、權限治理」上的差異。</li>
+</ul>
+<p>保存重點：Codex 的 Computer Use / Browser / Chrome extension 讓 AI Agent 更接近真正操作工作環境；但「能操作」不等於「可以無限制自動化」，未來的核心能力會是權限治理、任務分解、可驗證輸出與安全回退。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · YouTube, Brave Search, OpenAI docs, OpenClaw docs, Hermes docs · video</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">GPT-5.5</span><span class="tag">Computer Use</span><span class="tag">Browser Agent</span><span class="tag">OpenClaw</span><span class="tag">Hermes Agent</span><span class="tag">AI Agent</span><span class="tag">Automation Workflow</span><h3>原始連結</h3><p><a href="https://www.youtube.com/watch?v=QE_8Ua5eMiE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=QE_8Ua5eMiE</a></p><p><a href="https://www.youtube.com/watch?v=QE_8Ua5eMiE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=QE_8Ua5eMiE</a></p><p><a href="https://www.youtube.com/watch?v=QE_8Ua5eMiE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=QE_8Ua5eMiE</a></p><p><a href="https://developers.openai.com/codex/app/computer-use" target="_blank" rel="noopener">https://developers.openai.com/codex/app/computer-use</a></p><p><a href="https://developers.openai.com/codex/app/browser" target="_blank" rel="noopener">https://developers.openai.com/codex/app/browser</a></p><p><a href="https://developers.openai.com/codex/app/chrome-extension" target="_blank" rel="noopener">https://developers.openai.com/codex/app/chrome-extension</a></p><p><a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">https://developers.openai.com/codex/plugins</a></p><p><a href="https://docs.openclaw.ai/plugins/codex-harness" target="_blank" rel="noopener">https://docs.openclaw.ai/plugins/codex-harness</a></p><p><a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
