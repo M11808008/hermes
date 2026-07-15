@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GitHub｜Awesome Agent Architecture：用 harness engineering 讀懂現代 AI agents</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>GitHub｜Awesome Agent Architecture：用 harness engineering 讀懂現代 AI agents</h1><h1>GitHub｜Awesome Agent Architecture：用 harness engineering 讀懂現代 AI agents</h1>
+<h2>一句話摘要</h2>
+<p>`awesome-agent-architecture` 主張：模型負責推理，harness 給模型行動、狀態與界線；理解 agent 的關鍵不是只看模型，而是看 loop、tools、permissions、memory、skills、context、tasks、scheduling 與 interfaces 如何被工程化組合。</p>
+<p>Repository：</p>
+<p><a href="https://github.com/hardness1020/awesome-agent-architecture" target="_blank" rel="noopener">https://github.com/hardness1020/awesome-agent-architecture</a></p>
+<p>---</p>
+<h2>Repository 重點</h2>
+<p>GitHub API 與 README 擷取到的專案資訊：</p>
+<ul>
+<li>full name：`hardness1020/awesome-agent-architecture`</li>
+<li>描述：Curated architecture notes and system reviews of modern AI agents.</li>
+<li>主題：`ai-agents`、`harness-engineering`</li>
+<li>授權：MIT</li>
+<li>語言：Python</li>
+<li>README 提供英文、繁中、簡中版本。</li>
+<li>研究案例包含 Claude Code 與 Hermes Agent，後續可加入 OpenClaw、aider、mini-swe-agent 等。</li>
+</ul>
+<p>README 的核心句子是：「The model reasons. The harness gives it action, state, and limits.」繁中版則寫成：「模型負責推理。harness（外層架構）則給它行動、狀態和界線。」</p>
+<p>---</p>
+<h2>章節架構</h2>
+<p>此 repo 把 agent architecture 拆成 22 個章節，分層理解：</p>
+<ul>
+<li>Foundations：harness thesis。</li>
+<li>Core Loop：agent loop、tool runtime、permission &amp; sandbox、hooks。</li>
+<li>Complex Work：planning / todos、subagents、skills、context management。</li>
+<li>Knowledge &amp; Resilience：memory、system prompt assembly、error recovery。</li>
+<li>Long Running &amp; Async：task system、background execution、scheduling、worktree isolation。</li>
+<li>Multi Agent：coordination、protocols、autonomy。</li>
+<li>Extension &amp; Integration：MCP / plugins / channels、observability &amp; evaluation。</li>
+<li>Composition：loop engineering。</li>
+</ul>
+<p>這種拆法很適合作為 AI agent 工程課程大綱：每一章都對應一個實際機制，而不是停留在抽象名詞。</p>
+<p>---</p>
+<h2>Skills 章節的價值</h2>
+<p>第 7 章 Skills 將 skill 定義為「self-contained bundle of expertise, instructions plus any scripts and files, loaded only when a task needs it」。它把 Skills 解釋成 progressive disclosure：</p>
+<ul>
+<li>Catalog：只把 name、description、path 放進 prompt，讓模型知道有哪些技能。</li>
+<li>Instructions：需要時才讀 `SKILL.md` 本文。</li>
+<li>Resources：技能引用到的 scripts / references / templates 再按需讀取。</li>
+</ul>
+<p>這對理解 ChatGPT Skills、Claude Skills、Codex plugins、Hermes skills 都很有幫助：skill 的工程重點不是把所有知識塞進 system prompt，而是讓 agent 能便宜地發現能力、必要時載入完整工作流，並在用完後留下可演化的 procedural memory。</p>
+<p>---</p>
+<h2>為什麼值得放進 AI 學習雷達？</h2>
+<p>這份 repo 的價值是把「agent 變強」拆成可以教、可以實作、可以驗證的架構部件。對欒帥的課程、工作坊或內部工具設計來說，它可以作為：</p>
+<ul>
+<li>AI agent architecture 課程主線。</li>
+<li>Hermes / Claude Code / Codex 等工具比較框架。</li>
+<li>解釋 memory、skills、MCP、background task、cron、worktree isolation 的教材。</li>
+<li>建立「harness engineering」語彙：把模型能力與外層工程責任切開。</li>
+</ul>
+<p>尤其 repo 直接把 Hermes Agent 列為研究系統之一，對目前的 AI 學習雷達與愛馬仕小小斌工作流有高度關聯。</p>
+<p>---</p>
+<h2>實務閱讀建議</h2>
+<ul>
+<li>先讀 `00-harness-thesis`：建立 model vs harness 的分工觀念。</li>
+<li>再讀 `01-agent-loop` 到 `04-hooks`：理解最小 agent loop 與副作用控管。</li>
+<li>接著讀 `07-skills`、`09-memory`、`14-scheduling`、`19-mcp-plugins-channels`：對照 Hermes Agent 目前的能力。</li>
+<li>若要做課程，可讓學員跑各章節 `src/test.py` / `demo.py`，再比較相鄰章節 diff，觀察每層機制如何加入 loop。</li>
+</ul>
+<p>---</p>
+<h2>注意事項</h2>
+<ul>
+<li>README 明確說明這些是從 source、docs 與 behavior 重建的 system reviews；應把它視為工程教材與架構筆記，而不是官方規格文件。</li>
+<li>版本研究點會隨 Claude Code、Hermes Agent 等專案更新而變動，引用時要註明 repo 當前 commit / 版本。</li>
+<li>若用於課程，建議搭配實作作業：每週只加一層 harness 機制，讓學員理解 agent 能力是怎麼被組合出來的。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · GitHub repository, Brave Search · article</div><h3>標籤</h3><span class="tag">AI Agents</span><span class="tag">Agent Architecture</span><span class="tag">Harness Engineering</span><span class="tag">Claude Code</span><span class="tag">Hermes Agent</span><span class="tag">Skills</span><span class="tag">Memory</span><span class="tag">MCP</span><h3>原始連結</h3><p><a href="https://github.com/hardness1020/awesome-agent-architecture" target="_blank" rel="noopener">https://github.com/hardness1020/awesome-agent-architecture</a></p><p><a href="https://github.com/hardness1020/awesome-agent-architecture" target="_blank" rel="noopener">https://github.com/hardness1020/awesome-agent-architecture</a></p><p><a href="https://github.com/hardness1020/awesome-agent-architecture" target="_blank" rel="noopener">https://github.com/hardness1020/awesome-agent-architecture</a></p><p><a href="https://github.com/hardness1020/awesome-agent-architecture/blob/main/README.zh-TW.md" target="_blank" rel="noopener">https://github.com/hardness1020/awesome-agent-architecture/blob/main/README.zh-TW.md</a></p><p><a href="https://github.com/hardness1020/awesome-agent-architecture/tree/main/sections/07-skills" target="_blank" rel="noopener">https://github.com/hardness1020/awesome-agent-architecture/tree/main/sections/07-skills</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
