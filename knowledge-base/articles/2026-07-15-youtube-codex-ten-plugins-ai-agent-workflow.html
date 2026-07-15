@@ -1,0 +1,80 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>YouTube｜Codex 10 個必裝插件：從瀏覽器、自動化到影片與 App 生成</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>YouTube｜Codex 10 個必裝插件：從瀏覽器、自動化到影片與 App 生成</h1><h2>一句話摘要</h2>
+<p>這支影片值得歸檔，因為它把 Codex plugins 視為「把 AI Agent 從 coding assistant 變成工作平台」的關鍵：瀏覽器、桌面、GitHub、Web App、Figma、簡報、表格與影片生成都被包裝成可安裝能力，讓 Codex 更接近能交付成果的 agent workspace，而不只是聊天式寫程式工具。</p>
+<p>原始影片：</p>
+<p><a href="https://www.youtube.com/watch?v=kxBCLl6eexE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=kxBCLl6eexE</a></p>
+<p>Bilibili mirror：</p>
+<p><a href="https://www.bilibili.com/video/BV1MXLt6vE6s/" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1MXLt6vE6s/</a></p>
+<p>注意：YouTube 顯示「未提供字幕/隱藏式輔助字幕」，transcript API 也回傳 transcripts disabled。因此本文不是逐字稿摘要，而是 metadata / 描述 / mirror / 官方來源交叉整理。</p>
+<p>---</p>
+<h2>影片 metadata</h2>
+<ul>
+<li>標題：Codex 10个必装插件！实战演示：自动生成酷炫动画、视频、网页游戏和手机App，快速上手AI Agent #chatgpt #codex #ai</li>
+<li>作者 / 頻道：松小鼠呀</li>
+<li>片長：約 11 分 31 秒</li>
+<li>YouTube 擷取觀看數：約 49294</li>
+<li>YouTube upload date：2026-05-18T03:42:48-07:00</li>
+<li>類別：Education</li>
+</ul>
+<p>影片描述主張：實測 Codex 10 個必裝插件，涵蓋酷炫動畫、影片生成、網頁遊戲、手機 App、PPT 報告、表格分析與瀏覽器自動化，目標是讓使用者快速理解 AI Agent 可以替代或協助完成哪些工作。</p>
+<p>---</p>
+<h2>10 個插件 / 能力清單</h2>
+<p>以下清單根據影片描述、Bilibili mirror、CSDN/Jina mirror，以及官方來源交叉整理；其中有些是 OpenAI 官方 repo / docs 可確認的 plugin bundle 或能力面，有些則是作者推薦的第三方工作流：</p>
+<ul>
+<li>Chrome：瀏覽器自動化、搜尋、填表、截圖、頁面測試；官方文件有 Chrome extension / Browser / Playwright 類能力，但登入與 cookie 權限要謹慎。</li>
+<li>Computer Use：桌面級操作能力；OpenAI Codex 文件有 Computer Use 頁面，適合跨應用流程但需 sandbox 與人工確認。</li>
+<li>GitHub：repo、issue、PR、review；openai/plugins 內有 github plugin，官方 MCP 文件也列 GitHub。</li>
+<li>Build Web Apps：用自然語言生成與部署 web app / MVP；openai/plugins 內有 build-web-apps，OpenAI Codex Sites 方向相符。</li>
+<li>Figma：讀取設計稿並轉前端；openai/plugins 內有 figma，官方 use case 也有 Figma designs to code。</li>
+<li>IPFoxy Proxy Manager：代理與地區測試；需標為第三方/作者推薦，未在 openai/plugins 官方 repo 直接確認。</li>
+<li>Presentations：簡報生成；OpenAI Codex features 文件列 Presentations artifact，但具體插件可用性依帳號/Workspace 而異。</li>
+<li>Spreadsheets：表格分析與資料清理；OpenAI Codex features 文件列 Spreadsheets artifact，具體插件可用性依帳號/Workspace 而異。</li>
+<li>HyperFrames：HTML/CSS/JS/媒體到影片的 agent workflow；openai/plugins 內有 hyperframes，HeyGen repo 也有 .codex-plugin。</li>
+<li>Remotion：React/程式化影片生成；openai/plugins 內有 remotion，適合資料驅動與大量模板影片。</li>
+</ul>
+<p>---</p>
+<h2>官方 / GitHub 查證</h2>
+<p>Brave Search 與官方來源可確認幾個關鍵方向：</p>
+<ul>
+<li>OpenAI Codex plugins 文件說明：Work / Codex 可透過 plugin directory 安裝 curated、workspace 或 personal marketplace plugins；Codex CLI / IDE extension 也可瀏覽並安裝 plugins。</li>
+<li>OpenAI Codex features 文件列出 Sites、Pull requests、Files and folders、Attach Google Chrome、Documents、PDF、Spreadsheets、Presentations 等能力面。</li>
+<li>OpenAI Computer Use 文件確認可在 ChatGPT desktop app 的 Work 或 Codex 中安裝 / 啟用 Computer Use plugin。</li>
+<li>OpenAI Chrome extension 文件確認 ChatGPT desktop app 可在 Work 或 Codex 透過 Plugins 使用 Chrome extension 相關流程。</li>
+<li>OpenAI MCP 文件列出 Figma、Playwright、Chrome Developer Tools、GitHub 等常見 MCP / 工具整合方向。</li>
+<li>`openai/plugins` GitHub repository 內可確認 `github`、`build-web-apps`、`figma`、`hyperframes`、`remotion` 等 plugin bundle。</li>
+<li>`heygen-com/hyperframes` repository 也有 `.codex-plugin/plugin.json`，描述其可用 HTML、Tailwind、GSAP、captions、voiceovers 與 website-to-video capture 製作影片。</li>
+</ul>
+<p>因此，影片的核心方向「Codex 可透過 plugins 擴展到 browser、computer use、GitHub、web app、design-to-code、documents / spreadsheets / presentations、video generation」具有官方文件與 GitHub 佐證。</p>
+<p>---</p>
+<h2>需要保留的 caveat</h2>
+<ul>
+<li>「10 個必裝」是作者推薦排序，不是 OpenAI 官方最佳實踐；不同帳號、方案、地區、workspace 與 plugin marketplace 可能看到不同可用項目。</li>
+<li>IPFoxy Proxy Manager 類代理工具需特別注意法規、平台條款與帳號風險；不應被一般化為所有人必裝。</li>
+<li>Chrome / Computer Use 涉及瀏覽器 session、登入狀態、cookie、桌面權限與本機檔案，課堂或企業導入時應使用 sandbox profile、demo 帳號與人工 approval。</li>
+<li>Build Web Apps / Sites 適合 prototype、landing page、內部工具與 demo；正式上線仍需檢查網域、資安、CI/CD、資料庫、監控與維運。</li>
+<li>HyperFrames / Remotion 很適合 code-first video，但仍需處理素材授權、音訊授權、品牌規範與渲染品質。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 學習雷達的意義</h2>
+<p>這支影片可作為「Codex plugin 生態」入門索引。它提醒我們：AI Agent 的競爭已不只在模型本身，而在於是否能把工具、權限、工作流、artifact 產出與驗證流程整合成穩定系統。</p>
+<p>對教學設計來說，可以拆成四類能力：</p>
+<ul>
+<li>操作型：Chrome、Computer Use，處理瀏覽器與桌面任務。</li>
+<li>工程型：GitHub、Build Web Apps、Figma-to-code，處理 repo、MVP 與設計交付。</li>
+<li>生產力型：Presentations、Spreadsheets，處理簡報、報告與資料分析。</li>
+<li>媒體型：HyperFrames、Remotion，處理可程式化影片、產品 demo 與大量內容變體。</li>
+</ul>
+<p>最適合的課堂練習不是「一次裝滿 10 個」，而是讓學生選一個具體任務，列出：需要哪些 plugin、每個 plugin 要什麼權限、輸出如何驗證、有哪些資料不能交給 agent。</p>
+<p>---</p>
+<h2>可直接使用的課堂作業</h2>
+<p>任務：用 Codex plugins 做一個「產品上市小型 campaign」。</p>
+<ul>
+<li>Chrome / Browser：蒐集競品 landing page 與定價資訊。</li>
+<li>Spreadsheets：整理競品功能與價格矩陣。</li>
+<li>Presentations：產生 6 頁 pitch deck。</li>
+<li>Build Web Apps 或 Sites：做一頁活動 landing page prototype。</li>
+<li>Figma：若有設計稿，轉成前端 component。</li>
+<li>HyperFrames / Remotion：產生 10 秒產品介紹 motion graphic。</li>
+<li>GitHub：把產物提交到 repo，留下 diff 與 review 記錄。</li>
+</ul>
+<p>評估標準：不只看產物好不好看，也看來源是否保存、權限是否合理、輸出是否可重現、是否有人工驗證與風險說明。</p>
+<p>保存重點：Codex plugins 正在把「AI 寫程式」擴展成「AI 交付工作成果」；但越靠近瀏覽器、桌面、帳號與外部服務，越需要 sandbox、權限治理與人工檢查。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · YouTube, Bilibili mirror, CSDN/Jina mirror, Brave Search, OpenAI docs, GitHub · video</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">OpenAI Plugins</span><span class="tag">AI Agent</span><span class="tag">Browser Agent</span><span class="tag">Computer Use</span><span class="tag">HyperFrames</span><span class="tag">Remotion</span><span class="tag">Productivity Workflow</span><h3>原始連結</h3><p><a href="https://www.youtube.com/watch?v=kxBCLl6eexE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=kxBCLl6eexE</a></p><p><a href="https://www.youtube.com/watch?v=kxBCLl6eexE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=kxBCLl6eexE</a></p><p><a href="https://www.youtube.com/watch?v=kxBCLl6eexE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=kxBCLl6eexE</a></p><p><a href="https://www.bilibili.com/video/BV1MXLt6vE6s/" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1MXLt6vE6s/</a></p><p><a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">https://developers.openai.com/codex/plugins</a></p><p><a href="https://developers.openai.com/codex/app/features" target="_blank" rel="noopener">https://developers.openai.com/codex/app/features</a></p><p><a href="https://developers.openai.com/codex/app/computer-use" target="_blank" rel="noopener">https://developers.openai.com/codex/app/computer-use</a></p><p><a href="https://developers.openai.com/codex/app/chrome-extension" target="_blank" rel="noopener">https://developers.openai.com/codex/app/chrome-extension</a></p><p><a href="https://github.com/openai/plugins" target="_blank" rel="noopener">https://github.com/openai/plugins</a></p><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

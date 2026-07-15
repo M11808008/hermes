@@ -444,6 +444,42 @@
     "markdown": "articles/2026/07/2026-07-15-x-sac-codex-work-plugins-sites-ultra-update.md"
   },
   {
+    "title": "YouTube｜Codex 10 個必裝插件：從瀏覽器、自動化到影片與 App 生成",
+    "date": "2026-07-15",
+    "source": "YouTube, Bilibili mirror, CSDN/Jina mirror, Brave Search, OpenAI docs, GitHub",
+    "author": "松小鼠呀",
+    "type": "video",
+    "topics": [
+      "Codex",
+      "OpenAI Plugins",
+      "AI Agent",
+      "Browser Agent",
+      "Computer Use",
+      "HyperFrames",
+      "Remotion",
+      "Productivity Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=kxBCLl6eexE",
+      "https://www.youtube.com/watch?v=kxBCLl6eexE",
+      "https://www.youtube.com/watch?v=kxBCLl6eexE",
+      "https://www.bilibili.com/video/BV1MXLt6vE6s/",
+      "https://developers.openai.com/codex/plugins",
+      "https://developers.openai.com/codex/app/features",
+      "https://developers.openai.com/codex/app/computer-use",
+      "https://developers.openai.com/codex/app/chrome-extension",
+      "https://github.com/openai/plugins",
+      "https://github.com/heygen-com/hyperframes"
+    ],
+    "excerpt": "這支影片值得歸檔，因為它把 Codex plugins 視為「把 AI Agent 從 coding assistant 變成工作平台」的關鍵：瀏覽器、桌面、GitHub、Web App、Figma、簡報、表格與影片生成都被包裝成可安裝能力，讓 Codex 更接近能交付成果的 agent workspace，而不只是聊天式寫程式工具。 原始影片： https://www.youtube.com/watch?v=kxBCLl6eexE Bilibili mirror： https://www.bilibili.com/video/BV1MXLt6vE6s/ 注意：YouTube 顯示「未提供字幕/隱藏式輔助字幕」，transcript API 也回傳 transcripts disabled。因此本文不是逐字稿摘要，而是 metadata / 描述 / mirror / 官方來源交叉整理。 ---",
+    "slug": "2026-07-15-youtube-codex-ten-plugins-ai-agent-workflow",
+    "html": "articles/2026-07-15-youtube-codex-ten-plugins-ai-agent-workflow.html",
+    "markdown": "articles/2026/07/2026-07-15-youtube-codex-ten-plugins-ai-agent-workflow.md"
+  },
+  {
     "title": "OpenClaw × LibTV Skill 安裝與 Access Key 配置指南",
     "date": "2026-07-14",
     "source": "LINE shared note, GitHub, Brave Search",
