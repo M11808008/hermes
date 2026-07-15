@@ -31,6 +31,39 @@
     "markdown": "articles/2026/07/2026-07-16-facebook-niyitech-prompt-master-claude-skill.md"
   },
   {
+    "title": "X｜OfficeCLI：讓 AI Agent 操作 Word、Excel、PowerPoint 的開源 Office 工具鏈",
+    "date": "2026-07-16",
+    "source": "https://x.com/369Serena/status/2076856524161388823",
+    "author": "Serena (@369Serena)",
+    "type": "article",
+    "topics": [
+      "AI工具",
+      "Office自動化",
+      "AI Agent",
+      "CLI",
+      "Word",
+      "Excel",
+      "PowerPoint",
+      "GitHub",
+      "X"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/369Serena/status/2076856524161388823",
+      "https://x.com/369Serena/status/2076856524161388823",
+      "https://github.com/iOfficeAI/OfficeCLI",
+      "https://github.com/iOfficeAI/OfficeCLI/blob/main/SKILL.md",
+      "https://github.com/iOfficeAI/OfficeCLI/blob/main/README_zh.md",
+      "https://officecli.ai"
+    ],
+    "excerpt": "OfficeCLI 值得追蹤的重點，是它把 Office 文件變成 AI Agent 可讀、可改、可預覽、可迭代的命令列介面：不只是產生 `.docx/.xlsx/.pptx`，還能把文件渲染成 HTML / PNG，讓多模態 Agent 「看見」輸出效果後再修正。",
+    "slug": "2026-07-16-x-serena-officecli-ai-agent-office-suite",
+    "html": "articles/2026-07-16-x-serena-officecli-ai-agent-office-suite.html",
+    "markdown": "articles/2026/07/2026-07-16-x-serena-officecli-ai-agent-office-suite.md"
+  },
+  {
     "title": "X｜ChatCut + Codex：把 ChatGPT 變成可由 AI 操控的影片剪輯工作台",
     "date": "2026-07-16",
     "source": "https://x.com/so_ainsight/status/2077183939098419389",

@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>X｜OfficeCLI：讓 AI Agent 操作 Word、Excel、PowerPoint 的開源 Office 工具鏈</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>X｜OfficeCLI：讓 AI Agent 操作 Word、Excel、PowerPoint 的開源 Office 工具鏈</h1><p>來源：Serena 在 X 分享 GitHub 專案 `iOfficeAI/OfficeCLI`，稱它是可讓 AI Agent 用自然語言操作 Word、Excel、PPT 的開源工具。本文將原貼文主張與 GitHub repo、README、`SKILL.md`、Brave Search 結果交叉整理。</p>
+<h1>一句話摘要</h1>
+<p>OfficeCLI 值得追蹤的重點，是它把 Office 文件變成 AI Agent 可讀、可改、可預覽、可迭代的命令列介面：不只是產生 `.docx/.xlsx/.pptx`，還能把文件渲染成 HTML / PNG，讓多模態 Agent 「看見」輸出效果後再修正。</p>
+<h1>原 X 貼文重點</h1>
+<p>Serena 的貼文將 OfficeCLI 定位為「Office 開放 CLI」的辦公自動化入口，列出它可讓 AI Agent 用自然語言處理：</p>
+<ul>
+<li>生成 Word 文件。</li>
+<li>整理 Excel 表格。</li>
+<li>建立 PPT 頁面。</li>
+<li>修改文件格式與樣式。</li>
+<li>檢查文件結構。</li>
+<li>將 Office 文件渲染成 HTML / PNG，讓 AI 看完效果後繼續調整。</li>
+</ul>
+<p>貼文當時稱 GitHub stars 約 16.2K；查證時 GitHub API 顯示已約 17.6K stars，屬快速變動的社群指標。</p>
+<h1>查證結果</h1>
+<p>| 項目 | 查證狀態 | 說明 |</p>
+<p>|---|---|---|</p>
+<p>| GitHub repo | 已確認 | `iOfficeAI/OfficeCLI` 存在，description 與貼文主張一致 |</p>
+<p>| 開源授權 | 已確認 | GitHub API 顯示 Apache License 2.0 |</p>
+<p>| 主要語言 | 已確認 | GitHub API 顯示 C# |</p>
+<p>| stars 數 | 已變動 | 貼文稱 16.2K；查證時約 17,626 stars、1,168 forks |</p>
+<p>| 無需 Office 安裝 | 已確認為專案主張 | README 與 Brave Search 摘要皆標示 single binary、no Office installation required |</p>
+<p>| Word/Excel/PPT 支援 | 已確認 | README 與 `SKILL.md` 明確寫支援 `.docx`、`.xlsx`、`.pptx` |</p>
+<p>| HTML/PNG render | 已確認 | README 說內建 rendering engine，可 render `.docx/.xlsx/.pptx` 到 HTML 或 PNG，形成 render → look → fix loop |</p>
+<p>| AI Agent Skill | 已確認 | repo 內有 `SKILL.md`，描述何時使用、如何安裝、如何查 help 與操作文件 |</p>
+<h1>專案設計觀察</h1>
+<h2>1. Office 文件被轉成可程式化 DOM</h2>
+<p>OfficeCLI 的核心價值不是「又一個 CLI」，而是把 Office 文件拆成 Agent 可操作的元素：建立檔案、加入 slide/shape/paragraph/cell、設定屬性、查詢結構、移除元素、讀取 JSON。對 AI Agent 來說，這比直接操控 Word/Excel/PPT GUI 更穩定，也更容易做版本化與錯誤回復。</p>
+<h2>2. Render → Look → Fix 是關鍵閉環</h2>
+<p>README 強調內建 HTML rendering engine，能把 `.docx/.xlsx/.pptx` 渲染成 HTML 或 PNG。這很重要：Agent 只會改 XML/DOM 還不夠，必須能看到排版結果。渲染成 HTML/PNG 後，多模態模型可以檢查版面、重疊、表格寬度、投影片視覺層級，再回頭修正。</p>
+<h2>3. `SKILL.md` 把使用方法包成 Agent 操作規格</h2>
+<p>OfficeCLI repo 內的 `SKILL.md` 本身就是一份 Agent skill：</p>
+<ul>
+<li>使用情境：建立、分析、校對、修改 Office 文件。</li>
+<li>安裝方式：macOS/Linux/Windows 指令。</li>
+<li>策略：L1 read → L2 DOM edit → L3 raw XML，優先用高層操作。</li>
+<li>Help-first 原則：不確定 command/property 時先跑 help，不要猜。</li>
+<li>支援 resident mode，降低反覆開檔 I/O 與檔案鎖問題。</li>
+</ul>
+<p>這對 Hermes 技能設計也很有參考價值：好的 Skill 不是只有工具介紹，而是包含「遇到不確定時如何查 schema、何時 save/close、如何避免檔案鎖」等操作規則。</p>
+<h1>對欒帥的實用價值</h1>
+<p>| 情境 | 可用方式 |</p>
+<p>|---|---|</p>
+<p>| 課程簡報初稿 | 讓 Agent 根據課程大綱建立 PPT，再 render 成圖片檢查版面 |</p>
+<p>| 報名/名單資料整理 | 將 Excel 表格清洗、格式化、加總計欄位或建立簡單 dashboard；含個資資料仍需私密處理 |</p>
+<p>| 文件產製 | 將教案、企劃、會議紀錄生成 Word，再用結構檢查與樣式規則修正 |</p>
+<p>| AI Agent 教學 | 展示「工具 + skill + render feedback loop」如何讓 Agent 從文字輸出走向可驗證文件成果 |</p>
+<p>| 工作流整合 | 可和 Claude Code / Codex / Cursor 類工具形成 office-document automation pipeline |</p>
+<h1>風險與注意事項</h1>
+<ul>
+<li>**不要把行銷語「first and best」當客觀結論**：這是 repo README 的定位語，本文只保留為專案主張。</li>
+<li>**Office 相容性仍需實測**：不需要安裝 Office 不代表與 Microsoft Office、Google Docs/Sheets/Slides、Keynote/Numbers/Pages 的顯示完全一致。</li>
+<li>**複雜版面需要人工審稿**：商務簡報、正式合約、財務表、招生素材仍需人工檢查字體、表格、圖表與頁面溢出。</li>
+<li>**巨集與外部連結要謹慎**：處理外部 Office 檔案時需注意 macro、嵌入物件、外部連結與潛在惡意內容。</li>
+<li>**個資與內部文件不可公開部署**：若用於名單、報名資料、公司文件，輸出應保留在私密本機/私有空間，不進公開知識庫。</li>
+</ul>
+<h1>可轉成課堂示範的練習</h1>
+<ul>
+<li>給 Agent 一份課程大綱，要求建立 5 頁 PPT。</li>
+<li>用 OfficeCLI render 成 HTML/PNG。</li>
+<li>讓多模態模型檢查投影片是否文字過多、重點不清或版面擁擠。</li>
+<li>用 OfficeCLI 指令修改 slide title、shape position、font size、table style。</li>
+<li>再 render 一次，比較修正前後。</li>
+</ul>
+<p>這個練習能清楚展示 Agentic Office Automation 的核心：不是一次生成完美文件，而是建立可觀察、可修改、可驗證的迭代回路。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-16 · https://x.com/369Serena/status/2076856524161388823 · article</div><h3>標籤</h3><span class="tag">AI工具</span><span class="tag">Office自動化</span><span class="tag">AI Agent</span><span class="tag">CLI</span><span class="tag">Word</span><span class="tag">Excel</span><span class="tag">PowerPoint</span><span class="tag">GitHub</span><span class="tag">X</span><h3>原始連結</h3><p><a href="https://x.com/369Serena/status/2076856524161388823" target="_blank" rel="noopener">https://x.com/369Serena/status/2076856524161388823</a></p><p><a href="https://x.com/369Serena/status/2076856524161388823" target="_blank" rel="noopener">https://x.com/369Serena/status/2076856524161388823</a></p><p><a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank" rel="noopener">https://github.com/iOfficeAI/OfficeCLI</a></p><p><a href="https://github.com/iOfficeAI/OfficeCLI/blob/main/SKILL.md" target="_blank" rel="noopener">https://github.com/iOfficeAI/OfficeCLI/blob/main/SKILL.md</a></p><p><a href="https://github.com/iOfficeAI/OfficeCLI/blob/main/README_zh.md" target="_blank" rel="noopener">https://github.com/iOfficeAI/OfficeCLI/blob/main/README_zh.md</a></p><p><a href="https://officecli.ai" target="_blank" rel="noopener">https://officecli.ai</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
