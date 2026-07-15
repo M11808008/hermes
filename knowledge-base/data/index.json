@@ -1,5 +1,36 @@
 [
   {
+    "title": "Facebook Reel｜Prompt Master：把提示工程封裝成 Claude Skill 的開源案例",
+    "date": "2026-07-16",
+    "source": "https://www.facebook.com/reel/2351486355375495",
+    "author": "Niyitech",
+    "type": "article",
+    "topics": [
+      "AI工具",
+      "Claude Skills",
+      "Prompt Engineering",
+      "開源工具",
+      "GitHub",
+      "Facebook Reel",
+      "生成式AI"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/niyitech/videos/-this-is-so-goodprompt-master-is-a-claude-skill-that-writes-the-most-accurate-pr/2351486355375495/",
+      "https://www.facebook.com/reel/2351486355375495",
+      "https://github.com/nidhinjs/prompt-master",
+      "https://github.com/nidhinjs/prompt-master/blob/main/SKILL.md",
+      "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+    ],
+    "excerpt": "Prompt Master 值得歸檔的重點不是「又一個提示詞產生器」，而是它把提示工程 SOP 寫成可安裝的 Claude Skill：用 `SKILL.md`、路由規則、模板參考與輸出格式，把「先判斷目標工具，再生成可貼上的 prompt」這件事產品化。",
+    "slug": "2026-07-16-facebook-niyitech-prompt-master-claude-skill",
+    "html": "articles/2026-07-16-facebook-niyitech-prompt-master-claude-skill.html",
+    "markdown": "articles/2026/07/2026-07-16-facebook-niyitech-prompt-master-claude-skill.md"
+  },
+  {
     "title": "板橋府中高記生炒魷魚｜黃石市場排隊小吃、銅板菜單與拜訪策略",
     "date": "2026-07-15",
     "source": "https://nash.tw/kaosquid2026071521/",

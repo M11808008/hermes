@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook Reel｜Prompt Master：把提示工程封裝成 Claude Skill 的開源案例</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook Reel｜Prompt Master：把提示工程封裝成 Claude Skill 的開源案例</h1><p>來源：Niyitech Facebook Reel，介紹 GitHub 專案 `nidhinjs/prompt-master`。Reel 的主張是：Prompt Master 是一個 Claude Skill，可以為多種 AI 工具撰寫更精準、少浪費 token 的提示詞，並保留上下文與記憶結構。</p>
+<h1>一句話摘要</h1>
+<p>Prompt Master 值得歸檔的重點不是「又一個提示詞產生器」，而是它把提示工程 SOP 寫成可安裝的 Claude Skill：用 `SKILL.md`、路由規則、模板參考與輸出格式，把「先判斷目標工具，再生成可貼上的 prompt」這件事產品化。</p>
+<h1>原貼文重點</h1>
+<p>Facebook Reel metadata 與可見文字顯示，Niyitech 將 Prompt Master 描述為：</p>
+<ul>
+<li>一個 Claude Skill，用來為任何 AI 工具撰寫精準 prompt。</li>
+<li>支援 Claude、ChatGPT、Gemini、Copilot、Midjourney、DALL-E、Stable Diffusion、Sora、Runway、ElevenLabs 等工具。</li>
+<li>可自動偵測目標工具並套用合適框架。</li>
+<li>擷取 9 個意圖維度，必要時最多問 3 個釐清問題。</li>
+<li>透過 token efficiency audit 移除 filler words。</li>
+<li>以 memory block system 降低長 session 遺失上下文的風險。</li>
+<li>MIT 授權、開源；Reel 當時聲稱約 7.7k GitHub stars。</li>
+</ul>
+<h1>查證結果</h1>
+<p>| 項目 | 查證狀態 | 說明 |</p>
+<p>|---|---|---|</p>
+<p>| GitHub repo | 已確認 | `nidhinjs/prompt-master` 存在，description 與貼文主張一致 |</p>
+<p>| 授權 | 已確認 | GitHub API 顯示 MIT License |</p>
+<p>| Claude Skill 結構 | 已確認 | repo 內有 `SKILL.md`，frontmatter 顯示 `name: prompt-master`、`version: 1.7.0` |</p>
+<p>| Stars 數 | 貼文數字已變動 | Reel 說 7.7k；查證時 GitHub API 顯示約 10.5k stars，屬快速變動指標 |</p>
+<p>| 支援多工具 | 部分確認 | README 確實列出多種工具；但「any AI tool」是作者定位，實務仍需依各工具 prompt 語法與能力調整 |</p>
+<p>| Claude Skills 官方支援 | 已確認 | Anthropic/Claude 官方文件說明 custom skills 可透過 Claude Code、Claude API 或 claude.ai settings 使用 |</p>
+<h1>專案設計觀察</h1>
+<h2>1. `SKILL.md` 是可重用的提示工程合約</h2>
+<p>Prompt Master 的 `SKILL.md` 不只是說明文件，而是給 Claude 的操作規格。它明確規定：</p>
+<ul>
+<li>只有在使用者要求「寫、修、改善、改寫 prompt」時啟用。</li>
+<li>不為一般聊天、寫程式、文件撰寫等非 prompt engineering 任務啟用。</li>
+<li>輸出需是一個可直接複製貼上的 prompt block，加上一句目標工具與優化策略。</li>
+<li>目標工具不清楚時必須先確認，不能憑空生成。</li>
+<li>最多問 3 個釐清問題。</li>
+</ul>
+<p>這種寫法對欒帥的 Hermes / 課程設計很有參考價值：Skill 不是把知識塞滿，而是把「何時啟用、如何判斷、輸出格式、禁止事項」寫成穩定契約。</p>
+<h2>2. 它把 prompt engineering 從「技巧」變成「路由器」</h2>
+<p>README 與 `SKILL.md` 都強調先判斷目標工具，再選擇不同策略。例如：</p>
+<ul>
+<li>寫給 Claude Code / Devin 這類 agent，要重視任務邊界、停止條件與驗證。</li>
+<li>寫給 Cursor / Copilot，要重視檔案範圍與修改限制。</li>
+<li>寫給 Midjourney / DALL-E / Stable Diffusion，要使用視覺描述、構圖、風格與 negative prompt。</li>
+<li>寫給一般寫作或商務文件，可使用 CO-STAR、RTF 等較輕量框架。</li>
+</ul>
+<p>這符合 AI Learning Radar 最近反覆出現的趨勢：好用的 AI 工作流不是單一神 prompt，而是根據工具表面與任務類型做 routing。</p>
+<h2>3. 「零 token 浪費」是行銷說法，但 token audit 方向有價值</h2>
+<p>Reel 與 README 使用「zero tokens wasted」這類強宣稱。這不應解讀為客觀保證；不同模型、任務與上下文都會影響 token 使用。但它提到的 token efficiency audit 很實用：移除不影響輸出的字、避免提示詞越寫越長、讓每個約束都能改變模型行為。</p>
+<h1>欒帥可採用的實作方向</h1>
+<p>| 情境 | 建議 |</p>
+<p>|---|---|</p>
+<p>| 課程教 prompt engineering | 用 Prompt Master 當案例：展示「prompt 模板庫」如何升級成「技能合約」 |</p>
+<p>| Hermes skill authoring | 借鏡其啟用條件、hard rules、output lock、最多 3 問等結構 |</p>
+<p>| 內部工具工作流 | 可把常用任務拆成多個小 Skill，而不是做一個包山包海的 mega-prompt |</p>
+<p>| 學員練習 | 讓學員比較同一需求寫給 ChatGPT、Cursor、Midjourney、Claude Code 時 prompt 差異 |</p>
+<p>| 風險控管 | 避免宣稱任何工具都能一鍵適用；要保留工具能力、上下文、權限與成本限制 |</p>
+<h1>注意事項</h1>
+<ul>
+<li>這是第三方開源 Skill，不是 Anthropic 官方範例；可參考，但不等於官方推薦最佳實作。</li>
+<li>「適用任何 AI 工具」應視為作者定位，而非保證。影像、影片、語音、coding agent 的 prompt 約束差異很大。</li>
+<li>若要安裝到本機 Claude Code 或 Claude.ai，需先檢查當前 Claude plan / workspace 是否啟用 Skills 與檔案上傳/技能功能。</li>
+<li>Skill 內容會影響模型行為；引用第三方 Skill 前應先檢查 `SKILL.md` 是否有不合適的 system-like 指令、資料外洩風險或過度自動化要求。</li>
+</ul>
+<h1>可保存的教材觀點</h1>
+<p>Prompt Master 是「AI 工具使用者開始把個人 prompt 方法論封裝成可流通技能」的代表案例。對 AI 學習雷達來說，它可放在三個脈絡下追蹤：</p>
+<ul>
+<li>Claude Skills / Agent Skills 作為新型知識封裝格式。</li>
+<li>Prompt engineering 從模板轉向 tool-aware routing。</li>
+<li>開源 prompt workflow 變成可 fork、可版本管理、可審查的 GitHub repo。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-16 · https://www.facebook.com/reel/2351486355375495 · article</div><h3>標籤</h3><span class="tag">AI工具</span><span class="tag">Claude Skills</span><span class="tag">Prompt Engineering</span><span class="tag">開源工具</span><span class="tag">GitHub</span><span class="tag">Facebook Reel</span><span class="tag">生成式AI</span><h3>原始連結</h3><p><a href="https://www.facebook.com/niyitech/videos/-this-is-so-goodprompt-master-is-a-claude-skill-that-writes-the-most-accurate-pr/2351486355375495/" target="_blank" rel="noopener">https://www.facebook.com/niyitech/videos/-this-is-so-goodprompt-master-is-a-claude-skill-that-writes-the-most-accurate-pr/2351486355375495/</a></p><p><a href="https://www.facebook.com/reel/2351486355375495" target="_blank" rel="noopener">https://www.facebook.com/reel/2351486355375495</a></p><p><a href="https://github.com/nidhinjs/prompt-master" target="_blank" rel="noopener">https://github.com/nidhinjs/prompt-master</a></p><p><a href="https://github.com/nidhinjs/prompt-master/blob/main/SKILL.md" target="_blank" rel="noopener">https://github.com/nidhinjs/prompt-master/blob/main/SKILL.md</a></p><p><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview</a></p><p><a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude" target="_blank" rel="noopener">https://support.claude.com/en/articles/12512180-use-skills-in-claude</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
