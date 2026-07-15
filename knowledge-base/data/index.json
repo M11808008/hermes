@@ -410,6 +410,40 @@
     "markdown": "articles/2026/07/2026-07-15-x-sac-codex-hyperframes-ai-video-editing.md"
   },
   {
+    "title": "X 長文｜OpenAI Codex / Work 更新：Plugins、Sites、瀏覽器與 Ultra 多 Agent",
+    "date": "2026-07-15",
+    "source": "X post, X Article, Brave Search, OpenAI docs",
+    "author": "Sac (@Saccc_c)",
+    "type": "article",
+    "topics": [
+      "OpenAI",
+      "Codex",
+      "ChatGPT Work",
+      "Plugins",
+      "AI Agent",
+      "Browser Agent",
+      "Multi-Agent",
+      "Productivity Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/Saccc_c/status/2075553941270741235",
+      "https://x.com/Saccc_c/status/2075553941270741235",
+      "https://x.com/Saccc_c/status/2075553941270741235",
+      "https://x.com/i/article/2075529026786217984",
+      "https://developers.openai.com/codex/changelog",
+      "https://developers.openai.com/codex/plugins",
+      "https://openai.com/index/codex-for-every-role-tool-workflow/",
+      "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+    ],
+    "excerpt": "這篇 X 長文值得歸檔，因為它把 Codex 從「寫程式的 agent」擴展成「可透過插件、瀏覽器、Sites、文件生成與多 agent 協作交付成果的工作平台」來看；對課程與工作坊而言，重點不是單一功能，而是 AI 工具正從聊天視窗走向可安裝能力、可交付網站/文件、可並行執行任務的 agent workspace。 原文： https://x.com/Saccc_c/status/2075553941270741235 X Article： https://x.com/i/article/2075529026786217984 ---",
+    "slug": "2026-07-15-x-sac-codex-work-plugins-sites-ultra-update",
+    "html": "articles/2026-07-15-x-sac-codex-work-plugins-sites-ultra-update.html",
+    "markdown": "articles/2026/07/2026-07-15-x-sac-codex-work-plugins-sites-ultra-update.md"
+  },
+  {
     "title": "OpenClaw × LibTV Skill 安裝與 Access Key 配置指南",
     "date": "2026-07-14",
     "source": "LINE shared note, GitHub, Brave Search",

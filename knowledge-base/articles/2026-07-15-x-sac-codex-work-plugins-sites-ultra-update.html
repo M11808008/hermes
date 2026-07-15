@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>X 長文｜OpenAI Codex / Work 更新：Plugins、Sites、瀏覽器與 Ultra 多 Agent</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>X 長文｜OpenAI Codex / Work 更新：Plugins、Sites、瀏覽器與 Ultra 多 Agent</h1><h2>一句話摘要</h2>
+<p>這篇 X 長文值得歸檔，因為它把 Codex 從「寫程式的 agent」擴展成「可透過插件、瀏覽器、Sites、文件生成與多 agent 協作交付成果的工作平台」來看；對課程與工作坊而言，重點不是單一功能，而是 AI 工具正從聊天視窗走向可安裝能力、可交付網站/文件、可並行執行任務的 agent workspace。</p>
+<p>原文：</p>
+<p><a href="https://x.com/Saccc_c/status/2075553941270741235" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2075553941270741235</a></p>
+<p>X Article：</p>
+<p><a href="https://x.com/i/article/2075529026786217984" target="_blank" rel="noopener">https://x.com/i/article/2075529026786217984</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>X 登出頁與 fxtwitter metadata 可擷取到，Sac 發布的 X Article 標題為「Codex 史詩級更新的最全面解析」，內文目錄聚焦六個更新方向：</p>
+<ul>
+<li>Work 到底是什麼？和 Codex 有什麼區別？</li>
+<li>新增 plugin：Sites、Template Creator、Visualize，以及 Default templates。</li>
+<li>內建瀏覽器更新：把 Chrome 類工作流放進 Codex。</li>
+<li>前端設計能力加強。</li>
+<li>Ultra mode：多 agent 並行執行任務。</li>
+<li>將 GPT 網頁端聊天接入 Codex，用於腦力激盪並可加入任務上下文。</li>
+</ul>
+<p>作者的核心判斷是：Work 更適合研究、分析、文件、表格、簡報與網站等成果交付；Codex 更適合程式碼、repo、測試、diff 與可執行修改。這個分工對教學很有價值，因為它把「用哪個 AI agent 做哪類任務」說得很清楚。</p>
+<p>---</p>
+<h2>官方 / Brave Search 查證</h2>
+<p>Brave Search 與 OpenAI 官方文件可確認以下方向：</p>
+<ul>
+<li>OpenAI 的 Codex 文件導覽已把 Workflows、Projects / chats / tasks、Sites、Visualizations、Browser、Computer use、Plugins、Web search、Image generation、Appshots、Chrome extension、Work with files 等能力列為 Codex / ChatGPT 相關能力面。</li>
+<li>Codex changelog 提到 `/plugins` 會把遠端 plugins 分成 OpenAI Curated、Workspace、Shared with me，且在合適情境中可推薦與安裝相關 plugins。</li>
+<li>Codex changelog 也提到選擇 Ultra reasoning 時，會警示高 multi-agent concurrency 可能快速增加使用量；這支持「Ultra 與多 agent 並行」這個方向，但不等於每次都固定 4 個 agent。</li>
+<li>OpenAI Help / 官方搜尋摘要將 ChatGPT Work 描述為處理較長研究與交付物任務的體驗；Codex 則偏向寫 code、debug、執行測試/命令、review changes、處理 repository。</li>
+<li>OpenAI 的「Codex for every role, tool, and workflow」頁面搜尋摘要確認：Codex 正在加入 plugins、sites、annotations 等讓分析師、行銷、設計、投資等非純工程角色也能用 AI 完成工作。</li>
+</ul>
+<p>因此，這篇長文的大方向可視為「已被官方產品線佐證」：Codex / Work 不只是 coding assistant，而是逐步變成有插件生態、瀏覽器能力、可交付網站/視覺化/文件、並支援多 agent 執行的工作層。</p>
+<p>---</p>
+<h2>需要保留的 caveat</h2>
+<p>幾個細節目前應保守標註：</p>
+<ul>
+<li>「Sites 直接替代 Vercel」是作者的使用感受，不是官方定位；更精準說法是 Sites 可做互動式網站 / app 的 hosted canvas，但不一定涵蓋 Vercel 的完整工程部署、domain、CI/CD 與 production hosting 場景。</li>
+<li>「Template Creator」與「Visualize」在文章中屬於作者實測整理；官方 plugins 文件確認 plugin 目錄與 plugin 能力包裝方式，但具體 plugin 可用性可能受帳號、方案、workspace、地區與 rollout 影響。</li>
+<li>「內建瀏覽器可導入 Google 帳戶、cookie、密碼」涉及高度敏感權限；若教學引用，必須提醒學生只在可信本機環境、隔離 profile 與低風險帳號測試，不應把主帳號密碼或 session cookie 交給不明 agent / plugin。</li>
+<li>「Ultra 預設協調 4 個 Agent」可保留為作者觀察，但官方 changelog 目前可確認的是 Ultra reasoning 會涉及高 multi-agent concurrency 與使用量警示，不應把精確數字寫成通用事實。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 學習雷達的意義</h2>
+<p>這則內容的保存價值在於，它顯示 OpenAI 正把 ChatGPT / Codex 拆成幾種角色：</p>
+<ul>
+<li>Work：面向研究、整理、簡報、文件、表格、網站等「成果型任務」。</li>
+<li>Codex：面向 repo、程式碼、測試、terminal、diff、review 等「工程型任務」。</li>
+<li>Plugins：把技能、app、MCP、connector、templates、hooks 等能力打包成可安裝模組。</li>
+<li>Browser / Computer use：讓 agent 能處理真實網頁、下載、表單、資料查找與 UI 驗證。</li>
+<li>Sites / Visualizations：讓輸出不只是一段文字，而可以是可瀏覽、可展示、可互動的作品。</li>
+<li>Ultra / 多 agent：把大型任務拆成多條工作線並行，讓 agent workspace 更像一個小型自動化團隊。</li>
+</ul>
+<p>這正好可作為「AI Agent 產品化趨勢」的案例：未來課程不只教 prompt，而要教任務拆解、工具授權、plugin 信任模型、交付驗證、使用量控管與資料安全。</p>
+<p>---</p>
+<h2>可轉成課堂練習的方式</h2>
+<ul>
+<li>給學生同一個任務，例如「把一份活動企劃整理成活動網站 + 報名表文案 + 簡報大綱」。</li>
+<li>先讓 Work / ChatGPT 類工具做研究、摘要、結構與文案。</li>
+<li>再讓 Codex 類工具把網站、表單 mockup 或資料視覺化做成可執行 artifact。</li>
+<li>若可用 plugins，要求學生記錄每個 plugin 的權限、來源、用途與輸出。</li>
+<li>最後做驗證：網站是否能開、資料是否正確、引用來源是否保留、是否暴露個資或憑證。</li>
+</ul>
+<p>評分重點不只是「做出來」，而是：任務是否拆對、工具是否選對、權限是否安全、輸出是否可驗證。</p>
+<p>---</p>
+<h2>風險與實務提醒</h2>
+<ul>
+<li>Plugin 生態會快速變動，課程投影片若引用具體 plugin 名稱，應在開課前重新檢查可用性。</li>
+<li>Browser / cookie / password 匯入是高風險能力，應避免在公開工作坊要求學生登入主帳號；最好使用 demo 帳號或 sandbox profile。</li>
+<li>多 agent / Ultra 模式可能快速消耗 token / usage quota，適合高價值任務，不適合每個小作業都開。</li>
+<li>Sites / Visualizations 產出仍需人工檢查 accessibility、版權、資料正確性與手機版呈現。</li>
+<li>將 GPT 網頁端聊天加入 Codex 任務上下文很方便，但也會把討論中的敏感資訊帶入工程任務；需要建立「可放入上下文」與「不可放入上下文」的界線。</li>
+</ul>
+<p>保存重點：Codex / Work 的競爭焦點正在從「模型會不會寫 code」轉向「能否把插件、瀏覽器、文件、網站、視覺化與多 agent orchestration 組成可靠的工作系統」。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · X post, X Article, Brave Search, OpenAI docs · article</div><h3>標籤</h3><span class="tag">OpenAI</span><span class="tag">Codex</span><span class="tag">ChatGPT Work</span><span class="tag">Plugins</span><span class="tag">AI Agent</span><span class="tag">Browser Agent</span><span class="tag">Multi-Agent</span><span class="tag">Productivity Workflow</span><h3>原始連結</h3><p><a href="https://x.com/Saccc_c/status/2075553941270741235" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2075553941270741235</a></p><p><a href="https://x.com/Saccc_c/status/2075553941270741235" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2075553941270741235</a></p><p><a href="https://x.com/Saccc_c/status/2075553941270741235" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2075553941270741235</a></p><p><a href="https://x.com/i/article/2075529026786217984" target="_blank" rel="noopener">https://x.com/i/article/2075529026786217984</a></p><p><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">https://developers.openai.com/codex/changelog</a></p><p><a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">https://developers.openai.com/codex/plugins</a></p><p><a href="https://openai.com/index/codex-for-every-role-tool-workflow/" target="_blank" rel="noopener">https://openai.com/index/codex-for-every-role-tool-workflow/</a></p><p><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener">https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
