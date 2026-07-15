@@ -378,6 +378,38 @@
     "markdown": "articles/2026/07/2026-07-15-threads-prompt-case-grok-build-connector-skill-codex-claude-code.md"
   },
   {
+    "title": "X 長文｜Codex + HyperFrames：用 HTML/CSS/JS 與 AI Agent 做可渲染影片",
+    "date": "2026-07-15",
+    "source": "X post, YouMind mirror, Brave Search, GitHub repository",
+    "author": "Sac (@Saccc_c)",
+    "type": "article",
+    "topics": [
+      "Codex",
+      "HyperFrames",
+      "AI Video",
+      "Agent Skills",
+      "HTML Video",
+      "HeyGen",
+      "Creative Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/Saccc_c/status/2051852464400261429",
+      "https://x.com/Saccc_c/status/2051852464400261429",
+      "https://x.com/Saccc_c/status/2051852464400261429",
+      "https://x.com/i/article/2051363662426714112",
+      "https://youmind.com/ja-JP/landing/x-viral-articles/codex-hyperframes-ai-video-editing",
+      "https://github.com/heygen-com/hyperframes",
+      "https://hyperframes.heygen.com/"
+    ],
+    "excerpt": "這則 X 長文把 Codex + HyperFrames 描述為一套「code-first video editing」工作流：創作者用文字描述影片，Codex 寫出 HTML/CSS/JS、動畫與素材調度，HyperFrames 則用 headless browser / FFmpeg 類渲染流程輸出 MP4，讓短影片、產品動效與資訊視覺化更接近可編程的 AI agent 任務。 原文： https://x.com/Saccc_c/status/2051852464400261429 X Article： https://x.com/i/article/2051363662426714112 ---",
+    "slug": "2026-07-15-x-sac-codex-hyperframes-ai-video-editing",
+    "html": "articles/2026-07-15-x-sac-codex-hyperframes-ai-video-editing.html",
+    "markdown": "articles/2026/07/2026-07-15-x-sac-codex-hyperframes-ai-video-editing.md"
+  },
+  {
     "title": "OpenClaw × LibTV Skill 安裝與 Access Key 配置指南",
     "date": "2026-07-14",
     "source": "LINE shared note, GitHub, Brave Search",

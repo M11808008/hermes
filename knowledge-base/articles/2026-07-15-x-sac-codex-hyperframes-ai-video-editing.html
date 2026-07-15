@@ -1,0 +1,71 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>X 長文｜Codex + HyperFrames：用 HTML/CSS/JS 與 AI Agent 做可渲染影片</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>X 長文｜Codex + HyperFrames：用 HTML/CSS/JS 與 AI Agent 做可渲染影片</h1><h2>一句話摘要</h2>
+<p>這則 X 長文把 Codex + HyperFrames 描述為一套「code-first video editing」工作流：創作者用文字描述影片，Codex 寫出 HTML/CSS/JS、動畫與素材調度，HyperFrames 則用 headless browser / FFmpeg 類渲染流程輸出 MP4，讓短影片、產品動效與資訊視覺化更接近可編程的 AI agent 任務。</p>
+<p>原文：</p>
+<p><a href="https://x.com/Saccc_c/status/2051852464400261429" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2051852464400261429</a></p>
+<p>X Article：</p>
+<p><a href="https://x.com/i/article/2051363662426714112" target="_blank" rel="noopener">https://x.com/i/article/2051363662426714112</a></p>
+<p>---</p>
+<h2>原文重點</h2>
+<p>X 登出頁可擷取到的貼文卡片標題為「Codex + HyperFrames 正在吃掉剪辑行业」，摘要大意是：以前做影片需要找素材、學剪輯、配音樂，成本很高；現在若用好 Codex + HyperFrames，基礎剪輯與動畫可在約 1 小時完成。</p>
+<p>YouMind 的 X viral article mirror 保留了長文內容，主要脈絡如下：</p>
+<ul>
+<li>HyperFrames 是 HeyGen 開源的 code-driven video framework，可用 HTML 直接描述影片組成與動畫。</li>
+<li>Codex 適合搭配 HyperFrames，因為 coding agent 擅長寫 HTML/CSS/JS 與動畫邏輯，而 HyperFrames 本身也面向 agent 工作流。</li>
+<li>安裝方式是先使用 Codex App，再在 Plugins 中加入 HyperFrames；之後可在 prompt 中以 `@HyperFrames` / `/hyperframes` 類方式要求產生影片。</li>
+<li>作者建議提示詞要明確指定影片類型、長度、比例、目標、視覺風格、關鍵元素、動作要求與音訊要求。</li>
+<li>實務上第一版通常不完美，需要用預覽、截圖標記與小步迭代持續修正。</li>
+<li>圖像素材可透過 image generation skill 產出，背景音樂可用 Suno 類 AI music 工具生成。</li>
+<li>作者示範以 Codex + HyperFrames 製作「iPhone 進化」主題影片，聲稱素材、視覺與音樂約 1 小時完成。</li>
+</ul>
+<p>---</p>
+<h2>官方 / GitHub 查證</h2>
+<p>Brave Search 與 GitHub API 查證顯示：</p>
+<ul>
+<li>`heygen-com/hyperframes` repository 描述為「Write HTML. Render video. Built for agents.」</li>
+<li>README 說明 HyperFrames 是開源框架，可將 HTML、CSS、media 與 seekable animations 轉為 deterministic MP4 videos。</li>
+<li>可透過 CLI、本機、AI coding agents with skills，或 hosted authoring workflow 使用。</li>
+<li>README 提到它可與 Claude Code、Cursor、Gemini CLI、Codex，以及其他支援 skills 的 coding agents 搭配。</li>
+<li>授權為 Apache 2.0；主要語言為 TypeScript。</li>
+<li>官方網站 `hyperframes.heygen.com` 也描述它讓 AI agents 透過 HTML、CSS、JS 組合影片。</li>
+</ul>
+<p>因此，貼文「Codex + HyperFrames 可把影片製作轉成程式化 agent workflow」的主張有官方與 GitHub 來源支持。</p>
+<p>---</p>
+<h2>為什麼這對 AI 學習雷達重要？</h2>
+<p>這不是一般「AI 生成影片」案例，而是另一條更工程化的路線：</p>
+<ul>
+<li>傳統 AI video：輸入 prompt，模型直接生成影像序列，細節可控性有限。</li>
+<li>Code-first video：把畫面、動畫、素材、音訊與時間軸寫成程式碼，再 deterministic render 成影片。</li>
+</ul>
+<p>這種方式對課程、產品 demo、資料視覺化、品牌動效與短影音模板特別有價值，因為它可以版本控管、可 diff、可重跑、可分段 debug，也更容易交給 coding agent 做多輪修改。</p>
+<p>---</p>
+<h2>可直接萃取的提示詞框架</h2>
+<p>若要把這則長文轉成可教學的作業，可要求學生用以下欄位寫 brief：</p>
+<ul>
+<li>Animation / Video Type：功能 demo、資料視覺化、launch teaser、短影音等。</li>
+<li>Duration + Aspect Ratio：例如 10 秒、9:16、16:9。</li>
+<li>Video Goal：一句話說清楚觀眾看完要理解什麼。</li>
+<li>Visual Style：Apple launch film、minimal tech、cinematic、realistic UI 等。</li>
+<li>Key Elements：必要文字、icon、產品、資料、角色、素材路徑。</li>
+<li>Motion Requirements：typing、fade、zoom、card expand、camera push-in。</li>
+<li>Audio Requirements：BGM、typing / click SFX、voiceover、音訊同步。</li>
+<li>Verification：渲染 MP4、檢查時間軸、截圖標註問題、逐輪修正。</li>
+</ul>
+<p>---</p>
+<h2>風險與 caveat</h2>
+<ul>
+<li>「1 小時完成」是作者案例，不代表所有題材都能穩定達成；素材準備、音訊、品牌細節與品質要求會顯著影響時間。</li>
+<li>Code-first video 適合資訊型、產品型、UI / motion graphic；對真人寫實、複雜攝影風格或高動態電影感，不一定比生成式影片模型更合適。</li>
+<li>若使用第三方素材、品牌產品圖或音樂，仍需確認授權。</li>
+<li>生成音樂與圖像若用於商業用途，需檢查工具條款與素材來源。</li>
+<li>HyperFrames 依賴 Node / browser / FFmpeg 類環境；部署到課堂或工作坊前要先做環境檢查與範例 cache。</li>
+</ul>
+<p>---</p>
+<h2>對課程 / 工作坊的可用角度</h2>
+<p>這篇很適合放進「AI 影片自動化」或「Agentic media workflow」單元，搭配以下練習：</p>
+<ul>
+<li>給定一個產品發布主題，先寫完整 video brief。</li>
+<li>用 Codex / Claude Code + HyperFrames 產生 10 秒 motion graphic。</li>
+<li>渲染 MP4 後截圖標註問題，讓 agent 做第二輪修正。</li>
+<li>比較 code-first video 與一般 text-to-video 工具：可控性、速度、成本、版本管理與品質穩定性。</li>
+</ul>
+<p>保存重點是：AI 影片工作流正在從「單次生成」往「agent + code + deterministic render + 多輪驗證」移動。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · X post, YouMind mirror, Brave Search, GitHub repository · article</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">HyperFrames</span><span class="tag">AI Video</span><span class="tag">Agent Skills</span><span class="tag">HTML Video</span><span class="tag">HeyGen</span><span class="tag">Creative Workflow</span><h3>原始連結</h3><p><a href="https://x.com/Saccc_c/status/2051852464400261429" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2051852464400261429</a></p><p><a href="https://x.com/Saccc_c/status/2051852464400261429" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2051852464400261429</a></p><p><a href="https://x.com/Saccc_c/status/2051852464400261429" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2051852464400261429</a></p><p><a href="https://x.com/i/article/2051363662426714112" target="_blank" rel="noopener">https://x.com/i/article/2051363662426714112</a></p><p><a href="https://youmind.com/ja-JP/landing/x-viral-articles/codex-hyperframes-ai-video-editing" target="_blank" rel="noopener">https://youmind.com/ja-JP/landing/x-viral-articles/codex-hyperframes-ai-video-editing</a></p><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p><p><a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">https://hyperframes.heygen.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
