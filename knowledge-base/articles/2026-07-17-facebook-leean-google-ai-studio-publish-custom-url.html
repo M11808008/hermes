@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook Reel｜Google AI Studio 可直接發布網站並設定 ai.studio 自訂網址</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook Reel｜Google AI Studio 可直接發布網站並設定 ai.studio 自訂網址</h1><h2>一句話摘要</h2>
+<p>李安的 Facebook Reel 指出 Google AI Studio 現在可將 vibe coding 做出的網頁直接發布到網路上，並設定自訂網域 / 網址；Google 官方文件確認 AI Studio Build mode 可快速建置與部署 app，部署會對應到 Cloud Run，且可設定 `your-app-name.ai.studio` 這類自訂子網域。</p>
+<p>原始分享：</p>
+<p><a href="https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr</a></p>
+<p>Canonical Reel：</p>
+<p><a href="https://www.facebook.com/reel/1051930197805040" target="_blank" rel="noopener">https://www.facebook.com/reel/1051930197805040</a></p>
+<p>---</p>
+<h2>Reel 擷取內容</h2>
+<p>Facebook metadata 與頁面文字顯示：</p>
+<ul>
+<li>作者：李安</li>
+<li>類型：Facebook Reel / video.other</li>
+<li>標題 / caption：AI Studio 可以直接發布網站</li>
+<li>文字：透過 Vibe coding 製作完的網頁，可以自訂網域發布在網路上，這樣就不用依賴其他平台部署了。</li>
+<li>canonical video URL：`<a href="https://www.facebook.com/bboyanlee/videos/.../1051930197805040/`" target="_blank" rel="noopener">https://www.facebook.com/bboyanlee/videos/.../1051930197805040/`</a></li>
+</ul>
+<p>---</p>
+<h2>官方文件交叉驗證</h2>
+<p>Brave Search 找到的 Google 官方來源確認：</p>
+<ul>
+<li>Google AI Studio Build mode 文件說明，可快速 build / vibe code apps，並測試 Gemini 最新能力。</li>
+<li>AI Studio 支援建置 web apps、full-stack runtimes、Firebase Firestore / Authentication、Google Workspace integrations 等功能。</li>
+<li>Build mode 中的 app 可分享、展示，準備好後可部署到 Cloud Run。</li>
+<li>Google AI Studio Deploying 文件說明，每次 AI Studio deployment 會建立對應的 Cloud Run service。</li>
+<li>發布時可設定 `<a href="https://your-app-name.ai.studio`" target="_blank" rel="noopener">https://your-app-name.ai.studio`</a> 這類 memorable subdomain；subdomain 全域唯一、先到先得；若取消發布或刪除 app，該 URL 會釋放。</li>
+</ul>
+<p>---</p>
+<h2>需要精準表述的地方</h2>
+<p>Reel 的「自訂網域」可理解為「可自訂發布網址」，但官方文件目前明確描述的是 AI Studio 發布時可設定 `ai.studio` 底下的自訂子網域，例如：</p>
+<p>`<a href="https://your-app-name.ai.studio`" target="_blank" rel="noopener">https://your-app-name.ai.studio`</a></p>
+<p>若要綁定自己購買的裸網域或公司網域，通常會牽涉 Cloud Run / DNS / Google Cloud domain mapping 等額外設定，與 AI Studio 內建的 `ai.studio` custom URL 不是同一層能力。</p>
+<p>---</p>
+<h2>對 AI 學習雷達的保存價值</h2>
+<p>這則內容值得保存，因為它把 Google AI Studio 從「prompt / demo 工具」推向「快速做出可展示網頁 app」：</p>
+<ul>
+<li>教學 demo：老師可以用自然語言快速做出互動網頁，再用公開網址讓學員打開。</li>
+<li>MVP 原型：產品或行銷團隊可快速把概念變成可點擊、可分享的頁面。</li>
+<li>AI app builder：AI Studio 同時支援 Gemini、Full-stack runtime、Firebase、Workspace integrations，逐步接近低摩擦的 AI app 工作台。</li>
+<li>部署門檻降低：不必先理解 Vercel、Netlify、Docker 或 Cloud Run 細節，也能把初版 app 發布到網路上。</li>
+</ul>
+<p>---</p>
+<h2>導入注意事項</h2>
+<ul>
+<li>Cloud Run 可能產生成本；Starter Tier 與免費部署有數量、帳號資格與區域限制。</li>
+<li>分享 / 發布 app 時，API calls 可能計入使用者配額；若使用付費模型，成本可能增加。</li>
+<li>`ai.studio` 子網域是全域唯一、先到先得；刪除或取消發布後會釋放，不能當成永久品牌資產。</li>
+<li>若 app 會連接 Gmail、Drive、Sheets、Calendar 或其他 Workspace API，要檢查 OAuth 權限、資料存取範圍與隱私告知。</li>
+<li>Vibe coding 產物仍需做安全檢查：前端是否暴露 API key、後端權限是否過大、資料庫規則是否安全。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-17 · Facebook Reel, Google AI for Developers / Google Blog via Brave Search · facebook-reel</div><h3>標籤</h3><span class="tag">Google AI Studio</span><span class="tag">Vibe Coding</span><span class="tag">Cloud Run</span><span class="tag">Custom URL</span><span class="tag">Gemini</span><span class="tag">AI App Builder</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/bboyanlee/videos/ai-studio-%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BC%E5%B8%83%E7%B6%B2%E7%AB%99/1051930197805040/" target="_blank" rel="noopener">https://www.facebook.com/bboyanlee/videos/ai-studio-%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BC%E5%B8%83%E7%B6%B2%E7%AB%99/1051930197805040/</a></p><p><a href="https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/1051930197805040" target="_blank" rel="noopener">https://www.facebook.com/reel/1051930197805040</a></p><p><a href="https://www.facebook.com/bboyanlee/videos/ai-studio-%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BC%E5%B8%83%E7%B6%B2%E7%AB%99/1051930197805040/" target="_blank" rel="noopener">https://www.facebook.com/bboyanlee/videos/ai-studio-%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BC%E5%B8%83%E7%B6%B2%E7%AB%99/1051930197805040/</a></p><p><a href="https://ai.google.dev/gemini-api/docs/aistudio-build-mode" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/aistudio-build-mode</a></p><p><a href="https://ai.google.dev/gemini-api/docs/aistudio-deploying" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/aistudio-deploying</a></p><p><a href="https://blog.google/innovation-and-ai/technology/developers-tools/full-stack-vibe-coding-google-ai-studio/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/technology/developers-tools/full-stack-vibe-coding-google-ai-studio/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

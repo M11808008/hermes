@@ -1,5 +1,37 @@
 [
   {
+    "title": "Facebook Reel｜Google AI Studio 可直接發布網站並設定 ai.studio 自訂網址",
+    "date": "2026-07-17",
+    "source": "Facebook Reel, Google AI for Developers / Google Blog via Brave Search",
+    "author": "李安",
+    "type": "facebook-reel",
+    "topics": [
+      "Google AI Studio",
+      "Vibe Coding",
+      "Cloud Run",
+      "Custom URL",
+      "Gemini",
+      "AI App Builder"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr",
+      "https://www.facebook.com/bboyanlee/videos/ai-studio-%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BC%E5%B8%83%E7%B6%B2%E7%AB%99/1051930197805040/",
+      "https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1051930197805040",
+      "https://www.facebook.com/bboyanlee/videos/ai-studio-%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BC%E5%B8%83%E7%B6%B2%E7%AB%99/1051930197805040/",
+      "https://ai.google.dev/gemini-api/docs/aistudio-build-mode",
+      "https://ai.google.dev/gemini-api/docs/aistudio-deploying",
+      "https://blog.google/innovation-and-ai/technology/developers-tools/full-stack-vibe-coding-google-ai-studio/"
+    ],
+    "excerpt": "李安的 Facebook Reel 指出 Google AI Studio 現在可將 vibe coding 做出的網頁直接發布到網路上，並設定自訂網域 / 網址；Google 官方文件確認 AI Studio Build mode 可快速建置與部署 app，部署會對應到 Cloud Run，且可設定 `your-app-name.ai.studio` 這類自訂子網域。 原始分享： https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr Canonical Reel： https://www.facebook.com/reel/1051930197805040 ---",
+    "slug": "2026-07-17-facebook-leean-google-ai-studio-publish-custom-url",
+    "html": "articles/2026-07-17-facebook-leean-google-ai-studio-publish-custom-url.html",
+    "markdown": "articles/2026/07/2026-07-17-facebook-leean-google-ai-studio-publish-custom-url.md"
+  },
+  {
     "title": "91APP 教學｜第一個 Agent Skill 從每月行銷報表開始",
     "date": "2026-07-16",
     "source": "91APP Marketing Hub, Anthropic / DeepLearning.AI / Claude Code docs via Brave Search",
