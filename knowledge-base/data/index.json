@@ -1,5 +1,36 @@
 [
   {
+    "title": "91APP 教學｜第一個 Agent Skill 從每月行銷報表開始",
+    "date": "2026-07-16",
+    "source": "91APP Marketing Hub, Anthropic / DeepLearning.AI / Claude Code docs via Brave Search",
+    "author": "Brick Liao / 91APP Marketing Hub",
+    "type": "article",
+    "topics": [
+      "Agent Skills",
+      "Skill Authoring",
+      "Marketing Automation",
+      "Monthly Report",
+      "91APP CDMP",
+      "AI Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://marketing.91app.com/agent-skill-monthly-report-tutorial/",
+      "https://marketing.91app.com/agent-skill-monthly-report-tutorial/",
+      "https://marketing.91app.com/agent-skill-monthly-report-tutorial/",
+      "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "https://www.deeplearning.ai/courses/agent-skills-with-anthropic",
+      "https://code.claude.com/docs/en/skills"
+    ],
+    "excerpt": "91APP 建議第一支 Agent Skill 不要從大型自動化開始，而是從每月重複、格式固定、判斷標準明確的「行銷月報」下手：把 KPI、算法、資料來源、輸出格式與人工覆核點寫進 `SKILL.md`，讓 AI 每月依同一套標準整理報表，人再負責檢查與策略判斷。 原文： https://marketing.91app.com/agent-skill-monthly-report-tutorial/ ---",
+    "slug": "2026-07-16-91app-agent-skill-monthly-report-tutorial",
+    "html": "articles/2026-07-16-91app-agent-skill-monthly-report-tutorial.html",
+    "markdown": "articles/2026/07/2026-07-16-91app-agent-skill-monthly-report-tutorial.md"
+  },
+  {
     "title": "Facebook Reel｜Prompt Master：把提示工程封裝成 Claude Skill 的開源案例",
     "date": "2026-07-16",
     "source": "https://www.facebook.com/reel/2351486355375495",
@@ -29,6 +60,35 @@
     "slug": "2026-07-16-facebook-niyitech-prompt-master-claude-skill",
     "html": "articles/2026-07-16-facebook-niyitech-prompt-master-claude-skill.html",
     "markdown": "articles/2026/07/2026-07-16-facebook-niyitech-prompt-master-claude-skill.md"
+  },
+  {
+    "title": "GitHub｜VoltAgent awesome-claude-code-subagents：154+ Claude Code 子代理集合",
+    "date": "2026-07-16",
+    "source": "GitHub, Claude Code docs via Brave Search",
+    "author": "VoltAgent",
+    "type": "github-repository",
+    "topics": [
+      "Claude Code",
+      "Subagents",
+      "AI Agent",
+      "Developer Tools",
+      "Agent Orchestration",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "https://code.claude.com/docs/en/sub-agents",
+      "https://code.claude.com/docs/en/plugins-reference"
+    ],
+    "excerpt": "VoltAgent 的 `awesome-claude-code-subagents` 是一個 Claude Code subagents 範本與分類庫：README 宣稱收錄 154+ 個專門代理，並提供 plugin、手動複製、互動式安裝腳本與 standalone installer 等安裝方式；它適合拿來研究「任務型子代理如何命名、分工、配置工具與模型」，但實際可用性要以 Claude Code 官方 subagents / plugins 文件與本機環境為準。 Repo： https://github.com/VoltAgent/awesome-claude-code-subagents ---",
+    "slug": "2026-07-16-github-voltagent-awesome-claude-code-subagents",
+    "html": "articles/2026-07-16-github-voltagent-awesome-claude-code-subagents.html",
+    "markdown": "articles/2026/07/2026-07-16-github-voltagent-awesome-claude-code-subagents.md"
   },
   {
     "title": "X｜淘沙者：Codex 做影片的 6 個必裝 Skills 與 Video SOP",

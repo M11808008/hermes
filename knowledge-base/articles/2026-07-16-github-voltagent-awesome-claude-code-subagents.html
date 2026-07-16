@@ -1,0 +1,68 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GitHub｜VoltAgent awesome-claude-code-subagents：154+ Claude Code 子代理集合</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>GitHub｜VoltAgent awesome-claude-code-subagents：154+ Claude Code 子代理集合</h1><h2>一句話摘要</h2>
+<p>VoltAgent 的 `awesome-claude-code-subagents` 是一個 Claude Code subagents 範本與分類庫：README 宣稱收錄 154+ 個專門代理，並提供 plugin、手動複製、互動式安裝腳本與 standalone installer 等安裝方式；它適合拿來研究「任務型子代理如何命名、分工、配置工具與模型」，但實際可用性要以 Claude Code 官方 subagents / plugins 文件與本機環境為準。</p>
+<p>Repo：</p>
+<p><a href="https://github.com/VoltAgent/awesome-claude-code-subagents" target="_blank" rel="noopener">https://github.com/VoltAgent/awesome-claude-code-subagents</a></p>
+<p>---</p>
+<h2>Repo 重點</h2>
+<p>GitHub API 與 raw README 擷取到的重點如下：</p>
+<ul>
+<li>Repository：`VoltAgent/awesome-claude-code-subagents`</li>
+<li>描述：A collection of 100+ specialized Claude Code subagents covering a wide range of development use cases</li>
+<li>README 標示：154+ Claude Code subagents across 10 categories</li>
+<li>License：MIT</li>
+<li>主要語言：Shell</li>
+<li>Topics：`ai-agent-framework`、`ai-agent-tools`、`claude-code-subagents`、`subagents` 等</li>
+<li>安裝方式：Claude Code Plugin、手動複製到 `.claude/agents/` 或 `~/.claude/agents/`、互動式 `install-agents.sh`、standalone installer、agent-installer。</li>
+</ul>
+<p>README 的 10 個分類：</p>
+<ul>
+<li>Core Development</li>
+<li>Language Specialists</li>
+<li>Infrastructure</li>
+<li>Quality &amp; Security</li>
+<li>Data &amp; AI</li>
+<li>Developer Experience</li>
+<li>Specialized Domains</li>
+<li>Business &amp; Product</li>
+<li>Meta &amp; Orchestration</li>
+<li>Research &amp; Analysis</li>
+</ul>
+<p>---</p>
+<h2>官方脈絡與交叉驗證</h2>
+<p>Brave Search 找到的 Claude Code 官方文件確認了 repo 中幾個核心概念：</p>
+<ul>
+<li>Claude Code 官方 subagents 文件說明，自訂 subagents 是專門任務用的 AI assistants，可放在專案層 `.claude/agents/` 或使用者層 `~/.claude/agents/`。</li>
+<li>subagent 通常以 Markdown 檔案搭配 YAML frontmatter 表示，設定名稱、描述、可用工具、模型與系統指令。</li>
+<li>Claude Code plugins reference 顯示 plugin 可提供 specialized subagents，也可搭配 skills / commands / hooks 等資源；因此 repo 提供 plugin marketplace 安裝路徑，方向上符合官方 plugin 架構。</li>
+<li>但 repo 本身不是 Anthropic 官方清單；它是社群 / VoltAgent 維護的 awesome list，代理品質、適用工具與安全性仍需個別檢查。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 學習雷達的保存價值</h2>
+<p>這個 repo 可作為「子代理設計模式」資料庫，而不是只當現成安裝包：</p>
+<ul>
+<li>看分類：哪些任務值得拆成專門 agent，哪些應留給主 agent。</li>
+<li>看命名：agent name 與 description 如何影響自動委派。</li>
+<li>看工具配置：不同角色應該開哪些工具、禁哪些工具。</li>
+<li>看模型路由：README 提到用 `opus` / `sonnet` / `haiku` 等模型欄位平衡品質與成本，這對大型 agent workflow 的資源治理有參考價值。</li>
+<li>看編排代理：Meta &amp; Orchestration 類別可用來研究多代理協作、安裝代理與 catalog 搜尋的工作流。</li>
+</ul>
+<p>對欒帥的 Hermes / Claude Code / Codex 工作流來說，這份清單可當作「角色拆分靈感庫」：把通用助理拆成 code reviewer、security auditor、data analyst、documentation engineer、devops engineer 等專門角色，再依專案安全邊界給工具與上下文。</p>
+<p>---</p>
+<h2>導入注意事項</h2>
+<ul>
+<li>不要一次安裝全部 subagents；先挑 3–5 個高頻角色試用，觀察是否真的降低主 agent 負擔。</li>
+<li>社群 agent 可能包含過度授權、過時工具、產品導流或不適合本機環境的指令，安裝前應逐一讀 Markdown frontmatter 與 system prompt。</li>
+<li>Project subagents 通常比 global subagents 更安全，因為可把權限限制在特定 repo。</li>
+<li>若 agent 會執行 shell、讀寫檔案或連外，應先檢查工具清單與資料外洩風險。</li>
+<li>Claude Code 的 subagents / plugins 行為會隨版本變動；正式導入前需用 `claude` CLI 與官方 docs 驗證目前語法。</li>
+</ul>
+<p>---</p>
+<h2>可行的下一步</h2>
+<p>若要把這份 repo 轉成實際可用工作流，建議先做小規模評估：</p>
+<ul>
+<li>選 1 個專案 repo。</li>
+<li>只安裝 Core Development、Quality &amp; Security、Developer Experience 中最常用的少數代理。</li>
+<li>設計同一組任務，用「無 subagent」與「有 subagent」各跑一次。</li>
+<li>比較輸出品質、上下文污染、耗時、工具權限與人工覆核成本。</li>
+<li>把有效代理改寫成自家 `.claude/agents/` 或 Hermes skill / subagent workflow，而不是盲目沿用全部模板。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-16 · GitHub, Claude Code docs via Brave Search · github-repository</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">Subagents</span><span class="tag">AI Agent</span><span class="tag">Developer Tools</span><span class="tag">Agent Orchestration</span><span class="tag">GitHub</span><h3>原始連結</h3><p><a href="https://github.com/VoltAgent/awesome-claude-code-subagents" target="_blank" rel="noopener">https://github.com/VoltAgent/awesome-claude-code-subagents</a></p><p><a href="https://github.com/VoltAgent/awesome-claude-code-subagents" target="_blank" rel="noopener">https://github.com/VoltAgent/awesome-claude-code-subagents</a></p><p><a href="https://github.com/VoltAgent/awesome-claude-code-subagents" target="_blank" rel="noopener">https://github.com/VoltAgent/awesome-claude-code-subagents</a></p><p><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">https://code.claude.com/docs/en/sub-agents</a></p><p><a href="https://code.claude.com/docs/en/plugins-reference" target="_blank" rel="noopener">https://code.claude.com/docs/en/plugins-reference</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
