@@ -1,0 +1,78 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kimi K3 正式開放｜1M Context、Kimi Code 與 API 的旗艦模型更新</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Kimi K3 正式開放｜1M Context、Kimi Code 與 API 的旗艦模型更新</h1><h2>一句話摘要</h2>
+<p>Kimi K3 已在 Kimi Code 與 Kimi API 官方頁面正式出現，定位為 Kimi 目前最強旗艦模型，支援最高 1M token context，面向大型程式專案、知識工作、深度推理與 agentic coding；Kimi Code 同時提供 K3、K2.7 Code 標準版與 K2.7 Code HighSpeed 三種模型 ID。</p>
+<p>Kimi Code：</p>
+<p><a href="https://www.kimi.com/code/en" target="_blank" rel="noopener">https://www.kimi.com/code/en</a></p>
+<p>Kimi K3 API Quickstart：</p>
+<p><a href="https://platform.kimi.ai/docs/guide/kimi-k3-quickstart" target="_blank" rel="noopener">https://platform.kimi.ai/docs/guide/kimi-k3-quickstart</a></p>
+<p>Bilibili 影片：</p>
+<p><a href="https://www.bilibili.com/video/BV1A1K56hENv/" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1A1K56hENv/</a></p>
+<p>---</p>
+<h2>官方確認資訊</h2>
+<p>Brave Search 與官方頁面擷取確認到：</p>
+<ul>
+<li>Kimi Code 首頁標示「K3 is now available」並寫明支援最高 1M context tokens。</li>
+<li>Kimi API Platform Quickstart 稱 Kimi K3 是 Kimi 目前最強模型，具 2.8T parameters、Kimi Delta Attention、Attention Residuals、native visual understanding，以及 1M-token context window。</li>
+<li>Kimi API 開放平台中文首頁稱 K3 支援 1M tokens 上下文窗口，面向軟體工程、知識工作與深度推理。</li>
+<li>Kimi Code Docs 的 Model Configuration 頁確認 Kimi Code 目前提供兩個模型家族、三個模型 ID：`k3`、`kimi-for-coding`、`kimi-for-coding-highspeed`。</li>
+</ul>
+<p>---</p>
+<h2>Kimi Code 三個模型 ID</h2>
+<p>官方 Kimi Code Docs 對三個模型 ID 的定位如下：</p>
+<ul>
+<li>`k3`</li>
+</ul>
+<p>   - 模型：Kimi K3</p>
+<p>   - 定位：Kimi 目前最強旗艦模型</p>
+<p>   - 強項：coding、games / 3D、knowledge tasks</p>
+<p>   - Context：最高 1M</p>
+<p>   - Reasoning：支援 `thinking.effort:max` / `reasoning_effort:max`，低 / 高 effort 後續支援</p>
+<ul>
+<li>`kimi-for-coding`</li>
+</ul>
+<p>   - 模型：Kimi K2.7 Code</p>
+<p>   - 定位：成熟穩定的 coding 模型</p>
+<p>   - Context：256K</p>
+<p>   - Reasoning：Thinking ON</p>
+<ul>
+<li>`kimi-for-coding-highspeed`</li>
+</ul>
+<p>   - 模型：Kimi K2.7 Code HighSpeed</p>
+<p>   - 定位：K2.7 Code 高速版，能力相同但輸出速度約 6 倍</p>
+<p>   - Context：256K</p>
+<p>   - 使用限制：官方頁標示需 Allegretto 或更高方案</p>
+<p>---</p>
+<h2>方案與 Context 限制</h2>
+<p>Kimi Code Docs 對 K3 可用性與 context 上限的說明：</p>
+<ul>
+<li>Andante：不支援 K3。</li>
+<li>Moderato：K3 最高 256K context。</li>
+<li>Allegretto 及以上：K3 最高 1M context。</li>
+</ul>
+<p>因此「K3 支援 1M context」是模型與高階方案能力，不代表所有 Kimi Code 使用者都可直接使用 1M。</p>
+<p>---</p>
+<h2>Bilibili 影片脈絡</h2>
+<p>使用者提供的 b23.tv 短連結已解析到 Bilibili：</p>
+<ul>
+<li>影片標題：Kimi K3 性能简直炸裂！又一个 DeepSeek 时刻要来了？人工智能AI</li>
+<li>BV：BV1A1K56hENv</li>
+<li>作者：洛必达实验室</li>
+<li>影片描述屬於實測 / 評論型內容，適合當作社群觀察與 demo 脈絡，不應取代官方規格。</li>
+</ul>
+<p>---</p>
+<h2>對 AI 學習雷達的保存價值</h2>
+<p>Kimi K3 的重點不只是新模型，而是「長上下文 + coding agent + 第三方工具」的產品化：</p>
+<ul>
+<li>1M context 讓大型 repo、長文件、多檔案任務更容易被放進同一工作階段。</li>
+<li>Kimi Code 與第三方 coding agents 的支援，使 Kimi 進入 Cursor、Cline、Roo Code 等 agentic coding 工作流。</li>
+<li>K3 對 games / 3D、前後端工程與大型知識任務的定位，與近期 AI coding 從單檔補全走向 repo-level agent 的趨勢一致。</li>
+<li>對 Hermes / Codex / Claude Code 工作流來說，K3 是值得測試的「長上下文程式代理模型」候選。</li>
+</ul>
+<p>---</p>
+<h2>導入注意事項</h2>
+<ul>
+<li>1M context 不是免費午餐：長上下文會增加成本、延遲與 cache 行為的不確定性，應先用代表性 repo 做 benchmark。</li>
+<li>Kimi Code docs 提到切換模型後，既有 context cache 不再命中新模型，剛切換時用量可能上升；建議新模型用新 session。</li>
+<li>HighSpeed 版本雖快，但官方標示會消耗約 3 倍 quota，需看任務是否真的需要高速輸出。</li>
+<li>社群影片與測評可作為參考，但正式導入仍應以 Kimi 官方 docs、API 實測、價格與方案限制為準。</li>
+<li>若用於第三方 coding agent，需確認 API key 權限、資料外流邊界與 repo 私密性。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-16 · Kimi / Moonshot AI 官方頁、Kimi Code Docs、Kimi API Platform、Bilibili via Brave Search · model-release</div><h3>標籤</h3><span class="tag">Kimi K3</span><span class="tag">Kimi Code</span><span class="tag">Moonshot AI</span><span class="tag">Coding Agent</span><span class="tag">Long Context</span><span class="tag">AI Agent</span><h3>原始連結</h3><p><a href="https://www.kimi.com/code/en" target="_blank" rel="noopener">https://www.kimi.com/code/en</a></p><p><a href="https://platform.kimi.ai/docs/guide/kimi-k3-quickstart" target="_blank" rel="noopener">https://platform.kimi.ai/docs/guide/kimi-k3-quickstart</a></p><p><a href="https://www.kimi.com/code/en" target="_blank" rel="noopener">https://www.kimi.com/code/en</a></p><p><a href="https://www.kimi.com/code/docs/en/kimi-code/models" target="_blank" rel="noopener">https://www.kimi.com/code/docs/en/kimi-code/models</a></p><p><a href="https://platform.kimi.ai/docs/guide/kimi-k3-quickstart" target="_blank" rel="noopener">https://platform.kimi.ai/docs/guide/kimi-k3-quickstart</a></p><p><a href="https://platform.moonshot.cn/" target="_blank" rel="noopener">https://platform.moonshot.cn/</a></p><p><a href="https://www.bilibili.com/video/BV1A1K56hENv/" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1A1K56hENv/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

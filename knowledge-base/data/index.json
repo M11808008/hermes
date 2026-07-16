@@ -91,6 +91,68 @@
     "markdown": "articles/2026/07/2026-07-16-github-voltagent-awesome-claude-code-subagents.md"
   },
   {
+    "title": "Kimi K3 正式開放｜1M Context、Kimi Code 與 API 的旗艦模型更新",
+    "date": "2026-07-16",
+    "source": "Kimi / Moonshot AI 官方頁、Kimi Code Docs、Kimi API Platform、Bilibili via Brave Search",
+    "author": "Moonshot AI / Kimi",
+    "type": "model-release",
+    "topics": [
+      "Kimi K3",
+      "Kimi Code",
+      "Moonshot AI",
+      "Coding Agent",
+      "Long Context",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.kimi.com/code/en",
+      "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
+      "https://www.kimi.com/code/en",
+      "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
+      "https://platform.moonshot.cn/",
+      "https://www.bilibili.com/video/BV1A1K56hENv/"
+    ],
+    "excerpt": "Kimi K3 已在 Kimi Code 與 Kimi API 官方頁面正式出現，定位為 Kimi 目前最強旗艦模型，支援最高 1M token context，面向大型程式專案、知識工作、深度推理與 agentic coding；Kimi Code 同時提供 K3、K2.7 Code 標準版與 K2.7 Code HighSpeed 三種模型 ID。 Kimi Code： https://www.kimi.com/code/en Kimi K3 API Quickstart： https://platform.kimi.ai/docs/guide/kimi-k3-quickstart Bilibili 影片： https://www.bilibili.com/video/BV1A1K56hENv/ ---",
+    "slug": "2026-07-16-kimi-k3-kimi-code-api-1m-context",
+    "html": "articles/2026-07-16-kimi-k3-kimi-code-api-1m-context.html",
+    "markdown": "articles/2026/07/2026-07-16-kimi-k3-kimi-code-api-1m-context.md"
+  },
+  {
+    "title": "阿里 Qwen-Audio-3.0-Realtime｜即時語音、雙工互動與 Agent 工具調用的 Plus / Flash 版本",
+    "date": "2026-07-16",
+    "source": "阿里雲百鍊 / 阿里雲 Help Center, 量子位與公開媒體 via Brave Search",
+    "author": "Alibaba Cloud / Qwen",
+    "type": "model-release",
+    "topics": [
+      "Qwen",
+      "Realtime Audio",
+      "Voice Agent",
+      "Alibaba Cloud Bailian",
+      "Tool Calling",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-plus?serviceSite=asia-pacific-china",
+      "https://help.aliyun.com/zh/model-studio/models",
+      "https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-plus?serviceSite=asia-pacific-china",
+      "https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-flash?serviceSite=asia-pacific-china",
+      "https://help.aliyun.com/zh/model-studio/models",
+      "https://help.aliyun.com/zh/model-studio/realtime",
+      "https://www.qbitai.com/2026/07/450250.html"
+    ],
+    "excerpt": "Qwen-Audio-3.0-Realtime 是阿里針對即時語音互動推出的新一代模型，宣傳重點放在更流暢的雙工語音對話、Agent 工具調用、共情 / 情感對話與更強推理；Plus 偏能力、Flash 偏速度，適合語音客服、教育陪練、娛樂互動、情感陪伴與語音型 Agent 原型。 Plus API： https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-plus?serviceSite=asia-pacific-china Flash API： https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-flash?serviceSite=asia-pacific-china ---",
+    "slug": "2026-07-16-qwen-audio-3-realtime-plus-flash",
+    "html": "articles/2026-07-16-qwen-audio-3-realtime-plus-flash.html",
+    "markdown": "articles/2026/07/2026-07-16-qwen-audio-3-realtime-plus-flash.md"
+  },
+  {
     "title": "X｜淘沙者：Codex 做影片的 6 個必裝 Skills 與 Video SOP",
     "date": "2026-07-16",
     "source": "X, fxtwitter, video OCR, Brave Search, GitHub, Remotion docs",
