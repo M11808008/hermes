@@ -1,0 +1,62 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>本地端雙 Hermes Agent 家庭提醒架構｜共享資料夾、Polling 與任務交接</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>本地端雙 Hermes Agent 家庭提醒架構｜共享資料夾、Polling 與任務交接</h1><p>來源：Vincent Lu Facebook 貼文分享一個家庭場景：在 Mac mini 上替自己與另一半各建立一位 Hermes Agent，讓彼此的助理透過本地共享資料交換提醒任務，避免「我不是有跟你說過嗎？」造成家庭革命。本文把貼文整理成可重用的本地端雙 Agent 架構筆記，並用 Hermes Agent 官方 Profiles、Cron、Telegram Gateway 文件交叉確認哪些能力是官方基礎能力、哪些是作者自行設計的整合層。</p>
+<h1>一句話摘要</h1>
+<p>這篇的重點不是「夫妻一定要兩個 AI 助理」，而是示範了個人 AI 的下一步：多個獨立 Agent 不共用記憶與私密資料，但能透過明確格式的共享任務佇列與排程 polling，把「請提醒對方」這種低即時性任務安全交接出去。</p>
+<h1>架構重點</h1>
+<p>| 模組 | 貼文做法 | 查證 / 補充 |</p>
+<p>|---|---|---|</p>
+<p>| Agent 隔離 | 在 Mac 上為每個 Agent 建立獨立帳號，各自安裝 Hermes Agent | 官方 Profiles 文件也支援同機多個獨立 Hermes agents，每個 profile 有自己的 config、API keys、memory、sessions、skills、gateway state。若追求 OS 層級隔離，macOS 帳號更硬；若追求管理便利，Hermes profiles 可能更合適。 |</p>
+<p>| 對話入口 | 每個人各自使用自己的 Telegram 帳號與 Bot | Hermes Telegram Gateway 官方文件支援 Telegram bot、home channel、groups、topic/cron delivery 等能力。每人只和自己的 Agent 對話，可降低資料混淆。 |</p>
+<p>| Agent 互通 | 不讓 Bot 直接互聊，而是在同一台 Mac mini 上用共享資料夾交換訊息 | 這是作者自訂 integration pattern，不是 Telegram 或 Hermes 內建的「Agent 對 Agent」功能。優點是本地、可審計、低延遲；缺點是需要自己設計 schema、權限與錯誤處理。 |</p>
+<p>| 任務發現 | 每 5 或 10 分鐘 polling 一次共享資料夾，有新訊息才處理 | Hermes Cron / scheduled tasks 可用來做週期性檢查；適合提醒、採購、行程等低即時性任務。 |</p>
+<p>| 任務處理 | 透過預先定義好的 SOP：誰發出、誰接收、如何確認、如何回覆 | 這是整套系統最重要的「產品化」部分。沒有明確 SOP，雙 Agent 很容易互相誤解、重複提醒或漏單。 |</p>
+<h1>為什麼這個模式值得收錄</h1>
+<h2>1. 它把個人 AI 從單人助理推向家庭協作</h2>
+<p>多數個人 AI 使用情境停在「我告訴助理，它提醒我」。這篇把流程推進到「A 告訴 A 的助理，A 的助理以受控方式轉交給 B 的助理，再由 B 的助理提醒 B」。這比較接近真實家庭與小團隊工作流：任務不是只屬於個人，而是需要跨人協調。</p>
+<h2>2. 它正確意識到記憶與身份隔離</h2>
+<p>貼文指出 Hermes Agent 的記憶機制不適合讓兩個人共用同一個 Agent，否則長期會混淆資料。這個判斷很關鍵：家庭自動化如果混用同一份記憶，很容易出現隱私、權限與誤判問題。官方 Profiles 文件也支持同機多個獨立 agents 的方向。</p>
+<h2>3. 它把「溝通」降級成可審計的資料交換</h2>
+<p>相較於讓兩個 Bot 即時對話，共享資料夾 + polling 更像任務佇列：每筆 request 可以有發送者、接收者、內容、需要確認、狀態、處理時間與回覆。這讓家庭提醒不必追求即時，但可以追求可靠與可追溯。</p>
+<h1>建議的共享訊息 schema</h1>
+<p>若要把這種架構做穩，建議每筆訊息至少包含：</p>
+<p>```json</p>
+<p>{</p>
+<p>  &quot;id&quot;: &quot;2026-07-18T10-00-00-vincent-to-shin-001&quot;,</p>
+<p>  &quot;from_agent&quot;: &quot;shin-agent&quot;,</p>
+<p>  &quot;to_agent&quot;: &quot;vincent-agent&quot;,</p>
+<p>  &quot;type&quot;: &quot;reminder_request&quot;,</p>
+<p>  &quot;content&quot;: &quot;請提醒 Vincent 明天早上十點要帶小孩去上課&quot;,</p>
+<p>  &quot;requested_at&quot;: &quot;2026-07-18T12:05:00+08:00&quot;,</p>
+<p>  &quot;due_at&quot;: &quot;2026-07-19T10:00:00+08:00&quot;,</p>
+<p>  &quot;need_confirmation&quot;: true,</p>
+<p>  &quot;status&quot;: &quot;pending&quot;,</p>
+<p>  &quot;processed_at&quot;: null,</p>
+<p>  &quot;result&quot;: null</p>
+<p>}</p>
+<p>```</p>
+<p>狀態建議用：`pending`、`accepted`、`scheduled`、`rejected`、`done`、`failed`。不要只靠自然語言檔名，否則後續很難 debug。</p>
+<h1>實作注意事項</h1>
+<h2>1. 權限與資料夾設計</h2>
+<ul>
+<li>共享資料夾只應放交換訊息，不應開放整個 home directory。</li>
+<li>每個 Agent 只能讀取自己的 inbox 與共同 schema，不應任意瀏覽對方資料。</li>
+<li>可用 `requests/`、`processed/`、`failed/` 三層資料夾，避免重複處理同一筆訊息。</li>
+</ul>
+<h2>2. Cron 頻率不要太高</h2>
+<p>家庭提醒類任務通常不需要秒級處理。5 到 10 分鐘 polling 合理；若任務涉及外部 API、模型呼叫或通知成本，頻率太高只會浪費資源。</p>
+<h2>3. 需要人類確認的任務要停下來</h2>
+<p>像「提醒我買票」可以直接排提醒；但「幫我訂房」「幫我付款」「幫我寄信給老師」應列為需要確認。雙 Agent 系統最怕的是把對方的一句話直接變成高風險外部動作。</p>
+<h2>4. Profiles 可能比多 macOS 帳號更易管理</h2>
+<p>貼文採用 macOS 帳號隔離，優點是 OS 層級邊界清楚。若是技術使用者，也可以評估 Hermes Profiles：同機多個 profile 具備獨立 config、memory、sessions、skills、gateway state，管理上可能更輕量。不過嚴格隱私隔離仍要注意工具與檔案權限。</p>
+<h1>可延伸應用</h1>
+<ul>
+<li>家庭採購：一方建立採買需求，另一方 Agent 轉成購物清單與提醒。</li>
+<li>小孩課程：把上課、繳費、請假、交通安排拆成任務。</li>
+<li>旅遊前置：訂房、買票、護照、保險、行李清單分派。</li>
+<li>小團隊協作：把「非即時、可延後處理」的交辦事項轉成 shared queue。</li>
+</ul>
+<h1>Caveats</h1>
+<ul>
+<li>這篇是使用者實作分享，不是 Hermes 官方功能 announcement。官方能查證的是 Profiles、Cron、Telegram Gateway 等基礎能力；共享資料夾協定、雙 Agent SOP、家庭提醒流程屬作者自行設計。</li>
+<li>Telegram Bot 之間不適合直接互相對話；每個人只和自己的 Agent 對話，讓 Agent 透過受控資料交換溝通，是更安全的架構。</li>
+<li>家庭資料高度私密，不建議把提醒內容公開同步到外部知識庫或雲端工具；若使用共享資料夾，也應明確控管檔案權限與保留期限。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-18 · https://www.facebook.com/share/1BNEMH1gLY/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">Hermes Agent</span><span class="tag">個人 AI</span><span class="tag">Multi-Agent</span><span class="tag">家庭自動化</span><span class="tag">Telegram Bot</span><span class="tag">Cron</span><span class="tag">macOS</span><span class="tag">AI Agent 架構</span><h3>原始連結</h3><p><a href="https://www.facebook.com/61580264783711/posts/122137555383008826/" target="_blank" rel="noopener">https://www.facebook.com/61580264783711/posts/122137555383008826/</a></p><p><a href="https://www.facebook.com/61580264783711/posts/122137555383008826/" target="_blank" rel="noopener">https://www.facebook.com/61580264783711/posts/122137555383008826/</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/profiles/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/profiles/</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -1,5 +1,36 @@
 [
   {
+    "title": "本地端雙 Hermes Agent 家庭提醒架構｜共享資料夾、Polling 與任務交接",
+    "date": "2026-07-18",
+    "source": "https://www.facebook.com/share/1BNEMH1gLY/?mibextid=wwXIfr",
+    "author": "Vincent Lu",
+    "type": "article",
+    "topics": [
+      "Hermes Agent",
+      "個人 AI",
+      "Multi-Agent",
+      "家庭自動化",
+      "Telegram Bot",
+      "Cron",
+      "macOS",
+      "AI Agent 架構"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61580264783711/posts/122137555383008826/",
+      "https://www.facebook.com/61580264783711/posts/122137555383008826/",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/profiles/",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/cron",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram/"
+    ],
+    "excerpt": "這篇的重點不是「夫妻一定要兩個 AI 助理」，而是示範了個人 AI 的下一步：多個獨立 Agent 不共用記憶與私密資料，但能透過明確格式的共享任務佇列與排程 polling，把「請提醒對方」這種低即時性任務安全交接出去。",
+    "slug": "2026-07-18-facebook-vincent-lu-local-dual-hermes-agents-family-reminders",
+    "html": "articles/2026-07-18-facebook-vincent-lu-local-dual-hermes-agents-family-reminders.html",
+    "markdown": "articles/2026/07/2026-07-18-facebook-vincent-lu-local-dual-hermes-agents-family-reminders.md"
+  },
+  {
     "title": "Gemini API Managed Agents 新門檻｜免費額度、Token 預算與 Cron 觸發器",
     "date": "2026-07-18",
     "source": "https://www.threads.com/@aiposthub/post/Da5U72nAY2I",
