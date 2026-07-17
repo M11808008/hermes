@@ -62,6 +62,36 @@
     "markdown": "articles/2026/07/2026-07-18-facebook-vincent-lu-local-dual-hermes-agents-family-reminders.md"
   },
   {
+    "title": "Claude 遇到使用上限時，把資料匯出交給 ChatGPT 接續？可行但不是無損接力",
+    "date": "2026-07-18",
+    "source": "https://www.facebook.com/share/r/1LyUhUf8aF/?mibextid=wwXIfr",
+    "author": "Zoe Sullivan",
+    "type": "article",
+    "topics": [
+      "Claude",
+      "ChatGPT",
+      "AI Workflow",
+      "Context Handoff",
+      "File Upload",
+      "Productivity"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61589679297721/videos/claude-hit-its-limit-again-dont-wait-5-hoursgo-to-settings-privacy-export-datado/1470909317548787/",
+      "https://www.facebook.com/reel/1470909317548787",
+      "https://support.claude.com/en/articles/9450526-how-can-i-export-my-claude-data",
+      "https://privacy.claude.com/en/articles/9450526-export-your-claude-data",
+      "https://help.openai.com/en/articles/8983675-what-types-of-files-are-supported",
+      "https://help.openai.com/en/articles/8555545-file-uploads-faq"
+    ],
+    "excerpt": "這個方法的核心概念是「把 Claude 對話匯出後，讓 ChatGPT 讀取歷史脈絡再接手」。官方文件支持「Claude 可從 Settings → Privacy 匯出使用者資訊與聊天紀錄」以及「ChatGPT 支援常見文件/文字檔上傳」；但「30 秒、完全零脈絡損失」應視為創作者的效率型說法，不宜當成保證。",
+    "slug": "2026-07-18-facebook-zoe-sullivan-claude-export-chatgpt-context-handoff",
+    "html": "articles/2026-07-18-facebook-zoe-sullivan-claude-export-chatgpt-context-handoff.html",
+    "markdown": "articles/2026/07/2026-07-18-facebook-zoe-sullivan-claude-export-chatgpt-context-handoff.md"
+  },
+  {
     "title": "Gemini API Managed Agents 新門檻｜免費額度、Token 預算與 Cron 觸發器",
     "date": "2026-07-18",
     "source": "https://www.threads.com/@aiposthub/post/Da5U72nAY2I",
