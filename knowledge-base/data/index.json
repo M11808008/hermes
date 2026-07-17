@@ -1,5 +1,68 @@
 [
   {
+    "title": "Gemini API Managed Agents 新門檻｜免費額度、Token 預算與 Cron 觸發器",
+    "date": "2026-07-18",
+    "source": "https://www.threads.com/@aiposthub/post/Da5U72nAY2I",
+    "author": "AI郵報（@aiposthub）",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "Gemini API",
+      "Managed Agents",
+      "Google AI",
+      "Agent 基礎設施",
+      "成本控管",
+      "自動化排程"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/Da5U72nAY2I",
+      "https://www.threads.com/@aiposthub/post/Da5U72nAY2I",
+      "https://ai.google.dev/gemini-api/docs/agents",
+      "https://ai.google.dev/gemini-api/docs/antigravity-agent",
+      "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+      "https://x.com/_philschmid/status/2077802206229672264"
+    ],
+    "excerpt": "Google 正把 Gemini API Managed Agents 從「需要自己接伺服器與容器的高門檻 agent 實驗」推向「一個 API call 就能啟動遠端 Linux sandbox、可控成本、可排程執行」的 Agent 基礎設施；真正重點不只是免費，而是成本上限與排程讓開發者更敢把 Agent 放進例行工作流。",
+    "slug": "2026-07-18-threads-aiposthub-gemini-managed-agents-free-tier-token-cron",
+    "html": "articles/2026-07-18-threads-aiposthub-gemini-managed-agents-free-tier-token-cron.html",
+    "markdown": "articles/2026/07/2026-07-18-threads-aiposthub-gemini-managed-agents-free-tier-token-cron.md"
+  },
+  {
+    "title": "Codex AGENTS.md 專案規則檔｜讓 coding agent 自動讀取團隊慣例",
+    "date": "2026-07-18",
+    "source": "https://www.threads.com/@eason13419/post/Da4Kx9XoPjm",
+    "author": "伊森說（@eason13419）",
+    "type": "article",
+    "topics": [
+      "ChatGPT Codex",
+      "AGENTS.md",
+      "Coding Agent",
+      "專案規則",
+      "AI 工程工作流",
+      "Context Engineering"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@eason13419/post/Da4Kx9XoPjm",
+      "https://www.threads.com/@eason13419/post/Da4Kx9XoPjm",
+      "https://youtu.be/_cDDG2EMJZw",
+      "https://developers.openai.com/codex/guides/agents-md",
+      "https://developers.openai.com/codex/guides/agents-md.md",
+      "https://agents.md/",
+      "https://github.com/openai/codex/blob/main/docs/agents_md.md",
+      "https://github.com/openai/codex/blob/main/AGENTS.md"
+    ],
+    "excerpt": "`AGENTS.md` 可以理解成「給 coding agent 看的 README」：把安裝、測試、程式風格、安全邊界、PR/commit 慣例與專案特殊限制寫成可自動讀取的規則，讓 Codex 每次開始工作前先載入同一套上下文，減少重複提示與 agent 自行猜測。",
+    "slug": "2026-07-18-threads-eason-codex-agents-md-project-rules",
+    "html": "articles/2026-07-18-threads-eason-codex-agents-md-project-rules.html",
+    "markdown": "articles/2026/07/2026-07-18-threads-eason-codex-agents-md-project-rules.md"
+  },
+  {
     "title": "食神鬍子哥 4 家牛肉麵清單｜東區宵夜、科技大樓、大安、天母風味對照",
     "date": "2026-07-17",
     "source": "https://www.facebook.com/share/p/1D4PFgFNEz/?mibextid=wwXIfr",
