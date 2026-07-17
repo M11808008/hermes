@@ -1,5 +1,36 @@
 [
   {
+    "title": "21st.dev 現成 UI 元件庫｜讓 Vibe Coding 先找參考再產生介面",
+    "date": "2026-07-18",
+    "source": "https://www.facebook.com/share/v/1E2eXpLDgF/?mibextid=wwXIfr",
+    "author": "李安",
+    "type": "article",
+    "topics": [
+      "Vibe Coding",
+      "UI Design",
+      "React",
+      "21st.dev",
+      "MCP",
+      "Coding Agent",
+      "Frontend"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/bboyanlee/videos/1751491119505623/",
+      "https://www.facebook.com/bboyanlee/videos/1751491119505623/",
+      "https://21st.dev/",
+      "https://21st.dev/mcp",
+      "https://21st.dev/community/components",
+      "https://21st.dev/community/templates"
+    ],
+    "excerpt": "21st.dev 是一個社群式 React components / templates registry；對 Vibe Coding 的價值在於讓 AI agent 或開發者先搜尋真實、已設計好的 UI 參考，再把元件安裝到專案或作為 prompt/context 使用，降低「AI 預設醜版 UI」的機率。",
+    "slug": "2026-07-18-facebook-leean-21st-dev-ui-components-vibe-coding",
+    "html": "articles/2026-07-18-facebook-leean-21st-dev-ui-components-vibe-coding.html",
+    "markdown": "articles/2026/07/2026-07-18-facebook-leean-21st-dev-ui-components-vibe-coding.md"
+  },
+  {
     "title": "本地端雙 Hermes Agent 家庭提醒架構｜共享資料夾、Polling 與任務交接",
     "date": "2026-07-18",
     "source": "https://www.facebook.com/share/1BNEMH1gLY/?mibextid=wwXIfr",
