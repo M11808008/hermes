@@ -1,5 +1,36 @@
 [
   {
+    "title": "Illegal Claude Tips Part 39：社群 Cheat Sheet 該回到官方 Claude Code Cheatsheet 查核",
+    "date": "2026-07-19",
+    "source": "https://www.facebook.com/share/r/19F3Ct2Su5/?mibextid=wwXIfr",
+    "author": "Jonathan Acuna",
+    "type": "article",
+    "topics": [
+      "Claude",
+      "Claude Code",
+      "Cheat Sheet",
+      "AI Agent",
+      "Workflow",
+      "Security"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/imjonathanacuna/videos/illegal-claude-tips-you-should-know-part-39comment-claude-to-get-the-cheat-sheet/3126297144227538/",
+      "https://www.facebook.com/reel/3126297144227538",
+      "https://support.claude.com/en/articles/14553413-claude-code-cheatsheet",
+      "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "https://docs.anthropic.com/en/docs/claude-code/settings",
+      "https://docs.anthropic.com/en/docs/claude-code/security",
+      "https://docs.anthropic.com/en/docs/claude-code/mcp"
+    ],
+    "excerpt": "這則內容的價值不在於「illegal」這個行銷字眼，而在於提醒：Claude / Claude Code 的社群技巧已經多到需要用 cheat sheet 管理；但凡是社群清單、暗黑技巧、hidden tips，都應回到官方 cheatsheet、settings、permissions、security、MCP 與 hooks 文件核對，避免把版本差異、權限風險或未公開 hack 當成穩定教學內容。",
+    "slug": "2026-07-19-facebook-jonathan-acuna-illegal-claude-tips-part-39-cheatsheet",
+    "html": "articles/2026-07-19-facebook-jonathan-acuna-illegal-claude-tips-part-39-cheatsheet.html",
+    "markdown": "articles/2026/07/2026-07-19-facebook-jonathan-acuna-illegal-claude-tips-part-39-cheatsheet.md"
+  },
+  {
     "title": "Claude Code Loop Engineering：4 種迴圈設計法，重點不是一直跑而是停止條件",
     "date": "2026-07-18",
     "source": "https://www.bnext.com.tw/article/91516/claude-code-loop-engineering",
