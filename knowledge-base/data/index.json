@@ -102,6 +102,73 @@
     "markdown": "articles/2026/07/2026-07-19-facebook-eric-socal-claude-prompt-scrapes-website-into-codebase.md"
   },
   {
+    "title": "Idris Rafliansyah AI 動作片段：GPT Image 與 Seedance 2.0 打造夜間屋頂追獵槍戰",
+    "date": "2026-07-19",
+    "source": "https://www.facebook.com/share/r/1BT5eLQp76/?mibextid=wwXIfr",
+    "author": "Idris Rafliansyah / Facebook Reel",
+    "type": "article",
+    "topics": [
+      "AI 影片",
+      "生成式 AI",
+      "GPT Image",
+      "Seedance",
+      "動作片",
+      "提示詞工作流",
+      "影像到影片"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/3953949788070338",
+      "https://www.facebook.com/share/r/1BT5eLQp76/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/3953949788070338",
+      "https://www.facebook.com/61590376302101/videos/membuat-video-ai-action-kali-ini-menghadirkan-adegan-perburuan-dengan-pertarunga/3953949788070338/",
+      "https://developers.openai.com/api/docs/models/gpt-image-1",
+      "https://developers.openai.com/api/docs/guides/image-generation",
+      "https://seed.bytedance.com/en/seedance2_0",
+      "https://fal.ai/models/bytedance/seedance-2.0/image-to-video",
+      "https://fal.ai/models/bytedance/seedance-2.0/text-to-video"
+    ],
+    "excerpt": "這則 Reel 是「電影感動作場景」的 AI 影片案例：先用 GPT Image 鎖定角色、城市夜景、屋頂與槍戰構圖，再用 Seedance 2.0 加上鏡頭運動、火光、煙霧、直升機探照燈與角色奔跑；但 John Wick 只能作為「俐落近戰、霓虹夜景、現代黑色動作片」的風格方向，公開使用時應避免複製角色、劇照、服裝造型或可辨識 IP 元素。",
+    "slug": "2026-07-19-facebook-idris-rafliansyah-ai-action-gpt-image-seedance",
+    "html": "articles/2026-07-19-facebook-idris-rafliansyah-ai-action-gpt-image-seedance.html",
+    "markdown": "articles/2026/07/2026-07-19-facebook-idris-rafliansyah-ai-action-gpt-image-seedance.md"
+  },
+  {
+    "title": "Idris Rafliansyah 暗黑奇幻 AI 影片：GPT Image 角色圖到 Seedance 2.0 電影感動態化",
+    "date": "2026-07-19",
+    "source": "https://www.facebook.com/share/r/17xEaQ8vFo/?mibextid=wwXIfr",
+    "author": "Idris Rafliansyah / Facebook Reel",
+    "type": "article",
+    "topics": [
+      "AI 影片",
+      "生成式 AI",
+      "GPT Image",
+      "Seedance",
+      "ByteDance",
+      "暗黑奇幻",
+      "提示詞工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/2072493910367522",
+      "https://www.facebook.com/share/r/17xEaQ8vFo/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2072493910367522",
+      "https://www.facebook.com/61590376302101/videos/masih-seputar-genre-dark-fantasy-kali-ini-aku-mencoba-menghadirkan-momen-ketika-/2072493910367522/",
+      "https://developers.openai.com/api/docs/models/gpt-image-1",
+      "https://developers.openai.com/api/docs/guides/image-generation",
+      "https://seed.bytedance.com/en/seedance2_0",
+      "https://fal.ai/models/bytedance/seedance-2.0/text-to-video"
+    ],
+    "excerpt": "這則 Reel 值得收進「AI 影像到 AI 影片」案例庫：它展示了先用影像模型鎖定角色與構圖，再交給影片模型做鏡頭、動作、霧氣、光影與巨大生物動態的兩段式流程；但「像 Game of Thrones」只能當風格方向，不應直接複製特定 IP 的角色、場景、標誌或可辨識劇照。",
+    "slug": "2026-07-19-facebook-idris-rafliansyah-dark-fantasy-gpt-image-seedance",
+    "html": "articles/2026-07-19-facebook-idris-rafliansyah-dark-fantasy-gpt-image-seedance.html",
+    "markdown": "articles/2026/07/2026-07-19-facebook-idris-rafliansyah-dark-fantasy-gpt-image-seedance.md"
+  },
+  {
     "title": "Illegal Claude Tips Part 39：社群 Cheat Sheet 該回到官方 Claude Code Cheatsheet 查核",
     "date": "2026-07-19",
     "source": "https://www.facebook.com/share/r/19F3Ct2Su5/?mibextid=wwXIfr",
