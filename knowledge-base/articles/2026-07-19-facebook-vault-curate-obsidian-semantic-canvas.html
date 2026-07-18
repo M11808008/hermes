@@ -1,0 +1,68 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vault Curate 1.2.2：Obsidian 本地中文語意搜尋與可編輯 Canvas 關聯圖</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Vault Curate 1.2.2：Obsidian 本地中文語意搜尋與可編輯 Canvas 關聯圖</h1><p>梅驊的 Facebook 貼文分享 Vault Curate 在 Obsidian 官方社群更新到 1.2.2。貼文主張這是一個「精神不變」的本地優先 Obsidian 工具：筆記文件在自己的電腦上跑，不必雲端 LLM、不必付費、不把第二大腦外傳；輸入概念或一段話，即可從自己的筆記中找出組織好的文件，並特別強調繁中友好、表格友好與隱私友好。</p>
+<h1>一句話摘要</h1>
+<p>Vault Curate 是一個針對 Obsidian 的 local-first 中文語意搜尋與 AI 整理外掛；1.2.2 的重點是繁中語意檢索改善、自動增量重建索引，以及可把語意鄰近筆記輸出成可編輯 Obsidian Canvas 關聯圖。</p>
+<h1>貼文整理的 1.2.2 更新</h1>
+<p>貼文列出的更新重點如下：</p>
+<ul>
+<li>完整支援關聯圖 Canvas：以任一筆記為中心生成可編輯的語意關聯圖，看見尚未手動建立 wikilink 的隱形關聯，並可自動生成概念模板。</li>
+<li>中文檢索更準、速度更快：貼文稱 8GB 筆電也能順暢運行。</li>
+<li>內建 WebGPU 模型：零設定即可跑，不再需要先安裝 Ollama。</li>
+<li>免手動維護：升級後自動增量重建索引，有進度提示。</li>
+<li>安裝方式：Obsidian 社群外掛程式搜尋「Vault Curate」。</li>
+<li>GitHub：`<a href="https://github.com/notoriouslab/vault-curate`。" target="_blank" rel="noopener">https://github.com/notoriouslab/vault-curate`。</a></li>
+</ul>
+<h1>圖片可見內容</h1>
+<p>貼文附圖是一張 Vault Curate 生成的語意關聯圖。中心節點是「關於 AI 的迎合－我們的分辨、界線與治理」，周圍以曲線連到多篇筆記，每條線旁有相似度分數：0.81、0.80、0.79、0.78、0.77、0.76 等。可辨識的周邊節點包含：</p>
+<ul>
+<li>「AI時代的職涯規劃：手感，是唯一不會被取代的東西」相似度 0.81。</li>
+<li>「20260406－前幾天 Karpathy 發了那篇 LLM Knowledge Bases 引爆」相似度 0.80。</li>
+<li>「20260303－現在 AI 越來越貼近生活使用，很多人都知道，要有好的輸出，就要選對模型，給足夠…」相似度 0.79。</li>
+<li>「從 Interconnects AI 看 2026 開源模型全景差距、蒸餾、中國與下一步」相似度 0.78。</li>
+<li>「20260627－哲學系有出路了，隨著 AI 快速發展，科技巨頭開始大量聘請哲學家。」相似度 0.77。</li>
+<li>「20260408－中午在教會和同工分享我自己怎麼使用這些 AI 相關工具，基本上我秉持客家精神…」相似度 0.76。</li>
+<li>「在 AI 圖書館裡，你站在哪裡？」相似度 0.76。</li>
+</ul>
+<p>這張圖的價值在於把「還沒有建立連結、但語意相近」的舊筆記浮出來，很適合用於個人知識庫整理、課程素材回收、主題地圖與研究脈絡重建。</p>
+<h1>官方與公開來源查證</h1>
+<h2>GitHub repo 狀態</h2>
+<p>GitHub API 確認 repo 為 `notoriouslab/vault-curate`，描述是 hybrid semantic search and AI curation for your vault，結合 BM25 keyword、on-device WebGPU embeddings 與 fuzzy title matching，並標註 multilingual、strong Chinese/CJK support、opt-in AI features、local-first、no API keys。查證時 repo 使用 TypeScript、MIT License，default branch 為 main，latest release 為 1.2.2。</p>
+<h2>manifest 確認</h2>
+<p>`manifest.json` 顯示：</p>
+<ul>
+<li>id：`vault-curate`</li>
+<li>name：Vault Curate</li>
+<li>version：1.2.2</li>
+<li>minAppVersion：1.7.2</li>
+<li>isDesktopOnly：true</li>
+<li>description：Hybrid search: BM25, on-device WebGPU embeddings, fuzzy title matching；Multilingual with strong Chinese/CJK support；Optional AI auto-generates note descriptions and grouped Maps of Content；Local-first, no API keys。</li>
+</ul>
+<p>這與貼文的「本地、中文友善、WebGPU、不需 API key」主張一致，但需注意這是桌面版 Obsidian 外掛，不是行動版功能。</p>
+<h2>README.zh-TW 確認</h2>
+<p>繁中 README 說明 Vault Curate 內建 `bge-small-zh-v1.5`，以本地推論、三路融合搜尋（BM25 + 向量 + 模糊）與 WebGPU 加速為主。README 也明確寫到 1.2.2 起 embedding 輸入會做繁轉簡字級轉換，以改善 bge-small-zh 在中文 token 空間的檢索效果；升級後首次啟動會自動一次性重索引，並有進度通知。</p>
+<p>關聯圖部分，README 確認可「以任一筆記為中心，生成可編輯的 Obsidian Canvas」，中心筆記以綠框呈現、top-K 語意鄰居放射狀排列，每條邊標注相似度分數。紫邊代表語意相近但尚未建立連結，灰邊代表已有 wikilink，青框節點代表 Cold 筆記。每次生成都是帶 timestamp 的新 `.canvas` 檔，預設位置是 `Vault Curate Canvases`，不會覆寫已編輯的圖。</p>
+<h2>Obsidian 官方文件確認</h2>
+<p>Obsidian 官方 Canvas 文件說明 Canvas 是核心外掛，可在 2D 空間安排並連接 notes、images 與其他 files。因此 Vault Curate 生成 Canvas 檔的說法與 Obsidian 平台能力相容。Obsidian community plugins 文件則確認第三方外掛可透過社群外掛安裝，但使用者仍應只安裝信任來源。</p>
+<h1>為什麼值得放進 AI 學習雷達</h1>
+<ul>
+<li>它不是單純把 LLM 接進筆記，而是用本地 embedding 與搜尋融合改善「找回舊知識」的效率。</li>
+<li>對繁中筆記工作者很有價值，因為多數語意搜尋外掛仍以英文或通用 multilingual 模型為主。</li>
+<li>Canvas 關聯圖把「AI 幫你看見」具體化：不是直接代寫結論，而是把隱形關聯可視化，讓人重新判斷、編輯、整理。</li>
+<li>local-first 與 no API keys 適合私密筆記、課程備課、研究素材與個人第二大腦，不必先把全文送到雲端模型。</li>
+<li>它也提供一個很好的 PKM 設計原則：AI 不一定要取代思考，更可以做為「檢索、浮現、重組」的認知輔助層。</li>
+</ul>
+<h1>實務使用建議</h1>
+<ul>
+<li>若使用 Obsidian Desktop 且筆記以中文為主，可以先用小型 vault 測試索引速度與檢索品質。</li>
+<li>啟用前先備份 vault，尤其是若要使用 AI 整理、description 或 frontmatter 改寫功能。</li>
+<li>若資料高度敏感，優先選內建 WebGPU 或本機 Ollama；若切到 OpenAI-compatible remote API，就要把「資料可能離開裝置」納入風險評估。</li>
+<li>用 Canvas 關聯圖整理課程或研究時，可把高分但未連結的節點視為「待人工判斷的候選連結」，不要把相似度分數直接當成因果或主題同一性。</li>
+<li>對欒帥的 AI 學習雷達來說，可作為 Obsidian / PKM / local-first AI 工具單元的案例，展示「私有筆記不外傳」與「本地語意搜尋」兩個趨勢。</li>
+</ul>
+<h1>Caveats</h1>
+<ul>
+<li>Facebook 貼文提到「Obsidian 官方社群」與「社群外掛程式搜 Vault Curate」，Brave Search 可找到 Obsidian Forum 與 plugin/discovery 相關結果；但實際是否已在每位使用者的 Community Plugins 介面可見，仍可能受 Obsidian 審查與地區/同步時間影響。</li>
+<li>README 目前仍有一段提醒「社群審查中，建議 BRAT 或手動安裝」；這與貼文的安裝說法可能反映時間差，安裝前應以 Obsidian 插件頁或 GitHub release 為準。</li>
+<li>WebGPU 支援取決於 Obsidian Desktop、作業系統、瀏覽器核心與 GPU/driver；不支援時可能退回 WASM，速度會慢很多。</li>
+<li>「8GB 筆電很順」屬作者/貼文經驗，並非跨硬體保證。</li>
+<li>外掛程式即使 local-first，也仍會讀取 vault 內容建立索引；私密 vault 應只安裝信任的開源外掛並定期檢查設定。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-19 · https://www.facebook.com/share/p/1Byn3xQ6Hk/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">Obsidian</span><span class="tag">知識管理</span><span class="tag">本地 AI</span><span class="tag">WebGPU</span><span class="tag">語意搜尋</span><span class="tag">PKM</span><span class="tag">AI 工具</span><h3>原始連結</h3><p><a href="https://www.facebook.com/jacob.mei/posts/10163169005732469" target="_blank" rel="noopener">https://www.facebook.com/jacob.mei/posts/10163169005732469</a></p><p><a href="https://www.facebook.com/jacob.mei/posts/10163169005732469" target="_blank" rel="noopener">https://www.facebook.com/jacob.mei/posts/10163169005732469</a></p><p><a href="https://github.com/notoriouslab/vault-curate" target="_blank" rel="noopener">https://github.com/notoriouslab/vault-curate</a></p><p><a href="https://github.com/notoriouslab/vault-curate/releases/tag/1.2.2" target="_blank" rel="noopener">https://github.com/notoriouslab/vault-curate/releases/tag/1.2.2</a></p><p><a href="https://raw.githubusercontent.com/notoriouslab/vault-curate/main/manifest.json" target="_blank" rel="noopener">https://raw.githubusercontent.com/notoriouslab/vault-curate/main/manifest.json</a></p><p><a href="https://raw.githubusercontent.com/notoriouslab/vault-curate/main/README.zh-TW.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/notoriouslab/vault-curate/main/README.zh-TW.md</a></p><p><a href="https://obsidian.md/help/plugins/canvas" target="_blank" rel="noopener">https://obsidian.md/help/plugins/canvas</a></p><p><a href="https://obsidian.md/help/community-plugins" target="_blank" rel="noopener">https://obsidian.md/help/community-plugins</a></p><p><a href="https://obsidian.md/privacy" target="_blank" rel="noopener">https://obsidian.md/privacy</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

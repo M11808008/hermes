@@ -200,6 +200,76 @@
     "markdown": "articles/2026/07/2026-07-19-facebook-jonathan-acuna-illegal-claude-tips-part-39-cheatsheet.md"
   },
   {
+    "title": "Vault Curate 1.2.2：Obsidian 本地中文語意搜尋與可編輯 Canvas 關聯圖",
+    "date": "2026-07-19",
+    "source": "https://www.facebook.com/share/p/1Byn3xQ6Hk/?mibextid=wwXIfr",
+    "author": "梅驊 / Facebook",
+    "type": "article",
+    "topics": [
+      "Obsidian",
+      "知識管理",
+      "本地 AI",
+      "WebGPU",
+      "語意搜尋",
+      "PKM",
+      "AI 工具"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/jacob.mei/posts/10163169005732469",
+      "https://www.facebook.com/jacob.mei/posts/10163169005732469",
+      "https://github.com/notoriouslab/vault-curate",
+      "https://github.com/notoriouslab/vault-curate/releases/tag/1.2.2",
+      "https://raw.githubusercontent.com/notoriouslab/vault-curate/main/manifest.json",
+      "https://raw.githubusercontent.com/notoriouslab/vault-curate/main/README.zh-TW.md",
+      "https://obsidian.md/help/plugins/canvas",
+      "https://obsidian.md/help/community-plugins",
+      "https://obsidian.md/privacy"
+    ],
+    "excerpt": "Vault Curate 是一個針對 Obsidian 的 local-first 中文語意搜尋與 AI 整理外掛；1.2.2 的重點是繁中語意檢索改善、自動增量重建索引，以及可把語意鄰近筆記輸出成可編輯 Obsidian Canvas 關聯圖。",
+    "slug": "2026-07-19-facebook-vault-curate-obsidian-semantic-canvas",
+    "html": "articles/2026-07-19-facebook-vault-curate-obsidian-semantic-canvas.html",
+    "markdown": "articles/2026/07/2026-07-19-facebook-vault-curate-obsidian-semantic-canvas.md"
+  },
+  {
+    "title": "簡立峰電腦學會 60 週年論壇演講：2026 AI 商轉、Token 經濟學與台灣黃金十年",
+    "date": "2026-07-19",
+    "source": "https://youtu.be/A00aYRWRPiU?si=zbQkzclVTQ3PfYbh/",
+    "author": "新師董聯盟首席幕僚官 × 北科大EMBA 侯凱文 / YouTube",
+    "type": "article",
+    "topics": [
+      "AI 趨勢",
+      "台灣產業",
+      "簡立峰",
+      "AI Agents",
+      "Token 經濟學",
+      "企業 AI",
+      "出海",
+      "YouTube"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=A00aYRWRPiU",
+      "https://www.youtube.com/watch?v=A00aYRWRPiU",
+      "https://www.bnext.com.tw/article/90117/ai-investment-roi-liquidation-2026",
+      "https://futurecity.cw.com.tw/article/3918",
+      "https://www.books.com.tw/products/0011039725",
+      "https://meet.bnext.com.tw/articles/view/53109",
+      "https://www.anthropic.com/news/finance-agents",
+      "https://www.anthropic.com/news/claude-for-financial-services",
+      "https://www.managertoday.com.tw/articles/view/72408",
+      "https://www.cna.com.tw/postwrite/chi/430796"
+    ],
+    "excerpt": "這支影片保存的是簡立峰對 2026 AI 進入規模化商轉的產業判斷：AI 從 LLM 問答走向 AI Agents 執行任務，企業管理從人力編制轉向 Token 預算與 ROI 清算，算力需求從訓練移往推理；台灣的機會在硬體、晶片、基礎設施與供應鏈底座，但真正突圍仍要靠軟硬整合、出海、國際人才與企業流程再設計。",
+    "slug": "2026-07-19-youtube-chien-lee-feng-ai-taiwan-industry-opportunity",
+    "html": "articles/2026-07-19-youtube-chien-lee-feng-ai-taiwan-industry-opportunity.html",
+    "markdown": "articles/2026/07/2026-07-19-youtube-chien-lee-feng-ai-taiwan-industry-opportunity.md"
+  },
+  {
     "title": "Claude Code Loop Engineering：4 種迴圈設計法，重點不是一直跑而是停止條件",
     "date": "2026-07-18",
     "source": "https://www.bnext.com.tw/article/91516/claude-code-loop-engineering",
