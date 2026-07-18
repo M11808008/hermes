@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>把 Claude 接上台灣判決 RAG：法律偵探 TW Legal RAG 的 MCP 書狀工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>把 Claude 接上台灣判決 RAG：法律偵探 TW Legal RAG 的 MCP 書狀工作流</h1><p>來源：法律偵探 Facebook Reel。貼文主張「免費法律書狀生產器」：把 Claude 接上 TW Legal RAG，寫書狀時呼叫它，會自動引用有利的實務見解；MCP 連結為 `<a href="https://tlr.dr-lawbot.com/mcp`。縮圖可見「免費法律書狀生產器」、法律天秤偵探機器人與文件核取介面。" target="_blank" rel="noopener">https://tlr.dr-lawbot.com/mcp`。縮圖可見「免費法律書狀生產器」、法律天秤偵探機器人與文件核取介面。</a></p>
+<h1>一句話摘要</h1>
+<p>這則內容值得歸檔：TW Legal RAG 把台灣判決語義檢索包成 CLI、OpenAPI 與 Remote MCP 入口，讓 Claude / ChatGPT 等工具在書狀草擬前先取得可追溯判決資料；但它本身是「retrieval-only」檢索服務，不等於自動保證法律推論正確，引用法院見解仍必須讀全文、核對案號、審級與判決是否被廢棄。</p>
+<h1>貼文主張與查證結果</h1>
+<p>| 貼文主張 | 查證結果 | 補充 |</p>
+<p>|---|---|---|</p>
+<p>| 有 TW Legal RAG MCP 入口 | 確認 | `<a href="https://tlr.dr-lawbot.com/`" target="_blank" rel="noopener">https://tlr.dr-lawbot.com/`</a> 官方頁說明可連到 `<a href="https://tlr.dr-lawbot.com/mcp`，定位為" target="_blank" rel="noopener">https://tlr.dr-lawbot.com/mcp`，定位為</a> over 21M+ Taiwan court judgments 的 retrieval-only MCP server；直接 GET `/mcp` 會回 405，符合 MCP 端點通常需由 client 以協定方式連線。 |</p>
+<p>| 可接上 Claude | 方向確認 | Claude Code 官方文件支援透過 MCP 連接外部工具；TW Legal RAG README 也列出 Claude Desktop Remote MCP 使用方式。實際可用性仍取決於 Claude 產品、帳號方案與 client 是否支援 Remote MCP。 |</p>
+<p>| 可用於書狀撰寫並引用實務見解 | 部分確認、需嚴格 caveat | OpenAPI 說明搜尋只回結構化列表，若要引用或轉述法院理由，必須再呼叫 fulltext；README 也強調本工具不生成法律意見、不保證第三方模型輸出的語義忠實。 |</p>
+<p>| 「免費」 | 目前公開入口確認免認證 | OpenAPI 標示「免認證」，README 說預設公開端點免金鑰；但服務政策、速率限制或未來收費可能變動，教學時應以現場頁面為準。 |</p>
+<p>| 內含大量台灣判決 | 大方向確認 | Dr.Lawbot 首頁稱 21M+；GitHub README 稱約 2,200 萬筆台灣裁判資料，且開源的是 CLI，不是模型權重或向量庫。 |</p>
+<h1>欒帥可用的教學框架</h1>
+<ul>
+<li>Retrieval-first：先讓 AI 查判決，而不是先讓 AI 憑記憶寫法律結論。</li>
+<li>Evidence bundle：把搜尋結果、判決節錄、案號、連結與 allowed citations 打包給模型。</li>
+<li>Opinion-layer check：要求模型在引用前核對「這句法院見解是否真的在該判決全文或節錄中」。</li>
+<li>Procedural caveat：書狀草稿可加速，但訴訟策略、請求權基礎、管轄、時效與證據仍需法律專業審查。</li>
+<li>Privacy boundary：不要把當事人個資、機密事實直接送進公開檢索端點或第三方 LLM；先去識別化，再用抽象法律問題查案例。</li>
+</ul>
+<h1>實務注意事項</h1>
+<ul>
+<li>MCP 端點不是一般網頁；用 Claude Desktop / Claude Code 等支援 MCP 的 client 連線，不要把 `/mcp` 直接當瀏覽器頁面。</li>
+<li>OpenAPI 明確要求：搜尋結果列表不含法院論理原文；若要引用具體見解，必須再讀 fulltext。</li>
+<li>README 的 citation check 只檢查「答案引用的案號是否在 bundle 內」與部分文字存在性，不能證明法律推論正確。</li>
+<li>`case_history` 或審級資訊只能代表資料庫紀錄；沒有上級審紀錄不等於裁判確定，也不等於見解仍有效。</li>
+<li>若要實作課堂示範，建議使用低敏、公開、去識別化案例，並把「AI 產出必須由人審」寫進 prompt 與講義。</li>
+</ul>
+<h1>Why it matters</h1>
+<p>Legal AI 最容易出事的地方不是文筆，而是「假的案號、錯的法院見解、把當事人主張當判決理由」。TW Legal RAG 的價值在於把台灣判決檢索與 AI 寫作拆開：RAG 負責找可追溯材料，Claude / ChatGPT 負責草擬，但最後仍要以全文閱讀與法律專業審查收斂風險。這是 AI 法律助理從 demo 走向可教、可控、可審計工作流的關鍵一步。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-18 · https://www.facebook.com/share/r/1JGzBBCdaE/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">Legal AI</span><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">Claude</span><span class="tag">Taiwan Law</span><span class="tag">LegalTech</span><h3>原始連結</h3><p><a href="https://www.facebook.com/61586618669726/videos/%E5%85%8D%E8%B2%BB%E6%B3%95%E5%BE%8B%E6%9B%B8%E7%8B%80%E7%94%9F%E7%94%A2%E5%99%A8%E6%8A%8A%E4%BD%A0%E7%9A%84claude%E6%8E%A5%E4%B8%8Atw-legal-rag%E5%AF%AB%E6%9B%B8%E7%8B%80%E6%99%82%E5%91%BC%E5%8F%AB%E4%BB%96%E6%9C%83%E8%87%AA%E5%8B%95%E5%BC%95%E7%94%A8%E6%9C%89%E5%88%A9%E7%9A%84%E5%AF%A6%E5%8B%99%E8%A6%8B%E8%A7%A3mcp%E9%80%A3%E7%B5%90httpstlrdr-lawbotcommcp/1504974977551408/" target="_blank" rel="noopener">https://www.facebook.com/61586618669726/videos/%E5%85%8D%E8%B2%BB%E6%B3%95%E5%BE%8B%E6%9B%B8%E7%8B%80%E7%94%9F%E7%94%A2%E5%99%A8%E6%8A%8A%E4%BD%A0%E7%9A%84claude%E6%8E%A5%E4%B8%8Atw-legal-rag%E5%AF%AB%E6%9B%B8%E7%8B%80%E6%99%82%E5%91%BC%E5%8F%AB%E4%BB%96%E6%9C%83%E8%87%AA%E5%8B%95%E5%BC%95%E7%94%A8%E6%9C%89%E5%88%A9%E7%9A%84%E5%AF%A6%E5%8B%99%E8%A6%8B%E8%A7%A3mcp%E9%80%A3%E7%B5%90httpstlrdr-lawbotcommcp/1504974977551408/</a></p><p><a href="https://www.facebook.com/reel/1504974977551408" target="_blank" rel="noopener">https://www.facebook.com/reel/1504974977551408</a></p><p><a href="https://tlr.dr-lawbot.com/" target="_blank" rel="noopener">https://tlr.dr-lawbot.com/</a></p><p><a href="https://tlr.dr-lawbot.com/mcp" target="_blank" rel="noopener">https://tlr.dr-lawbot.com/mcp</a></p><p><a href="https://tlr.dr-lawbot.com/openapi.yaml" target="_blank" rel="noopener">https://tlr.dr-lawbot.com/openapi.yaml</a></p><p><a href="https://github.com/aa0101181514/tw-legal-rag" target="_blank" rel="noopener">https://github.com/aa0101181514/tw-legal-rag</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/mcp" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/mcp</a></p><p><a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener">https://modelcontextprotocol.io/docs/getting-started/intro</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

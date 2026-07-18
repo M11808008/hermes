@@ -33,6 +33,38 @@
     "markdown": "articles/2026/07/2026-07-18-bnext-claude-code-loop-engineering-four-loop-patterns.md"
   },
   {
+    "title": "把 Claude 接上台灣判決 RAG：法律偵探 TW Legal RAG 的 MCP 書狀工作流",
+    "date": "2026-07-18",
+    "source": "https://www.facebook.com/share/r/1JGzBBCdaE/?mibextid=wwXIfr",
+    "author": "法律偵探",
+    "type": "article",
+    "topics": [
+      "Legal AI",
+      "MCP",
+      "RAG",
+      "Claude",
+      "Taiwan Law",
+      "LegalTech"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61586618669726/videos/%E5%85%8D%E8%B2%BB%E6%B3%95%E5%BE%8B%E6%9B%B8%E7%8B%80%E7%94%9F%E7%94%A2%E5%99%A8%E6%8A%8A%E4%BD%A0%E7%9A%84claude%E6%8E%A5%E4%B8%8Atw-legal-rag%E5%AF%AB%E6%9B%B8%E7%8B%80%E6%99%82%E5%91%BC%E5%8F%AB%E4%BB%96%E6%9C%83%E8%87%AA%E5%8B%95%E5%BC%95%E7%94%A8%E6%9C%89%E5%88%A9%E7%9A%84%E5%AF%A6%E5%8B%99%E8%A6%8B%E8%A7%A3mcp%E9%80%A3%E7%B5%90httpstlrdr-lawbotcommcp/1504974977551408/",
+      "https://www.facebook.com/reel/1504974977551408",
+      "https://tlr.dr-lawbot.com/",
+      "https://tlr.dr-lawbot.com/mcp",
+      "https://tlr.dr-lawbot.com/openapi.yaml",
+      "https://github.com/aa0101181514/tw-legal-rag",
+      "https://docs.anthropic.com/en/docs/claude-code/mcp",
+      "https://modelcontextprotocol.io/docs/getting-started/intro"
+    ],
+    "excerpt": "這則內容值得歸檔：TW Legal RAG 把台灣判決語義檢索包成 CLI、OpenAPI 與 Remote MCP 入口，讓 Claude / ChatGPT 等工具在書狀草擬前先取得可追溯判決資料；但它本身是「retrieval-only」檢索服務，不等於自動保證法律推論正確，引用法院見解仍必須讀全文、核對案號、審級與判決是否被廢棄。",
+    "slug": "2026-07-18-facebook-dr-lawbot-tw-legal-rag-mcp-legal-drafting",
+    "html": "articles/2026-07-18-facebook-dr-lawbot-tw-legal-rag-mcp-legal-drafting.html",
+    "markdown": "articles/2026/07/2026-07-18-facebook-dr-lawbot-tw-legal-rag-mcp-legal-drafting.md"
+  },
+  {
     "title": "用 Claude 剪影片不用背剪輯指令？可行的核心是「讓 AI 產生 FFmpeg 工作流」",
     "date": "2026-07-18",
     "source": "https://www.facebook.com/share/v/1BhBPCbKQe/?mibextid=wwXIfr",
