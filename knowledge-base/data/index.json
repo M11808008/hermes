@@ -1,5 +1,37 @@
 [
   {
+    "title": "中和香珍鍋貼水餃專賣店：連城路人氣巨大鍋貼與酸辣湯筆記",
+    "date": "2026-07-19",
+    "source": "https://achu.tw/xiang-zhen-potstickers/",
+    "author": "Achu / 阿朱的日常",
+    "type": "article",
+    "topics": [
+      "美食",
+      "生活資料",
+      "新北美食",
+      "中和",
+      "鍋貼",
+      "酸辣湯",
+      "連城路"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://achu.tw/xiang-zhen-potstickers/",
+      "https://achu.tw/xiang-zhen-potstickers/",
+      "https://icecreamcat.tw/xiang-zhen/",
+      "https://blaketravel.tw/blog/post/xiang-zhen-202410",
+      "https://nashgogogo.tw/newxiangzhen2024/",
+      "https://pekoblog.tw/xiangzhen/",
+      "https://anise.tw/279108"
+    ],
+    "excerpt": "香珍鍋貼適合收進「中和連城路／員山路一帶的平價飽足小吃」清單：第一次去建議點招牌鍋貼加酸辣湯，若怕排隊可避開正餐尖峰或先電話詢問；營業時間與價格在不同食記中略有差異，出發前再確認最新資訊。",
+    "slug": "2026-07-19-achu-zhonghe-xiang-zhen-potstickers",
+    "html": "articles/2026-07-19-achu-zhonghe-xiang-zhen-potstickers.html",
+    "markdown": "articles/2026/07/2026-07-19-achu-zhonghe-xiang-zhen-potstickers.md"
+  },
+  {
     "title": "This Claude Prompt Scrapes Any Website：把網站「抓進 codebase」前要先拆成資料擷取、重建與合規三件事",
     "date": "2026-07-19",
     "source": "https://www.facebook.com/share/r/19PawpzFBk/?mibextid=wwXIfr",
