@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Go Live.skill：讓手機遠端 Codex Vibe Coding 不再卡在 localhost 預覽</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Go Live.skill：讓手機遠端 Codex Vibe Coding 不再卡在 localhost 預覽</h1><p>來源：Sac (@Saccc_c) 的 X Article〈这个SKILL真正能让你的 Codex 实现远程 Vibe Coding〉。原文指出 Codex 遠端操作已推出，手機可控制電腦裡的 Codex 工作；但手機端做 Vibe Coding 時有一個核心痛點：改完本地網站後，手機無法直接打開 localhost 看效果。因此作者做了 Go Live.skill，讓 Codex 在完成改動後自動部署公開 URL，手機即可打開檢查。</p>
+<h1>一句話摘要</h1>
+<p>Go Live.skill 的價值不是「讓 Codex 會部署」這件事本身，而是把遠端手機工作流的驗收標準改成：不要只回 localhost；改完前端後要跑檢查、沿用既有部署管線、打開公開 URL 驗證，最後回傳可在手機打開的連結。</p>
+<h1>原文主張</h1>
+<ul>
+<li>Codex remote / 手機端操作讓使用者能從手機控制電腦上的 Codex 工作。</li>
+<li>手機 Vibe Coding 最大問題是：本地網站 localhost 不能直接在手機打開。</li>
+<li>Go Live.skill 的做法是讓 Codex 改完後部署到線上，回傳公開預覽連結。</li>
+<li>安裝方式：CLI 使用 `npx skills add Sac-Y/go-live`；或在 Codex / ChatGPT mobile 對 Codex 說「請幫我安裝這個 skill：<a href="https://github.com/Sac-Y/go-live」。" target="_blank" rel="noopener">https://github.com/Sac-Y/go-live」。</a></li>
+</ul>
+<h1>GitHub / SKILL.md 查證</h1>
+<p>GitHub repo `Sac-Y/go-live` 確認存在，README 與 SKILL.md 說明如下：</p>
+<ul>
+<li>名稱：Go Live.skill。</li>
+<li>定位：手機優先的 Codex workflow；當使用者不方便查看 localhost 時，要求 Codex 部署並驗證 app / website / frontend change，再回傳公開 URL。</li>
+<li>部署策略：不綁定單一平台，優先沿用專案既有部署方式，例如 Vercel、Netlify、Cloudflare、Firebase、GitHub Pages 或 CI/CD。</li>
+<li>驗證要求：部署後要打開公開 URL，確認頁面可訪問且能看到最新修改。</li>
+<li>失敗處理：若缺少登入、project linking、環境變數、commit/push 或 build 失敗，Codex 應說明阻塞點與下一步，不可直接宣稱成功。</li>
+</ul>
+<h1>官方背景查證</h1>
+<p>OpenAI / ChatGPT Learn 的 Remote connections 文件確認：</p>
+<ul>
+<li>ChatGPT mobile app 可透過 Remote 存取連接的 Mac / Windows 主機上的 ChatGPT 或 Codex chats。</li>
+<li>Remote 可送 follow-up instructions、回答問題、批准命令、查看 outputs / diffs / test results / terminal output / screenshots，並在任務完成或需要注意時通知使用者。</li>
+<li>Remote 使用 connected host 的 projects、files、credentials、permissions、plugins、Computer Use、browser setup 與 local tools。</li>
+</ul>
+<p>這支持作者描述的「手機端接手電腦工作」方向；Go Live.skill 則補上「手機無法看本機 localhost 預覽」這個實務缺口。</p>
+<h1>欒帥可用場景</h1>
+<ul>
+<li>課程 demo：讓學員理解 agent 工作流的最後一哩不是「改完程式」，而是「可被使用者在真實裝置驗收」。</li>
+<li>手機遠端工作：外出時用 ChatGPT mobile 指揮桌面 Codex 修改前端，要求它每輪給公開 preview URL。</li>
+<li>Hermes 對照：這和 AI 學習雷達部署流程相同——寫完內容不算完成，公開頁面 200 OK 且有 marker 才算完成。</li>
+<li>前端 / prototype：適合小型網站、demo、Dashboard、教學頁、landing page；不適合未設好權限與 secrets 的正式生產系統直接全自動發布。</li>
+</ul>
+<h1>注意事項</h1>
+<ul>
+<li>公開 URL 代表資料可能被外部看到；不可把內部文件、API keys、學生個資或客戶資料部署到公開預覽。</li>
+<li>如果專案已有正式 production deployment，不應為了預覽而覆蓋正式站；應使用 preview branch、staging、Vercel preview 或 GitHub Pages sandbox。</li>
+<li>若部署需要 commit/push、登入授權或環境變數，必須明確由使用者批准或提供安全替代方案。</li>
+<li>Skill 本身是第三方社群 repo，不是 OpenAI 官方內建 skill；安裝前應檢查 SKILL.md 與執行權限。</li>
+<li>手機遠端批准命令時更容易快速點過，需特別注意 destructive action、公開發布與費用。</li>
+</ul>
+<h1>Why it matters</h1>
+<p>這則 X Article 是一個很好的 harness engineering 小案例：真正可靠的 agent workflow 不是只讓 AI 能遠端寫 code，而是把「部署、公開連結、可視化驗收、失敗回報」寫成可重複的 skill。對 Codex / Hermes / Claude Code 類 agent 來說，這種 skill 會把 Vibe Coding 從本機玩具推向可驗證的遠端生產力流程。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-18 · https://x.com/Saccc_c/status/2055259378174042388 · article</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">Codex Skills</span><span class="tag">Vibe Coding</span><span class="tag">Remote Coding</span><span class="tag">Deployment</span><span class="tag">Mobile Workflow</span><span class="tag">GitHub</span><h3>原始連結</h3><p><a href="https://x.com/Saccc_c/status/2055259378174042388" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2055259378174042388</a></p><p><a href="https://x.com/Saccc_c/status/2055259378174042388" target="_blank" rel="noopener">https://x.com/Saccc_c/status/2055259378174042388</a></p><p><a href="http://x.com/i/article/2055238042148044800" target="_blank" rel="noopener">http://x.com/i/article/2055238042148044800</a></p><p><a href="https://github.com/Sac-Y/go-live" target="_blank" rel="noopener">https://github.com/Sac-Y/go-live</a></p><p><a href="https://raw.githubusercontent.com/Sac-Y/go-live/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Sac-Y/go-live/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/Sac-Y/go-live/main/SKILL.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Sac-Y/go-live/main/SKILL.md</a></p><p><a href="https://learn.chatgpt.com/docs/remote-connections" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/remote-connections</a></p><p><a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank" rel="noopener">https://openai.com/index/work-with-codex-from-anywhere/</a></p><p><a href="https://learn.chatgpt.com/docs/sites" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/sites</a></p><p><a href="https://learn.chatgpt.com/docs/plugins" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/plugins</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -286,6 +286,41 @@
     "markdown": "articles/2026/07/2026-07-18-x-sac-codex-work-plugins-browser-ultra-mode.md"
   },
   {
+    "title": "Go Live.skill：讓手機遠端 Codex Vibe Coding 不再卡在 localhost 預覽",
+    "date": "2026-07-18",
+    "source": "https://x.com/Saccc_c/status/2055259378174042388",
+    "author": "Sac (@Saccc_c)",
+    "type": "article",
+    "topics": [
+      "Codex",
+      "Codex Skills",
+      "Vibe Coding",
+      "Remote Coding",
+      "Deployment",
+      "Mobile Workflow",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/Saccc_c/status/2055259378174042388",
+      "https://x.com/Saccc_c/status/2055259378174042388",
+      "http://x.com/i/article/2055238042148044800",
+      "https://github.com/Sac-Y/go-live",
+      "https://raw.githubusercontent.com/Sac-Y/go-live/main/README.md",
+      "https://raw.githubusercontent.com/Sac-Y/go-live/main/SKILL.md",
+      "https://learn.chatgpt.com/docs/remote-connections",
+      "https://openai.com/index/work-with-codex-from-anywhere/",
+      "https://learn.chatgpt.com/docs/sites",
+      "https://learn.chatgpt.com/docs/plugins"
+    ],
+    "excerpt": "Go Live.skill 的價值不是「讓 Codex 會部署」這件事本身，而是把遠端手機工作流的驗收標準改成：不要只回 localhost；改完前端後要跑檢查、沿用既有部署管線、打開公開 URL 驗證，最後回傳可在手機打開的連結。",
+    "slug": "2026-07-18-x-sac-go-live-skill-codex-remote-vibe-coding",
+    "html": "articles/2026-07-18-x-sac-go-live-skill-codex-remote-vibe-coding.html",
+    "markdown": "articles/2026/07/2026-07-18-x-sac-go-live-skill-codex-remote-vibe-coding.md"
+  },
+  {
     "title": "食神鬍子哥 4 家牛肉麵清單｜東區宵夜、科技大樓、大安、天母風味對照",
     "date": "2026-07-17",
     "source": "https://www.facebook.com/share/p/1D4PFgFNEz/?mibextid=wwXIfr",
