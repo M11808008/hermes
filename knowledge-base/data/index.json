@@ -1,5 +1,37 @@
 [
   {
+    "title": "This Claude Prompt Scrapes Any Website：把網站「抓進 codebase」前要先拆成資料擷取、重建與合規三件事",
+    "date": "2026-07-19",
+    "source": "https://www.facebook.com/share/r/19PawpzFBk/?mibextid=wwXIfr",
+    "author": "Eric Socal",
+    "type": "article",
+    "topics": [
+      "Claude",
+      "Claude Code",
+      "Web Scraping",
+      "Vibe Coding",
+      "AI Agent",
+      "Compliance"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61575488966149/videos/this-claude-prompt-scrapes-any-website-into-your-codebaseclaude-vibecoding-aitoo/1345391924140567/",
+      "https://www.facebook.com/reel/1345391924140567",
+      "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "https://docs.anthropic.com/en/docs/claude-code/settings",
+      "https://docs.anthropic.com/en/docs/claude-code/security",
+      "https://docs.anthropic.com/en/docs/claude-code/mcp",
+      "https://support.claude.com/en/articles/14553413-claude-code-cheatsheet",
+      "https://www.firecrawl.dev/blog/claude-code-skill"
+    ],
+    "excerpt": "這則內容可作為「AI 輔助從參考網站萃取設計與結構」的靈感，但不能直接理解成 Claude 能合法、穩定、完整複製任何網站到 codebase。實務上應拆成三層：先用可授權方式擷取公開頁面資料，再讓 Claude Code 產生自己的元件與樣式，最後檢查版權、robots/ToS、資料隱私、反爬與安全風險。",
+    "slug": "2026-07-19-facebook-eric-socal-claude-prompt-scrapes-website-into-codebase",
+    "html": "articles/2026-07-19-facebook-eric-socal-claude-prompt-scrapes-website-into-codebase.html",
+    "markdown": "articles/2026/07/2026-07-19-facebook-eric-socal-claude-prompt-scrapes-website-into-codebase.md"
+  },
+  {
     "title": "Illegal Claude Tips Part 39：社群 Cheat Sheet 該回到官方 Claude Code Cheatsheet 查核",
     "date": "2026-07-19",
     "source": "https://www.facebook.com/share/r/19F3Ct2Su5/?mibextid=wwXIfr",
