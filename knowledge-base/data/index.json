@@ -250,6 +250,42 @@
     "markdown": "articles/2026/07/2026-07-18-threads-eason-codex-agents-md-project-rules.md"
   },
   {
+    "title": "Sac 長文解析 Codex 史詩級更新：Work、Plugins、Sites、Browser 與 Ultra Mode 的新版工作台想像",
+    "date": "2026-07-18",
+    "source": "https://x.com/Saccc_c/status/2075553941270741235",
+    "author": "Sac (@Saccc_c)",
+    "type": "article",
+    "topics": [
+      "OpenAI Codex",
+      "ChatGPT Work",
+      "Plugins",
+      "Sites",
+      "Browser Use",
+      "Multi-Agent",
+      "AI Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/Saccc_c/status/2075553941270741235",
+      "https://x.com/Saccc_c/status/2075553941270741235",
+      "http://x.com/i/article/2075529026786217984",
+      "https://openai.com/index/codex-for-every-role-tool-workflow/",
+      "https://openai.com/index/codex-for-almost-everything/",
+      "https://learn.chatgpt.com/docs/plugins",
+      "https://learn.chatgpt.com/docs/sites",
+      "https://learn.chatgpt.com/docs/browser",
+      "https://learn.chatgpt.com/docs/visualizations",
+      "https://developers.openai.com/codex/changelog/",
+      "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+    ],
+    "excerpt": "這則長文把 Codex 的新版定位解讀為「從 coding agent 走向跨職能工作台」：Work 負責研究、分析與內容交付；Codex 負責程式碼、可執行任務與驗證；Sites、Plugins、Browser、Visualize 與 Ultra Mode 則把它往「資料到成果、成果到互動介面、多代理並行」推進。但其中部分說法仍是作者實測與產品觀察，需以官方文件、方案與桌面版功能可用性為準。",
+    "slug": "2026-07-18-x-sac-codex-work-plugins-browser-ultra-mode",
+    "html": "articles/2026-07-18-x-sac-codex-work-plugins-browser-ultra-mode.html",
+    "markdown": "articles/2026/07/2026-07-18-x-sac-codex-work-plugins-browser-ultra-mode.md"
+  },
+  {
     "title": "食神鬍子哥 4 家牛肉麵清單｜東區宵夜、科技大樓、大安、天母風味對照",
     "date": "2026-07-17",
     "source": "https://www.facebook.com/share/p/1D4PFgFNEz/?mibextid=wwXIfr",
