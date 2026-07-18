@@ -1,5 +1,38 @@
 [
   {
+    "title": "Claude Code Loop Engineering：4 種迴圈設計法，重點不是一直跑而是停止條件",
+    "date": "2026-07-18",
+    "source": "https://www.bnext.com.tw/article/91516/claude-code-loop-engineering",
+    "author": "李先泰 / 數位時代 BusinessNext",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "Loop Engineering",
+      "AI Agent",
+      "Automation",
+      "Skills",
+      "Scheduling",
+      "Workflow Design"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/91516/claude-code-loop-engineering",
+      "https://www.bnext.com.tw/article/91516/claude-code-loop-engineering",
+      "https://claude.com/blog/getting-started-with-loops",
+      "https://code.claude.com/docs/en/goal",
+      "https://code.claude.com/docs/en/scheduled-tasks",
+      "https://code.claude.com/docs/en/routines",
+      "https://code.claude.com/docs/en/best-practices",
+      "https://code.claude.com/docs/en/commands"
+    ],
+    "excerpt": "Loop engineering 不是叫 AI「一直改到好」，而是設計觸發條件、停止條件、驗證方法與權限邊界；Claude Code 官方把它拆成回合制、目標式、時間式與主動式四類，對欒帥的 Hermes / 課程設計最有價值的是：先定義「怎樣算完成」，再決定要不要升級成 /goal、/loop、/schedule 或多代理 workflow。",
+    "slug": "2026-07-18-bnext-claude-code-loop-engineering-four-loop-patterns",
+    "html": "articles/2026-07-18-bnext-claude-code-loop-engineering-four-loop-patterns.html",
+    "markdown": "articles/2026/07/2026-07-18-bnext-claude-code-loop-engineering-four-loop-patterns.md"
+  },
+  {
     "title": "用 Claude 剪影片不用背剪輯指令？可行的核心是「讓 AI 產生 FFmpeg 工作流」",
     "date": "2026-07-18",
     "source": "https://www.facebook.com/share/v/1BhBPCbKQe/?mibextid=wwXIfr",
