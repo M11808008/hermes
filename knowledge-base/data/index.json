@@ -1,5 +1,36 @@
 [
   {
+    "title": "用 Claude 剪影片不用背剪輯指令？可行的核心是「讓 AI 產生 FFmpeg 工作流」",
+    "date": "2026-07-18",
+    "source": "https://www.facebook.com/share/v/1BhBPCbKQe/?mibextid=wwXIfr",
+    "author": "關登元",
+    "type": "article",
+    "topics": [
+      "Claude",
+      "Claude Code",
+      "Video Editing",
+      "FFmpeg",
+      "AI Workflow",
+      "Creator Tools"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/jackylec/videos/2491525861269118/",
+      "https://www.facebook.com/reel/2491525861269118",
+      "https://code.claude.com/docs/en/overview",
+      "https://code.claude.com/docs/en/cli-usage",
+      "https://platform.claude.com/docs/en/agents-and-tools/tool-use/bash-tool",
+      "https://code.claude.com/docs/en/computer-use",
+      "https://ffmpeg.org/ffmpeg.html"
+    ],
+    "excerpt": "Claude 很適合把「我要裁切、轉檔、壓縮、抽音訊、加字幕、合併片段」這類需求轉成 FFmpeg 或腳本流程；若搭配 Claude Code 的本機檔案與 Bash 執行能力，確實能降低學習剪輯指令的門檻，但它仍需要明確素材、可驗證輸出與人工審看，不能保證自動做出高品質視覺剪輯。",
+    "slug": "2026-07-18-facebook-kuan-teng-yuan-claude-video-editing-ffmpeg",
+    "html": "articles/2026-07-18-facebook-kuan-teng-yuan-claude-video-editing-ffmpeg.html",
+    "markdown": "articles/2026/07/2026-07-18-facebook-kuan-teng-yuan-claude-video-editing-ffmpeg.md"
+  },
+  {
     "title": "21st.dev 現成 UI 元件庫｜讓 Vibe Coding 先找參考再產生介面",
     "date": "2026-07-18",
     "source": "https://www.facebook.com/share/v/1E2eXpLDgF/?mibextid=wwXIfr",
@@ -29,6 +60,37 @@
     "slug": "2026-07-18-facebook-leean-21st-dev-ui-components-vibe-coding",
     "html": "articles/2026-07-18-facebook-leean-21st-dev-ui-components-vibe-coding.html",
     "markdown": "articles/2026/07/2026-07-18-facebook-leean-21st-dev-ui-components-vibe-coding.md"
+  },
+  {
+    "title": "Claude Code 不只是寫程式：15 個進階功能其實是在打造「個人執行系統」",
+    "date": "2026-07-18",
+    "source": "https://www.facebook.com/share/r/1DSgt3ioXf/?mibextid=wwXIfr",
+    "author": "TuckWai Ctw",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "AI Agent",
+      "Automation",
+      "Hooks",
+      "Remote Control",
+      "Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/tuckwai.ctw/videos/1010385058512276/",
+      "https://www.facebook.com/reel/1010385058512276",
+      "https://code.claude.com/docs/en/commands",
+      "https://code.claude.com/docs/en/hooks",
+      "https://code.claude.com/docs/en/headless",
+      "https://code.claude.com/docs/en/github-actions",
+      "https://code.claude.com/docs/en/computer-use"
+    ],
+    "excerpt": "這則貼文的方向值得歸檔：Claude Code 正從「程式助理」變成一套可被命令、排程、鉤子、非互動模式與遠端觸發串起來的 agent 執行環境；但各 slash command 是否可用會受 Claude Code 版本、方案、平台與 bundled skills 影響，不能把每個社群列出的指令都視為所有帳號固定可用。",
+    "slug": "2026-07-18-facebook-tuckwai-claude-code-advanced-execution-system",
+    "html": "articles/2026-07-18-facebook-tuckwai-claude-code-advanced-execution-system.html",
+    "markdown": "articles/2026/07/2026-07-18-facebook-tuckwai-claude-code-advanced-execution-system.md"
   },
   {
     "title": "本地端雙 Hermes Agent 家庭提醒架構｜共享資料夾、Polling 與任務交接",
