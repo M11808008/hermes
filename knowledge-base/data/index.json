@@ -366,6 +366,40 @@
     "markdown": "articles/2026/07/2026-07-19-facebook-vault-curate-obsidian-semantic-canvas.md"
   },
   {
+    "title": "HY Office AI Newsbot：用 Google 快訊、試算表與 Apps Script 做每日內容自動化",
+    "date": "2026-07-19",
+    "source": "https://hy-ai-newsbot.pages.dev/",
+    "author": "協洋辦公家具 HY Office・Mark",
+    "type": "article",
+    "topics": [
+      "AI Automation",
+      "Google Apps Script",
+      "Google Sheets",
+      "Google Alerts",
+      "Gemini API",
+      "Claude API",
+      "Content Marketing",
+      "RSS",
+      "Workflow Design"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://hy-ai-newsbot.pages.dev/",
+      "https://hy-ai-newsbot.pages.dev/",
+      "https://hy-ai-newsbot.pages.dev/code.gs.txt",
+      "https://developers.google.com/apps-script/guides/triggers/installable",
+      "https://www.google.com/alerts",
+      "https://ai.google.dev/gemini-api/docs/api-key",
+      "https://www.anthropic.com/learn/build-with-claude"
+    ],
+    "excerpt": "這是一個很適合中小企業與個人品牌入門的「低成本內容雷達」範本：Google 快訊負責抓產業新聞，Sheets 當資料庫，Apps Script 排程每天整理，AI 從新聞與產品表中挑選角度，產出 FB／IG／LinkedIn 三版文案與生圖提示詞，最後由人審稿後發布。",
+    "slug": "2026-07-19-hy-office-ai-newsbot-google-alerts-apps-script",
+    "html": "articles/2026-07-19-hy-office-ai-newsbot-google-alerts-apps-script.html",
+    "markdown": "articles/2026/07/2026-07-19-hy-office-ai-newsbot-google-alerts-apps-script.md"
+  },
+  {
     "title": "簡立峰電腦學會 60 週年論壇演講：2026 AI 商轉、Token 經濟學與台灣黃金十年",
     "date": "2026-07-19",
     "source": "https://youtu.be/A00aYRWRPiU?si=zbQkzclVTQ3PfYbh/",
