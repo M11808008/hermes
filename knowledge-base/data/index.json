@@ -366,6 +366,39 @@
     "markdown": "articles/2026/07/2026-07-19-facebook-vault-curate-obsidian-semantic-canvas.md"
   },
   {
+    "title": "Yuki Sumo Reel｜Claude Motion Editing 社群鉤子：從「留言拿網站」看 AI 影片後製工具鏈",
+    "date": "2026-07-19",
+    "source": "https://www.facebook.com/reel/27960395013593243",
+    "author": "Yuki Sumo / Facebook Reel",
+    "type": "article",
+    "topics": [
+      "Facebook Reel",
+      "Claude Code",
+      "Video Editing",
+      "Motion Graphics",
+      "Hyperframes",
+      "Remotion",
+      "AI Agent",
+      "Content Creation"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/27960395013593243",
+      "https://www.facebook.com/reel/27960395013593243",
+      "https://www.mindstudio.ai/blog/claude-code-video-editing-motion-graphics",
+      "https://www.mindstudio.ai/blog/ai-video-editing-claude-code-hyperframes",
+      "https://github.com/heygen-com/hyperframes",
+      "https://www.remotion.dev/docs/ai/coding-agents",
+      "https://www.remotion.dev/docs/ai/claude-code"
+    ],
+    "excerpt": "這則 Reel 本身公開資訊很少，更像「留言 site 拿連結」的流量鉤子；可確認的價值在於它指向一個正在擴散的趨勢：用 Claude Code / coding agents 搭配 Hyperframes、Remotion 等程式化影片工具，讓 AI 以自然語言產生或修改 motion graphics、字幕、標題卡與短影音後製元素。",
+    "slug": "2026-07-19-facebook-yuki-sumo-claude-motion-editing-hook",
+    "html": "articles/2026-07-19-facebook-yuki-sumo-claude-motion-editing-hook.html",
+    "markdown": "articles/2026/07/2026-07-19-facebook-yuki-sumo-claude-motion-editing-hook.md"
+  },
+  {
     "title": "HY Office AI Newsbot：用 Google 快訊、試算表與 Apps Script 做每日內容自動化",
     "date": "2026-07-19",
     "source": "https://hy-ai-newsbot.pages.dev/",
