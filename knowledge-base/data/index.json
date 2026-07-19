@@ -32,6 +32,39 @@
     "markdown": "articles/2026/07/2026-07-19-achu-zhonghe-xiang-zhen-potstickers.md"
   },
   {
+    "title": "ChatGPT Work、Chat、Codex 三模式：從聊天到可交付工作的任務分流",
+    "date": "2026-07-19",
+    "source": "https://www.bnext.com.tw/article/91491/chatgpt-work-chat-codex-guide",
+    "author": "黃若彤 / 數位時代 BusinessNext",
+    "type": "article",
+    "topics": [
+      "ChatGPT Work",
+      "Codex",
+      "OpenAI",
+      "GPT-5.6",
+      "ChatGPT Sites",
+      "AI Agent",
+      "Productivity",
+      "Workflow Design"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/91491/chatgpt-work-chat-codex-guide",
+      "https://www.bnext.com.tw/article/91491/chatgpt-work-chat-codex-guide",
+      "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+      "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+      "https://help.openai.com/en/articles/20001276-moving-to-the-new-chatgpt-desktop-app",
+      "https://learn.chatgpt.com/docs/sites",
+      "https://openai.com/codex/"
+    ],
+    "excerpt": "這篇最值得收的是「任務分流」框架：不要再把所有需求都丟進同一個聊天框，而是先判斷要動的是文字、工作流程，還是程式碼庫；Chat 用來思考與產文，Work 用來把跨工具工作做成文件/簡報/試算表/Sites，Codex 用來讀 repo、改程式、跑測試與產生可審查 diff。",
+    "slug": "2026-07-19-bnext-chatgpt-work-chat-codex-guide",
+    "html": "articles/2026-07-19-bnext-chatgpt-work-chat-codex-guide.html",
+    "markdown": "articles/2026/07/2026-07-19-bnext-chatgpt-work-chat-codex-guide.md"
+  },
+  {
     "title": "雙北蔣老爹麵食館：三重總店、忠孝新生與西門昆明眷村麵食筆記",
     "date": "2026-07-19",
     "source": "https://www.facebook.com/share/r/19ShEVpr61/?mibextid=wwXIfr",
