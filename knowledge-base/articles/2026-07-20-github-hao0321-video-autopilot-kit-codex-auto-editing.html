@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Simon Joe / 駱君昊｜video-autopilot-kit：Codex 自動剪片 skill 與 CapCut / ffmpeg 雙路徑框架</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Simon Joe / 駱君昊｜video-autopilot-kit：Codex 自動剪片 skill 與 CapCut / ffmpeg 雙路徑框架</h1><p>來源有兩個：欒帥直接分享的 GitHub repo `Hao0321/video-autopilot-kit`，以及 Codex 中文社群中駱君昊的 Facebook 貼文。貼文說明「自動剪片 skill 已經開源」，把素材準備好丟給它，它會分析、剪輯，並提供兩種方式：直接操作 CapCut，或走 ffmpeg；如果素材不足，也可以產生動態字卡補位。</p>
+<h1>一句話摘要</h1>
+<p>`video-autopilot-kit` 是一套開源短影音 / YouTube 自動化框架：它不是單純的一鍵剪片 SaaS，而是把創作者工作流拆成可配置問卷、Python/ffmpeg pipeline、CapCut 草稿/GUI 自動化、字幕與 b-roll 對位、交付前 QA gates；適合搭配 Codex / Claude 這類 agent，把「素材 → 初剪 → 字幕 → 補畫面 → QA」變成可迭代的創作系統。</p>
+<h1>這次貼文新增的社群脈絡</h1>
+<p>Codex 中文社群公開頁可見重點：</p>
+<ul>
+<li>作者說明這是「自動剪片 skill」，目前已開源。</li>
+<li>使用方式：把素材準備好交給它，讓它分析與剪輯，減少手動進剪輯軟體逐格拉的工作。</li>
+<li>安裝方式：把 GitHub 網址丟給 Claude 或 Codex，請它帶你一步一步設定。</li>
+<li>兩種剪輯方式：操作 CapCut，或走 ffmpeg。</li>
+<li>新增能力：素材不足時，可自己做動態字卡補上。</li>
+<li>貼文稱 GitHub 已累積約 1300 stars；GitHub API 查核時約 1427 stars、243 forks。</li>
+<li>公開留言可見有人回報 7 分鐘影片任務 Codex 跑約 80 分鐘，另有人測試長影片初剪到上字幕仍需要來回修正；這提醒它是 agent workflow，不是完全免審核的魔法按鈕。</li>
+</ul>
+<h1>GitHub / README 查核</h1>
+<p>| 項目 | 查核結果 |</p>
+<p>|---|---|</p>
+<p>| Repo | `Hao0321/video-autopilot-kit` |</p>
+<p>| 描述 | Fill-in-your-own-data framework for YouTube / short-form video automation: CapCut JSON + ffmpeg tooling + onboarding questionnaire. |</p>
+<p>| 授權 | MIT |</p>
+<p>| 主要語言 | Python |</p>
+<p>| stars / forks | 查核時約 1427 stars、243 forks |</p>
+<p>| README 定位 | 框架式 YouTube / 短影音自動化工具 + 方法論模板；不含原作者私人 voice / 策略 / 社群數字。 |</p>
+<p>| examples | `examples/01_vertical_short.py` 可合成 1080x1920 Short；`examples/02_caption_broll_match.py` 示範 caption ↔ b-roll 零設定對位。 |</p>
+<h1>兩條 first-class path</h1>
+<h2>Path 1 — Programmatic（建議欒帥優先看）</h2>
+<ul>
+<li>Win / Mac / Linux 都可走。</li>
+<li>需求是 Python 3.9+ 與 `ffmpeg` / `ffprobe`。</li>
+<li>不需要 CapCut、不需要 Computer Use。</li>
+<li>模組包含 `longform_maker`、`silent_vlog_maker`、字幕、b-roll、screen cleanup、premium motion fx，以及 `delivery_qa` 等交付前檢查。</li>
+<li>對欒帥的 macOS 環境與課程示範更穩，因為可重現、可版本控制、可在 agent loop 裡跑。</li>
+</ul>
+<h2>Path 2 — CapCut-assisted</h2>
+<ul>
+<li>作者本人主用，但 README 誠實標示 Windows-first、版本敏感。</li>
+<li>用 CapCut Desktop 草稿 JSON 直改 + AI assistant / Computer Use 操作 CapCut 視窗套模板與匯出。</li>
+<li>TROUBLESHOOTING 提醒：剪映 CN 6.0+ 草稿加密不可直改；CapCut 國際版 6.x–9.x 多數仍是明文，但必須先用 `detect_draft_format()` 驗證。</li>
+<li>Mac 上 CapCut GUI 自動化沒有等效機制，建議走 programmatic path。</li>
+</ul>
+<h1>值得學起來的設計模式</h1>
+<ul>
+<li>問卷化 onboarding：`SETUP.md` 先問品牌、niche、製作設定，把工具變成「你的系統」，不是套別人的私有數據。</li>
+<li>素材命名即索引：b-roll 用 `coffee-pour.mp4`、`sunset-beach.mp4` 這類內容檔名，就能和 captions 自動對位。</li>
+<li>補素材策略：素材不足時用動態字卡 / motion graphics 補 gap，而不是讓影片卡住。</li>
+<li>QA gates：交付前檢查頻閃、死空檔、字幕同步、螢幕錄影外框、b-roll 比例，比單純「剪完可播放」更接近可交付工作流。</li>
+<li>Agent-friendly repo：把 README、SETUP、examples、troubleshooting 都寫清楚，讓 Claude / Codex 能接手安裝與改造。</li>
+</ul>
+<h1>對 AI 學習雷達的意義</h1>
+<p>這是「AI 內容生產後段自動化」的重要案例。近期 HeyGen / Hyperframes / Remotion 偏向影片生成或程式化渲染，`video-autopilot-kit` 則更接近創作者日常：素材、字幕、b-roll、CapCut、ffmpeg、QA 與平台發布前品質控制。它讓 AI agent 從「寫腳本」往「維護剪輯 pipeline」移動。</p>
+<h1>Caveats</h1>
+<ul>
+<li>已有早期歸檔記錄；本篇是針對 Simon Joe / 駱君昊社群貼文與 2026-07-20 GitHub 狀態的更新整理。</li>
+<li>貼文說「剪完直接可以用」應理解為 demo / 特定素材條件下的工作流；實務仍需人工審片、授權檢查與品牌品質 gate。</li>
+<li>長影片自動剪輯可能耗時很久；公開留言已有 Codex 跑 80 分鐘的案例。</li>
+<li>CapCut-assisted 路徑高度依賴版本與平台，Mac 使用者不宜把 GUI 自動化當主路線。</li>
+<li>商業使用仍要自行處理素材、音樂、字型、肖像與平台政策。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-20 · https://github.com/Hao0321/video-autopilot-kit · github-repo</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">Video Automation</span><span class="tag">Short Video</span><span class="tag">CapCut</span><span class="tag">ffmpeg</span><span class="tag">Python</span><span class="tag">Creator Tools</span><span class="tag">Open Source</span><h3>原始連結</h3><p><a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></p><p><a href="https://github.com/Hao0321/video-autopilot-kit" target="_blank" rel="noopener">https://github.com/Hao0321/video-autopilot-kit</a></p><p><a href="https://www.facebook.com/groups/1713764039757273/posts/1779310199869323/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1779310199869323/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/share/p/1U6PSTSKLw/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1U6PSTSKLw/?mibextid=wwXIfr</a></p><p><a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/SETUP.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/SETUP.md</a></p><p><a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/TROUBLESHOOTING.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/TROUBLESHOOTING.md</a></p><p><a href="https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/examples/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/examples/README.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

@@ -63,6 +63,38 @@
     "markdown": "articles/2026/07/2026-07-20-facebook-heygen-claude-code-ai-video-generator-reel.md"
   },
   {
+    "title": "Vault Curate 1.3.1：find → connect → rediscover 的 Obsidian 本地第二大腦循環",
+    "date": "2026-07-20",
+    "source": "https://www.facebook.com/share/p/14jTx7qmUB7/?mibextid=wwXIfr",
+    "author": "梅驊 / Jacob Mei",
+    "type": "link-archive",
+    "topics": [
+      "Obsidian",
+      "Vault Curate",
+      "PKM",
+      "本地 AI",
+      "Semantic Search",
+      "WebGPU",
+      "知識管理"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/jacob.mei/posts/10163177238057469",
+      "https://www.facebook.com/jacob.mei/posts/10163177238057469",
+      "https://www.facebook.com/share/p/14jTx7qmUB7/?mibextid=wwXIfr",
+      "https://github.com/notoriouslab/vault-curate",
+      "https://community.obsidian.md/plugins/vault-curate",
+      "https://raw.githubusercontent.com/notoriouslab/vault-curate/main/manifest.json",
+      "https://raw.githubusercontent.com/notoriouslab/vault-curate/main/README.md"
+    ],
+    "excerpt": "Vault Curate 正從「中文友善本地語意搜尋」擴展成 Obsidian 的第二大腦循環：先用 BM25 + on-device embeddings + fuzzy title 找到筆記，再把未手動連結但語意接近的筆記畫成 Canvas 關係圖，最後把冷掉但相關的舊筆記重新浮出來，讓人不用一直重跑 LLM 也能發現知識庫內的隱形連結。",
+    "slug": "2026-07-20-facebook-jacob-mei-vault-curate-find-connect-rediscover",
+    "html": "articles/2026-07-20-facebook-jacob-mei-vault-curate-find-connect-rediscover.html",
+    "markdown": "articles/2026/07/2026-07-20-facebook-jacob-mei-vault-curate-find-connect-rediscover.md"
+  },
+  {
     "title": "Claude Code 串 Antigravity/Grok：用 agy -p 與 grok -p 當省額度 Subagent 的橋接思路",
     "date": "2026-07-20",
     "source": "https://www.facebook.com/share/p/1LjiXqZkEH/?mibextid=wwXIfr",
@@ -91,6 +123,40 @@
     "slug": "2026-07-20-facebook-li-yaoyu-claude-code-antigravity-grok-bridge",
     "html": "articles/2026-07-20-facebook-li-yaoyu-claude-code-antigravity-grok-bridge.html",
     "markdown": "articles/2026/07/2026-07-20-facebook-li-yaoyu-claude-code-antigravity-grok-bridge.md"
+  },
+  {
+    "title": "Simon Joe / 駱君昊｜video-autopilot-kit：Codex 自動剪片 skill 與 CapCut / ffmpeg 雙路徑框架",
+    "date": "2026-07-20",
+    "source": "https://github.com/Hao0321/video-autopilot-kit",
+    "author": "Simon Joe / 駱君昊 / Hao0321 Studio",
+    "type": "github-repo",
+    "topics": [
+      "Codex",
+      "Video Automation",
+      "Short Video",
+      "CapCut",
+      "ffmpeg",
+      "Python",
+      "Creator Tools",
+      "Open Source"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/Hao0321/video-autopilot-kit",
+      "https://github.com/Hao0321/video-autopilot-kit",
+      "https://www.facebook.com/groups/1713764039757273/posts/1779310199869323/?mibextid=wwXIfr",
+      "https://www.facebook.com/share/p/1U6PSTSKLw/?mibextid=wwXIfr",
+      "https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/README.md",
+      "https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/SETUP.md",
+      "https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/TROUBLESHOOTING.md",
+      "https://raw.githubusercontent.com/Hao0321/video-autopilot-kit/main/examples/README.md"
+    ],
+    "excerpt": "`video-autopilot-kit` 是一套開源短影音 / YouTube 自動化框架：它不是單純的一鍵剪片 SaaS，而是把創作者工作流拆成可配置問卷、Python/ffmpeg pipeline、CapCut 草稿/GUI 自動化、字幕與 b-roll 對位、交付前 QA gates；適合搭配 Codex / Claude 這類 agent，把「素材 → 初剪 → 字幕 → 補畫面 → QA」變成可迭代的創作系統。",
+    "slug": "2026-07-20-github-hao0321-video-autopilot-kit-codex-auto-editing",
+    "html": "articles/2026-07-20-github-hao0321-video-autopilot-kit-codex-auto-editing.html",
+    "markdown": "articles/2026/07/2026-07-20-github-hao0321-video-autopilot-kit-codex-auto-editing.md"
   },
   {
     "title": "中和香珍鍋貼水餃專賣店：連城路人氣巨大鍋貼與酸辣湯筆記",
