@@ -1,5 +1,41 @@
 [
   {
+    "title": "Chris KE Facebook｜Claude + Obsidian 15 分鐘 AI 第二大腦：LLM Wiki 熱門教學的準確解讀",
+    "date": "2026-07-21",
+    "source": "https://www.facebook.com/share/1TUVtcLLbP/?mibextid=wwXIfr",
+    "author": "Chris KE / Facebook",
+    "type": "social-post",
+    "topics": [
+      "Claude",
+      "Obsidian",
+      "LLM Wiki",
+      "Second Brain",
+      "Personal Knowledge Base",
+      "AI Agent",
+      "Knowledge Management"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/christopher.odhiambo.3386/posts/pfbid0SbyF41e3YfrHBYbsZkhsBhQURBXpQBxoSYovZa22zDEMctjEYF222p4kBo1XSUVil",
+      "https://www.facebook.com/share/1TUVtcLLbP/?mibextid=wwXIfr",
+      "https://www.facebook.com/christopher.odhiambo.3386/posts/pfbid0SbyF41e3YfrHBYbsZkhsBhQURBXpQBxoSYovZa22zDEMctjEYF222p4kBo1XSUVil",
+      "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+      "https://gist.githubusercontent.com/karpathy/442a6bf555914893e9891c11519de94f/raw/llm-wiki.md",
+      "https://code.claude.com/docs/en/overview",
+      "https://support.claude.com/en/articles/10065433-install-claude-desktop",
+      "https://obsidian.md/",
+      "https://github.com/Ar9av/obsidian-wiki",
+      "https://github.com/AgriciDaniel/claude-obsidian",
+      "https://github.com/ekadetov/llm-wiki"
+    ],
+    "excerpt": "這篇貼文值得收錄，因為它把 Karpathy 的 LLM Wiki 觀念推向更大眾的「15 分鐘第二大腦」敘事；但準確說法應是：Obsidian 提供本地 Markdown vault，Claude Code / Codex / Hermes 這類可讀寫檔案的 agent 負責維護 wiki，而 Karpathy gist 提供 raw sources、wiki pages、schema 的方法論。Claude Desktop 本身不是完整的檔案維護 agent；若要真正讓 AI 寫入 vault，仍需要 Claude Code、MCP 檔案工具、或其他具備本機檔案權限的 agent。",
+    "slug": "2026-07-21-facebook-chris-ke-claude-obsidian-ai-second-brain-llm-wiki",
+    "html": "articles/2026-07-21-facebook-chris-ke-claude-obsidian-ai-second-brain-llm-wiki.html",
+    "markdown": "articles/2026/07/2026-07-21-facebook-chris-ke-claude-obsidian-ai-second-brain-llm-wiki.md"
+  },
+  {
     "title": "Claudian 把 Claude Code/Codex 帶進 Obsidian：邊讀筆記邊呼叫本地 coding agent",
     "date": "2026-07-20",
     "source": "https://www.facebook.com/share/18sDYQbCrn/?mibextid=wwXIfr",
