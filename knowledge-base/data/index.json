@@ -31,6 +31,38 @@
     "markdown": "articles/2026/07/2026-07-20-facebook-chuchi-obsidian-claudian-codex-plugin.md"
   },
   {
+    "title": "HeyGen Reel｜Claude Code + HeyGen：把專業知識轉成 AI 影片的 agent-to-video 工作流",
+    "date": "2026-07-20",
+    "source": "https://www.facebook.com/share/r/1CwiRXsCvM/?mibextid=wwXIfr",
+    "author": "HeyGen / Facebook Reel",
+    "type": "link-archive",
+    "topics": [
+      "HeyGen",
+      "Claude Code",
+      "Codex",
+      "AI Video",
+      "AI Agent",
+      "MCP",
+      "Content Creation"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/",
+      "https://www.facebook.com/reel/1025726529844026",
+      "https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/",
+      "https://developers.heygen.com/",
+      "https://www.heygen.com/blog/ai-research-to-videos",
+      "https://community.heygen.com/public/resources/how-to-use-heygen-with-claude-and-ai-agents-to-generate-videos-automatically",
+      "https://www.heygen.com/tool/ai-video-generator"
+    ],
+    "excerpt": "這則 Reel 的可保存訊號是：AI 影片生成正在從「上傳素材、手動操作 SaaS」走向「Claude Code/Codex/AI agent 透過 MCP、Skills 或 API 呼叫影片生成平台」。對課程與知識工作者來說，這代表專業知識、研究資料、會議紀錄或教學大綱可以被 agent 轉成腳本，再交給 HeyGen 產出 avatar video，但仍需要授權、腳本品質、品牌與事實審核。",
+    "slug": "2026-07-20-facebook-heygen-claude-code-ai-video-generator-reel",
+    "html": "articles/2026-07-20-facebook-heygen-claude-code-ai-video-generator-reel.html",
+    "markdown": "articles/2026/07/2026-07-20-facebook-heygen-claude-code-ai-video-generator-reel.md"
+  },
+  {
     "title": "Claude Code 串 Antigravity/Grok：用 agy -p 與 grok -p 當省額度 Subagent 的橋接思路",
     "date": "2026-07-20",
     "source": "https://www.facebook.com/share/p/1LjiXqZkEH/?mibextid=wwXIfr",

@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HeyGen Reel｜Claude Code + HeyGen：把專業知識轉成 AI 影片的 agent-to-video 工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>HeyGen Reel｜Claude Code + HeyGen：把專業知識轉成 AI 影片的 agent-to-video 工作流</h1><p>來源是 HeyGen 的 Facebook Reel。公開 metadata 顯示文案為「Turn your expertise into video. No camera or studio required.」作者為 HeyGen，canonical URL 指向 `facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/`。Facebook 登出頁沒有提供完整口播逐字稿或教學步驟，因此本文以公開可見 metadata、縮圖 OCR 與 HeyGen 官方來源查核整理。</p>
+<h1>一句話摘要</h1>
+<p>這則 Reel 的可保存訊號是：AI 影片生成正在從「上傳素材、手動操作 SaaS」走向「Claude Code/Codex/AI agent 透過 MCP、Skills 或 API 呼叫影片生成平台」。對課程與知識工作者來說，這代表專業知識、研究資料、會議紀錄或教學大綱可以被 agent 轉成腳本，再交給 HeyGen 產出 avatar video，但仍需要授權、腳本品質、品牌與事實審核。</p>
+<h1>可確認的公開內容</h1>
+<ul>
+<li>Facebook OG title：`92 個心情 | Turn your expertise into video. No camera or studio required. | HeyGen`</li>
+<li>OG description：`Turn your expertise into video. No camera or studio required.`</li>
+<li>canonical URL：`<a href="https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/`" target="_blank" rel="noopener">https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/`</a></li>
+<li>公開頁可見互動：92 個心情、1 則留言、1 次分享。</li>
+<li>縮圖 OCR：橘色背景、Claude logo 與大字 `Claude Code`；右下有人物手持麥克風/收音器對鏡頭說話。</li>
+<li>限制：公開頁沒有完整影片口播、prompt、HeyGen 操作畫面或 Claude Code 實際 command，因此不能把 Reel 當成完整教學。</li>
+</ul>
+<h1>官方來源查核</h1>
+<p>| 來源 | 可確認重點 | 與 Reel 的關係 |</p>
+<p>|---|---|---|</p>
+<p>| HeyGen Developers | HeyGen 提供三種整合路徑：MCP 連接 Claude 這類 AI assistants、Skills 擴充 Claude Code/Cursor 等 coding agents、Direct API 做完整程式化控制。 | 驗證「Claude/Codex 可以呼叫 HeyGen」不是單純社群口號，而是官方開發者路線。 |</p>
+<p>| HeyGen Developers API | 官方頁顯示 Video Agent、Video Generation、Translation、Lipsync models，API 起價 pay-as-you-go，示例以 `X-Api-Key` 呼叫 `/v3/videos`。 | 補上實際生成影片的 API 層。 |</p>
+<p>| HeyGen blog：AI Research to Videos | 官方文章主張 Claude Code 可研究主題、寫腳本，透過 HeyGen Skills 生成影片，並保存 `news_videos.json` 等輸出記錄。 | 對應「把 expertise/research 轉成 video」的 agent workflow。 |</p>
+<p>| HeyGen community guide | 說明把 HeyGen 加到 Claude（MCP Connector）後，Claude 可呼叫 HeyGen Video Agent 產生 finished avatar videos；比喻為 Claude 是 creative director，HeyGen 是 production studio。 | 提供 MCP/agent-to-video 的教學脈絡。 |</p>
+<p>| HeyGen AI Video Generator 頁 | 官方文案強調可從 script、image、presentation 或 PDF 轉成 finished video，no cameras/no crew/no editing skills。 | 對應 Reel 的「No camera or studio required」宣傳語。 |</p>
+<h1>欒帥可用的工作流判讀</h1>
+<ul>
+<li>Input：研究資料、課程大綱、逐字稿、Notion/Obsidian 筆記、Slack/Gong/會議紀錄。</li>
+<li>Agent：Claude Code/Codex 先整理重點、產生腳本、分鏡、avatar voice/tone、CTA 與 metadata。</li>
+<li>Integration：用 HeyGen MCP、Skills 或 Direct API 把腳本與 avatar/video 參數送進 HeyGen。</li>
+<li>Output：生成短影音、教學片、內訓影片、產品更新或社群素材，並把 video URL / log 存回專案或知識庫。</li>
+<li>Review：人工檢查事實、語氣、品牌、授權、肖像、字幕、無障礙與平台規範後才發布。</li>
+</ul>
+<h1>對 AI 學習雷達的意義</h1>
+<p>這則 Reel 可以和近期的 Hyperframes、Remotion、Claude motion editing 類內容放在同一條趨勢線：</p>
+<ul>
+<li>Hyperframes / Remotion 偏向程式化 motion graphics、HTML/React/renderer 工作流。</li>
+<li>HeyGen 偏向 avatar video、AI presenter、translation、lipsync 與商務/教育影片生產。</li>
+<li>Claude Code / Codex 的角色是 orchestrator：把研究、腳本、素材描述與 API 呼叫串起來，而不是自己「直接變成剪輯軟體」。</li>
+</ul>
+<p>對課程設計來說，這是很好的範例：學生可以看到 AI agent 如何從「回答問題」進化成「連接外部工具產出媒體資產」。</p>
+<h1>Caveats</h1>
+<ul>
+<li>本篇未取得 Reel 完整逐字稿；只保存公開 metadata、縮圖 OCR 與官方來源查核。</li>
+<li>HeyGen 生成 avatar video 涉及肖像權、聲音授權、素材來源、商標與廣告揭露；不可只因「no camera」就忽略合規。</li>
+<li>Claude Code/Codex 使用 HeyGen Skills 或 Direct API 時可能需要 API key，會消耗 HeyGen API 額度；MCP 則可能走 OAuth 授權，兩者安全模型不同。</li>
+<li>若讓 agent 自動研究並生成影片，事實查核與引用來源要明確保存，避免把未驗證內容變成看似專業的影片。</li>
+<li>真正量產前應建立模板、審稿、版本控制、成本上限、失敗重試與發布前人工 gate。</li>
+</ul>
+<h1>Why it matters</h1>
+<p>「Turn your expertise into video」背後其實是知識工作自動化的下一步：不是把每個人都變成剪輯師，而是讓 agent 讀懂你的專業內容，轉成可視化、可發布、可複用的媒體輸出。這對欒帥的 AI 課程、知識庫、企業培訓與內容生產都很有價值；關鍵在於把它設計成可審核的 pipeline，而不是只追求一鍵生成。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-20 · https://www.facebook.com/share/r/1CwiRXsCvM/?mibextid=wwXIfr · link-archive</div><h3>標籤</h3><span class="tag">HeyGen</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">AI Video</span><span class="tag">AI Agent</span><span class="tag">MCP</span><span class="tag">Content Creation</span><h3>原始連結</h3><p><a href="https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/" target="_blank" rel="noopener">https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/</a></p><p><a href="https://www.facebook.com/reel/1025726529844026" target="_blank" rel="noopener">https://www.facebook.com/reel/1025726529844026</a></p><p><a href="https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/" target="_blank" rel="noopener">https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/</a></p><p><a href="https://developers.heygen.com/" target="_blank" rel="noopener">https://developers.heygen.com/</a></p><p><a href="https://www.heygen.com/blog/ai-research-to-videos" target="_blank" rel="noopener">https://www.heygen.com/blog/ai-research-to-videos</a></p><p><a href="https://community.heygen.com/public/resources/how-to-use-heygen-with-claude-and-ai-agents-to-generate-videos-automatically" target="_blank" rel="noopener">https://community.heygen.com/public/resources/how-to-use-heygen-with-claude-and-ai-agents-to-generate-videos-automatically</a></p><p><a href="https://www.heygen.com/tool/ai-video-generator" target="_blank" rel="noopener">https://www.heygen.com/tool/ai-video-generator</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
