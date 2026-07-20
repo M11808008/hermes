@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claudian 把 Claude Code/Codex 帶進 Obsidian：邊讀筆記邊呼叫本地 coding agent</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claudian 把 Claude Code/Codex 帶進 Obsidian：邊讀筆記邊呼叫本地 coding agent</h1><p>來源是朱騏的 Facebook photo post。公開可見貼文表示：他終於把 Obsidian 裡的 Claudian 接上 Codex；Claudian 是一款 Obsidian 插件，可在 Obsidian 介面中使用 Claude Code/Codex，方便「邊讀筆記邊和 AI 對話」。貼文也提到設定過程中有 4 個容易踩坑的地方，第一點是「Codex CLI path 不是填 API Key」。Facebook 登出頁只公開到第一個踩坑標題，後續細節未完整展開。</p>
+<h1>一句話摘要</h1>
+<p>Claudian 的價值在於把 Obsidian vault 直接變成本地 coding agent 的 working directory：你可以在筆記脈絡中呼叫 Claude Code、Codex、Opencode 等代理讀寫檔案、搜尋、bash 與多步驟工作，而不是在外部 CLI/桌面 app 和筆記之間來回複製上下文。</p>
+<h1>貼文與圖片可見證據</h1>
+<ul>
+<li>貼文主張：Claudian 可在 Obsidian 介面中使用 Claude Code/Codex，適合邊讀筆記邊對話。</li>
+<li>公開貼文只露出第一個設定坑：「Codex CLI path 不是填 API Key」；其餘 3 點被 Facebook「查看更多」截斷，未公開取得。</li>
+<li>圖片截圖顯示 Obsidian community plugin 頁面：Claudian、作者 Yishen Tu、Repository `<a href="https://github.com/yishentu/claudian`、描述為「Embeds" target="_blank" rel="noopener">https://github.com/yishentu/claudian`、描述為「Embeds</a> Claude Code/Codex and other local Agents as AI collaborators in your vault」。</li>
+<li>圖片中的 plugin 截圖版本是 `2.0.34`，且顯示目前已安裝 `2.0.28`、MIT license、約 14k stars；但後續查核 GitHub 最新 release 已到 `2.0.39`。</li>
+<li>圖片 preview 顯示一篇「Black Hole Image Generation Prompt」筆記，右側 Claudian agent 先讀取 `.md` 檔，再編輯同一筆記，把 prompt 重整成更可讀格式，並列出 sections：Opening description、Key Physics、Material &amp; Occlusion、Relativistic Doppler Effect、Geometry、The Center、Technical specifications。</li>
+</ul>
+<h1>原始來源查核</h1>
+<p>| 項目 | 查核結果 | 來源 |</p>
+<p>|---|---|---|</p>
+<p>| Obsidian 社群插件 | `realclaudian` 登錄於 Obsidian community plugin registry，名稱 Claudian，作者 Yishen Tu，repo 為 `yishentu/claudian`。 | Obsidian community-plugins.json / plugin page |</p>
+<p>| GitHub repo | `YishenTu/claudian` 是公開 repo，描述為「An Obsidian plugin that embeds Claude Code/Codex as an AI collaborator in your vault」。查核時約 14.2k stars、912 forks、MIT license、TypeScript。 | GitHub API |</p>
+<p>| README 功能 | README 說明可嵌入 Claude Code、Codex、Opencode、Pi 等 agent；vault 會成為 agent working directory，可讀寫、搜尋、bash、multi-step workflows。 | GitHub README |</p>
+<p>| manifest | `manifest.json` 顯示 plugin id `realclaudian`、min Obsidian version `1.7.2`、desktop only，描述包含 file read/write、search、bash、multi-step workflows。 | GitHub manifest |</p>
+<p>| 最新版本 | GitHub latest release 查得 `2.0.39`，發布於 2026-07-18；圖片中的 `2.0.34` 是截圖當下版本，不是查核時最新。 | GitHub Releases |</p>
+<h1>欒帥可用的實務理解</h1>
+<ul>
+<li>對 AI 學習雷達很關鍵：它把 Obsidian 從「筆記庫」推向「agent workspace」，可讓筆記、素材、prompt、課程草稿直接被本地代理操作。</li>
+<li>對課程示範很直觀：學生可以看到 AI 不是只在 chat window 回答，而是能在一個知識庫內讀、改、整理、重構內容。</li>
+<li>對 Codex 使用者有用：若已登入 Codex CLI，Claudian 走的是本機 CLI path / provider runtime，而不是在 Obsidian 裡貼 API Key。</li>
+<li>對工作流設計有啟發：Obsidian vault 可以承載 notes、skills、prompt templates、MCP references、會議紀錄與研究素材；agent 則負責跨檔案整理與產出。</li>
+</ul>
+<h1>安裝與設定注意事項</h1>
+<ul>
+<li>建議先從 Obsidian Community Plugins 安裝：Settings → Community plugins → Browse → 搜尋 Claudian → Install / Enable。</li>
+<li>若使用 Codex，要填的是 Codex CLI path 或讓外掛找到 CLI，而不是 OpenAI API Key。Codex 的登入、模型與額度管理仍依 Codex CLI 本身。</li>
+<li>README 也提醒 Claude CLI 找不到時，常見原因是 GUI app 抓不到 shell 的 PATH，尤其 macOS 上 nvm/fnm/volta 或 npm-installed CLI 路徑不同。</li>
+<li>外掛會讓 agent 以 vault 為工作目錄讀寫檔案；因此要先確認 vault 備份、git 版本控制、敏感筆記隔離與工具 permission 設定。</li>
+<li>README 的 privacy section 表示 provider subprocesses 會繼承 Obsidian process environment 加上外掛設定的 environment variables；API/CLI 認證與 secrets 管理要特別小心。</li>
+</ul>
+<h1>Caveats</h1>
+<ul>
+<li>Facebook 貼文後半部與完整 4 個踩坑項目未公開可見，本篇不補寫未取得的細節。</li>
+<li>本篇只做文件層與公開來源查核，未在欒帥本機 Obsidian vault 實測安裝 Claudian。</li>
+<li>Claudian 是 desktop-only Obsidian plugin，不適用 mobile Obsidian。</li>
+<li>讓 agent 直接操作 vault 很強，但也代表誤刪、批次改寫、secret exposure 的風險升高；正式使用前應建立 git/備份與敏感資料分區。</li>
+</ul>
+<h1>Why it matters</h1>
+<p>這則貼文延續「AI Vault / agentic knowledge base」的方向：真正有用的 AI 筆記系統不是只把內容丟進 RAG，而是讓 agent 站在知識庫內部工作。Claudian 把 Claude Code/Codex 這類 coding agent 放進 Obsidian，等於把筆記、檔案系統、CLI、MCP 與多步驟任務接到同一個操作面。對欒帥的課程與 AI 學習雷達而言，它是一個很好的展示案例：個人知識庫可以從「搜尋與閱讀」進化到「可委派、可修改、可審核的 agent workspace」。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-20 · https://www.facebook.com/share/18sDYQbCrn/?mibextid=wwXIfr · link-archive</div><h3>標籤</h3><span class="tag">Obsidian</span><span class="tag">Claudian</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">AI Agent</span><span class="tag">Knowledge Base</span><span class="tag">Local-first</span><h3>原始連結</h3><p><a href="https://www.facebook.com/photo.php?fbid=28100216962918777&amp;set=a.207483979285450&amp;type=3&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=28100216962918777&amp;set=a.207483979285450&amp;type=3&amp;mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/photo.php?fbid=28100216962918777&amp;set=a.207483979285450&amp;type=3&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=28100216962918777&amp;set=a.207483979285450&amp;type=3&amp;mibextid=wwXIfr</a></p><p><a href="https://github.com/YishenTu/claudian" target="_blank" rel="noopener">https://github.com/YishenTu/claudian</a></p><p><a href="https://community.obsidian.md/plugins/realclaudian" target="_blank" rel="noopener">https://community.obsidian.md/plugins/realclaudian</a></p><p><a href="https://github.com/YishenTu/claudian/releases/tag/2.0.39" target="_blank" rel="noopener">https://github.com/YishenTu/claudian/releases/tag/2.0.39</a></p><p><a href="https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json" target="_blank" rel="noopener">https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

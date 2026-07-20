@@ -1,5 +1,36 @@
 [
   {
+    "title": "Claudian 把 Claude Code/Codex 帶進 Obsidian：邊讀筆記邊呼叫本地 coding agent",
+    "date": "2026-07-20",
+    "source": "https://www.facebook.com/share/18sDYQbCrn/?mibextid=wwXIfr",
+    "author": "朱騏",
+    "type": "link-archive",
+    "topics": [
+      "Obsidian",
+      "Claudian",
+      "Claude Code",
+      "Codex",
+      "AI Agent",
+      "Knowledge Base",
+      "Local-first"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/photo.php?fbid=28100216962918777&set=a.207483979285450&type=3&mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=28100216962918777&set=a.207483979285450&type=3&mibextid=wwXIfr",
+      "https://github.com/YishenTu/claudian",
+      "https://community.obsidian.md/plugins/realclaudian",
+      "https://github.com/YishenTu/claudian/releases/tag/2.0.39",
+      "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json"
+    ],
+    "excerpt": "Claudian 的價值在於把 Obsidian vault 直接變成本地 coding agent 的 working directory：你可以在筆記脈絡中呼叫 Claude Code、Codex、Opencode 等代理讀寫檔案、搜尋、bash 與多步驟工作，而不是在外部 CLI/桌面 app 和筆記之間來回複製上下文。",
+    "slug": "2026-07-20-facebook-chuchi-obsidian-claudian-codex-plugin",
+    "html": "articles/2026-07-20-facebook-chuchi-obsidian-claudian-codex-plugin.html",
+    "markdown": "articles/2026/07/2026-07-20-facebook-chuchi-obsidian-claudian-codex-plugin.md"
+  },
+  {
     "title": "Claude Code 串 Antigravity/Grok：用 agy -p 與 grok -p 當省額度 Subagent 的橋接思路",
     "date": "2026-07-20",
     "source": "https://www.facebook.com/share/p/1LjiXqZkEH/?mibextid=wwXIfr",
