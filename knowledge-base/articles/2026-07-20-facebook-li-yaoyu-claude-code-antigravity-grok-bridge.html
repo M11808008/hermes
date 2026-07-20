@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude Code 串 Antigravity/Grok：用 agy -p 與 grok -p 當省額度 Subagent 的橋接思路</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claude Code 串 Antigravity/Grok：用 agy -p 與 grok -p 當省額度 Subagent 的橋接思路</h1><p>來源是 Claude Taiwan 社團李耀宇的公開貼文。貼文表示：開始使用 Claude 後幾乎不再用 Gemini，但發現可透過 `agy -p` 讓 Claude 驅動 Gemini 模型，甚至也能用少量 Sonnet/Opus 4.6 做 Subagent 類任務；因此做了 `cc-to-antigravity-cli-bridge`，讓 Google Antigravity 承接 Claude Code system prompt。貼文也提到 `cc-to-grok-bridge`，偏向讓 `grok -p` 處理搜尋引擎抓資料類任務。</p>
+<h1>一句話摘要</h1>
+<p>這則貼文的重點不是「換掉 Claude Code」，而是把 Claude Code 當主控，把 Gemini/Antigravity 或 Grok 當可呼叫的外部研究與協作 lane：用 `agy -p` / `grok -p` 承接搜尋、第二意見、低風險子任務與額度分流，同時透過橋接 repo 盡量共享規則、prompt 與安全邊界。</p>
+<h1>公開貼文可見重點</h1>
+<ul>
+<li>貼文主張 `agy -p` 可讓 Claude 驅動 Gemini 模型，也可少量使用 Sonnet/Opus 4.6 作為 Subagent。</li>
+<li>作者建立 `cc-to-antigravity-cli-bridge`，目標是讓 Antigravity CLI 承接 Claude Code 的 system prompt，讓子代理使用更順。</li>
+<li>另一個 `cc-to-grok-bridge` 則被描述為：當需要透過搜尋引擎抓資料時，傾向交給 `grok -p`。</li>
+<li>Facebook 公開頁可見 GitHub 連結、互動數與部分留言；完整討論仍受 Facebook 登入與社團頁面可見性限制。</li>
+</ul>
+<h1>官方/原始碼查核</h1>
+<p>| 項目 | 查核結果 | 來源 |</p>
+<p>|---|---|---|</p>
+<p>| `cc-to-antigravity-cli-bridge` | GitHub repo 存在，README 描述為讓 Claude Code 透過 Antigravity CLI 使用 Gemini 訂閱額度、搜尋能力與其他模型，並提供 `scripts/ccagy.sh` 研究 wrapper。 | GitHub README / API |</p>
+<p>| `cc-to-grok-bridge` | GitHub repo 存在，README 描述為 Claude Code → Grok Build 橋接：共享 rules/skills、hook adapter hard-gates、可選 memory mirror，另有 `scripts/ccgrok.sh` 研究 helper。 | GitHub README / API |</p>
+<p>| Gemini CLI → Antigravity CLI 轉換 | Brave Search 找到 Google Developers Blog：Google 宣布 Gemini CLI / Gemini Code Assist IDE extension 對個人 free、AI Pro、Ultra 方案在 2026-06-18 停止服務，轉往 Antigravity CLI。 | Google Developers Blog |</p>
+<p>| 安全邊界 | Grok bridge README 強調不自動複製 MCP env/token/OAuth secrets；Antigravity bridge README 提醒不要設定 `GEMINI_API_KEY`，避免從訂閱額度切到 API 計費。 | GitHub README |</p>
+<h1>對欒帥的實務價值</h1>
+<ul>
+<li>額度分流：Claude Code 繼續當主控，Gemini/Grok 處理研究、搜尋、第二意見、草稿或低風險批次任務。</li>
+<li>搜尋備援：當 Claude 內建 web 工具遇到反爬或資料不足，可用 `agy -p` / `grok -p` 走另一條搜尋與整理路徑。</li>
+<li>Prompt / rules 共用：Antigravity 方向用 `AGENTS.md`/`CLAUDE.md` 共享系統提示；Grok 方向則進一步處理 hooks、memory 與 rules 對齊。</li>
+<li>教學亮點：很適合放進「多代理協作」單元，展示主代理、外部 CLI、子代理、額度與安全邊界的分工。</li>
+</ul>
+<h1>可採用的操作模式</h1>
+<ul>
+<li>研究型任務：用 `scripts/ccagy.sh &quot;問題&quot;` 或 `scripts/ccgrok.sh &quot;問題&quot;`，讓 wrapper 加上 research-prefix，要求 dated sources、facts/speculation 分離與多角度搜尋。</li>
+<li>程式審查/第二意見：Claude Code 完成主要修改後，呼叫外部 CLI 針對 diff、架構或 edge cases 給第二輪檢查。</li>
+<li>低風險子任務：文件摘要、資料搜尋、測試想法、issue triage 可外包；涉及寫檔、secret、部署、付費 API 的動作仍應由主控與人工審核。</li>
+<li>課程示範：可用「Claude Code 是 conductor，Antigravity/Grok 是 section player」比喻，讓學生理解 agent orchestration 不是單一模型全包。</li>
+</ul>
+<h1>Caveats</h1>
+<ul>
+<li>這不是官方 Claude Code subagent 標準功能，而是作者橋接 repo 實作與 CLI wrapper 工作流；實際可用性取決於本機是否已安裝、登入並授權相應 CLI。</li>
+<li>Antigravity bridge README 明確說 `agy` 目前沒有 Grok bridge 那種完整 memory API 或 documented hook schema，因此安全與狀態共享能力較薄。</li>
+<li>若使用 Google 訂閱額度，README 提醒不要設定 `GEMINI_API_KEY`；否則可能改走 API 計費。</li>
+<li>社團貼文可見內容有限，本篇只歸檔公開頁可見文字與 GitHub/官方來源查核，不宣稱已驗證作者本機 workflow。</li>
+</ul>
+<h1>Why it matters</h1>
+<p>多模型、多 CLI 的新常態正在形成：Claude Code 不一定要獨自吃下所有研究、搜尋、審查與草稿任務。這類 bridge 的價值在於把「模型能力」轉成「可調度資源」：誰擅長搜尋、誰額度便宜、誰適合審查，都能被主代理按任務派工。但真正能進 production 的關鍵不是多叫幾個模型，而是 prompt/rules/security/memory 的邊界是否清楚、可審計且可回收。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-20 · https://www.facebook.com/share/p/1LjiXqZkEH/?mibextid=wwXIfr · link-archive</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">Gemini</span><span class="tag">Google Antigravity</span><span class="tag">Grok</span><span class="tag">AI Agent</span><span class="tag">Subagent</span><span class="tag">CLI Workflow</span><h3>原始連結</h3><p><a href="https://www.facebook.com/groups/1224997379198346/posts/1348467140184702/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/groups/1224997379198346/posts/1348467140184702/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/groups/1224997379198346/posts/1348467140184702/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/groups/1224997379198346/posts/1348467140184702/?mibextid=wwXIfr</a></p><p><a href="https://github.com/yyu0310/cc-to-antigravity-cli-bridge" target="_blank" rel="noopener">https://github.com/yyu0310/cc-to-antigravity-cli-bridge</a></p><p><a href="https://github.com/yyu0310/cc-to-grok-bridge" target="_blank" rel="noopener">https://github.com/yyu0310/cc-to-grok-bridge</a></p><p><a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" target="_blank" rel="noopener">https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

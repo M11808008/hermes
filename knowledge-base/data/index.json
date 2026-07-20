@@ -1,5 +1,35 @@
 [
   {
+    "title": "Claude Code 串 Antigravity/Grok：用 agy -p 與 grok -p 當省額度 Subagent 的橋接思路",
+    "date": "2026-07-20",
+    "source": "https://www.facebook.com/share/p/1LjiXqZkEH/?mibextid=wwXIfr",
+    "author": "李耀宇 / Claude Taiwan",
+    "type": "link-archive",
+    "topics": [
+      "Claude Code",
+      "Gemini",
+      "Google Antigravity",
+      "Grok",
+      "AI Agent",
+      "Subagent",
+      "CLI Workflow"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/1224997379198346/posts/1348467140184702/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/1224997379198346/posts/1348467140184702/?mibextid=wwXIfr",
+      "https://github.com/yyu0310/cc-to-antigravity-cli-bridge",
+      "https://github.com/yyu0310/cc-to-grok-bridge",
+      "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/"
+    ],
+    "excerpt": "這則貼文的重點不是「換掉 Claude Code」，而是把 Claude Code 當主控，把 Gemini/Antigravity 或 Grok 當可呼叫的外部研究與協作 lane：用 `agy -p` / `grok -p` 承接搜尋、第二意見、低風險子任務與額度分流，同時透過橋接 repo 盡量共享規則、prompt 與安全邊界。",
+    "slug": "2026-07-20-facebook-li-yaoyu-claude-code-antigravity-grok-bridge",
+    "html": "articles/2026-07-20-facebook-li-yaoyu-claude-code-antigravity-grok-bridge.html",
+    "markdown": "articles/2026/07/2026-07-20-facebook-li-yaoyu-claude-code-antigravity-grok-bridge.md"
+  },
+  {
     "title": "中和香珍鍋貼水餃專賣店：連城路人氣巨大鍋貼與酸辣湯筆記",
     "date": "2026-07-19",
     "source": "https://achu.tw/xiang-zhen-potstickers/",
