@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>本地端雙 Hermes Agent 家庭提醒架構｜共享資料夾、Polling 與任務交接</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>本地端雙 Hermes Agent 家庭提醒架構｜共享資料夾、Polling 與任務交接</h1><p>來源：Vincent Lu Facebook 貼文分享一個家庭場景：在 Mac mini 上替自己與另一半各建立一位 Hermes Agent，讓彼此的助理透過本地共享資料交換提醒任務，避免「我不是有跟你說過嗎？」造成家庭革命。本文把貼文整理成可重用的本地端雙 Agent 架構筆記，並用 Hermes Agent 官方 Profiles、Cron、Telegram Gateway 文件交叉確認哪些能力是官方基礎能力、哪些是作者自行設計的整合層。</p>
+<figure><img src="https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png" alt="本地端雙 Hermes Agent 家庭提醒架構 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>本地端雙 Hermes Agent 家庭提醒架構 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>這篇的重點不是「夫妻一定要兩個 AI 助理」，而是示範了個人 AI 的下一步：多個獨立 Agent 不共用記憶與私密資料，但能透過明確格式的共享任務佇列與排程 polling，把「請提醒對方」這種低即時性任務安全交接出去。</p>
 <h1>架構重點</h1>
