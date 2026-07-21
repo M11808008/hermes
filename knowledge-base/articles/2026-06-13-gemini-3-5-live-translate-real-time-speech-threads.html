@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gemini 3.5 Live Translate｜低延遲語音對語音即時翻譯與 SynthID 浮水印</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Gemini 3.5 Live Translate｜低延遲語音對語音即時翻譯與 SynthID 浮水印</h1><p>來源為吃貨瑞森 Resen Chen 在 Threads 分享 Google Gemini 3.5 Live Translate 的體驗與官方連結。貼文把它描述為「邊聽邊說」的即時翻譯模型：不像傳統系統要等一句話講完再翻譯，而是接近同步輸出另一種語言，並嘗試保留語氣、語速與情緒。本文以 Google 官方 The Keyword 部落格與 Gemini API 文件交叉整理，保留技術與應用重點。</p>
+<figure><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/3-5_Live_Translate_hero.width-1300.png" alt="Gemini 3.5 Live Translate 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>Gemini 3.5 Live Translate 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>Gemini 3.5 Live Translate 是 Google 2026-06 發表的低延遲 audio-to-audio 即時翻譯模型，支援 70+ 語言，輸入為語音，輸出可包含翻譯語音與逐字稿；它將進入 Gemini Live API / Google AI Studio、Google Translate App、Google Meet 企業私測，並對模型生成音訊加上 SynthID 不可感知浮水印。</p>
 <h1>原貼文重點</h1>

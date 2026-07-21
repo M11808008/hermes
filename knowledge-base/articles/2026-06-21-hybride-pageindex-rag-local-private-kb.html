@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hybride PageIndex RAG｜地端私有化推理式文件知識庫</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Hybride PageIndex RAG｜地端私有化推理式文件知識庫</h1><p>來源為欒帥在 LINE 分享的 GitHub repo、專案介紹文字與架構圖。專案名稱為 **Hybride PageIndex RAG**，定位是「私有化地端・推理式 RAG 知識庫」：把公司內部 PDF、SOP、規格書、操作手冊、論文等文件留在本機或內網，透過 MinerU 解析、PageIndex 章節樹、Qdrant 混合搜尋與 Agno Agent 進行可追溯的文件問答。</p>
+<figure><img src="https://opengraph.githubassets.com/hermes-ai-radar/myyang19770915/Hybride_pageindex_RAG" alt="Hybride PageIndex RAG 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>Hybride PageIndex RAG 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>Hybride PageIndex RAG 是一套地端文件問答系統：上傳 PDF 後用 MinerU 解析表格、公式、圖說與 OCR，建立 PageIndex 式章節樹與頁碼範圍，再由 Agno Agent 以 Qdrant dense + BM25 + RRF 混合檢索命中章節，回 PostgreSQL 取頁面原文作答，並以串流聊天、引用頁碼、會話記憶與思考過程降低企業私有文件 RAG 的幻覺與外洩風險。</p>
 <h1>專案快照</h1>

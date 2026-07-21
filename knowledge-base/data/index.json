@@ -1186,7 +1186,7 @@
       "https://ai.google.dev/gemini-api/docs/aistudio-deploying",
       "https://blog.google/innovation-and-ai/technology/developers-tools/full-stack-vibe-coding-google-ai-studio/"
     ],
-    "excerpt": "李安的 Facebook Reel 指出 Google AI Studio 現在可將 vibe coding 做出的網頁直接發布到網路上，並設定自訂網域 / 網址；Google 官方文件確認 AI Studio Build mode 可快速建置與部署 app，部署會對應到 Cloud Run，且可設定 `your-app-name.ai.studio` 這類自訂子網域。 原始分享： https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr Canonical Reel： https://www.facebook.com/reel/1051930197805040 ---",
+    "excerpt": "![Facebook Reel 圖片](https://ai.google.dev/static/site-assets/images/share-gemini-api-2026-07.png \"Facebook Reel 圖片\") 李安的 Facebook Reel 指出 Google AI Studio 現在可將 vibe coding 做出的網頁直接發布到網路上，並設定自訂網域 / 網址；Google 官方文件確認 AI Studio Build mode 可快速建置與部署 app，部署會對應到 Cloud Run，且可設定 `your-app-name.ai.studio` 這類自訂子網域。 原始分享： https://www.facebook.com/share/v/1EWAgd7yXZ/?mibextid=wwXIfr Canonical Reel： https://www.facebook.com/reel/1051930197805040 ---",
     "slug": "2026-07-17-facebook-leean-google-ai-studio-publish-custom-url",
     "html": "articles/2026-07-17-facebook-leean-google-ai-studio-publish-custom-url.html",
     "markdown": "articles/2026/07/2026-07-17-facebook-leean-google-ai-studio-publish-custom-url.md"
@@ -1217,7 +1217,7 @@
       "https://www.deeplearning.ai/courses/agent-skills-with-anthropic",
       "https://code.claude.com/docs/en/skills"
     ],
-    "excerpt": "91APP 建議第一支 Agent Skill 不要從大型自動化開始，而是從每月重複、格式固定、判斷標準明確的「行銷月報」下手：把 KPI、算法、資料來源、輸出格式與人工覆核點寫進 `SKILL.md`，讓 AI 每月依同一套標準整理報表，人再負責檢查與策略判斷。 原文： https://marketing.91app.com/agent-skill-monthly-report-tutorial/ ---",
+    "excerpt": "![91APP 教學 圖片](https://platform.claude.com/docs/og?locale=en&path=agents-and-tools/agent-skills/overview&design-rev=1 \"91APP 教學 圖片\") 91APP 建議第一支 Agent Skill 不要從大型自動化開始，而是從每月重複、格式固定、判斷標準明確的「行銷月報」下手：把 KPI、算法、資料來源、輸出格式與人工覆核點寫進 `SKILL.md`，讓 AI 每月依同一套標準整理報表，人再負責檢查與策略判斷。 原文： https://marketing.91app.com/agent-skill-monthly-report-tutorial/ ---",
     "slug": "2026-07-16-91app-agent-skill-monthly-report-tutorial",
     "html": "articles/2026-07-16-91app-agent-skill-monthly-report-tutorial.html",
     "markdown": "articles/2026/07/2026-07-16-91app-agent-skill-monthly-report-tutorial.md"
@@ -1277,7 +1277,7 @@
       "https://code.claude.com/docs/en/sub-agents",
       "https://code.claude.com/docs/en/plugins-reference"
     ],
-    "excerpt": "VoltAgent 的 `awesome-claude-code-subagents` 是一個 Claude Code subagents 範本與分類庫：README 宣稱收錄 154+ 個專門代理，並提供 plugin、手動複製、互動式安裝腳本與 standalone installer 等安裝方式；它適合拿來研究「任務型子代理如何命名、分工、配置工具與模型」，但實際可用性要以 Claude Code 官方 subagents / plugins 文件與本機環境為準。 Repo： https://github.com/VoltAgent/awesome-claude-code-subagents ---",
+    "excerpt": "![GitHub 圖片](https://opengraph.githubassets.com/e68d950b64b3c3ea36507973d36a8c3b5f3ad5e4abeaa31a79b1e14799de5c2d/VoltAgent/awesome-claude-code-subagents \"GitHub 圖片\") VoltAgent 的 `awesome-claude-code-subagents` 是一個 Claude Code subagents 範本與分類庫：README 宣稱收錄 154+ 個專門代理，並提供 plugin、手動複製、互動式安裝腳本與 standalone installer 等安裝方式；它適合拿來研究「任務型子代理如何命名、分工、配置工具與模型」，但實際可用性要以 Claude Code 官方 subagents / plugins 文件與本機環境為準。 Repo： https://github.com/VoltAgent/awesome-claude-code-subagents ---",
     "slug": "2026-07-16-github-voltagent-awesome-claude-code-subagents",
     "html": "articles/2026-07-16-github-voltagent-awesome-claude-code-subagents.html",
     "markdown": "articles/2026/07/2026-07-16-github-voltagent-awesome-claude-code-subagents.md"
@@ -1308,7 +1308,7 @@
       "https://platform.moonshot.cn/",
       "https://www.bilibili.com/video/BV1A1K56hENv/"
     ],
-    "excerpt": "Kimi K3 已在 Kimi Code 與 Kimi API 官方頁面正式出現，定位為 Kimi 目前最強旗艦模型，支援最高 1M token context，面向大型程式專案、知識工作、深度推理與 agentic coding；Kimi Code 同時提供 K3、K2.7 Code 標準版與 K2.7 Code HighSpeed 三種模型 ID。 Kimi Code： https://www.kimi.com/code/en Kimi K3 API Quickstart： https://platform.kimi.ai/docs/guide/kimi-k3-quickstart Bilibili 影片： https://www.bilibili.com/video/BV1A1K56hENv/ ---",
+    "excerpt": "![Kimi K3 正式開放 圖片](https://platform.kimi.ai/og.png?v=1 \"Kimi K3 正式開放 圖片\") Kimi K3 已在 Kimi Code 與 Kimi API 官方頁面正式出現，定位為 Kimi 目前最強旗艦模型，支援最高 1M token context，面向大型程式專案、知識工作、深度推理與 agentic coding；Kimi Code 同時提供 K3、K2.7 Code 標準版與 K2.7 Code HighSpeed 三種模型 ID。 Kimi Code： https://www.kimi.com/code/en Kimi K3 API Quickstart： https://platform.kimi.ai/docs/guide/kimi-k3-quickstart Bilibili 影片： https://www.bilibili.com/video/BV1A1K56hENv/ ---",
     "slug": "2026-07-16-kimi-k3-kimi-code-api-1m-context",
     "html": "articles/2026-07-16-kimi-k3-kimi-code-api-1m-context.html",
     "markdown": "articles/2026/07/2026-07-16-kimi-k3-kimi-code-api-1m-context.md"
@@ -1339,7 +1339,7 @@
       "https://help.aliyun.com/zh/model-studio/realtime",
       "https://www.qbitai.com/2026/07/450250.html"
     ],
-    "excerpt": "Qwen-Audio-3.0-Realtime 是阿里針對即時語音互動推出的新一代模型，宣傳重點放在更流暢的雙工語音對話、Agent 工具調用、共情 / 情感對話與更強推理；Plus 偏能力、Flash 偏速度，適合語音客服、教育陪練、娛樂互動、情感陪伴與語音型 Agent 原型。 Plus API： https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-plus?serviceSite=asia-pacific-china Flash API： https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-flash?serviceSite=asia-pacific-china ---",
+    "excerpt": "![阿里 Qwen-Audio-3.0-Realtime 圖片](https://www.qbitai.com/wp-content/uploads/imgs/qbitai-logo-1.png \"阿里 Qwen-Audio-3.0-Realtime 圖片\") Qwen-Audio-3.0-Realtime 是阿里針對即時語音互動推出的新一代模型，宣傳重點放在更流暢的雙工語音對話、Agent 工具調用、共情 / 情感對話與更強推理；Plus 偏能力、Flash 偏速度，適合語音客服、教育陪練、娛樂互動、情感陪伴與語音型 Agent 原型。 Plus API： https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-plus?serviceSite=asia-pacific-china Flash API： https://bailian.console.aliyun.com/cn-beijing/#/model-market/detail/qwen-audio-3.0-realtime-flash?serviceSite=asia-pacific-china ---",
     "slug": "2026-07-16-qwen-audio-3-realtime-plus-flash",
     "html": "articles/2026-07-16-qwen-audio-3-realtime-plus-flash.html",
     "markdown": "articles/2026/07/2026-07-16-qwen-audio-3-realtime-plus-flash.md"
@@ -1372,7 +1372,7 @@
       "https://github.com/Agentchengfeng/chengfeng-videocut-skills",
       "https://www.remotion.dev/docs/ai/coding-agents"
     ],
-    "excerpt": "這則貼文把 Codex 做影片的工作流整理成「6 個模組 + 一條 SOP」：用不同 skill 分別處理動效、素材整理、程式化渲染、AI 生成影片、中文剪輯與數字人口播，最後由 Codex 串接成從選題、分鏡、提示詞、素材、剪輯、字幕到包裝的完整影片流程。 原始貼文： https://x.com/Etudecn/status/2077418732356587619 ---",
+    "excerpt": "![X 圖片](https://opengraph.githubassets.com/92995d06c227a7989b58df0bc16f04e5c6a4978cebabc1b33503394b2c3ae284/heygen-com/hyperframes \"X 圖片\") 這則貼文把 Codex 做影片的工作流整理成「6 個模組 + 一條 SOP」：用不同 skill 分別處理動效、素材整理、程式化渲染、AI 生成影片、中文剪輯與數字人口播，最後由 Codex 串接成從選題、分鏡、提示詞、素材、剪輯、字幕到包裝的完整影片流程。 原始貼文： https://x.com/Etudecn/status/2077418732356587619 ---",
     "slug": "2026-07-16-x-etudecn-codex-video-skills-sop",
     "html": "articles/2026-07-16-x-etudecn-codex-video-skills-sop.html",
     "markdown": "articles/2026/07/2026-07-16-x-etudecn-codex-video-skills-sop.md"
@@ -1471,7 +1471,7 @@
       "https://github.com/openai/plugins",
       "https://github.com/heygen-com/hyperframes"
     ],
-    "excerpt": "Rachel 的貼文把「Codex + Remotion 做影片」從模板化剪輯再推進一步：影片成品不再依賴本人錄製口播，而是用數字人/虛擬人出鏡，讓選題、腳本、分鏡、字幕、動畫、渲染與出片更接近可維護的內容生產線。 原始貼文： https://x.com/Zesee/status/2077292396065198208 引用文章： https://x.com/Zesee/status/2072417062165635433 ---",
+    "excerpt": "![X 圖片](https://opengraph.githubassets.com/301a437cfda5d8bd67ead467143cdcf9a6423cac52599b803a432adfc32e6159/remotion-dev/codex-plugin \"X 圖片\") Rachel 的貼文把「Codex + Remotion 做影片」從模板化剪輯再推進一步：影片成品不再依賴本人錄製口播，而是用數字人/虛擬人出鏡，讓選題、腳本、分鏡、字幕、動畫、渲染與出片更接近可維護的內容生產線。 原始貼文： https://x.com/Zesee/status/2077292396065198208 引用文章： https://x.com/Zesee/status/2072417062165635433 ---",
     "slug": "2026-07-16-x-zesee-codex-remotion-digital-human-video-pipeline",
     "html": "articles/2026-07-16-x-zesee-codex-remotion-digital-human-video-pipeline.html",
     "markdown": "articles/2026/07/2026-07-16-x-zesee-codex-remotion-digital-human-video-pipeline.md"
@@ -1534,7 +1534,7 @@
       "https://openai.com/academy/skills/",
       "https://developers.openai.com/codex/skills"
     ],
-    "excerpt": "ChatGPT Skills 是把重複工作流程寫成可重用 SOP 的機制：透過 `SKILL.md` 與附加資源，讓 ChatGPT 在寫週報、整理會議紀錄、報告產出、財務敘事、營運 SOP 等任務中穩定遵循固定格式與品質標準。 原文： https://www.bnext.com.tw/article/91495/chatgpt-skills-tutorial ---",
+    "excerpt": "![數位時代教學 圖片](https://image-cdn.learnin.tw/bnextmedia/image/album/2026-07/epka-1783972933.png?w=900&output=webp \"數位時代教學 圖片\") ChatGPT Skills 是把重複工作流程寫成可重用 SOP 的機制：透過 `SKILL.md` 與附加資源，讓 ChatGPT 在寫週報、整理會議紀錄、報告產出、財務敘事、營運 SOP 等任務中穩定遵循固定格式與品質標準。 原文： https://www.bnext.com.tw/article/91495/chatgpt-skills-tutorial ---",
     "slug": "2026-07-15-bnext-chatgpt-skills-tutorial",
     "html": "articles/2026-07-15-bnext-chatgpt-skills-tutorial.html",
     "markdown": "articles/2026/07/2026-07-15-bnext-chatgpt-skills-tutorial.md"
@@ -1565,7 +1565,7 @@
       "https://3dship.harrysoftware.com",
       "https://tree.harrysoftware.com/"
     ],
-    "excerpt": "Three.js Object Sculptor 是一個 Codex plugin，目標是讓 Codex 依照單張物件參考圖，先建立物件規格與品質關卡，再用 Three.js 程式碼重建可互動、可動畫化的 3D 物件；它適合做瀏覽器原型、遊戲道具與課程示範，但不是從照片直接抽出精準 mesh 的 photogrammetry 工具。 原文： https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/ GitHub： https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin ---",
+    "excerpt": "![Facebook 社群案例 圖片](https://opengraph.githubassets.com/05b739e9e05e322f3f6ef93e0ba04770dde1fb9f398f62ba37f4681fcbc1b32e/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin \"Facebook 社群案例 圖片\") Three.js Object Sculptor 是一個 Codex plugin，目標是讓 Codex 依照單張物件參考圖，先建立物件規格與品質關卡，再用 Three.js 程式碼重建可互動、可動畫化的 3D 物件；它適合做瀏覽器原型、遊戲道具與課程示範，但不是從照片直接抽出精準 mesh 的 photogrammetry 工具。 原文： https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/ GitHub： https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin ---",
     "slug": "2026-07-15-facebook-codex-chinese-threejs-object-sculptor-plugin",
     "html": "articles/2026-07-15-facebook-codex-chinese-threejs-object-sculptor-plugin.html",
     "markdown": "articles/2026/07/2026-07-15-facebook-codex-chinese-threejs-object-sculptor-plugin.md"
@@ -1630,7 +1630,7 @@
       "https://blog.google/technology/developers/gemini-cli-code-assist-higher-limits/",
       "https://medium.com/google-cloud/getting-started-with-antigravity-cli-26c5da90951f"
     ],
-    "excerpt": "這則 Facebook 貼文展示一種進階 agentic coding 編排法：以 ChatGPT / Codex 側較強模型作為總指揮，透過自製 MCP 連接本機開發環境，再啟動多個 AGY CLI / Gemini 類子代理平行完成任務，最後做出兩款可玩的 3D 網頁遊戲。 原文： https://www.facebook.com/groups/1713764039757273/posts/1773346353799041/ ---",
+    "excerpt": "![Facebook 社群案例 圖片](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/output_padded.2e16d0ba.fill-1200x600.png \"Facebook 社群案例 圖片\") 這則 Facebook 貼文展示一種進階 agentic coding 編排法：以 ChatGPT / Codex 側較強模型作為總指揮，透過自製 MCP 連接本機開發環境，再啟動多個 AGY CLI / Gemini 類子代理平行完成任務，最後做出兩款可玩的 3D 網頁遊戲。 原文： https://www.facebook.com/groups/1713764039757273/posts/1773346353799041/ ---",
     "slug": "2026-07-15-facebook-yu-sen-lai-codex-mcp-agy-multi-agent-3d-games",
     "html": "articles/2026-07-15-facebook-yu-sen-lai-codex-mcp-agy-multi-agent-3d-games.html",
     "markdown": "articles/2026/07/2026-07-15-facebook-yu-sen-lai-codex-mcp-agy-multi-agent-3d-games.md"
@@ -1661,7 +1661,7 @@
       "https://github.com/hardness1020/awesome-agent-architecture/blob/main/README.zh-TW.md",
       "https://github.com/hardness1020/awesome-agent-architecture/tree/main/sections/07-skills"
     ],
-    "excerpt": "`awesome-agent-architecture` 主張：模型負責推理，harness 給模型行動、狀態與界線；理解 agent 的關鍵不是只看模型，而是看 loop、tools、permissions、memory、skills、context、tasks、scheduling 與 interfaces 如何被工程化組合。 Repository： https://github.com/hardness1020/awesome-agent-architecture ---",
+    "excerpt": "![GitHub 圖片](https://opengraph.githubassets.com/8ed3b1fd2ad191cb11e64bd1635a36695a35ce93c0a3c48ed739c2b646fe9282/hardness1020/awesome-agent-architecture \"GitHub 圖片\") `awesome-agent-architecture` 主張：模型負責推理，harness 給模型行動、狀態與界線；理解 agent 的關鍵不是只看模型，而是看 loop、tools、permissions、memory、skills、context、tasks、scheduling 與 interfaces 如何被工程化組合。 Repository： https://github.com/hardness1020/awesome-agent-architecture ---",
     "slug": "2026-07-15-github-awesome-agent-architecture-harness-engineering",
     "html": "articles/2026-07-15-github-awesome-agent-architecture-harness-engineering.html",
     "markdown": "articles/2026/07/2026-07-15-github-awesome-agent-architecture-harness-engineering.md"
@@ -1692,7 +1692,7 @@
       "https://digitaleconomy.stanford.edu/news/wemustactnow/",
       "https://www.prnewswire.com/news-releases/we-must-act-now-sixteen-nobel-laureates-join-leading-economists-and-ai-researchers-in-call-to-prepare-for-ais-economic-transformation-302823418.html"
     ],
-    "excerpt": "這則新聞值得保存，因為它標記了經濟學界對 AI 的態度轉折：從「AI 失業潮可能被科技業誇大」轉向「即使仍有不確定性，也必須現在建立衡量、政策與社會安全網」。 原文： https://www.msn.com/zh-tw/money/%E4%B8%80%E8%88%AC/ai%E6%8C%81%E7%BA%8C%E9%80%B2%E5%8C%96-%E7%B6%93%E6%BF%9F%E5%AD%B8%E5%AE%B6%E7%B5%82%E6%96%BC%E5%9D%90%E4%B8%8D%E4%BD%8F%E4%BA%86-16%E4%BD%8D%E8%AB%BE%E8%B2%9D%E7%88%BE%E7%8D%8E%E5%BE%97%E4%B8%BB%E7%A4%BA%E8%AD%A6-%E8%A1%9D%E6%93%8A%E6%9B%B4%E7%94%9A%E5%B7%A5%E6%A5%AD%E9%9D%A9%E5%91%BD-%E6%88%91%E5%80%91%E5%BF%85%E9%A0%88%E7%AB%8B%E5%88%BB%E8%A1%8C%E5%8B%95/ar-AA27SmZD 風傳媒 canonical： https://www.storm.mg/article/11149177 官方聲明： https://www.wemustactnow.ai/ ---",
+    "excerpt": "![We Must Act Now 圖片](https://digitaleconomy.stanford.edu/app/uploads/2026/07/Stanford-DEL_Research-Area-Icons_New-Measures-of-the-Economy.png \"We Must Act Now 圖片\") 這則新聞值得保存，因為它標記了經濟學界對 AI 的態度轉折：從「AI 失業潮可能被科技業誇大」轉向「即使仍有不確定性，也必須現在建立衡量、政策與社會安全網」。 原文： https://www.msn.com/zh-tw/money/%E4%B8%80%E8%88%AC/ai%E6%8C%81%E7%BA%8C%E9%80%B2%E5%8C%96-%E7%B6%93%E6%BF%9F%E5%AD%B8%E5%AE%B6%E7%B5%82%E6%96%BC%E5%9D%90%E4%B8%8D%E4%BD%8F%E4%BA%86-16%E4%BD%8D%E8%AB%BE%E8%B2%9D%E7%88%BE%E7%8D%8E%E5%BE%97%E4%B8%BB%E7%A4%BA%E8%AD%A6-%E8%A1%9D%E6%93%8A%E6%9B%B4%E7%94%9A%E5%B7%A5%E6%A5%AD%E9%9D%A9%E5%91%BD-%E6%88%91%E5%80%91%E5%BF%85%E9%A0%88%E7%AB%8B%E5%88%BB%E8%A1%8C%E5%8B%95/ar-AA27SmZD 風傳媒 canonical： https://www.storm.mg/article/11149177 官方聲明： https://www.wemustactnow.ai/ ---",
     "slug": "2026-07-15-msn-storm-we-must-act-now-ai-economic-transformation",
     "html": "articles/2026-07-15-msn-storm-we-must-act-now-ai-economic-transformation.html",
     "markdown": "articles/2026/07/2026-07-15-msn-storm-we-must-act-now-ai-economic-transformation.md"
@@ -1725,7 +1725,7 @@
       "https://github.com/router-for-me/CLIProxyAPI",
       "https://x.com/thsottiaux/status/2076119366647894371"
     ],
-    "excerpt": "這則 Threads 的重點不是「哪個工具一定比較好」，而是把 Claude Code 接到 GPT / Codex 模型時，真正關鍵的是中間那層 proxy / router：它負責把 Anthropic 風格請求翻譯成 GPT / Codex 可理解的格式。 原文： https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6 延伸文章： https://dawsonwang.com/day/196 ---",
+    "excerpt": "![cc-switch 與 CLIProxyAPI 圖片](https://opengraph.githubassets.com/9a571334eec3dbd0378b9a98b5e79e6709ebe474f6b9e29f982c4bd65d3c87f3/farion1231/cc-switch \"cc-switch 與 CLIProxyAPI 圖片\") 這則 Threads 的重點不是「哪個工具一定比較好」，而是把 Claude Code 接到 GPT / Codex 模型時，真正關鍵的是中間那層 proxy / router：它負責把 Anthropic 風格請求翻譯成 GPT / Codex 可理解的格式。 原文： https://www.threads.com/@andrew54068/post/Dax1uEMGtZ6 延伸文章： https://dawsonwang.com/day/196 ---",
     "slug": "2026-07-15-threads-andrew-cc-switch-cliproxyapi-claude-code-gpt",
     "html": "articles/2026-07-15-threads-andrew-cc-switch-cliproxyapi-claude-code-gpt.html",
     "markdown": "articles/2026/07/2026-07-15-threads-andrew-cc-switch-cliproxyapi-claude-code-gpt.md"
@@ -1757,7 +1757,7 @@
       "https://code.claude.com/docs/en/chrome",
       "https://docs.anthropic.com/en/docs/claude-code/overview"
     ],
-    "excerpt": "這則 Threads 記錄的是 Claude Code 從「能寫程式的助理」進一步走向「能看見並操作網頁的 agent」：它可以在桌面版內建瀏覽器或透過 Chrome 連接，讀網頁、點擊、填表單、測試 web app、抓資料與回報結果。 原文： https://www.threads.com/@karte_tw/post/DaxUZGCAeCK 留言補充的 YouTube： https://www.youtube.com/watch?v=_lVGyB-LXTs ---",
+    "excerpt": "![Claude Code In-App Browser 圖片](https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DPlatforms%2Band%2Bintegrations%26appearance%3Dsystem%26title%3DUse%2BClaude%2BCode%2Bwith%2BChrome%26description%3DConnect%2BClaude%2BCode%2Bto%2Byour%2BChrome%2Bbrowser%2Bto%2Btest%2Bweb%2Bapps%252C%2Bdebug%2Bwith%2Bconsole%2Blogs%252C%2Bautomate%2Bform%2Bfilling%252C%2Band%2Bextract%2Bdata%2Bfrom%2Bweb%2Bpages.%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B&w=1200&q=100 \"Claude Code In-App Browser 圖片\") 這則 Threads 記錄的是 Claude Code 從「能寫程式的助理」進一步走向「能看見並操作網頁的 agent」：它可以在桌面版內建瀏覽器或透過 Chrome 連接，讀網頁、點擊、填表單、測試 web app、抓資料與回報結果。 原文： https://www.threads.com/@karte_tw/post/DaxUZGCAeCK 留言補充的 YouTube： https://www.youtube.com/watch?v=_lVGyB-LXTs ---",
     "slug": "2026-07-15-threads-karte-claude-code-in-app-browser-web-automation",
     "html": "articles/2026-07-15-threads-karte-claude-code-in-app-browser-web-automation.html",
     "markdown": "articles/2026/07/2026-07-15-threads-karte-claude-code-in-app-browser-web-automation.md"
@@ -1788,7 +1788,7 @@
       "https://github.com/oso95/scroll-world",
       "https://github.com/oso95/scroll-world/tree/main/skills/scroll-world"
     ],
-    "excerpt": "`scroll-world` 把原本需要 3D / WebGL / motion design 團隊協作的「捲動式沉浸品牌世界」拆成 Agent Skill：讓 AI 先訪談品牌與故事，再生成場景、鏡頭飛行影片與可嵌入前端的 scroll-scrub engine。 原文： https://www.threads.com/@leeunhn/post/Dawsk_lkopg GitHub： https://github.com/oso95/scroll-world ---",
+    "excerpt": "![scroll-world 圖片](https://opengraph.githubassets.com/d73c72bdeaa180f2b48901eef2f7bd103ea14b03c658c24638e82f742ac974f9/oso95/scroll-world \"scroll-world 圖片\") `scroll-world` 把原本需要 3D / WebGL / motion design 團隊協作的「捲動式沉浸品牌世界」拆成 Agent Skill：讓 AI 先訪談品牌與故事，再生成場景、鏡頭飛行影片與可嵌入前端的 scroll-scrub engine。 原文： https://www.threads.com/@leeunhn/post/Dawsk_lkopg GitHub： https://github.com/oso95/scroll-world ---",
     "slug": "2026-07-15-threads-leeunhn-scroll-world-higgsfield-3d-landing-skill",
     "html": "articles/2026-07-15-threads-leeunhn-scroll-world-higgsfield-3d-landing-skill.html",
     "markdown": "articles/2026/07/2026-07-15-threads-leeunhn-scroll-world-higgsfield-3d-landing-skill.md"
@@ -1818,7 +1818,7 @@
       "https://www.threads.com/@paul.chen.pwc/post/DawRt1TGgqp",
       "https://github.com/drpwchen/paper-fetch"
     ],
-    "excerpt": "`paper-fetch` 是一個「DOI in, PDF out」的論文全文抓取工具：先找開放取用版本，再試出版社官方文字探勘 API，仍失敗才走使用者自己的機構圖書館 proxy；它補上 AI 論文閱讀管線中最麻煩、也最容易被忽略的「合法拿到全文 PDF」這一段。 原文： https://www.threads.com/@paul.chen.pwc/post/DawRt1TGgqp GitHub： https://github.com/drpwchen/paper-fetch ---",
+    "excerpt": "![paper-fetch 圖片](https://opengraph.githubassets.com/85003cf9f2672b8ccc194f557baffaae6f9ca01301f06142fa29dfa64a3cecbf/drpwchen/paper-fetch \"paper-fetch 圖片\") `paper-fetch` 是一個「DOI in, PDF out」的論文全文抓取工具：先找開放取用版本，再試出版社官方文字探勘 API，仍失敗才走使用者自己的機構圖書館 proxy；它補上 AI 論文閱讀管線中最麻煩、也最容易被忽略的「合法拿到全文 PDF」這一段。 原文： https://www.threads.com/@paul.chen.pwc/post/DawRt1TGgqp GitHub： https://github.com/drpwchen/paper-fetch ---",
     "slug": "2026-07-15-threads-paul-chen-paper-fetch-doi-fulltext-pdf-pipeline",
     "html": "articles/2026-07-15-threads-paul-chen-paper-fetch-doi-fulltext-pdf-pipeline.html",
     "markdown": "articles/2026/07/2026-07-15-threads-paul-chen-paper-fetch-doi-fulltext-pdf-pipeline.md"
@@ -1849,7 +1849,7 @@
       "https://x.com/cdngdev/status/2076812846793650485",
       "https://gist.github.com/tandpfun/b73063c8be8fc46644da9925d48b3240"
     ],
-    "excerpt": "這則 Threads 保存的是一個很好的「個人資料庫 + 影像生成 + Agent Skill」案例：從手機相簿裡散落的生活照，自動抽取衣物、重建成乾淨商品圖，再進一步做穿搭推薦與虛擬試穿。 原文： https://www.threads.com/@prompt_case/post/DawuacfDcR9 X 原始案例： https://x.com/cdngdev/status/2076812846793650485 Skill Gist： https://gist.github.com/tandpfun/b73063c8be8fc46644da9925d48b3240 ---",
+    "excerpt": "![Extract Clothing Skill 圖片](https://github.githubassets.com/assets/gist-og-image-54fd7dc0713e.png \"Extract Clothing Skill 圖片\") 這則 Threads 保存的是一個很好的「個人資料庫 + 影像生成 + Agent Skill」案例：從手機相簿裡散落的生活照，自動抽取衣物、重建成乾淨商品圖，再進一步做穿搭推薦與虛擬試穿。 原文： https://www.threads.com/@prompt_case/post/DawuacfDcR9 X 原始案例： https://x.com/cdngdev/status/2076812846793650485 Skill Gist： https://gist.github.com/tandpfun/b73063c8be8fc46644da9925d48b3240 ---",
     "slug": "2026-07-15-threads-prompt-case-extract-clothing-skill-ai-wardrobe",
     "html": "articles/2026-07-15-threads-prompt-case-extract-clothing-skill-ai-wardrobe.html",
     "markdown": "articles/2026/07/2026-07-15-threads-prompt-case-extract-clothing-skill-ai-wardrobe.md"
@@ -1881,7 +1881,7 @@
       "https://x.ai/news/grok-4-5",
       "https://x.ai/cli"
     ],
-    "excerpt": "Prompt Case 這則 Threads 介紹的是一個新開源的 `Grok Build Connector` Skill：讓 Codex、Claude Code 等 Agent 不必手動複製貼上，就能直接呼叫 Grok Build / Grok 4.5 取得第二意見、審查程式碼、討論計畫，並透過 Live UI 看見 agent-to-agent 對話過程。 原文： https://www.threads.com/@prompt_case/post/DaxPoM2jRWw GitHub： https://github.com/Toolsai/Grok-Build-Connector ---",
+    "excerpt": "![Grok Build Connector Skill 圖片](https://opengraph.githubassets.com/a861528780d27d9819fa3ec32458bada2098601c3b5b4ef6c1dea41fee6468db/Toolsai/Grok-Build-Connector \"Grok Build Connector Skill 圖片\") Prompt Case 這則 Threads 介紹的是一個新開源的 `Grok Build Connector` Skill：讓 Codex、Claude Code 等 Agent 不必手動複製貼上，就能直接呼叫 Grok Build / Grok 4.5 取得第二意見、審查程式碼、討論計畫，並透過 Live UI 看見 agent-to-agent 對話過程。 原文： https://www.threads.com/@prompt_case/post/DaxPoM2jRWw GitHub： https://github.com/Toolsai/Grok-Build-Connector ---",
     "slug": "2026-07-15-threads-prompt-case-grok-build-connector-skill-codex-claude-code",
     "html": "articles/2026-07-15-threads-prompt-case-grok-build-connector-skill-codex-claude-code.html",
     "markdown": "articles/2026/07/2026-07-15-threads-prompt-case-grok-build-connector-skill-codex-claude-code.md"
@@ -1913,7 +1913,7 @@
       "https://github.com/heygen-com/hyperframes",
       "https://hyperframes.heygen.com/"
     ],
-    "excerpt": "這則 X 長文把 Codex + HyperFrames 描述為一套「code-first video editing」工作流：創作者用文字描述影片，Codex 寫出 HTML/CSS/JS、動畫與素材調度，HyperFrames 則用 headless browser / FFmpeg 類渲染流程輸出 MP4，讓短影片、產品動效與資訊視覺化更接近可編程的 AI agent 任務。 原文： https://x.com/Saccc_c/status/2051852464400261429 X Article： https://x.com/i/article/2051363662426714112 ---",
+    "excerpt": "![X 長文 圖片](https://opengraph.githubassets.com/92995d06c227a7989b58df0bc16f04e5c6a4978cebabc1b33503394b2c3ae284/heygen-com/hyperframes \"X 長文 圖片\") 這則 X 長文把 Codex + HyperFrames 描述為一套「code-first video editing」工作流：創作者用文字描述影片，Codex 寫出 HTML/CSS/JS、動畫與素材調度，HyperFrames 則用 headless browser / FFmpeg 類渲染流程輸出 MP4，讓短影片、產品動效與資訊視覺化更接近可編程的 AI agent 任務。 原文： https://x.com/Saccc_c/status/2051852464400261429 X Article： https://x.com/i/article/2051363662426714112 ---",
     "slug": "2026-07-15-x-sac-codex-hyperframes-ai-video-editing",
     "html": "articles/2026-07-15-x-sac-codex-hyperframes-ai-video-editing.html",
     "markdown": "articles/2026/07/2026-07-15-x-sac-codex-hyperframes-ai-video-editing.md"
@@ -1983,7 +1983,7 @@
       "https://github.com/openai/plugins",
       "https://github.com/heygen-com/hyperframes"
     ],
-    "excerpt": "這支影片值得歸檔，因為它把 Codex plugins 視為「把 AI Agent 從 coding assistant 變成工作平台」的關鍵：瀏覽器、桌面、GitHub、Web App、Figma、簡報、表格與影片生成都被包裝成可安裝能力，讓 Codex 更接近能交付成果的 agent workspace，而不只是聊天式寫程式工具。 原始影片： https://www.youtube.com/watch?v=kxBCLl6eexE Bilibili mirror： https://www.bilibili.com/video/BV1MXLt6vE6s/ 注意：YouTube 顯示「未提供字幕/隱藏式輔助字幕」，transcript API 也回傳 transcripts disabled。因此本文不是逐字稿摘要，而是 metadata / 描述 / mirror / 官方來源交叉整理。 ---",
+    "excerpt": "![YouTube 圖片](https://opengraph.githubassets.com/8ea40e5e1c345bf0a27de4e339372420641ed3e19458090813193a526919884e/openai/plugins \"YouTube 圖片\") 這支影片值得歸檔，因為它把 Codex plugins 視為「把 AI Agent 從 coding assistant 變成工作平台」的關鍵：瀏覽器、桌面、GitHub、Web App、Figma、簡報、表格與影片生成都被包裝成可安裝能力，讓 Codex 更接近能交付成果的 agent workspace，而不只是聊天式寫程式工具。 原始影片： https://www.youtube.com/watch?v=kxBCLl6eexE Bilibili mirror： https://www.bilibili.com/video/BV1MXLt6vE6s/ 注意：YouTube 顯示「未提供字幕/隱藏式輔助字幕」，transcript API 也回傳 transcripts disabled。因此本文不是逐字稿摘要，而是 metadata / 描述 / mirror / 官方來源交叉整理。 ---",
     "slug": "2026-07-15-youtube-codex-ten-plugins-ai-agent-workflow",
     "html": "articles/2026-07-15-youtube-codex-ten-plugins-ai-agent-workflow.html",
     "markdown": "articles/2026/07/2026-07-15-youtube-codex-ten-plugins-ai-agent-workflow.md"
@@ -2018,7 +2018,7 @@
       "https://docs.openclaw.ai/plugins/codex-harness",
       "https://hermes-agent.nousresearch.com/docs"
     ],
-    "excerpt": "這支影片的保存價值在於：它把 Codex 從「coding agent」推進到「可操作電腦與瀏覽器的 general-purpose agent」來理解。對 AI 學習雷達而言，重點不是單純相信「取代 OpenClaw / Hermes」這種標題，而是辨認出 AI Agent 正在往三個方向收斂：桌面控制、瀏覽器控制、以及可安裝工具 / plugin 的工作平台。 原始影片： https://www.youtube.com/watch?v=QE_8Ua5eMiE 注意：YouTube 顯示沒有可用字幕，transcript API 也回傳 transcripts disabled。因此本文是 metadata / 描述 / 官方來源交叉整理，不是逐字稿摘要。 ---",
+    "excerpt": "![YouTube 圖片](https://docs.openclaw.ai/og/plugins/codex-harness.png?v=94d9653c54eb \"YouTube 圖片\") 這支影片的保存價值在於：它把 Codex 從「coding agent」推進到「可操作電腦與瀏覽器的 general-purpose agent」來理解。對 AI 學習雷達而言，重點不是單純相信「取代 OpenClaw / Hermes」這種標題，而是辨認出 AI Agent 正在往三個方向收斂：桌面控制、瀏覽器控制、以及可安裝工具 / plugin 的工作平台。 原始影片： https://www.youtube.com/watch?v=QE_8Ua5eMiE 注意：YouTube 顯示沒有可用字幕，transcript API 也回傳 transcripts disabled。因此本文是 metadata / 描述 / 官方來源交叉整理，不是逐字稿摘要。 ---",
     "slug": "2026-07-15-youtube-gpt55-codex-computer-browser-openclaw-hermes",
     "html": "articles/2026-07-15-youtube-gpt55-codex-computer-browser-openclaw-hermes.html",
     "markdown": "articles/2026/07/2026-07-15-youtube-gpt55-codex-computer-browser-openclaw-hermes.md"
@@ -2048,7 +2048,7 @@
       "https://clawhub.ai/haofanwang/libtv-skill",
       "https://www.liblib.tv"
     ],
-    "excerpt": "LibTV Skill 把 Liblib.tv / LibTV 的 AI 生圖、生視頻與影片編輯能力包成 OpenClaw Skill；使用者只要完成技能安裝與 `LIBTV_ACCESS_KEY` 設定，就能用自然語言讓 Agent 建立會話、上傳素材、生成或修改影片、查詢進度並下載成果。 ---",
+    "excerpt": "![OpenClaw × LibTV Skill 安裝與 Access Key 配置指南 圖片](https://opengraph.githubassets.com/5fae75c10b92621198272dbc45cfca51a5124de2316ba5a742cbf9211c91d0da/libtv-labs/libtv-skills \"OpenClaw × LibTV Skill 安裝與 Access Key 配置指南 圖片\") LibTV Skill 把 Liblib.tv / LibTV 的 AI 生圖、生視頻與影片編輯能力包成 OpenClaw Skill；使用者只要完成技能安裝與 `LIBTV_ACCESS_KEY` 設定，就能用自然語言讓 Agent 建立會話、上傳素材、生成或修改影片、查詢進度並下載成果。 ---",
     "slug": "2026-07-14-openclaw-libtv-skill-install-access-key-guide",
     "html": "articles/2026-07-14-openclaw-libtv-skill-install-access-key-guide.html",
     "markdown": "articles/2026/07/2026-07-14-openclaw-libtv-skill-install-access-key-guide.md"
@@ -2110,7 +2110,7 @@
       "https://github.com/RVC-Boss/GPT-SoVITS",
       "https://raw.githubusercontent.com/RVC-Boss/GPT-SoVITS/main/README.md"
     ],
-    "excerpt": "土豆哥在 Threads 分享 GPT-SoVITS：不用每月訂閱 ElevenLabs，只要少量聲音樣本就能做音色複製與文字轉語音；重點是它可本地運行、免費開源，讓個人創作者能把自己的聲音 IP 掌握在自己設備與工作流中。 原文： https://www.threads.com/@iluciddreaming/post/Dat5XRHFBCS ---",
+    "excerpt": "![GPT-SoVITS 本地聲音複製觀察 圖片](https://opengraph.githubassets.com/32f7969a4bcdb90dd70a73dfab8971b6a2b381bfefdb444b5c77cbb5fa2be21b/RVC-Boss/GPT-SoVITS \"GPT-SoVITS 本地聲音複製觀察 圖片\") 土豆哥在 Threads 分享 GPT-SoVITS：不用每月訂閱 ElevenLabs，只要少量聲音樣本就能做音色複製與文字轉語音；重點是它可本地運行、免費開源，讓個人創作者能把自己的聲音 IP 掌握在自己設備與工作流中。 原文： https://www.threads.com/@iluciddreaming/post/Dat5XRHFBCS ---",
     "slug": "2026-07-14-threads-iluciddreaming-gpt-sovits-local-voice-cloning-tts",
     "html": "articles/2026-07-14-threads-iluciddreaming-gpt-sovits-local-voice-cloning-tts.html",
     "markdown": "articles/2026/07/2026-07-14-threads-iluciddreaming-gpt-sovits-local-voice-cloning-tts.md"
@@ -2170,7 +2170,7 @@
       "https://github.com/router-for-me/CLIProxyAPI",
       "https://www.explainx.ai/blog/gpt-5-6-sol-claude-code-claudex-setup-guide-july-2026"
     ],
-    "excerpt": "Prompt Case 這篇 Threads 分享的是一套「Claudex」思路：保留 Claude Code 作為 coding agent 的操作介面與工具調度層，但透過 CLIProxyAPI 把模型後端導向 OpenAI / Codex OAuth 可用的 `gpt-5.6-sol`，並建立獨立的 `claudex` 指令，避免污染原本的 `claude` 設定。 原文： https://www.threads.com/@prompt_case/post/DascVdxlPAn ---",
+    "excerpt": "![Claudex 工作流觀察 圖片](https://opengraph.githubassets.com/ed71c7e870d7b4dea666ecd324e9dee14ed50afadaa0cd1224fa23e84aec42fa/router-for-me/CLIProxyAPI \"Claudex 工作流觀察 圖片\") Prompt Case 這篇 Threads 分享的是一套「Claudex」思路：保留 Claude Code 作為 coding agent 的操作介面與工具調度層，但透過 CLIProxyAPI 把模型後端導向 OpenAI / Codex OAuth 可用的 `gpt-5.6-sol`，並建立獨立的 `claudex` 指令，避免污染原本的 `claude` 設定。 原文： https://www.threads.com/@prompt_case/post/DascVdxlPAn ---",
     "slug": "2026-07-14-threads-prompt-case-claudex-cliproxyapi-gpt-5-6-sol-claude-code",
     "html": "articles/2026-07-14-threads-prompt-case-claudex-cliproxyapi-gpt-5-6-sol-claude-code.html",
     "markdown": "articles/2026/07/2026-07-14-threads-prompt-case-claudex-cliproxyapi-gpt-5-6-sol-claude-code.md"
@@ -2204,7 +2204,7 @@
       "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
       "https://x.com/CodexReleases/status/2061846140258033905"
     ],
-    "excerpt": "AI少年實測 ChatGPT / Codex 的 Sites 插件，主張可從零、不寫一行程式碼，在約五分鐘內生成並上線一個可用網址的網站。這代表 OpenAI 正把「寫程式」往後延伸到「託管、部署、檢查與分享」，直接切入 Vercel、Cloudflare Pages 這類前端部署平台的入門場景。 原文： https://x.com/aehyok/status/2076471245345001850 ---",
+    "excerpt": "![ChatGPT/Codex Sites 插件 圖片](https://learn.chatgpt.com/og/docs/sites.png \"ChatGPT/Codex Sites 插件 圖片\") AI少年實測 ChatGPT / Codex 的 Sites 插件，主張可從零、不寫一行程式碼，在約五分鐘內生成並上線一個可用網址的網站。這代表 OpenAI 正把「寫程式」往後延伸到「託管、部署、檢查與分享」，直接切入 Vercel、Cloudflare Pages 這類前端部署平台的入門場景。 原文： https://x.com/aehyok/status/2076471245345001850 ---",
     "slug": "2026-07-14-x-aehyok-chatgpt-codex-sites-plugin",
     "html": "articles/2026-07-14-x-aehyok-chatgpt-codex-sites-plugin.html",
     "markdown": "articles/2026/07/2026-07-14-x-aehyok-chatgpt-codex-sites-plugin.md"
@@ -2237,7 +2237,7 @@
       "https://www.ycombinator.com/launches/QtT-palmier-pro-an-open-source-video-editor-your-agents-can-operate",
       "https://www.ycombinator.com/companies/palmier"
     ],
-    "excerpt": "阿西_出海分享 Palmier Pro：一款由 YC 團隊推出的開源 macOS 影片剪輯器，核心亮點是讓 Codex、Claude Code、Cursor 透過 MCP 直接操作專業時間線；使用者一句話，agent 就能在同一個剪輯專案裡加素材、生成畫面、調整剪輯點與鋪設片段。 原文： https://x.com/axichuhai/status/2076506494812529050 ---",
+    "excerpt": "![Palmier Pro 觀察 圖片](https://opengraph.githubassets.com/4dbc01f578f53204025dfff03659d2d9af6ec81f96078555e865f3337cd458f5/palmier-io/palmier-pro \"Palmier Pro 觀察 圖片\") 阿西_出海分享 Palmier Pro：一款由 YC 團隊推出的開源 macOS 影片剪輯器，核心亮點是讓 Codex、Claude Code、Cursor 透過 MCP 直接操作專業時間線；使用者一句話，agent 就能在同一個剪輯專案裡加素材、生成畫面、調整剪輯點與鋪設片段。 原文： https://x.com/axichuhai/status/2076506494812529050 ---",
     "slug": "2026-07-14-x-axichuhai-palmier-pro-ai-video-editor-mcp",
     "html": "articles/2026-07-14-x-axichuhai-palmier-pro-ai-video-editor-mcp.html",
     "markdown": "articles/2026/07/2026-07-14-x-axichuhai-palmier-pro-ai-video-editor-mcp.md"
@@ -2268,7 +2268,7 @@
       "https://github.com/harry0703/MoneyPrinterTurbo",
       "https://github.com/harry0703/MoneyPrinterTurbo/blob/main/README-en.md"
     ],
-    "excerpt": "智享分享 MoneyPrinterTurbo：一個名字很誇張、但功能很完整的開源 AI 短視頻生成流水線。輸入主題後，它可自動產生腳本、配音、素材、字幕與影片合成，面向 YouTube Shorts、TikTok、Reels、抖音式短影音與無臉頻道自動化。 原文： https://x.com/CycleDecoded/status/2076642075018477966 ---",
+    "excerpt": "![MoneyPrinterTurbo 觀察 圖片](https://opengraph.githubassets.com/881e3aa14c310ff4f1c3b5aec86612480a61797b14ef18a24a69278d982538e9/harry0703/MoneyPrinterTurbo \"MoneyPrinterTurbo 觀察 圖片\") 智享分享 MoneyPrinterTurbo：一個名字很誇張、但功能很完整的開源 AI 短視頻生成流水線。輸入主題後，它可自動產生腳本、配音、素材、字幕與影片合成，面向 YouTube Shorts、TikTok、Reels、抖音式短影音與無臉頻道自動化。 原文： https://x.com/CycleDecoded/status/2076642075018477966 ---",
     "slug": "2026-07-14-x-cycledecoded-moneyprinterturbo-ai-short-video-pipeline",
     "html": "articles/2026-07-14-x-cycledecoded-moneyprinterturbo-ai-short-video-pipeline.html",
     "markdown": "articles/2026/07/2026-07-14-x-cycledecoded-moneyprinterturbo-ai-short-video-pipeline.md"
@@ -2298,7 +2298,7 @@
       "https://chatcut.io/chatgpt",
       "https://github.com/ChatCut-Inc/agent-plugin"
     ],
-    "excerpt": "探路AI 的貼文提供了一個比「安裝 ChatCut」更具體的實戰案例：把既有 AI 影片素材交給 Codex + ChatCut，要求它整理成古裝 / 仙俠影視劇運鏡教學合集，並加入字幕、旁白、背景音樂與動畫效果；生成後再用提示詞做第二輪修正，最後人工微調收尾。 原文： https://x.com/TanLuAI/status/2076549903049011399 ---",
+    "excerpt": "![ChatCut × Codex 實測流程 圖片](https://opengraph.githubassets.com/d67337be0c8ad00ca8297a8c786e53c76efc38f60794334fc27af1f0bec81429/ChatCut-Inc/agent-plugin \"ChatCut × Codex 實測流程 圖片\") 探路AI 的貼文提供了一個比「安裝 ChatCut」更具體的實戰案例：把既有 AI 影片素材交給 Codex + ChatCut，要求它整理成古裝 / 仙俠影視劇運鏡教學合集，並加入字幕、旁白、背景音樂與動畫效果；生成後再用提示詞做第二輪修正，最後人工微調收尾。 原文： https://x.com/TanLuAI/status/2076549903049011399 ---",
     "slug": "2026-07-14-x-tanluai-chatcut-codex-xianxia-camera-movement-tutorial",
     "html": "articles/2026-07-14-x-tanluai-chatcut-codex-xianxia-camera-movement-tutorial.html",
     "markdown": "articles/2026/07/2026-07-14-x-tanluai-chatcut-codex-xianxia-camera-movement-tutorial.md"
@@ -2331,7 +2331,7 @@
       "https://chatcut.io/codex",
       "https://chatcut.io/codex-plugin"
     ],
-    "excerpt": "向阳乔木與阿囤囤分別分享 ChatCut × Codex 的入門用法：把 ChatCut plugin 安裝到 Codex，完成 MCP、Skill 與 OAuth 授權後，就能用自然語言要求 Codex 直接操作 ChatCut 影片時間線，生成產品介紹、配音解說、字幕與圖文並茂的功能演示影片。 原文： https://x.com/vista8/status/2076494081207992657 相關貼文： https://x.com/Panggungun24/status/2076242016124723290 ---",
+    "excerpt": "![ChatCut × Codex 快速教學觀察 圖片](https://opengraph.githubassets.com/d67337be0c8ad00ca8297a8c786e53c76efc38f60794334fc27af1f0bec81429/ChatCut-Inc/agent-plugin \"ChatCut × Codex 快速教學觀察 圖片\") 向阳乔木與阿囤囤分別分享 ChatCut × Codex 的入門用法：把 ChatCut plugin 安裝到 Codex，完成 MCP、Skill 與 OAuth 授權後，就能用自然語言要求 Codex 直接操作 ChatCut 影片時間線，生成產品介紹、配音解說、字幕與圖文並茂的功能演示影片。 原文： https://x.com/vista8/status/2076494081207992657 相關貼文： https://x.com/Panggungun24/status/2076242016124723290 ---",
     "slug": "2026-07-14-x-vista8-panggungun24-chatcut-codex-mcp-skill-video-editing",
     "html": "articles/2026-07-14-x-vista8-panggungun24-chatcut-codex-mcp-skill-video-editing.html",
     "markdown": "articles/2026/07/2026-07-14-x-vista8-panggungun24-chatcut-codex-mcp-skill-video-editing.md"
@@ -2433,7 +2433,7 @@
       "https://chatcut.io/codex",
       "https://github.com/pengchujin/jzsub"
     ],
-    "excerpt": "# AI 影片剪輯工具鏈觀察｜OpenReel、ChatCut × Codex 與自媒體工作流重組 近期 X 上幾則中文 AI 影片工具分享，指向同一個趨勢：影片創作不再只是「剪輯軟體變聰明」，而是剪輯流程正在被改寫成 agent 可以理解、執行、修正、沉澱的工作流。 這篇整理三個互補方向： 1. OpenReel V",
+    "excerpt": "# AI 影片剪輯工具鏈觀察｜OpenReel、ChatCut × Codex 與自媒體工作流重組 近期 X 上幾則中文 AI 影片工具分享，指向同一個趨勢：影片創作不再只是「剪輯軟體變聰明」，而是剪輯流程正在被改寫成 agent 可以理解、執行、修正、沉澱的工作流。 ![AI 影片剪輯工具鏈觀察 圖片](https:",
     "slug": "2026-07-13-ai-video-editing-openreel-chatcut-codex-workflow",
     "html": "articles/2026-07-13-ai-video-editing-openreel-chatcut-codex-workflow.html",
     "markdown": "articles/2026/07/2026-07-13-ai-video-editing-openreel-chatcut-codex-workflow.md"
@@ -11773,7 +11773,7 @@
       "https://huggingface.co/openbmb/VoxCPM2",
       "https://arxiv.org/abs/2606.06928"
     ],
-    "excerpt": "# VoxCPM2：開源語音合成新工具（20k GitHub Stars） **來源：** [Threads@resen168](https://www.threads.com/@resen168/post/DZCUrjTkZL1) · 8 小時前 · 48 讚 · 62 次分享 · 2,602 次瀏覽 --- ## ",
+    "excerpt": "# VoxCPM2：開源語音合成新工具（20k GitHub Stars） **來源：** [Threads@resen168](https://www.threads.com/@resen168/post/DZCUrjTkZL1) · 8 小時前 · 48 讚 · 62 次分享 · 2,602 次瀏覽 ![VoxCP",
     "slug": "2026-05-30-voxcpm2-open-source-voice-synthesis-20k-stars",
     "html": "articles/2026-05-30-voxcpm2-open-source-voice-synthesis-20k-stars.html",
     "markdown": "articles/2026/05/2026-05-30-voxcpm2-open-source-voice-synthesis-20k-stars.md"
@@ -11992,7 +11992,7 @@
     "importance": "medium",
     "status": "archived",
     "links": [],
-    "excerpt": "# GitHub Zie619/n8n-workflows — n8n 工作流合集免費開源，54.8k Stars **來源：** [GitHub Zie619/n8n-workflows](https://github.com/Zie619/n8n-workflows) · Facebook Reel --- ## ",
+    "excerpt": "# GitHub Zie619/n8n-workflows — n8n 工作流合集免費開源，54.8k Stars **來源：** [GitHub Zie619/n8n-workflows](https://github.com/Zie619/n8n-workflows) · Facebook Reel ![GitHu",
     "slug": "2026-05-27-n8n-workflows-open-source-automation-54k-stars",
     "html": "articles/2026-05-27-n8n-workflows-open-source-automation-54k-stars.html",
     "markdown": "articles/2026/05/2026-05-27-n8n-workflows-open-source-automation-54k-stars.md"
@@ -12050,7 +12050,7 @@
     "importance": "medium",
     "status": "archived",
     "links": [],
-    "excerpt": "# 小米 MiMo-V2.5 API 永久降價最高 99%！Token Plan 一個月只要 5.3 美金 **來源：** [電腦王阿達 via KOC 酷品報](https://www.koc.com.tw/archives/644085) · 1,247 次瀏覽 · 2026-05-27 --- ## 重點摘要 小",
+    "excerpt": "# 小米 MiMo-V2.5 API 永久降價最高 99%！Token Plan 一個月只要 5.3 美金 **來源：** [電腦王阿達 via KOC 酷品報](https://www.koc.com.tw/archives/644085) · 1,247 次瀏覽 · 2026-05-27 ![小米 MiMo-V2.",
     "slug": "2026-05-27-xiaomi-mimo-v2-5-api-price-cut-99-percent",
     "html": "articles/2026-05-27-xiaomi-mimo-v2-5-api-price-cut-99-percent.html",
     "markdown": "articles/2026/05/2026-05-27-xiaomi-mimo-v2-5-api-price-cut-99-percent.md"

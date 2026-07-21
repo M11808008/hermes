@@ -1,6 +1,7 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Karpathy LLM Wiki｜用 Obsidian 與 Claude Code 建立可累積的 AI 第二大腦</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Karpathy LLM Wiki｜用 Obsidian 與 Claude Code 建立可累積的 AI 第二大腦</h1><p>Rafael Estrela 的 X 貼文用葡萄牙文整理了 Andrej Karpathy 的 LLM Wiki 想法：不要只把 AI 當成寫程式工具，而是把 Claude Code 這類 coding agent 連到一個資料夾，讓它閱讀文章、逐字稿、PDF、筆記，整理成一套可查詢、可交叉連結、可持續更新的第二大腦。</p>
 <p>Avid 後續也用英文 X 貼文把這件事包裝成「15 分鐘建立 AI second brain」：下載 Claude Desktop、Obsidian Desktop、建立 vault、放入 Markdown 檔，並用 Karpathy 的 prompt 讓 Claude Code 連到 vault。這則補充來源凸顯同一個趨勢：Claude 不只是搜尋引擎，而是可以疊在自己所有筆記與資源之上的 intelligence layer。</p>
 <p>這與傳統 RAG 不同：不是每次查詢都把資料切 chunk 丟進向量庫，而是先讓 LLM 把知識「編譯」成維基頁面。之後查詢時，agent 先讀 index 與相關條目，再回答問題。</p>
+<figure><img src="https://opengraph.githubassets.com/hermes-ai-radar/karpathy/442a6bf555914893e9891c11519de94f" alt="Karpathy LLM Wiki 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>Karpathy LLM Wiki 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>LLM Wiki 的核心是：raw sources 保留原始資料、wiki pages 存放 AI 編輯後的知識條目、CLAUDE.md / AGENTS.md 定義維護規則，讓個人知識不再停留在一次性聊天，而能長期累積。</p>
 <h1>架構快照</h1>

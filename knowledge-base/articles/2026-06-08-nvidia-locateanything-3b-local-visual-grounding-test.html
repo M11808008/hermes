@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NVIDIA LocateAnything-3B 本機視覺定位測試｜OCR、物件偵測與 Promptable Grounding 觀察</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>NVIDIA LocateAnything-3B 本機視覺定位測試｜OCR、物件偵測與 Promptable Grounding 觀察</h1><p>來源：欒帥在本機測試 NVIDIA LocateAnything-3B 並補充兩張 LocateAnything Lab 截圖。官方模型卡顯示 LocateAnything-3B 是 NVIDIA 發布的 3B vision-language grounding model，核心能力是把自然語言 prompt、物件類別、OCR/GUI/pointing 等任務轉成 bounding boxes 或 points。</p>
+<figure><img src="https://opengraph.githubassets.com/hermes-ai-radar/NVlabs/Eagle" alt="NVIDIA LocateAnything-3B 本機視覺定位測試 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>NVIDIA LocateAnything-3B 本機視覺定位測試 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>LocateAnything-3B 比傳統 YOLO 更像「可用文字指定目標的通用視覺定位模型」：可以做 object detection、OCR text localization、GUI grounding、pointing 等任務；但本機實測權重約 7.5GB、載入後約吃 16.5GB VRAM，slow 模式在 RTX 5090 上約 2.4 秒，精準場景可用，即時高頻辨識仍需審慎評估。</p>
 <h1>欒帥實測觀察</h1>

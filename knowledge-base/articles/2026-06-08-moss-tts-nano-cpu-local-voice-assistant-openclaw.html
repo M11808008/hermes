@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>無 GPU 迷你電腦自架 AI 語音｜MOSS-TTS-Nano、FastAPI 常駐與 Telegram 語音回報流程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>無 GPU 迷你電腦自架 AI 語音｜MOSS-TTS-Nano、FastAPI 常駐與 Telegram 語音回報流程</h1><p>來源：欒帥分享的 LINE 文字攻略與資訊圖，主題是用數千元等級 N200 迷你電腦、純 CPU、零 GPU 成本，讓「龍蝦 / OpenClaw」把文字合成語音並透過 Telegram 發送語音訊息。官方 MOSS-TTS-Nano README 顯示，MOSS-TTS-Nano 是 MOSI.AI 與 OpenMOSS 團隊開源的多語言微型語音生成模型，約 0.1B 參數，可直接在 CPU 上運行；2026-04-17 釋出的 ONNX CPU 版本移除 PyTorch 推理依賴，並保留音色克隆工作流。</p>
+<figure><img src="https://opengraph.githubassets.com/hermes-ai-radar/OpenMOSS/MOSS-TTS-Nano" alt="無 GPU 迷你電腦自架 AI 語音 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>無 GPU 迷你電腦自架 AI 語音 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>在無 GPU 的迷你電腦上做本地 AI 語音，關鍵不是追求電話級即時對話，而是用 MOSS-TTS-Nano / ONNX Runtime 降低硬體門檻、用 FastAPI 常駐模型消除 20–30 秒載入延遲、用 ffmpeg 轉成通訊平台支援格式，最後把它定位成「非同步語音助理」：接任務、背景執行、完成後用語音回報。</p>
 <h1>架構重點</h1>

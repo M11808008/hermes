@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude Code Loop Engineering：4 種迴圈設計法，重點不是一直跑而是停止條件</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Claude Code Loop Engineering：4 種迴圈設計法，重點不是一直跑而是停止條件</h1><p>來源：數位時代 BusinessNext 文章〈Claude Code官方解密！一次看懂4種「迴圈」設計法，讓AI Agent自動搞定複雜任務〉，整理 Claude Code 團隊在官方 blog 提出的 loop engineering 方法論：代理重複執行工作循環，直到滿足停止條件。本文以 Anthropic 官方 blog 與 Claude Code 文件交叉驗證。</p>
+<figure><img src="https://image-cdn.learnin.tw/bnextmedia/image/album/2026-07/hi66-1784112784.png?w=900&amp;output=webp" alt="Claude Code Loop Engineering：4 種迴圈設計法，重點不是一直跑而是停止條件 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>Claude Code Loop Engineering：4 種迴圈設計法，重點不是一直跑而是停止條件 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>Loop engineering 不是叫 AI「一直改到好」，而是設計觸發條件、停止條件、驗證方法與權限邊界；Claude Code 官方把它拆成回合制、目標式、時間式與主動式四類，對欒帥的 Hermes / 課程設計最有價值的是：先定義「怎樣算完成」，再決定要不要升級成 /goal、/loop、/schedule 或多代理 workflow。</p>
 <h1>文章重點</h1>

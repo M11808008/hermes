@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>本地 AI 轉錄架構｜用家中 MacBook Pro 當 Whisper 推論伺服器</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>本地 AI 轉錄架構｜用家中 MacBook Pro 當 Whisper 推論伺服器</h1><p>來源為 Threads 帳號 andrew54068 的串文，分享一個很實用的本地 AI 工作流：隨身 MacBook Air 不跑重模型，只負責觸發 `/transcriber skill`；真正吃資源的 Whisper large-v3 則交給家中常開的 MacBook Pro，用 Apple Silicon 的 Metal GPU 與 MLX 版 Whisper 處理。本文補充 MLX、lightning-whisper-mlx 與 Vexa 相關脈絡，整理成可複用的架構案例。</p>
+<figure><img src="https://opengraph.githubassets.com/hermes-ai-radar/ml-explore/mlx" alt="本地 AI 轉錄架構 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>本地 AI 轉錄架構 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>這不是單純「把模型搬到另一台電腦」，而是把閒置高效能 Mac 變成私人推論伺服器：隨身筆電保留輕便與續航，家中 MBP 負責 Whisper 轉錄重工，資料不經雲端 API，並透過多層 fallback 保持工作流可靠。</p>
 <h1>Threads 貼文重點</h1>

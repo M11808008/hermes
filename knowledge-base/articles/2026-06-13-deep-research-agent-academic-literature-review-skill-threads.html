@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Deep Research Agent｜Hermes/ECC 學術文獻回顧 Skill 與零幻覺檢核流程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Deep Research Agent｜Hermes/ECC 學術文獻回顧 Skill 與零幻覺檢核流程</h1><p>來源為 Tommy / 𝖄𝖚𝖖𝖎 在 Threads 分享的開源專案 Deep Research Agent。貼文將它描述為一套能在 Hermes / ECC 框架中使用的文獻回顧 skill，目標是減少 AI 寫學術報告時捏造論文、引用低品質期刊或只靠摘要過度推論的問題。本文以 Threads 貼文與 GitHub repo / README 作為依據，整理其架構、安裝需求、可用情境與導入限制。</p>
+<figure><img src="https://opengraph.githubassets.com/hermes-ai-radar/CYC2002tommy/Deep-Research-Agent" alt="Deep Research Agent 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>Deep Research Agent 圖片</figcaption></figure>
 <h1>一句話摘要</h1>
 <p>Deep Research Agent 是一個偏「學術研究生產線」的 agent skill：用 Scopus / OpenAlex / 搜尋 MCP 先做文獻發現，再要求全文驗證、DOI 可用性檢查、Q1-Q2 期刊篩選、Remi peer review、Word 文件編譯、Obsidian 與 NotebookLM 入庫；它很適合重度文獻回顧與研究草稿，但需要 Scopus key、MCP、Python/Node 環境與人工審核，不能當成完全免責的論文自動產生器。</p>
 <h1>原貼文重點</h1>
