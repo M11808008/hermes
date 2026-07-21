@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Twinkle Hub｜台灣資料的 MCP 服務聚合平台：把 data.gov.tw 變成 AI agent 可查的工具層</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Twinkle Hub｜台灣資料的 MCP 服務聚合平台：把 data.gov.tw 變成 AI agent 可查的工具層</h1><p>來源是 Twinkle Hub 官網。公開頁面與 `llms.txt` 顯示，Twinkle Hub 是「台灣資料的 MCP 服務聚合平台」，把 data.gov.tw 等資料源包成單一 MCP endpoint，讓 Claude Desktop、Claude Code、GitHub Copilot CLI、OpenAI Codex CLI、Hermes、OpenClaw、Continue、Cline 或自建 agent loop 能用同一個 API key 搜資料、查欄位、取資料列與呼叫台灣在地工具。</p>
+<h1>一句話摘要</h1>
+<p>Twinkle Hub 的保存價值在於：它不是又一個資料入口網站，而是把台灣公開資料做成 AI agent 可直接呼叫的 MCP 工具層。對欒帥的 AI 課程、Hermes 自動化、資料治理與台灣在地 AI 應用示範來說，這是一個很好的案例：把「散落在政府網站的資料」轉成「可被 agent discover、query、materialize、引用與合規追蹤的工具」。</p>
+<h1>可確認的公開內容</h1>
+<ul>
+<li>官網標題：`Twinkle Hub — MCP service for Taiwan data`。</li>
+<li>Meta description：聚合 Taiwan data sources into a single MCP endpoint；one virtual API key；deterministic per-call billing；Taiwan-hosted；首發 data.gov.tw 52,960 datasets。</li>
+<li>MCP endpoint：`<a href="https://api.twinkleai.tw/mcp/`。" target="_blank" rel="noopener">https://api.twinkleai.tw/mcp/`。</a></li>
+<li>Transport：streamable-http（HTTP POST + SSE-style framed responses）。</li>
+<li>Auth：Bearer token / Twinkle Hub virtual key，從 dashboard 取得。</li>
+<li>Alpha 期間：官網與 pricing 頁顯示 free during alpha、所有工具免費、no monthly cap、no rate limits within fair-use。</li>
+<li>首頁數字：52,960 datasets、19 domains auto-classified、49/53 TW utility tools、20 official skills。</li>
+<li>Recent updates 顯示 2026-06-30 新增 teacher exam dual corpus：教檢 12,731 題 + 教甄 2,421 題，共 519 datasets。</li>
+<li>官網宣稱每日同步 ministries 與 licensed third-party sources，data.gov.tw 是 phase one，未來擴充至 industry associations、local governments、commercial data。</li>
+</ul>
+<h1>MCP / Agent discovery 檢查</h1>
+<p>網站 HTTP headers 與公開 discovery files 提供下列 agent-friendly 入口：</p>
+<ul>
+<li>`llms.txt`：給 LLM/agent 讀的摘要文件。</li>
+<li>`.well-known/mcp.json`：MCP Server Card。</li>
+<li>`.well-known/agent-card.json`：A2A Agent Card。</li>
+<li>`.well-known/agent-skills.json`：Agent Skills。</li>
+<li>`.well-known/api-catalog`：API Catalog。</li>
+<li>`.well-known/oauth-protected-resource`：OAuth protected resource metadata。</li>
+</ul>
+<p>`mcp.json` 列出的核心 opendata tools：</p>
+<ul>
+<li>`opendata-list_domains`：列出 domains。</li>
+<li>`opendata-search_datasets`：依 query / domain 搜 dataset。</li>
+<li>`opendata-get_dataset`：取得 dataset metadata + schema。</li>
+<li>`opendata-query_rows`：以 SQL-like filter 取得資料列。</li>
+<li>`opendata-materialize_dataset`：整個 dataset 物化成 CSV / JSON。</li>
+</ul>
+<p>這對 agent 來說很重要：資料查詢不再需要每次 crawl 政府網站、猜欄位、下載壓縮檔，而是可以走標準化工具呼叫。</p>
+<h1>Marketplace / Data 層</h1>
+<p>Data marketplace 頁列出 20 個資料 domain，將台灣資料依 use case 和主題分類，例如：</p>
+<ul>
+<li>Travel Taiwan：景點、民宿、夜市、EV chargers 等旅遊 agent 常用資料。</li>
+<li>Healthcare lookup：NHI、醫院層級、合約醫事機構、就醫率等。</li>
+<li>Picking a school：大學招生、錄取分數、僑外生回台、華語中心等。</li>
+<li>Real Estate &amp; Land：土地、建物、都市計畫、實價登錄、租金。</li>
+<li>Economy / Industry / Companies：公司登記、商業統計、貿易、新創、裁罰。</li>
+<li>Procurement / Subsidies：政府採購、決標、廠商、補助。</li>
+<li>Environment / Weather / Ecology：空氣、水質、噪音、廢棄物、天氣、環境資料。</li>
+<li>Judicial / Legislature / Healthcare / Finance / Agriculture / Education / Transportation 等。</li>
+</ul>
+<h1>Tools 層：台灣在地 deterministic functions</h1>
+<p>Tools marketplace 顯示 53 個 utility tools，重點不是生成文字，而是讓 AI 在台灣情境中少 hallucination：</p>
+<ul>
+<li>中文地址轉 3 碼郵遞區號、縣市區、行政區代碼。</li>
+<li>中文地址轉英文標準格式、英文地址有限版轉中文。</li>
+<li>舊縣市名稱對齊現名，例如高雄縣→高雄市、臺北縣→新北市。</li>
+<li>產生測試用台灣身分證字號 / 統一編號，通過 checksum，但非真實 PII。</li>
+<li>判定台灣公務上班日，含補班補假規則。</li>
+<li>查銀行代碼、縣市鄉鎮、郵遞區號、TGOS geo themes 等。</li>
+</ul>
+<p>這些 deterministic tools 對本地化 agent 很實用：當模型不可靠時，把 checksum、行政區、地址標準化這類規則交給工具，而不是交給模型猜。</p>
+<h1>官方 Skills 層</h1>
+<p>官網列出 20 個官方 Anthropic Agent Skills，可安裝到 Claude Desktop / Claude Code / GitHub Copilot CLI / OpenAI Codex CLI 或任何 MCP-compatible agent。首頁展示的 skills 包含：</p>
+<ul>
+<li>Judicial Court Decisions：1996 年起 6M+ cases，語意搜尋與 LLM-extracted outcome。</li>
+<li>MOEX National Exams：64.8k papers、320k questions。</li>
+<li>TIPO Patents：2018 年起 280k+ records。</li>
+<li>Real-estate (LVR)：6 都 + 16 縣市，2012 起，sales 4.75M / rentals 726k / pre-sale 554k。</li>
+<li>Government Procurement (PCC)：2015-04 起 162k+ records。</li>
+<li>Legislative Yuan：284k+ rows、8 collections。</li>
+<li>Transportation、Healthcare、Finance &amp; Securities、Environment &amp; Weather、Agriculture、Education、Labor &amp; Wages、Energy &amp; Utilities、Culture &amp; Heritage、Population &amp; Elections、Taipei City Data、Tourism &amp; Parks、Tourism Statistics、Geo/GIS、OpenData General、Skill Navigator 等。</li>
+</ul>
+<h1>欒帥可用的實務場景</h1>
+<ul>
+<li>AI 課程 demo：讓學生看到 MCP 如何把「資料」變成 agent tools，而不是只看聊天視窗。</li>
+<li>Hermes 工作流：未來可接 Twinkle Hub MCP endpoint，讓 Hermes 直接查台灣公開資料、即時天氣災防、水庫、教育考題、採購、實價登錄等。</li>
+<li>政府資料教學：用 data.gov.tw 做教材時，可跳過手動下載與格式清理，專注在問題設計、查詢、資料品質與政策判讀。</li>
+<li>本地化 agent 評測：測試 AI 是否能正確處理台灣地址、統編、身分證 checksum、ROC year、公務行事曆。</li>
+<li>企業資料產品：可作為「把特定資料域變成 MCP server + skills + discovery metadata」的架構樣板。</li>
+</ul>
+<h1>對 AI 學習雷達的意義</h1>
+<p>Twinkle Hub 是台灣在地 AI infrastructure 的代表案例：它把 data catalog、MCP protocol、agent skills、台灣規則工具與 pricing / API key 模型包在一起。這符合近期 AI agent 生態的方向：未來不是每個 agent 都自己寫爬蟲，而是透過可信工具層取得資料；誰能把資料整理成好用、可查、可授權、可稽核的 MCP server，誰就掌握了垂直 AI 的底層燃料。</p>
+<h1>Caveats</h1>
+<ul>
+<li>官網 `llms.txt` 宣稱程式碼在 `<a href="https://github.com/lianghsun/twinkle-hub`，但本次以" target="_blank" rel="noopener">https://github.com/lianghsun/twinkle-hub`，但本次以</a> GitHub API 查詢該 repo 回覆 404；可能是尚未公開、改名、私有或暫時不可見，需後續再查。</li>
+<li>Alpha 期間免費不代表長期免費；pricing 頁明確提到未來會通知、free pay-as-you-go stays，但 Starter/Pro paid plans coming later。</li>
+<li>MCP endpoint 需要 Bearer token；本次未登入 dashboard，也未實際呼叫需要 auth 的 tools。</li>
+<li>資料授權 metadata 會透傳，但下游使用者仍需自行確認每筆資料的 license、更新頻率、欄位品質與可商用性。</li>
+<li>「查得到」不等於「可直接決策」；政府公開資料常有延遲、欄位缺漏、行政定義差異與跨資料集 join 風險。</li>
+</ul>
+<h1>Why it matters</h1>
+<p>對台灣 AI 生態來說，Twinkle Hub 的價值在於補上「模型之外」的那一層：台灣資料、台灣規則、台灣行政語境，以及讓 agent 可靠取用這些東西的 MCP 介面。這非常適合納入欒帥的 AI 學習雷達，作為「AI agent × public data × local infrastructure」的本土案例。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-21 · https://hub.twinkleai.tw/ · link-archive</div><h3>標籤</h3><span class="tag">MCP</span><span class="tag">Taiwan Open Data</span><span class="tag">AI Agent</span><span class="tag">Data Infrastructure</span><span class="tag">Claude Desktop</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Hermes Agent</span><span class="tag">Public Data</span><span class="tag">Taiwan AI</span><h3>原始連結</h3><p><a href="https://hub.twinkleai.tw/" target="_blank" rel="noopener">https://hub.twinkleai.tw/</a></p><p><a href="https://hub.twinkleai.tw/" target="_blank" rel="noopener">https://hub.twinkleai.tw/</a></p><p><a href="https://hub.twinkleai.tw/llms.txt" target="_blank" rel="noopener">https://hub.twinkleai.tw/llms.txt</a></p><p><a href="https://hub.twinkleai.tw/.well-known/mcp.json" target="_blank" rel="noopener">https://hub.twinkleai.tw/.well-known/mcp.json</a></p><p><a href="https://hub.twinkleai.tw/.well-known/agent-card.json" target="_blank" rel="noopener">https://hub.twinkleai.tw/.well-known/agent-card.json</a></p><p><a href="https://hub.twinkleai.tw/data" target="_blank" rel="noopener">https://hub.twinkleai.tw/data</a></p><p><a href="https://hub.twinkleai.tw/tools" target="_blank" rel="noopener">https://hub.twinkleai.tw/tools</a></p><p><a href="https://hub.twinkleai.tw/pricing" target="_blank" rel="noopener">https://hub.twinkleai.tw/pricing</a></p><p><a href="https://api.twinkleai.tw/mcp/" target="_blank" rel="noopener">https://api.twinkleai.tw/mcp/</a></p><p><a href="https://github.com/lianghsun/twinkle-hub" target="_blank" rel="noopener">https://github.com/lianghsun/twinkle-hub</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

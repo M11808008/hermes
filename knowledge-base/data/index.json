@@ -104,6 +104,44 @@
     "markdown": "articles/2026/07/2026-07-21-facebook-the-world-of-data-claude-code-15-tool-combinations.md"
   },
   {
+    "title": "Twinkle Hub｜台灣資料的 MCP 服務聚合平台：把 data.gov.tw 變成 AI agent 可查的工具層",
+    "date": "2026-07-21",
+    "source": "https://hub.twinkleai.tw/",
+    "author": "Twinkle AI",
+    "type": "link-archive",
+    "topics": [
+      "MCP",
+      "Taiwan Open Data",
+      "AI Agent",
+      "Data Infrastructure",
+      "Claude Desktop",
+      "Claude Code",
+      "Codex",
+      "Hermes Agent",
+      "Public Data",
+      "Taiwan AI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://hub.twinkleai.tw/",
+      "https://hub.twinkleai.tw/",
+      "https://hub.twinkleai.tw/llms.txt",
+      "https://hub.twinkleai.tw/.well-known/mcp.json",
+      "https://hub.twinkleai.tw/.well-known/agent-card.json",
+      "https://hub.twinkleai.tw/data",
+      "https://hub.twinkleai.tw/tools",
+      "https://hub.twinkleai.tw/pricing",
+      "https://api.twinkleai.tw/mcp/",
+      "https://github.com/lianghsun/twinkle-hub"
+    ],
+    "excerpt": "Twinkle Hub 的保存價值在於：它不是又一個資料入口網站，而是把台灣公開資料做成 AI agent 可直接呼叫的 MCP 工具層。對欒帥的 AI 課程、Hermes 自動化、資料治理與台灣在地 AI 應用示範來說，這是一個很好的案例：把「散落在政府網站的資料」轉成「可被 agent discover、query、materialize、引用與合規追蹤的工具」。",
+    "slug": "2026-07-21-twinkle-hub-taiwan-data-mcp-service",
+    "html": "articles/2026-07-21-twinkle-hub-taiwan-data-mcp-service.html",
+    "markdown": "articles/2026/07/2026-07-21-twinkle-hub-taiwan-data-mcp-service.md"
+  },
+  {
     "title": "Claudian 把 Claude Code/Codex 帶進 Obsidian：邊讀筆記邊呼叫本地 coding agent",
     "date": "2026-07-20",
     "source": "https://www.facebook.com/share/18sDYQbCrn/?mibextid=wwXIfr",
