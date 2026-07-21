@@ -36,6 +36,39 @@
     "markdown": "articles/2026/07/2026-07-21-facebook-chris-ke-claude-obsidian-ai-second-brain-llm-wiki.md"
   },
   {
+    "title": "林坤正 Facebook｜Kimi K3 給台灣的啟示：不要追最上層模型戰，深耕產業中層 AI",
+    "date": "2026-07-21",
+    "source": "https://www.facebook.com/share/p/18Xpu5AXNB/?mibextid=wwXIfr",
+    "author": "林坤正 / Facebook",
+    "type": "link-archive",
+    "topics": [
+      "Kimi K3",
+      "Moonshot AI",
+      "MoE",
+      "LLM",
+      "AI Strategy",
+      "Taiwan AI",
+      "ESG AI",
+      "Geopolitics"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/bill.lin.52056/posts/28125683173691076",
+      "https://www.facebook.com/share/p/18Xpu5AXNB/?mibextid=wwXIfr",
+      "https://www.facebook.com/bill.lin.52056/posts/28125683173691076",
+      "https://www.kimi.com/blog/kimi-k3",
+      "https://www.moonshot.ai/",
+      "https://moonshotai.github.io/Kimi-K2/",
+      "https://github.com/MoonshotAI/Kimi-K2"
+    ],
+    "excerpt": "這篇貼文值得保存的訊號是：Kimi K3 代表中國在晶片限制下用架構與工程繞路追近前沿模型；但對台灣來說，真正可防守的位置不是重訓大型模型，而是把既有模型與本地產業知識、專有資料、流程信任、合規與客戶關係結合，做出「懂某一行」且客戶敢用的垂直 AI。",
+    "slug": "2026-07-21-facebook-lin-kun-cheng-kimi-k3-taiwan-ai-middle-layer",
+    "html": "articles/2026-07-21-facebook-lin-kun-cheng-kimi-k3-taiwan-ai-middle-layer.html",
+    "markdown": "articles/2026/07/2026-07-21-facebook-lin-kun-cheng-kimi-k3-taiwan-ai-middle-layer.md"
+  },
+  {
     "title": "The World of Data Reel｜15 種 Claude Code 工具組合：一人開發團隊的 agent orchestration 地圖",
     "date": "2026-07-21",
     "source": "https://www.facebook.com/share/r/14h8M3o2DGo/?mibextid=wwXIfr",
