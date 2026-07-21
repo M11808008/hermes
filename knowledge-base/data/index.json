@@ -36,6 +36,41 @@
     "markdown": "articles/2026/07/2026-07-21-facebook-chris-ke-claude-obsidian-ai-second-brain-llm-wiki.md"
   },
   {
+    "title": "The World of Data Reel｜15 種 Claude Code 工具組合：一人開發團隊的 agent orchestration 地圖",
+    "date": "2026-07-21",
+    "source": "https://www.facebook.com/share/r/14h8M3o2DGo/?mibextid=wwXIfr",
+    "author": "The World of Data / Facebook Reel",
+    "type": "link-archive",
+    "topics": [
+      "Claude Code",
+      "AI Agent",
+      "MCP",
+      "Developer Tools",
+      "Automation",
+      "GitHub",
+      "Playwright",
+      "DevOps"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1061046323551398",
+      "https://www.facebook.com/reel/1061046323551398",
+      "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "https://docs.anthropic.com/en/docs/claude-code/common-workflows",
+      "https://docs.anthropic.com/en/docs/claude-code/github-actions",
+      "https://docs.anthropic.com/en/docs/claude-code/mcp",
+      "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+      "https://github.com/github/github-mcp-server",
+      "https://github.com/modelcontextprotocol/servers"
+    ],
+    "excerpt": "這則 Reel 值得保存的重點是「Claude Code 作為開發 orchestration layer」：它不只是寫 code，而是透過 terminal、repo、CI/CD、MCP servers、browser automation 與外部 SaaS，把需求拆成修改、測試、審查、部署、文件與監控的連續工作流。對欒帥的 AI 課程與團隊導入來說，這是很適合拿來講「AI agent 不是聊天機器人，而是工具化工作站」的案例。",
+    "slug": "2026-07-21-facebook-the-world-of-data-claude-code-15-tool-combinations",
+    "html": "articles/2026-07-21-facebook-the-world-of-data-claude-code-15-tool-combinations.html",
+    "markdown": "articles/2026/07/2026-07-21-facebook-the-world-of-data-claude-code-15-tool-combinations.md"
+  },
+  {
     "title": "Claudian 把 Claude Code/Codex 帶進 Obsidian：邊讀筆記邊呼叫本地 coding agent",
     "date": "2026-07-20",
     "source": "https://www.facebook.com/share/18sDYQbCrn/?mibextid=wwXIfr",

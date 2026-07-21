@@ -1,0 +1,57 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The World of Data Reel｜15 種 Claude Code 工具組合：一人開發團隊的 agent orchestration 地圖</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>The World of Data Reel｜15 種 Claude Code 工具組合：一人開發團隊的 agent orchestration 地圖</h1><p>來源是 Facebook Reel，公開 metadata 與登出頁可見文字顯示作者為 The World of Data，canonical URL 為 `<a href="https://www.facebook.com/reel/1061046323551398`。原文為阿拉伯文，核心主張是：真正讓" target="_blank" rel="noopener">https://www.facebook.com/reel/1061046323551398`。原文為阿拉伯文，核心主張是：真正讓</a> Claude Code 變強的不是模型本身，而是把它接到正確工具；15 種組合可讓單一開發者更像一支完整開發團隊。</p>
+<h1>一句話摘要</h1>
+<p>這則 Reel 值得保存的重點是「Claude Code 作為開發 orchestration layer」：它不只是寫 code，而是透過 terminal、repo、CI/CD、MCP servers、browser automation 與外部 SaaS，把需求拆成修改、測試、審查、部署、文件與監控的連續工作流。對欒帥的 AI 課程與團隊導入來說，這是很適合拿來講「AI agent 不是聊天機器人，而是工具化工作站」的案例。</p>
+<h1>可確認的公開內容</h1>
+<ul>
+<li>Facebook OG title 顯示：`3.1 萬次觀看 · 125 個心情 | 🚨 15 تركيبة لـ Claude Code... | The World of Data`。</li>
+<li>公開頁文字可見作者：The World of Data。</li>
+<li>公開頁可見互動：約 3.1 萬次觀看、125 個心情、18 則留言、64 次分享。</li>
+<li>音樂：The Black Eyed Peas · Pump It。</li>
+<li>Reel 文案列出的 15 個組合：GitHub、Docker、Supabase、Figma、Playwright、Vercel、Linear、Notion、Sentry、Postgres、Cloudflare、GitHub Actions、MCP Servers、Terminal、Browser Automation。</li>
+<li>限制：未取得完整影片畫面逐格內容或操作 demo；本文只歸檔公開 metadata/文字，並以官方文件查核可行性。</li>
+</ul>
+<h1>15 種組合的實務判讀</h1>
+<p>| 組合 | Reel 主張 | 實務上應如何理解 |</p>
+<p>|---|---|---|</p>
+<p>| GitHub | 更快 code review 與 PR 管理 | Claude Code 可讀 repo、改檔、產生 commit/PR 摘要；GitHub CLI/API 或 MCP 可補上 issue、PR、review context。 |</p>
+<p>| Docker | 在隔離環境 build/run app | 很適合用來建立可重現測試環境；agent 應被限制在專案容器或 devcontainer，降低污染本機風險。 |</p>
+<p>| Supabase | 幾分鐘建立 DB/backend | 可協助產生 schema、SQL、RLS policy 與 client code，但 production 權限與資料遷移仍需人工 review。 |</p>
+<p>| Figma | 把設計轉成可實作 UI | 可從設計 tokens、截圖或 MCP/外掛取得線索，再轉 HTML/CSS/React；仍需設計 QA 與 responsive 檢查。 |</p>
+<p>| Playwright | 撰寫與執行自動化測試 | 是 Claude Code 很關鍵的驗證工具：讓 agent 不只改 code，也能用 browser test 看到錯誤。 |</p>
+<p>| Vercel | 一鍵部署 app | 可自動準備 build settings、環境變數檢查與 deploy 指令；secret 與 production deploy gate 應保留人工確認。 |</p>
+<p>| Linear | 任務轉 code | 可把 issue acceptance criteria 轉成修改計畫與分支工作；避免讓 agent 在未釐清需求時直接實作。 |</p>
+<p>| Notion | 自動建立與更新文件 | 適合把 PR 摘要、release note、runbook、meeting action items 回寫知識庫。 |</p>
+<p>| Sentry | 找錯、分析、修復 | Sentry issue context 可餵給 agent 做 root cause debugging；修復後仍要測試與回歸驗證。 |</p>
+<p>| Postgres | 設計 DB 與查詢 | 可協助 SQL、index、migration；資料破壞性操作必須有 dry-run/backup/approval。 |</p>
+<p>| Cloudflare | Edge 部署與效能 | 可產生 Workers/Pages 設定、快取規則與 deploy workflow；環境變數、KV/D1/R2 權限需控管。 |</p>
+<p>| GitHub Actions | 自動 CI/CD | Anthropic 已有 Claude Code GitHub Actions 文件；適合做 PR automation、review、測試修復，但要設定權限邊界。 |</p>
+<p>| MCP Servers | 串接外部工具與服務 | MCP 是把 Claude Code 接到資料源/工具的標準路徑之一；要注意 server trust boundary 與 token scope。 |</p>
+<p>| Terminal | 直接執行系統命令 | Claude Code 的核心能力之一；最好搭配 sandbox、git diff、測試、lint 與明確允許清單。 |</p>
+<p>| Browser Automation | 自動測網頁與操作頁面 | 可用 Playwright/browser tools 驗證 UX、登入流程、表單與 visual regression；不可把它當成人類 QA 的完全替代。 |</p>
+<h1>官方來源查核</h1>
+<ul>
+<li>Anthropic Claude Code overview：Claude Code 是 terminal-based coding assistant，可理解 codebase、編輯檔案、執行 command、協助 git workflow。</li>
+<li>Anthropic common workflows：官方文件把探索 code、修 bug、測試、提交 commit/PR、使用 image/context 等列為常見工作流。</li>
+<li>Anthropic GitHub Actions：官方支援在 GitHub workflow 中叫用 Claude Code，用於 PR/issue 自動化與 CI 場景。</li>
+<li>Anthropic MCP：Claude Code 可透過 MCP 連接外部 tools/data sources，這對應 Reel 的「with which tool will you connect it?」。</li>
+<li>GitHub MCP Server 與 modelcontextprotocol/servers：提供 GitHub、filesystem、browser/automation、database 等多種 server/connector 生態線索。</li>
+</ul>
+<h1>對 AI 學習雷達的意義</h1>
+<p>這則貼文可以放進「coding agent stack」主題：</p>
+<ul>
+<li>第一層是 agent shell：Claude Code/Codex 讀專案、改檔、跑測試。</li>
+<li>第二層是 verification tools：Playwright、Docker、CI、lint、typecheck。</li>
+<li>第三層是 delivery tools：GitHub、Vercel、Cloudflare、GitHub Actions。</li>
+<li>第四層是 knowledge/ops tools：Linear、Notion、Sentry、Postgres、Supabase。</li>
+<li>第五層是 connector layer：MCP servers、API、CLI、browser automation。</li>
+</ul>
+<p>它也很適合做課堂示範：讓學生比較「只問 ChatGPT 怎麼寫功能」與「讓 agent 在 repo 中修改、測試、部署、回寫文件」的差異。</p>
+<h1>Caveats</h1>
+<ul>
+<li>Reel 的 15 個組合是高層次地圖，不等於每個工具都有同等成熟、官方、零設定的 Claude Code integration。</li>
+<li>讓 agent 連接 GitHub、Sentry、Notion、Vercel、Cloudflare 等服務時，token scope、審批流程、費用上限與資料外流風險要先設計。</li>
+<li>Browser automation 與 terminal 權限很強，應搭配 sandbox、專案目錄限制、git diff review、測試與人工 gate。</li>
+<li>「一人像一隊」是生產力隱喻，不代表可以省略產品判斷、資安、架構設計、code review 與上線責任。</li>
+</ul>
+<h1>Why it matters</h1>
+<p>Claude Code 類工具的價值不只是「幫我寫一段程式」，而是把開發流程變成可觀測、可驗證、可回滾的 agent loop。這類內容很適合轉成欒帥課程中的工作流案例：AI agent 的關鍵能力，是能拿工具、看結果、修正錯誤，而不是只產生漂亮文字。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-21 · https://www.facebook.com/share/r/14h8M3o2DGo/?mibextid=wwXIfr · link-archive</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">AI Agent</span><span class="tag">MCP</span><span class="tag">Developer Tools</span><span class="tag">Automation</span><span class="tag">GitHub</span><span class="tag">Playwright</span><span class="tag">DevOps</span><h3>原始連結</h3><p><a href="https://www.facebook.com/reel/1061046323551398" target="_blank" rel="noopener">https://www.facebook.com/reel/1061046323551398</a></p><p><a href="https://www.facebook.com/reel/1061046323551398" target="_blank" rel="noopener">https://www.facebook.com/reel/1061046323551398</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/overview</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/common-workflows" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/common-workflows</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/github-actions" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/github-actions</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/mcp" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/mcp</a></p><p><a href="https://docs.anthropic.com/en/docs/claude-code/ide-integrations" target="_blank" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/ide-integrations</a></p><p><a href="https://github.com/github/github-mcp-server" target="_blank" rel="noopener">https://github.com/github/github-mcp-server</a></p><p><a href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noopener">https://github.com/modelcontextprotocol/servers</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
