@@ -1,5 +1,36 @@
 [
   {
+    "title": "一人公司研究所 Reel｜Lobster、Manus、OpenHuman 三種 AI Agent 敘事的查核筆記",
+    "date": "2026-07-22",
+    "source": "https://www.facebook.com/share/v/1FzWWX6un1/",
+    "author": "一人公司研究所 / Facebook Reel",
+    "type": "link-archive",
+    "topics": [
+      "AI Agent",
+      "一人公司",
+      "Manus",
+      "OpenHuman",
+      "Lobster",
+      "Benchmark",
+      "Automation",
+      "社群短影音"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1402269048627870",
+      "https://www.facebook.com/share/v/1FzWWX6un1/",
+      "https://www.facebook.com/reel/1402269048627870",
+      "https://manus.im/",
+      "https://openhuman.ai/"
+    ],
+    "excerpt": "這則 Reel 值得保存，但更適合作為「AI Agent 行銷敘事查核」而不是產品排行：Manus 官方定位確實是可執行任務與自動化 workflow 的 action engine；OpenHuman 官方可確認的是 WebGL digital human render engine / SDK，而不是已公開證實的通用 autonomous agent；Lobster 與「三者最新 benchmark 排名」在公開來源中尚未查到足夠官方證據，因此本文保留為社群說法並加註查核限制。",
+    "slug": "2026-07-22-facebook-one-person-company-ai-agent-lobster-manus-openhuman",
+    "html": "articles/2026-07-22-facebook-one-person-company-ai-agent-lobster-manus-openhuman.html",
+    "markdown": "articles/2026/07/2026-07-22-facebook-one-person-company-ai-agent-lobster-manus-openhuman.md"
+  },
+  {
     "title": "Chris KE Facebook｜Claude + Obsidian 15 分鐘 AI 第二大腦：LLM Wiki 熱門教學的準確解讀",
     "date": "2026-07-21",
     "source": "https://www.facebook.com/share/1TUVtcLLbP/?mibextid=wwXIfr",
