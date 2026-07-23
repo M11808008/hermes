@@ -1,5 +1,47 @@
 [
   {
+    "title": "Adrees AI Automation｜Claude Code 外掛、Skills、MCP 24 件安裝清單查核",
+    "date": "2026-07-23",
+    "source": "https://www.facebook.com/share/p/1GJoNYe8yK/",
+    "author": "Adrees AI Automation / Facebook Post",
+    "type": "link-archive",
+    "topics": [
+      "Claude Code",
+      "Claude Skills",
+      "MCP",
+      "Plugins",
+      "AI 工具",
+      "Agent Workflow",
+      "社群貼文"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/adreesAI/posts/pfbid02Xq5ap2WnhBcJguqLFMW33puqyUrj13XoWC1WE1AJMPVSAJFZwxhdqVdahdAwNvAl",
+      "https://www.facebook.com/share/p/1GJoNYe8yK/",
+      "https://code.claude.com/docs/en/plugins",
+      "https://github.com/anthropics/claude-code/blob/main/plugins/README.md",
+      "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "https://github.com/anthropics/skills",
+      "https://code.claude.com/docs/en/mcp-quickstart",
+      "https://github.com/garrytan/gstack",
+      "https://github.com/obra/superpowers",
+      "https://github.com/openai/codex-plugin-cc",
+      "https://github.com/heygen-com/hyperframes",
+      "https://www.granola.ai/blog/granola-mcp",
+      "https://docs.slack.dev/ai/slack-mcp-server/connect-to-claude/",
+      "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+      "https://zapier.com/mcp",
+      "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server",
+      "https://higgsfield.ai/mcp"
+    ],
+    "excerpt": "這張圖適合作為「Claude Code 生態地圖」保存：Plugins 對應可安裝的 Claude Code 擴充包，Skills 對應可按任務載入的工作流知識，MCP 對應外部服務連線；但星數、下載量與「base Claude cannot」這類敘事需要保留查核邊界，不能把每個項目都視為官方推薦或已實測能力。",
+    "slug": "2026-07-23-facebook-adrees-ai-claude-24-plugins-skills-mcp",
+    "html": "articles/2026-07-23-facebook-adrees-ai-claude-24-plugins-skills-mcp.html",
+    "markdown": "articles/2026/07/2026-07-23-facebook-adrees-ai-claude-24-plugins-skills-mcp.md"
+  },
+  {
     "title": "鄉民食堂｜張記鍋貼牛肉麵：西門町中山堂旁小巷裡的韭黃鍋貼老店",
     "date": "2026-07-22",
     "source": "https://www.facebook.com/share/1FNwmRSYb3/?mibextid=wwXIfr",
