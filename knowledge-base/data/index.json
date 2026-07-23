@@ -62,6 +62,41 @@
     "markdown": "articles/2026/07/2026-07-22-facebook-one-person-company-ai-agent-lobster-manus-openhuman.md"
   },
   {
+    "title": "S 的 AI 研究所 Reel｜5 個 Claude Skills 工具清單與查核筆記",
+    "date": "2026-07-22",
+    "source": "https://www.facebook.com/share/r/1KFTkRaszi/?mibextid=wwXIfr",
+    "author": "S 的 AI 研究所 / Facebook Reel",
+    "type": "link-archive",
+    "topics": [
+      "Claude",
+      "Claude Code",
+      "Claude Skills",
+      "AI 工具",
+      "Prompt Engineering",
+      "開源工具",
+      "社群短影音"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1058744139949327",
+      "https://www.facebook.com/share/r/1KFTkRaszi/?mibextid=wwXIfr",
+      "https://www.facebook.com/share/r/1B6CttR3Sz/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1058744139949327",
+      "https://docs.anthropic.com/en/docs/claude-code/skills",
+      "https://github.com/VincentOld/stop-slop-zh",
+      "https://github.com/hardikpandya/stop-slop",
+      "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "https://ui-ux-pro-max-skill.com/",
+      "https://github.com/oleksbard/claude-find-skill"
+    ],
+    "excerpt": "這則 Reel 值得保存成「Claude Skills 社群工具入口」：它列出的 Stop Slop、Claude Mem、UI/UX Pro Max、Task Observer、Find Skills 都是圍繞 Claude Code / Claude Skills 生態的實用方向；但其中只有部分能直接對應到公開 GitHub 或工具頁，未找到原始專案的項目應保留為社群推薦，而不是官方功能清單。",
+    "slug": "2026-07-22-facebook-s-ai-lab-claude-skills-five-tools",
+    "html": "articles/2026-07-22-facebook-s-ai-lab-claude-skills-five-tools.html",
+    "markdown": "articles/2026/07/2026-07-22-facebook-s-ai-lab-claude-skills-five-tools.md"
+  },
+  {
     "title": "Chris KE Facebook｜Claude + Obsidian 15 分鐘 AI 第二大腦：LLM Wiki 熱門教學的準確解讀",
     "date": "2026-07-21",
     "source": "https://www.facebook.com/share/1TUVtcLLbP/?mibextid=wwXIfr",
