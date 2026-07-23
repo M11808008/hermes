@@ -42,6 +42,42 @@
     "markdown": "articles/2026/07/2026-07-23-facebook-adrees-ai-claude-24-plugins-skills-mcp.md"
   },
   {
+    "title": "Adrees AI Automation｜Graphify + Obsidian + Claude Code 知識圖譜工作流查核",
+    "date": "2026-07-23",
+    "source": "https://www.facebook.com/share/p/19LLn19HY3/",
+    "author": "Adrees AI Automation / Facebook Post",
+    "type": "link-archive",
+    "topics": [
+      "Claude Code",
+      "Graphify",
+      "Obsidian",
+      "Knowledge Graph",
+      "AI Agent",
+      "Second Brain",
+      "Agent Workflow",
+      "社群貼文"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/adreesAI/posts/pfbid0GWH5Nov2DaV9sofm2fcPBthHSSi727PcxsLperegMPtCWg3eFk4quvabqqQY7XkWl",
+      "https://www.facebook.com/share/p/19LLn19HY3/",
+      "https://github.com/Graphify-Labs/graphify",
+      "https://graphify.com/",
+      "https://graphify.net/",
+      "https://code.claude.com/docs/en/overview",
+      "https://code.claude.com/docs/llms.txt",
+      "https://obsidian.md/",
+      "https://obsidian.md/help/plugins/graph",
+      "https://www.chaseai.io/blog/graphify-obsidian-claude-code-second-brain"
+    ],
+    "excerpt": "這則貼文值得保存，因為它抓到 Claude Code 長上下文工作的核心痛點：文件不是越多越好，重點是把文件轉成可導航、可查詢、可維護的知識結構；但圖中的 145 documents、591 ideas、685 connections、67 clusters 屬於作者示範案例，不應直接外推為任何專案都能得到相同效果或 token 節省。",
+    "slug": "2026-07-23-facebook-adrees-ai-graphify-obsidian-claude-business-knowledge-graph",
+    "html": "articles/2026-07-23-facebook-adrees-ai-graphify-obsidian-claude-business-knowledge-graph.html",
+    "markdown": "articles/2026/07/2026-07-23-facebook-adrees-ai-graphify-obsidian-claude-business-knowledge-graph.md"
+  },
+  {
     "title": "鄉民食堂｜張記鍋貼牛肉麵：西門町中山堂旁小巷裡的韭黃鍋貼老店",
     "date": "2026-07-22",
     "source": "https://www.facebook.com/share/1FNwmRSYb3/?mibextid=wwXIfr",
