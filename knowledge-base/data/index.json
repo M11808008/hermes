@@ -1,5 +1,94 @@
 [
   {
+    "title": "Threads｜把論文交給 AI 生成 HTML 導讀頁：知識地圖、雙欄批註與跨論文比較 prompt",
+    "date": "2026-07-24",
+    "source": "https://www.threads.com/@move_model26/post/DbIMwYFkeTo?xmt=AQG0zAqqJ1wHawz422A4mP2cFD9gKyKVmJTXrCPAI_mma04VsPR_744KWmi8XyaV8jLVWeRfFA&slof=1",
+    "author": "Move & Model | 跨界實驗室 / @move_model26",
+    "type": "link-archive",
+    "topics": [
+      "AI Reading",
+      "Paper Reading",
+      "HTML",
+      "Prompt",
+      "Research Workflow",
+      "Knowledge Map",
+      "Academic Writing",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@move_model26/post/DbIMwYFkeTo",
+      "https://www.threads.com/@move_model26/post/DbIMwYFkeTo"
+    ],
+    "excerpt": "# Threads｜把論文交給 AI 生成 HTML 導讀頁 這則 Threads 由 Move & Model | 跨界實驗室分享，主題是把論文交給 AI 生成更適合閱讀的網頁，而不是只做條列摘要。貼文把完整 prompt 拆成內容架構、HTML 輸出規格與視覺設計要求。 ![AI 生成論文批註導讀 HTML 頁面截",
+    "slug": "2026-07-24-threads-ai-paper-to-html-reading-interface",
+    "html": "articles/2026-07-24-threads-ai-paper-to-html-reading-interface.html",
+    "markdown": "articles/2026/07/2026-07-24-threads-ai-paper-to-html-reading-interface.md"
+  },
+  {
+    "title": "Threads｜Google Slides 推出 Gemini 整份簡報生成：可編輯、可引用 Drive 檔案、可沿用品牌風格",
+    "date": "2026-07-24",
+    "source": "https://www.threads.com/@whaleagent/post/DbHhiwjjkad?xmt=AQG0j252JD49w9DbahLqp6m3fstFH5ng2Oei3W6Bo2ek0ILq1J72uflIe1mMoJ5NMq7BCWO6jQ&slof=1",
+    "author": "Moby Dick / @whaleagent",
+    "type": "link-archive",
+    "topics": [
+      "Google Slides",
+      "Gemini",
+      "Google Workspace",
+      "Presentation",
+      "AI Productivity",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@whaleagent/post/DbHhiwjjkad",
+      "https://www.threads.com/@whaleagent/post/DbHhiwjjkad",
+      "https://workspaceupdates.googleblog.com/2026/06/create-fully-native-and-editable-presentations-with-Gemini-in-Google-Slides.html",
+      "https://workspace.google.com/blog/product-announcements/create-on-brand-presentations-in-minutes-with-gemini-in-google-slides",
+      "https://support.google.com/docs/answer/17111393?hl=en"
+    ],
+    "excerpt": "# Threads｜Google Slides 推出 Gemini 整份簡報生成 來源是 Moby Dick / whaleagent 在 Threads 分享的科技新聞：Google 正式在 Slides 推出 Gemini 簡報生成功能，可用 Docs、Sheets、PDF 等內容作為上下文，在數分鐘內生成品牌風格",
+    "slug": "2026-07-24-threads-google-slides-gemini-presentations",
+    "html": "articles/2026-07-24-threads-google-slides-gemini-presentations.html",
+    "markdown": "articles/2026/07/2026-07-24-threads-google-slides-gemini-presentations.md"
+  },
+  {
+    "title": "Threads｜Lucy 2.5 即時影片編輯與 OBS 虛擬相機體驗",
+    "date": "2026-07-24",
+    "source": "https://www.threads.com/@prompt_case/post/DbId0ZBDeWf?xmt=AQG03XkzVGqbQGn53lS6_SYNsCoI74WyKZKn5NqpDSnT0yoGG_eB49e9NqHDRB47VVKuVr7w7w&slof=1",
+    "author": "Prompt Case / @prompt_case",
+    "type": "link-archive",
+    "topics": [
+      "Lucy 2.5",
+      "Decart AI",
+      "AI Video",
+      "Real-time Video Editing",
+      "OBS",
+      "WebRTC",
+      "Deepfake",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/DbId0ZBDeWf",
+      "https://www.threads.com/@prompt_case/post/DbId0ZBDeWf",
+      "https://lucy.decart.ai/",
+      "https://platform.decart.ai/models/lucy-edit-live",
+      "https://decart.ai/publications/lucy-2-introducing-sota-video-generation-in-realtime",
+      "https://obsproject.com/kb/virtual-camera-guide"
+    ],
+    "excerpt": "# Threads｜Lucy 2.5 即時影片編輯與 OBS 虛擬相機體驗 來源是 Prompt Case 在 Threads 分享的 Lucy 2.5 教學貼文，主張這是一個可免費體驗的即時 Deepfake / 影片風格轉換工具，可搭配 OBS 虛擬相機使用。 ![Lucy 2.5 即時影片編輯介面封面](../a",
+    "slug": "2026-07-24-threads-lucy-25-realtime-video-editing",
+    "html": "articles/2026-07-24-threads-lucy-25-realtime-video-editing.html",
+    "markdown": "articles/2026/07/2026-07-24-threads-lucy-25-realtime-video-editing.md"
+  },
+  {
     "title": "Adrees AI Automation｜Claude Code 外掛、Skills、MCP 24 件安裝清單查核",
     "date": "2026-07-23",
     "source": "https://www.facebook.com/share/p/1GJoNYe8yK/",
