@@ -1,0 +1,73 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Free Claude Code｜把 Claude Code / Codex / Pi 接到第三方或本地模型的代理工具查核</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Free Claude Code｜把 Claude Code / Codex / Pi 接到第三方或本地模型的代理工具查核</h1><p>來源是 GitHub 專案 `Alishahryar1/free-claude-code`。它不是 Anthropic 官方的「免費 Claude Code 帳號」，而是一個本機代理層：讓 Claude Code、Codex CLI、Pi 或 IDE extension 連到使用者自己配置的第三方、免費額度、付費或本地模型 provider。</p>
+<figure><img src="../assets/source-images/2026-07-23-github-free-claude-code-provider-proxy.jpg" alt="Free Claude Code proxy 讓 Claude Code 透過本機代理執行的 README 截圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>Free Claude Code proxy 讓 Claude Code 透過本機代理執行的 README 截圖</figcaption></figure>
+<h1>一句話摘要</h1>
+<p>值得保存，但要把「free」理解為「可接免費額度或本地模型」，不是繞過 Claude Code / Anthropic 授權；實務上它是 Anthropic Messages / OpenAI Responses 風格的本機 gateway，核心價值在 provider 選擇、模型路由、Admin UI、Claude Code / Codex / Pi launcher 與 Telegram / Discord 遠端操作整合。</p>
+<h1>GitHub 公開資訊</h1>
+<ul>
+<li>Repo：`Alishahryar1/free-claude-code`</li>
+<li>描述：`Use Claude Code, Codex, Pi, or their IDE extensions through your own provider-backed proxy.`</li>
+<li>語言：Python。</li>
+<li>授權：MIT License。</li>
+<li>需求：`requires-python &gt;=3.14.0`，使用 `uv` / FastAPI / httpx / OpenAI SDK 等。</li>
+<li>擷取時 GitHub 指標：約 41.7k stars、6.7k forks、333 open issues。</li>
+<li>latest release API 回傳 404：代表未透過 GitHub Releases 發布正式 release；版本號在 `pyproject.toml` 顯示為 `4.12.0`。</li>
+<li>最近 CI 可見成功紀錄：`CI ali/align-provider-admission-defaults` 成功；也有其他 branch workflow 曾顯示 `action_required`，不等於 main 不能用，但代表仍需看分支狀態。</li>
+</ul>
+<h1>它實際做什麼</h1>
+<p>README 主張 FCC 可：</p>
+<ul>
+<li>啟動 `fcc-server`，在本機提供 Admin UI，預設 log 顯示 `<a href="http://127.0.0.1:8082/admin`。" target="_blank" rel="noopener">http://127.0.0.1:8082/admin`。</a></li>
+<li>透過 `fcc-claude` 啟動 Claude Code。</li>
+<li>透過 `fcc-codex` 啟動 Codex CLI。</li>
+<li>透過 `fcc-pi` 啟動 Pi。</li>
+<li>在 Admin UI 選擇與驗證 provider / model。</li>
+<li>支援雲端與本地 provider，包括 NVIDIA NIM、OpenRouter、Mistral、DeepSeek、Kimi、Vercel AI Gateway、Bedrock、Hugging Face、Cohere、GitHub Models、Gemini、Groq、SambaNova、Cerebras、Fireworks、Cloudflare、LM Studio、llama.cpp、Ollama 等。</li>
+<li>讓 Claude Code / Codex 使用原生 model picker 或產生模型 catalog。</li>
+<li>可選 Telegram / Discord 遠端操作與語音轉文字。</li>
+<li>可用 optional token authentication 保護本機 proxy。</li>
+</ul>
+<h1>官方查核：Claude Code 確實支援自訂端點</h1>
+<p>Anthropic Claude Code 官方文件的 Authentication 頁面明確寫到：若要把請求導向自訂 API endpoint，可設定 `ANTHROPIC_BASE_URL`。官方同頁也列出支援的認證型態包含 Claude.ai credentials、Claude API credentials、Microsoft Foundry、Bedrock、Vertex 與 Claude apps gateway session tokens。</p>
+<p>Claude Code setup 文件也確認官方安裝方式包含 `npm install -g @anthropic-ai/claude-code`，而 Help Center 另外提醒：如果系統設定了 `ANTHROPIC_API_KEY`，Claude Code 會優先使用 API key，而不是 Pro / Max / Team / Enterprise 訂閱額度，可能產生 API usage charges。</p>
+<p>所以 FCC 的方向「讓 Claude Code 指向本機 gateway」在機制上成立；但它是否完整相容所有 Claude Code 功能，取決於代理層對 Anthropic Messages、tool use、streaming、reasoning、image input、token count 等 API 形狀的實作完整度。</p>
+<h1>重要邊界與風險</h1>
+<h2>1. 不是官方 Anthropic 專案</h2>
+<p>這是第三方 repo。官方 Claude Code package 仍是 `@anthropic-ai/claude-code`；FCC 透過環境變數與 launcher 改變其連線目標。若公司環境有合規要求，需先確認是否允許把 Claude Code request 經由第三方 proxy 轉送到其他 provider。</p>
+<h2>2. 「free」不是無成本</h2>
+<p>README 寫的是 `free, paid, or local models`。若選 NVIDIA NIM、OpenRouter、Gemini、Groq、GitHub Models 等 provider，實際仍受各 provider 的 API key、免費額度、rate limit、模型授權與計費規則約束。若選本地 Ollama / LM Studio / llama.cpp，成本轉為本機硬體與模型部署成本。</p>
+<h2>3. 安裝指令有典型 curl pipe shell 風險</h2>
+<p>README 建議：</p>
+<p>```bash</p>
+<p>curl -fsSL &quot;<a href="https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh&quot;" target="_blank" rel="noopener">https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh&quot;</a> | sh</p>
+<p>```</p>
+<p>檢查 `install.sh` 可見它會下載 repo archive，並在缺少工具時呼叫 Claude、Codex、Pi、uv 的官方安裝腳本 URL。這類 one-liner 很方便，但在安全實務上應先下載審閱、固定 commit SHA，或至少用 `--dry-run` 查看會執行哪些步驟。</p>
+<h2>4. API key 集中管理需小心</h2>
+<p>`.env.example` 涵蓋大量 provider key：NVIDIA NIM、OpenRouter、Mistral、DeepSeek、Kimi、Vercel、Bedrock、Hugging Face、Cohere、GitHub Models、Gemini、Groq 等。這提高切換便利性，也讓本機設定檔成為敏感資產。建議：</p>
+<ul>
+<li>不要把 `.env` commit 到 repo。</li>
+<li>proxy 只綁 `127.0.0.1`，不要暴露到公網。</li>
+<li>啟用並更換預設 auth token。</li>
+<li>對高額 provider 設定 spending limit / rate limit。</li>
+</ul>
+<h2>5. Claude Code 資料流與遙測仍要分清楚</h2>
+<p>Anthropic data usage 文件列出可用 `DISABLE_TELEMETRY`、`CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` 等環境變數控制非必要流量。FCC README 的 VS Code 設定範例也加入 `DISABLE_AUTOUPDATER`、`DISABLE_FEEDBACK_COMMAND`、`DISABLE_ERROR_REPORTING`、`DISABLE_TELEMETRY` 等變數。這有助於降低非必要流量，但不等於所有 downstream provider 都有相同資料保護政策；真正送出的 prompt / code 仍會到你選的 provider。</p>
+<h1>初步判斷</h1>
+<p>這個專案對「想用 Claude Code 工作流，但希望改接 OpenRouter / Gemini / NVIDIA NIM / 本地 Ollama / LM Studio 等模型」的人很有價值。它把 Claude Code 的 terminal / IDE 操作體驗，和多 provider routing 做成一個相對完整的本機代理產品。</p>
+<p>但我不會把它歸類為「免費取得 Claude Code 官方高階額度」或「無風險替代官方方案」。更精準的定位是：</p>
+<ul>
+<li>本機 AI coding agent gateway。</li>
+<li>Claude Code / Codex / Pi launcher wrapper。</li>
+<li>多 provider 管理 UI。</li>
+<li>需要使用者自行承擔 provider 成本、資料治理與安裝信任風險的開源工具。</li>
+</ul>
+<h1>建議使用方式</h1>
+<p>若要測試，建議順序：</p>
+<ul>
+<li>先讀 `scripts/install.sh` / `install.ps1`，不要直接 pipe shell。</li>
+<li>以 throwaway 專案與低權限 API key 測試。</li>
+<li>只綁 localhost，不做 reverse proxy。</li>
+<li>先用免費或本地 provider 驗證 Claude Code tool use / streaming 是否符合需求。</li>
+<li>若要接工作程式碼，先確認 provider 的資料保留、訓練、區域與合規條款。</li>
+</ul>
+<h1>保存原因</h1>
+<p>AI coding agent 的趨勢不是只換模型，而是把 IDE / CLI agent 的使用體驗與可替換 provider 分離。FCC 是這個方向很具代表性的開源實作：它把 Claude Code / Codex / Pi 當成前端，把模型與計費後端抽象成可配置 gateway。後續如果 Claude Code 生態往 gateway、enterprise routing、local model fallback 發展，這類工具很可能成為重要參考。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-23 · https://github.com/Alishahryar1/free-claude-code · link-archive</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Pi</span><span class="tag">AI Agent</span><span class="tag">Local Proxy</span><span class="tag">OpenAI-compatible API</span><span class="tag">Provider Gateway</span><span class="tag">GitHub</span><h3>原始連結</h3><p><a href="https://github.com/Alishahryar1/free-claude-code" target="_blank" rel="noopener">https://github.com/Alishahryar1/free-claude-code</a></p><p><a href="https://github.com/Alishahryar1/free-claude-code" target="_blank" rel="noopener">https://github.com/Alishahryar1/free-claude-code</a></p><p><a href="https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh</a></p><p><a href="https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.ps1" target="_blank" rel="noopener">https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.ps1</a></p><p><a href="https://code.claude.com/docs/en/authentication" target="_blank" rel="noopener">https://code.claude.com/docs/en/authentication</a></p><p><a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">https://code.claude.com/docs/en/setup</a></p><p><a href="https://code.claude.com/docs/en/data-usage" target="_blank" rel="noopener">https://code.claude.com/docs/en/data-usage</a></p><p><a href="https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan" target="_blank" rel="noopener">https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan</a></p><p><a href="https://www.npmjs.com/package/@anthropic-ai/claude-code" target="_blank" rel="noopener">https://www.npmjs.com/package/@anthropic-ai/claude-code</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

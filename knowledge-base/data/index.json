@@ -78,6 +78,42 @@
     "markdown": "articles/2026/07/2026-07-23-facebook-adrees-ai-graphify-obsidian-claude-business-knowledge-graph.md"
   },
   {
+    "title": "Free Claude Code｜把 Claude Code / Codex / Pi 接到第三方或本地模型的代理工具查核",
+    "date": "2026-07-23",
+    "source": "https://github.com/Alishahryar1/free-claude-code",
+    "author": "Alishahryar1 / GitHub Repository",
+    "type": "link-archive",
+    "topics": [
+      "Claude Code",
+      "Codex",
+      "Pi",
+      "AI Agent",
+      "Local Proxy",
+      "OpenAI-compatible API",
+      "Provider Gateway",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/Alishahryar1/free-claude-code",
+      "https://github.com/Alishahryar1/free-claude-code",
+      "https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/README.md",
+      "https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh",
+      "https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.ps1",
+      "https://code.claude.com/docs/en/authentication",
+      "https://code.claude.com/docs/en/setup",
+      "https://code.claude.com/docs/en/data-usage",
+      "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+      "https://www.npmjs.com/package/@anthropic-ai/claude-code"
+    ],
+    "excerpt": "值得保存，但要把「free」理解為「可接免費額度或本地模型」，不是繞過 Claude Code / Anthropic 授權；實務上它是 Anthropic Messages / OpenAI Responses 風格的本機 gateway，核心價值在 provider 選擇、模型路由、Admin UI、Claude Code / Codex / Pi launcher 與 Telegram / Discord 遠端操作整合。",
+    "slug": "2026-07-23-github-free-claude-code-provider-proxy",
+    "html": "articles/2026-07-23-github-free-claude-code-provider-proxy.html",
+    "markdown": "articles/2026/07/2026-07-23-github-free-claude-code-provider-proxy.md"
+  },
+  {
     "title": "鄉民食堂｜張記鍋貼牛肉麵：西門町中山堂旁小巷裡的韭黃鍋貼老店",
     "date": "2026-07-22",
     "source": "https://www.facebook.com/share/1FNwmRSYb3/?mibextid=wwXIfr",
