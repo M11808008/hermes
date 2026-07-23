@@ -1,0 +1,131 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hermes Agent 中文社群｜新手使用 Hermes 最常踩 5 個坑查核</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Hermes Agent 中文社群｜新手使用 Hermes 最常踩 5 個坑查核</h1><p>來源是 Hermes Agent 中文社群中的 Facebook 貼文，作者 Gask Huang-Kai。貼文主題是「使用 Hermes 最常踩 5 個坑」，核心建議包括：不要讓主力模型處理所有輔助任務、補好 SOUL.md、寫清楚 `/goal` 驗收標準、定期檢查記憶、精簡工具與技能。</p>
+<figure><img src="../assets/source-images/2026-07-23-facebook-hermes-agent-five-common-mistakes.jpg" alt="AI 智能代理：新手用戶在剛開始使用 Hermes Agent 時會犯的 5 大錯誤圖卡" loading="lazy" referrerpolicy="no-referrer"><figcaption>AI 智能代理：新手用戶在剛開始使用 Hermes Agent 時會犯的 5 大錯誤圖卡</figcaption></figure>
+<h1>一句話摘要</h1>
+<p>這篇很值得保存，因為它抓到 Hermes 新手最容易忽略的成本與品質來源：auxiliary models、SOUL.md、記憶與工具集設定；但其中有幾個指令/設定需要用官方文件與實際 CLI 行為校正，特別是 `hermes skills disable` 不是目前可用的 skills 子命令，應改用 `hermes skills config` 互動設定，或依需求用 `hermes skills uninstall` 移除 hub skill。</p>
+<h1>Facebook 公開頁可見內容</h1>
+<ul>
+<li>分享網址：`<a href="https://www.facebook.com/share/p/1EBFHDXSNj/?mibextid=wwXIfr`" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EBFHDXSNj/?mibextid=wwXIfr`</a></li>
+<li>解析後 canonical：`<a href="https://www.facebook.com/groups/hermesagent/posts/1377076593830391/?mibextid=wwXIfr`" target="_blank" rel="noopener">https://www.facebook.com/groups/hermesagent/posts/1377076593830391/?mibextid=wwXIfr`</a></li>
+<li>社團：Hermes Agent 中文社群。</li>
+<li>作者：Gask Huang-Kai。</li>
+<li>時間：公開頁顯示約 `1天`。</li>
+<li>可見互動：76 個心情、3 則留言、38 次分享。</li>
+<li>可見留言中有人指出：`hermes skills disable` 不是有效命令，CLI 顯示 skills action 可選 `browse, search, install, inspect, list, check, update, audit, uninstall, reset, list-modified, diff, opt-out, opt-in, repair-official...` 等。</li>
+</ul>
+<h1>圖卡 OCR / 視覺重點</h1>
+<p>圖卡標題：</p>
+<p>`AI 智能代理`</p>
+<p>`5 大錯誤`</p>
+<p>`新手用戶在剛開始使用 Hermes Agent 時會犯的錯`</p>
+<p>五個錯誤圖示：</p>
+<ul>
+<li>`主模型什麼都做`</li>
+<li>`給空的 soul 和指令`</li>
+<li>`模糊的提示與目標`</li>
+<li>`定期刪除舊記憶`</li>
+<li>`不自動呼叫工具`</li>
+</ul>
+<p>左下角終端機區塊：</p>
+<ul>
+<li>`Hermes Agent 已啟動`</li>
+<li>`記憶體已載入`</li>
+<li>`技能模組已就緒`</li>
+<li>`瀏覽器已連線`</li>
+<li>`終端機已上線`</li>
+<li>`自動化排程已啟用`</li>
+<li>`hermes-agent ~ $`</li>
+</ul>
+<p>右下角定位：</p>
+<p>`專為開發者與進階用戶打造`</p>
+<ul>
+<li>`預設本地優先`</li>
+<li>`可擴充技能模組`</li>
+<li>`跨工具無縫整合`</li>
+<li>`支援開發者常用工具鏈`</li>
+<li>`MIT 開源授權`</li>
+</ul>
+<h1>五個建議逐點查核</h1>
+<h2>1. 不要讓主力模型包山包海：大方向成立</h2>
+<p>官方設定文件明確說明，Hermes 會用 auxiliary models 處理 image analysis、web page summarization、browser screenshot analysis、session-title generation、context compression 等側任務。官方也提醒：預設 `auxiliary.*.provider: &quot;auto&quot;` 會用主 chat model；如果主模型是昂貴 reasoning model，輔助任務會增加成本。</p>
+<p>可採用的正確設定方向：</p>
+<p>```yaml</p>
+<p>auxiliary:</p>
+<p>  vision:</p>
+<p>    provider: openrouter</p>
+<p>    model: google/gemini-2.5-flash</p>
+<p>  web_extract:</p>
+<p>    provider: openrouter</p>
+<p>    model: google/gemini-2.5-flash</p>
+<p>  session_search:</p>
+<p>    provider: openrouter</p>
+<p>    model: google/gemini-2.5-flash</p>
+<p>  compression:</p>
+<p>    provider: openrouter</p>
+<p>    model: google/gemini-2.5-flash</p>
+<p>```</p>
+<p>或更穩妥：執行 `hermes model`，選 `Configure auxiliary models` 逐項設定。</p>
+<p>貼文說「省下 30% 到 50% token」可作為經驗值，但不是官方保證；實際節省取決於使用場景、工具頻率、是否大量 vision/web_extract/compression、主模型價格與 context 長度。</p>
+<h2>2. SOUL.md 不能空：成立，但要區分用途</h2>
+<p>官方 SOUL.md 指南說：`SOUL.md` 是 Hermes instance 的 primary identity，會定義助理如何說話、避免什麼、預設人格與溝通風格。若 SOUL.md missing、empty 或無法讀取，Hermes 會 fallback 到 built-in default identity。</p>
+<p>因此，貼文提醒「空 SOUL.md 會讓助理缺乏個性與規則」方向成立。更精準的建議是：</p>
+<ul>
+<li>SOUL.md 放「助理人格、語氣、預設行為、工作原則」。</li>
+<li>具體專案規則放 AGENTS.md / CLAUDE.md / .cursorrules。</li>
+<li>使用者長期偏好與事實放 memory / user profile。</li>
+<li>不要把一時任務需求或易過期細節塞進 SOUL.md。</li>
+</ul>
+<h2>3. `/goal` 要有驗收標準：成立</h2>
+<p>`/goal` 是 persistent goals 機制，會讓 Hermes 持續推進直到目標判定完成或達到回合上限。貼文提醒「模糊目標容易讓 agent 亂跑或停不準」是正確的。</p>
+<p>好的 goal 應包含：</p>
+<ul>
+<li>技術棧與範圍。</li>
+<li>明確交付物。</li>
+<li>驗收條件。</li>
+<li>可用工具/部署目標。</li>
+<li>停止條件，例如 URL 回傳 200、測試通過、檔案生成完成。</li>
+</ul>
+<p>貼文提到 `max_turns: 10` 作為安全上限也合理；官方設定有 goal / agent 相關 max_turns，用來避免 persistent goal 無限延伸。</p>
+<h2>4. 定期檢查記憶檔：成立，但不是「定期刪除」</h2>
+<p>官方記憶文件的核心是：記憶應保存可長期重複利用的偏好、專案慣例、環境資訊，避免保存暫時任務進度、易過期細節或錯誤推論。貼文提醒檢查 `USER.md` / `MEMORY.md` 的方向成立。</p>
+<p>但圖卡上「定期刪除舊記憶」容易被誤解。比較好的說法是：</p>
+<ul>
+<li>定期審核，而不是盲目刪除。</li>
+<li>刪掉錯誤、過期、一次性或太細碎的記憶。</li>
+<li>補上會降低未來溝通成本的穩定偏好。</li>
+<li>程序性知識應放 skill，不應放 memory。</li>
+</ul>
+<h2>5. 精簡工具與技能：方向成立；指令需校正</h2>
+<p>Hermes 的 toolsets 可透過 `hermes tools` 互動設定，或 `hermes tools enable NAME` / `hermes tools disable NAME` 管理。工具越多，工具 schema 與選擇空間通常越大；對小任務可用較精簡 toolsets，有助於降低上下文與誤選工具風險。</p>
+<p>但貼文中的 skills 指令需要校正：目前 `hermes skills --help` 顯示沒有 `disable` 子命令。正確做法是：</p>
+<p>```bash</p>
+<p>hermes skills list</p>
+<p>hermes skills config</p>
+<p>```</p>
+<p>用 `hermes skills config` 互動啟用/停用個別 skills；若是 hub-installed skill 且確定不需要，才用：</p>
+<p>```bash</p>
+<p>hermes skills uninstall &lt;skill-name&gt;</p>
+<p>```</p>
+<p>工具則可使用：</p>
+<p>```bash</p>
+<p>hermes tools list</p>
+<p>hermes tools disable &lt;toolset&gt;</p>
+<p>hermes tools enable &lt;toolset&gt;</p>
+<p>```</p>
+<p>另外，貼文提到的：</p>
+<p>```yaml</p>
+<p>tools:</p>
+<p>  tool_search:</p>
+<p>    enabled: auto</p>
+<p>```</p>
+<p>我在目前本機 Hermes v0.14.0 與官方文件中沒有找到這個作為通用工具自動載入設定的明確配置項。更保守的可查核說法是：用 `hermes tools` / `hermes tools enable|disable` 管理 toolsets，或在單次執行時用 `hermes chat --toolsets web,terminal,skills` 明確縮小可用工具。</p>
+<h1>實務版 10 分鐘清理清單</h1>
+<ul>
+<li>跑 `hermes model`，進入 `Configure auxiliary models`，把 vision、web_extract、session_search、compression 改到便宜且穩定的模型。</li>
+<li>打開 `~/.hermes/SOUL.md`，補上助理人格、語氣、工作原則與禁忌。</li>
+<li>檢查 `~/.hermes/memories/` 或 Dashboard / Profile / Memory，刪除錯誤與過期記憶。</li>
+<li>跑 `hermes tools list`，停用目前平台不需要的 toolsets。</li>
+<li>跑 `hermes skills config`，停用很少使用或容易干擾當前平台的 skills。</li>
+<li>未來下 `/goal` 時都加上可驗證完成條件。</li>
+</ul>
+<h1>保存原因</h1>
+<p>這篇貼文適合作為 Hermes 新手 onboarding 與成本優化 checklist：它抓到成本、人格、目標、記憶、工具五個真正影響體驗的核心槓桿。需要補上的只是指令精準度與官方語義邊界：auxiliary models 可以省成本但不是保證比例；SOUL.md 是人格不是萬用設定檔；memory 要審核不是亂刪；skills 停用應走 `hermes skills config`，不是不存在的 `hermes skills disable`。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-23 · https://www.facebook.com/share/p/1EBFHDXSNj/?mibextid=wwXIfr · link-archive</div><h3>標籤</h3><span class="tag">Hermes Agent</span><span class="tag">AI Agent</span><span class="tag">Auxiliary Models</span><span class="tag">SOUL.md</span><span class="tag">Memory</span><span class="tag">Skills</span><span class="tag">Tools</span><span class="tag">社群貼文</span><h3>原始連結</h3><p><a href="https://www.facebook.com/groups/hermesagent/posts/1377076593830391/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/groups/hermesagent/posts/1377076593830391/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/share/p/1EBFHDXSNj/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EBFHDXSNj/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/groups/hermesagent/posts/1377076593830391/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/groups/hermesagent/posts/1377076593830391/?mibextid=wwXIfr</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/configuration/" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/configuration/</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/guides/use-soul-with-hermes" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/guides/use-soul-with-hermes</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/memory" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/memory</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/goals" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/goals</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/tools" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/tools</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/guides/work-with-skills" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/guides/work-with-skills</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

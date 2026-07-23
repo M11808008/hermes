@@ -78,6 +78,41 @@
     "markdown": "articles/2026/07/2026-07-23-facebook-adrees-ai-graphify-obsidian-claude-business-knowledge-graph.md"
   },
   {
+    "title": "Hermes Agent 中文社群｜新手使用 Hermes 最常踩 5 個坑查核",
+    "date": "2026-07-23",
+    "source": "https://www.facebook.com/share/p/1EBFHDXSNj/?mibextid=wwXIfr",
+    "author": "Gask Huang-Kai / Hermes Agent 中文社群",
+    "type": "link-archive",
+    "topics": [
+      "Hermes Agent",
+      "AI Agent",
+      "Auxiliary Models",
+      "SOUL.md",
+      "Memory",
+      "Skills",
+      "Tools",
+      "社群貼文"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/hermesagent/posts/1377076593830391/?mibextid=wwXIfr",
+      "https://www.facebook.com/share/p/1EBFHDXSNj/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/hermesagent/posts/1377076593830391/?mibextid=wwXIfr",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/configuration/",
+      "https://hermes-agent.nousresearch.com/docs/guides/use-soul-with-hermes",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/goals",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools",
+      "https://hermes-agent.nousresearch.com/docs/guides/work-with-skills"
+    ],
+    "excerpt": "這篇很值得保存，因為它抓到 Hermes 新手最容易忽略的成本與品質來源：auxiliary models、SOUL.md、記憶與工具集設定；但其中有幾個指令/設定需要用官方文件與實際 CLI 行為校正，特別是 `hermes skills disable` 不是目前可用的 skills 子命令，應改用 `hermes skills config` 互動設定，或依需求用 `hermes skills uninstall` 移除 hub skill。",
+    "slug": "2026-07-23-facebook-hermes-agent-five-common-mistakes",
+    "html": "articles/2026-07-23-facebook-hermes-agent-five-common-mistakes.html",
+    "markdown": "articles/2026/07/2026-07-23-facebook-hermes-agent-five-common-mistakes.md"
+  },
+  {
     "title": "John Lee｜Claude Code + Framer Motion 一句 prompt 做動畫網站 Reel 查核",
     "date": "2026-07-23",
     "source": "https://www.facebook.com/share/r/1EL5urDrB7/",
