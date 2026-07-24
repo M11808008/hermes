@@ -267,6 +267,46 @@
     "markdown": "articles/2026/07/2026-07-24-threads-prompt-case-four-ai-updates-chatgpt-claude-microsoft-grok.md"
   },
   {
+    "title": "X｜老白：中文內容創作者必裝的 10 個 Agent Skills 工具清單",
+    "date": "2026-07-24",
+    "source": "https://x.com/laobaishare/status/2080494332528976233?s=53",
+    "author": "老白（每日 AI 干货✊） / @laobaishare",
+    "type": "link-archive",
+    "topics": [
+      "AI 學習雷達",
+      "X",
+      "Agent Skills",
+      "Claude Code Skills",
+      "Codex Skills",
+      "內容創作",
+      "中文寫作",
+      "去 AI 味",
+      "社群卡片",
+      "PPT"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/laobaishare/status/2080494332528976233",
+      "https://x.com/laobaishare/status/2080494332528976233",
+      "https://github.com/op7418/Humanizer-zh",
+      "https://github.com/dontbesilent2025/dbskill",
+      "https://github.com/openakita/openakita",
+      "https://github.com/claude-world/notebooklm-skill",
+      "https://github.com/KKKKhazix/khazix-skills",
+      "https://github.com/helloianneo/ian-xiaohei-illustrations",
+      "https://github.com/op7418/guizang-social-card-skill",
+      "https://github.com/JimLiu/baoyu-skills",
+      "https://github.com/op7418/guizang-ppt-skill",
+      "https://github.com/clockless-org/html-anything"
+    ],
+    "excerpt": "這則貼文是一張中文創作者的「Agent Skills 工具棧地圖」：前段用 Humanizer-zh / dbskill 修語氣與選題，中段用 content-research-writer / notebooklm-skill / khazix-skills 做資料與長文，後段用 ian-xiaohei-illustrations、guizang-social-card-skill、baoyu-skills、guizang-ppt-skill、html-anything 把內容包裝成插圖、卡片、簡報與 HTML 頁面。",
+    "slug": "2026-07-24-x-laobaishare-10-content-creator-skills",
+    "html": "articles/2026-07-24-x-laobaishare-10-content-creator-skills.html",
+    "markdown": "articles/2026/07/2026-07-24-x-laobaishare-10-content-creator-skills.md"
+  },
+  {
     "title": "Adrees AI Automation｜Claude Code 外掛、Skills、MCP 24 件安裝清單查核",
     "date": "2026-07-23",
     "source": "https://www.facebook.com/share/p/1GJoNYe8yK/",
