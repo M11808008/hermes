@@ -34,6 +34,41 @@
     "markdown": "articles/2026/07/2026-07-24-91app-universal-cart-agentic-commerce-ucp.md"
   },
   {
+    "title": "Eigent｜Gemini Managed Agents：Google 企業級受管理代理平台與官方 Managed Agents API 查核",
+    "date": "2026-07-24",
+    "source": "https://www.eigent.ai/blog/gemini-managed-agents-explained",
+    "author": "Douglas Lai / Eigent AI",
+    "type": "link-archive",
+    "topics": [
+      "Gemini Enterprise Agent Platform",
+      "Managed Agents API",
+      "Google Cloud",
+      "Agentic AI",
+      "Antigravity",
+      "ADK",
+      "Agent Gateway",
+      "Enterprise AI"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.eigent.ai/blog/gemini-managed-agents-explained",
+      "https://www.eigent.ai/blog/gemini-managed-agents-explained",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents?hl=zh-tw",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/sandbox-environment",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/agent-registry"
+    ],
+    "excerpt": "# Eigent｜Gemini Managed Agents：Google 企業級受管理代理平台與官方 Managed Agents API 查核 來源是 Eigent AI 由 Douglas Lai 撰寫的文章〈Gemini Managed Agents Explained: Google's Enterprise",
+    "slug": "2026-07-24-eigent-gemini-managed-agents-explained",
+    "html": "articles/2026-07-24-eigent-gemini-managed-agents-explained.html",
+    "markdown": "articles/2026/07/2026-07-24-eigent-gemini-managed-agents-explained.md"
+  },
+  {
     "title": "Facebook｜Zernio：替 AI Voice Agent 快速配置電話號碼與 WebSocket 轉接",
     "date": "2026-07-24",
     "source": "https://www.facebook.com/share/p/1E8FLkWb6n/",
