@@ -307,6 +307,43 @@
     "markdown": "articles/2026/07/2026-07-24-x-laobaishare-10-content-creator-skills.md"
   },
   {
+    "title": "X｜Sen Zh：用 Vibe Coding 把履歷變成 3D 互動個人網站",
+    "date": "2026-07-24",
+    "source": "https://x.com/SenZh4/status/2080294458739036606/video/1?s=53",
+    "author": "Sen Zh / @SenZh4",
+    "type": "link-archive",
+    "topics": [
+      "AI 學習雷達",
+      "X",
+      "Vibe Coding",
+      "3D 網頁",
+      "個人網站",
+      "互動履歷",
+      "WebGL",
+      "Three.js",
+      "Blender",
+      "Creative Coding"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://x.com/SenZh4/status/2080294458739036606",
+      "https://x.com/SenZh4/status/2080294458739036606",
+      "https://www.ibm.com/think/topics/vibe-coding",
+      "https://threejs.org/",
+      "https://github.com/mrdoob/three.js/",
+      "https://www.blender.org/",
+      "https://docs.blender.org/manual/en/latest/index.html",
+      "https://github.com/google/model-viewer",
+      "https://web.dev/articles/model-viewer"
+    ],
+    "excerpt": "這是一個「履歷不再只是 PDF」的示範：把個人介紹、作品集、視覺人格與互動體驗整合成 3D 網站，用 Vibe Coding 快速生成可探索的個人品牌入口。",
+    "slug": "2026-07-24-x-senzh-vibe-coding-3d-resume-website",
+    "html": "articles/2026-07-24-x-senzh-vibe-coding-3d-resume-website.html",
+    "markdown": "articles/2026/07/2026-07-24-x-senzh-vibe-coding-3d-resume-website.md"
+  },
+  {
     "title": "Adrees AI Automation｜Claude Code 外掛、Skills、MCP 24 件安裝清單查核",
     "date": "2026-07-23",
     "source": "https://www.facebook.com/share/p/1GJoNYe8yK/",
