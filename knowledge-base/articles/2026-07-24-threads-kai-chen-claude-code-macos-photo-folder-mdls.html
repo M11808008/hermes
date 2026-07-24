@@ -1,0 +1,56 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Kai Chen：用 Claude Code 與 mdls 整理 12000 張 iPhone 照片</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Kai Chen：用 Claude Code 與 mdls 整理 12000 張 iPhone 照片</h1><p>來源是 Kai Chen（@kai_ch_chen）的 Threads 貼文。這則貼文用一個很生活化的情境說明 AI agent 的基礎用法：不是先學 Python 或買照片整理軟體，而是把「我想做什麼、限制是什麼」描述清楚，讓 Claude 產生可以在 macOS 終端機執行的指令。</p>
+<figure><img src="../assets/source-images/2026-07-24-threads-kai-chen-claude-code-macos-photo-folder-mdls-01.jpg" alt="圖卡寫著 AI 應用去神秘化：8 年 12000 張照片，搭配相機、照片與 AI 圖示" loading="lazy" referrerpolicy="no-referrer"><figcaption>8 年 12000 張照片</figcaption></figure>
+<h1>一句話摘要</h1>
+<p>這是一個「把不知道怎麼下的那行指令交給 AI」的範例：用 Claude 把 12000 張 iPhone 匯入照片，依拍攝年月整理到 2018/03、2018/04 這類資料夾。</p>
+<h1>原文重點</h1>
+<p>貼文描述：硬碟裡有 8 年、12000 張照片，全部堆在「iPhone 匯入」資料夾。想找去年宜蘭旅行照片，只能一頁一頁往下滑。</p>
+<p>作者說做法只有兩步：</p>
+<ul>
+<li>跟 Claude 說痛點：有幾千張 iPhone 照片，想按拍攝年月自動搬到年月子資料夾；限制是使用 macOS 內建工具，不裝新軟體。</li>
+<li>Claude 給 shell 指令：用 `mdls` 讀照片的 metadata 日期，再用 `mv` 搬到對應資料夾。</li>
+</ul>
+<p>作者心得是：不需要買軟體、不需要學 Python；只要會描述痛點，AI 就能補上那行你不知道怎麼下的命令。</p>
+<h1>作者補充的 prompt 模板</h1>
+<p>作者在留言補充的完整 prompt：</p>
+<p>&gt; 我有一個 macOS 資料夾路徑 ~/Pictures/iPhone-import，裡面有幾千張 .heic 和 .jpg 混雜。請給我一段 zsh 指令，用 mdls 讀取每張照片的 kMDItemContentCreationDate，依年/月自動搬到子資料夾（例如 2024/03/）。搬完後印出總處理張數與跳過的檔案清單。</p>
+<p>這個 prompt 的好處是把任務規格說完整：系統是 macOS、檔案類型是 HEIC/JPG、希望用 zsh、資料來源是 `kMDItemContentCreationDate`、輸出資料夾格式是年/月、最後要有處理統計與跳過清單。</p>
+<h1>圖卡 OCR</h1>
+<figure><img src="../assets/source-images/2026-07-24-threads-kai-chen-claude-code-macos-photo-folder-mdls-02.jpg" alt="痛點圖卡：iPhone 匯入資料夾、8 年照片、12000 張照片、AI 一句話幫你分類" loading="lazy" referrerpolicy="no-referrer"><figcaption>痛點：iPhone 匯入資料夾</figcaption></figure>
+<figure><img src="../assets/source-images/2026-07-24-threads-kai-chen-claude-code-macos-photo-folder-mdls-03.jpg" alt="完整 prompt 模板圖卡：8 年照片、12000 張、大量照片資料、AI 一句話、幫你分類" loading="lazy" referrerpolicy="no-referrer"><figcaption>完整 prompt 模板</figcaption></figure>
+<ul>
+<li>圖 1：AI 應用 × 去神秘化；8 年 12000 張照片。</li>
+<li>圖 2：痛點：iPhone 匯入資料夾；8 年照片、12000 張照片、AI 一句話幫你分類。</li>
+<li>圖 3：完整 prompt 模板：8 年照片整理時間範圍、12000 張大量照片資料、AI 一句話用 prompt 指令分類、幫你分類建立清楚相簿。</li>
+<li>圖 4：AI 給你的答案：自動分成主題、找出重複與相似、留下可搜尋分類（人物、地點、事件、變成索引）。</li>
+<li>圖 5：執行前 vs 後：執行前照片放在各處、手動分類耗時；一句話用 AI 描述規則、自動找出相似照片；執行後 12000 張照片變成清楚群組。</li>
+<li>圖 6：同一招還能用在：8 年 12000 張照片、AI 一句話幫你分類、LINE、照片分類。</li>
+</ul>
+<h1>官方來源與查核</h1>
+<ul>
+<li>Claude Code 官方資料：Claude Code 是 Anthropic 的 agentic coding tool，可在終端機中理解任務、讀取檔案、執行命令，並整合開發工具。這支持「讓 AI 產生命令列工作流」的方向。</li>
+<li>macOS `mdls`：本機 man page 說明 `mdls` 會列出指定檔案的 metadata attributes，且可用 `-name` 指定要輸出的屬性。</li>
+<li>Apple Spotlight metadata：Apple 文件列出 Spotlight metadata attributes；`kMDItemContentCreationDate` 屬於 Spotlight metadata 屬性。這表示此方法依賴 macOS Spotlight/metadata 索引。</li>
+<li>留言提到的 Immich：Immich 官方定位是自架照片與影片管理方案，適合想長期建立類 Google 相簿體驗的人；但它是另一條路線，不是貼文主張的「不裝新軟體、用內建工具整理資料夾」。</li>
+</ul>
+<h1>實務安全提醒</h1>
+<p>這則貼文很適合當 AI agent 入門案例，但批次移動照片之前要多一層保護：</p>
+<ul>
+<li>先備份：不要直接對唯一照片資料夾執行 `mv`。</li>
+<li>先乾跑：請 Claude 先產生只列出預計移動結果、不真的移動的 dry-run 版本。</li>
+<li>先小量測試：複製 20 張照片到測試資料夾，確認年月分類正確。</li>
+<li>注意日期來源：`kMDItemContentCreationDate` 不必然等於相機原始 EXIF `DateTimeOriginal`，可能受匯入、複製、Spotlight 索引狀態影響。</li>
+<li>注意同名衝突：不同照片可能有相同檔名，腳本需要處理跳過、重新命名或保留衝突清單。</li>
+<li>注意空白與特殊字元：shell 指令必須正確 quote 檔名，避免空白、括號、單引號導致搬錯。</li>
+<li>不要盲貼命令：AI 產生的 `mv` / `rm` / `find` 類命令都要先看懂或至少要求逐行解釋。</li>
+</ul>
+<h1>可轉成教學的版本</h1>
+<p>這篇可以放進「AI 去神秘化」或「生活自動化」單元：</p>
+<ul>
+<li>第一層：用自然語言描述痛點。</li>
+<li>第二層：要求 AI 產生可驗證、可回報、可跳過錯誤的命令。</li>
+<li>第三層：加入 dry-run、備份、log、衝突處理。</li>
+<li>第四層：從「整理照片」延伸到「整理 LINE 下載檔」「整理發票 PDF」「整理課程截圖」。</li>
+</ul>
+<p>真正的重點不是照片分類，而是：AI agent 可以把日常電腦雜務轉成可執行的操作流程；人類負責定義目標、限制、驗證與風險邊界。</p>
+<h1>原始連結</h1>
+<p><a href="https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh" target="_blank" rel="noopener">https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-24 · https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh?xmt=AQG0NJjGDmYzAm8zMyH2q4eXhycarB9NNbp2jCw6gKntq8f8Gier04KB48AOOH6rcf1-9j2wHw&amp;slof=1 · link-archive</div><h3>標籤</h3><span class="tag">AI 學習雷達</span><span class="tag">Threads</span><span class="tag">Claude Code</span><span class="tag">macOS</span><span class="tag">Spotlight</span><span class="tag">mdls</span><span class="tag">照片整理</span><span class="tag">AI Agent</span><span class="tag">生活自動化</span><h3>原始連結</h3><p><a href="https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh" target="_blank" rel="noopener">https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh</a></p><p><a href="https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh" target="_blank" rel="noopener">https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh</a></p><p><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">https://code.claude.com/docs/en/overview</a></p><p><a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">https://claude.com/product/claude-code</a></p><p><a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener">https://github.com/anthropics/claude-code</a></p><p><a href="https://developer.apple.com/library/archive/documentation/CoreServices/Reference/MetadataAttributesRef/Reference/CommonAttrs.html" target="_blank" rel="noopener">https://developer.apple.com/library/archive/documentation/CoreServices/Reference/MetadataAttributesRef/Reference/CommonAttrs.html</a></p><p><a href="https://immich.app/" target="_blank" rel="noopener">https://immich.app/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

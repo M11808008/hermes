@@ -198,6 +198,40 @@
     "markdown": "articles/2026/07/2026-07-24-threads-google-slides-gemini-presentations.md"
   },
   {
+    "title": "Threads｜Kai Chen：用 Claude Code 與 mdls 整理 12000 張 iPhone 照片",
+    "date": "2026-07-24",
+    "source": "https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh?xmt=AQG0NJjGDmYzAm8zMyH2q4eXhycarB9NNbp2jCw6gKntq8f8Gier04KB48AOOH6rcf1-9j2wHw&slof=1",
+    "author": "Kai Chen / @kai_ch_chen",
+    "type": "link-archive",
+    "topics": [
+      "AI 學習雷達",
+      "Threads",
+      "Claude Code",
+      "macOS",
+      "Spotlight",
+      "mdls",
+      "照片整理",
+      "AI Agent",
+      "生活自動化"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh",
+      "https://www.threads.com/@kai_ch_chen/post/DbIhGU7Elkh",
+      "https://code.claude.com/docs/en/overview",
+      "https://claude.com/product/claude-code",
+      "https://github.com/anthropics/claude-code",
+      "https://developer.apple.com/library/archive/documentation/CoreServices/Reference/MetadataAttributesRef/Reference/CommonAttrs.html",
+      "https://immich.app/"
+    ],
+    "excerpt": "這是一個「把不知道怎麼下的那行指令交給 AI」的範例：用 Claude 把 12000 張 iPhone 匯入照片，依拍攝年月整理到 2018/03、2018/04 這類資料夾。",
+    "slug": "2026-07-24-threads-kai-chen-claude-code-macos-photo-folder-mdls",
+    "html": "articles/2026-07-24-threads-kai-chen-claude-code-macos-photo-folder-mdls.html",
+    "markdown": "articles/2026/07/2026-07-24-threads-kai-chen-claude-code-macos-photo-folder-mdls.md"
+  },
+  {
     "title": "Threads｜Lucy 2.5 即時影片編輯與 OBS 虛擬相機體驗",
     "date": "2026-07-24",
     "source": "https://www.threads.com/@prompt_case/post/DbId0ZBDeWf?xmt=AQG03XkzVGqbQGn53lS6_SYNsCoI74WyKZKn5NqpDSnT0yoGG_eB49e9NqHDRB47VVKuVr7w7w&slof=1",
