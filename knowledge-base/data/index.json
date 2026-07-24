@@ -34,6 +34,43 @@
     "markdown": "articles/2026/07/2026-07-24-91app-universal-cart-agentic-commerce-ucp.md"
   },
   {
+    "title": "Facebook｜Zernio：替 AI Voice Agent 快速配置電話號碼與 WebSocket 轉接",
+    "date": "2026-07-24",
+    "source": "https://www.facebook.com/share/p/1E8FLkWb6n/",
+    "author": "Zernio - previously Late",
+    "type": "link-archive",
+    "topics": [
+      "Facebook",
+      "Zernio",
+      "Voice AI",
+      "AI Agent",
+      "WebSocket",
+      "Telephony API",
+      "Vapi",
+      "Retell AI",
+      "xAI"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/permalink.php?story_fbid=pfbid02FZZdzXAyMWXazToE7N3weSjS2MMGLVRE84AERNmLBn7cSThzkEnTY8y6jJzygPFHl&id=61581175364397",
+      "https://www.facebook.com/share/p/1E8FLkWb6n/",
+      "https://go.zernio.com/ai-calling/",
+      "https://zernio.com/",
+      "https://zernio.com/blog/whatsapp-calling-api",
+      "https://docs.vapi.ai/calls/websocket-transport.md",
+      "https://docs.vapi.ai/quickstart/phone",
+      "https://docs.retellai.com/general/introduction",
+      "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/sip",
+      "https://www.twilio.com/docs/voice/media-streams"
+    ],
+    "excerpt": "# Facebook｜Zernio：替 AI Voice Agent 快速配置電話號碼與 WebSocket 轉接 來源是 Zernio - previously Late 的 Facebook 公開貼文。貼文主張：AI agent 已經能說話，下一步是給它一個電話號碼；透過 API 購買號碼、設定 `wss://` ",
+    "slug": "2026-07-24-facebook-zernio-phone-numbers-ai-agents",
+    "html": "articles/2026-07-24-facebook-zernio-phone-numbers-ai-agents.html",
+    "markdown": "articles/2026/07/2026-07-24-facebook-zernio-phone-numbers-ai-agents.md"
+  },
+  {
     "title": "Threads｜把論文交給 AI 生成 HTML 導讀頁：知識地圖、雙欄批註與跨論文比較 prompt",
     "date": "2026-07-24",
     "source": "https://www.threads.com/@move_model26/post/DbIMwYFkeTo?xmt=AQG0zAqqJ1wHawz422A4mP2cFD9gKyKVmJTXrCPAI_mma04VsPR_744KWmi8XyaV8jLVWeRfFA&slof=1",
