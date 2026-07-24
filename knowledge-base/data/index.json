@@ -99,6 +99,45 @@
     "markdown": "articles/2026/07/2026-07-25-threads-dustin-gmat-mac-mini-m4-pro-local-model-benchmark.md"
   },
   {
+    "title": "Threads｜Moco Lee：Claude + Odoo + Zeabur 組出低成本 AI ERP 中台的實作流程與風險邊界",
+    "date": "2026-07-25",
+    "source": "https://www.threads.com/@mocoo.lee/post/DbKb2rpmvHH?xmt=AQG075BlJsTp6dvt0P46FEhwtLeSlQxltZEu40QocAFANPgERvelNvi4578V2IIkeNwt2qpBBg&slof=1",
+    "author": "Moco Lee / @mocoo.lee",
+    "type": "link-archive",
+    "topics": [
+      "Threads",
+      "Moco Lee",
+      "Claude",
+      "Odoo",
+      "ERP",
+      "Zeabur",
+      "Cloudflare",
+      "Vibe Coding",
+      "AI Agent",
+      "Business Automation"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@mocoo.lee/post/DbKb2rpmvHH",
+      "https://www.threads.com/@mocoo.lee/post/DbKb2rpmvHH",
+      "https://www.odoo.com/page/editions",
+      "https://github.com/odoo/odoo",
+      "https://www.odoo.com/documentation/19.0/legal/licenses.html",
+      "https://www.odoo.com/documentation/19.0/developer/reference/external_rpc_api.html",
+      "https://zeabur.com/templates/F6RRED",
+      "https://zeabur.com/docs/en-US/developer/claude-code-skills",
+      "https://zeabur.com/docs/en-US/template",
+      "https://www.cloudflare.com/products/registrar/",
+      "https://developers.cloudflare.com/registrar/"
+    ],
+    "excerpt": "# Threads｜Moco Lee：Claude + Odoo + Zeabur 組出低成本 AI ERP 中台的實作流程與風險邊界 來源是 Moco Lee（@mocoo.lee）在 Threads 分享的一串實作心得：用 Claude 協助部署與串接 Odoo，把開源 ERP 當成公司中台，再用 Claude 讀",
+    "slug": "2026-07-25-threads-mocoo-lee-claude-odoo-ai-erp-workflow",
+    "html": "articles/2026-07-25-threads-mocoo-lee-claude-odoo-ai-erp-workflow.html",
+    "markdown": "articles/2026/07/2026-07-25-threads-mocoo-lee-claude-odoo-ai-erp-workflow.md"
+  },
+  {
     "title": "91APP｜Universal Cart 與 Agentic Commerce：結帳外流下的第一方數據保衛戰",
     "date": "2026-07-24",
     "source": "https://marketing.91app.com/universal-cart-agentic-commerce-ucp/",
