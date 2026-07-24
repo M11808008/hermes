@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Dustin GMAT：Mac mini M4 Pro 48GB 本地模型選型筆記：Qwen3.6 35B A3B、Ornith 35B、Qwen3-ASR、WhisperX</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Dustin GMAT：Mac mini M4 Pro 48GB 本地模型選型筆記：Qwen3.6 35B A3B、Ornith 35B、Qwen3-ASR、WhisperX</h1><h1>Threads｜Dustin GMAT：Mac mini M4 Pro 48GB 本地模型選型筆記</h1>
+<p>來源是 Dustin GMAT（@dustin_gmat）在 Threads 分享的一則本地模型實測心得。貼文重點不是正式 benchmark，而是一個 Mac mini M4 Pro 48GB 使用者在多日拉模型評比後，整理出的「本地 / API 混合任務分工」清單。</p>
+<figure><img src="../assets/source-images/2026-07-25-threads-dustin-gmat-mac-mini-m4-pro-local-model-benchmark.jpg" alt="Dustin GMAT 的 Threads 作者頭像；此貼文沒有公開主圖，僅保存 og:image 頭像作為來源識別" loading="lazy" referrerpolicy="no-referrer"><figcaption>Dustin GMAT Threads 作者頭像</figcaption></figure>
+<h1>公開 Threads 內容</h1>
+<p>Threads 可見 canonical URL 為 `<a href="https://www.threads.com/@dustin_gmat/post/DbLplZhj85f`，頁面擷取時主串顯示約" target="_blank" rel="noopener">https://www.threads.com/@dustin_gmat/post/DbLplZhj85f`，頁面擷取時主串顯示約</a> 11 次瀏覽。公開貼文摘要如下：</p>
+<ul>
+<li>在 Mac mini M4 Pro 48GB 上，可用性最高的本地模型是 `Qwen 3.6 35B A3B`；作者測得 prefill 約 137 tok/s、decode 約 50 tok/s，認為速度還在可忍受範圍。</li>
+<li>用途建議：單發任務、資料標記清洗、OCR、夜間排程、簡單 agent loop。</li>
+<li>寫作模型：作者主觀認為 `Ornith 35B` 最自然，速度與 Qwen3.6 35B A3B 相仿，因此列為備選。</li>
+<li>本地語音轉錄：純中文可用 `Qwen3-ASR`；中英混雜可用 `WhisperX`。</li>
+<li>若不涉及機敏隱私，圖像辨識、語音轉錄與資料標記清洗可交給 `Gemini Flash-Lite`，理由是便宜且適合雜活。</li>
+</ul>
+<h1>圖片 / 封面描述</h1>
+<p>此 Threads 貼文沒有公開內容主圖；頁面 `og:image` 是作者頭像。保存圖像為一張正式大頭照：人物穿深色西裝、白襯衫與領帶，雙手交叉，背景為淺色。圖中沒有產品 UI、模型 benchmark 表或可讀文字，因此僅作為來源識別，不作為技術證據。</p>
+<h1>官方來源與查核</h1>
+<p>Qwen 方面，Brave 搜尋找到 Hugging Face 官方模型頁 `Qwen/Qwen3.6-35B-A3B`，模型頁與社群量化頁都確認 Qwen3.6-35B-A3B 存在；這支持貼文提到的模型名稱。貼文中的 prefill / decode 數字則是作者在 Mac mini M4 Pro 48GB 上的個人實測，不應視為官方或通用速度。</p>
+<p>Ornith 方面，Hugging Face 上有 `deepreinforce-ai/Ornith-1.0-35B` 與 GGUF / MLX 版本；模型卡將 Ornith-1.0-35B 描述為 Ornith family 的 35B 輕量成員，並有 Apple Silicon / MLX 社群轉換版本。這支持「Ornith 35B 可作為本地模型選項」的說法；至於「寫作最自然」屬作者主觀評估。</p>
+<p>語音轉錄方面，Qwen 官方 Hugging Face 與 GitHub `QwenLM/Qwen3-ASR` 顯示 Qwen3-ASR 有 0.6B / 1.7B 版本，支援語言識別、語音辨識、30 種語言與 22 種中文方言。這支持貼文把 Qwen3-ASR 放在中文轉錄選項。WhisperX 官方 GitHub 則將其定位為 automatic speech recognition with word-level timestamps and diarization，可用於轉錄與時間戳 / diarization 工作；這支持中英混雜或需要時間戳的本地 ASR pipeline 判讀。</p>
+<p>Gemini Flash-Lite 方面，Google AI for Developers 的 Gemini API pricing 頁列出 Flash-Lite 為以成本效率、高 throughput 與品質為目標的低成本模型。這支持作者把 Gemini Flash-Lite 用於不敏感雜活的方向；但實際單價、免費額度、地區與速率限制仍需以 Google 最新價格頁與帳號方案為準。</p>
+<h1>實務判讀</h1>
+<p>這則貼文值得歸檔，因為它把「本地模型不是全包」講得很務實：</p>
+<ul>
+<li>本地 LLM 適合隱私敏感、可離線、可排程、成本可控的任務，例如資料清洗、批次標記、簡單 agent loop。</li>
+<li>寫作模型需要另行主觀評測；同樣大小與速度的模型，文字風格可能差很多。</li>
+<li>ASR 要看語言組合與後處理需求：純中文可試 Qwen3-ASR；中英混雜、時間戳、說話者分離等工作流可考慮 WhisperX。</li>
+<li>雲端小模型仍有位置：不敏感、量大、便宜、需要吞吐的 OCR / 分類 / 標記 / 圖像理解，可以交給 Gemini Flash-Lite 這類 API，避免本地機器被雜活占滿。</li>
+</ul>
+<p>對 Mac mini M4 Pro 48GB 這類桌面設備而言，關鍵不是追逐單一「最強模型」，而是建立任務路由：機敏資料優先本地；非機敏高吞吐雜活交給便宜 API；寫作與長文另測風格；語音依語言與時間戳需求拆工具。</p>
+<h1>補充邊界</h1>
+<ul>
+<li>貼文速度數字是作者環境的個人測試；本地速度會受量化格式、runtime、context 長度、batch 設定、記憶體壓力、散熱與同時任務影響。</li>
+<li>`Qwen3.6-35B-A3B`、`Ornith-1.0-35B` 等模型的授權、商用條款、衍生模型限制與安全設定需以各模型卡最新版為準。</li>
+<li>OCR 與資料標記若含個資、財務、醫療、學生資料或商業機密，不應直接丟給雲端 API；需先做資料分級、去識別化與最小必要傳輸。</li>
+<li>ASR 結果需人工抽樣校對；中英混雜、專有名詞、口音、多人會議都容易提高錯誤率。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-25 · https://www.threads.com/@dustin_gmat/post/DbLplZhj85f?xmt=AQG0c-d0Qupq3Ga54_wUrb5nsUzVQWszU49oml-5F-GbkRYGbPCEPLQsyzJH0ipfybuz_9dukA&amp;slof=1 · link-archive</div><h3>標籤</h3><span class="tag">Threads</span><span class="tag">Dustin GMAT</span><span class="tag">Mac mini M4 Pro</span><span class="tag">Local LLM</span><span class="tag">Qwen3.6</span><span class="tag">Ornith</span><span class="tag">Qwen3-ASR</span><span class="tag">WhisperX</span><span class="tag">Gemini Flash-Lite</span><span class="tag">Apple Silicon</span><h3>原始連結</h3><p><a href="https://www.threads.com/@dustin_gmat/post/DbLplZhj85f" target="_blank" rel="noopener">https://www.threads.com/@dustin_gmat/post/DbLplZhj85f</a></p><p><a href="https://www.threads.com/@dustin_gmat/post/DbLplZhj85f" target="_blank" rel="noopener">https://www.threads.com/@dustin_gmat/post/DbLplZhj85f</a></p><p><a href="https://huggingface.co/Qwen/Qwen3.6-35B-A3B" target="_blank" rel="noopener">https://huggingface.co/Qwen/Qwen3.6-35B-A3B</a></p><p><a href="https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B" target="_blank" rel="noopener">https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B</a></p><p><a href="https://huggingface.co/Qwen/Qwen3-ASR-1.7B" target="_blank" rel="noopener">https://huggingface.co/Qwen/Qwen3-ASR-1.7B</a></p><p><a href="https://github.com/QwenLM/Qwen3-ASR" target="_blank" rel="noopener">https://github.com/QwenLM/Qwen3-ASR</a></p><p><a href="https://github.com/m-bain/whisperX" target="_blank" rel="noopener">https://github.com/m-bain/whisperX</a></p><p><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/pricing</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

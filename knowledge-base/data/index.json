@@ -63,6 +63,42 @@
     "markdown": "articles/2026/07/2026-07-25-threads-chatgpt168-ai-image-style-prompts.md"
   },
   {
+    "title": "Threads｜Dustin GMAT：Mac mini M4 Pro 48GB 本地模型選型筆記：Qwen3.6 35B A3B、Ornith 35B、Qwen3-ASR、WhisperX",
+    "date": "2026-07-25",
+    "source": "https://www.threads.com/@dustin_gmat/post/DbLplZhj85f?xmt=AQG0c-d0Qupq3Ga54_wUrb5nsUzVQWszU49oml-5F-GbkRYGbPCEPLQsyzJH0ipfybuz_9dukA&slof=1",
+    "author": "Dustin GMAT / @dustin_gmat",
+    "type": "link-archive",
+    "topics": [
+      "Threads",
+      "Dustin GMAT",
+      "Mac mini M4 Pro",
+      "Local LLM",
+      "Qwen3.6",
+      "Ornith",
+      "Qwen3-ASR",
+      "WhisperX",
+      "Gemini Flash-Lite",
+      "Apple Silicon"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@dustin_gmat/post/DbLplZhj85f",
+      "https://www.threads.com/@dustin_gmat/post/DbLplZhj85f",
+      "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+      "https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B",
+      "https://huggingface.co/Qwen/Qwen3-ASR-1.7B",
+      "https://github.com/QwenLM/Qwen3-ASR",
+      "https://github.com/m-bain/whisperX",
+      "https://ai.google.dev/gemini-api/docs/pricing"
+    ],
+    "excerpt": "# Threads｜Dustin GMAT：Mac mini M4 Pro 48GB 本地模型選型筆記 來源是 Dustin GMAT（@dustin_gmat）在 Threads 分享的一則本地模型實測心得。貼文重點不是正式 benchmark，而是一個 Mac mini M4 Pro 48GB 使用者在多日拉模型評",
+    "slug": "2026-07-25-threads-dustin-gmat-mac-mini-m4-pro-local-model-benchmark",
+    "html": "articles/2026-07-25-threads-dustin-gmat-mac-mini-m4-pro-local-model-benchmark.html",
+    "markdown": "articles/2026/07/2026-07-25-threads-dustin-gmat-mac-mini-m4-pro-local-model-benchmark.md"
+  },
+  {
     "title": "91APP｜Universal Cart 與 Agentic Commerce：結帳外流下的第一方數據保衛戰",
     "date": "2026-07-24",
     "source": "https://marketing.91app.com/universal-cart-agentic-commerce-ucp/",
