@@ -1,5 +1,39 @@
 [
   {
+    "title": "91APP｜Universal Cart 與 Agentic Commerce：結帳外流下的第一方數據保衛戰",
+    "date": "2026-07-24",
+    "source": "https://marketing.91app.com/universal-cart-agentic-commerce-ucp/",
+    "author": "Brick Liao / 91APP Marketing Hub",
+    "type": "link-archive",
+    "topics": [
+      "Agentic Commerce",
+      "Universal Cart",
+      "Universal Commerce Protocol",
+      "AP2",
+      "Google Shopping",
+      "第一方數據",
+      "CDP",
+      "OMO"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://marketing.91app.com/universal-cart-agentic-commerce-ucp/",
+      "https://marketing.91app.com/universal-cart-agentic-commerce-ucp/",
+      "https://blog.google/products-and-platforms/products/shopping/google-shopping-cart/",
+      "https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/",
+      "https://developers.google.com/merchant/ucp",
+      "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
+      "https://www.salesforce.com/news/stories/2025-holiday-shopping-data/",
+      "https://business.adobe.com/blog/ai-traffic-surge-retail-sites-not-machine-readable"
+    ],
+    "excerpt": "# 91APP｜Universal Cart 與 Agentic Commerce：結帳外流下的第一方數據保衛戰 來源是 91APP Marketing Hub 由 Brick Liao 撰寫的長文〈Universal Cart 與 agentic commerce：當結帳發生在 Google 而不是你官網（2026）",
+    "slug": "2026-07-24-91app-universal-cart-agentic-commerce-ucp",
+    "html": "articles/2026-07-24-91app-universal-cart-agentic-commerce-ucp.html",
+    "markdown": "articles/2026/07/2026-07-24-91app-universal-cart-agentic-commerce-ucp.md"
+  },
+  {
     "title": "Threads｜把論文交給 AI 生成 HTML 導讀頁：知識地圖、雙欄批註與跨論文比較 prompt",
     "date": "2026-07-24",
     "source": "https://www.threads.com/@move_model26/post/DbIMwYFkeTo?xmt=AQG0zAqqJ1wHawz422A4mP2cFD9gKyKVmJTXrCPAI_mma04VsPR_744KWmi8XyaV8jLVWeRfFA&slof=1",
