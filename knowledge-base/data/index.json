@@ -1,5 +1,47 @@
 [
   {
+    "title": "Facebook｜陳盟升：128GB 全地端 Agent 系統模型選擇攻略",
+    "date": "2026-07-26",
+    "source": "https://www.facebook.com/share/18u7dpabPA/?mibextid=wwXIfr",
+    "author": "陳盟升 / darkschen",
+    "type": "link-archive",
+    "topics": [
+      "Facebook",
+      "陳盟升",
+      "Local AI",
+      "Local Agent",
+      "DGX Spark",
+      "GB10",
+      "Qwen",
+      "Gemma",
+      "DeepSeek",
+      "ComfyUI",
+      "GPT-SoVITS",
+      "OpenClaw"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/photo.php?fbid=1569317608163069&set=a.118972106530967&type=3",
+      "https://www.facebook.com/photo.php?fbid=1569317608163069&set=a.118972106530967&type=3",
+      "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+      "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+      "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "https://huggingface.co/google/gemma-4-26B-A4B-it-assistant",
+      "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "https://huggingface.co/openai/whisper-large-v3",
+      "https://github.com/RVC-Boss/GPT-SoVITS",
+      "https://github.com/Comfy-Org/ComfyUI",
+      "https://github.com/openclaw/openclaw"
+    ],
+    "excerpt": "# Facebook｜陳盟升：128GB 全地端 Agent 系統模型選擇攻略 來源是陳盟升（darkschen）在 Facebook 分享的「128GB 全地端 Agent 系統模型選擇攻略」。貼文描述他在 GB10 / DGX Spark 類 128GB 本機設備上，經過數個月全地端 Agent 運行後，整理出兩種",
+    "slug": "2026-07-26-facebook-darkschen-128gb-local-agent-model-selection",
+    "html": "articles/2026-07-26-facebook-darkschen-128gb-local-agent-model-selection.html",
+    "markdown": "articles/2026/07/2026-07-26-facebook-darkschen-128gb-local-agent-model-selection.md"
+  },
+  {
     "title": "Facebook｜陳盟升：Qwen3.6-27B Fable Fusion 711 uncensored GGUF 熱門下載與 benchmark 宣稱查核",
     "date": "2026-07-26",
     "source": "https://www.facebook.com/share/1CqzJ87H45/?mibextid=wwXIfr",
