@@ -110,6 +110,45 @@
     "markdown": "articles/2026/07/2026-07-26-facebook-rhoda-anthropic-financial-services-skills.md"
   },
   {
+    "title": "HeyGen 官方網站｜AI 影片生成、Avatar V 與 Agentic Video API",
+    "date": "2026-07-26",
+    "source": "https://heygen.com",
+    "author": "HeyGen",
+    "type": "link-archive",
+    "topics": [
+      "HeyGen",
+      "AI Video",
+      "AI Avatar",
+      "Video Agent",
+      "MCP",
+      "API",
+      "Voice Cloning",
+      "Video Translation",
+      "Digital Human"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.heygen.com/",
+      "https://www.heygen.com/",
+      "https://www.heygen.com/llms.txt",
+      "https://developers.heygen.com/",
+      "https://developers.heygen.com/llms.txt",
+      "https://developers.heygen.com/docs/quick-start.md",
+      "https://developers.heygen.com/docs/pricing.md",
+      "https://developers.heygen.com/mcp/overview.md",
+      "https://developers.heygen.com/docs/for-ai-agents.md",
+      "https://www.heygen.com/pricing",
+      "https://www.heygen.com/security",
+      "https://www.heygen.com/trust-and-safety"
+    ],
+    "excerpt": "# HeyGen 官方網站｜AI 影片生成、Avatar V 與 Agentic Video API 欒帥分享的是 HeyGen 官方網站。這次歸檔把首頁、`llms.txt`、開發者文件、MCP 連接方式、API 定價、安全與 Trust & Safety 頁面一起整理，作為日後評估「數字人 / AI avatar ",
+    "slug": "2026-07-26-heygen-official-ai-video-platform",
+    "html": "articles/2026-07-26-heygen-official-ai-video-platform.html",
+    "markdown": "articles/2026/07/2026-07-26-heygen-official-ai-video-platform.md"
+  },
+  {
     "title": "Threads｜sliven0722：GPT-Live／Realtime Voice 接上即時數字人，AI 伴侶互動開始走向低延遲化",
     "date": "2026-07-26",
     "source": "https://www.threads.com/@sliven0722/post/DbPRKJZjPou?xmt=AQG0JMWBwu3a17KWtps4IhTSZoMG6czMsefbD3sfZ0ssglNVgS-lSbRT51iIYRQieLgjf1hl1w&slof=1",
