@@ -1,5 +1,41 @@
 [
   {
+    "title": "GitHub｜AI Design Team：把 Claude Skills 組成內容創作者的虛擬設計部門",
+    "date": "2026-07-27",
+    "source": "https://github.com/jinggreen15/ai-design-team",
+    "author": "jinggreen15 / 設計實驗室",
+    "type": "link-archive",
+    "topics": [
+      "GitHub",
+      "Claude Skills",
+      "Agent Skills",
+      "Canva",
+      "MCP",
+      "Content Workflow",
+      "AI Design",
+      "Creator Economy",
+      "Prompt Engineering"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/jinggreen15/ai-design-team",
+      "https://github.com/jinggreen15/ai-design-team",
+      "https://www.instagram.com/reel/DbF8jbxNiE6/",
+      "https://www.instagram.com/alvinnn_0330/reel/DbF8jbxNiE6/",
+      "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "https://github.com/anthropics/skills",
+      "https://claude.com/connectors/canva",
+      "https://www.canva.dev/docs/mcp/",
+      "https://www.canva.com/ai-connector/"
+    ],
+    "excerpt": "# GitHub｜AI Design Team：把 Claude Skills 組成內容創作者的虛擬設計部門 這次的社群觸發點是 Instagram Reel：作者 `alvinnn_0330` 在 2026-07-22 發布短片，文案寫到「連結 Canva Plugin → 指令+生圖 → 直接進 Canva 編輯」",
+    "slug": "2026-07-27-ai-design-team-claude-skills-canva-workflow",
+    "html": "articles/2026-07-27-ai-design-team-claude-skills-canva-workflow.html",
+    "markdown": "articles/2026/07/2026-07-27-ai-design-team-claude-skills-canva-workflow.md"
+  },
+  {
     "title": "Facebook｜陳盟升：128GB 全地端 Agent 系統模型選擇攻略",
     "date": "2026-07-26",
     "source": "https://www.facebook.com/share/18u7dpabPA/?mibextid=wwXIfr",
