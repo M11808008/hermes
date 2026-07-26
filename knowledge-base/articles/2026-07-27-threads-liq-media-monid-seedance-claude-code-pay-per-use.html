@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜LIQ AI：Monid 把 Seedance 接進 Claude Code / Codex 的用量計費影片工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜LIQ AI：Monid 把 Seedance 接進 Claude Code / Codex 的用量計費影片工作流</h1><p>LIQ AI 這則 Threads 的重點不是「Seedance 又有一支漂亮影片」，而是 AI 影片生成的使用介面正在改變：從登入某個影片 SaaS、付月費、消耗平台點數，轉成在 Claude Code、Codex、Claude Cowork / ChatGPT Work 或 CLI 裡直接呼叫 API / tool registry，讓影片生成變成 agent 工作流裡的一個步驟。</p>
+<p>主貼文說明：現在可以在 Claude Code 裡打字叫 Seedance 生影片，不必先訂 129 美元月費方案；示範影片引用 X 上 `shengkun_ye`，據稱是一頭座頭鯨在極光下破冰躍出，畫面左下角標了模型與 prompt。作者補充的核心是計價差異：月費訂閱 vs 用量計費，並明確提醒「這是服務方自己公布的價格與說法，不是我實測過的數字」。</p>
+<p>本文將 Threads 視為社群觀察來源；以 Monid 官方 Seedance blog / `SKILL.md` 作為 canonical source，並用 WaveSpeed、fal、Replicate、Dreamina / CapCut Seedance 頁面查核 Seedance API 與平台生態。本文未登入 Monid、未安裝 CLI、未產生影片，也未直接檢視到原始 X 影片；以下不把社群貼文中的瀏覽/讚數、影片畫面與價格比較視為已實測事實。</p>
+<figure><img src="../assets/source-images/2026-07-27-threads-liq-media-monid-seedance-claude-code.jpg" alt="Threads 影片封面：未登入狀態下僅能看到播放按鈕" loading="lazy" referrerpolicy="no-referrer"><figcaption>Threads：Monid / Seedance / Claude Code 影片工作流</figcaption></figure>
+<h1>Threads 擷取重點</h1>
+<p>可見主文與作者補充整理如下：</p>
+<p>| 類別 | 可見內容 |</p>
+<p>|---|---|</p>
+<p>| 作者 | `liq_media` / LIQ AI |</p>
+<p>| 主題 | Claude Code 內呼叫 Seedance 生影片，避免先買月費方案 |</p>
+<p>| 主文案例 | 引用 X `shengkun_ye` 的示範：座頭鯨在極光下破冰躍出，畫面左下角標模型與 prompt |</p>
+<p>| 互動快照 | Threads 顯示約 1.0 萬次瀏覽；主文約 104 likes、11 replies、7 reposts、94 shares / saves 類指標，會隨時間變動 |</p>
+<p>| 作者補充 1 | 月費訂閱：129 美元、點數用完會卡住、沒生片月份也扣；用量計費：每 1 萬 token 約 0.04 美元，用多少算多少；需自行確認服務方價格 |</p>
+<p>| 作者補充 2 | 工作流縮短：以前要在編輯器寫 prompt → 開瀏覽器 → 登入平台 → 貼 prompt → 等 → 下載 → 拉回專案；現在可留在同一個環境，產出直接進資料夾 |</p>
+<p>| 討論補充 | 有使用者提到自己用 WaveSpeed CLI 從 Claude Cowork / ChatGPT Work 調用，優點是覆蓋多模型與按量付費，缺點是可能比訂閱制略貴，但成本透明 |</p>
+<p>| 相關串文 | Threads 顯示 `bond.vladimir` 先前提到 `set up monid.ai/SKILL…`、Higgsfield $129/mo、Monid $0.04/10K 等比較 |</p>
+<h1>重要判讀限制：影片畫面未能直接驗證</h1>
+<p>Threads og:image 下載後只有深色播放按鈕，browser vision 也只能看到未登入狀態下的遮罩與文字描述，無法直接確認影片裡真的有座頭鯨、極光、模型名稱或 prompt 字樣。因此本文只把「鯨魚 / 極光」當成 Threads 主文描述的示範內容，不當成視覺已驗證事實。</p>
+<h1>Monid 官方資料怎麼說</h1>
+<p>Monid 首頁定位是「Connect your agent to every tool it needs」，提供一個 agent 可用的工具 / API registry。首頁可見：</p>
+<ul>
+<li>給 agent 的一行 setup：`set up <a href="https://monid.ai/SKILL.md`" target="_blank" rel="noopener">https://monid.ai/SKILL.md`</a></li>
+<li>標示 1300+ tools / APIs，包含 Seedance 2.0 video gen、ElevenLabs、MiniMax、Exa、Browserbase、社群 scraping、Apollo、Semrush 等。</li>
+<li>三種接法：Skill、MCP、CLI。</li>
+<li>主張一個 balance 覆蓋多工具，按呼叫付費。</li>
+</ul>
+<p>`<a href="https://monid.ai/SKILL.md`" target="_blank" rel="noopener">https://monid.ai/SKILL.md`</a> 是一份可直接給 agent 讀取的 Skill 文件，重點包括：</p>
+<p>```text</p>
+<p>monid discover → monid inspect → monid run → monid runs get / wait → monid balance</p>
+<p>```</p>
+<p>也就是 agent 先 discover 可用 endpoint，再 inspect schema，最後用結構化參數 run。這和一般「寫死某個 API SDK」不同：它把外部工具當成可搜尋、可比較、可按需執行的 registry。</p>
+<h1>Monid Seedance blog 的價格與工作流主張</h1>
+<p>Monid 的 Seedance 2.0 blog 標題為「Seedance 2.0 API, pay as you go」。頁面主張：</p>
+<ul>
+<li>Seedance 2.0 可透過 Monid 產生影片，不需訂閱與月費最低消費。</li>
+<li>範例 prompt：`set up <a href="https://monid.ai/SKILL.md" target="_blank" rel="noopener">https://monid.ai/SKILL.md</a> and make a 5-second Seedance 2.0 video of a paper boat in a neon city`。</li>
+<li>頁面比較：Monid $7 / 1M video tokens、0 美元月費、8 秒 720p clip 約 $1.2096；Higgsfield Ultra $129 / month，類似 8 秒 clip 約 $1.55；並標示 final cost varies by model, duration, and resolution。</li>
+<li>支援 mini / fast / standard 等速度 / 成本 / 品質取捨。</li>
+<li>支援 4–15 秒短社群片段，先 draft 再 final render 的流程。</li>
+</ul>
+<p>這支貼文中「每 1 萬 token 約 0.04 美元」與 Monid blog 的「$7 / 1M video tokens」並非完全等價的寫法；本文保留兩者來源：Threads 為作者轉述，Monid blog 為官方頁面擷取。實際價格需以 Monid 後台 / endpoint schema / 結帳頁為準。</p>
+<h1>Seedance API 生態查核</h1>
+<p>Seedance 不是只存在於單一平台；目前多個 API / 創作平台都在提供不同封裝：</p>
+<p>| 來源 | 可查核內容 | 對本文的意義 |</p>
+<p>|---|---|---|</p>
+<p>| fal Seedance 2.0 | fal 頁面稱 Seedance 2.0 API 於 2026-04 上線，提供 text-to-video、image-to-video、reference-to-video，並提供 JS / Python API 範例 | 證明 Seedance 可被 API 化，不只是網頁 SaaS |</p>
+<p>| Replicate `bytedance/seedance-2.0` | 說明 Seedance 2.0 支援文字、圖片、影片、音訊參考，具 native audio、multimodal reference、duration control、video editing / extension | 補足 Seedance 2.0 模型能力描述 |</p>
+<p>| WaveSpeed Seedance 2.0 API | 標示 ByteDance / video / from $0.50 per run，並列出 text-to-video、image-to-video、video-extend、video-to-video 等 endpoint；pricing 頁也列 Seedance 2.0 Fast $0.10 / second | 支持「同一 API / CLI 呼叫多影片模型」與按量計價脈絡 |</p>
+<p>| Dreamina / CapCut Seedance 2.5 | 官方 Seedance 2.5 頁描述 30 秒、4K、多達 50 個 reference、R2V guidance、局部編輯等，但頁面也顯示 Seedance 2.5 coming soon | 支持 Threads 作者說「2.5 官方已推商業案例」，但需注意可用性與區域/帳號差異 |</p>
+<p>| Monid Seedance blog | 明確把 Seedance 2.0 包進 agent / Skill / CLI 使用流程，主打 no subscription、pay per video | 本文 canonical source |</p>
+<h1>這對創作者 / 接案者的真正意義</h1>
+<p>這則 Threads 值得歸檔的點，是「成本模型」和「工作流界面」同時改變：</p>
+<ul>
+<li>**成本從固定訂閱變成專案變動成本**：接案時可以把每次生成、重試、final render 計入報價，而不是把整個月費攤到不確定案量上。</li>
+<li>**生成位置從瀏覽器平台移到工作目錄**：prompt、素材、輸出檔、版本記錄可以留在同一個 repo / project folder，降低切換與遺失。</li>
+<li>**agent 可以自己 discover / inspect / run**：若工具 registry 設計得好，Claude Code / Codex 不只是「幫你寫 prompt」，也能讀 schema、選 endpoint、執行並取回結果。</li>
+<li>**模型替換成本下降**：今天是 Seedance，明天可能是 Kling、Veo、Wan、Runway、MiniMax；只要 prompt / asset / output pipeline 抽象得好，換模型會比較像換 endpoint。</li>
+<li>**報價更透明，但也更需要 guardrail**：用量計費若沒有上限、重試限制、低畫質草稿策略，很容易從「省月費」變成「API 爆量」。</li>
+</ul>
+<h1>欒帥可採用的安全工作流</h1>
+<p>如果要把這類流程放進自己的課程或創作 pipeline，建議先用以下 guardrails：</p>
+<ul>
+<li>**先 draft 後 final**：先用低成本 / fast / mini endpoint 產出草稿，只對確認方向的版本做高解析 final render。</li>
+<li>**每個專案設 spending cap**：例如每支短片先設 $3、$5、$10 測試上限，超過就停下來人工判斷。</li>
+<li>**保留 prompt / model / cost log**：每次生成都把模型、參數、prompt、輸出檔、花費寫到 `runs.jsonl` 或專案筆記。</li>
+<li>**素材版權與客戶授權先確認**：image-to-video / reference-to-video 很容易把客戶素材、人物肖像、品牌元素送到第三方 API。</li>
+<li>**不要把平台示範價當報價依據**：實際成本要看 resolution、duration、retry 次數、endpoint、平台手續費與匯率。</li>
+<li>**讓 agent 先回報估價再執行**：Claude Code / Codex 在 `monid run` 之前，最好先列出預估 endpoint、輸入、成本區間，等人類確認再下單。</li>
+</ul>
+<h1>和既有 AI 學習雷達文章的關係</h1>
+<ul>
+<li>「HeyGen Reel｜Claude Code + HeyGen」聚焦 agent-to-video 的專業知識轉影片。</li>
+<li>「Braydon Carter｜Claude 連接 Higgsfield」聚焦 Claude / Higgsfield 圖像生成入口。</li>
+<li>「HyperFrames」與「video-use」聚焦程式化影片 / 影片理解與剪輯。</li>
+<li>本文聚焦 **Monid / Seedance / agent registry / 用量計費 API**：讓影片模型成為 Claude Code / Codex 可按需呼叫的外部能力。</li>
+</ul>
+<h1>原始來源</h1>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@liq_media/post/DbPezHojYGe" target="_blank" rel="noopener">https://www.threads.com/@liq_media/post/DbPezHojYGe</a></li>
+<li>Monid 首頁：<a href="https://monid.ai/" target="_blank" rel="noopener">https://monid.ai/</a></li>
+<li>Monid Skill：<a href="https://monid.ai/SKILL.md" target="_blank" rel="noopener">https://monid.ai/SKILL.md</a></li>
+<li>Monid Seedance blog：<a href="https://monid.ai/blog/seedance-2" target="_blank" rel="noopener">https://monid.ai/blog/seedance-2</a></li>
+<li>WaveSpeed pricing：<a href="https://wavespeed.ai/pricing" target="_blank" rel="noopener">https://wavespeed.ai/pricing</a></li>
+<li>WaveSpeed Seedance API：<a href="https://wavespeed.ai/seedance-2-api" target="_blank" rel="noopener">https://wavespeed.ai/seedance-2-api</a></li>
+<li>fal Seedance 2.0：<a href="https://fal.ai/seedance-2.0" target="_blank" rel="noopener">https://fal.ai/seedance-2.0</a></li>
+<li>Replicate Seedance 2.0：<a href="https://replicate.com/bytedance/seedance-2.0" target="_blank" rel="noopener">https://replicate.com/bytedance/seedance-2.0</a></li>
+<li>Dreamina / CapCut Seedance 2.5：<a href="https://dreamina.capcut.com/seedance/seedance-2-5" target="_blank" rel="noopener">https://dreamina.capcut.com/seedance/seedance-2-5</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-27 · https://www.threads.com/@liq_media/post/DbPezHojYGe · link-archive</div><h3>標籤</h3><span class="tag">Threads</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">Seedance</span><span class="tag">Monid</span><span class="tag">AI Video</span><span class="tag">Usage Based Pricing</span><span class="tag">Agent Skills</span><span class="tag">MCP</span><span class="tag">Creative Workflow</span><h3>原始連結</h3><p><a href="https://monid.ai/blog/seedance-2" target="_blank" rel="noopener">https://monid.ai/blog/seedance-2</a></p><p><a href="https://www.threads.com/@liq_media/post/DbPezHojYGe" target="_blank" rel="noopener">https://www.threads.com/@liq_media/post/DbPezHojYGe</a></p><p><a href="https://monid.ai/" target="_blank" rel="noopener">https://monid.ai/</a></p><p><a href="https://monid.ai/SKILL.md" target="_blank" rel="noopener">https://monid.ai/SKILL.md</a></p><p><a href="https://monid.ai/blog/seedance-2" target="_blank" rel="noopener">https://monid.ai/blog/seedance-2</a></p><p><a href="https://wavespeed.ai/pricing" target="_blank" rel="noopener">https://wavespeed.ai/pricing</a></p><p><a href="https://wavespeed.ai/seedance-2-api" target="_blank" rel="noopener">https://wavespeed.ai/seedance-2-api</a></p><p><a href="https://fal.ai/seedance-2.0" target="_blank" rel="noopener">https://fal.ai/seedance-2.0</a></p><p><a href="https://replicate.com/bytedance/seedance-2.0" target="_blank" rel="noopener">https://replicate.com/bytedance/seedance-2.0</a></p><p><a href="https://dreamina.capcut.com/seedance/seedance-2-5" target="_blank" rel="noopener">https://dreamina.capcut.com/seedance/seedance-2-5</a></p><p><a href="https://www.linkedin.com/in/shengkun-ye/" target="_blank" rel="noopener">https://www.linkedin.com/in/shengkun-ye/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
