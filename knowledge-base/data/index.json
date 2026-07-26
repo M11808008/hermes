@@ -217,6 +217,42 @@
     "markdown": "articles/2026/07/2026-07-26-threads-zhenzhu600-heygen-minimax-codex-digital-human.md"
   },
   {
+    "title": "YouTube｜AI 視覺實驗室：Google Omni 與 Flow 對話式影片生成教學",
+    "date": "2026-07-26",
+    "source": "https://www.youtube.com/watch?v=MnWWS1WbafQ",
+    "author": "AI 視覺實驗室",
+    "type": "link-archive",
+    "topics": [
+      "YouTube",
+      "AI 視覺實驗室",
+      "Google Omni",
+      "Gemini Omni Flash",
+      "Google Flow",
+      "AI Video",
+      "Video Editing",
+      "Gemini",
+      "Veo"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=MnWWS1WbafQ",
+      "https://www.youtube.com/watch?v=MnWWS1WbafQ",
+      "https://www.youtube.com/@AI%E8%A6%96%E8%A6%BA%E5%AF%A6%E9%A9%97%E5%AE%A4",
+      "https://gemini.google.com/app?hl=zh-TW",
+      "https://labs.google/fx/zh/tools/flow",
+      "https://labs.google/fx/tools/flow",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
+      "https://ai.google.dev/gemini-api/docs/omni",
+      "https://deepmind.google/models/veo/"
+    ],
+    "excerpt": "# YouTube｜AI 視覺實驗室：Google Omni 與 Flow 對話式影片生成教學 這支影片來自 YouTube 頻道「AI 視覺實驗室」，標題為「Google Omni降臨，生成影片就像聊天？對話式影片修改！無痛替換影片背景、內容，創建虛擬分身！有可能贏過Seedance 2.0嗎？」。影片長度約 11 ",
+    "slug": "2026-07-26-youtube-ai-vision-lab-google-omni-flow",
+    "html": "articles/2026-07-26-youtube-ai-vision-lab-google-omni-flow.html",
+    "markdown": "articles/2026/07/2026-07-26-youtube-ai-vision-lab-google-omni-flow.md"
+  },
+  {
     "title": "Threads｜AI熱搜報：Google AI Studio Build 模式、Managed Agents 與 AI 自動交易敘事的查核筆記",
     "date": "2026-07-25",
     "source": "https://www.threads.com/@ai.resoubao2026/post/DbMnej4EoCL?xmt=AQG0TwR4m6E-K3opQKqTYEbnL6ILCy1kThBJ9MpGMfFEIytCzHjCY6E8r6xgkdAY8xzJilEa&slof=1",
