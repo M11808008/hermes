@@ -75,6 +75,28 @@
     "markdown": "articles/2026/07/2026-07-27-threads-liq-media-monid-seedance-claude-code-pay-per-use.md"
   },
   {
+    "title": "YouTube｜さき AIでええやん：Gemini Spark 24/7 個人 AI Agent 與排程工作流",
+    "date": "2026-07-27",
+    "source": "https://youtu.be/dDQM7qg_Au8",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "Gemini Spark",
+      "Google AI",
+      "AI agents",
+      "productivity",
+      "scheduled actions"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [],
+    "excerpt": "這支日文影片把 Gemini Spark 解讀成「24 小時運作的個人 AI 秘書」：可在雲端背景執行多步驟任務、產出 Slides / Sheets、設定定期排程，並把常用作業流程保存成 Skills；官方查核確認 Gemini Spark 與 Spark schedules 確有 Google 頁面，但實際可用性受訂閱方案、年齡、國家地區與企業帳號資格限制。",
+    "slug": "2026-07-27-youtube-saki-ai-gemini-spark-auto-work-update",
+    "html": "articles/2026-07-27-youtube-saki-ai-gemini-spark-auto-work-update.html",
+    "markdown": "articles/2026/07/2026-07-27-youtube-saki-ai-gemini-spark-auto-work-update.md"
+  },
+  {
     "title": "Facebook｜陳盟升：128GB 全地端 Agent 系統模型選擇攻略",
     "date": "2026-07-26",
     "source": "https://www.facebook.com/share/18u7dpabPA/?mibextid=wwXIfr",
@@ -12619,7 +12641,7 @@
     "importance": "medium",
     "status": "archived",
     "links": [],
-    "excerpt": "Threads 貼文指出 Google 在 Gemini 應用程式中加入 Avatar 數位分身功能，讓 Google AI Plus、Pro、Ultra 訂閱用戶可建立外觀與聲音相似的化身，用於不露臉影片創作。",
+    "excerpt": "Threads 貼文指出 Google 在 Gemini 應用程式中加入 Avatar 數位分身功能，讓 Google AI Plus、Pro、Ultra 訂閱用戶可建立外觀與聲音相似的化身，用於不露臉影片創作；Andy Chu 的補充貼文則示範了把個人數位分身放進不同電影化/情境化 Prompt 的效果。",
     "slug": "2026-06-03-gemini-omni-avatar-digital-double-video",
     "html": "articles/2026-06-03-gemini-omni-avatar-digital-double-video.html",
     "markdown": "articles/2026/06/2026-06-03-gemini-omni-avatar-digital-double-video.md"
