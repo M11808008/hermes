@@ -36,6 +36,42 @@
     "markdown": "articles/2026/07/2026-07-27-ai-design-team-claude-skills-canva-workflow.md"
   },
   {
+    "title": "Codex 破甲指令檔與 Agent 安全邊界｜MDX-Tom gpt-5.6-instruct 社群案例",
+    "date": "2026-07-27",
+    "source": "https://www.facebook.com/photo.php?fbid=1569452351482928&set=a.118972106530967&type=3",
+    "author": "陳盟升 / MDX-Tom / OpenAI Developers / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "OpenAI Codex",
+      "Codex CLI",
+      "Agent Skills",
+      "AGENTS.md",
+      "AI 安全",
+      "Prompt Injection",
+      "Red Team",
+      "開發與程式",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/1DTnqFAMPb/?mibextid=wwXIfr",
+      "https://github.com/MDX-Tom/gpt-5.6-instruct",
+      "https://www.facebook.com/share/1DTnqFAMPb/?mibextid=wwXIfr",
+      "https://github.com/MDX-Tom/gpt-5.6-instruct",
+      "https://developers.openai.com/codex/agent-approvals-security",
+      "https://developers.openai.com/codex/concepts/sandboxing",
+      "https://developers.openai.com/codex/guides/agents-md",
+      "https://developers.openai.com/codex/skills"
+    ],
+    "excerpt": "`gpt-5.6-instruct` 是一個第三方 Codex CLI jailbreak / 破甲提示詞與測試包；它展示了社群如何把 prompt、測試集與 Skills 包裝成可部署檔案，也同時凸顯 coding agent 需要 sandbox、approval、網路權限與 instruction 供應鏈審查。",
+    "slug": "2026-07-27-facebook-darkschen-codex-gpt-5-6-instruct-safety-boundary",
+    "html": "articles/2026-07-27-facebook-darkschen-codex-gpt-5-6-instruct-safety-boundary.html",
+    "markdown": "articles/2026/07/2026-07-27-facebook-darkschen-codex-gpt-5-6-instruct-safety-boundary.md"
+  },
+  {
     "title": "Threads｜LIQ AI：Monid 把 Seedance 接進 Claude Code / Codex 的用量計費影片工作流",
     "date": "2026-07-27",
     "source": "https://www.threads.com/@liq_media/post/DbPezHojYGe",
