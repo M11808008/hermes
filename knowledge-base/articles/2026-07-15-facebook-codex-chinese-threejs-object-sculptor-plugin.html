@@ -1,10 +1,12 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook 社群案例｜Three.js Object Sculptor：用 Codex plugin 從物件照片生成程式化 3D 模型</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook 社群案例｜Three.js Object Sculptor：用 Codex plugin 從物件照片生成程式化 3D 模型</h1><h2>一句話摘要</h2>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>img2threejs｜用 Codex / Claude Code 從參考圖生成程式化 Three.js 3D 模型</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>img2threejs｜用 Codex / Claude Code 從參考圖生成程式化 Three.js 3D 模型</h1><h2>一句話摘要</h2>
 <figure><img src="https://opengraph.githubassets.com/05b739e9e05e322f3f6ef93e0ba04770dde1fb9f398f62ba37f4681fcbc1b32e/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin" alt="Facebook 社群案例 圖片" loading="lazy" referrerpolicy="no-referrer"><figcaption>Facebook 社群案例 圖片</figcaption></figure>
-<p>Three.js Object Sculptor 是一個 Codex plugin，目標是讓 Codex 依照單張物件參考圖，先建立物件規格與品質關卡，再用 Three.js 程式碼重建可互動、可動畫化的 3D 物件；它適合做瀏覽器原型、遊戲道具與課程示範，但不是從照片直接抽出精準 mesh 的 photogrammetry 工具。</p>
+<p>img2threejs / Three.js Object Sculptor 這條工具線，目標是讓 Codex、Claude Code 或 OpenCode 依照單張物件參考圖，先建立物件規格與品質關卡，再用 Three.js 程式碼重建可互動、可動畫化的 3D 物件；它適合做瀏覽器原型、遊戲道具與課程示範，但不是從照片直接抽出精準 mesh 的 photogrammetry 工具。</p>
 <p>原文：</p>
 <p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/</a></p>
-<p>GitHub：</p>
+<p>早期 GitHub：</p>
 <p><a href="https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin" target="_blank" rel="noopener">https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin</a></p>
+<p>2026-07-27 補充 GitHub：</p>
+<p><a href="https://github.com/img2threejs/img2threejs" target="_blank" rel="noopener">https://github.com/img2threejs/img2threejs</a></p>
 <p>---</p>
 <h2>原文重點</h2>
 <p>Codex 中文社群貼文引用 GitHub 專案並附上 Om Patel 的貼文截圖。截圖主張可整理為：</p>
@@ -18,15 +20,33 @@
 <p>Facebook metadata 擷取到的原文補充是：「有興趣的朋友參考看看」，主連結指向 GitHub repository。</p>
 <p>---</p>
 <h2>GitHub / Brave Search 查證</h2>
-<p>Brave Search 的第一結果與 GitHub repository 一致：`vinhhien112/Three.js-Object-Sculptor-Codex-Plugin`，描述為「Codex plugin that turns attached object images into code-only, animation-ready procedural Three.js models」。GitHub API 檢查時顯示：</p>
+<p>早期 Facebook 社群案例指向 `vinhhien112/Three.js-Object-Sculptor-Codex-Plugin`；2026-07-27 Threads 補充則指向 `img2threejs/img2threejs`，後者 README 與 ROADMAP 更完整，並將專案定位為 image-to-procedural-Three.js 的 agentic pipeline。GitHub API 檢查時顯示：</p>
 <ul>
-<li>repository：`vinhhien112/Three.js-Object-Sculptor-Codex-Plugin`</li>
+<li>repository：`img2threejs/img2threejs`</li>
 <li>語言：Python</li>
-<li>GitHub 描述：把附加的物件圖片轉成 code-only、animation-ready 的 procedural Three.js models</li>
-<li>README 提供兩個 demo：Tower Ship 與 Ancient Autumn Tree</li>
-<li>README 明確說明：不是 photogrammetry、不是從單張圖抽出完美 mesh、也不是下載 art pack，而是引導 Codex 走「規格化、分階段雕塑、截圖比對、自我修正」的程式化建模流程。</li>
+<li>license：Apache-2.0</li>
+<li>GitHub 描述：把參考圖中的物件重建為 code-only、procedural、quality-gated、animation-ready 的 Three.js model</li>
+<li>README 提供 live demo gallery，且說明每個模型都是 generated code，在瀏覽器中即時運行</li>
+<li>README 明確說明：不是 photogrammetry、不是從單張圖抽出完美 mesh、也不是下載 art pack，而是引導 agent 走「規格化、分階段雕塑、截圖比對、vision review、自我修正」的程式化建模流程。</li>
 </ul>
-<p>這表示社群貼文的方向大致成立，但「拍任何物件照片就能重建為完全真實 3D 模型」需要降溫理解：目前更精準的說法是「用 Codex 依照片推論並生成可用的 procedural Three.js 近似模型」。</p>
+<p>這表示社群貼文的方向大致成立，但「拍任何物件照片就能重建為完全真實 3D 模型」需要降溫理解：目前更精準的說法是「用 Codex / Claude Code 依照片推論並生成可用的 procedural Three.js 近似模型」。</p>
+<p>---</p>
+<h2>2026-07-27 補充：Shawn C Threads 與 img2threejs 組織版 repo</h2>
+<p>Shawn C 在 Threads 補充分享 `img2threejs/img2threejs`，把這個方向描述為「一張參考圖 → 2D 圖像結構分析 → Three.js 程序化模型 → 瀏覽器即時互動」。貼文中使用「Codex 5.6」這個說法；Brave Search 可找到 OpenAI / Codex 相關 GPT-5.6 資訊，但本文不把社群貼文中的版本稱呼當成唯一官方產品名，重點放在 repo 本身可查核的 workflow。</p>
+<p>Threads 擷取到的作者補充包含：原連結一開始被截斷，後續補上完整 GitHub 連結；對「直接用 Codex 做到嗎？」的回覆是「對喔，直接讓 Codex 安裝就好了」。這可視為社群實作經驗，但是否可在欒帥環境穩定重現，仍需實際 clone / 安裝 / 跑 demo 才能確認。</p>
+<p>GitHub API 與 README 查核到的重點：</p>
+<ul>
+<li>repository：`img2threejs/img2threejs`</li>
+<li>描述：把參考圖中的物件重建為 code-only、procedural、quality-gated、animation-ready 的 Three.js model。</li>
+<li>授權：Apache-2.0。</li>
+<li>主要語言：Python。</li>
+<li>截至擷取時約 6.7k stars、517 forks、27 open issues；此數字會變動。</li>
+<li>README 寫明可在 Claude Code、Codex 或 OpenCode 下運作，屬 agent-agnostic skill / pipeline。</li>
+<li>不是 photogrammetry、不是 mesh extraction、也不是下載 art pack；輸出是 `THREE.Group` factory / TypeScript 程式化模型，搭配 runtime hierarchy、pivots、sockets、colliders 等動畫/互動結構。</li>
+<li>Live demo gallery： <a href="https://img2threejs.github.io/img2threejs-showcase/" target="_blank" rel="noopener">https://img2threejs.github.io/img2threejs-showcase/</a></li>
+</ul>
+<figure><img src="../assets/source-images/2026-07-27-threads-shawn-img2threejs-codex-threejs.jpg" alt="Shawn C Threads img2threejs 影片封面" loading="lazy" referrerpolicy="no-referrer"><figcaption>Shawn C Threads img2threejs 影片封面</figcaption></figure>
+<p>圖片說明：Threads 影片封面畫面幾乎只有中央播放鍵與淡色介面背景，左上可見「正在思考」字樣；可作為原貼影片證據，但不足以判斷實際生成品質。本文的技術判讀以貼文文字、作者補充與 GitHub README 為主。</p>
 <p>---</p>
 <h2>工作流拆解</h2>
 <p>README 描述的流程比一般 image-to-3D 更工程化：</p>
@@ -58,4 +78,4 @@
 </ul>
 <p>---</p>
 <h2>對 AI 學習雷達的保存價值</h2>
-<p>這篇值得收錄，因為它代表 agentic coding 從「寫網頁 / 修 bug」往「可驗證的程序化內容生成」延伸。重點不是單純把圖片變 3D，而是把建模拆成可檢查的工程流程：spec、階段任務、render、comparison、vision review、修正。這種模式未來可套用到更多生成式設計任務，例如 UI 還原、動畫素材、教具模擬、品牌展示物件與課堂互動 demo。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · Facebook post, Brave Search, GitHub repository · article</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">Codex Plugin</span><span class="tag">Three.js</span><span class="tag">Procedural 3D</span><span class="tag">Image-to-3D</span><span class="tag">Agentic Coding</span><span class="tag">GitHub</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1CjRtivRYi/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1CjRtivRYi/</a></p><p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/</a></p><p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/</a></p><p><a href="https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin" target="_blank" rel="noopener">https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin</a></p><p><a href="https://3dship.harrysoftware.com" target="_blank" rel="noopener">https://3dship.harrysoftware.com</a></p><p><a href="https://tree.harrysoftware.com/" target="_blank" rel="noopener">https://tree.harrysoftware.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
+<p>這篇值得收錄，因為它代表 agentic coding 從「寫網頁 / 修 bug」往「可驗證的程序化內容生成」延伸。重點不是單純把圖片變 3D，而是把建模拆成可檢查的工程流程：spec、階段任務、render、comparison、vision review、修正。這種模式未來可套用到更多生成式設計任務，例如 UI 還原、動畫素材、教具模擬、品牌展示物件與課堂互動 demo。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-15 · Facebook post, Threads post, GitHub repository, Brave Search · article</div><h3>標籤</h3><span class="tag">Codex</span><span class="tag">Codex Plugin</span><span class="tag">Three.js</span><span class="tag">Procedural 3D</span><span class="tag">Image-to-3D</span><span class="tag">Agentic Coding</span><span class="tag">GitHub</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1CjRtivRYi/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1CjRtivRYi/</a></p><p><a href="https://github.com/img2threejs/img2threejs" target="_blank" rel="noopener">https://github.com/img2threejs/img2threejs</a></p><p><a href="https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/" target="_blank" rel="noopener">https://www.facebook.com/groups/1713764039757273/posts/1773188140481529/</a></p><p><a href="https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin" target="_blank" rel="noopener">https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin</a></p><p><a href="https://www.threads.com/@shawn.cccc/post/DbSGwxgiRva" target="_blank" rel="noopener">https://www.threads.com/@shawn.cccc/post/DbSGwxgiRva</a></p><p><a href="https://github.com/img2threejs/img2threejs" target="_blank" rel="noopener">https://github.com/img2threejs/img2threejs</a></p><p><a href="https://img2threejs.github.io/img2threejs-showcase/" target="_blank" rel="noopener">https://img2threejs.github.io/img2threejs-showcase/</a></p><p><a href="https://threejs.org/" target="_blank" rel="noopener">https://threejs.org/</a></p><p><a href="https://3dship.harrysoftware.com" target="_blank" rel="noopener">https://3dship.harrysoftware.com</a></p><p><a href="https://tree.harrysoftware.com/" target="_blank" rel="noopener">https://tree.harrysoftware.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
