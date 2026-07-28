@@ -72,6 +72,41 @@
     "markdown": "articles/2026/07/2026-07-27-facebook-darkschen-codex-gpt-5-6-instruct-safety-boundary.md"
   },
   {
+    "title": "NotebookLM 改名 Gemini Notebook｜原生程式碼執行與 Google 生態整合",
+    "date": "2026-07-27",
+    "source": "https://www.threads.com/@94eheima/post/DbT73RbEubd",
+    "author": "老黑很不黑科技（@94eheima） / Google / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Gemini Notebook",
+      "NotebookLM",
+      "Google Gemini",
+      "Google Search",
+      "資料分析",
+      "研究工作流",
+      "AI Agent",
+      "教育與課程",
+      "商業與生產力"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@94eheima/post/DbT73RbEubd",
+      "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "https://www.threads.com/@94eheima/post/DbT73RbEubd",
+      "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/",
+      "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm/",
+      "https://notebooklm.google.com/"
+    ],
+    "excerpt": "Google 已正式把 NotebookLM 更名為 Gemini Notebook；它仍是獨立研究工具，但開始被整合進 Gemini app 與 Google Search，並透過「安全雲端電腦」讓筆記本能原生寫程式、跑資料分析與產出更多格式。",
+    "slug": "2026-07-27-threads-94eheima-gemini-notebook-code-execution",
+    "html": "articles/2026-07-27-threads-94eheima-gemini-notebook-code-execution.html",
+    "markdown": "articles/2026/07/2026-07-27-threads-94eheima-gemini-notebook-code-execution.md"
+  },
+  {
     "title": "Threads｜LIQ AI：Monid 把 Seedance 接進 Claude Code / Codex 的用量計費影片工作流",
     "date": "2026-07-27",
     "source": "https://www.threads.com/@liq_media/post/DbPezHojYGe",
