@@ -1,5 +1,43 @@
 [
   {
+    "title": "Google Flow × Omni × Veo｜從腳本、分鏡到 Flow TV 的 AI 影音創作工作流",
+    "date": "2026-07-28",
+    "source": "https://www.threads.com/@cynthia_teng/post/DbVLb7PjrBe",
+    "author": "Cynthia Teng（鄧君如） / Google / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Google Flow",
+      "Gemini Omni",
+      "Veo",
+      "Flow TV",
+      "AI 影片",
+      "影音創作",
+      "AI Marketing",
+      "Google Gemini",
+      "NotebookLM",
+      "教育與課程",
+      "多媒體與內容"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@cynthia_teng/post/DbVLb7PjrBe",
+      "https://labs.google/flow/about",
+      "https://www.threads.com/@cynthia_teng/post/DbVLb7PjrBe",
+      "https://labs.google/flow/about",
+      "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/",
+      "https://support.google.com/flow/answer/16353333?hl=en",
+      "https://www.gotop.com.tw/book/BookDetails.aspx?Types=v&bn=ACV049600",
+      "https://www.books.com.tw/products/0011057419?loc=P_0003_016"
+    ],
+    "excerpt": "這則貼文值得收錄的重點不是單純「Google Flow 可以生影片」，而是把 Google Flow 視為一個 AI 影音創作工作台：以 Gemini / Omni 協助理解與對話式編輯，以 Veo 生成影片，以 Flow TV 學習 prompt 與鏡頭技法，再把腳本、分鏡、角色與剪輯流程串起來。",
+    "slug": "2026-07-28-threads-cynthia-teng-google-flow-omni-video-workflow",
+    "html": "articles/2026-07-28-threads-cynthia-teng-google-flow-omni-video-workflow.html",
+    "markdown": "articles/2026/07/2026-07-28-threads-cynthia-teng-google-flow-omni-video-workflow.md"
+  },
+  {
     "title": "GitHub｜AI Design Team：把 Claude Skills 組成內容創作者的虛擬設計部門",
     "date": "2026-07-27",
     "source": "https://github.com/jinggreen15/ai-design-team",
