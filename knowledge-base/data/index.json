@@ -76,6 +76,43 @@
     "markdown": "articles/2026/07/2026-07-28-threads-darkseoking-modal-kimi-k3-shared-api-free-credit.md"
   },
   {
+    "title": "ChatGPT 發票 OCR｜小店紙本發票分類、Google Sheet 月報與稅務查核邊界",
+    "date": "2026-07-28",
+    "source": "https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R",
+    "author": "Kai Chen（@kai_ch_chen） / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "ChatGPT",
+      "OCR",
+      "發票整理",
+      "小店數位化",
+      "Google Sheets",
+      "稅務資料",
+      "營所稅",
+      "營業稅",
+      "工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R",
+      "https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R",
+      "https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R",
+      "https://www.etax.nat.gov.tw/",
+      "https://www.ntbt.gov.tw/",
+      "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/loss-report-restriction/6M7rqvN",
+      "https://www.ntbt.gov.tw/singlehtml/0baa381b53034993a08862dfde2243b9?cntId=08f87d2104c04266a40e67c00d7c5c5a",
+      "https://openai.com/business-data/",
+      "https://help.openai.com/en/articles/7730893-data-controls-faq"
+    ],
+    "excerpt": "這則貼文值得保存，不是因為「AI 能替你報稅」，而是它把小店最常見的紙本發票地獄，拆成可教學的輕量工作流：拍照品質控制 → OCR / 表格化 → 人工覆核 → Google Sheet 月報；真正的稅務可扣除判斷仍要回到財政部法規、國稅局說明與會計師覆核。",
+    "slug": "2026-07-28-threads-kai-chen-chatgpt-invoice-ocr-small-business",
+    "html": "articles/2026-07-28-threads-kai-chen-chatgpt-invoice-ocr-small-business.html",
+    "markdown": "articles/2026/07/2026-07-28-threads-kai-chen-chatgpt-invoice-ocr-small-business.md"
+  },
+  {
     "title": "GitHub｜AI Design Team：把 Claude Skills 組成內容創作者的虛擬設計部門",
     "date": "2026-07-27",
     "source": "https://github.com/jinggreen15/ai-design-team",

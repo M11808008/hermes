@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ChatGPT 發票 OCR｜小店紙本發票分類、Google Sheet 月報與稅務查核邊界</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>ChatGPT 發票 OCR｜小店紙本發票分類、Google Sheet 月報與稅務查核邊界</h1><p>來源是 Kai Chen（@kai_ch_chen）在 Threads 分享的「小店紙本發票去神秘化」案例：把咖啡店一季累積的紙本發票用手機拍照丟給 ChatGPT，請 AI 依日期、店家類型與金額分類，再輸出成表格，最後轉進 Google Sheet 做月報。</p>
+<figure><img src="../assets/source-images/2026-07-28-threads-kai-chen-chatgpt-invoice-ocr-1.jpg" alt="50 張紙本發票用 ChatGPT 歸位的圖卡" loading="lazy" referrerpolicy="no-referrer"><figcaption>50 張發票 30 秒</figcaption></figure>
+<h1>一句話摘要</h1>
+<p>這則貼文值得保存，不是因為「AI 能替你報稅」，而是它把小店最常見的紙本發票地獄，拆成可教學的輕量工作流：拍照品質控制 → OCR / 表格化 → 人工覆核 → Google Sheet 月報；真正的稅務可扣除判斷仍要回到財政部法規、國稅局說明與會計師覆核。</p>
+<h1>Threads 可擷取資訊</h1>
+<p>| 欄位 | 內容 |</p>
+<p>|---|---|</p>
+<p>| 作者 | Kai Chen（@kai_ch_chen） |</p>
+<p>| 可見時間 | 13 小時前（擷取於 2026-07-29 凌晨） |</p>
+<p>| 可見互動 | 約 9,584 次瀏覽、98 讚、4 則回覆、6 repost/引用、128 分享/互動（頁面快照） |</p>
+<p>| 主張 | 咖啡店 50 張紙本發票，傳統 Excel 手打約 2 小時；用手機拍照丟 ChatGPT 後，以一句 prompt 分類、加總、標示可扣除項目，再匯出 Google Sheet |</p>
+<p>| 作者留言 prompt |「這幾張店家發票的照片，請幫我依 (1) 日期 (2) 店家類型 (食材/雜項/水電/交通) (3) 金額分類。輸出成 Markdown 表格，最後加一列各類佔比，並標出可扣除營業稅或所得稅的項目。」|</p>
+<p>| 作者列出的資料來源 | 財政部稅務入口網、財政部臺北國稅局 |</p>
+<h1>圖片內容與 OCR 重點</h1>
+<h2>1. 50 張發票 30 秒</h2>
+<p>主圖文字為「AI 應用 × 去神秘化」、「50 張發票 30 秒」、「咖啡店 1 季紙本發票，一句 prompt 全部歸位」。圖像以一疊收據轉成資料夾表格呈現，沒有可識別的真實店家或統編資訊。</p>
+<h2>2. 拍照 3 個技巧</h2>
+<figure><img src="../assets/source-images/2026-07-28-threads-kai-chen-chatgpt-invoice-ocr-2.jpg" alt="發票拍照三技巧" loading="lazy" referrerpolicy="no-referrer"><figcaption>拍照 3 個技巧</figcaption></figure>
+<p>第二張圖提示：光線正對、避開反光、單張一景，並寫到「OCR 準確率翻倍」。這裡的實務重點是：不要把多張發票疊在同一張模糊照片裡；若要降低人工覆核成本，拍照品質比 prompt 更重要。</p>
+<h2>3. 一句 prompt 的結構</h2>
+<figure><img src="../assets/source-images/2026-07-28-threads-kai-chen-chatgpt-invoice-ocr-3.jpg" alt="一句 prompt 搞定分類、加總與可扣除標示" loading="lazy" referrerpolicy="no-referrer"><figcaption>一句 prompt 搞定</figcaption></figure>
+<p>第三張圖把 prompt 拆成三段任務：分類、加總、標可扣除項目。這比單純要求「幫我整理發票」更好，因為它先定義欄位與輸出格式，再讓 AI 做彙總。</p>
+<h2>4. 分類結果表</h2>
+<figure><img src="../assets/source-images/2026-07-28-threads-kai-chen-chatgpt-invoice-ocr-4.jpg" alt="分類結果表示例" loading="lazy" referrerpolicy="no-referrer"><figcaption>分類結果表</figcaption></figure>
+<p>第四張圖是示意分類結果：食材 62%、雜項 18%、水電 12%、交通 8%。這些比例應視為圖卡示例，不應當成該咖啡店的實際財務數據。</p>
+<h2>5. 欄位範本</h2>
+<figure><img src="../assets/source-images/2026-07-28-threads-kai-chen-chatgpt-invoice-ocr-5.jpg" alt="欄位範本：日期、店家、類型、金額、是否可扣除" loading="lazy" referrerpolicy="no-referrer"><figcaption>欄位範本</figcaption></figure>
+<p>第五張圖提供欄位範本：「日期 / 店家 / 類型 / 金額 / 是否可扣除」。如果要轉成可長期維護的 Google Sheet，建議再補上「發票號碼、統編、稅額、憑證類型、付款方式、覆核狀態、原始照片檔名」等欄位。</p>
+<h1>官方查核：能做 OCR，不代表能直接判定報稅</h1>
+<p>作者留言列出財政部稅務入口網與財政部臺北國稅局，方向是對的，但貼文中的「挑出可申報營所稅扣除」應標註為 AI 初步分類，不是稅務結論。</p>
+<p>財政部稅務入口網的營利事業所得稅 Q&amp;A 反覆強調「核實認定」與「證明文據／原始憑證」；例如其他費用或損失要能核實認定，需具備相應證明文件。財政部臺北國稅局的營利事業所得稅常見問答，也把不同情境的所得、費用、申報與憑證要求拆開說明。因此：</p>
+<ul>
+<li>AI 可以先把紙本資料轉成表格，降低登打成本。</li>
+<li>AI 可以標出「可能」與營業、營所稅相關的項目，供人工檢查。</li>
+<li>是否可作為營業稅進項、營利事業所得稅費用或其他扣除，仍取決於交易性質、買受人資訊、統一發票或合法憑證、公司帳務與實際用途。</li>
+<li>罰單、私人消費、非營業相關支出等項目，不能只因 AI 標示就列入公司費用。</li>
+</ul>
+<h1>隱私與資料治理提醒</h1>
+<p>這類工作流很適合小店與微型公司，但發票、收據與罰單可能含有店家資訊、統編、付款軌跡、車號、姓名或地址。若資料屬公司帳務或客戶個資，應先決定要使用個人版 ChatGPT、ChatGPT Business / Enterprise，或本機 OCR / 企業受控環境。</p>
+<p>OpenAI 官方資料控制與商務資料頁面說明，Business / Enterprise / Edu / API 等商務方案對 business data 有較明確的資料使用承諾；一般 ChatGPT 使用者則應留意 Data Controls、聊天紀錄、檔案上傳與模型改進設定。實務建議：</p>
+<ul>
+<li>上傳前先遮蔽不必要的個資與非本次任務所需欄位。</li>
+<li>不要把完整帳本、銀行資訊、客戶名單與個人罰單混在同一批 prompt 中。</li>
+<li>要求 AI 輸出「需要人工覆核」欄，而不是只輸出結論。</li>
+<li>對低信心 OCR、模糊照片、金額不一致、可扣除判斷，全部標成待覆核。</li>
+<li>最終申報前交由負責人、會計或記帳士確認。</li>
+</ul>
+<h1>可帶走的改良版 prompt</h1>
+<p>```text</p>
+<p>你是小型店家帳務整理助理。請從以下發票／收據照片中抽取資料，但不要做最終稅務判定。</p>
+<p>請輸出 Markdown 表格，欄位如下：</p>
+<ul>
+<li>日期</li>
+<li>店家／供應商</li>
+<li>發票或收據類型</li>
+<li>發票號碼或識別碼（若看不清楚填「待覆核」）</li>
+<li>類別（食材／雜項／水電／交通／設備／行銷／其他）</li>
+<li>金額</li>
+<li>稅額（若可見）</li>
+<li>可能用途</li>
+<li>可能可列報項目（請用「可能」語氣）</li>
+<li>OCR 信心（高／中／低）</li>
+<li>需要人工覆核原因</li>
+</ul>
+<p>最後請加總各類金額與占比，並列出：</p>
+<ul>
+<li>看不清楚的照片</li>
+<li>金額或日期疑似錯誤的項目</li>
+<li>可能不是公司支出的項目</li>
+<li>需要會計／記帳士確認的項目</li>
+</ul>
+<p>```</p>
+<h1>為什麼值得放進 AI 學習雷達</h1>
+<p>這則案例非常適合課堂或小企業工作坊：它不是高門檻的 agent、自動化 API 或 ERP，而是每個小店都遇得到的紙本資料整理。AI 的價值不是「取代會計」，而是把紙本憑證變成可搜尋、可排序、可覆核的表格，讓人把時間花在判斷與合規上。</p>
+<h1>風險與限制</h1>
+<ul>
+<li>圖卡中的「30 秒」與貼文中的「3 秒」屬作者案例與社群表述，實際速度取決於照片數量、上傳時間、模型、圖片清晰度與人工覆核深度。</li>
+<li>OCR 會出錯，尤其是摺痕、反光、熱感紙褪色、截斷、手寫收據與多張混拍。</li>
+<li>AI 可做初步分類，但不應作為稅務申報依據。</li>
+<li>若使用個人版雲端 AI，需先評估資料隱私與公司內控政策。</li>
+<li>最後輸出到 Google Sheet 前，建議保留原始照片檔名與覆核欄位，方便追溯。</li>
+</ul>
+<h1>來源</h1>
+<ul>
+<li>Kai Chen（@kai_ch_chen）Threads：50 張紙本發票用 ChatGPT 分類與匯出 Google Sheet。</li>
+<li>財政部稅務入口網：營利事業所得稅、營業稅、統一發票與憑證相關 Q&amp;A。</li>
+<li>財政部臺北國稅局：營利事業所得稅常見問答。</li>
+<li>OpenAI：Business data / Enterprise privacy / Data Controls FAQ。</li>
+<li>Google Docs Editors Help：Google Sheets 可透過 CSV / IMPORTDATA 等方式接收結構化資料；實務上也可由 Markdown 表格轉 CSV 或直接複製貼上。</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-28 · https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R · article</div><h3>標籤</h3><span class="tag">AI</span><span class="tag">ChatGPT</span><span class="tag">OCR</span><span class="tag">發票整理</span><span class="tag">小店數位化</span><span class="tag">Google Sheets</span><span class="tag">稅務資料</span><span class="tag">營所稅</span><span class="tag">營業稅</span><span class="tag">工作流</span><h3>原始連結</h3><p><a href="https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R" target="_blank" rel="noopener">https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R</a></p><p><a href="https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R" target="_blank" rel="noopener">https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R</a></p><p><a href="https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R" target="_blank" rel="noopener">https://www.threads.com/@kai_ch_chen/post/DbUjXmen81R</a></p><p><a href="https://www.etax.nat.gov.tw/" target="_blank" rel="noopener">https://www.etax.nat.gov.tw/</a></p><p><a href="https://www.ntbt.gov.tw/" target="_blank" rel="noopener">https://www.ntbt.gov.tw/</a></p><p><a href="https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/loss-report-restriction/6M7rqvN" target="_blank" rel="noopener">https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/loss-report-restriction/6M7rqvN</a></p><p><a href="https://www.ntbt.gov.tw/singlehtml/0baa381b53034993a08862dfde2243b9?cntId=08f87d2104c04266a40e67c00d7c5c5a" target="_blank" rel="noopener">https://www.ntbt.gov.tw/singlehtml/0baa381b53034993a08862dfde2243b9?cntId=08f87d2104c04266a40e67c00d7c5c5a</a></p><p><a href="https://openai.com/business-data/" target="_blank" rel="noopener">https://openai.com/business-data/</a></p><p><a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener">https://help.openai.com/en/articles/7730893-data-controls-faq</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
