@@ -67,6 +67,69 @@
     "markdown": "articles/2026/07/2026-07-29-facebook-taki-wong-claude-code-google-stitch-web-design.md"
   },
   {
+    "title": "Fish Audio S2.1 Pro｜低延遲多語 TTS、免費開發 API 與即時語音 Agent 路線",
+    "date": "2026-07-29",
+    "source": "Threads, Fish Audio official blog/docs",
+    "author": "戴戴相传AI (@daizicheng8)",
+    "type": "article",
+    "topics": [
+      "Fish Audio",
+      "S2.1 Pro",
+      "TTS",
+      "Voice Agent",
+      "Voice Cloning",
+      "API"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BCF2bwFk_l/",
+      "https://www.threads.com/@daizicheng8/post/DbYLQvFk8KI",
+      "https://www.threads.com/@daizicheng8/post/DbYLQvFk8KI",
+      "https://fish.audio/blog/s2-1-pro-free-api/",
+      "https://docs.fish.audio/developer-guide/models-pricing/models-overview",
+      "https://fish.audio/developers/"
+    ],
+    "excerpt": "戴戴相传AI 分享 Fish Audio S2.1 Pro：它不是只面向旁白配音的 TTS，而是把低延遲、多語、聲音克隆、語氣控制與 API 串到一起，往即時語音 Agent、客服、數位分身與口播生成走。 原文： https://www.threads.com/@daizicheng8/post/DbYLQvFk8KI",
+    "slug": "2026-07-29-threads-daizicheng8-fish-audio-s21-pro-voice-api",
+    "html": "articles/2026-07-29-threads-daizicheng8-fish-audio-s21-pro-voice-api.html",
+    "markdown": "articles/2026/07/2026-07-29-threads-daizicheng8-fish-audio-s21-pro-voice-api.md"
+  },
+  {
+    "title": "Codex × HyperFrames × IndexTTS2 × HeyGen｜Avatar 口播自媒體流水線實測觀察",
+    "date": "2026-07-29",
+    "source": "Threads, HyperFrames docs, HeyGen Help Center, GitHub, IndexTTS2",
+    "author": "Dustin GMAT (@dustin_gmat)",
+    "type": "article",
+    "topics": [
+      "Codex",
+      "HyperFrames",
+      "IndexTTS2",
+      "HeyGen",
+      "Avatar",
+      "AI影片",
+      "Skills"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_fRhdWQJP/",
+      "https://www.threads.com/@dustin_gmat/post/DbYjZhgiZVz",
+      "https://www.threads.com/@dustin_gmat/post/DbYjZhgiZVz",
+      "https://hyperframes.heygen.com/quickstart",
+      "https://hyperframes.heygen.com/introduction",
+      "https://help.heygen.com/en/articles/15001510-hyperframes-x-heygen",
+      "https://github.com/heygen-com/hyperframes",
+      "https://github.com/index-tts/index-tts"
+    ],
+    "excerpt": "Dustin GMAT 分享一條「Codex + HyperFrames + IndexTTS2 + HeyGen」自媒體影片流水線：用 coding agent 與 skills 生成畫面/動畫/腳本，再搭配 TTS 與 HeyGen Avatar 做口播。這條路線的價值不是替代所有真人內容，而是把概念分享、教學短口播與固定欄目變成可重複渲染的 pipeline。 原文： https://www.threads.com/@dustin_gmat/post/DbYjZhgiZVz",
+    "slug": "2026-07-29-threads-dustin-gmat-codex-hyperframes-indextts2-heygen-avatar",
+    "html": "articles/2026-07-29-threads-dustin-gmat-codex-hyperframes-indextts2-heygen-avatar.html",
+    "markdown": "articles/2026/07/2026-07-29-threads-dustin-gmat-codex-hyperframes-indextts2-heygen-avatar.md"
+  },
+  {
     "title": "Google Flow × Omni × Veo｜從腳本、分鏡到 Flow TV 的 AI 影音創作工作流",
     "date": "2026-07-28",
     "source": "https://www.threads.com/@cynthia_teng/post/DbVLb7PjrBe",
@@ -3848,6 +3911,7 @@
       "https://x.com/CycleDecoded/status/2076642075018477966",
       "https://x.com/CycleDecoded/status/2076642075018477966",
       "https://x.com/CycleDecoded/status/2076642075018477966",
+      "https://www.threads.com/@ai_triallab/post/DbXLWc1mO6K",
       "https://github.com/harry0703/MoneyPrinterTurbo",
       "https://github.com/harry0703/MoneyPrinterTurbo/blob/main/README-en.md"
     ],
