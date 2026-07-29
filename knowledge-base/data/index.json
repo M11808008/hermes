@@ -32,6 +32,140 @@
     "markdown": "articles/2026/07/2026-07-30-blake-nan-tang-shuijiao-yilan-dumplings.md"
   },
   {
+    "title": "哈利士 Facebook 影片｜台北新北三間脆皮臭豆腐備忘：師大分部、蕭家下港、珊珊",
+    "date": "2026-07-30",
+    "source": "https://www.facebook.com/share/v/1CrW4nXq3s/",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "台北美食",
+      "新北美食",
+      "臭豆腐",
+      "小吃"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1CrW4nXq3s/"
+    ],
+    "excerpt": "# 哈利士 Facebook 影片｜台北新北三間脆皮臭豆腐備忘 這則 Facebook 影片主題是「三間炸臭豆腐」小吃比較，適合整理成生活美食備忘。由於 Facebook 影片公開頁面能擷取的文字有限，以下以公開 metadata、封面圖與搜尋結果整理；實際營業狀態仍建議出發前用 Google Maps 或店家社群再次",
+    "slug": "2026-07-30-facebook-harris-stinky-tofu-three-shops-taipei-new-taipei",
+    "html": "articles/2026-07-30-facebook-harris-stinky-tofu-three-shops-taipei-new-taipei.html",
+    "markdown": "articles/2026/07/2026-07-30-facebook-harris-stinky-tofu-three-shops-taipei-new-taipei.md"
+  },
+  {
+    "title": "Abby 行銷周報 Threads｜動物情緒轉折短片的 Gemini / Veo Prompt 拆解",
+    "date": "2026-07-30",
+    "source": "https://www.threads.com/share/BAYvpuFwwQ/",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "Gemini",
+      "Veo",
+      "AI短影音",
+      "Prompt"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [],
+    "excerpt": "# Abby 行銷周報 Threads｜動物情緒轉折短片的 Gemini / Veo Prompt 拆解 這則 Threads 分享的是短影音常見的「可愛動物 + 情緒轉折 + 道具反差」生成策略。封面圖可見一隻倉鼠近距離看向鏡頭，手上拿著藍黃玩具槍，右下角有創作者頭像；畫面像 AI 生成或 AI 影片截圖。 ![倉鼠",
+    "slug": "2026-07-30-threads-abbychi-animal-emotion-video-prompts",
+    "html": "articles/2026-07-30-threads-abbychi-animal-emotion-video-prompts.html",
+    "markdown": "articles/2026/07/2026-07-30-threads-abbychi-animal-emotion-video-prompts.md"
+  },
+  {
+    "title": "Beezi AI note Threads｜ChatGPT Image 2 把小孩塗鴉變電影角色的角色一致性案例",
+    "date": "2026-07-30",
+    "source": "https://www.threads.com/share/BAM6ih-FD-/",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "ChatGPT Image",
+      "AI繪圖",
+      "角色一致性",
+      "Prompt"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@beeziainote/post/DbX8bDLGHDs"
+    ],
+    "excerpt": "# Beezi AI note Threads｜ChatGPT Image 2 把小孩塗鴉變電影角色的角色一致性案例 Beezi AI note 分享一則 ChatGPT Image 2 測試：把小孩塗鴉轉成電影角色，並觀察角色一致性。封面可見「ChatGPT Image 2.0 太強大」「5 種生圖神玩法」字樣，左下",
+    "slug": "2026-07-30-threads-beeziainote-chatgpt-image2-character-consistency",
+    "html": "articles/2026-07-30-threads-beeziainote-chatgpt-image2-character-consistency.html",
+    "markdown": "articles/2026/07/2026-07-30-threads-beeziainote-chatgpt-image2-character-consistency.md"
+  },
+  {
+    "title": "Bizziology Threads｜把 Gemini 當私人家教的 9 組學習 Prompt 框架",
+    "date": "2026-07-30",
+    "source": "https://www.threads.com/share/BBHUp9i4an/",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "Gemini",
+      "AI學習",
+      "Prompt",
+      "LearnLM"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [],
+    "excerpt": "# Bizziology Threads｜把 Gemini 當私人家教的 9 組學習 Prompt 框架 這則 Threads 的價值不是單一工具消息，而是把 AI 對話設計成「學習系統」：先拆技能，再診斷弱點，最後用練習與回饋循環推進。 ![Gemini 封面圖](../assets/source-images/20",
+    "slug": "2026-07-30-threads-bizziology-gemini-skill-learning-prompts",
+    "html": "articles/2026-07-30-threads-bizziology-gemini-skill-learning-prompts.html",
+    "markdown": "articles/2026/07/2026-07-30-threads-bizziology-gemini-skill-learning-prompts.md"
+  },
+  {
+    "title": "實價AI Threads｜ChatGPT 串接內政部實價登錄成交行情的房價分析工作流",
+    "date": "2026-07-30",
+    "source": "https://www.threads.com/share/_u97vwTdi/",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "ChatGPT",
+      "MCP",
+      "實價登錄",
+      "房地產"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@gu_jun_you/post/DbWspKPgZUF"
+    ],
+    "excerpt": "# 實價AI Threads｜ChatGPT 串接內政部實價登錄成交行情的房價分析工作流 實價AI（@gu_jun_you）分享「ChatGPT 接上內政部實價登錄成交行情」的流程，主張可以把成交明細交給 ChatGPT 做整理與分析，每日免費 5 次；訂閱則沒有次數限制。作者補充，全台可查，預設查詢中古屋，能分析成交",
+    "slug": "2026-07-30-threads-gu-jun-you-shijia-ai-chatgpt-real-estate",
+    "html": "articles/2026-07-30-threads-gu-jun-you-shijia-ai-chatgpt-real-estate.html",
+    "markdown": "articles/2026/07/2026-07-30-threads-gu-jun-you-shijia-ai-chatgpt-real-estate.md"
+  },
+  {
+    "title": "Miao-PAX Threads｜image2 / askgo.ai 生成亞馬遜電商套圖的 8 類 Prompt 模板",
+    "date": "2026-07-30",
+    "source": "https://www.threads.com/share/BAt1uzDJ2Y/",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "AI電商",
+      "ChatGPT Image",
+      "Prompt",
+      "Amazon"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@miaopax/post/DbXgNSUm2g1"
+    ],
+    "excerpt": "# Miao-PAX Threads｜image2 / askgo.ai 生成亞馬遜電商套圖的 8 類 Prompt 模板 Miao-PAX 分享用「image2 + askgo.ai」生成亞馬遜電商套圖的範例。貼文重點不是單張圖，而是把電商 Listing 視覺拆成 8 種任務型圖片。 ![image2 亞馬遜套圖示",
+    "slug": "2026-07-30-threads-miaopax-amazon-ecommerce-image-prompts",
+    "html": "articles/2026-07-30-threads-miaopax-amazon-ecommerce-image-prompts.html",
+    "markdown": "articles/2026/07/2026-07-30-threads-miaopax-amazon-ecommerce-image-prompts.md"
+  },
+  {
     "title": "Facebook Reel｜AI 無臉短影音自動生成與自動發布工具的「五分鐘開頁」主張",
     "date": "2026-07-29",
     "source": "https://www.facebook.com/reel/752403380748648",
