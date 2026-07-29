@@ -1,5 +1,42 @@
 [
   {
+    "title": "Claude Code × Google Stitch｜從 AI 介面草圖到前端實作的「vibe design」工作流",
+    "date": "2026-07-29",
+    "source": "https://www.facebook.com/reel/2241461343333554",
+    "author": "Taki Wong / Google Labs / Anthropic / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AI",
+      "Claude Code",
+      "Google Stitch",
+      "Web Design",
+      "Vibe Design",
+      "Frontend",
+      "UI Design",
+      "Facebook Reel",
+      "AI Coding",
+      "Prototype"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/19PHt4XJ8C/",
+      "https://www.facebook.com/taki.wong.7/videos/follow-me-for-more-valuable-ai-content-everyone-wants-to-create-a-website-using-/2241461343333554/",
+      "https://www.facebook.com/reel/2241461343333554",
+      "https://www.facebook.com/taki.wong.7/videos/follow-me-for-more-valuable-ai-content-everyone-wants-to-create-a-website-using-/2241461343333554/",
+      "https://stitch.withgoogle.com/",
+      "https://developers.googleblog.com/stitch-a-new-way-to-design-uis/",
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
+      "https://claude.com/product/claude-code",
+      "https://code.claude.com/docs/en/overview"
+    ],
+    "excerpt": "這則 Reel 值得保存的核心不是「免費做出 1 萬美元網站」這個行銷式標語，而是它指出一個實用分工：Google Stitch 負責快速探索高擬真 UI 與前端程式碼方向，Claude Code 負責把設計方向落到可維護的專案、元件、測試與部署流程。",
+    "slug": "2026-07-29-facebook-taki-wong-claude-code-google-stitch-web-design",
+    "html": "articles/2026-07-29-facebook-taki-wong-claude-code-google-stitch-web-design.html",
+    "markdown": "articles/2026/07/2026-07-29-facebook-taki-wong-claude-code-google-stitch-web-design.md"
+  },
+  {
     "title": "Google Flow × Omni × Veo｜從腳本、分鏡到 Flow TV 的 AI 影音創作工作流",
     "date": "2026-07-28",
     "source": "https://www.threads.com/@cynthia_teng/post/DbVLb7PjrBe",
