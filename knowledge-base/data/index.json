@@ -399,6 +399,35 @@
     "markdown": "articles/2026/07/2026-07-30-x-juliangoldieseo-google-vids-gemini-video-editing.md"
   },
   {
+    "title": "X｜Min Choi：ElevenLabs Speech Engine 讓既有 AI Agent 具備即時語音",
+    "date": "2026-07-30",
+    "source": "https://x.com/minchoi/status/2082853939452494308",
+    "author": "Min Choi（@minchoi）",
+    "type": "article",
+    "topics": [
+      "ElevenLabs",
+      "ElevenAgents",
+      "Voice Agent",
+      "WebSocket",
+      "Real-time AI",
+      "Sponsored"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/minchoi/status/2082853939452494308",
+      "https://elevenlabs.io/docs/eleven-agents/overview",
+      "https://elevenlabs.io/docs/eleven-agents/libraries/web-sockets",
+      "https://elevenlabs.io/docs/eleven-agents/customization/conversation-flow",
+      "https://elevenlabs.io/docs/eleven-agents/libraries/java-script"
+    ],
+    "excerpt": "# X｜Min Choi：ElevenLabs Speech Engine 讓既有 AI Agent 具備即時語音 ![ElevenLabs Speech Engine AI agent voice demo contact sheet](../assets/source-images/2026-07-30-x-min",
+    "slug": "2026-07-30-x-minchoi-elevenlabs-speech-engine-ai-agent-voice",
+    "html": "articles/2026-07-30-x-minchoi-elevenlabs-speech-engine-ai-agent-voice.html",
+    "markdown": "articles/2026/07/2026-07-30-x-minchoi-elevenlabs-speech-engine-ai-agent-voice.md"
+  },
+  {
     "title": "X｜Mr.pinecone：GPT Image 2 角色身份固定參考圖表提示詞",
     "date": "2026-07-30",
     "source": "https://x.com/Mrpinecone888/status/2082748531736244518",
@@ -1488,6 +1517,35 @@
     "slug": "2026-07-25-threads-shelte0r-toonflow-short-video-factory-ai-video-workflows",
     "html": "articles/2026-07-25-threads-shelte0r-toonflow-short-video-factory-ai-video-workflows.html",
     "markdown": "articles/2026/07/2026-07-25-threads-shelte0r-toonflow-short-video-factory-ai-video-workflows.md"
+  },
+  {
+    "title": "X｜Zhen Zhu：Codex 參考 Rachel Skill 串 HeyGen + MiniMax 做數字人口播",
+    "date": "2026-07-25",
+    "source": "https://x.com/ZhenZhu200/status/2081026006979133899",
+    "author": "Zhen Zhu（@ZhenZhu200）",
+    "type": "article",
+    "topics": [
+      "Codex",
+      "HeyGen",
+      "MiniMax",
+      "數字人",
+      "Voice Cloning",
+      "Agent Skills"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/ZhenZhu200/status/2081026006979133899",
+      "https://github.com/Jingyi-Wu-Richael/rachel-digital-human-production",
+      "https://developers.heygen.com/reference/create-video",
+      "https://www.minimax.io/audio",
+      "https://platform.minimaxi.com/document/guides/T2A%20Large%20v2"
+    ],
+    "excerpt": "# X｜Zhen Zhu：Codex 參考 Rachel Skill 串 HeyGen + MiniMax 做數字人口播 ![HeyGen + MiniMax 數字人口播 contact sheet](../assets/source-images/2026-07-25-x-zhenzhu200-heygen-mini",
+    "slug": "2026-07-25-x-zhenzhu200-codex-heygen-minimax-digital-human-skill",
+    "html": "articles/2026-07-25-x-zhenzhu200-codex-heygen-minimax-digital-human-skill.html",
+    "markdown": "articles/2026/07/2026-07-25-x-zhenzhu200-codex-heygen-minimax-digital-human-skill.md"
   },
   {
     "title": "91APP｜Universal Cart 與 Agentic Commerce：結帳外流下的第一方數據保衛戰",
