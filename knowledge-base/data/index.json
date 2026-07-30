@@ -143,6 +143,39 @@
     "markdown": "articles/2026/07/2026-07-30-threads-gu-jun-you-shijia-ai-chatgpt-real-estate.md"
   },
   {
+    "title": "LIQ AI Threads｜Miko 的 Claude Code 全自動 UGC 廣告產線：從產品照到影片與找客戶",
+    "date": "2026-07-30",
+    "source": "https://www.threads.com/@liq_media/post/DbZPpV9AETA",
+    "author": "LIQ AI / liq_media",
+    "type": "link-archive",
+    "topics": [
+      "Threads",
+      "Claude Code",
+      "UGC",
+      "AI廣告",
+      "Gemini Omni",
+      "Higgsfield MCP",
+      "Kie AI MCP",
+      "Google Maps"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@liq_media/post/DbZPpV9AETA",
+      "https://www.threads.com/@liq_media/post/DbZPpV9AETA",
+      "https://higgsfield.ai/mcp",
+      "https://docs.kie.ai/",
+      "https://github.com/felores/kie-cli-mcp",
+      "https://gemini.google/overview/video-generation/",
+      "https://ai.google.dev/gemini-api/docs/omni"
+    ],
+    "excerpt": "# LIQ AI Threads｜Miko 的 Claude Code 全自動 UGC 廣告產線 LIQ AI 這則 Threads 的核心觀察是：UGC 廣告不只是「用 AI 生成一支影片」，而是開始被包成一條 agentic pipeline。貼文引用創作者 Miko 在 X 上展示的系統：輸入產品照與一句品牌定位",
+    "slug": "2026-07-30-threads-liq-media-miko-claude-code-ugc-ad-pipeline",
+    "html": "articles/2026-07-30-threads-liq-media-miko-claude-code-ugc-ad-pipeline.html",
+    "markdown": "articles/2026/07/2026-07-30-threads-liq-media-miko-claude-code-ugc-ad-pipeline.md"
+  },
+  {
     "title": "Miao-PAX Threads｜image2 / askgo.ai 生成亞馬遜電商套圖的 8 類 Prompt 模板",
     "date": "2026-07-30",
     "source": "https://www.threads.com/share/BAt1uzDJ2Y/",
@@ -164,6 +197,37 @@
     "slug": "2026-07-30-threads-miaopax-amazon-ecommerce-image-prompts",
     "html": "articles/2026-07-30-threads-miaopax-amazon-ecommerce-image-prompts.html",
     "markdown": "articles/2026/07/2026-07-30-threads-miaopax-amazon-ecommerce-image-prompts.md"
+  },
+  {
+    "title": "Nicho Wong Threads｜ezone「Mini Me」教學：用 ChatGPT / Gemini / MyEdit 把照片變 Pixar 風 3D 卡通合照",
+    "date": "2026-07-30",
+    "source": "https://www.threads.com/@nichoysw/post/DbXQam5kdyq",
+    "author": "Nicho Wong / ezone",
+    "type": "link-archive",
+    "topics": [
+      "Threads",
+      "ChatGPT Image",
+      "Gemini",
+      "Copilot",
+      "MyEdit",
+      "AI繪圖",
+      "角色一致性"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://ezone.hk/article/20097003/gemin-gpt-mini-me-%E6%95%99%E7%94%A8ai%E5%9B%9B%E6%AD%A5%E5%87%BA%E5%B0%88%E5%B1%AC%E8%87%AA%E5%B7%B1pixar-3d%E5%8D%A1%E9%80%9A%E5%90%88%E7%85%A7-%E9%82%84%E5%8E%9F%E4%BA%94%E5%AE%98%E6%9C%8D%E9%A3%BE%E8%A4%87%E8%A3%BD%E6%8C%87%E4%BB%A4%E5%85%8D%E8%B2%BB%E7%8E%A9/1",
+      "https://www.threads.com/@nichoysw/post/DbXQam5kdyq",
+      "https://ezone.hk/article/20097003/gemin-gpt-mini-me-%E6%95%99%E7%94%A8ai%E5%9B%9B%E6%AD%A5%E5%87%BA%E5%B0%88%E5%B1%AC%E8%87%AA%E5%B7%B1pixar-3d%E5%8D%A1%E9%80%9A%E5%90%88%E7%85%A7-%E9%82%84%E5%8E%9F%E4%BA%94%E5%AE%98%E6%9C%8D%E9%A3%BE%E8%A4%87%E8%A3%BD%E6%8C%87%E4%BB%A4%E5%85%8D%E8%B2%BB%E7%8E%A9/1",
+      "https://myedit.online/en/photo-editor/ai-image-generator",
+      "https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-art-and-creativity/create-and-edit-images-with-copilot",
+      "https://openai.com/index/new-chatgpt-images-is-here/"
+    ],
+    "excerpt": "# Nicho Wong Threads｜ezone「Mini Me」教學：用 AI 把照片變 Pixar 風 3D 卡通合照 Nicho Wong 在 Threads 分享 ezone 的「Mini Me」教學，表示依照文章方法，用 Copilot、Gemini、myedit.online 把自己的相片變成 3D 卡",
+    "slug": "2026-07-30-threads-nichoysw-ezone-gemini-gpt-mini-me-3d-cartoon",
+    "html": "articles/2026-07-30-threads-nichoysw-ezone-gemini-gpt-mini-me-3d-cartoon.html",
+    "markdown": "articles/2026/07/2026-07-30-threads-nichoysw-ezone-gemini-gpt-mini-me-3d-cartoon.md"
   },
   {
     "title": "Facebook Reel｜AI 無臉短影音自動生成與自動發布工具的「五分鐘開頁」主張",
