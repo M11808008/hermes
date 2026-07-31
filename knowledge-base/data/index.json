@@ -32,6 +32,37 @@
     "markdown": "articles/2026/07/2026-07-31-blake-dalongdong-aren-fried-rice.md"
   },
   {
+    "title": "Aiexplained Facebook Reel｜Tencent Hunyuan Hy3：把「AI Agents Free」拆成官方模型、第三方免費 API 與 Agent OS 導流",
+    "date": "2026-07-31",
+    "source": "https://www.facebook.com/reel/2602878126830947",
+    "author": "Aiexplained",
+    "type": "article",
+    "topics": [
+      "Tencent Hunyuan",
+      "Hy3",
+      "AI Agent",
+      "Claude Code",
+      "OpenRouter",
+      "Open Source AI"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1CwC8oLNhs/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2602878126830947",
+      "https://www.tencent.com/en-us/articles/2202386.html",
+      "https://github.com/Tencent-Hunyuan/Hy3",
+      "https://huggingface.co/tencent/Hy3",
+      "https://openrouter.ai/tencent/hy3:free",
+      "https://www.siliconflow.com/blog/tencent-hunyuan-hy3-api-guide"
+    ],
+    "excerpt": "這支 Reel 值得收藏，但需要降噪：**Tencent Hy3 是真的；agent / coding 場景也有官方支撐；「AI agents free」與「免費 API」則是社群行銷 framing，主要依賴 OpenRouter、SiliconFlow 等第三方平台當下的免費或限時免費供應，不能視為永久免費成本結構。**",
+    "slug": "2026-07-31-facebook-aiexplained-tencent-hunyuan-hy3-agent-os-free-api",
+    "html": "articles/2026-07-31-facebook-aiexplained-tencent-hunyuan-hy3-agent-os-free-api.html",
+    "markdown": "articles/2026/07/2026-07-31-facebook-aiexplained-tencent-hunyuan-hy3-agent-os-free-api.md"
+  },
+  {
     "title": "Foodcamz Facebook Reel｜饌堂黑金滷肉飯中山店：赤峰街人氣滷肉飯與紅糟肉飯備忘",
     "date": "2026-07-31",
     "source": "https://www.facebook.com/reel/1646700823782724",

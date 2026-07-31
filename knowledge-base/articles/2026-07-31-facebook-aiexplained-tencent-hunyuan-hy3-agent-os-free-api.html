@@ -1,0 +1,98 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Aiexplained Facebook Reel｜Tencent Hunyuan Hy3：把「AI Agents Free」拆成官方模型、第三方免費 API 與 Agent OS 導流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Aiexplained Facebook Reel｜Tencent Hunyuan Hy3：把「AI Agents Free」拆成官方模型、第三方免費 API 與 Agent OS 導流</h1><figure><img src="../assets/source-images/2026-07-31-facebook-aiexplained-tencent-hunyuan-hy3-agent-os-cover.jpg" alt="Aiexplained Reel 封面：CHINA JUST MADE AI AGENTS FREE" loading="lazy" referrerpolicy="no-referrer"><figcaption>Aiexplained Reel 封面：CHINA JUST MADE AI AGENTS FREE</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這支 Reel 值得收藏，但需要降噪：**Tencent Hy3 是真的；agent / coding 場景也有官方支撐；「AI agents free」與「免費 API」則是社群行銷 framing，主要依賴 OpenRouter、SiliconFlow 等第三方平台當下的免費或限時免費供應，不能視為永久免費成本結構。**</p>
+<h2>Facebook 公開資訊</h2>
+<ul>
+<li>作者：Aiexplained。</li>
+<li>Canonical Reel：<a href="https://www.facebook.com/reel/2602878126830947" target="_blank" rel="noopener">https://www.facebook.com/reel/2602878126830947</a></li>
+<li>擷取時可見：約 1.7 萬次觀看、202 個心情、209 則留言、30 次分享。</li>
+<li>公開文案主張：</li>
+</ul>
+<p>  - 多數人仍以為 powerful AI agents 需要昂貴 API bill。</p>
+<p>  - Tencent 的 Hunyuan Hy3 提供 free API，可接 Claude Code 來 build AI agents。</p>
+<p>  - 可 prototype apps、automate workflows、experiment without worrying about usage costs。</p>
+<p>  - Open source，可自訂，不被 closed platform 鎖住。</p>
+<p>  - CTA：留言「Agent OS」索取 setup guide。</p>
+<ul>
+<li>登入牆限制：完整影片播放與逐格操作步驟未完整擷取；本文保存公開 OpenGraph/oEmbed metadata、封面與可見文案。</li>
+</ul>
+<h2>封面 OCR / 視覺描述</h2>
+<p>封面是一名創作者站在桌前自拍式說明，背景有螢幕與麥克風。可見大字：</p>
+<ul>
+<li>`CHINA JUST MADE AI AGENTS FREE`</li>
+<li>底部字幕：`China just made AI agents`</li>
+</ul>
+<p>封面本身沒有看到 Tencent、Hunyuan Hy3、Claude Code、Agent OS、API key 或程式碼畫面；這些資訊主要來自 Facebook 公開 caption。</p>
+<h2>官方 / 一手來源查核</h2>
+<p>### 1. Tencent 官方新聞稿確認 Hy3 發布與 agent/productivity 定位</p>
+<p>Tencent 2026-07-06 官方新聞稿標題為「Tencent Hunyuan Officially Releases Hy3, Advancing Agent Capabilities and Deeper Product Integration」。其中確認：</p>
+<ul>
+<li>Hy3 官方發布，較 preview 版本提升穩定性與成本效率。</li>
+<li>Hy3 已整合進 Tencent 產品與服務，包括 WorkBuddy / CodeBuddy、Yuanbao、Marvis、ima 等。</li>
+<li>API 已在 Tencent Cloud TokenHub 提供，並將逐步整合至全球第三方開發者平台。</li>
+<li>模型是混合 fast-and-slow thinking 的 MoE 架構。</li>
+<li>295B total parameters，21B active parameters。</li>
+<li>支援 256K context。</li>
+</ul>
+<p>### 2. GitHub / Hugging Face 確認開放模型與規格</p>
+<p>GitHub repo：`Tencent-Hunyuan/Hy3`</p>
+<p>擷取時 metadata：</p>
+<ul>
+<li>Stars：約 558。</li>
+<li>Forks：約 194。</li>
+<li>Description：Hy3 (295B A21B), a leading reasoning and agent model in its size, with great cost efficiency.</li>
+<li>README 標示 Apache 2.0 badge，並連到 Hugging Face、ModelScope、cnb.cool、GitCode。</li>
+<li>README 規格：295B MoE、21B active、3.8B MTP layer、80 layers、192 experts top-8 activated、BF16、256K context。</li>
+<li>README 明確有「Stronger Agent Capabilities」段落，並提到 coding、office work、financial modeling、frontend design、game development 等 productivity scenarios。</li>
+</ul>
+<p>Hugging Face：`tencent/Hy3` 也提供模型頁，可作為模型發布與 tokenizer / chat template / deployment 參考來源。</p>
+<p>### 3. 免費 API：官方模型是真的，但「免費」要看第三方平台條款</p>
+<ul>
+<li>OpenRouter 有 `tencent/hy3:free` 頁面，頁面顯示 pricing 為 Free、context 約 262K，並註明 free endpoints 有 rate limits。</li>
+<li>SiliconFlow 的 Hy3 API guide 寫明：Hy3 在 SiliconFlow 以 `tencent/Hy3` 提供 OpenAI-compatible LLM API，且「上線後前兩週」有 free API access。</li>
+<li>Tencent 官方新聞稿說 API 在 Tencent Cloud TokenHub 與第三方平台整合，但本文擷取到的官方新聞稿沒有說「永久免費 API」。</li>
+</ul>
+<p>因此，Reel 的「free API / AI agents free」應改寫為：**Hy3 可透過部分第三方平台免費或限時免費測試，適合原型與評估；正式長期使用仍要看 OpenRouter、SiliconFlow、Tencent Cloud 或其他供應商當下價格、rate limit 與服務條款。**</p>
+<h2>對 Luarn 的實用價值</h2>
+<p>### 1. 低成本測試 agentic coding workflows</p>
+<p>Hy3 的長上下文、coding / agent 定位與 OpenAI-compatible 第三方 API，讓它可以被放進「低成本 agent 原型」候選池：</p>
+<ul>
+<li>Claude Code / OpenCode / Codex 類工具的替代模型測試。</li>
+<li>OpenRouter route 測試。</li>
+<li>以 coding、文件分析、前端設計、工具調用為 benchmark 的模型比較。</li>
+<li>把「免費 endpoint」當成探索期，而非正式 production baseline。</li>
+</ul>
+<p>### 2. 可作為課程案例：拆解社群爆點與官方事實</p>
+<p>這支 Reel 很適合教學生：看到「China made AI agents free」時，不是照單全收，而是拆成三層：</p>
+<ul>
+<li>官方模型事實：Tencent Hy3 是什麼、規格與授權為何。</li>
+<li>API 供應事實：哪個平台免費、是否限時、是否 rate-limited。</li>
+<li>社群導流 framing：留言 Agent OS 拿 guide，與實際可驗證能力分開處理。</li>
+</ul>
+<p>### 3. 可加入 AI 學習雷達的模型觀察清單</p>
+<p>Hy3 可放進與 DeepSeek、Qwen、GLM、Kimi、Nemotron、Hunyuan 系列的「開放權重 / agentic coding / 長上下文」觀察清單，尤其追：</p>
+<ul>
+<li>OpenRouter / SiliconFlow / Tencent Cloud 的 pricing 變化。</li>
+<li>Hy3 在 coding agent benchmark 的實測表現。</li>
+<li>本地或自架部署門檻：295B MoE 不是一般筆電可輕鬆跑的模型。</li>
+<li>工具調用、長上下文與多 agent loop 的穩定性。</li>
+</ul>
+<h2>風險與提醒</h2>
+<ul>
+<li>「AI agents free」是行銷標題，不代表 agent 工作流沒有成本；推理 token、rate limit、排隊、失敗重試與工具執行都會形成成本。</li>
+<li>OpenRouter `:free` endpoint 可能有流量限制、可用性變動或下架風險。</li>
+<li>SiliconFlow 的免費敘述是「first two weeks after launch」，不是永久免費。</li>
+<li>295B MoE 模型雖然 21B active，但完整部署仍需要高階 GPU/推理服務；不要把「open weight」等同「可在個人電腦輕鬆免費跑」。</li>
+<li>Claude Code / Agent OS guide 是留言導流內容，未公開取得，因此本文不保存其步驟，也不保證可用性。</li>
+<li>使用中國模型與平台時，企業資料要評估資料落地、合規、隱私、供應商與跨境資料風險。</li>
+</ul>
+<h2>來源</h2>
+<ul>
+<li>Facebook share URL：<a href="https://www.facebook.com/share/r/1CwC8oLNhs/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1CwC8oLNhs/?mibextid=wwXIfr</a></li>
+<li>Facebook canonical Reel：<a href="https://www.facebook.com/reel/2602878126830947" target="_blank" rel="noopener">https://www.facebook.com/reel/2602878126830947</a></li>
+<li>Tencent 官方新聞稿：<a href="https://www.tencent.com/en-us/articles/2202386.html" target="_blank" rel="noopener">https://www.tencent.com/en-us/articles/2202386.html</a></li>
+<li>GitHub：<a href="https://github.com/Tencent-Hunyuan/Hy3" target="_blank" rel="noopener">https://github.com/Tencent-Hunyuan/Hy3</a></li>
+<li>Hugging Face：<a href="https://huggingface.co/tencent/Hy3" target="_blank" rel="noopener">https://huggingface.co/tencent/Hy3</a></li>
+<li>OpenRouter Hy3 free endpoint：<a href="https://openrouter.ai/tencent/hy3:free" target="_blank" rel="noopener">https://openrouter.ai/tencent/hy3:free</a></li>
+<li>SiliconFlow Hy3 API guide：<a href="https://www.siliconflow.com/blog/tencent-hunyuan-hy3-api-guide" target="_blank" rel="noopener">https://www.siliconflow.com/blog/tencent-hunyuan-hy3-api-guide</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-07-31 · https://www.facebook.com/reel/2602878126830947 · article</div><h3>標籤</h3><span class="tag">Tencent Hunyuan</span><span class="tag">Hy3</span><span class="tag">AI Agent</span><span class="tag">Claude Code</span><span class="tag">OpenRouter</span><span class="tag">Open Source AI</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/r/1CwC8oLNhs/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1CwC8oLNhs/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/reel/2602878126830947" target="_blank" rel="noopener">https://www.facebook.com/reel/2602878126830947</a></p><p><a href="https://www.tencent.com/en-us/articles/2202386.html" target="_blank" rel="noopener">https://www.tencent.com/en-us/articles/2202386.html</a></p><p><a href="https://github.com/Tencent-Hunyuan/Hy3" target="_blank" rel="noopener">https://github.com/Tencent-Hunyuan/Hy3</a></p><p><a href="https://huggingface.co/tencent/Hy3" target="_blank" rel="noopener">https://huggingface.co/tencent/Hy3</a></p><p><a href="https://openrouter.ai/tencent/hy3:free" target="_blank" rel="noopener">https://openrouter.ai/tencent/hy3:free</a></p><p><a href="https://www.siliconflow.com/blog/tencent-hunyuan-hy3-api-guide" target="_blank" rel="noopener">https://www.siliconflow.com/blog/tencent-hunyuan-hy3-api-guide</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
