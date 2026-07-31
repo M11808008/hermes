@@ -58,6 +58,37 @@
     "markdown": "articles/2026/07/2026-07-31-threads-easyanythinghk-huggingface-speech-to-speech-local-voice-agent.md"
   },
   {
+    "title": "Jack Shen｜Google Workspace Gemini 更新總覽：Docs 視覺生成、Vids Avatar、Connector 與 Gemini Notebook",
+    "date": "2026-07-31",
+    "source": "https://www.threads.com/@jackshenaiadvisor/post/DbcTGEvkRM6",
+    "author": "沈重宗 ai/esg/數位轉型（@jackshenaiadvisor） / Google Workspace",
+    "type": "article",
+    "topics": [
+      "google-workspace",
+      "gemini",
+      "google-docs",
+      "google-vids",
+      "gemini-notebook",
+      "productivity"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@jackshenaiadvisor/post/DbcTGEvkRM6",
+      "https://workspaceupdates.googleblog.com/2026/07/generate-and-edit-visuals-with-gemini-in-Google-Docs.html",
+      "https://workspace.google.com/blog/product-announcements/july-2026-workspace-feature-drop",
+      "https://workspaceupdates.googleblog.com/2026/07/cast-yourself-in-ai-video-clips-using-your-personal-avatar-with-Gemini-Omni-in-Vids.html",
+      "https://workspace.google.com/blog/product-announcements/introducing-gemini-omni-flash-in-google-vids",
+      "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "https://workspace.google.com/solutions/ai/"
+    ],
+    "excerpt": "這則 Threads 把 Google Workspace 最近幾週的 Gemini 更新整理成一張「辦公室 AI 功能地圖」：文件產圖、影片生成、跨 Workspace 讀取、研究筆記本與常用辦公 app 補強，正在逐步變成同一套工作流。",
+    "slug": "2026-07-31-threads-jackshenaiadvisor-google-workspace-gemini-updates-roundup",
+    "html": "articles/2026-07-31-threads-jackshenaiadvisor-google-workspace-gemini-updates-roundup.html",
+    "markdown": "articles/2026/07/2026-07-31-threads-jackshenaiadvisor-google-workspace-gemini-updates-roundup.md"
+  },
+  {
     "title": "Kufu｜Google Vids 個人 AI 分身正式導入：Gemini Omni Flash、Personal Avatars 與 SynthID",
     "date": "2026-07-31",
     "source": "https://www.threads.com/@kufutw/post/Dbct44JnTPJ",
@@ -15221,6 +15252,35 @@
     "slug": "2026-03-05-bnext-claude-13-free-lessons-anthropic-academy",
     "html": "articles/2026-03-05-bnext-claude-13-free-lessons-anthropic-academy.html",
     "markdown": "articles/2026/06/2026-03-05-bnext-claude-13-free-lessons-anthropic-academy.md"
+  },
+  {
+    "title": "Duncan 當肯｜Nano Banana Pro 1000+ 案例提示詞：社群 Prompt 案例庫與 Gemini 3 Pro Image",
+    "date": "2025-12-28",
+    "source": "https://www.threads.com/@heyduncannn/post/DSzooaniKZ-",
+    "author": "Duncan 當肯｜AI・Design 教學（@heyduncannn） / Google DeepMind",
+    "type": "article",
+    "topics": [
+      "image-generation",
+      "nano-banana-pro",
+      "gemini-3-pro-image",
+      "prompt-library",
+      "google-ai",
+      "design"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@heyduncannn/post/DSzooaniKZ-",
+      "https://blog.google/innovation-and-ai/products/nano-banana-pro/",
+      "https://deepmind.google/models/gemini-image/pro/",
+      "https://ai.google.dev/gemini-api/docs/image-generation",
+      "https://gemini.google/overview/image-generation/"
+    ],
+    "excerpt": "這則 Threads 是典型「Prompt 案例庫導流」貼文：公開內容宣稱整理了 1000+ Nano Banana Pro 案例提示詞，但實際文檔連結透過留言/追蹤後 IG 私訊發送；可保存為社群學習資源訊號，但不能把未公開文檔內容當成已驗證資料。",
+    "slug": "2025-12-28-threads-heyduncannn-nano-banana-pro-prompts-case-library",
+    "html": "articles/2025-12-28-threads-heyduncannn-nano-banana-pro-prompts-case-library.html",
+    "markdown": "articles/2025/12/2025-12-28-threads-heyduncannn-nano-banana-pro-prompts-case-library.md"
   },
   {
     "title": "食神鬍子哥｜台北宵夜 15 家清單（一）：北投、萬華、中山、大同深夜食堂索引",
