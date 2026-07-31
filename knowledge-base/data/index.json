@@ -84,6 +84,34 @@
     "markdown": "articles/2026/07/2026-07-31-facebook-harris-wanhua-old-school-snacks-four-shops.md"
   },
   {
+    "title": "一人公司研究所 Facebook Reel｜last30days-skill：近 30 天跨平台趨勢摘要與 TikTok 電商情報工作流",
+    "date": "2026-07-31",
+    "source": "https://www.facebook.com/reel/851209534053021",
+    "author": "一人公司研究所",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "Agent Skills",
+      "趨勢研究",
+      "社群情報",
+      "TikTok 電商",
+      "Cron 工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1DBr6NRDSX/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/851209534053021",
+      "https://github.com/mvanhorn/last30days-skill",
+      "https://github.com/mvanhorn/last30days-skill/blob/main/skills/last30days/SKILL.md"
+    ],
+    "excerpt": "這支 Reel 的可收藏價值，不在於單次 TikTok 電商摘要，而是示範一個「可排程的社群情報雷達」：用 `last30days-skill` 針對特定主題搜尋近 30 天多平台訊號，再讓 agent 整理出趨勢、案例與可行動結論。",
+    "slug": "2026-07-31-facebook-oneperson-last30days-skill-social-trend-summary",
+    "html": "articles/2026-07-31-facebook-oneperson-last30days-skill-social-trend-summary.html",
+    "markdown": "articles/2026/07/2026-07-31-facebook-oneperson-last30days-skill-social-trend-summary.md"
+  },
+  {
     "title": "easyanythinghk｜Hugging Face speech-to-speech：本地開源語音 Agent 管線",
     "date": "2026-07-31",
     "source": "https://www.threads.com/@easyanythinghk/post/DbcrxySAEOx",
