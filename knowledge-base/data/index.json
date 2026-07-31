@@ -32,6 +32,87 @@
     "markdown": "articles/2026/07/2026-07-31-blake-dalongdong-aren-fried-rice.md"
   },
   {
+    "title": "easyanythinghk｜Hugging Face speech-to-speech：本地開源語音 Agent 管線",
+    "date": "2026-07-31",
+    "source": "https://www.threads.com/@easyanythinghk/post/DbcrxySAEOx",
+    "author": "dev（@easyanythinghk） / Hugging Face",
+    "type": "article",
+    "topics": [
+      "voice-agent",
+      "speech-to-speech",
+      "huggingface",
+      "open-source",
+      "local-ai",
+      "realtime-api"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@easyanythinghk/post/DbcrxySAEOx",
+      "https://github.com/huggingface/speech-to-speech"
+    ],
+    "excerpt": "Hugging Face `speech-to-speech` 把語音助理拆成可替換的 VAD → STT → LLM → TTS pipeline，並提供 OpenAI Realtime-compatible WebSocket API，適合拿來研究「本地語音 Agent」與「避免被單一雲端供應商綁死」的架構。",
+    "slug": "2026-07-31-threads-easyanythinghk-huggingface-speech-to-speech-local-voice-agent",
+    "html": "articles/2026-07-31-threads-easyanythinghk-huggingface-speech-to-speech-local-voice-agent.html",
+    "markdown": "articles/2026/07/2026-07-31-threads-easyanythinghk-huggingface-speech-to-speech-local-voice-agent.md"
+  },
+  {
+    "title": "Kufu｜Google Vids 個人 AI 分身正式導入：Gemini Omni Flash、Personal Avatars 與 SynthID",
+    "date": "2026-07-31",
+    "source": "https://www.threads.com/@kufutw/post/Dbct44JnTPJ",
+    "author": "Kufu 酷服｜AI 智能客服平台（@kufutw） / Google Workspace",
+    "type": "article",
+    "topics": [
+      "ai-video",
+      "google-vids",
+      "gemini-omni",
+      "personal-avatar",
+      "digital-human",
+      "synthid"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/Dbct44JnTPJ",
+      "https://x.com/GoogleWorkspace/status/2082874613449519349",
+      "https://workspace.google.com/blog/product-announcements/introducing-gemini-omni-flash-in-google-vids",
+      "https://workspaceupdates.googleblog.com/2026/07/cast-yourself-in-ai-video-clips-using-your-personal-avatar-with-Gemini-Omni-in-Vids.html",
+      "https://workspace.google.com/products/vids/ai-avatars/"
+    ],
+    "excerpt": "這則 Kufu Threads 把 Google Workspace 官方更新翻成可用的創作者語言：Google Vids 不只是影片剪輯器，而是開始支援「輸入腳本 → 由你的 personal AI avatar 出鏡」的數位分身影片工作流。",
+    "slug": "2026-07-31-threads-kufutw-google-vids-personal-ai-avatar-official",
+    "html": "articles/2026-07-31-threads-kufutw-google-vids-personal-ai-avatar-official.html",
+    "markdown": "articles/2026/07/2026-07-31-threads-kufutw-google-vids-personal-ai-avatar-official.md"
+  },
+  {
+    "title": "樊松蒲 Dennis｜Agent 團隊後台：把多 Agent 做成有畫面感的企業工作介面",
+    "date": "2026-07-31",
+    "source": "https://www.threads.com/@tbr.digital/post/Dba_C6wjftn",
+    "author": "樊松蒲 Dennis - AI 企業內訓｜系統導入（@tbr.digital）",
+    "type": "article",
+    "topics": [
+      "ai-agent",
+      "multi-agent",
+      "agent-os",
+      "enterprise-ai",
+      "knowledge-base",
+      "security"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@tbr.digital/post/Dba_C6wjftn",
+      "https://www.threads.com/@cab_late"
+    ],
+    "excerpt": "這則 Threads 的價值在於：它把「多 Agent orchestration」從抽象的 Claude 對話與終端機 session，翻譯成企業與學員看得懂的「辦公室 / 團隊 / 會議」介面。",
+    "slug": "2026-07-31-threads-tbr-digital-agent-team-backoffice",
+    "html": "articles/2026-07-31-threads-tbr-digital-agent-team-backoffice.html",
+    "markdown": "articles/2026/07/2026-07-31-threads-tbr-digital-agent-team-backoffice.md"
+  },
+  {
     "title": "宜蘭南塘水餃｜東門夜市旁手工水餃、蒜蓉自由加與酸辣湯小吃備忘",
     "date": "2026-07-30",
     "source": "https://blake.com.tw/blog/post/nan-tang-shuijiao",
