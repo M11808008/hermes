@@ -80,6 +80,39 @@
     "markdown": "articles/2026-08-01-facebook-anthony-nastari-skyreels-open-source-ai-video-no-cap-framing.md"
   },
   {
+    "title": "codenameposhan Facebook Reel｜kepano/obsidian-skills：讓 Claude Code 原生讀寫 Obsidian 的 5 個 Agent Skills",
+    "date": "2026-08-01",
+    "source": "https://www.facebook.com/share/v/1D283HAX51/?mibextid=wwXIfr",
+    "author": "codenameposhan / Facebook",
+    "type": "article",
+    "topics": [
+      "AI 工具",
+      "Claude Code",
+      "Obsidian",
+      "Agent Skills",
+      "知識管理",
+      "GitHub",
+      "開源工具",
+      "Markdown",
+      "JSON Canvas"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1D283HAX51/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1374316214617006",
+      "https://www.facebook.com/61591329065326/videos/obsidian-skills-finmp4/1374316214617006/",
+      "https://github.com/kepano/obsidian-skills",
+      "https://raw.githubusercontent.com/kepano/obsidian-skills/main/README.md",
+      "https://raw.githubusercontent.com/kepano/obsidian-skills/main/LICENSE"
+    ],
+    "excerpt": "這支 Reel 把 `kepano/obsidian-skills` 包裝成「讓 Claude Code 說 Obsidian 原生語言」的工具：它不是新的 Obsidian 外掛，而是一組 Agent Skills，教 AI agent 正確處理 Obsidian Flavored Markdown、Bases、JSON Canvas、Obsidian CLI 與網頁轉 Markdown 擷取，適合納入「AI × 個人知識管理」工具鏈追蹤。",
+    "slug": "2026-08-01-facebook-codenameposhan-kepano-obsidian-skills-claude-code",
+    "html": "articles/2026-08-01-facebook-codenameposhan-kepano-obsidian-skills-claude-code.html",
+    "markdown": "articles/2026-08-01-facebook-codenameposhan-kepano-obsidian-skills-claude-code.md"
+  },
+  {
     "title": "Nate Herk Facebook Reel｜Fish Audio S2.1 Pro Free API：83 語言、聲音複製與 voice agents 的行銷說法查核",
     "date": "2026-08-01",
     "source": "https://www.facebook.com/share/r/1BA3KGED3N/?mibextid=wwXIfr",
