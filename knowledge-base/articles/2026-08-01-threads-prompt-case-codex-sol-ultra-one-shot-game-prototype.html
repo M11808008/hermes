@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prompt Case Threads｜Codex Sol Ultra + Goal 一句話生成 3D 遊戲 demo：從「Elden Ring 2」降噪成 agent prototype 案例</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Prompt Case Threads｜Codex Sol Ultra + Goal 一句話生成 3D 遊戲 demo：從「Elden Ring 2」降噪成 agent prototype 案例</h1><p>來源：Threads｜Prompt Case（@prompt_case）</p>
+<p>原始連結：<a href="https://www.threads.com/@prompt_case/post/DbakmFqjYxZ" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DbakmFqjYxZ</a></p>
+<p>Prompt Case 分享一個 Codex / coding agent 實驗：在 Codex 開 Sol Ultra + Goal，輸入：</p>
+<p>&gt; Please create perfect Elden Ring 2, Make no mistakes.</p>
+<p>之後補充：</p>
+<p>&gt; 你必須用你的方法獲得精美的 3D 資產，像一個真實的遊戲一樣。</p>
+<p>貼文稱結果生成了一個遊戲，「有點超出預期」。Threads 顯示約 2.4 萬次瀏覽，互動約 262 讚、22 回覆、11 轉發、136 分享/收藏類互動。</p>
+<figure><img src="/assets/source-images/2026-08-01-threads-prompt-case-codex-sol-ultra-game-contact-sheet.jpg" alt="Codex Sol Ultra 遊戲 demo contact sheet" loading="lazy" referrerpolicy="no-referrer"><figcaption>Codex Sol Ultra 遊戲 demo contact sheet</figcaption></figure>
+<h2>影片畫面觀察</h2>
+<p>影片 contact sheet 顯示的作品更像瀏覽器 3D action prototype：</p>
+<ul>
+<li>畫面左側可見 coding agent / 編輯器側欄，右側是 browser game 視窗。</li>
+<li>場景標題包含 `THE SUNKEN NAVE`、`THE EMBER OSSUARY`、`THE MOONLESS CITADEL`。</li>
+<li>角色是低多邊形 / stylized fantasy 人物，穿紅色斗篷或盔甲風格服裝。</li>
+<li>有類魂系/動作 RPG 的鎖定準星、血量/耐力條、敵人、房間關卡、互動提示。</li>
+<li>可見 `CHAPTER II COMPLETE`、`THE EMPTY CROWN DESCENDS` 等章節/敘事文字。</li>
+<li>美術風格接近 low-poly indie demo 或 three.js / web game prototype，而非完整 AAA 3D 遊戲。</li>
+</ul>
+<p>因此本文把它記錄為「AI coding agent 以短 prompt 生成可玩 prototype」案例，而不是「一句話做出 Elden Ring 2」。</p>
+<h2>留言區脈絡與降噪</h2>
+<p>重要留言與回覆：</p>
+<ul>
+<li>有留言指出它「應該是 three.js 做的，然後在網上下載 free 3D assets」，並認為這種程度可以 one-shot，但從這個水平再提升會很難，遊戲性與劇情仍有限。</li>
+<li>作者回覆認為 one-shot 能達到此水平已不錯，操控與打擊感也有亮點，後續提升空間還很大。</li>
+<li>也有留言提到看起來像 Kay 的 assets；這與常見 KayKit 免費 3D 素材庫脈絡相符，但本文未從影片本身確認具體 asset 來源。</li>
+<li>`meta.ai` 留言查證稱「誇大造假」，指出 `/goal` 與 Sol Ultra 本身是真的，但一句話不是完整《艾爾登法環 2》，實際更像低多邊形小品 demo，且不是 FromSoftware 資產。</li>
+</ul>
+<h2>官方/可靠來源查核</h2>
+<p>可查到的可靠來源重點：</p>
+<ul>
+<li>OpenAI Developers Cookbook 有「Using Goals in Codex」範例，確認 `/goal` 是 Codex 目標式工作流的一部分，可描述較長期任務、要求驗證與 lifecycle。</li>
+<li>OpenAI Codex CLI / cloud 文件確認 Codex 可作為 CLI 與 cloud coding agent 使用，處理 repo、任務與並行工作。</li>
+<li>KayKit / Kay Lousberg 的多個 3D asset pack 公開頁標示 CC0，常被 indie / prototype 遊戲用作免費 3D 素材；但本影片是否使用 KayKit 需以專案檔或素材清單確認，不能僅憑畫風定論。</li>
+<li>three.js 與 web game prototype 生態中，AI agent 生成場景、整合免費 GLTF/FBX/OBJ assets、做 basic combat loop 已是合理可行方向；但完整遊戲設計、關卡平衡、敘事、版權素材與效能優化仍需要大量人工與迭代。</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li>OpenAI Developers Cookbook｜Using Goals in Codex： <a href="https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex" target="_blank" rel="noopener">https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex</a></li>
+<li>OpenAI Codex CLI docs： <a href="https://developers.openai.com/codex/cli" target="_blank" rel="noopener">https://developers.openai.com/codex/cli</a></li>
+<li>OpenAI Codex cloud docs： <a href="https://developers.openai.com/codex/cloud" target="_blank" rel="noopener">https://developers.openai.com/codex/cloud</a></li>
+<li>KayKit / Kay Lousberg asset packs： <a href="https://kaylousberg.itch.io/" target="_blank" rel="noopener">https://kaylousberg.itch.io/</a></li>
+<li>three.js： <a href="https://threejs.org/" target="_blank" rel="noopener">https://threejs.org/</a></li>
+</ul>
+<h2>對 AI coding agent 的啟示</h2>
+<p>這則案例值得保存的地方，是它把 coding agent 的「一次生成」能力從 CRUD app 推到可視化、互動式、遊戲 loop：</p>
+<ul>
+<li>模型不只寫程式，也會搜尋/整合外部 3D assets。</li>
+<li>`Goal` 類模式可能更適合長任務，讓 agent 自行分解素材、場景、操作、UI 與驗證。</li>
+<li>生成結果可作為 demo 或 spike，但距離可發布遊戲仍有品質鴻溝。</li>
+<li>社群展示容易用「Elden Ring 2」這種標題放大效果；知識庫保存時應把它還原為 prototype benchmark。</li>
+</ul>
+<h2>風險與限制</h2>
+<ul>
+<li>「perfect Elden Ring 2」是誇張 prompt / 社群 framing，不是實際產品名稱或授權作品。</li>
+<li>未取得專案 repo、package、asset manifest，無法確認實際使用模型、工具鏈、素材來源與授權。</li>
+<li>若使用第三方 3D assets，需確認 license、商用權、署名要求與再散布限制。</li>
+<li>遊戲 demo 看起來可玩，不等於具備完整關卡設計、QA、效能、平台相容性或長期維護。</li>
+<li>OpenAI/Codex 模型名稱、方案可用性與 usage limit 可能快速變動。</li>
+</ul>
+<h2>圖片保存</h2>
+<ul>
+<li>`/assets/source-images/2026-08-01-threads-prompt-case-codex-sol-ultra-game-cover.jpg`</li>
+<li>`/assets/source-images/2026-08-01-threads-prompt-case-codex-sol-ultra-game-contact-sheet.jpg`</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-01 · https://www.threads.com/@prompt_case/post/DbakmFqjYxZ · article</div><h3>標籤</h3><span class="tag">Threads</span><span class="tag">Codex</span><span class="tag">AI coding agent</span><span class="tag">three.js</span><span class="tag">game prototype</span><span class="tag">Agent workflow</span><h3>原始連結</h3><p><a href="https://www.threads.com/@prompt_case/post/DbakmFqjYxZ" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DbakmFqjYxZ</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
