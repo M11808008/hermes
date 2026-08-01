@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Anthony Nastari Facebook Reel｜SkyReels 開源 AI 影片工具：把「免費無上限取代 Veo 3 / Kling」降噪成可本機跑的模型工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Anthony Nastari Facebook Reel｜SkyReels 開源 AI 影片工具：把「免費無上限取代 Veo 3 / Kling」降噪成可本機跑的模型工作流</h1><p>來源：Facebook Reel｜Anthony Nastari</p>
+<p>分享 URL：<a href="https://www.facebook.com/share/r/1ceZHNAnSR/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/r/1ceZHNAnSR/?mibextid=wwXIfr</a></p>
+<p>Canonical URL：<a href="https://www.facebook.com/61584081992848/videos/comment-ai-and-ill-share-the-link-still-paying-for-veo-3-or-kling-skyreels-does-/1627030092321798/" target="_blank" rel="noopener">https://www.facebook.com/61584081992848/videos/comment-ai-and-ill-share-the-link-still-paying-for-veo-3-or-kling-skyreels-does-/1627030092321798/</a></p>
+<p>Anthony Nastari 這則 Facebook Reel 的公開文案寫道：</p>
+<p>&gt; Comment &quot;AI&quot; and I&#x27;ll share the link 📩</p>
+<p>&gt; Still paying for Veo 3 or Kling? SkyReels does high-quality cinematic video with no duration cap and no usage cap — free and open source.</p>
+<p>&gt; Here&#x27;s what&#x27;s inside 👇</p>
+<p>&gt; 1️⃣ Generate from text or images</p>
+<p>&gt; 2️⃣ Control the camera like a real shoot</p>
+<p>&gt; 3️⃣ Add music, sound effects, and lip-synced voices in the same tool</p>
+<p>&gt; Run it locally via Hugging Face, or use the free website version.</p>
+<p>&gt; The gap between free and paid AI video is closing fast.</p>
+<p>這是典型「免費開源工具 vs 付費 AI 影片平台」的社群 framing。本文把它拆成三層：哪些能力有官方 repo / 模型卡支撐、哪些是網站產品功能、哪些仍只是貼文聲明。</p>
+<figure><img src="/assets/source-images/2026-08-01-facebook-anthony-nastari-skyreels-open-source-ai-video-cover.jpg" alt="Anthony Nastari SkyReels Reel 封面" loading="lazy" referrerpolicy="no-referrer"><figcaption>Anthony Nastari SkyReels Reel 封面</figcaption></figure>
+<h2>封面 OCR / 視覺描述</h2>
+<p>封面不是 SkyReels 介面，而是短影音創作者講解畫面。上半部像是在比較某付費方案，能看到：</p>
+<ul>
+<li>“Perfect for hobbyists and beginners”</li>
+<li>“$269.9 / year”</li>
+<li>“4,000 credits per month”</li>
+<li>“Max 5 second videos”</li>
+<li>“720p video resolution”</li>
+</ul>
+<p>下半部是戴耳機的講者。封面沒有直接顯示 SkyReels logo、Hugging Face 頁面、Veo 3、Kling 或「no cap」字樣。因此本文不把封面視為 SkyReels 官方證明，只把它保存為來源截圖。</p>
+<h2>官方查核：SkyReels / Skywork AI 實際提供什麼？</h2>
+<p>### 1. SkyReels V2：開放 repo / 權重，主打 infinite-length film generative model</p>
+<p>SkyworkAI/SkyReels-V2 GitHub README 標題為 “SkyReels V2: Infinite-Length Film Generative Model”。README 說明此 repo 提供 infinite-length film generative models 的 model weights 與 inference code，並稱其採 AutoRegressive Diffusion-Forcing architecture。</p>
+<p>可核實能力：</p>
+<ul>
+<li>V2 有 Hugging Face / ModelScope 模型集合。</li>
+<li>模型表列出 Text-to-Video、Image-to-Video 與 Diffusion Forcing 相關模型。</li>
+<li>720P 模型包含 SkyReels-V2-DF-14B-720P 與 SkyReels-V2-I2V-14B-720P；README 說前者 facilitates infinite-length autoregressive video generation，後者聚焦 Image2Video synthesis。</li>
+<li>README 提供本機 inference 範例與長影片 generation 參數，例如 10 秒影片的同步/非同步範例、video extension 與 start/end frame control。</li>
+</ul>
+<p>官方來源：</p>
+<ul>
+<li><a href="https://github.com/SkyworkAI/SkyReels-V2" target="_blank" rel="noopener">https://github.com/SkyworkAI/SkyReels-V2</a></li>
+<li><a href="https://huggingface.co/collections/Skywork/skyreels-v2-6801b1b93df627d441d0d0d9" target="_blank" rel="noopener">https://huggingface.co/collections/Skywork/skyreels-v2-6801b1b93df627d441d0d0d9</a></li>
+</ul>
+<p>### 2. SkyReels V3：多模態 in-context learning、R2V / V2V / A2V</p>
+<p>SkyworkAI/SkyReels-V3 GitHub README 說明 V3 是 flagship video generation model，建立在 unified multimodal in-context learning framework 上，原生支援多種生成能力。</p>
+<p>README / Hugging Face 模型卡可見：</p>
+<ul>
+<li>Reference to Video：SkyReels-V3-R2V-14B，14B-720P。</li>
+<li>Video Extension：SkyReels-V3-V2V-14B，14B-720P。</li>
+<li>Talking Avatar：SkyReels-V3-A2V-19B，19B-720P。</li>
+<li>Talking Avatar 以一張圖片加音訊生成影片，說明中提到 720p、24 fps、lip sync、多語言唇形對齊與 long-form video generation。</li>
+</ul>
+<p>這能對應貼文裡的 text/image generation、camera control、lip-synced voices 等方向，但「同一工具內加音樂/音效」比較像 SkyReels 網站產品層功能，未必是每個開源模型本身的能力。</p>
+<p>官方來源：</p>
+<ul>
+<li><a href="https://github.com/SkyworkAI/SkyReels-V3" target="_blank" rel="noopener">https://github.com/SkyworkAI/SkyReels-V3</a></li>
+<li><a href="https://huggingface.co/Skywork/SkyReels-V3-R2V-14B" target="_blank" rel="noopener">https://huggingface.co/Skywork/SkyReels-V3-R2V-14B</a></li>
+<li><a href="https://huggingface.co/Skywork/SkyReels-V3-A2V-19B" target="_blank" rel="noopener">https://huggingface.co/Skywork/SkyReels-V3-A2V-19B</a></li>
+</ul>
+<p>### 3. SkyReels 官網：有 Creative Studio / API Platform，但未登入頁無法直接驗證額度</p>
+<p>SkyReels 官網公開頁可進入：</p>
+<ul>
+<li><a href="https://www.skyreels.ai/home" target="_blank" rel="noopener">https://www.skyreels.ai/home</a></li>
+<li>Creative Studio</li>
+<li>API Platform</li>
+<li>Sign in</li>
+</ul>
+<p>但未登入公開頁只渲染基本導航，沒有直接展示「free website version」的額度、duration cap 或 usage cap。因此本文把「免費網站版、無使用上限」保留為 Reel 文案聲明，而不是已由官網驗證的條款。</p>
+<p>### 4. 授權：開源/開放權重不等於 MIT / Apache</p>
+<p>GitHub API 顯示 SkyworkAI/SkyReels-V2、SkyReels-V3、SkyReels-A2 的 license 為 `Other / NOASSERTION`；Hugging Face 模型卡也顯示 `license_name: skywork-license`。repo 根目錄沒有可用 `LICENSE` raw 檔可直接查閱。</p>
+<p>因此不能把「open source」簡化成「可任意商用、可無限制再散布」。若要商用、部署 SaaS、訓練衍生模型或處理客戶素材，需要讀完整模型卡與 Skywork license 條款。</p>
+<h2>如何務實使用這則資訊</h2>
+<ul>
+<li>**本機/雲端實驗**：先從 Hugging Face 模型卡與 GitHub README 跑最小 demo，確認 VRAM、推論時間、解析度與輸出品質。</li>
+<li>**長影片/分鏡實驗**：用 V2 Diffusion Forcing / video extension 做段落式生成，不要期待一次 prompt 就穩定產出完整商業影片。</li>
+<li>**人物/角色影片**：用 V3 R2V / A2V 做 reference-to-video 或 talking avatar，但要測試身份一致性、唇形同步與語言表現。</li>
+<li>**產品化前檢查授權**：確認 skywork-license 是否允許商用、再訓練、API 包裝、模型託管或生成內容商用。</li>
+<li>**與 Veo 3 / Kling 的比較**：把 SkyReels 視為可控、可本機化、可研究的替代路線；不要直接等同於付費商用平台的 SLA、易用性、審核、素材庫、音訊整合與穩定度。</li>
+</ul>
+<h2>風險與限制</h2>
+<ul>
+<li>「no duration cap / no usage cap」是社群貼文 framing；官方 repo 可支撐「infinite-length / long video generation」方向，但實際長度仍受 GPU、記憶體、推論時間、參數與模型限制。</li>
+<li>「free website version」未能在未登入 SkyReels 官網公開頁直接驗證；網站額度、排隊、輸出解析度、商用條款可能變動。</li>
+<li>Hugging Face 可下載不代表無成本：14B / 19B / 720P 影片模型需要高 VRAM、多 GPU或雲端成本。</li>
+<li>開源/開放權重授權是 skywork-license / Other，不是 MIT 或 Apache；商用前必須讀 license。</li>
+<li>AI 影片可能出現人物身份漂移、手部/物理錯誤、鏡頭連貫性不足、唇形不同步、音訊對不上、浮水印或審核限制。</li>
+<li>使用人物照片、聲音、音樂、商標與影像素材時，仍需取得授權並清楚標示 AI 生成/編輯。</li>
+</ul>
+<h2>保存檔案</h2>
+<ul>
+<li>`/assets/source-images/2026-08-01-facebook-anthony-nastari-skyreels-open-source-ai-video-cover.jpg`</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-01 · https://www.facebook.com/share/r/1ceZHNAnSR/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">Facebook</span><span class="tag">Anthony Nastari</span><span class="tag">SkyReels</span><span class="tag">Skywork AI</span><span class="tag">AI video</span><span class="tag">Open source</span><span class="tag">Hugging Face</span><span class="tag">Video generation</span><h3>原始連結</h3><p><a href="https://www.facebook.com/61584081992848/videos/comment-ai-and-ill-share-the-link-still-paying-for-veo-3-or-kling-skyreels-does-/1627030092321798/" target="_blank" rel="noopener">https://www.facebook.com/61584081992848/videos/comment-ai-and-ill-share-the-link-still-paying-for-veo-3-or-kling-skyreels-does-/1627030092321798/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
