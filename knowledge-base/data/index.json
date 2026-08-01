@@ -25,6 +25,36 @@
     "markdown": "articles/2026-08-01-facebook-ai-mastery-gemini-video-editing-prompts-capcut-framing.md"
   },
   {
+    "title": "𝕊𝕒_莎 Threads｜GPT 迷你分身：真人照片牽著 Q 版自己的街頭塗鴉 prompt",
+    "date": "2026-08-01",
+    "source": "Threads",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "ChatGPT Images",
+      "GPT Image",
+      "AI 影像生成",
+      "prompt 案例",
+      "迷你分身",
+      "肖像風格化"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "\"https://www.threads.com/share/_mYmiQG5g/\"",
+      "\"https://www.threads.com/@caisha_927/post/Dbdd8-GE-Bv\"",
+      "\"https://help.openai.com/en/articles/9055440-editing-your-images-with-chatgpt-images\"",
+      "\"https://developers.openai.com/api/docs/guides/image-generation\"",
+      "\"https://developers.openai.com/api/reference/resources/images/methods/edit\"",
+      "\"https://openai.com/index/introducing-4o-image-generation/\""
+    ],
+    "excerpt": "## 為什麼保存 這則 Threads 是「真人照片 × Q 版迷你分身」風格的可複用 prompt 案例：使用者上傳一張真人照，再要求 GPT 生成一張真人與卡通版自己牽手合照。它和前一篇「即夢 AI 小人物縮小版」同屬迷你分身風格，但本篇重點不是縮小人在日常場景中探險，而是把真人穿搭、髮型與場景轉成可分享的角色化社",
+    "slug": "2026-08-01-threads-caisha-gpt-mini-avatar-graffiti-prompt",
+    "html": "articles/2026-08-01-threads-caisha-gpt-mini-avatar-graffiti-prompt.html",
+    "markdown": "articles/2026-08-01-threads-caisha-gpt-mini-avatar-graffiti-prompt.md"
+  },
+  {
     "title": "傑森のAI製造所 Threads｜即夢 AI 小人物縮小版：沙發縫裡的 chibi 微縮人物 prompt 案例",
     "date": "2026-08-01",
     "source": "https://www.threads.com/@jason_yang_ai_1221/post/DbdA_TBge3U",
