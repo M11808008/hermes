@@ -106,6 +106,40 @@
     "markdown": "articles/2026-08-01-facebook-nate-herk-fish-audio-s21-pro-free-voice-cloning-api.md"
   },
   {
+    "title": "KOCPC｜微軟 TRELLIS.2 開源：一張圖生成 PBR 3D 資產，O‑Voxel 與 4B 模型重點查核",
+    "date": "2026-08-01",
+    "source": "https://www.kocpc.com.tw/archives/661342",
+    "author": "電腦王阿達 / 達小編",
+    "type": "article",
+    "topics": [
+      "AI 工具",
+      "3D 生成",
+      "Microsoft Research",
+      "TRELLIS.2",
+      "O-Voxel",
+      "PBR",
+      "Hugging Face",
+      "GitHub",
+      "開源模型"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.kocpc.com.tw/archives/661342",
+      "https://github.com/microsoft/TRELLIS.2",
+      "https://huggingface.co/microsoft/TRELLIS.2-4B",
+      "https://huggingface.co/spaces/microsoft/TRELLIS.2",
+      "https://microsoft.github.io/TRELLIS.2/",
+      "https://arxiv.org/abs/2512.14692",
+      "https://www.microsoft.com/en-us/research/articles/trellis-2"
+    ],
+    "excerpt": "TRELLIS.2 是 Microsoft Research 團隊釋出的 4B image-to-3D 模型，重點不是單純「照片變 3D」，而是用 O‑Voxel 表示法與 Sparse Compression VAE 讓生成結果能處理開放表面、非流形幾何、內部結構與 PBR 材質；適合放進 AI 學習雷達的「3D 資產生成／遊戲與視覺工作流」觀察清單。",
+    "slug": "2026-08-01-kocpc-microsoft-trellis2-open-source-image-to-3d-pbr-assets",
+    "html": "articles/2026-08-01-kocpc-microsoft-trellis2-open-source-image-to-3d-pbr-assets.html",
+    "markdown": "articles/2026-08-01-kocpc-microsoft-trellis2-open-source-image-to-3d-pbr-assets.md"
+  },
+  {
     "title": "𝕊𝕒_莎 Threads｜GPT 迷你分身：真人照片牽著 Q 版自己的街頭塗鴉 prompt",
     "date": "2026-08-01",
     "source": "Threads",
