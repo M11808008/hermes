@@ -196,6 +196,35 @@
     "markdown": "articles/2026-08-03-threads-edwupc-hualien-pixar-collectible-face-identity-prompt.md"
   },
   {
+    "title": "Whoops SEO｜Gemini Omni 影片教學：取得存取、多輪對話修改與限制整理",
+    "date": "2026-08-03",
+    "source": "https://www.threads.com/share/BARhm-ETvW/",
+    "author": "Whoops SEO (@seo.whoops)",
+    "type": "article",
+    "topics": [
+      "Gemini Omni",
+      "Google Gemini",
+      "AI 影片生成",
+      "影片編輯",
+      "Google Vids",
+      "Veo"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BARhm-ETvW/",
+      "https://www.threads.com/@seo.whoops/post/DbkElUFGkuk",
+      "https://seo.whoops.com.tw/gemini-omni/",
+      "https://gemini.google/overview/video-generation/",
+      "https://blog.google/products-and-platforms/products/gemini/"
+    ],
+    "excerpt": "# Whoops SEO｜Gemini Omni 影片教學：取得存取、多輪對話修改與限制整理 ![Whoops SEO Gemini Omni 教學封面](../assets/source-images/2026-08-03-threads-seo-whoops-gemini-omni-video-tutorial-c",
+    "slug": "2026-08-03-threads-seo-whoops-gemini-omni-video-tutorial",
+    "html": "articles/2026-08-03-threads-seo-whoops-gemini-omni-video-tutorial.html",
+    "markdown": "articles/2026-08-03-threads-seo-whoops-gemini-omni-video-tutorial.md"
+  },
+  {
     "title": "今天GitHub又瘋了 Facebook Reel｜PPT Agent Skills 爆紅清單：從網頁簡報、AI 生圖到截圖/PDF 轉可編輯 PPT",
     "date": "2026-08-02",
     "source": "https://www.facebook.com/share/r/1H9NjxyoEm/",
@@ -10800,7 +10829,9 @@
       "https://github.com/jamiepine/voicebox",
       "https://voicebox.sh",
       "https://docs.voicebox.sh",
-      "https://github.com/jamiepine/voicebox/releases/tag/v0.5.0"
+      "https://github.com/jamiepine/voicebox/releases/tag/v0.5.0",
+      "https://www.threads.com/share/BANxectL40/",
+      "https://www.threads.com/@jackshenaiadvisor/post/Dbj-WdPkZgH"
     ],
     "excerpt": "Voicebox 不只是單一「聲音複製」玩具，而是把 TTS、STT、聲音 profile、後製效果、長文切段、故事時間軸、REST API 與 MCP server 整合成一套本機優先的 AI voice I/O stack；對欒帥來說，它最值得觀察的是「AI Agent 有自己的聲音」與「私有聲音資料本機化」兩條路線。",
     "slug": "2026-06-21-voicebox-local-ai-voice-studio-cloning-agent-voice",
