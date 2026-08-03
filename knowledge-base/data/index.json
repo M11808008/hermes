@@ -1,5 +1,35 @@
 [
   {
+    "title": "Facebook Reel｜CLAUDE.md 變成 AI 員工守則：Karpathy-inspired Claude Code Guidelines 的管理型 prompt",
+    "date": "2026-08-03",
+    "source": "https://www.facebook.com/share/r/1DMLTSqrVP/?mibextid=wwXIfr",
+    "author": "Facebook Reel 截圖來源（使用者提供）",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "CLAUDE.md",
+      "AI coding",
+      "AI 工作流",
+      "Karpathy",
+      "prompt engineering",
+      "agent governance"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1DMLTSqrVP/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1001012822424411/",
+      "https://github.com/BurukalaManiReethika/Karpathy-Inspired-Claude-Code-Guidelines",
+      "https://raw.githubusercontent.com/BurukalaManiReethika/Karpathy-Inspired-Claude-Code-Guidelines/main/README.md",
+      "https://docs.anthropic.com/en/docs/claude-code/memory"
+    ],
+    "excerpt": "# Facebook Reel｜CLAUDE.md 變成 AI 員工守則：Karpathy-inspired Claude Code Guidelines 的管理型 prompt ![CLAUDE.md 近30天熱門專案文件與 GitHub README 截圖](../assets/source-images/2026",
+    "slug": "2026-08-03-facebook-claude-md-karpathy-guidelines-ai-management",
+    "html": "articles/2026-08-03-facebook-claude-md-karpathy-guidelines-ai-management.html",
+    "markdown": "articles/2026-08-03-facebook-claude-md-karpathy-guidelines-ai-management.md"
+  },
+  {
     "title": "吳平昌 Threads｜花蓮皮克斯風收藏人偶：臉部身份保留與地方場景 prompt",
     "date": "2026-08-03",
     "source": "https://www.threads.com/share/BAXZhkip2A/",
