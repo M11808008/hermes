@@ -228,6 +228,35 @@
     "markdown": "articles/2026-08-03-threads-edwupc-hualien-pixar-collectible-face-identity-prompt.md"
   },
   {
+    "title": "Hodl Threads｜AirLLM：4GB 顯卡跑 70B 的低 VRAM 推理技巧，和「能流暢用」是兩件事",
+    "date": "2026-08-03",
+    "source": "https://www.threads.com/share/BARF1gOgYJ/",
+    "author": "Hodl (@life_is_now_web3) / Gavin Li / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "AirLLM",
+      "LLM inference",
+      "low VRAM",
+      "開源模型",
+      "大模型部署",
+      "Hugging Face",
+      "Apache-2.0"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BARF1gOgYJ/",
+      "https://www.threads.com/@life_is_now_web3/post/DbkxPLOirde",
+      "https://github.com/lyogavin/airllm",
+      "https://pypi.org/project/airllm/"
+    ],
+    "excerpt": "# Hodl Threads｜AirLLM：4GB 顯卡跑 70B 的低 VRAM 推理技巧，和「能流暢用」是兩件事 ![AirLLM GitHub preview](../assets/source-images/2026-08-03-threads-life-is-now-web3-airllm-low-vram-",
+    "slug": "2026-08-03-threads-life-is-now-web3-airllm-low-vram-large-model-inference",
+    "html": "articles/2026-08-03-threads-life-is-now-web3-airllm-low-vram-large-model-inference.html",
+    "markdown": "articles/2026-08-03-threads-life-is-now-web3-airllm-low-vram-large-model-inference.md"
+  },
+  {
     "title": "Whoops SEO｜Gemini Omni 影片教學：取得存取、多輪對話修改與限制整理",
     "date": "2026-08-03",
     "source": "https://www.threads.com/share/BARhm-ETvW/",
