@@ -1,0 +1,77 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>陳柏威｜lecture-to-notes：把演講錄影變成可回溯的同步網頁筆記</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>陳柏威｜lecture-to-notes：把演講錄影變成可回溯的同步網頁筆記</h1><figure><img src="../assets/source-images/2026-08-03-drpwchen-lecture-to-notes-grounded-lecture-video-notes-cover.png" alt="lecture-to-notes 封面" loading="lazy" referrerpolicy="no-referrer"><figcaption>lecture-to-notes 封面</figcaption></figure>
+<h2>為什麼保存</h2>
+<p>`lecture-to-notes` 是一個很適合放進 AI 學習雷達的「專業知識轉譯」案例：它不是把影片丟給模型請它摘要，而是把演講/課程現場常見的碎片素材——錄影、錄音、PDF 投影片、手機照片——整理成可驗證、可回放、可放進個人知識庫的多層筆記。</p>
+<p>這篇特別有參考價值，因為作者把問題定義得很精準：復健科課程、徒手治療、超音波掃描等知識往往藏在動作與影像裡，現場大家都錄影，但幾小時影片回去後很少真的完整複習。因此筆記不必被限制成「文字＋圖片」；更合理的形態是同步網頁：總整理拿來讀、逐字稿拿來驗證、影片隨時跳回原始動作。</p>
+<h2>原文重點</h2>
+<p>陳柏威醫師在部落格宣布 `lecture-to-notes` 開源，並把工具定位為「把演講影片變成真的會回去看的筆記」。依原文與 GitHub README，核心輸出包括：</p>
+<ul>
+<li>同步 HTML 檢視頁：影片、逐字稿與總整理在同一頁，影片播到哪，對應筆記會高亮；點時間戳可直接跳回影片。</li>
+<li>Markdown 匯出到 Obsidian：讓課程內容進入個人筆記庫與語意搜尋流程。</li>
+<li>PDF 輸出：給不使用 Obsidian 或本地知識庫的人閱讀。</li>
+<li>資料夾原樣輸入：影片、錄音、PDF deck、投影片截圖或照片可以混在一起，由 pipeline 判斷角色並對齊時間軸。</li>
+</ul>
+<figure><img src="../assets/source-images/2026-08-03-drpwchen-lecture-to-notes-grounded-lecture-video-notes-viewer-sync.png" alt="同步 HTML 檢視頁" loading="lazy" referrerpolicy="no-referrer"><figcaption>同步 HTML 檢視頁</figcaption></figure>
+<h2>技術設計：重點是 traceability，不只是摘要</h2>
+<p>官方 repo 描述與 README 都強調，這套工具的目標不是「summarize a video」，而是 traceability：完成筆記裡的每個主張，都應能附著到逐字稿的某個時間點，以及當時螢幕上的投影片。</p>
+<p>管線大致分成幾段：</p>
+<ul>
+<li>`route_inputs.py` 判斷資料夾裡每個檔案角色。</li>
+<li>`transcribe_video.py` 使用 Whisper / faster-whisper 做語音轉錄。</li>
+<li>從影片、PDF 或圖片來源抽取/建立投影片。</li>
+<li>OCR 與 semantic dedup 建立 canonical slides。</li>
+<li>本機視覺語言模型補充「非文字資訊」判斷。</li>
+<li>將投影片與逐字稿對齊，產生可被 LLM 寫作階段引用的 evidence。</li>
+<li>匯出 synced HTML viewer、Markdown、PDF 等形態。</li>
+</ul>
+<p>這個設計把 LLM 放在最後的寫作層，而不是讓模型憑空看完影片後自由摘要；昂貴或敏感的前處理多在本機完成，並先產生可讀的中間證據。</p>
+<h2>圖像內容如何處理：OCR 與 VLM 分工</h2>
+<p>原文最值得保存的一段，是作者對「只有 OCR 不夠」的分析。對臨床、復健、超音波或流程圖課程來說，重要資訊常常不是文字，而是箭頭、決策流、影像、測量標記與空間關係。若只用 OCR，流程圖或超音波影像可能被誤判為「空白或不重要」。</p>
+<p>`lecture-to-notes` 的做法是：</p>
+<ul>
+<li>OCR 負責抓投影片上真正存在的文字。</li>
+<li>視覺語言模型不被允許做 OCR，避免它「讀字時編造不存在的文字」。</li>
+<li>VLM 只回傳結構化判斷，例如：流程圖、表格、X 光/超音波、箭頭決策流、測量數值、文字重複度、非文字資訊密度。</li>
+<li>對流程圖、影像類、解剖圖、表格與統計圖設保守地板，避免因文字少而整批消失。</li>
+</ul>
+<figure><img src="../assets/source-images/2026-08-03-drpwchen-lecture-to-notes-grounded-lecture-video-notes-vlm-slide-triage.png" alt="VLM 投影片篩選例" loading="lazy" referrerpolicy="no-referrer"><figcaption>VLM 投影片篩選例</figcaption></figure>
+<h2>GitHub 與官方來源查核</h2>
+<p>GitHub API 查核顯示，`drpwchen/lecture-to-notes` 是公開 repo，建立於 2026-08-02，主要語言為 Python，license 為 MIT。查核時 GitHub metadata 顯示約 44 stars、12 forks、0 open issues；這類社群數字會變動，僅代表本次查核時間點。</p>
+<p>與工具聲稱相符的官方/可靠來源包括：</p>
+<p>| 元件 | 查核結果 |</p>
+<p>|---|---|</p>
+<p>| Whisper / faster-whisper | OpenAI Whisper repo 與 SYSTRAN faster-whisper repo 均為公開專案；faster-whisper 描述為以 CTranslate2 加速 Whisper transcription。 |</p>
+<p>| Groq Speech-to-Text | Groq 官方文件提供 speech-to-text API，可作雲端 Whisper 替代方案；若內容機密，仍應避免上傳到雲端 STT。 |</p>
+<p>| Obsidian | Obsidian 官方定位為本地、彈性的私人筆記 app；適合接 Markdown vault，但同步/發布等功能另有產品與條款。 |</p>
+<p>| Claude Code Skills | Anthropic/Claude Code 文件確認 skills 可用來擴展 Claude Code 能力；repo 同時提供 skill 形態，屬於 agent 驅動管線的實作案例。 |</p>
+<p>| MiniCPM-V | Hugging Face 上 OpenBMB MiniCPM-V 系列是可查到的多模態模型頁；實際版本、效能與授權仍需依 repo/模型卡鎖定。 |</p>
+<h2>對欒帥的可用改寫</h2>
+<p>這個 pattern 可以轉成很多 AI 學習雷達可用的工作流：</p>
+<ul>
+<li>課程錄影整理：把工作坊錄影、講義 PDF、手機拍攝投影片變成同一份可跳轉筆記。</li>
+<li>內訓知識庫：讓每場內訓輸出 synced HTML + Markdown，進入團隊知識庫。</li>
+<li>醫學/工程示範課：保留「動作、影像、流程圖」這些純文字摘要容易遺失的內容。</li>
+<li>私密資料優先本機處理：敏感課程或患者相關內容不宜直接上雲端 STT/LLM，應先用本機 pipeline 抽出可匿名化證據。</li>
+<li>把工具做成 agent skill：讓 Claude Code 或類似 coding agent 負責重複執行與檢查，但人類保留語言、隱私與臨床判斷。</li>
+</ul>
+<h2>風險與限制</h2>
+<ul>
+<li>這是開源工具，不等於即裝即完美；GPU、OCR 引擎、VLM、影片編碼、PDF 解析與作業系統都可能影響結果。</li>
+<li>原文提到 NVIDIA GPU 最快，8 GB VRAM 已可用；CPU fallback 可行但較慢，Mac CPU 模式作者標註為理論可行但未實測。</li>
+<li>若選擇 Groq 或其他雲端 STT，機密錄音、患者資料、課程授權內容不應直接外送。</li>
+<li>逐字稿錯字、投影片對齊與 VLM 圖像判斷仍需抽樣審核；「可回溯」是設計目標，不代表不需要人類校對。</li>
+<li>課程影片、投影片與講者聲音涉及著作權、肖像/聲音與學員隱私；公開分享前要確認授權與去識別化。</li>
+</ul>
+<h2>延伸脈絡</h2>
+<p>這篇延續陳柏威先前幾個開源工作流的共同思想：讓 LLM 做語意判斷與文字整合，讓小程式負責可檢查、可重跑、可回溯的機械流程。和 `claude-paper-tools`、`paper-fetch` 一樣，真正值得學的是「把專業流程拆成可驗證中間產物」，而不只是某一段 prompt。</p>
+<h2>來源</h2>
+<ul>
+<li>原文：&lt;<a href="https://drpwchen.com/posts/lecture-to-notes/&gt;" target="_blank" rel="noopener">https://drpwchen.com/posts/lecture-to-notes/&gt;</a></li>
+<li>GitHub：&lt;<a href="https://github.com/drpwchen/lecture-to-notes&gt;" target="_blank" rel="noopener">https://github.com/drpwchen/lecture-to-notes&gt;</a></li>
+<li>README：&lt;<a href="https://raw.githubusercontent.com/drpwchen/lecture-to-notes/main/README.md&gt;" target="_blank" rel="noopener">https://raw.githubusercontent.com/drpwchen/lecture-to-notes/main/README.md&gt;</a></li>
+<li>Whisper：&lt;<a href="https://github.com/openai/whisper&gt;" target="_blank" rel="noopener">https://github.com/openai/whisper&gt;</a></li>
+<li>faster-whisper：&lt;<a href="https://github.com/SYSTRAN/faster-whisper&gt;" target="_blank" rel="noopener">https://github.com/SYSTRAN/faster-whisper&gt;</a></li>
+<li>Groq Speech-to-Text：&lt;<a href="https://console.groq.com/docs/speech-to-text&gt;" target="_blank" rel="noopener">https://console.groq.com/docs/speech-to-text&gt;</a></li>
+<li>Obsidian：&lt;<a href="https://obsidian.md/&gt;" target="_blank" rel="noopener">https://obsidian.md/&gt;</a></li>
+<li>Claude Code Skills：&lt;<a href="https://code.claude.com/docs/en/skills&gt;" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills&gt;</a></li>
+<li>MiniCPM-V：&lt;<a href="https://huggingface.co/openbmb/MiniCPM-V-4&gt;" target="_blank" rel="noopener">https://huggingface.co/openbmb/MiniCPM-V-4&gt;</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-03 · https://drpwchen.com/posts/lecture-to-notes/ · article</div><h3>標籤</h3><span class="tag">AI 工作流</span><span class="tag">開源工具</span><span class="tag">Claude Code Skill</span><span class="tag">Whisper</span><span class="tag">OCR</span><span class="tag">視覺語言模型</span><span class="tag">Obsidian</span><span class="tag">醫學教育</span><h3>原始連結</h3><p><a href="https://drpwchen.com/posts/lecture-to-notes/" target="_blank" rel="noopener">https://drpwchen.com/posts/lecture-to-notes/</a></p><p><a href="https://github.com/drpwchen/lecture-to-notes" target="_blank" rel="noopener">https://github.com/drpwchen/lecture-to-notes</a></p><p><a href="https://raw.githubusercontent.com/drpwchen/lecture-to-notes/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/drpwchen/lecture-to-notes/main/README.md</a></p><p><a href="https://github.com/openai/whisper" target="_blank" rel="noopener">https://github.com/openai/whisper</a></p><p><a href="https://github.com/SYSTRAN/faster-whisper" target="_blank" rel="noopener">https://github.com/SYSTRAN/faster-whisper</a></p><p><a href="https://console.groq.com/docs/speech-to-text" target="_blank" rel="noopener">https://console.groq.com/docs/speech-to-text</a></p><p><a href="https://obsidian.md/" target="_blank" rel="noopener">https://obsidian.md/</a></p><p><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">https://code.claude.com/docs/en/skills</a></p><p><a href="https://huggingface.co/openbmb/MiniCPM-V-4" target="_blank" rel="noopener">https://huggingface.co/openbmb/MiniCPM-V-4</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

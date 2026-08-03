@@ -1,5 +1,40 @@
 [
   {
+    "title": "陳柏威｜lecture-to-notes：把演講錄影變成可回溯的同步網頁筆記",
+    "date": "2026-08-03",
+    "source": "https://drpwchen.com/posts/lecture-to-notes/",
+    "author": "陳柏威 Po-Wei Chen, MD",
+    "type": "article",
+    "topics": [
+      "AI 工作流",
+      "開源工具",
+      "Claude Code Skill",
+      "Whisper",
+      "OCR",
+      "視覺語言模型",
+      "Obsidian",
+      "醫學教育"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://drpwchen.com/posts/lecture-to-notes/",
+      "https://github.com/drpwchen/lecture-to-notes",
+      "https://raw.githubusercontent.com/drpwchen/lecture-to-notes/main/README.md",
+      "https://github.com/openai/whisper",
+      "https://github.com/SYSTRAN/faster-whisper",
+      "https://console.groq.com/docs/speech-to-text",
+      "https://obsidian.md/",
+      "https://code.claude.com/docs/en/skills",
+      "https://huggingface.co/openbmb/MiniCPM-V-4"
+    ],
+    "excerpt": "# 陳柏威｜lecture-to-notes：把演講錄影變成可回溯的同步網頁筆記 ![lecture-to-notes 封面](../assets/source-images/2026-08-03-drpwchen-lecture-to-notes-grounded-lecture-video-notes-cover.",
+    "slug": "2026-08-03-drpwchen-lecture-to-notes-grounded-lecture-video-notes",
+    "html": "articles/2026-08-03-drpwchen-lecture-to-notes-grounded-lecture-video-notes.html",
+    "markdown": "articles/2026-08-03-drpwchen-lecture-to-notes-grounded-lecture-video-notes.md"
+  },
+  {
     "title": "Facebook｜大學塾三個 Gemini Gem：把 Google Antigravity 任務指令拆成 Skill 產生器、技能資料庫與任務解構器",
     "date": "2026-08-03",
     "source": "https://www.facebook.com/share/p/1BGTbW4iA1/?mibextid=wwXIfr",
