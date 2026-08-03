@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜資訊組長紀錄站：Telegram 一句話入庫 Notion，再用 Cloudflare Workers 自動發布</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜資訊組長紀錄站：Telegram 一句話入庫 Notion，再用 Cloudflare Workers 自動發布</h1><figure><img src="../assets/source-images/2026-08-03-facebook-hk6429-notion-worklog-starter-teacher-it-worklog-workflow.jpg" alt="資訊組長紀錄站三種輸入工作流程圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>資訊組長紀錄站三種輸入工作流程圖</figcaption></figure>
+<h2>為什麼保存</h2>
+<p>這則貼文切中教育現場資訊組長、MIS、校內數位支援者常見的痛點：事情很多，但每件都太零碎，等到成果報告或年度盤點時，反而難以還原自己做了什麼。</p>
+<p>它的重點不是「再開一個表單」，而是把紀錄入口降到最低摩擦：走路時對 Telegram bot 講一句話，系統自動轉文字、入庫、上站；坐在桌前時可用 Web 表單；週末要補摘要、狀態或案件單號時，再直接進 Notion 深度整理。</p>
+<h2>貼文可見重點</h2>
+<p>Facebook 貼文由陳乃誠發布，貼文標示「AI 內容」，並附 GitHub repo：`hk6429/notion-worklog-starter`。貼文核心主張如下：</p>
+<ul>
+<li>資訊組長最大的委屈不是事情多，而是「做完沒人知道」。</li>
+<li>記錄斷掉常常不是意志力問題，而是輸入摩擦太高。</li>
+<li>工作流應把記錄成本壓到「講一句話」。</li>
+<li>三個入口匯入同一個 Notion 資料庫：Telegram、Web 前端、Notion 直接新增。</li>
+<li>Cloudflare Workers 定期同步為公開網站，讓同事或主管可用網址查看。</li>
+</ul>
+<p>附圖標題為「資訊組長紀錄站：三種輸入工作流程全圖解」，視覺上把流程分成三路：</p>
+<p>| 路徑 | 使用情境 | 流程 |</p>
+<p>|---|---|---|</p>
+<p>| Telegram 輸入 | 走路、現場處理剛完成時 | 語音／文字／照片／影片 → TG Bot webhook 接收 → 語音自動轉逐字稿 → 對話內可修改或刪除 |</p>
+<p>| Web 前端輸入 | 坐在座位上補紀錄 | 進入紀錄站 → 站主模式登入 → 表單填寫 → 送入 Notion |</p>
+<p>| Notion 直接新增 | 週末或深度整理 | 開 Notion 資料庫 → 新增紀錄 → 補標題、狀態、摘要、案件單號 |</p>
+<p>三路最後匯流到 Notion 資料庫，作為 single source of truth，再由 Cloudflare Workers/KV 自動更新公開紀錄站。</p>
+<h2>查核：GitHub repo 實際內容</h2>
+<p>GitHub API 與 README 查核顯示，`hk6429/notion-worklog-starter` 是公開 repo，描述為「Notion 當 CMS 的公開工作紀錄站起手式：60 秒自動發布＋Telegram 隨手紀錄＋零 token 訊息解析（Cloudflare Workers 免費層）」。查核時 metadata 可見：</p>
+<ul>
+<li>建立時間：2026-08-01。</li>
+<li>主要語言：TypeScript、CSS、JavaScript。</li>
+<li>License：GitHub metadata 顯示 MIT License。</li>
+<li>主要元件：Notion REST API、Next.js / Cloudflare Workers、Workers KV、Telegram bot webhook、可選 Groq Whisper 語音轉文字。</li>
+</ul>
+<p>README 中的能力和貼文大致一致：Notion 作 CMS、Telegram 可接文字／語音／照片、60 秒內連傳可合併同一筆、`/list` 可在 Telegram 對話中改標題／發布／刪除，並用規則式解析「今天／明天／8/5」等日期與分類字眼，因此不需要 LLM token 做訊息分類。</p>
+<h2>官方/可靠來源對照</h2>
+<ul>
+<li>Notion 官方文件確認 Notion API 可用來操作 pages、databases、blocks，適合做 CMS 後台。</li>
+<li>Telegram Bot API 官方文件確認 bot 可透過 HTTP-based API 接收訊息、語音、照片等互動資料。</li>
+<li>Cloudflare Workers 與 KV 官方文件確認 Workers 可作為 edge/serverless 執行環境，KV 可作 key-value 儲存與快取；但實際免費額度、請求量與限制會隨 Cloudflare 方案調整，部署前仍應看最新 pricing。</li>
+<li>Groq speech-to-text 文件可作語音逐字稿來源；若不使用語音功能，README 也允許跳過 Groq API key。</li>
+</ul>
+<h2>對欒帥的可用改寫</h2>
+<p>這個 pattern 很適合改造成「課程/行政/專案工作留痕系統」：</p>
+<ul>
+<li>先定義唯一資料庫：事件標題、日期、地點/單位、類別、狀態、摘要、附件、是否公開。</li>
+<li>把最常發生的輸入場景接到同一庫：LINE/Telegram 語音、表單、Notion/Sheets 後台。</li>
+<li>把公開展示與私密資料分層：公開站只放可揭露的成果；設備序號、個資、內部 IP、未修復漏洞留在私密欄位或不匯出。</li>
+<li>讓網站自動長出時間軸、分類頁、搜尋與週/月彙整，年底報告就不再從空白文件開始。</li>
+</ul>
+<h2>風險與限制</h2>
+<ul>
+<li>貼文說「免費方案、連信用卡都不用綁」可視為 repo 設計目標與當下經驗；實際用量、Cloudflare/Notion/Groq 免費額度與付款要求仍須以各服務最新條款為準。</li>
+<li>若接入校務或行政工作，公開站務必過濾姓名、帳號、設備序號、內部 IP、網路拓樸、弱點資訊與未定案採購。</li>
+<li>語音轉文字會把工作內容傳到第三方服務；涉及學生、教師或校務個資時，要先界定可傳輸範圍。</li>
+<li>Telegram bot webhook 與 Notion token 都屬敏感憑證，應放在 Cloudflare secrets 或本地 `.env`，不可提交到 repo。</li>
+<li>「AI 內容」標示代表貼文/圖片可能使用生成式 AI 輔助，不應把流程圖視為實機截圖；技術可行性仍以 repo 與官方文件為準。</li>
+</ul>
+<h2>相關連結</h2>
+<ul>
+<li>Facebook share：<a href="https://www.facebook.com/share/p/1EvrFy5pEt/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EvrFy5pEt/</a></li>
+<li>Facebook canonical：<a href="https://www.facebook.com/hk6429/posts/pfbid0eTTNCoa2uY9hcQ5yjxJKxRbsxhJcuW2MHZxc7FomSLMWi75CDvx2LUnEaNzEaxBNl" target="_blank" rel="noopener">https://www.facebook.com/hk6429/posts/pfbid0eTTNCoa2uY9hcQ5yjxJKxRbsxhJcuW2MHZxc7FomSLMWi75CDvx2LUnEaNzEaxBNl</a></li>
+<li>GitHub repo：<a href="https://github.com/hk6429/notion-worklog-starter" target="_blank" rel="noopener">https://github.com/hk6429/notion-worklog-starter</a></li>
+<li>README：<a href="https://raw.githubusercontent.com/hk6429/notion-worklog-starter/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/hk6429/notion-worklog-starter/main/README.md</a></li>
+<li>Notion API：<a href="https://developers.notion.com/reference/intro" target="_blank" rel="noopener">https://developers.notion.com/reference/intro</a></li>
+<li>Telegram Bot API：<a href="https://core.telegram.org/bots/api" target="_blank" rel="noopener">https://core.telegram.org/bots/api</a></li>
+<li>Cloudflare Workers pricing：<a href="https://developers.cloudflare.com/workers/platform/pricing/" target="_blank" rel="noopener">https://developers.cloudflare.com/workers/platform/pricing/</a></li>
+<li>Cloudflare KV：<a href="https://developers.cloudflare.com/kv/" target="_blank" rel="noopener">https://developers.cloudflare.com/kv/</a></li>
+<li>Groq speech-to-text：<a href="https://console.groq.com/docs/speech-to-text" target="_blank" rel="noopener">https://console.groq.com/docs/speech-to-text</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-03 · https://www.facebook.com/share/p/1EvrFy5pEt/ · article</div><h3>標籤</h3><span class="tag">教育科技</span><span class="tag">Telegram Bot</span><span class="tag">Notion</span><span class="tag">Cloudflare Workers</span><span class="tag">工作流程自動化</span><span class="tag">行政減量</span><span class="tag">AI 應用</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1EvrFy5pEt/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1EvrFy5pEt/</a></p><p><a href="https://www.facebook.com/hk6429/posts/pfbid0eTTNCoa2uY9hcQ5yjxJKxRbsxhJcuW2MHZxc7FomSLMWi75CDvx2LUnEaNzEaxBNl" target="_blank" rel="noopener">https://www.facebook.com/hk6429/posts/pfbid0eTTNCoa2uY9hcQ5yjxJKxRbsxhJcuW2MHZxc7FomSLMWi75CDvx2LUnEaNzEaxBNl</a></p><p><a href="https://www.facebook.com/hk6429/posts/%E5%9B%9E%E6%87%89%E8%81%8A%E8%81%8A%E8%A9%A6%E8%A9%A6-httpsgithubcomhk6429notion-worklog-starter%E8%B3%87%E8%A8%8A%E7%B5%84%E9%95%B7%E6%9C%80%E5%A4%A7%E7%9A%84%E5%A7%94%E5%B1%88%E4%B8%8D%E6%98%AF%E4%BA%8B%E6%83%85%E5%A4%9A%E6%98%AF%E5%81%9A%E5%AE%8C%E6%B2%92%E4%BA%BA%E7%9F%A5%E9%81%93-%E4%B8%80%E5%B9%B4%E5%B9%BE%E7%99%BE%E4%BB%B6%E5%B9%B4%E5%BA%95%E6%83%B3%E4%B8%8D/10237051444735237/" target="_blank" rel="noopener">https://www.facebook.com/hk6429/posts/%E5%9B%9E%E6%87%89%E8%81%8A%E8%81%8A%E8%A9%A6%E8%A9%A6-httpsgithubcomhk6429notion-worklog-starter%E8%B3%87%E8%A8%8A%E7%B5%84%E9%95%B7%E6%9C%80%E5%A4%A7%E7%9A%84%E5%A7%94%E5%B1%88%E4%B8%8D%E6%98%AF%E4%BA%8B%E6%83%85%E5%A4%9A%E6%98%AF%E5%81%9A%E5%AE%8C%E6%B2%92%E4%BA%BA%E7%9F%A5%E9%81%93-%E4%B8%80%E5%B9%B4%E5%B9%BE%E7%99%BE%E4%BB%B6%E5%B9%B4%E5%BA%95%E6%83%B3%E4%B8%8D/10237051444735237/</a></p><p><a href="https://github.com/hk6429/notion-worklog-starter" target="_blank" rel="noopener">https://github.com/hk6429/notion-worklog-starter</a></p><p><a href="https://raw.githubusercontent.com/hk6429/notion-worklog-starter/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/hk6429/notion-worklog-starter/main/README.md</a></p><p><a href="https://developers.notion.com/reference/intro" target="_blank" rel="noopener">https://developers.notion.com/reference/intro</a></p><p><a href="https://core.telegram.org/bots/api" target="_blank" rel="noopener">https://core.telegram.org/bots/api</a></p><p><a href="https://developers.cloudflare.com/workers/platform/pricing/" target="_blank" rel="noopener">https://developers.cloudflare.com/workers/platform/pricing/</a></p><p><a href="https://developers.cloudflare.com/kv/" target="_blank" rel="noopener">https://developers.cloudflare.com/kv/</a></p><p><a href="https://console.groq.com/docs/speech-to-text" target="_blank" rel="noopener">https://console.groq.com/docs/speech-to-text</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
