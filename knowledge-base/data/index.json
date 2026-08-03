@@ -92,9 +92,13 @@
     "links": [
       "https://www.facebook.com/share/r/1DMLTSqrVP/?mibextid=wwXIfr",
       "https://www.facebook.com/reel/1001012822424411/",
+      "https://www.facebook.com/share/p/1GSDhidu2B/",
+      "https://www.facebook.com/adreesAI/posts/pfbid02cmGu2coai6NZj3mVpdb5vi7RsXxzGJKs2oC6qpu64jGLwsMKLePCuBkhrW9Yukr6l",
       "https://github.com/BurukalaManiReethika/Karpathy-Inspired-Claude-Code-Guidelines",
       "https://raw.githubusercontent.com/BurukalaManiReethika/Karpathy-Inspired-Claude-Code-Guidelines/main/README.md",
-      "https://docs.anthropic.com/en/docs/claude-code/memory"
+      "https://docs.anthropic.com/en/docs/claude-code/memory",
+      "https://docs.anthropic.com/en/docs/claude-code/sub-agents",
+      "https://docs.anthropic.com/en/docs/claude-code/common-workflows"
     ],
     "excerpt": "# Facebook Reel｜CLAUDE.md 變成 AI 員工守則：Karpathy-inspired Claude Code Guidelines 的管理型 prompt ![CLAUDE.md 近30天熱門專案文件與 GitHub README 截圖](../assets/source-images/2026",
     "slug": "2026-08-03-facebook-claude-md-karpathy-guidelines-ai-management",
