@@ -164,6 +164,38 @@
     "markdown": "articles/2026-08-03-lupanda-fengqingyang-beitou-fried-rice-wontons.md"
   },
   {
+    "title": "AI郵報 Threads｜MiniMax H3 開放權重：全模態影片模型進入 ComfyUI 與本機工作流",
+    "date": "2026-08-03",
+    "source": "https://www.threads.com/share/BAVRd1p9DJ/",
+    "author": "AI郵報 (@aiposthub) / MiniMax / Hermes Agent",
+    "type": "article",
+    "topics": [
+      "MiniMax H3",
+      "Hailuo AI",
+      "AI 影片生成",
+      "開放權重",
+      "ComfyUI",
+      "Hugging Face",
+      "多模態生成",
+      "Community License"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAVRd1p9DJ/",
+      "https://www.threads.com/@aiposthub/post/DbkzM02kcBY",
+      "https://www.minimax.io/blog/minimax-h3",
+      "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+      "https://huggingface.co/Comfy-Org/MiniMax-H3",
+      "https://hailuoai.video"
+    ],
+    "excerpt": "# AI郵報 Threads｜MiniMax H3 開放權重：全模態影片模型進入 ComfyUI 與本機工作流 ![MiniMax H3 official blog cover](../assets/source-images/2026-08-03-threads-aiposthub-minimax-h3-open-w",
+    "slug": "2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui",
+    "html": "articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.html",
+    "markdown": "articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.md"
+  },
+  {
     "title": "吳平昌 Threads｜花蓮皮克斯風收藏人偶：臉部身份保留與地方場景 prompt",
     "date": "2026-08-03",
     "source": "https://www.threads.com/share/BAXZhkip2A/",
