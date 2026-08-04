@@ -118,6 +118,37 @@
     "markdown": "articles/2026-08-05-note-made-linlin-local-ai-mv-rtx5090-character-consistency.md"
   },
   {
+    "title": "數據女巫 Threads｜MiniMax H3 分鏡遵從實測：480p 本機 19 分鐘 vs Seedance 2.0 雲端成本",
+    "date": "2026-08-05",
+    "source": "https://www.threads.com/@data_pythoness/post/DbnmhVQALPX",
+    "author": "數據女巫 𝔻.𝕡𝕪𝕤 🔮 (@data_pythoness)",
+    "type": "article",
+    "topics": [
+      "MiniMax H3",
+      "AI 影片生成",
+      "storyboard",
+      "reference-to-video",
+      "Seedance 2.0",
+      "ComfyUI",
+      "本機部署"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_l__V0ajK/",
+      "https://www.threads.com/@data_pythoness/post/DbnmhVQALPX",
+      "https://www.minimax.io/blog/minimax-h3",
+      "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+      "https://huggingface.co/Comfy-Org/MiniMax-H3",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.html"
+    ],
+    "excerpt": "# 數據女巫 Threads｜MiniMax H3 分鏡遵從實測：480p 本機 19 分鐘 vs Seedance 2.0 雲端成本 ![Threads 媒體圖：STORYBOARD INPUT、MiniMax H3 ref2va 與 Seedance 2.0 生成結果對比](../assets/source-ima",
+    "slug": "2026-08-05-threads-data-pythoness-minimax-h3-storyboard-vs-seedance",
+    "html": "articles/2026-08-05-threads-data-pythoness-minimax-h3-storyboard-vs-seedance.html",
+    "markdown": "articles/2026-08-05-threads-data-pythoness-minimax-h3-storyboard-vs-seedance.md"
+  },
+  {
     "title": "Facebook｜Gemini Canvas 7 個實用場景：從文件編輯、Web App 到學習材料",
     "date": "2026-08-04",
     "source": "https://www.facebook.com/share/1BbpVS5iDY/?mibextid=wwXIfr",

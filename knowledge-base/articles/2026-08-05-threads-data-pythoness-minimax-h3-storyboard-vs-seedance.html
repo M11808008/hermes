@@ -1,0 +1,63 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>數據女巫 Threads｜MiniMax H3 分鏡遵從實測：480p 本機 19 分鐘 vs Seedance 2.0 雲端成本</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>數據女巫 Threads｜MiniMax H3 分鏡遵從實測：480p 本機 19 分鐘 vs Seedance 2.0 雲端成本</h1><figure><img src="../assets/source-images/2026-08-05-threads-data-pythoness-minimax-h3-storyboard-test-1.jpg" alt="Threads 媒體圖：STORYBOARD INPUT、MiniMax H3 ref2va 與 Seedance 2.0 生成結果對比" loading="lazy" referrerpolicy="no-referrer"><figcaption>Threads 媒體圖：STORYBOARD INPUT、MiniMax H3 ref2va 與 Seedance 2.0 生成結果對比</figcaption></figure>
+<h2>為什麼保存</h2>
+<p>這則 Threads 是 MiniMax H3 開放權重後很有價值的「實測案例」：它不只是說模型開源，而是拿同一組 storyboard input 去比較本機 MiniMax H3 與雲端 Seedance 2.0 的輸出、成本與等待時間。</p>
+<p>知識庫已有 MiniMax H3 主條目，保存官方 blog、Hugging Face 與 ComfyUI repack 的技術定位；這篇則補上創作者視角：如果把 AI 影片生成從「一次付費抽結果」改成「本機慢慢跑、可無限試錯」，工作流與成本結構會怎麼變。</p>
+<h2>Threads 可見內容</h2>
+<p>canonical：`<a href="https://www.threads.com/@data_pythoness/post/DbnmhVQALPX`。可見資訊：" target="_blank" rel="noopener">https://www.threads.com/@data_pythoness/post/DbnmhVQALPX`。可見資訊：</a></p>
+<ul>
+<li>作者：數據女巫 𝔻.𝕡𝕪𝕤 🔮（@data_pythoness）。</li>
+<li>可見瀏覽：約 1.3 萬次。</li>
+<li>可見互動：327 讚、47 回覆、50 轉發、275 分享/引用類互動（Threads UI 位置可能依版本變動）。</li>
+<li>主張：MiniMax H3 是「原生多模態」開源 AI 影片模型，支援文生影、圖生影、首尾幀、參考生影片、音畫同步與改影片。</li>
+<li>實測：用前幾天分享的分鏡圖測試，作者主觀認為分鏡遵從度甚至比 Seedance 2.0 更好。</li>
+<li>成本/速度對比：Seedance 2.0 的 12 秒影片花約 120 元台幣；MiniMax H3 在作者筆電上 19 分鐘跑出 12 秒 480p 影片。</li>
+<li>判斷：雖然 MiniMax H3 只有 480p，但只要本機持續開著，就能反覆生成與試錯。</li>
+</ul>
+<h2>媒體圖觀察</h2>
+<p>第一張媒體圖上方是 `STORYBOARD (INPUT)`，標示 9-panel reference sheet；九宮格是灰階分鏡草圖，畫面包含角色拿燈、奔跑、近景、遠景與環境切換。</p>
+<p>中段標示 `MiniMax H3 — ref2va`，參數可見為 864×480、29 秒/24fps、19 min local；畫面是角色拿燈站在夜晚場景中。</p>
+<p>下段標示 `Seedance 2.0`，參數可見為 1280×720、289 秒/24fps、cloud；畫面較高解析、色彩與光效更強。</p>
+<p>這張圖很適合用來教「模型遵從分鏡」與「畫質/解析度/速度/成本」不是同一個評估指標：Seedance 2.0 的畫面更華麗，但 MiniMax H3 的本機可重複試錯有另一種價值。</p>
+<figure><img src="../assets/source-images/2026-08-05-threads-data-pythoness-minimax-h3-storyboard-test-2.jpg" alt="Threads 媒體圖：MiniMax H3 / Seedance 2.0 影片生成測試畫面" loading="lazy" referrerpolicy="no-referrer"><figcaption>Threads 媒體圖：MiniMax H3 / Seedance 2.0 影片生成測試畫面</figcaption></figure>
+<h2>官方與可靠來源查核</h2>
+<p>MiniMax 官方 blog〈MiniMax H3: An Open Model Breaking the Boundaries Between Tasks and Modalities〉可讀，確認 H3 定位為跨任務與跨模態的開放模型，官方頁面提到 2K 與 audio 等能力。</p>
+<p>Hugging Face API 查核：</p>
+<ul>
+<li>`MiniMaxAI/MiniMax-H3`：modelId 可讀，pipeline tag 為 `image-text-to-video`，tags 包含 text-to-video、image-to-video、video-to-video、text-to-audio-video、image-text-to-audio-video、audio-video-generation、multimodal、synchronized-audio-video、reference-to-audio-video 等；目前 likes 約 1,921，數字會變動。</li>
+<li>`Comfy-Org/MiniMax-H3`：ComfyUI repack 可讀，tags 包含 comfyui；目前 likes 約 578，數字會變動。</li>
+</ul>
+<p>既有主條目已保存 MiniMax H3 的授權、ComfyUI repack 與不完整開源限制，本文不重複全部內容，請見：</p>
+<p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.html</a></p>
+<h2>留言區訊號</h2>
+<p>留言區值得保存的不是單純稱讚，而是大家問的問題剛好反映本機 AI 影片的真實門檻：</p>
+<ul>
+<li>多人追問 GPU、VRAM、筆電等級與最低硬體需求。</li>
+<li>有人問 Mac 能不能玩，顯示 Apple Silicon / MLX 或 Mac workflow 仍是社群關注點。</li>
+<li>有人提到 480p 12 秒 19 分鐘、4070 筆電能否跑、顯卡是否影響品質。</li>
+<li>有使用者補充自己的 R2V / I2V 推論時間：0.8 百萬像素、10 秒、20 steps 約 5 分鐘；15 秒約 11 分鐘。這是個人硬體條件，不可泛化。</li>
+<li>有人提到加速節點與 SAGE attention 類加速方向，代表社群會很快圍繞 H3 做量化、加速與工作流優化。</li>
+</ul>
+<h2>對欒帥的可用改寫</h2>
+<ul>
+<li>AI 影片課程比較：用同一組 storyboard input 比較 Seedance 2.0、MiniMax H3、Veo / Gemini Omni，拆成「分鏡遵從、畫質、成本、速度、可重跑性」五軸評分。</li>
+<li>本機部署工作坊：從 Comfy-Org/MiniMax-H3 開始，不追求 2K，先記錄 480p / 768p 的 VRAM、時間、失敗率與輸出穩定性。</li>
+<li>成本教育：把「120 元買一次雲端 12 秒」與「19 分鐘本機跑 12 秒 480p」做成試算表，讓學員理解硬體折舊、電費與雲端 credits 的差異。</li>
+<li>創作流程：用 storyboard 先決定鏡頭，再用 reference-to-video 測遵從度，避免只靠 prompt 抽盲盒。</li>
+<li>研究題目：觀察 MiniMax H3 開放權重後，社群如何快速產生 ComfyUI 節點、量化版本、MLX port、加速節點與 prompt library。</li>
+</ul>
+<h2>風險與限制</h2>
+<ul>
+<li>「ChatGPT 時刻」是社群興奮語氣，代表開源影片模型生態的情緒轉折，不是客觀性能結論。</li>
+<li>貼文中的成本、速度與分鏡遵從度是作者環境與主觀實測；不同 GPU、VRAM、量化版本、ComfyUI workflow、steps、解析度都會改變結果。</li>
+<li>MiniMax H3 授權不是 MIT / Apache；既有主條目已標註 Community License 與商用/地區限制，正式導入前需再查最新 license。</li>
+<li>本機可跑不等於可商用交付；仍需處理素材授權、人物/聲音同意、AI 生成標示、品牌安全與輸出品質審查。</li>
+<li>Threads 圖片/影片來自社群 CDN，本文已本地化保存可見媒體，但完整影片檔與登入後全部互動仍可能受平台限制。</li>
+</ul>
+<h2>來源</h2>
+<ul>
+<li>Threads：&lt;<a href="https://www.threads.com/@data_pythoness/post/DbnmhVQALPX&gt;" target="_blank" rel="noopener">https://www.threads.com/@data_pythoness/post/DbnmhVQALPX&gt;</a></li>
+<li>MiniMax 官方 blog：&lt;<a href="https://www.minimax.io/blog/minimax-h3&gt;" target="_blank" rel="noopener">https://www.minimax.io/blog/minimax-h3&gt;</a></li>
+<li>Hugging Face：&lt;<a href="https://huggingface.co/MiniMaxAI/MiniMax-H3&gt;" target="_blank" rel="noopener">https://huggingface.co/MiniMaxAI/MiniMax-H3&gt;</a></li>
+<li>ComfyUI repack：&lt;<a href="https://huggingface.co/Comfy-Org/MiniMax-H3&gt;" target="_blank" rel="noopener">https://huggingface.co/Comfy-Org/MiniMax-H3&gt;</a></li>
+<li>既有主條目：&lt;<a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.html&gt;" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.html&gt;</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-05 · https://www.threads.com/@data_pythoness/post/DbnmhVQALPX · article</div><h3>標籤</h3><span class="tag">MiniMax H3</span><span class="tag">AI 影片生成</span><span class="tag">storyboard</span><span class="tag">reference-to-video</span><span class="tag">Seedance 2.0</span><span class="tag">ComfyUI</span><span class="tag">本機部署</span><h3>原始連結</h3><p><a href="https://www.threads.com/share/_l__V0ajK/" target="_blank" rel="noopener">https://www.threads.com/share/_l__V0ajK/</a></p><p><a href="https://www.threads.com/@data_pythoness/post/DbnmhVQALPX" target="_blank" rel="noopener">https://www.threads.com/@data_pythoness/post/DbnmhVQALPX</a></p><p><a href="https://www.minimax.io/blog/minimax-h3" target="_blank" rel="noopener">https://www.minimax.io/blog/minimax-h3</a></p><p><a href="https://huggingface.co/MiniMaxAI/MiniMax-H3" target="_blank" rel="noopener">https://huggingface.co/MiniMaxAI/MiniMax-H3</a></p><p><a href="https://huggingface.co/Comfy-Org/MiniMax-H3" target="_blank" rel="noopener">https://huggingface.co/Comfy-Org/MiniMax-H3</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-03-threads-aiposthub-minimax-h3-open-weights-comfyui.html</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
