@@ -30,6 +30,38 @@
     "markdown": "articles/2026-08-04-threads-dinghuanglin-codex-sol-luna-worker-subagents.md"
   },
   {
+    "title": "Threads｜Claude Design 將 YouTube 影片轉成 PPT：字幕＋設計規範檔的簡報再利用工作流",
+    "date": "2026-08-04",
+    "source": "https://www.threads.com/share/_tHVtBx3y/",
+    "author": "Threads @eason13419 / YouTube 科技兔",
+    "type": "article",
+    "topics": [
+      "Claude Design",
+      "Claude Artifacts",
+      "PowerPoint",
+      "YouTube",
+      "PPTX",
+      "AI 工作流",
+      "內容再利用"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_tHVtBx3y/",
+      "https://www.threads.com/@eason13419/post/Dbkjar-IK37",
+      "https://youtu.be/Q8jhXxeFjmg",
+      "https://www.youtube.com/watch?v=Q8jhXxeFjmg",
+      "https://www.techrabbit.biz/48462/",
+      "https://claude.com/blog/create-files",
+      "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them"
+    ],
+    "excerpt": "# Threads｜Claude Design 將 YouTube 影片轉成 PPT：字幕＋設計規範檔的簡報再利用工作流 ![Threads 圖卡：用 Claude Design 將 YouTube 影片轉成 PPT 簡報](../assets/source-images/2026-08-04-threads-easo",
+    "slug": "2026-08-04-threads-eason-claude-design-youtube-to-ppt",
+    "html": "articles/2026-08-04-threads-eason-claude-design-youtube-to-ppt.html",
+    "markdown": "articles/2026-08-04-threads-eason-claude-design-youtube-to-ppt.md"
+  },
+  {
     "title": "陳柏威｜lecture-to-notes：把演講錄影變成可回溯的同步網頁筆記",
     "date": "2026-08-03",
     "source": "https://drpwchen.com/posts/lecture-to-notes/",
