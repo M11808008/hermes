@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜Codex Sol 主代理＋Luna Worker 子代理：把 subagents 變成可檢查的派工流程",
+    "date": "2026-08-04",
+    "source": "https://www.threads.com/share/BBOZF76zAy/",
+    "author": "Threads @dinghuanglin",
+    "type": "article",
+    "topics": [
+      "Codex",
+      "subagents",
+      "custom agents",
+      "AI 工作流",
+      "agent orchestration",
+      "token management"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BBOZF76zAy/",
+      "https://www.threads.com/@dinghuanglin/post/DblB9mKH2gV",
+      "https://learn.chatgpt.com/docs/codex/cli.md",
+      "https://learn.chatgpt.com/docs/agent-configuration/subagents.md",
+      "https://github.com/arumwu/arum-codex-subagents",
+      "https://raw.githubusercontent.com/arumwu/arum-codex-subagents/main/README.md"
+    ],
+    "excerpt": "# Threads｜Codex Sol 主代理＋Luna Worker 子代理：把 subagents 變成可檢查的派工流程 ![Sol 主線程與 Luna Max 子代理協作流程圖](../assets/source-images/2026-08-04-threads-dinghuanglin-codex-sol-l",
+    "slug": "2026-08-04-threads-dinghuanglin-codex-sol-luna-worker-subagents",
+    "html": "articles/2026-08-04-threads-dinghuanglin-codex-sol-luna-worker-subagents.html",
+    "markdown": "articles/2026-08-04-threads-dinghuanglin-codex-sol-luna-worker-subagents.md"
+  },
+  {
     "title": "陳柏威｜lecture-to-notes：把演講錄影變成可回溯的同步網頁筆記",
     "date": "2026-08-03",
     "source": "https://drpwchen.com/posts/lecture-to-notes/",
