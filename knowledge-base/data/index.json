@@ -1,5 +1,36 @@
 [
   {
+    "title": "emmanuelsamms｜Oh My Claude Code：Claude Code 多代理大腦與星數查核落差",
+    "date": "2026-08-05",
+    "source": "https://www.facebook.com/reel/3145634182292149",
+    "author": "emmanuelsamms",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "subagents",
+      "MCP",
+      "multi-agent",
+      "coding agents",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1NjqLTU65t/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/3145634182292149",
+      "https://docs.anthropic.com/en/docs/claude-code/sub-agents",
+      "https://docs.anthropic.com/en/docs/claude-code/mcp",
+      "https://github.com/zephyrpersonal/oh-my-claude-code",
+      "https://github.com/477174/oh-my-claude-code",
+      "https://github.com/SleepyLGod/oh-my-claude-code"
+    ],
+    "excerpt": "# emmanuelsamms｜Oh My Claude Code：Claude Code 多代理大腦與星數查核落差 ![Facebook Reel 畫面：emmanuelsamms 介紹 Oh My Claude Code 與 Claude Code 多代理工具](../assets/source-images/20",
+    "slug": "2026-08-05-facebook-emmanuelsamms-oh-my-claude-code-multi-agent",
+    "html": "articles/2026-08-05-facebook-emmanuelsamms-oh-my-claude-code-multi-agent.html",
+    "markdown": "articles/2026-08-05-facebook-emmanuelsamms-oh-my-claude-code-multi-agent.md"
+  },
+  {
     "title": "GeminiAi｜Gemini + GPT 科研繪圖教學：文章內容轉圖的工作流與導流風險",
     "date": "2026-08-05",
     "source": "https://www.facebook.com/reel/1905773773669810",
