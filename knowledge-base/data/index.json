@@ -28,6 +28,37 @@
     "markdown": "articles/2026-08-04-facebook-chris-ke-gemini-canvas-use-cases.md"
   },
   {
+    "title": "Instagram｜Obsidian 真的要給我錢：Daily Notes、Canvas 與 Claudian 的外部大腦工作流",
+    "date": "2026-08-04",
+    "source": "https://www.instagram.com/reel/Dbjyi5ovLt3/",
+    "author": "Instagram @oference2.0 / 莊 Oference",
+    "type": "article",
+    "topics": [
+      "Obsidian",
+      "Claudian",
+      "Claude Code",
+      "Codex",
+      "Daily Notes",
+      "Canvas",
+      "個人知識管理",
+      "外部大腦"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/Dbjyi5ovLt3/",
+      "https://obsidian.md/help/plugins/daily-notes",
+      "https://obsidian.md/help/plugins/canvas",
+      "https://obsidian.md/help/properties",
+      "https://github.com/YishenTu/claudian"
+    ],
+    "excerpt": "# Instagram｜Obsidian 真的要給我錢：Daily Notes、Canvas 與 Claudian 的外部大腦工作流 ![Instagram Reel 縮圖：Obsidian 工作流](../assets/source-images/2026-08-04-instagram-oference-obsid",
+    "slug": "2026-08-04-instagram-oference-obsidian-daily-notes-canvas-claudian",
+    "html": "articles/2026-08-04-instagram-oference-obsidian-daily-notes-canvas-claudian.html",
+    "markdown": "articles/2026-08-04-instagram-oference-obsidian-daily-notes-canvas-claudian.md"
+  },
+  {
     "title": "Threads｜Codex Sol 主代理＋Luna Worker 子代理：把 subagents 變成可檢查的派工流程",
     "date": "2026-08-04",
     "source": "https://www.threads.com/share/BBOZF76zAy/",
