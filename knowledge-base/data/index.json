@@ -1,5 +1,62 @@
 [
   {
+    "title": "GeminiAi｜Gemini + GPT 科研繪圖教學：文章內容轉圖的工作流與導流風險",
+    "date": "2026-08-05",
+    "source": "https://www.facebook.com/reel/1905773773669810",
+    "author": "GeminiAi",
+    "type": "article",
+    "topics": [
+      "Gemini",
+      "ChatGPT",
+      "科研繪圖",
+      "AI 圖像生成",
+      "Prompt Engineering",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1DuL3d3VAR/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1905773773669810",
+      "https://gemini.google/overview/image-generation/",
+      "https://support.google.com/gemini/answer/14286560"
+    ],
+    "excerpt": "# GeminiAi｜Gemini + GPT 科研繪圖教學：文章內容轉圖的工作流與導流風險 ![Facebook Reel 畫面：GeminiAi 講解 Gemini + GPT 科研繪圖組合](../assets/source-images/2026-08-05-facebook-geminiai-gemini-g",
+    "slug": "2026-08-05-facebook-geminiai-gemini-gpt-research-figures",
+    "html": "articles/2026-08-05-facebook-geminiai-gemini-gpt-research-figures.html",
+    "markdown": "articles/2026-08-05-facebook-geminiai-gemini-gpt-research-figures.md"
+  },
+  {
+    "title": "李安｜Gemini Omni 影片連續生成到 Google Vids：生成式影片功能示範",
+    "date": "2026-08-05",
+    "source": "https://www.facebook.com/reel/2507550556339945",
+    "author": "李安",
+    "type": "article",
+    "topics": [
+      "Gemini Omni",
+      "Google Vids",
+      "AI 影片生成",
+      "Google Workspace",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/194Dq5UfVD/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2507550556339945",
+      "https://workspace.google.com/products/vids/",
+      "https://workspace.google.com/blog/product-announcements/introducing-gemini-omni-flash-in-google-vids",
+      "https://workspaceupdates.googleblog.com/2026/07/cast-yourself-in-ai-video-clips-using-your-personal-avatar-with-Gemini-Omni-in-Vids.html",
+      "https://gemini.google/overview/video-generation/"
+    ],
+    "excerpt": "# 李安｜Gemini Omni 影片連續生成到 Google Vids：生成式影片功能示範 ![Facebook Reel 畫面：李安示範 Gemini Omni 影片連續生成到 Google Vids 的生成 AI 影片功能](../assets/source-images/2026-08-05-facebook-",
+    "slug": "2026-08-05-facebook-lee-an-gemini-omni-google-vids-workflow",
+    "html": "articles/2026-08-05-facebook-lee-an-gemini-omni-google-vids-workflow.html",
+    "markdown": "articles/2026-08-05-facebook-lee-an-gemini-omni-google-vids-workflow.md"
+  },
+  {
     "title": "Facebook｜Gemini Canvas 7 個實用場景：從文件編輯、Web App 到學習材料",
     "date": "2026-08-04",
     "source": "https://www.facebook.com/share/1BbpVS5iDY/?mibextid=wwXIfr",
