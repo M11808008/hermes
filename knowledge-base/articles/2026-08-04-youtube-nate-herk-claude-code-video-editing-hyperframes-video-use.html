@@ -1,0 +1,107 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>YouTube｜Claude Code 端到端影片剪輯：Video-use 負責修剪，HyperFrames / Remotion 負責動態圖像</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>YouTube｜Claude Code 端到端影片剪輯：Video-use 負責修剪，HyperFrames / Remotion 負責動態圖像</h1><figure><img src="../assets/source-images/2026-08-04-youtube-nate-herk-claude-code-video-editing-hyperframes-video-use-thumbnail.jpg" alt="YouTube 縮圖：Claude 與影片剪輯 timeline" loading="lazy" referrerpolicy="no-referrer"><figcaption>YouTube 縮圖：Claude 與影片剪輯 timeline</figcaption></figure>
+<h2>為什麼保存</h2>
+<p>這支影片值得歸檔，因為它不是單純展示「AI 幫你剪影片」的行銷口號，而是把影片剪輯拆成可由 coding agent 協調的管線：</p>
+<ul>
+<li>raw footage 進資料夾。</li>
+<li>Claude Code 作為 orchestrator 讀取專案與指令。</li>
+<li>video-use 負責修剪 filler words、dead space、false starts。</li>
+<li>HyperFrames 或 Remotion 負責 motion graphics / subtitles / overlays。</li>
+<li>透過 timeline preview 做自然語言迭代。</li>
+</ul>
+<p>這種模式接近「把剪輯流程變成 agentic software pipeline」，很適合觀察 AI 內容製作從手動工具走向程式化、自動化與可重複工作流的變化。</p>
+<h2>影片資訊</h2>
+<ul>
+<li>標題：Claude Video Editing Just Became Unrecognizable</li>
+<li>頻道：Nate Herk | AI Automation</li>
+<li>上傳日期：2026-04-22</li>
+<li>片長：約 28:13 / 字幕擷取 28:14</li>
+<li>觀看數：YouTube metadata 可見約 311,413</li>
+<li>讚數：YouTube metadata 可見約 9,536</li>
+<li>描述列出的工具：</li>
+</ul>
+<p>  - Hyperframes：`<a href="https://github.com/heygen-com/hyperframes`" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes`</a></p>
+<p>  - Video-use：`<a href="https://github.com/browser-use/video-use`" target="_blank" rel="noopener">https://github.com/browser-use/video-use`</a></p>
+<p>註：字幕 ASR 多次把 `Claude Code` 辨識成 `Cloud Code`；本文依影片標題、描述與官方脈絡校正為 `Claude Code`。</p>
+<h2>核心工作流</h2>
+<p>### 1. Claude Code 作 orchestrator</p>
+<p>影片開場宣稱：使用者只要丟入 raw file，Claude 就能修剪錯誤與空白、加入 motion graphics、動態元素與字幕。更精確地說，Claude Code 在這裡不是「內建影片剪輯器」，而是協調工具鏈的 agent：讀專案、執行命令、呼叫 video-use / HyperFrames / Remotion，產出可預覽與可迭代的影片檔。</p>
+<p>這與 Anthropic 官方對 Claude Code 的定位一致：Claude Code 是 agentic coding tool，可讀 codebase、編輯檔案、執行命令，並整合開發工具；它可在 terminal、IDE、desktop app 與 browser 使用。</p>
+<p>### 2. Video-use 修剪 talking-head footage</p>
+<p>影片描述與字幕都把 video-use 放在「trimming」角色：剪掉 filler words、dead space、false starts，輸出較短版本。影片中示例提到 50 秒 raw clip 被剪成約 27 秒；現場示範也從 raw recording 產生 `edited.mp4`。</p>
+<p>官方 README 查核也對得上：`browser-use/video-use` 描述為「Edit videos with coding agents」，功能包括：</p>
+<ul>
+<li>cuts out filler words、false starts、dead space</li>
+<li>auto color grades</li>
+<li>30ms audio fades</li>
+<li>burns subtitles</li>
+<li>generates animation overlays via HyperFrames、Remotion、Manim 或 PIL</li>
+<li>self-evaluates rendered output at cut boundaries</li>
+<li>persists session memory in `project.md`</li>
+</ul>
+<p>### 3. HyperFrames vs Remotion</p>
+<p>影片比較兩種 motion graphics 做法：</p>
+<ul>
+<li>Remotion：可由 agent 產生 React-based video composition，字幕中示例顯示它能同步元素、產出可接受的 motion graphics。</li>
+<li>HyperFrames：作者偏好其動畫質感，尤其是 liquid glass cards、timeline editor、快速調整 motion graphics 的 timing。</li>
+</ul>
+<p>官方查核：</p>
+<ul>
+<li>HyperFrames GitHub 描述是「Write HTML. Render video. Built for agents.」，README 說它把 HTML、CSS、media、seekable animations 轉成 deterministic MP4 videos，可由 Claude Code、Cursor、Gemini CLI、Codex 等 coding agents 使用 skills。</li>
+<li>Remotion 官網定位為「Make videos programmatically」，使用 React 建立真實 MP4 影片，也支援用 coding agents / API / bulk rendering 建立影片。</li>
+</ul>
+<p>### 4. Prompting motion graphics：先計畫再生成</p>
+<p>影片中段最有價值的不是「一鍵剪完」，而是作者如何提示：</p>
+<ul>
+<li>指定某句話出現時，在左半邊跳出 liquid glass style card。</li>
+<li>指定 karaoke style 字幕或標題效果。</li>
+<li>指定「mistakes will be cut」卡片與剪刀動畫。</li>
+<li>指定 video-use pipeline 概念要用某種圖像化方式呈現。</li>
+<li>先要求 agent 產生 plan / beats / timeline，再批准生成 motion graphics。</li>
+</ul>
+<p>作者也提醒：如果不先規劃，agent 可能走錯方向，浪費時間與 Claude session limit / token。</p>
+<p>### 5. Preview and iterate</p>
+<p>後段示範很現實：第一版不是完美成品。作者指出幾個問題：</p>
+<ul>
+<li>liquid glass 卡片遮到臉。</li>
+<li>全片出現不該存在的 grid overlay。</li>
+<li>結尾 face cam 裁切方向錯誤。</li>
+<li>部分畫面模糊或構圖需要再調。</li>
+</ul>
+<p>因此更像是「AI 幫你完成可編輯初稿 + 你用自然語言做導演回饋」，而不是完全免審稿的自動剪輯。</p>
+<h2>章節學習地圖</h2>
+<ul>
+<li>0:00 Intro：展示 raw clip 進 Claude 後，被修剪、加入 motion graphics、字幕與 timeline editor。</li>
+<li>1:07 How the Pipeline Works：說明舊流程是 Premiere 手動修剪、手動畫動畫、手動 render；新流程改由 Claude Code 串接工具。</li>
+<li>3:06 Claude Desktop Setup：使用 Claude desktop app 建 project；作者也比較 VS Code 與 desktop app 的差異。</li>
+<li>5:59 Trimming the Raw Video：用 video-use 做 trimming；可選 OpenAI Whisper、本地工具或 ElevenLabs API 做轉錄。</li>
+<li>7:21 HyperFrames vs Remotion：比較 Remotion 自動生成與 HyperFrames 動畫質感。</li>
+<li>9:45 Teaching Your Style：把既有影片與 motion philosophy / style docs 當成後續影片的風格參考。</li>
+<li>14:37 Prompting the Motion Graphics：用非常具體的自然語言描述 motion beats、卡片位置、字幕樣式與時間點。</li>
+<li>21:37 Preview and Iterate：檢查第一版，指出遮臉、grid overlay、裁切錯誤等視覺問題，再要求修正。</li>
+<li>25:06 Final Render：觀看修正版，確認動畫同步與效果，並提醒提示越具體越省時間與 tokens。</li>
+</ul>
+<h2>可以複用的操作原則</h2>
+<ul>
+<li>把剪輯拆成明確階段：transcribe → trim → motion plan → render → preview → revise。</li>
+<li>不要只說「幫我剪得好看」；要指定哪一句話、畫面哪一側、什麼風格、什麼轉場、是否遮臉。</li>
+<li>讓 agent 先回 motion graphics plan，再批准生成，避免浪費 token 與 render 時間。</li>
+<li>建立 style docs / motion philosophy，讓下一支影片能沿用前一支的視覺語言。</li>
+<li>把每次完成的影片、project notes、錯誤修正記錄保存，作為下一次 agent 的上下文。</li>
+</ul>
+<h2>風險與限制</h2>
+<ul>
+<li>影片標題雖寫 Claude video editing，但 Claude Code 本身不是影片剪輯 app；它是 orchestration layer，實際剪輯與 render 依賴 video-use、HyperFrames、Remotion、ffmpeg、轉錄 API 等工具。</li>
+<li>video-use README 提到 setup 可能需要 ElevenLabs API key；導入時不可把 API key 寫進公開 repo 或分享給不可信 agent。</li>
+<li>使用外部轉錄 / TTS / LLM provider 時，raw footage、聲音與字幕內容可能送到第三方；含學生、客戶、未公開產品或個資的影片要特別注意。</li>
+<li>第一版輸出可能遮臉、構圖錯誤、字幕時間不準或風格跑偏；仍需人工審片。</li>
+<li>Motion graphics 與素材可能涉及字型、音樂、圖像與授權；商用前要逐一查核。</li>
+<li>這類 pipeline 會消耗 token、API 費用與 render 時間；越長、越多動畫 beats 的影片成本越高。</li>
+</ul>
+<h2>來源</h2>
+<ul>
+<li>YouTube：`<a href="https://www.youtube.com/watch?v=Aw3BkmhYu4I`" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Aw3BkmhYu4I`</a></li>
+<li>HyperFrames GitHub：`<a href="https://github.com/heygen-com/hyperframes`" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes`</a></li>
+<li>video-use GitHub：`<a href="https://github.com/browser-use/video-use`" target="_blank" rel="noopener">https://github.com/browser-use/video-use`</a></li>
+<li>Claude Code 官方文件：`<a href="https://code.claude.com/docs/en/overview`" target="_blank" rel="noopener">https://code.claude.com/docs/en/overview`</a></li>
+<li>Remotion：`<a href="https://www.remotion.dev/`" target="_blank" rel="noopener">https://www.remotion.dev/`</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-04 · https://www.youtube.com/watch?v=Aw3BkmhYu4I · article</div><h3>標籤</h3><span class="tag">Claude Code</span><span class="tag">影片剪輯</span><span class="tag">HyperFrames</span><span class="tag">video-use</span><span class="tag">Remotion</span><span class="tag">AI 工作流</span><span class="tag">Agentic Coding</span><h3>原始連結</h3><p><a href="https://www.youtube.com/watch?v=Aw3BkmhYu4I" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Aw3BkmhYu4I</a></p><p><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">https://github.com/heygen-com/hyperframes</a></p><p><a href="https://github.com/browser-use/video-use" target="_blank" rel="noopener">https://github.com/browser-use/video-use</a></p><p><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">https://code.claude.com/docs/en/overview</a></p><p><a href="https://www.remotion.dev/" target="_blank" rel="noopener">https://www.remotion.dev/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

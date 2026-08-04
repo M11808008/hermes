@@ -121,6 +121,36 @@
     "markdown": "articles/2026-08-04-threads-eason-claude-design-youtube-to-ppt.md"
   },
   {
+    "title": "YouTube｜Claude Code 端到端影片剪輯：Video-use 負責修剪，HyperFrames / Remotion 負責動態圖像",
+    "date": "2026-08-04",
+    "source": "https://www.youtube.com/watch?v=Aw3BkmhYu4I",
+    "author": "Nate Herk | AI Automation",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "影片剪輯",
+      "HyperFrames",
+      "video-use",
+      "Remotion",
+      "AI 工作流",
+      "Agentic Coding"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=Aw3BkmhYu4I",
+      "https://github.com/heygen-com/hyperframes",
+      "https://github.com/browser-use/video-use",
+      "https://code.claude.com/docs/en/overview",
+      "https://www.remotion.dev/"
+    ],
+    "excerpt": "# YouTube｜Claude Code 端到端影片剪輯：Video-use 負責修剪，HyperFrames / Remotion 負責動態圖像 ![YouTube 縮圖：Claude 與影片剪輯 timeline](../assets/source-images/2026-08-04-youtube-nate-h",
+    "slug": "2026-08-04-youtube-nate-herk-claude-code-video-editing-hyperframes-video-use",
+    "html": "articles/2026-08-04-youtube-nate-herk-claude-code-video-editing-hyperframes-video-use.html",
+    "markdown": "articles/2026-08-04-youtube-nate-herk-claude-code-video-editing-hyperframes-video-use.md"
+  },
+  {
     "title": "陳柏威｜lecture-to-notes：把演講錄影變成可回溯的同步網頁筆記",
     "date": "2026-08-03",
     "source": "https://drpwchen.com/posts/lecture-to-notes/",
