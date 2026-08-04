@@ -88,6 +88,36 @@
     "markdown": "articles/2026-08-05-facebook-lee-an-gemini-omni-google-vids-workflow.md"
   },
   {
+    "title": "made_linlin｜RTX 5090 本機端 AI MV 全流程：用單張 Master 固定角色一致性",
+    "date": "2026-08-05",
+    "source": "https://note.com/made_linlin/n/n73680a56988f",
+    "author": "made_linlin｜ローカルAIでMVを作る",
+    "type": "article",
+    "topics": [
+      "local AI",
+      "AI video",
+      "AI MV",
+      "ComfyUI",
+      "RTX 5090",
+      "character consistency",
+      "lip sync",
+      "LoRA"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://note.com/made_linlin/n/n73680a56988f",
+      "https://www.youtube.com/watch?v=R0uR2UpWyK4",
+      "https://note.com/made_linlin/n/n9702c577133b",
+      "https://github.com/Comfy-Org/ComfyUI"
+    ],
+    "excerpt": "# made_linlin｜RTX 5090 本機端 AI MV 全流程：用單張 Master 固定角色一致性 ![note 首圖：RTX 5090 本機端製作角色不崩的 full chorus AI MV](../assets/source-images/2026-08-05-note-made-linlin-loc",
+    "slug": "2026-08-05-note-made-linlin-local-ai-mv-rtx5090-character-consistency",
+    "html": "articles/2026-08-05-note-made-linlin-local-ai-mv-rtx5090-character-consistency.html",
+    "markdown": "articles/2026-08-05-note-made-linlin-local-ai-mv-rtx5090-character-consistency.md"
+  },
+  {
     "title": "Facebook｜Gemini Canvas 7 個實用場景：從文件編輯、Web App 到學習材料",
     "date": "2026-08-04",
     "source": "https://www.facebook.com/share/1BbpVS5iDY/?mibextid=wwXIfr",
