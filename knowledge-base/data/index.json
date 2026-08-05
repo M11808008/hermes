@@ -1,5 +1,35 @@
 [
   {
+    "title": "Cloudflare｜賦予 AI 智慧體身分與錢包：agentic commerce 的基礎設施成形",
+    "date": "2026-08-05",
+    "source": "https://www.cloudflare.com/zh-tw/press/press-releases/2026/cloudflare-gives-ai-agents-an-identity-and-a-wallet/",
+    "author": "Cloudflare",
+    "type": "article",
+    "topics": [
+      "Cloudflare",
+      "AI Agent",
+      "Agentic Commerce",
+      "Cloudflare Wallets",
+      "cloudflare.pay",
+      "x402",
+      "Stablecoin",
+      "Monetization Gateway"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.cloudflare.com/zh-tw/press/press-releases/2026/cloudflare-gives-ai-agents-an-identity-and-a-wallet/",
+      "https://blog.cloudflare.com/wallets/",
+      "https://blog.cloudflare.com/monetization-gateway/",
+      "http://cloudflare.pay/"
+    ],
+    "excerpt": "# Cloudflare｜賦予 AI 智慧體身分與錢包：agentic commerce 的基礎設施成形 ![Cloudflare 官方新聞稿 OG 圖：Cloudflare Gives AI Agents an Identity and a Wallet](../assets/source-images/2026-0",
+    "slug": "2026-08-05-cloudflare-ai-agents-identity-wallet",
+    "html": "articles/2026-08-05-cloudflare-ai-agents-identity-wallet.html",
+    "markdown": "articles/2026-08-05-cloudflare-ai-agents-identity-wallet.md"
+  },
+  {
     "title": "emmanuelsamms｜Oh My Claude Code：Claude Code 多代理大腦與星數查核落差",
     "date": "2026-08-05",
     "source": "https://www.facebook.com/reel/3145634182292149",
