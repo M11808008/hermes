@@ -182,6 +182,37 @@
     "markdown": "articles/2026-08-05-note-made-linlin-local-ai-mv-rtx5090-character-consistency.md"
   },
   {
+    "title": "Threads｜AI FACE：替 ChatGPT 加上一張本機處理的虛擬臉",
+    "date": "2026-08-05",
+    "source": "https://www.threads.com/@0xspeter/post/DbpCO7tkwK1",
+    "author": "Threads@0xspeter",
+    "type": "article",
+    "topics": [
+      "AI FACE",
+      "ChatGPT",
+      "Chrome Extension",
+      "AI Agent",
+      "虛擬角色",
+      "嘴型同步",
+      "本機優先",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@0xspeter/post/DbpCO7tkwK1",
+      "https://github.com/page5888/AI-FACE",
+      "https://page5888.github.io/AI-FACE-Personas/",
+      "https://github.com/page5888/AI-FACE-Personas",
+      "./2026/06/2026-06-04-open-llm-vtuber-live2d-ai-companion.md"
+    ],
+    "excerpt": "# Threads｜AI FACE：替 ChatGPT 加上一張本機處理的虛擬臉 ![Threads 圖卡：AI FACE v0.1.0，讓 AI 終於有一張會說話的臉](../assets/source-images/2026-08-05-threads-0xspeter-ai-face-chatgpt-visual",
+    "slug": "2026-08-05-threads-0xspeter-ai-face-chatgpt-visual-presence",
+    "html": "articles/2026-08-05-threads-0xspeter-ai-face-chatgpt-visual-presence.html",
+    "markdown": "articles/2026-08-05-threads-0xspeter-ai-face-chatgpt-visual-presence.md"
+  },
+  {
     "title": "數據女巫 Threads｜MiniMax H3 分鏡遵從實測：480p 本機 19 分鐘 vs Seedance 2.0 雲端成本",
     "date": "2026-08-05",
     "source": "https://www.threads.com/@data_pythoness/post/DbnmhVQALPX",

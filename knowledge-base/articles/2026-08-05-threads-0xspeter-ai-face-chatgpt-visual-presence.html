@@ -1,0 +1,71 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜AI FACE：替 ChatGPT 加上一張本機處理的虛擬臉</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜AI FACE：替 ChatGPT 加上一張本機處理的虛擬臉</h1><figure><img src="../assets/source-images/2026-08-05-threads-0xspeter-ai-face-chatgpt-visual-presence-threads-card-02.jpg" alt="Threads 圖卡：AI FACE v0.1.0，讓 AI 終於有一張會說話的臉" loading="lazy" referrerpolicy="no-referrer"><figcaption>Threads 圖卡：AI FACE v0.1.0，讓 AI 終於有一張會說話的臉</figcaption></figure>
+<h2>為什麼保存</h2>
+<p>這則 Threads 值得保存，因為它捕捉到 AI 介面的一個小但重要方向：不是再做一個聊天機器人，而是替既有 AI 服務加上一層「可見、可移動、有表情、有嘴型」的角色介面。</p>
+<p>AI FACE 的定位介於 Chrome extension、ChatGPT overlay、桌寵與輕量 VTuber face rig 之間。它不像完整的 Open-LLM-VTuber 那樣把 LLM、TTS、視覺與 Live2D 全部串成獨立 AI 夥伴，而是把 ChatGPT 原本的文字與語音保留，把「臉、眼神、表情、嘴型與角色存在感」補在頁面旁邊。</p>
+<h2>Threads 貼文可見內容</h2>
+<p>來源是 Threads 帳號 `0xspeter`，公開頁可見互動數約 6,543 次瀏覽、79 個讚、6 則回覆、8 次轉發。</p>
+<p>貼文主軸是：</p>
+<p>&gt; AI FACE 可以想成「替 ChatGPT 裝上一張臉」，讓原本只有文字和聲音的 AI，在畫面旁邊出現一個會眨眼、轉動視線、改變表情，還能跟著語音做嘴型反應的角色。</p>
+<p>作者補充幾個重點：</p>
+<ul>
+<li>它想解決的是「AI 聲音從空氣裡飄出來、少了一個可對話對象」的空洞感。</li>
+<li>角色會放在 ChatGPT 頁面上，使用者可移動、縮放、鎖定位置。</li>
+<li>可切換內建角色，或匯入自己的圖片與 24 格角色素材。</li>
+<li>角色圖片與語音分析留在本機。</li>
+<li>不需要 OpenAI API Key，也不讀取聊天內容。</li>
+<li>只有使用者主動開啟語音同步後，才分析目前 ChatGPT 分頁的聲音。</li>
+<li>目前是 0.1.0 預覽階段，尚未上架 Chrome Web Store；嘴型同步不是精準逐字唇形，任意圖片也不能自動變完整 Face Rig。</li>
+</ul>
+<h2>GitHub 查核</h2>
+<p>官方 repo：`page5888/AI-FACE`</p>
+<p>授權：Mozilla Public License 2.0（MPL-2.0）</p>
+<p>版本：README 標示 `0.1.0` internal preview</p>
+<p>狀態：尚未上架 Chrome Web Store，需手動安裝預覽版</p>
+<p>查核時 GitHub metadata：3 stars、0 forks、最新 pushed_at 為 2026-08-05T01:22:50Z。</p>
+<p>README.zh-TW 將 AI FACE 定義為：</p>
+<p>&gt; AI FACE 是獨立開發的 Chrome 擴充功能，會在支援的 ChatGPT 頁面旁加入可移動的臉或角色。ChatGPT 繼續負責智慧、內容與聲音；AI FACE 負責臉、眼神、視覺口型、角色顯示與 Overlay 操作。</p>
+<p>官方 README 明確列出隱私與邊界：</p>
+<p>| 項目 | README 查核結果 |</p>
+<p>|---|---|</p>
+<p>| OpenAI API Key | 不需要。 |</p>
+<p>| 聊天內容 | 不讀取對話文字。 |</p>
+<p>| 角色圖片 | 不上傳到 AI FACE 後端；自訂角色保存在本機。 |</p>
+<p>| 後端 / analytics / 廣告 | README 寫明沒有會員、後端、Analytics、廣告、雲端同步或開發者付費模型推論。 |</p>
+<p>| 語音同步 | 使用者主動啟動後，擷取目前 ChatGPT 分頁聲音，建立本機分析支線產生音量、頻段、起音與 viseme 權重；不錄音、不保存、不轉錄、不上傳。 |</p>
+<figure><img src="../assets/source-images/2026-08-05-threads-0xspeter-ai-face-chatgpt-visual-presence-github-og.png" alt="GitHub Open Graph 圖：page5888/AI-FACE repository" loading="lazy" referrerpolicy="no-referrer"><figcaption>GitHub Open Graph 圖：page5888/AI-FACE repository</figcaption></figure>
+<h2>現階段可做什麼</h2>
+<p>README 列出的目前功能包括：</p>
+<ul>
+<li>在 `<a href="https://chatgpt.com/*`" target="_blank" rel="noopener">https://chatgpt.com/*`</a> 自動顯示 AI FACE Overlay。</li>
+<li>第一次使用顯示 AI FACE Core，不必先生成圖片。</li>
+<li>內建六個選項：AI FACE Core、AI FACE Aura、Miu Voice Face、Haruna、Miu、Nova。</li>
+<li>本機保存一個自訂立繪或 Pixel Pet Sprite Sheet。</li>
+<li>支援移動、縮放、鎖定、重設、顯示／隱藏與本機版面保存。</li>
+<li>使用 Chrome Document Picture-in-Picture 做瀏覽器管理的置頂模式。</li>
+<li>使用者主動啟動的 ChatGPT 分頁語音反應，保留正常聲音輸出。</li>
+<li>本機 MFCC 輔助 A/E/I/O/U/S 權重，加上靜音與子音近似 fallback。</li>
+</ul>
+<h2>與 Open-LLM-VTuber 的差異</h2>
+<p>知識庫已有一篇 0xspeter 分享的 Open-LLM-VTuber 條目。兩者都和「AI 虛擬角色」有關，但層級不同：</p>
+<p>| 專案 | 更像什麼 | 適合情境 |</p>
+<p>|---|---|---|</p>
+<p>| Open-LLM-VTuber | 完整 AI 虛擬夥伴框架，整合 LLM、TTS、ASR、Live2D、視覺感知等 | 想打造獨立 AI 角色、直播互動、桌寵或完整語音助理。 |</p>
+<p>| AI FACE | ChatGPT 頁面上的本機視覺角色 overlay | 已經用 ChatGPT 語音，只想補一張可動臉與角色存在感。 |</p>
+<p>所以這則不是重複收錄，而是同一個趨勢的另一個端點：完整 AI companion 與輕量 browser overlay 可能會並行發展。</p>
+<h2>使用與安全提醒</h2>
+<ul>
+<li>目前仍是 0.1.0 internal preview，未經 Chrome Web Store 正式審核；手動安裝 extension 前應自行檢查 source code、permissions 與 release 來源。</li>
+<li>它主打不讀取聊天內容，但 extension 仍會在 `chatgpt.com` 掛載 overlay；企業或學校環境應先確認 extension 安裝政策。</li>
+<li>語音同步是近似嘴型，不是精準音素時間軸；不要把它當成專業配音 lip sync 工具。</li>
+<li>任意圖片不能自動變成完整 Face Rig；若要高品質表情與嘴型，仍需要合規授權的角色素材或 24 格/多格 sprite sheet。</li>
+<li>自訂角色圖片、VTuber 素材與二創角色需確認著作權、肖像權與商用範圍。</li>
+<li>Chrome Document Picture-in-Picture 置頂仍是瀏覽器管理的小窗，不是無邊框、透明、可穿透點擊的原生桌寵。</li>
+</ul>
+<h2>延伸閱讀</h2>
+<ul>
+<li>Threads 原文：<a href="https://www.threads.com/@0xspeter/post/DbpCO7tkwK1" target="_blank" rel="noopener">https://www.threads.com/@0xspeter/post/DbpCO7tkwK1</a></li>
+<li>GitHub｜page5888/AI-FACE：<a href="https://github.com/page5888/AI-FACE" target="_blank" rel="noopener">https://github.com/page5888/AI-FACE</a></li>
+<li>AI FACE 公開網站：<a href="https://page5888.github.io/AI-FACE-Personas/" target="_blank" rel="noopener">https://page5888.github.io/AI-FACE-Personas/</a></li>
+<li>社群角色庫：<a href="https://github.com/page5888/AI-FACE-Personas" target="_blank" rel="noopener">https://github.com/page5888/AI-FACE-Personas</a></li>
+<li>相關舊文：Open-LLM-VTuber｜會說話、看畫面、做表情的開源 Live2D AI 虛擬夥伴</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-05 · https://www.threads.com/@0xspeter/post/DbpCO7tkwK1 · article</div><h3>標籤</h3><span class="tag">AI FACE</span><span class="tag">ChatGPT</span><span class="tag">Chrome Extension</span><span class="tag">AI Agent</span><span class="tag">虛擬角色</span><span class="tag">嘴型同步</span><span class="tag">本機優先</span><span class="tag">GitHub</span><h3>原始連結</h3><p><a href="https://www.threads.com/@0xspeter/post/DbpCO7tkwK1" target="_blank" rel="noopener">https://www.threads.com/@0xspeter/post/DbpCO7tkwK1</a></p><p><a href="https://github.com/page5888/AI-FACE" target="_blank" rel="noopener">https://github.com/page5888/AI-FACE</a></p><p><a href="https://page5888.github.io/AI-FACE-Personas/" target="_blank" rel="noopener">https://page5888.github.io/AI-FACE-Personas/</a></p><p><a href="https://github.com/page5888/AI-FACE-Personas" target="_blank" rel="noopener">https://github.com/page5888/AI-FACE-Personas</a></p><p><a href="./2026/06/2026-06-04-open-llm-vtuber-live2d-ai-companion.md" target="_blank" rel="noopener">./2026/06/2026-06-04-open-llm-vtuber-live2d-ai-companion.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
