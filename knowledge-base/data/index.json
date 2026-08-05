@@ -59,6 +59,40 @@
     "markdown": "articles/2026-08-05-facebook-geminiai-gemini-gpt-research-figures.md"
   },
   {
+    "title": "Facebook｜Gemini Notebook 默默升級？從來源問答走向任務執行與檔案交付",
+    "date": "2026-08-05",
+    "source": "https://www.facebook.com/share/p/1BnHohQfNi/?mibextid=wwXIfr",
+    "author": "數位敘事力期刊（Journal of Digital Narrative）",
+    "type": "article",
+    "topics": [
+      "Gemini Notebook",
+      "NotebookLM",
+      "Google Gemini",
+      "AI Agent",
+      "教育科技",
+      "資料分析",
+      "檔案交付",
+      "Google Antigravity"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1BnHohQfNi/?mibextid=wwXIfr",
+      "https://www.facebook.com/story.php?story_fbid=122212573076587238&id=61567617167509",
+      "https://support.google.com/gemininotebook/answer/16164461?hl=en",
+      "https://support.google.com/gemininotebook/answer/16215270?hl=en",
+      "https://support.google.com/gemininotebook/answer/16958963?hl=en",
+      "https://support.google.com/gemininotebook/answer/16758265?hl=en",
+      "https://support.google.com/gemininotebook/answer/16757456?hl=en",
+      "https://support.google.com/gemininotebook/answer/17004255?hl=en"
+    ],
+    "excerpt": "# Facebook｜Gemini Notebook 默默升級？從來源問答走向任務執行與檔案交付 ![Facebook 圖卡：Gemini Notebook 正在變成研究型 Agent](../assets/source-images/2026-08-05-facebook-journal-digital-narrat",
+    "slug": "2026-08-05-facebook-journal-digital-narrative-gemini-notebook-agent-delivery",
+    "html": "articles/2026-08-05-facebook-journal-digital-narrative-gemini-notebook-agent-delivery.html",
+    "markdown": "articles/2026-08-05-facebook-journal-digital-narrative-gemini-notebook-agent-delivery.md"
+  },
+  {
     "title": "李安｜Gemini Omni 影片連續生成到 Google Vids：生成式影片功能示範",
     "date": "2026-08-05",
     "source": "https://www.facebook.com/reel/2507550556339945",
