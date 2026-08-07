@@ -1,5 +1,64 @@
 [
   {
+    "title": "Facebook Reel｜一人公司研究所：Hermes + Qwen SFT「0.8 元微調大模型」短影音案例",
+    "date": "2026-08-07",
+    "source": "https://www.facebook.com/share/v/1DeW49s1ix/?mibextid=wwXIfr",
+    "author": "一人公司研究所",
+    "type": "article",
+    "topics": [
+      "Facebook Reel",
+      "SFT",
+      "Qwen",
+      "Hermes Agent",
+      "大模型微調",
+      "開源模型"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1368120382120875",
+      "https://www.facebook.com/share/v/1DeW49s1ix/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1368120382120875",
+      "https://hermes-agent.nousresearch.com/docs",
+      "https://qwen.readthedocs.io/en/latest/training/llama_factory.html",
+      "https://qwen.readthedocs.io/en/latest/training/ms_swift.html",
+      "https://huggingface.co/docs/trl/en/sft_trainer",
+      "https://github.com/modelscope/ms-swift"
+    ],
+    "excerpt": "# Facebook Reel｜一人公司研究所：Hermes + Qwen SFT「0.8 元微調大模型」短影音案例 ![一人公司研究所 Facebook Reel：Hermes + Qwen SFT 微調案例摘要](../assets/source-images/2026-08-07-facebook-reel-on",
+    "slug": "2026-08-07-facebook-reel-one-person-company-hermes-qwen-sft-finetuning",
+    "html": "articles/2026-08-07-facebook-reel-one-person-company-hermes-qwen-sft-finetuning.html",
+    "markdown": "articles/2026-08-07-facebook-reel-one-person-company-hermes-qwen-sft-finetuning.md"
+  },
+  {
+    "title": "Threads｜VISUAL SYNTAX：AI UGC 開箱分鏡的角色與產品鎖定系統",
+    "date": "2026-08-07",
+    "source": "https://www.threads.com/share/E1gnn1keV/",
+    "author": "VISUAL SYNTAX / @visual_syntax.ai",
+    "type": "article",
+    "topics": [
+      "Threads",
+      "AI UGC",
+      "AI Video",
+      "商品開箱",
+      "分鏡腳本",
+      "Prompt Engineering"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@visual_syntax.ai/post/DbrdDqvmvqO",
+      "https://www.threads.com/share/E1gnn1keV/",
+      "https://www.threads.com/@visual_syntax.ai/post/DbrdDqvmvqO"
+    ],
+    "excerpt": "# Threads｜VISUAL SYNTAX：AI UGC 開箱分鏡的角色與產品鎖定系統 ![VISUAL SYNTAX AI UGC 開箱分鏡鎖定系統摘要圖](../assets/source-images/2026-08-07-threads-visual-syntax-ai-ugc-unboxing-shot-",
+    "slug": "2026-08-07-threads-visual-syntax-ai-ugc-unboxing-shot-lock-system",
+    "html": "articles/2026-08-07-threads-visual-syntax-ai-ugc-unboxing-shot-lock-system.html",
+    "markdown": "articles/2026-08-07-threads-visual-syntax-ai-ugc-unboxing-shot-lock-system.md"
+  },
+  {
     "title": "Facebook Reel｜KK老師：AI 流量 × 直播帶貨說明會的「一支手機抵整個團隊」行銷案例",
     "date": "2026-08-06",
     "source": "https://www.facebook.com/share/r/1Bjca4hQCs/?mibextid=wwXIfr",
