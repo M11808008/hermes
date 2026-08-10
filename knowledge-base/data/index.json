@@ -142,7 +142,7 @@
     "markdown": "articles/2026-08-06-line-taipei-yanji-halal-chinese-beef-noodles.md"
   },
   {
-    "title": "Threads｜crawl4ai：把網頁轉成 LLM-ready Markdown 的開源爬蟲",
+    "title": "社群雙來源｜crawl4ai：把網頁轉成 LLM-ready Markdown 的開源爬蟲",
     "date": "2026-08-06",
     "source": "https://www.threads.com/share/BBYmM_33AI/",
     "author": "KiKi Tataysi / @kikitataysi",
@@ -154,7 +154,9 @@
       "RAG",
       "AI Agent",
       "GitHub",
-      "Threads"
+      "Threads",
+      "Facebook",
+      "OpenClaw"
     ],
     "use": [],
     "importance": "medium",
@@ -165,9 +167,11 @@
       "https://www.threads.com/@kikitataysi/post/DbrorXMAeh7",
       "https://github.com/unclecode/crawl4ai",
       "https://crawl4ai.com",
+      "https://www.facebook.com/share/p/19WYUbajKN/",
+      "https://www.facebook.com/groups/1381920156575940/posts/1533171218117499/",
       "https://github.com/unclecode/crawl4ai/releases/tag/v0.9.2"
     ],
-    "excerpt": "# Threads｜crawl4ai：把網頁轉成 LLM-ready Markdown 的開源爬蟲 ![crawl4ai Threads 貼文、GitHub 卡片與工具摘要拼貼](../assets/source-images/2026-08-06-threads-kikitataysi-crawl4ai-llm-we",
+    "excerpt": "# 社群雙來源｜crawl4ai：把網頁轉成 LLM-ready Markdown 的開源爬蟲 ![crawl4ai Threads 貼文、GitHub 卡片與工具摘要拼貼](../assets/source-images/2026-08-06-threads-kikitataysi-crawl4ai-llm-web-",
     "slug": "2026-08-06-threads-kikitataysi-crawl4ai-llm-web-crawler-markdown",
     "html": "articles/2026-08-06-threads-kikitataysi-crawl4ai-llm-web-crawler-markdown.html",
     "markdown": "articles/2026-08-06-threads-kikitataysi-crawl4ai-llm-web-crawler-markdown.md"
