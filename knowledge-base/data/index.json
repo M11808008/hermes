@@ -1,5 +1,39 @@
 [
   {
+    "title": "Web Article｜n8n 10 個真實應用案例：從 LINE AI 客服到會議助理的自動化工作流範本",
+    "date": "2026-08-11",
+    "source": "https://arthlai.com/en/blog/n8n-10-cases",
+    "author": "Arth Lai 賴柏衡 / Admin",
+    "type": "article",
+    "topics": [
+      "n8n",
+      "Workflow Automation",
+      "AI Agent",
+      "LINE",
+      "Claude",
+      "Zeabur",
+      "Notion",
+      "Google Sheets",
+      "SEO",
+      "電商自動化",
+      "會議助理"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://arthlai.com/blog/n8n-10-cases",
+      "https://arthlai.com/en/blog/n8n-10-cases",
+      "https://arthlai.com/blog/n8n-10-cases",
+      "https://docs.n8n.io/",
+      "https://docs.n8n.io/hosting/"
+    ],
+    "excerpt": "# Web Article｜n8n 10 個真實應用案例：從 LINE AI 客服到會議助理的自動化工作流範本 ![n8n 自動化應用案例封面](../assets/source-images/2026-08-11-arthlai-n8n-automation-ten-use-cases-workflow-templa",
+    "slug": "2026-08-11-arthlai-n8n-automation-ten-use-cases-workflow-templates",
+    "html": "articles/2026-08-11-arthlai-n8n-automation-ten-use-cases-workflow-templates.html",
+    "markdown": "articles/2026-08-11-arthlai-n8n-automation-ten-use-cases-workflow-templates.md"
+  },
+  {
     "title": "Facebook｜Gemini Notebook 輸出 Word docx：用 AI 成品反推文件基本功",
     "date": "2026-08-11",
     "source": "https://www.facebook.com/share/p/19B9DX4JFz/",
