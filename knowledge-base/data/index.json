@@ -1,5 +1,40 @@
 [
   {
+    "title": "xiaoma-durex-copywriter｜把杜蕾斯黃金期「雙層語義＋留白」拆成 Claude Code 文案海報 Skill",
+    "date": "2026-08-11",
+    "source": "https://github.com/crawfordxx/xiaoma-durex-copywriter",
+    "author": "crawfordxx",
+    "type": "github-repo",
+    "topics": [
+      "Claude Skill",
+      "Claude Code",
+      "Copywriting",
+      "Advertising",
+      "Poster Design",
+      "Chinese Copywriting",
+      "Brand Strategy",
+      "AI Design Workflow",
+      "Creative Automation",
+      "Typography"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://github.com/crawfordxx/xiaoma-durex-copywriter",
+      "https://github.com/crawfordxx/xiaoma-durex-copywriter",
+      "https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/README.md",
+      "https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/SKILL.md",
+      "https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/copy-formulas.md",
+      "https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/visual-system.md",
+      "https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/typography.md"
+    ],
+    "excerpt": "這個 repo 的價值不在模仿成人品牌口吻，而是把「表層語境 + 里層品牌意義 + 留白讓讀者自己跳過去」整理成可操作流程：先產出多個不同公式的創意方向，再用短文案、靜物道具、品牌配色、精確字體排版與安全邊界，生成適合社群傳播的中文文案與海報。",
+    "slug": "2026-08-11-github-xiaoma-durex-copywriter-claude-skill",
+    "html": "articles/2026-08-11-github-xiaoma-durex-copywriter-claude-skill.html",
+    "markdown": "articles/2026/08/2026-08-11-github-xiaoma-durex-copywriter-claude-skill.md"
+  },
+  {
     "title": "Web Article｜n8n 10 個真實應用案例：從 LINE AI 客服到會議助理的自動化工作流範本",
     "date": "2026-08-11",
     "source": "https://arthlai.com/en/blog/n8n-10-cases",

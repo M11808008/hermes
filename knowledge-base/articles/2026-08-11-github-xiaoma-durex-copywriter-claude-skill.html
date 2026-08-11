@@ -1,0 +1,87 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>xiaoma-durex-copywriter｜把杜蕾斯黃金期「雙層語義＋留白」拆成 Claude Code 文案海報 Skill</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>xiaoma-durex-copywriter｜把杜蕾斯黃金期「雙層語義＋留白」拆成 Claude Code 文案海報 Skill</h1><p>來源是 GitHub 專案 `crawfordxx/xiaoma-durex-copywriter`。Repo 描述為「杜蕾斯式文案與海報 Skill for Claude Code」，把杜蕾斯 2011–2017、環時互動操盤時期的文案/海報方法論拆成 Claude Code / Claude.ai 可使用的 Skill。</p>
+<figure><img src="https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/examples/output/lays_onechip_3x4.jpg" alt="xiaoma-durex-copywriter 樂事薯片海報範例：就吃一片" loading="lazy" referrerpolicy="no-referrer"><figcaption>xiaoma-durex-copywriter 樂事薯片海報範例：就吃一片</figcaption></figure>
+<h1>一句話摘要</h1>
+<p>這個 repo 的價值不在模仿成人品牌口吻，而是把「表層語境 + 里層品牌意義 + 留白讓讀者自己跳過去」整理成可操作流程：先產出多個不同公式的創意方向，再用短文案、靜物道具、品牌配色、精確字體排版與安全邊界，生成適合社群傳播的中文文案與海報。</p>
+<h1>Repo 狀態</h1>
+<ul>
+<li>GitHub：`crawfordxx/xiaoma-durex-copywriter`</li>
+<li>語言：Python</li>
+<li>Stars / Forks：2026-08-11 擷取時約 383 stars、9 forks</li>
+<li>Topics：advertising、chinese-copywriting、claude-code、claude-skill、copywriting、poster-design</li>
+<li>License：GitHub API 顯示 `Other / NOASSERTION`；README 補充：`assets/` 內程式碼以 MIT 協議提供，案例與杜蕾斯參考圖有各自版權聲明。</li>
+</ul>
+<h1>方法核心：雙層語義</h1>
+<p>README 強調，一句合格的「杜蕾斯式」文案要同時成立於兩個語境：</p>
+<p>| 層 | 作用 |</p>
+<p>|---|---|</p>
+<p>| 表層 | 熱點、節日、日常場景本身，字面讀得通 |</p>
+<p>| 里層 | 品牌、產品或要推廣的價值 |</p>
+<p>關鍵是作者只寫表層，里層讓讀者自己跳過去；讀者在「我懂了」那一瞬間產生傳播動力。這對 AI 課程、知識付費、職場、健身、SaaS、電商等非成人品類都可遷移，但里層應指向產品價值，而不是硬套低級雙關。</p>
+<h1>8 個文案公式</h1>
+<p>Repo 將文案拆成 8 種公式：</p>
+<ul>
+<li>諧音置換</li>
+<li>數字雙關</li>
+<li>詞義劫持</li>
+<li>場景移植</li>
+<li>拆字重組</li>
+<li>對仗 / 宜忌</li>
+<li>詩歌體</li>
+<li>反向克制</li>
+</ul>
+<p>其中「反向克制」最值得教學使用：在大家預期品牌會耍花活時，反而用正經、簡短、有態度的句子建立人格厚度。這對個人品牌與課程招生很有參考價值，因為它提醒創作者：高級感常來自不說滿、不解釋、不自嗨。</p>
+<h1>Skill 工作流設計</h1>
+<p>這個 Skill 的互動設計也值得保存：</p>
+<ul>
+<li>補槽位：只有「賣什麼」完全無法推斷時才反問，其餘缺失直接明示假設。</li>
+<li>先給 3–5 個方案：要求不同公式、不同主體類型、不同配色，不允許只是同一想法的變體。</li>
+<li>唯一一次提問：把選方案與選比例合併成一輪。</li>
+<li>出短文案：預設 ≤ 12 字；長文案只有使用者明確要求才出。</li>
+<li>出圖：AI 只產靜物/背景圖層，文字由 Canvas 或 HTML/CSS 程式排版。</li>
+</ul>
+<p>這點很適合欒帥課程示範：好的 Skill 不只是 prompt，而是把使用者耐心、決策節點、輸出格式與可驗證規則都寫進流程。</p>
+<h1>視覺系統重點</h1>
+<p>Repo 從 260 張原始海報拆解出視覺規則，包含：</p>
+<ul>
+<li>主體類型：產品主體、道具主體、純字體主體；無實體產品時，道具主體最常用。</li>
+<li>留白率 ≥ 50%；擠就會廉價。</li>
+<li>文案放在上 1/3 或左上，Logo 固定底部居中且需落在空白處。</li>
+<li>關鍵詞放大約 1.65–1.75 倍並染品牌色。</li>
+<li>借勢時字體跟借勢對象走，而不是只跟品牌字體走。</li>
+<li>中文商用字體有授權風險，README 特別提醒「電腦裡有」不等於可商用，建議使用思源黑體、思源宋體、得意黑等可商用替代。</li>
+</ul>
+<h1>出圖與排版管線</h1>
+<p>Repo 明確不建議讓 AI 生圖模型直接把中文字寫進圖片，原因是中文仍容易錯字、缺筆畫、字形崩壞。它採用分層做法：</p>
+<ul>
+<li>AI 圖像模型只產生靜物、道具、背景質感，prompt 明確要求 no text。</li>
+<li>Canvas、HTML/CSS + Playwright 或 Satori + resvg 負責精確排版。</li>
+<li>文字修改只改程式，不必重生圖。</li>
+</ul>
+<p>這是很好的「AI 視覺工作流」案例：生成式模型負責不可控但有質感的圖層，程式負責必須精準的文字、比例與版面。</p>
+<h1>安全邊界</h1>
+<p>README 寫入五條硬邊界，值得特別保留：</p>
+<ul>
+<li>不碰災難、事故、死亡、疾病，除非是明確公益立場。</li>
+<li>不物化女性。</li>
+<li>不對具體真人做性暗示，尤其不涉及未成年。</li>
+<li>不蹭悲情熱點。</li>
+<li>遷移到非成人品類時，雙關里層應指向產品價值，而不是葷梗。</li>
+</ul>
+<p>這些邊界讓它不是單純「擦邊文案工具」，而更像一套有創意倫理與品牌風險控制的文案 Skill。</p>
+<h1>欒帥可用場景</h1>
+<ul>
+<li>AI 課程：示範「Claude Skill = 方法論 + 工作流 + 評測 + 產線」，不只是 prompt 集合。</li>
+<li>個人品牌：把專業內容包成更容易傳播的短文案與封面概念。</li>
+<li>教學海報：把課程主題轉成雙層語義句，讓學生感到「我懂了」。</li>
+<li>企業內訓：討論 AI 生成創意時的安全邊界、授權字體、素材來源與品牌風險。</li>
+<li>自動化設計管線：用 AI 出背景/靜物、程式排文字，避免中文生圖錯字。</li>
+</ul>
+<h1>Caveats</h1>
+<ul>
+<li>Repo 含杜蕾斯參考案例與成人品牌語境；在教學或企業場合使用時，應轉成「雙層語義方法」而非直接複製性暗示語氣。</li>
+<li>`examples/durex-reference/` 內參考海報版權歸杜蕾斯 / 利潔時集團等權利人；README 說明僅作低解析學習評論用途。</li>
+<li>中文商用字體、品牌 packshot、Logo、聯名對象視覺語言都需注意授權。</li>
+<li>GitHub API 顯示 license 為 Other / NOASSERTION；真正商用前需逐項確認程式碼、素材、字體與案例授權。</li>
+</ul>
+<h1>Why it matters</h1>
+<p>這個專案代表「Agent Skill 化」正在從工程工具擴散到創意產業：不是讓 AI 隨機想標語，而是把一套成熟創意方法拆成公式、流程、邊界、評測與產出管線。對 AI 學習雷達來說，它是「內容創意 × Claude Skill × 程式化設計」的高價值案例。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-11 · https://github.com/crawfordxx/xiaoma-durex-copywriter · github-repo</div><h3>標籤</h3><span class="tag">Claude Skill</span><span class="tag">Claude Code</span><span class="tag">Copywriting</span><span class="tag">Advertising</span><span class="tag">Poster Design</span><span class="tag">Chinese Copywriting</span><span class="tag">Brand Strategy</span><span class="tag">AI Design Workflow</span><span class="tag">Creative Automation</span><span class="tag">Typography</span><h3>原始連結</h3><p><a href="https://github.com/crawfordxx/xiaoma-durex-copywriter" target="_blank" rel="noopener">https://github.com/crawfordxx/xiaoma-durex-copywriter</a></p><p><a href="https://github.com/crawfordxx/xiaoma-durex-copywriter" target="_blank" rel="noopener">https://github.com/crawfordxx/xiaoma-durex-copywriter</a></p><p><a href="https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/SKILL.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/SKILL.md</a></p><p><a href="https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/copy-formulas.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/copy-formulas.md</a></p><p><a href="https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/visual-system.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/visual-system.md</a></p><p><a href="https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/typography.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/crawfordxx/xiaoma-durex-copywriter/main/references/typography.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
