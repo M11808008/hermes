@@ -1,5 +1,35 @@
 [
   {
+    "title": "YouTube｜AI追光：6–8G 顯存本地跑 AI 歌曲、語音生成與字幕翻譯",
+    "date": "2026-08-12",
+    "source": "https://youtu.be/jwi-tarfxs0",
+    "author": "AI追光",
+    "type": "video-archive",
+    "topics": [
+      "YouTube",
+      "AI追光",
+      "AI Video",
+      "AI Music",
+      "Text to Speech",
+      "Subtitle Translation",
+      "Local AI",
+      "Content Creation"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=jwi-tarfxs0",
+      "https://youtu.be/jwi-tarfxs0",
+      "https://www.youtube.com/watch?v=jwi-tarfxs0",
+      "https://aizhuiguang.tech/"
+    ],
+    "excerpt": "這支影片展示 AI追光網站整合包的新功能：下載本地「追光引擎」後，在 6–8G 顯存等級的電腦上切換語音模型與歌曲模型，完成文字轉語音、翻譯配音、字幕識別/翻譯、字幕轉英文語音，以及短秒數本地歌曲生成。它適合觀察「低門檻 AI 影音創作套件」如何把 TTS、字幕、翻譯、音樂與剪輯台包成一個創作者工作流。",
+    "slug": "2026-08-12-youtube-ai-zhuiguang-local-ai-song-tts-subtitle-translation",
+    "html": "articles/2026-08-12-youtube-ai-zhuiguang-local-ai-song-tts-subtitle-translation.html",
+    "markdown": "articles/2026/08/2026-08-12-youtube-ai-zhuiguang-local-ai-song-tts-subtitle-translation.md"
+  },
+  {
     "title": "Will 保哥｜Codex app 設定 Luna Max：用較低成本接近 Sol Medium 的 coding agent  workflow",
     "date": "2026-08-11",
     "source": "Facebook",
@@ -4429,6 +4459,8 @@
     "status": "archived",
     "links": [
       "https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/",
+      "https://www.facebook.com/share/r/1CwiRXsCvM/?mibextid=wwXIfr",
+      "https://www.facebook.com/share/r/14hTAwqEb8o/?mibextid=wwXIfr",
       "https://www.facebook.com/reel/1025726529844026",
       "https://www.facebook.com/HeyGen.FB/videos/heygen-ai-video-generator/1025726529844026/",
       "https://developers.heygen.com/",
