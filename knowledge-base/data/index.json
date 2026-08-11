@@ -63,6 +63,42 @@
     "markdown": "articles/2026-08-11-facebook-huangchen-gemini-notebook-word-docx-learning-sequence.md"
   },
   {
+    "title": "GitHub｜Anthropic financial-services：金融服務專用 Claude agents、skills、MCP connectors 與 Managed Agent cookbooks",
+    "date": "2026-08-11",
+    "source": "https://github.com/anthropics/financial-services",
+    "author": "Anthropic",
+    "type": "article",
+    "topics": [
+      "Anthropic",
+      "Claude",
+      "Claude Cowork",
+      "Claude Code",
+      "Managed Agents",
+      "Agent Skills",
+      "MCP",
+      "Financial Services",
+      "Investment Banking",
+      "Equity Research",
+      "Private Equity",
+      "Wealth Management",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/anthropics/financial-services",
+      "https://github.com/anthropics/financial-services",
+      "https://docs.claude.com/en/api/managed-agents",
+      "https://claude.com/product/cowork",
+      "../articles/2026/07/2026-07-26-facebook-rhoda-anthropic-financial-services-skills.html"
+    ],
+    "excerpt": "# GitHub｜Anthropic financial-services：金融服務專用 Claude agents、skills、MCP connectors 與 Managed Agent cookbooks ![anthropics/financial-services GitHub OpenGraph 預覽圖]",
+    "slug": "2026-08-11-github-anthropics-financial-services-claude-agents-skills-managed-agents",
+    "html": "articles/2026-08-11-github-anthropics-financial-services-claude-agents-skills-managed-agents.html",
+    "markdown": "articles/2026-08-11-github-anthropics-financial-services-claude-agents-skills-managed-agents.md"
+  },
+  {
     "title": "Threads｜Cloudflare OS 開源：企業級 AI 工作台與 Gatekeepers 安全架構",
     "date": "2026-08-11",
     "source": "https://www.threads.com/share/BAYbgr9G07/",
