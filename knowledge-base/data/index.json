@@ -1,5 +1,35 @@
 [
   {
+    "title": "Will 保哥｜Codex app 設定 Luna Max：用較低成本接近 Sol Medium 的 coding agent  workflow",
+    "date": "2026-08-11",
+    "source": "Facebook",
+    "author": "Will 保哥的技術交流中心",
+    "type": "social-post",
+    "topics": [
+      "Codex App",
+      "GPT-5.6",
+      "Luna Max",
+      "Sol Medium",
+      "Coding Agent",
+      "Token Cost",
+      "Reasoning Effort",
+      "AI Workflow",
+      "OpenAI Codex",
+      "Model Selection"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/will.fans/posts/1497906649030086/",
+      "https://www.facebook.com/will.fans/posts/1497906649030086/"
+    ],
+    "excerpt": "這則貼文值得收錄，因為它把 Codex / ChatGPT coding agent 的「模型選擇」從單純追最高階模型，轉成「模型 × reasoning effort × speed × token 成本」的工作流最佳化問題：日常開發不一定都要用 Sol，中低成本模型搭配 Max reasoning 可能更適合高頻迭代。",
+    "slug": "2026-08-11-facebook-willfans-codex-luna-max-sol-medium-token-cost",
+    "html": "articles/2026-08-11-facebook-willfans-codex-luna-max-sol-medium-token-cost.html",
+    "markdown": "articles/2026/08/2026-08-11-facebook-willfans-codex-luna-max-sol-medium-token-cost.md"
+  },
+  {
     "title": "xiaoma-durex-copywriter｜把杜蕾斯黃金期「雙層語義＋留白」拆成 Claude Code 文案海報 Skill",
     "date": "2026-08-11",
     "source": "https://github.com/crawfordxx/xiaoma-durex-copywriter",
