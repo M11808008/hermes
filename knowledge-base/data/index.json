@@ -87,6 +87,37 @@
     "markdown": "articles/2026/08/2026-08-12-facebook-pansci-free-ai-video-generation-after-sora.md"
   },
   {
+    "title": "GitHub｜claude-skill-social-post：Claude/Codex 社群內容 Skill 與成效學習資料模型",
+    "date": "2026-08-12",
+    "source": "https://github.com/Hao0321/claude-skill-social-post",
+    "author": "駱君昊（Hao）",
+    "type": "article",
+    "topics": [
+      "Claude Code",
+      "Claude Skill",
+      "Codex Skill",
+      "Social Media Automation",
+      "Content Calendar",
+      "Threads",
+      "Facebook Automation",
+      "AI Agent",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/Hao0321/claude-skill-social-post",
+      "https://github.com/Hao0321/claude-skill-social-post",
+      "https://raw.githubusercontent.com/Hao0321/claude-skill-social-post/main/social-post/SKILL.md",
+      "https://raw.githubusercontent.com/Hao0321/claude-skill-social-post/main/social-post/F19_DEPLOYMENT_KIT.md"
+    ],
+    "excerpt": "`claude-skill-social-post` 把社群發文拆成「學語氣、排內容、寫草稿／發布、記錄成效、優化規則」五個 Mode，讓 Claude Code 或 Codex 不只是寫貼文，也能把貼文表現變成可驗證、可累積的社群實驗資料。",
+    "slug": "2026-08-12-github-hao0321-claude-skill-social-post",
+    "html": "articles/2026-08-12-github-hao0321-claude-skill-social-post.html",
+    "markdown": "articles/2026/08/2026-08-12-github-hao0321-claude-skill-social-post.md"
+  },
+  {
     "title": "Threads｜HeyGen for Real Estate：AI Avatar 房地產行銷影片產品化",
     "date": "2026-08-12",
     "source": "https://www.threads.com/share/BAwyn8xOax/",
