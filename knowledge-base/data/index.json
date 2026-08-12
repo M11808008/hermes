@@ -1,5 +1,33 @@
 [
   {
+    "title": "Threads｜Gemini Gems 備份：用 Gemini Spark 打包提示詞與參考檔",
+    "date": "2026-08-12",
+    "source": "https://www.threads.com/share/BAYt8xDoJ_/",
+    "author": "yucaio（@yucaio）",
+    "type": "article",
+    "topics": [
+      "Gemini",
+      "Gemini Gems",
+      "Gemini Spark",
+      "Prompt Backup",
+      "AI Workflow",
+      "Knowledge Management",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@yucaio/post/Db7c7RgEnJ5",
+      "https://www.threads.com/share/BAYt8xDoJ_/",
+      "https://www.threads.com/@yucaio/post/Db7c7RgEnJ5"
+    ],
+    "excerpt": "用 Gemini Spark 一次匯出 Gemini Gems 的提示詞與參考檔，轉成 txt、分資料夾並打包 zip，讓自用 AI 助理設定可以快速備份。",
+    "slug": "2026-08-12-threads-yucaio-gemini-gems-spark-backup-prompt",
+    "html": "articles/2026-08-12-threads-yucaio-gemini-gems-spark-backup-prompt.html",
+    "markdown": "articles/2026/08/2026-08-12-threads-yucaio-gemini-gems-spark-backup-prompt.md"
+  },
+  {
     "title": "YouTube｜AI追光：6–8G 顯存本地跑 AI 歌曲、語音生成與字幕翻譯",
     "date": "2026-08-12",
     "source": "https://youtu.be/jwi-tarfxs0",
