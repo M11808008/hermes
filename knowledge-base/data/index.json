@@ -30,6 +30,36 @@
     "markdown": "articles/2026/08/2026-08-14-bnext-ai-notes-tools-notion-obsidian-heptabase-gemini-kuse.md"
   },
   {
+    "title": "Threads｜im-human：台灣繁中／英文去 AI 味 Claude Skill 與 Codex 寫作合約",
+    "date": "2026-08-14",
+    "source": "https://www.threads.com/share/BCIE4cWKWP/",
+    "author": "Threads @aicodex_invent / chang416",
+    "type": "article",
+    "topics": [
+      "Claude Skills",
+      "Codex",
+      "Writing",
+      "去 AI 味",
+      "台灣繁中",
+      "Open Source",
+      "Prompt Engineering"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BCIE4cWKWP/",
+      "https://www.threads.com/@aicodex_invent/post/DcASzXjE92o",
+      "https://www.threads.com/@aicodex_invent/post/DcASzIEE5Wh",
+      "https://github.com/chang416/im-human",
+      "https://raw.githubusercontent.com/chang416/im-human/main/README.md"
+    ],
+    "excerpt": "`im-human` 的價值不是「保證 AI 偵測器 0%」，而是把台灣繁中／英文的自然語氣、保真改寫與反 AI 腔規則，做成 Claude / Codex / ChatGPT 都能帶走的開源寫作 skill。",
+    "slug": "2026-08-14-threads-aicodex-invent-im-human-taiwanese-humanizer-skill",
+    "html": "articles/2026-08-14-threads-aicodex-invent-im-human-taiwanese-humanizer-skill.html",
+    "markdown": "articles/2026-08-14-threads-aicodex-invent-im-human-taiwanese-humanizer-skill.md"
+  },
+  {
     "title": "布雷克｜一品巧廚：天母德行東路江浙菜，排骨菜飯與砂鍋獅子頭",
     "date": "2026-08-13",
     "source": "https://blake.com.tw/blog/post/yipin-qiao-chu",
