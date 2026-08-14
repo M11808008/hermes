@@ -1,4 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook Reel｜Hermes Agent 變強的 19 個隱藏設定：上下文、子 Agent、成本與工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook Reel｜Hermes Agent 變強的 19 個隱藏設定：上下文、子 Agent、成本與工作流</h1><figure><img src="../../../assets/source-images/2026-08-14-facebook-reel-hermes-agent-19-hidden-settings-screenshot.jpg" alt="Facebook Reel 截圖：Hermes Agent 變強的 19 個隱藏設定" loading="lazy" referrerpolicy="no-referrer"><figcaption>Facebook Reel 截圖：Hermes Agent 變強的 19 個隱藏設定</figcaption></figure>
+<figure><img src="../../../assets/source-images/2026-08-14-facebook-reel-hermes-agent-19-hidden-settings-cost-auto-model-screenshot.jpg" alt="Facebook Reel 截圖：成本頁，官方文件已明確 auto 跟隨主模型" loading="lazy" referrerpolicy="no-referrer"><figcaption>Facebook Reel 截圖：成本頁，官方文件已明確 auto 跟隨主模型</figcaption></figure>
 <h2>為什麼保存</h2>
 <p>這則 Reel 值得收進 AI 學習雷達，因為它抓到 Hermes Agent 使用者最常遇到的下一階段問題：裝好 Hermes 之後，不只是「能不能跑」，而是如何透過設定讓它更穩、更省、更能處理長任務。</p>
 <p>截圖中的標題把設定分成四組：</p>
@@ -17,8 +18,12 @@
 <p>| 頁面／帳號 | 今天 GitHub 又瘋了 |</p>
 <p>| Reel 標題 | Hermes Agent 變強的 19 個隱藏設定 |</p>
 <p>| 副標 | 四組配置：上下文・子 Agent・成本・工作流 |</p>
-<p>| 進度標示 | 00 / 04 |</p>
-<p>| 可見字幕 | 如果你遇到 Hermes Agent 讀長文件只讀到一半 |</p>
+<p>| 可見進度標示 | 00 / 04、03 / 04 |</p>
+<p>| 00 / 04 可見字幕 | 如果你遇到 Hermes Agent 讀長文件只讀到一半 |</p>
+<p>| 03 / 04 主題 | 成本 |</p>
+<p>| 03 / 04 副標 | 後台任務的模型路由，直接決定 Token 帳單 |</p>
+<p>| 03 / 04 字幕 | 官方文件已明確：Auto 跟隨主模型，不會自動選擇最便宜的模型 |</p>
+<p>| 03 / 04 畫面片段 | `auxiliary.vision.provider: auto`、`model: &#x27;&#x27;`、`base_url: &#x27;&#x27;`、`api_key: &#x27;&#x27;`、`timeout: 120`、`download_timeout: 30`；下方可見 `web_extract.provider: auto`、`timeout: 360` |</p>
 <p>| 可見互動 | 讚約 10、留言約 1、分享約 6、收藏約 7 |</p>
 <p>原始 Facebook 連結在無登入擷取環境下仍只回傳登入牆，因此本文不把影片中可能出現的完整「19 個設定」逐條視為已驗證內容；目前保存的是截圖可見文字、社群脈絡，以及可由 Hermes 官方文件驗證的對應配置方向。</p>
 <h2>GitHub / 官方文件查核</h2>
@@ -67,6 +72,14 @@
 <li>將固定檢查改成 cron script-only watchdog，需要推理時才叫 LLM。</li>
 </ul>
 <p>對日常使用者來說，最有感的是：把「查資料、讀檔、部署驗證」交給工具，把「判讀與摘要」留給模型。</p>
+<p>第二張截圖補到一個很具體的成本提醒：後台任務與 auxiliary 任務的模型路由，會直接影響 token 帳單。畫面中可見 `auxiliary.vision.provider: auto`、`model: &#x27;&#x27;` 等設定，字幕則說「Auto 跟隨主模型，不會自動選擇最便宜的模型」。</p>
+<p>這個提醒很實用：`auto` 應理解為「沿用或自動接上目前可用的模型後端」，不是「自動幫你用最低價模型」。如果主模型選得昂貴，視覺、網頁抽取、壓縮或其他後台任務也可能被帶到相同成本層級。比較穩的做法是：</p>
+<ul>
+<li>對 vision、web_extract、compression 等 auxiliary 任務明確指定便宜且足夠的 provider / model。</li>
+<li>高推理任務用強模型；批次擷取、格式轉換、健康檢查用便宜模型或 script-only。</li>
+<li>定期用 Hermes 的 usage / provider 帳單介面回查成本，不要只看單次聊天體感。</li>
+<li>若任務只是固定檢查或部署驗證，優先用工具與腳本完成，避免把低價值步驟交給高價模型推理。</li>
+</ul>
 <p>### 4. 工作流：從聊天變成可持續執行的系統</p>
 <p>Hermes 的工作流能力包括 cron、webhooks、gateway、profiles、kanban、sessions 等。這讓它可以從「你問我答」變成：</p>
 <ul>
