@@ -30,6 +30,37 @@
     "markdown": "articles/2026/08/2026-08-14-bnext-ai-notes-tools-notion-obsidian-heptabase-gemini-kuse.md"
   },
   {
+    "title": "Facebook Reel｜Hermes Agent 變強的 19 個隱藏設定：上下文、子 Agent、成本與工作流",
+    "date": "2026-08-14",
+    "source": "https://www.facebook.com/share/v/19C3d3XYp/?mibextid=wwXIfr",
+    "author": "今天 GitHub 又瘋了（Facebook Reel，可見截圖） / NousResearch",
+    "type": "article",
+    "topics": [
+      "Hermes Agent",
+      "AI Agent",
+      "Agent Workflow",
+      "Context Engineering",
+      "Sub Agent",
+      "Cost Optimization",
+      "Facebook Reels"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/19C3d3XYp/?mibextid=wwXIfr",
+      "https://github.com/NousResearch/hermes-agent",
+      "https://hermes-agent.nousresearch.com/docs",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/configuration",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/cron",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory"
+    ],
+    "excerpt": "# Facebook Reel｜Hermes Agent 變強的 19 個隱藏設定：上下文、子 Agent、成本與工作流 ![Facebook Reel 截圖：Hermes Agent 變強的 19 個隱藏設定](../../../assets/source-images/2026-08-14-facebook-ree",
+    "slug": "2026-08-14-facebook-reel-hermes-agent-19-hidden-settings-context-subagent-cost-workflow",
+    "html": "articles/2026-08-14-facebook-reel-hermes-agent-19-hidden-settings-context-subagent-cost-workflow.html",
+    "markdown": "articles/2026/08/2026-08-14-facebook-reel-hermes-agent-19-hidden-settings-context-subagent-cost-workflow.md"
+  },
+  {
     "title": "GitHub｜Dreamwoven Reality：攝影 × 抽象的 Codex Editorial Poster Skill",
     "date": "2026-08-14",
     "source": "https://github.com/LeoLittleLeo/dreamwoven-reality",

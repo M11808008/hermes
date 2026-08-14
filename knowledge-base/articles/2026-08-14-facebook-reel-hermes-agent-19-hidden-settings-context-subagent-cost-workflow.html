@@ -1,0 +1,101 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook Reel｜Hermes Agent 變強的 19 個隱藏設定：上下文、子 Agent、成本與工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook Reel｜Hermes Agent 變強的 19 個隱藏設定：上下文、子 Agent、成本與工作流</h1><figure><img src="../../../assets/source-images/2026-08-14-facebook-reel-hermes-agent-19-hidden-settings-screenshot.jpg" alt="Facebook Reel 截圖：Hermes Agent 變強的 19 個隱藏設定" loading="lazy" referrerpolicy="no-referrer"><figcaption>Facebook Reel 截圖：Hermes Agent 變強的 19 個隱藏設定</figcaption></figure>
+<h2>為什麼保存</h2>
+<p>這則 Reel 值得收進 AI 學習雷達，因為它抓到 Hermes Agent 使用者最常遇到的下一階段問題：裝好 Hermes 之後，不只是「能不能跑」，而是如何透過設定讓它更穩、更省、更能處理長任務。</p>
+<p>截圖中的標題把設定分成四組：</p>
+<ul>
+<li>上下文</li>
+<li>子 Agent</li>
+<li>成本</li>
+<li>工作流</li>
+</ul>
+<p>這四組剛好對應到 Hermes Agent 與一般聊天機器人的核心差異：Hermes 不是單次問答工具，而是一個具備工具、記憶、技能、子任務、排程與多平台 Gateway 的 agent runtime。</p>
+<h2>來源與可見資訊</h2>
+<p>| 項目 | 截圖可見內容 |</p>
+<p>|---|---|</p>
+<p>| 平台 | Facebook Reel |</p>
+<p>| 分享連結 | `<a href="https://www.facebook.com/share/v/19C3d3XYp/?mibextid=wwXIfr`" target="_blank" rel="noopener">https://www.facebook.com/share/v/19C3d3XYp/?mibextid=wwXIfr`</a> |</p>
+<p>| 頁面／帳號 | 今天 GitHub 又瘋了 |</p>
+<p>| Reel 標題 | Hermes Agent 變強的 19 個隱藏設定 |</p>
+<p>| 副標 | 四組配置：上下文・子 Agent・成本・工作流 |</p>
+<p>| 進度標示 | 00 / 04 |</p>
+<p>| 可見字幕 | 如果你遇到 Hermes Agent 讀長文件只讀到一半 |</p>
+<p>| 可見互動 | 讚約 10、留言約 1、分享約 6、收藏約 7 |</p>
+<p>原始 Facebook 連結在無登入擷取環境下仍只回傳登入牆，因此本文不把影片中可能出現的完整「19 個設定」逐條視為已驗證內容；目前保存的是截圖可見文字、社群脈絡，以及可由 Hermes 官方文件驗證的對應配置方向。</p>
+<h2>GitHub / 官方文件查核</h2>
+<p>| 項目 | 查核結果 |</p>
+<p>|---|---|</p>
+<p>| Repo | `NousResearch/hermes-agent` |</p>
+<p>| 描述 | The agent that grows with you |</p>
+<p>| 授權 | MIT |</p>
+<p>| stars / forks | 查核時約 230,276 stars、45,578 forks |</p>
+<p>| default branch | `main` |</p>
+<p>| 官方文件 | `<a href="https://hermes-agent.nousresearch.com/docs`" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs`</a> |</p>
+<p>Hermes Agent 的官方功能與設定確實覆蓋這四類主題：</p>
+<ul>
+<li>上下文：context compression、skills、memory、session、project context。</li>
+<li>子 Agent：`delegate_task`、多 agent 任務拆分、隔離上下文與工具集。</li>
+<li>成本：provider / model 切換、credential pools、prompt caching、compression、toolset 控制。</li>
+<li>工作流：cron jobs、webhooks、gateway、多平台訊息入口、Kanban、profiles。</li>
+</ul>
+<h2>可驗證的「四組設定」解讀</h2>
+<p>### 1. 上下文：避免長文件只讀一半</p>
+<p>截圖字幕點出一個實務痛點：「讀長文件只讀到一半」。在 Hermes 裡，這通常不是單一開關能解，而是上下文策略：</p>
+<ul>
+<li>用 skill 保存可重複工作流，避免每次把長規則重新塞進 prompt。</li>
+<li>用 memory 保存長期偏好與穩定事實，但不要塞短期任務紀錄。</li>
+<li>長文件要先分段擷取、摘要，再把必要段落回填，而不是一次塞滿 context。</li>
+<li>遇到大型任務時，讓子 Agent 分工讀不同檔案或不同來源，主 Agent 只接收摘要。</li>
+<li>對專案任務，可利用 workdir / 專案上下文檔案，讓 agent 自動讀取必要規範。</li>
+</ul>
+<p>對欒帥的知識庫工作流來說，這也是為什麼「文章、source archive、圖片、部署驗證」要拆成穩定流程，而不是每次靠臨場 prompt。</p>
+<p>### 2. 子 Agent：把任務拆出去，保留主線清晰</p>
+<p>Hermes 的 `delegate_task` 可以派出隔離上下文的子 Agent。它適合：</p>
+<ul>
+<li>平行查核多個來源。</li>
+<li>讓一個子 Agent 做 code review，另一個整理文件。</li>
+<li>在不污染主對話上下文的情況下探索大型 repo。</li>
+<li>把背景資料蒐集與最終決策分離。</li>
+</ul>
+<p>這類設計的重點不是「開越多 agent 越好」，而是讓主 Agent 保持決策與整合，子 Agent 負責可隔離、可驗收的子任務。</p>
+<p>### 3. 成本：把模型、工具與上下文一起控管</p>
+<p>Hermes 的成本優化不只靠換便宜模型，而是幾個層次一起做：</p>
+<ul>
+<li>根據任務切換 provider / model。</li>
+<li>限制不需要的 toolsets，減少工具 schema 與上下文負擔。</li>
+<li>用 compression 與摘要降低長會話成本。</li>
+<li>用 skills / memory 避免重複解釋相同背景。</li>
+<li>將固定檢查改成 cron script-only watchdog，需要推理時才叫 LLM。</li>
+</ul>
+<p>對日常使用者來說，最有感的是：把「查資料、讀檔、部署驗證」交給工具，把「判讀與摘要」留給模型。</p>
+<p>### 4. 工作流：從聊天變成可持續執行的系統</p>
+<p>Hermes 的工作流能力包括 cron、webhooks、gateway、profiles、kanban、sessions 等。這讓它可以從「你問我答」變成：</p>
+<ul>
+<li>固定時間產出摘要或巡檢。</li>
+<li>收到 LINE / Telegram / webhook 後自動處理。</li>
+<li>針對不同用途建立 profile，隔離記憶與工具設定。</li>
+<li>將大型任務切成可追蹤的 kanban 工作項。</li>
+<li>將重複成功的做法沉澱成 skill。</li>
+</ul>
+<p>這也是 Hermes Agent 在教學與個人知識管理上有價值的原因：它能把「一次性的 AI 幫忙」變成「可維護的 AI 工作流」。</p>
+<h2>對欒帥的應用建議</h2>
+<ul>
+<li>把這則 Reel 歸在「Hermes Agent 進階設定／Agent 工作流」案例，不把它當成完整官方教學。</li>
+<li>若之後能取得完整影片文案，可再補成「19 個設定逐條對照官方文件」版本。</li>
+<li>課程或工作坊可用這四組分類作為 Hermes 進階單元大綱：先解 context，再解 subagent，再談成本，最後進到 workflow。</li>
+<li>對 AI 學習雷達自身，也可把它視為方法提醒：越多自動化任務，越需要把設定、技能、記憶、排程與部署驗證拆清楚。</li>
+</ul>
+<h2>風險與限制</h2>
+<ul>
+<li>原始 Facebook Reel 仍受登入牆限制，無法公開取得完整影片文案、作者介紹與縮圖。</li>
+<li>本文中的「19 個」只保存截圖可見標題，尚未取得完整 19 條清單。</li>
+<li>GitHub stars / forks 為查核當下數字，可能快速變動。</li>
+<li>社群影片常會使用「隱藏設定」等行銷語；實務上仍應以 Hermes 官方文件與當前 CLI 行為為準。</li>
+</ul>
+<h2>延伸閱讀</h2>
+<ul>
+<li>Hermes Agent 官方文件：`<a href="https://hermes-agent.nousresearch.com/docs`" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs`</a></li>
+<li>GitHub repo：`<a href="https://github.com/NousResearch/hermes-agent`" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent`</a></li>
+<li>Hermes configuration：`<a href="https://hermes-agent.nousresearch.com/docs/user-guide/configuration`" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/configuration`</a></li>
+<li>Cron jobs：`<a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron`" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron`</a></li>
+<li>Memory：`<a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/memory`" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/memory`</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-14 · https://www.facebook.com/share/v/19C3d3XYp/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">Hermes Agent</span><span class="tag">AI Agent</span><span class="tag">Agent Workflow</span><span class="tag">Context Engineering</span><span class="tag">Sub Agent</span><span class="tag">Cost Optimization</span><span class="tag">Facebook Reels</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/v/19C3d3XYp/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/19C3d3XYp/?mibextid=wwXIfr</a></p><p><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent</a></p><p><a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/configuration" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/configuration</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/cron</a></p><p><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/memory" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/features/memory</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
