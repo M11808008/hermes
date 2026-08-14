@@ -30,6 +30,35 @@
     "markdown": "articles/2026/08/2026-08-14-bnext-ai-notes-tools-notion-obsidian-heptabase-gemini-kuse.md"
   },
   {
+    "title": "GitHub｜Dreamwoven Reality：攝影 × 抽象的 Codex Editorial Poster Skill",
+    "date": "2026-08-14",
+    "source": "https://github.com/LeoLittleLeo/dreamwoven-reality",
+    "author": "LeoLittleLeo",
+    "type": "article",
+    "topics": [
+      "Codex Skills",
+      "Image Editing",
+      "Editorial Poster",
+      "Generative Design",
+      "Photo Abstraction",
+      "Visual Workflow",
+      "Non-commercial"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/LeoLittleLeo/dreamwoven-reality",
+      "https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/README.md",
+      "https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/SKILL.md",
+      "https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/LICENSE"
+    ],
+    "excerpt": "`Dreamwoven Reality` 是一套把真實照片轉成「攝影 × 抽象」雙段式 editorial poster 的 Codex Skill：上半保留攝影辨識與局部抽象，下半重構成高度非攝影語義抽象，並用固定 `53 / 2 / 43 / 2` 版式輸出。",
+    "slug": "2026-08-14-github-leolittleleo-dreamwoven-reality-photo-abstract-editorial-skill",
+    "html": "articles/2026-08-14-github-leolittleleo-dreamwoven-reality-photo-abstract-editorial-skill.html",
+    "markdown": "articles/2026-08-14-github-leolittleleo-dreamwoven-reality-photo-abstract-editorial-skill.md"
+  },
+  {
     "title": "Threads｜im-human：台灣繁中／英文去 AI 味 Claude Skill 與 Codex 寫作合約",
     "date": "2026-08-14",
     "source": "https://www.threads.com/share/BCIE4cWKWP/",

@@ -1,0 +1,102 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GitHub｜Dreamwoven Reality：攝影 × 抽象的 Codex Editorial Poster Skill</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>GitHub｜Dreamwoven Reality：攝影 × 抽象的 Codex Editorial Poster Skill</h1><figure><img src="../assets/source-images/2026-08-14-github-leolittleleo-dreamwoven-reality-photo-abstract-editorial-skill-github-og.png" alt="LeoLittleLeo/dreamwoven-reality GitHub OpenGraph 圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>LeoLittleLeo/dreamwoven-reality GitHub OpenGraph 圖</figcaption></figure>
+<h2>為什麼保存</h2>
+<p>欒帥請我在 GitHub 搜尋 `photo-abstract-editorial` 並打開最下面一條結果。該結果是 `LeoLittleLeo/dreamwoven-reality`，repo 描述為「Personal non-commercial Codex skill for ordered real/abstract editorial photo transformation」。</p>
+<p>它值得放進 AI 學習雷達，因為它展示了一種很有代表性的趨勢：把影像風格不再寫成一段 prompt，而是封裝成 Codex Skill，包含視覺合約、場景診斷、人物保護、構圖比例、輸出腳本與品質門檻。這對欒帥日後整理「AI 影像工作流如何技能化」很有參考價值。</p>
+<h2>一句話摘要</h2>
+<p>`Dreamwoven Reality` 是一套把真實照片轉成「攝影 × 抽象」雙段式 editorial poster 的 Codex Skill：上半保留攝影辨識與局部抽象，下半重構成高度非攝影語義抽象，並用固定 `53 / 2 / 43 / 2` 版式輸出。</p>
+<h2>GitHub 查核</h2>
+<p>查核時間：2026-08-14。</p>
+<ul>
+<li>Repo：`LeoLittleLeo/dreamwoven-reality`</li>
+<li>描述：Personal non-commercial Codex skill for ordered real/abstract editorial photo transformation</li>
+<li>主要語言：Python</li>
+<li>授權：自訂個人非商用授權，GitHub API 顯示為 Other / NOASSERTION</li>
+<li>stars / forks：約 1 star、1 fork</li>
+<li>open issues：0</li>
+<li>建立時間：2026-08-12</li>
+<li>最新 push：2026-08-14</li>
+<li>default branch：main</li>
+</ul>
+<h2>核心概念：Ordered Interweaving of Reality and Abstraction</h2>
+<p>README 強調，這不是 Lightroom preset、Instagram filter、一般 style transfer，也不是單純 prompt collection。它的核心是：</p>
+<p>&gt; 有秩序地交織真實與抽象。</p>
+<p>也就是說，照片不同區域不會被同一種效果一鍵套上，而是依照人物、建築、道路、水體、山體、植被、陰影邊界與遮擋關係，分別決定：</p>
+<ul>
+<li>哪些區域保留攝影資訊。</li>
+<li>哪些區域進行抽象重構。</li>
+<li>真實與抽象的邊界應該在哪裡出現。</li>
+<li>哪些細節必須保留，才能維持場景識別。</li>
+<li>哪些視覺噪聲要主動刪減。</li>
+</ul>
+<h2>固定輸出：53 / 2 / 43 / 2 editorial collage</h2>
+<p>`SKILL.md` 將 output mode 寫得很死：只支援 `processed`，沒有 alternate mode。</p>
+<p>預設版面：</p>
+<ul>
+<li>53%：上半 paper board，承載攝影感主導的局部抽象。</li>
+<li>2%：黑色標題帶。</li>
+<li>43%：全寬下半 extreme semantic abstraction panel。</li>
+<li>2%：黑色副標題帶。</li>
+</ul>
+<p>上半的 artwork 佔 board 內 75–85%。repo 明確禁止 postcard field、日期欄、郵戳、貼紙與 full-bleed 變體，讓輸出風格維持一致。</p>
+<h2>上下兩段的視覺合約</h2>
+<p>### Upper：攝影主導的局部抽象</p>
+<p>Upper stage 以 photographic-led partial abstraction 為核心：</p>
+<ul>
+<li>source geometry 嚴格保留。</li>
+<li>抽象程度 light-to-medium。</li>
+<li>攝影可讀性仍為主。</li>
+<li>主要人物臉部約 95% 感知保真。</li>
+<li>英雄建築約 55% 保留攝影、45% 做材料替換式重構。</li>
+<li>外輪廓使用 source-semantic free edge，而不是簡單矩形裁切。</li>
+</ul>
+<p>### Lower：極端語義抽象</p>
+<p>Lower stage 則是 85–100% non-photographic semantic distillation：</p>
+<ul>
+<li>幾乎不保留攝影微細節。</li>
+<li>可以重新安排空間、比例、軸線、深度順序與量體位置。</li>
+<li>不保留真實臉部或皮膚。</li>
+<li>主要人物只能保留可讀的抽象人形輪廓，最多一到兩種平塗色。</li>
+<li>建築改成 extreme semantic reconstruction。</li>
+<li>色彩採 `robot-dreams-logic` palette。</li>
+</ul>
+<p>這個 stage contract 很適合教「同一張來源圖，不同輸出段落可以有不同忠實度與抽象規則」。</p>
+<h2>人物與生命主體保護</h2>
+<p>Repo 對人物與生命主體有明確規則：</p>
+<ul>
+<li>主要人物上半預設為 face-locked、body-flexible、no-source-composite。</li>
+<li>臉部、表情、視線、姿勢與接觸關係需維持高辨識度。</li>
+<li>不能把原始照片的人臉、身體、服裝或局部像素直接貼回作品。</li>
+<li>lower 不保留真實臉部，改成抽象人形剪影。</li>
+<li>動物、鳥、樹木、獨立植物等生命主體要作為完整視覺單元處理，不能同一個主體內部亂切真實與抽象語言。</li>
+</ul>
+<p>這一點很重要，因為很多 AI 影像 prompt 只追求風格，而忽略身份、肖像、姿態與生成式重貼的倫理／品質問題。</p>
+<h2>工具與檔案結構</h2>
+<p>Repo 結構包含：</p>
+<ul>
+<li>`SKILL.md`：核心行為合約，包含 workflow、stage contract、strategy record、人物保護、抽象強度與 quality gate。</li>
+<li>`references/visual-direction.md`：視覺方向、構圖、色彩、上下段處理細節。</li>
+<li>`references/exemplars.md`：示例圖使用規則，強調只能當 transferable decision 參考，不能複製題材或配色。</li>
+<li>`scripts/inspect_photo.py`：讀取影像尺寸、metadata、EXIF 等。</li>
+<li>`scripts/compose_poster.py`：組成最終 53/2/43/2 editorial artwork。</li>
+<li>`agents/openai.yaml`：OpenAI / Codex agent 介面設定。</li>
+</ul>
+<h2>示例圖</h2>
+<p>README 內含 Tree and Architecture 與 Circular Quay Framing 兩組示例。這裡保存一張 processed exemplar，方便日後快速辨識該 repo 的視覺方向。</p>
+<figure><img src="../assets/source-images/2026-08-14-github-leolittleleo-dreamwoven-reality-photo-abstract-editorial-skill-tree-processed.png" alt="Dreamwoven Reality tree and architecture processed exemplar" loading="lazy" referrerpolicy="no-referrer"><figcaption>Dreamwoven Reality tree and architecture processed exemplar</figcaption></figure>
+<h2>對欒帥的應用建議</h2>
+<ul>
+<li>可作為「Codex Skill 不只會寫程式，也能封裝視覺藝術指導」的案例。</li>
+<li>可用於課程示範：如何把模糊的影像風格要求，拆成 stage contract、source faithfulness、abstraction vocabulary、layout contract 與 quality gate。</li>
+<li>若未來要自製 AI 影像工作流，可參考它的結構，但不要直接商用，因為授權限制明確。</li>
+<li>若想用在欒帥自己的旅遊照、城市照、建築照，可先作為個人非商用實驗；公開分享時需標註 LeoLittleLeo 與原 repo。</li>
+</ul>
+<h2>風險與限制</h2>
+<ul>
+<li>授權不是一般開源授權；只允許個人、非商業用途。</li>
+<li>公開分享、展示、修改版或使用該 skill 產生的作品，都需要清楚 attribution。</li>
+<li>禁止商業用途，包含付費委託、課程、品牌推廣、營利內容、商業模型訓練／評測等。</li>
+<li>示例圖也有額外權利限制，不適合作為公開素材再利用或資料集。</li>
+<li>這是視覺規則系統與 compose script，不等於完整的一鍵影像生成 SaaS；實際生成品質仍取決於所用圖像模型、人工審片與局部修正能力。</li>
+</ul>
+<h2>可帶走的觀念</h2>
+<p>`Dreamwoven Reality` 的價值在於把「攝影 × 抽象」變成一套可檢查的視覺工作流：它不只說要夢幻、抽象、editorial，而是定義上下段比例、人物保真、建築重構、抽象操作、邊界形狀、色彩策略與授權限制。這比單純 prompt 更適合作為 AI 視覺設計課的進階案例。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-14 · https://github.com/LeoLittleLeo/dreamwoven-reality · article</div><h3>標籤</h3><span class="tag">Codex Skills</span><span class="tag">Image Editing</span><span class="tag">Editorial Poster</span><span class="tag">Generative Design</span><span class="tag">Photo Abstraction</span><span class="tag">Visual Workflow</span><span class="tag">Non-commercial</span><h3>原始連結</h3><p><a href="https://github.com/LeoLittleLeo/dreamwoven-reality" target="_blank" rel="noopener">https://github.com/LeoLittleLeo/dreamwoven-reality</a></p><p><a href="https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/README.md</a></p><p><a href="https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/SKILL.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/SKILL.md</a></p><p><a href="https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/LICENSE" target="_blank" rel="noopener">https://raw.githubusercontent.com/LeoLittleLeo/dreamwoven-reality/main/LICENSE</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
