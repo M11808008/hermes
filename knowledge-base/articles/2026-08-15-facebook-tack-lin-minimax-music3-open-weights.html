@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜Tack Lin：MiniMax Music 3 開放權重完整歌曲生成模型</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜Tack Lin：MiniMax Music 3 開放權重完整歌曲生成模型</h1><figure><img src="../../assets/source-images/2026-08-15-facebook-tack-lin-minimax-music3-open-weights-cover.png" alt="MiniMax Music 3 Hugging Face model card cover" loading="lazy" referrerpolicy="no-referrer"><figcaption>MiniMax Music 3 Hugging Face model card cover</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>MiniMax Music 3 是 MiniMaxAI 釋出的開放權重音樂生成模型，重點不是短 BGM，而是可依歌詞與音樂描述生成最長五分鐘、具段落結構與人聲表現的完整歌曲。</p>
+<h2>為什麼保存</h2>
+<p>這則貼文值得放進 AI 學習雷達，因為它代表 AI 音樂生成從「封閉式平台功能」往「可部署、可研究、可整合的開放權重模型」移動。對課程、內容製作、品牌聲音、Podcast / 短影音配樂與生成式媒體工作流來說，開放權重意味著更容易測試、比較、私有化部署或接到自動化流程。</p>
+<p>Tack Lin 貼文中提到「Minimax 半夜開源了音樂模型」「晚點來測」，留言附上 Hugging Face 模型頁；貼文截圖也標示「MiniMax-Music3 下一代開放權重、生產就緒、多功能音樂模型」。</p>
+<h2>模型重點</h2>
+<ul>
+<li>模型：MiniMaxAI / MiniMax-Music3</li>
+<li>任務：Text-to-Audio、music-generation、text-to-music</li>
+<li>輸入：Lyrics 歌詞 + Music Description / Caption 音樂描述</li>
+<li>輸出：32 kHz、16-bit、stereo WAV</li>
+<li>長度：模型卡宣稱可生成最長五分鐘完整歌曲</li>
+<li>架構：8B Global LLM 負責長程音樂結構，0.6B Local LLM 負責 frame-level acoustic detail，並使用 Flow Matching 與 Flow-VAE 的 continuous hidden-state synthesis</li>
+<li>可控內容：曲風、BPM、調性、情緒、男女聲、唱腔、樂器、編曲、段落演進與製作風格</li>
+</ul>
+<h2>Prompt / 結構控制</h2>
+<p>MiniMax Music 3 的使用方式接近「歌曲企劃書」：</p>
+<ul>
+<li>Lyrics：可加入 `[Intro]`、`[Verse]`、`[Pre-Chorus]`、`[Chorus]`、`[Bridge]`、`[Instrumental]`、`[Solo]`、`[Outro]` 等段落標籤。</li>
+<li>Music description：描述整體曲風、情緒推進、人聲、樂器、編曲與聲音製作。</li>
+<li>Structured Caption：官方建議拆成 Global Metadata、Vocal Details、Arrangement 三段，讓模型同時理解全局風格與歌曲中途的編曲變化。</li>
+</ul>
+<h2>對欒帥的應用方向</h2>
+<ul>
+<li>生成課程活動、工作坊或品牌企劃的主題曲 demo。</li>
+<li>把 AI 教學案例延伸到「文字 → 歌詞 → 編曲描述 → 完整歌曲」的 multimodal workflow。</li>
+<li>與 Suno / Udio / MusicGen / AudioCraft 做音樂生成品質、可控性與授權條款比較。</li>
+<li>若本機或雲端資源允許，可測試開放權重部署，觀察推理成本、VRAM 需求與生成速度。</li>
+<li>建立 Hermes 自動化流程：由課程主題產生歌詞、結構化 caption，再呼叫模型或 API 生成音樂草稿。</li>
+</ul>
+<h2>實務判讀</h2>
+<p>這類模型真正值得測的不是單首 demo 好不好聽，而是：</p>
+<ul>
+<li>長歌一致性：五分鐘內主題、節奏、人聲音色是否維持穩定。</li>
+<li>結構服從度：Verse / Chorus / Bridge 等標籤是否真的對應到可聽的段落變化。</li>
+<li>歌詞清晰度：多語言、中文、英文、混語歌詞是否能清楚演唱。</li>
+<li>可控性：BPM、調性、樂器、情緒與唱腔描述是否可重複控制。</li>
+<li>部署成本：開放權重雖方便研究，但完整推理可能仍需要高 VRAM 或雲端服務。</li>
+<li>授權與商用：產出能否商用、模型權重與生成內容的權利邊界仍需讀 LICENSE 與官方說明。</li>
+</ul>
+<h2>原始線索</h2>
+<ul>
+<li>Facebook 分享貼文：<a href="https://www.facebook.com/share/19eNxEyv1L/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/19eNxEyv1L/?mibextid=wwXIfr</a></li>
+<li>Facebook canonical photo URL：<a href="https://www.facebook.com/photo.php?fbid=27750683051240003&amp;set=a.278199202248425&amp;type=3&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=27750683051240003&amp;set=a.278199202248425&amp;type=3&amp;mibextid=wwXIfr</a></li>
+<li>Hugging Face：<a href="https://huggingface.co/MiniMaxAI/MiniMax-Music3" target="_blank" rel="noopener">https://huggingface.co/MiniMaxAI/MiniMax-Music3</a></li>
+<li>GitHub：<a href="https://github.com/MiniMax-AI/MiniMax-Music3" target="_blank" rel="noopener">https://github.com/MiniMax-AI/MiniMax-Music3</a></li>
+<li>Demo：<a href="https://minimax-ai.github.io/music3-demo/" target="_blank" rel="noopener">https://minimax-ai.github.io/music3-demo/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-15 · https://www.facebook.com/share/19eNxEyv1L/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">MiniMax Music 3</span><span class="tag">MiniMaxAI</span><span class="tag">開放權重</span><span class="tag">Text-to-Music</span><span class="tag">Music Generation</span><span class="tag">AI Audio</span><span class="tag">Hugging Face</span><span class="tag">Facebook</span><h3>原始連結</h3><p><a href="https://www.facebook.com/photo.php?fbid=27750683051240003&amp;set=a.278199202248425&amp;type=3&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=27750683051240003&amp;set=a.278199202248425&amp;type=3&amp;mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/share/19eNxEyv1L/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/19eNxEyv1L/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/photo.php?fbid=27750683051240003&amp;set=a.278199202248425&amp;type=3&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=27750683051240003&amp;set=a.278199202248425&amp;type=3&amp;mibextid=wwXIfr</a></p><p><a href="https://huggingface.co/MiniMaxAI/MiniMax-Music3" target="_blank" rel="noopener">https://huggingface.co/MiniMaxAI/MiniMax-Music3</a></p><p><a href="https://github.com/MiniMax-AI/MiniMax-Music3" target="_blank" rel="noopener">https://github.com/MiniMax-AI/MiniMax-Music3</a></p><p><a href="https://minimax-ai.github.io/music3-demo/" target="_blank" rel="noopener">https://minimax-ai.github.io/music3-demo/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

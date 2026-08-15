@@ -1,5 +1,37 @@
 [
   {
+    "title": "Facebook｜Tack Lin：MiniMax Music 3 開放權重完整歌曲生成模型",
+    "date": "2026-08-15",
+    "source": "https://www.facebook.com/share/19eNxEyv1L/?mibextid=wwXIfr",
+    "author": "Tack Lin",
+    "type": "article",
+    "topics": [
+      "MiniMax Music 3",
+      "MiniMaxAI",
+      "開放權重",
+      "Text-to-Music",
+      "Music Generation",
+      "AI Audio",
+      "Hugging Face",
+      "Facebook"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/photo.php?fbid=27750683051240003&set=a.278199202248425&type=3&mibextid=wwXIfr",
+      "https://www.facebook.com/share/19eNxEyv1L/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=27750683051240003&set=a.278199202248425&type=3&mibextid=wwXIfr",
+      "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+      "https://github.com/MiniMax-AI/MiniMax-Music3",
+      "https://minimax-ai.github.io/music3-demo/"
+    ],
+    "excerpt": "MiniMax Music 3 是 MiniMaxAI 釋出的開放權重音樂生成模型，重點不是短 BGM，而是可依歌詞與音樂描述生成最長五分鐘、具段落結構與人聲表現的完整歌曲。",
+    "slug": "2026-08-15-facebook-tack-lin-minimax-music3-open-weights",
+    "html": "articles/2026-08-15-facebook-tack-lin-minimax-music3-open-weights.html",
+    "markdown": "articles/2026/08/2026-08-15-facebook-tack-lin-minimax-music3-open-weights.md"
+  },
+  {
     "title": "數位時代｜AI 筆記工具比較：Notion、Obsidian、Heptabase、Gemini Notebook、Kuse AI",
     "date": "2026-08-14",
     "source": "https://www.bnext.com.tw/article/91831/ai-notes-tool-difference-2026",
