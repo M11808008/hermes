@@ -1,5 +1,40 @@
 [
   {
+    "title": "YouTube｜Beezi AI note：AI、設計與工作流頻道",
+    "date": "2026-08-17",
+    "source": "https://www.youtube.com/@BeeziAInote",
+    "author": "Beezi AI note",
+    "type": "article",
+    "topics": [
+      "YouTube",
+      "Beezi AI note",
+      "AI 工具",
+      "AI 工作流",
+      "設計工作流",
+      "ChatGPT",
+      "Claude",
+      "Codex",
+      "AI 動畫",
+      "AI 語音",
+      "內容創作"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/@BeeziAInote/about",
+      "https://www.youtube.com/@BeeziAInote",
+      "https://www.youtube.com/@BeeziAInote/about",
+      "https://www.youtube.com/watch?v=0OBdAvs_UqE",
+      "https://www.youtube.com/watch?v=rjjAf4qzIJo",
+      "https://www.youtube.com/watch?v=758QHEoLcfI"
+    ],
+    "excerpt": "截圖推薦搜尋「Beezi AI note」。查核後，這是一個以 AI、設計與工作流為主題的台灣 YouTube 頻道，主打把 ChatGPT、Claude、Codex 與各類 AI 工具用在設計、動畫、內容創作與生產力流程中。",
+    "slug": "2026-08-17-youtube-beezi-ai-note-ai-design-workflow",
+    "html": "articles/2026-08-17-youtube-beezi-ai-note-ai-design-workflow.html",
+    "markdown": "articles/2026/08/2026-08-17-youtube-beezi-ai-note-ai-design-workflow.md"
+  },
+  {
     "title": "Facebook｜Tack Lin：MiniMax Music 3 開放權重完整歌曲生成模型",
     "date": "2026-08-15",
     "source": "https://www.facebook.com/share/19eNxEyv1L/?mibextid=wwXIfr",
