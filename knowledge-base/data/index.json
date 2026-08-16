@@ -1,5 +1,36 @@
 [
   {
+    "title": "Threads｜Brui：用 Antigravity 與 Gemini 把 YouTube 連結轉成可分享知識卡片",
+    "date": "2026-08-17",
+    "source": "https://www.threads.com/@bruileego/post/DcFsk2HmJX9",
+    "author": "Brui｜Building with Ai（@bruileego）",
+    "type": "article",
+    "topics": [
+      "Threads",
+      "Antigravity",
+      "Gemini",
+      "YouTube",
+      "AI Skill",
+      "知識卡片",
+      "內容摘要",
+      "可視化筆記",
+      "AI 工作流",
+      "內容創作"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@bruileego/post/DcFsk2HmJX9",
+      "https://www.threads.com/share/BAVsp-wzKI/",
+      "https://www.threads.com/@bruileego/post/DcFsk2HmJX9"
+    ],
+    "excerpt": "這則 Threads 提出一個很適合知識工作者與內容創作者的 skill：丟入 YouTube 連結後，先用 Gemini 快速理解影片，再由 Antigravity 生成 6–10 張知識卡片、HTML 網頁與 600–800 字「我看完後的分享式摘要」，最後可一鍵打包下載圖片。",
+    "slug": "2026-08-17-threads-bruileego-youtube-knowledge-card-skill",
+    "html": "articles/2026-08-17-threads-bruileego-youtube-knowledge-card-skill.html",
+    "markdown": "articles/2026/08/2026-08-17-threads-bruileego-youtube-knowledge-card-skill.md"
+  },
+  {
     "title": "YouTube｜Beezi AI note：AI、設計與工作流頻道",
     "date": "2026-08-17",
     "source": "https://www.youtube.com/@BeeziAInote",
