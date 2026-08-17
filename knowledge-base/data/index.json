@@ -1,5 +1,38 @@
 [
   {
+    "title": "Instagram｜Gesture Synth：用手勢即時演奏的瀏覽器合成器",
+    "date": "2026-08-17",
+    "source": "https://www.instagram.com/reel/DblrXbLvmwz/?comment_id=17918297061421577",
+    "author": "Eric Wei / indecisive.eric",
+    "type": "article",
+    "topics": [
+      "Instagram",
+      "Gesture Synth",
+      "手勢互動",
+      "創意編程",
+      "瀏覽器樂器",
+      "MediaPipe",
+      "Tone.js",
+      "人機互動",
+      "音樂科技",
+      "多模態介面"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://gesture-synth-weld.vercel.app/",
+      "https://www.instagram.com/reel/DblrXbLvmwz/?comment_id=17918297061421577",
+      "https://gesture-synth-weld.vercel.app/",
+      "https://www.instagram.com/p/DbH1BACxNCG/",
+      "https://indecisiveeric.com"
+    ],
+    "excerpt": "Gesture Synth 是一個可在瀏覽器中執行的互動式合成器：使用者以雙手姿態控制和弦、旋律、八度、濾波與音量，把攝影機手勢辨識變成即時演奏介面。",
+    "slug": "2026-08-17-instagram-eric-wei-gesture-synth-hand-tracking-instrument",
+    "html": "articles/2026-08-17-instagram-eric-wei-gesture-synth-hand-tracking-instrument.html",
+    "markdown": "articles/2026/08/2026-08-17-instagram-eric-wei-gesture-synth-hand-tracking-instrument.md"
+  },
+  {
     "title": "Threads｜Brui：用 Antigravity 與 Gemini 把 YouTube 連結轉成可分享知識卡片",
     "date": "2026-08-17",
     "source": "https://www.threads.com/@bruileego/post/DcFsk2HmJX9",
