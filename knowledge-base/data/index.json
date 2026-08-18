@@ -1,5 +1,37 @@
 [
   {
+    "title": "Threads｜Ariescar anyCreature：一句話生成可用於遊戲的 3D 生物 GLB 流程",
+    "date": "2026-08-19",
+    "source": "https://www.threads.com/@ariescar0326/post/DcLWuBvH0PJ",
+    "author": "Ariescar／@ariescar0326",
+    "type": "article",
+    "topics": [
+      "AI 3D",
+      "3D 生成",
+      "GLB",
+      "glTF",
+      "Game Asset",
+      "Procedural Generation",
+      "Agent Workflow",
+      "GitHub",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@ariescar0326/post/DcLWuBvH0PJ",
+      "https://www.threads.com/share/_eRcv9jw6/",
+      "https://www.threads.com/@ariescar0326/post/DcLWuBvH0PJ",
+      "https://github.com/Ariescar/anyCreature",
+      "https://raw.githubusercontent.com/Ariescar/anyCreature/main/README.md"
+    ],
+    "excerpt": "`anyCreature` 是一個「Text → game-ready 3D creature」實驗框架：讓 AI agent 從一句需求出發，透過最多兩個追問、JSON spec、ACS engine 與品質檢查流程，輸出可用於遊戲的 GLB 生物模型與離線展示頁。",
+    "slug": "2026-08-19-threads-ariescar-anycreature-text-to-3d-creature-pipeline",
+    "html": "articles/2026-08-19-threads-ariescar-anycreature-text-to-3d-creature-pipeline.html",
+    "markdown": "articles/2026/08/2026-08-19-threads-ariescar-anycreature-text-to-3d-creature-pipeline.md"
+  },
+  {
     "title": "女子的休假計劃｜盛味豐炭烤燒餅：科技大樓站老麵炭烤三星蔥燒餅",
     "date": "2026-08-18",
     "source": "https://girlsplan.com/safatasba/",
