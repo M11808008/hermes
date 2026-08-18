@@ -32,6 +32,39 @@
     "markdown": "articles/2026/08/2026-08-19-threads-ariescar-anycreature-text-to-3d-creature-pipeline.md"
   },
   {
+    "title": "Threads｜Kufu 酷服：ElevenLabs Hosted MCP 進 Claude，可管理語音與聊天 Agent",
+    "date": "2026-08-19",
+    "source": "https://www.threads.com/@kufutw/post/DcK7-cUnbmk",
+    "author": "Kufu 酷服｜AI 智能客服平台／@kufutw",
+    "type": "article",
+    "topics": [
+      "ElevenLabs",
+      "Claude",
+      "MCP",
+      "Hosted MCP",
+      "ElevenAgents",
+      "AI 客服",
+      "Voice Agent",
+      "Chat Agent",
+      "Agent Management",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DcK7-cUnbmk",
+      "https://www.threads.com/share/BAQr92dyL1/",
+      "https://www.threads.com/@kufutw/post/DcK7-cUnbmk",
+      "https://elevenlabs.io/blog/elevenlabs-mcp-in-claude",
+      "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp"
+    ],
+    "excerpt": "ElevenLabs Hosted MCP 已進入 Claude connector 生態：連接後可在 Claude 裡用自然語言管理 ElevenLabs 的 voice / chat agents，包括建立、更新設定、查看對話、分析主題、複製 agent，甚至先估算變更後的 LLM 使用量與成本。",
+    "slug": "2026-08-19-threads-kufutw-elevenlabs-hosted-mcp-claude-agents",
+    "html": "articles/2026-08-19-threads-kufutw-elevenlabs-hosted-mcp-claude-agents.html",
+    "markdown": "articles/2026/08/2026-08-19-threads-kufutw-elevenlabs-hosted-mcp-claude-agents.md"
+  },
+  {
     "title": "女子的休假計劃｜盛味豐炭烤燒餅：科技大樓站老麵炭烤三星蔥燒餅",
     "date": "2026-08-18",
     "source": "https://girlsplan.com/safatasba/",
