@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101827"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="25%" cy="25%" r="70%">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <g opacity="0.22" stroke="#fbbf24" stroke-width="2" fill="none">
+    <path d="M110 560 C250 430, 340 460, 430 330 S650 210, 770 330 S990 540, 1170 190"/>
+    <path d="M110 610 C270 510, 390 520, 510 395 S720 280, 860 410 S1020 530, 1170 300" opacity="0.65"/>
+  </g>
+  <text x="86" y="132" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="30" fill="#fde68a" letter-spacing="5">AI ADOPTION RADAR</text>
+  <text x="86" y="236" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="66" font-weight="800" fill="#f8fafc">Step 3 死亡之谷</text>
+  <text x="90" y="315" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="34" fill="#cbd5e1">個人生產力暴增，不等於公司營運效率變快</text>
+  <g transform="translate(90,405)">
+    <rect width="260" height="92" rx="24" fill="#0f172a" stroke="#38bdf8"/>
+    <text x="32" y="38" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="22" fill="#93c5fd">Step 1–2</text>
+    <text x="32" y="70" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="24" fill="#f8fafc">工具帳號 / 個人效率</text>
+  </g>
+  <g transform="translate(510,405)">
+    <rect width="260" height="92" rx="24" fill="#451a03" stroke="#f97316"/>
+    <text x="32" y="38" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="22" fill="#fdba74">Step 3</text>
+    <text x="32" y="70" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="24" fill="#fff7ed">流程改造卡關</text>
+  </g>
+  <g transform="translate(930,405)">
+    <rect width="260" height="92" rx="24" fill="#052e16" stroke="#22c55e"/>
+    <text x="32" y="38" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="22" fill="#86efac">Step 4+</text>
+    <text x="32" y="70" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="24" fill="#f0fdf4">組織級 AI 工作流</text>
+  </g>
+  <text x="86" y="650" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="24" fill="#94a3b8">Threads @jacky0_ai · Archived by Hermes Agent</text>
+</svg>
