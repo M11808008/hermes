@@ -65,6 +65,43 @@
     "markdown": "articles/2026/08/2026-08-21-threads-tedzted-google-map-timeline-visualizer-travel-map.md"
   },
   {
+    "title": "Threads｜wan.meow：Codex × Antigravity 雙 AI Agent 架構，主控與工作者分工協作",
+    "date": "2026-08-21",
+    "source": "https://www.threads.com/@wan.meow/post/DcTofOFmqc3",
+    "author": "wan.meow／@wan.meow；GitHub：a275618631",
+    "type": "article",
+    "topics": [
+      "Codex",
+      "Antigravity",
+      "Gemini",
+      "ChatGPT",
+      "AI Agent",
+      "Multi-Agent",
+      "Agent Runtime",
+      "MCP",
+      "A2A",
+      "GitHub",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@wan.meow/post/DcTofOFmqc3",
+      "https://www.threads.com/share/BARSb2cMeT/",
+      "https://www.threads.com/@wan.meow/post/DcTofOFmqc3",
+      "https://a275618631.github.io/codex-antigravity-collaboration/",
+      "https://github.com/a275618631/codex-antigravity-collaboration",
+      "https://a275618631.github.io/codex-antigravity-collaboration/ARCHITECTURE.html",
+      "https://a275618631.github.io/codex-antigravity-collaboration/STATUS_AND_ROADMAP.html",
+      "https://a275618631.github.io/codex-antigravity-collaboration/PRIVACY_AND_TRUST.html"
+    ],
+    "excerpt": "這則 Threads 值得保存，因為它把「多 AI 訂閱怎麼搭配使用」整理成可落地的 agent runtime 協作架構：Codex / ChatGPT 做主控與驗收，Gemini / Antigravity 做大量 repo 掃描、coding、批次修改與測試，兩邊透過有限度委派與結果回報協作，而不是手動複製貼上。",
+    "slug": "2026-08-21-threads-wanmeow-codex-antigravity-dual-agent-architecture",
+    "html": "articles/2026-08-21-threads-wanmeow-codex-antigravity-dual-agent-architecture.html",
+    "markdown": "articles/2026/08/2026-08-21-threads-wanmeow-codex-antigravity-dual-agent-architecture.md"
+  },
+  {
     "title": "Threads｜余晟力推薦 awesome-agentic-ai-zh：繁中 AI Agent 學習地圖與 240+ 資源",
     "date": "2026-08-21",
     "source": "https://www.threads.com/@yushengli1105/post/DcOp60nGgJz",
