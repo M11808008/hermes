@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="20%" cy="10%" r="95%"><stop offset="0" stop-color="#ffe4ef"/><stop offset="0.38" stop-color="#1e293b"/><stop offset="1" stop-color="#05070d"/></radialGradient>
+    <linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#fb7185"/><stop offset="0.5" stop-color="#f59e0b"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.2" fill="none" stroke="#ffffff" stroke-width="2">
+    <path d="M80 500 C260 250 410 430 540 260 S780 115 930 320 1090 215 1140 150"/>
+    <path d="M120 420 C260 370 360 160 520 220 S680 500 860 405 965 155 1100 250"/>
+  </g>
+  <rect x="72" y="70" width="1056" height="490" rx="42" fill="#0f172a" opacity="0.9" stroke="#334155" filter="url(#shadow)"/>
+  <g transform="translate(110 108)">
+    <text x="0" y="0" dominant-baseline="hanging" fill="#fda4af" font-size="28" font-weight="800" letter-spacing="3" font-family="-apple-system,BlinkMacSystemFont,Noto Sans TC,Segoe UI,sans-serif">PRIVACY-FIRST TRAVEL ANIMATION</text>
+    <text x="0" y="82" fill="#f8fafc" font-size="58" font-weight="900" font-family="-apple-system,BlinkMacSystemFont,Noto Sans TC,Segoe UI,sans-serif">Ahn Lab / MahlerLab</text>
+    <text x="0" y="152" fill="#f8fafc" font-size="58" font-weight="900" font-family="-apple-system,BlinkMacSystemFont,Noto Sans TC,Segoe UI,sans-serif">Timeline Visualizer</text>
+    <text x="0" y="220" fill="#cbd5e1" font-size="28" font-family="-apple-system,BlinkMacSystemFont,Noto Sans TC,Segoe UI,sans-serif">Google Maps Timeline.json → Preview → Create MP4</text>
+    <text x="0" y="270" fill="#bae6fd" font-size="24" font-family="-apple-system,BlinkMacSystemFont,Noto Sans TC,Segoe UI,sans-serif">Timeline file stays in browser · Map tiles reveal selected areas to CARTO</text>
+  </g>
+  <g transform="translate(110 435)">
+    <rect width="190" height="56" rx="28" fill="#fb7185"/><text x="28" y="37" fill="#fff" font-size="23" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,Noto Sans TC,Segoe UI,sans-serif">iPhone Web</text>
+    <rect x="220" width="165" height="56" rx="28" fill="#111827" stroke="#475569"/><text x="248" y="37" fill="#e0f2fe" font-size="23" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,Noto Sans TC,Segoe UI,sans-serif">Android</text>
+    <rect x="415" width="235" height="56" rx="28" fill="#111827" stroke="#475569"/><text x="443" y="37" fill="#e0f2fe" font-size="23" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,Noto Sans TC,Segoe UI,sans-serif">No file upload</text>
+  </g>
+  <g transform="translate(930 380)">
+    <circle cx="78" cy="78" r="74" fill="#fff7fa"/>
+    <path d="M28 98c39-12 55-84 103-79 44 5 46 69 89 55" fill="none" stroke="url(#line)" stroke-width="16" stroke-linecap="round" transform="scale(.75) translate(0 15)"/>
+    <circle cx="78" cy="78" r="18" fill="#fb7185"/>
+  </g>
+</svg>

@@ -1,5 +1,39 @@
 [
   {
+    "title": "Threads｜g.w.battle 分享 Ahn Lab Google Timeline Visualizer：用 Timeline.json 產生旅程 MP4",
+    "date": "2026-08-21",
+    "source": "https://www.threads.com/@g.w.battle/post/DcSN6WGE_El",
+    "author": "g.w.battle／@g.w.battle；工具：MahlerLab / mahlernim",
+    "type": "article",
+    "topics": [
+      "Google Maps",
+      "Timeline Visualizer",
+      "Timeline.json",
+      "旅遊紀錄",
+      "位置資料",
+      "MP4",
+      "iPhone",
+      "Android",
+      "隱私",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@g.w.battle/post/DcSN6WGE_El",
+      "https://www.threads.com/share/_y1DFvqQ2/",
+      "https://www.threads.com/@g.w.battle/post/DcSN6WGE_El",
+      "https://ahn-lab.org/google-timeline-visualizer/",
+      "https://github.com/mahlernim/google-timeline-visualizer",
+      "https://github.com/mahlernim/google-timeline-visualizer/blob/main/docs/privacy-web.md"
+    ],
+    "excerpt": "這則 Threads 只貼出工具連結，但值得和前一則 Google Maps Timeline Visualizer 使用案例一起保存：Ahn Lab / MahlerLab 的 `Timeline Visualizer` 是一個把 Google Maps `Timeline.json` 轉成旅程動畫 MP4 的工具，主打在瀏覽器本機處理 Timeline 檔案，不需要登入帳號或上傳完整位置歷史。",
+    "slug": "2026-08-21-threads-gwbattle-ahn-lab-google-timeline-visualizer-privacy",
+    "html": "articles/2026-08-21-threads-gwbattle-ahn-lab-google-timeline-visualizer-privacy.html",
+    "markdown": "articles/2026/08/2026-08-21-threads-gwbattle-ahn-lab-google-timeline-visualizer-privacy.md"
+  },
+  {
     "title": "Threads｜tedzted：Google Maps Timeline Visualizer 年度移動地圖與匯出教學",
     "date": "2026-08-21",
     "source": "https://www.threads.com/@tedzted/post/DcQ_DMEDOpc",

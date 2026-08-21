@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜g.w.battle 分享 Ahn Lab Google Timeline Visualizer：用 Timeline.json 產生旅程 MP4</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜g.w.battle 分享 Ahn Lab Google Timeline Visualizer：用 Timeline.json 產生旅程 MP4</h1><figure><img src="../assets/source-images/2026-08-21-threads-gwbattle-ahn-lab-google-timeline-visualizer-privacy-card.svg" alt="Ahn Lab Google Timeline Visualizer 備忘卡" loading="lazy" referrerpolicy="no-referrer"><figcaption>Ahn Lab Google Timeline Visualizer 備忘卡</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這則 Threads 只貼出工具連結，但值得和前一則 Google Maps Timeline Visualizer 使用案例一起保存：Ahn Lab / MahlerLab 的 `Timeline Visualizer` 是一個把 Google Maps `Timeline.json` 轉成旅程動畫 MP4 的工具，主打在瀏覽器本機處理 Timeline 檔案，不需要登入帳號或上傳完整位置歷史。</p>
+<h2>工具資訊</h2>
+<ul>
+<li>工具網址：<a href="https://ahn-lab.org/google-timeline-visualizer/" target="_blank" rel="noopener">https://ahn-lab.org/google-timeline-visualizer/</a></li>
+<li>GitHub repo：<a href="https://github.com/mahlernim/google-timeline-visualizer" target="_blank" rel="noopener">https://github.com/mahlernim/google-timeline-visualizer</a></li>
+<li>官方描述：Visualize your year in travel using your Google Location History / Timeline data。</li>
+<li>Web app meta description：Create a travel animation privately from a Google Maps Timeline export。</li>
+<li>GitHub 狀態：歸檔時約 2002 stars、216 forks，repo metadata 更新日 2026-08-21。</li>
+</ul>
+<h2>iPhone Web App 使用流程</h2>
+<p>根據官方 README 與網頁內容，iPhone 使用者可用 Safari 開啟 web app：</p>
+<ul>
+<li>在 Google Maps 開啟個人頭像。</li>
+<li>進入 Settings → Personal content → Export Timeline data。</li>
+<li>將 `Timeline.json` 存到 Files app。</li>
+<li>回到 Ahn Lab web app，選擇 `Choose Timeline.json`。</li>
+<li>選擇月份範圍或精確日期、camera movement，並確認 map privacy notice。</li>
+<li>預覽旅程後點選 `Create MP4`。</li>
+<li>播放、分享或下載完成的影片。</li>
+</ul>
+<p>官方提醒：MP4 產生需要 Safari 16.4 或更新版本與 H.264 encoding 支援；影片產生時需保持分頁開啟。</p>
+<h2>Android 路線</h2>
+<p>GitHub README 也提供 Android app 路線：目前不在 Google Play，可從 GitHub releases 下載 APK。Android 的 Timeline 匯出路徑在手機系統設定中：</p>
+<ul>
+<li>Phone Settings。</li>
+<li>Location → Location services → Timeline。</li>
+<li>Export Timeline data → Continue。</li>
+<li>將 `Timeline.json` 存到容易找到的位置，例如 Downloads。</li>
+</ul>
+<p>如果是一般使用者，建議先用 iPhone web app 或官方 release 來源；避免從不明 APK 站下載同名工具。</p>
+<h2>隱私檢查重點</h2>
+<p>官方 privacy 文件說明：</p>
+<ul>
+<li>Web app 只讀取使用者明確選擇的 `Timeline.json`。</li>
+<li>Timeline 檔案、路線座標、選取日期、標題、video frames、產生的 MP4 不會上傳到開發者或 application server。</li>
+<li>影片處理與 MP4 creation 發生在 browser tab。</li>
+<li>Web app 不要求 Google account、裝置 location permission、contacts、photos、advertising identifier 或 broad file permission。</li>
+<li>站台由 GitHub Pages / Cloudflare 提供，因此一般網路請求仍會暴露 IP、user agent、請求頁面與時間等標準資訊。</li>
+<li>接受地圖隱私提示後，web app 會向 CARTO 請求 raster map tiles；tile identifiers 對應到旅程中的地理區域，可能讓 CARTO 推知所選旅程涵蓋的地區。</li>
+</ul>
+<h2>使用建議</h2>
+<ul>
+<li>先用 fictional sample journey 測試介面，不要一開始就載入完整真實 Timeline。</li>
+<li>如果要公開影片，避免暴露住家、公司、學校、常去醫療院所等敏感地點。</li>
+<li>儘量只選旅行區間或需要回顧的日期，不要一口氣匯入、輸出完整年度私人軌跡。</li>
+<li>使用後清理下載資料夾、雲端同步資料夾與分享暫存檔。</li>
+<li>若使用 Android APK，只從 GitHub repo 的 latest release 下載，並在安裝後關閉「允許未知來源安裝」。</li>
+</ul>
+<h2>和前一則 Timeline Visualizer 貼文的關係</h2>
+<p>前一則 tedzted 貼文提供「Google Maps 時間軸匯出與年度移動地圖」的使用情境；這則 g.w.battle 貼文則補上實際工具網址。兩則合在一起，可以形成完整工作流：匯出 `Timeline.json` → 用 Ahn Lab / Timeline Visualizer 預覽 → 產生 MP4 → 分享前做隱私遮蔽。</p>
+<h2>原始連結</h2>
+<p>Threads：</p>
+<p><a href="https://www.threads.com/@g.w.battle/post/DcSN6WGE_El" target="_blank" rel="noopener">https://www.threads.com/@g.w.battle/post/DcSN6WGE_El</a></p>
+<p>工具網址：</p>
+<p><a href="https://ahn-lab.org/google-timeline-visualizer/" target="_blank" rel="noopener">https://ahn-lab.org/google-timeline-visualizer/</a></p>
+<p>GitHub repo：</p>
+<p><a href="https://github.com/mahlernim/google-timeline-visualizer" target="_blank" rel="noopener">https://github.com/mahlernim/google-timeline-visualizer</a></p>
+<p>Web app privacy：</p>
+<p><a href="https://github.com/mahlernim/google-timeline-visualizer/blob/main/docs/privacy-web.md" target="_blank" rel="noopener">https://github.com/mahlernim/google-timeline-visualizer/blob/main/docs/privacy-web.md</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-21 · https://www.threads.com/@g.w.battle/post/DcSN6WGE_El · article</div><h3>標籤</h3><span class="tag">Google Maps</span><span class="tag">Timeline Visualizer</span><span class="tag">Timeline.json</span><span class="tag">旅遊紀錄</span><span class="tag">位置資料</span><span class="tag">MP4</span><span class="tag">iPhone</span><span class="tag">Android</span><span class="tag">隱私</span><span class="tag">Threads</span><h3>原始連結</h3><p><a href="https://www.threads.com/@g.w.battle/post/DcSN6WGE_El" target="_blank" rel="noopener">https://www.threads.com/@g.w.battle/post/DcSN6WGE_El</a></p><p><a href="https://www.threads.com/share/_y1DFvqQ2/" target="_blank" rel="noopener">https://www.threads.com/share/_y1DFvqQ2/</a></p><p><a href="https://www.threads.com/@g.w.battle/post/DcSN6WGE_El" target="_blank" rel="noopener">https://www.threads.com/@g.w.battle/post/DcSN6WGE_El</a></p><p><a href="https://ahn-lab.org/google-timeline-visualizer/" target="_blank" rel="noopener">https://ahn-lab.org/google-timeline-visualizer/</a></p><p><a href="https://github.com/mahlernim/google-timeline-visualizer" target="_blank" rel="noopener">https://github.com/mahlernim/google-timeline-visualizer</a></p><p><a href="https://github.com/mahlernim/google-timeline-visualizer/blob/main/docs/privacy-web.md" target="_blank" rel="noopener">https://github.com/mahlernim/google-timeline-visualizer/blob/main/docs/privacy-web.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
