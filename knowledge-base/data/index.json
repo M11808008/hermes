@@ -1,5 +1,39 @@
 [
   {
+    "title": "Threads｜余晟力推薦 awesome-agentic-ai-zh：繁中 AI Agent 學習地圖與 240+ 資源",
+    "date": "2026-08-21",
+    "source": "https://www.threads.com/@yushengli1105/post/DcOp60nGgJz",
+    "author": "余晟力／@yushengli1105；GitHub：WenyuChiou",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "Agentic AI",
+      "學習路線圖",
+      "Claude Code",
+      "Codex",
+      "MCP",
+      "Skills",
+      "Multi-Agent",
+      "GitHub",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@yushengli1105/post/DcOp60nGgJz",
+      "https://www.threads.com/share/BAWFnmJIOV/",
+      "https://www.threads.com/@yushengli1105/post/DcOp60nGgJz",
+      "https://github.com/WenyuChiou/awesome-agentic-ai-zh",
+      "https://wenyuchiou.github.io/awesome-agentic-ai-zh/",
+      "https://raw.githubusercontent.com/WenyuChiou/awesome-agentic-ai-zh/main/README.md"
+    ],
+    "excerpt": "這則 Threads 值得保存，因為它指向一份很適合中文使用者的 AI Agent 系統化自學地圖：`awesome-agentic-ai-zh` 不只列工具清單，而是把 LLM 基礎、prompt、tool use、agent framework、Claude Code 生態、RAG / memory、multi-agent production、Computer Use / Browser / Sandbox 拆成可循序完成的學習路線。",
+    "slug": "2026-08-21-threads-yushengli-awesome-agentic-ai-zh-learning-roadmap",
+    "html": "articles/2026-08-21-threads-yushengli-awesome-agentic-ai-zh-learning-roadmap.html",
+    "markdown": "articles/2026/08/2026-08-21-threads-yushengli-awesome-agentic-ai-zh-learning-roadmap.md"
+  },
+  {
     "title": "ETtoday｜Gemini 學生免費方案：Google AI Plus 與 400GB 儲存空間免費一年",
     "date": "2026-08-20",
     "source": "https://ai.ettoday.net/news/3222411?from=ettoday_app",
