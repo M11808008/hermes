@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜Leo Fong：Qwen3.8-27B-Uncensored 與未過濾模型的紅隊測試邊界",
+    "date": "2026-08-25",
+    "source": "Threads",
+    "author": "Leo Fong AI（@leofongai）",
+    "type": "social-post",
+    "topics": [
+      "模型與平台",
+      "Local LLM",
+      "Red Teaming",
+      "AI Safety",
+      "Hugging Face",
+      "Qwen"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAWlLd4y8L/",
+      "https://www.threads.com/@leofongai/post/DcZ9k2ODOWu",
+      "https://huggingface.co/models?search=Qwen3.8-27B-Uncensored",
+      "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8",
+      "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX",
+      "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF"
+    ],
+    "excerpt": "Leo Fong 在 Threads 分享 Qwen3.8-27B-Uncensored，指出這類「未過濾」模型可用於提示詞與安全邊界測試，但同時需要明確使用界線；這則適合歸檔為本地模型、紅隊測試與 AI safety 教學案例。",
+    "slug": "2026-08-25-threads-leofongai-qwen38-27b-uncensored-red-team",
+    "html": "articles/2026-08-25-threads-leofongai-qwen38-27b-uncensored-red-team.html",
+    "markdown": "articles/2026/08/2026-08-25-threads-leofongai-qwen38-27b-uncensored-red-team.md"
+  },
+  {
     "title": "travel-memory-sticker-card：把旅遊照片變成復古貼紙小卡",
     "date": "2026-08-24",
     "source": "Threads",
