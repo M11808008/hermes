@@ -1,5 +1,34 @@
 [
   {
+    "title": "Facebook｜洪旭亮：AI 簡報生成助理 Codex Skill，可從教材與逐字稿產生 PPTX",
+    "date": "2026-08-25",
+    "source": "Facebook",
+    "author": "洪旭亮",
+    "type": "social-post",
+    "topics": [
+      "AI Agent / 自動化",
+      "Codex",
+      "Agent Skill",
+      "簡報生成",
+      "教學設計",
+      "Gemini Notebook",
+      "課程素材"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1DZSFHYops/?mibextid=wwXIfr",
+      "https://www.facebook.com/story.php?story_fbid=10164660851694784&id=680099783",
+      "https://github.com/hsuliang/generate-ai-presentations-skill",
+      "https://github.com/hsuliang/generate-ai-presentations-skill/tree/main/skills/generate-ai-presentations"
+    ],
+    "excerpt": "洪旭亮把自己常用的「AI 簡報製作流程」整理成開放使用的 Codex Skill：`generate-ai-presentations`。它可把 Markdown、逐字稿、課程筆記、Word、PDF、網頁文章或既有投影片文字，轉成 16:9 簡報圖片、PPTX、逐頁圖片生成提示詞與完整簡報規劃表。",
+    "slug": "2026-08-25-facebook-hsuliang-generate-ai-presentations-codex-skill",
+    "html": "articles/2026-08-25-facebook-hsuliang-generate-ai-presentations-codex-skill.html",
+    "markdown": "articles/2026/08/2026-08-25-facebook-hsuliang-generate-ai-presentations-codex-skill.md"
+  },
+  {
     "title": "Threads｜Leo Fong：Qwen3.8-27B-Uncensored 與未過濾模型的紅隊測試邊界",
     "date": "2026-08-25",
     "source": "Threads",
