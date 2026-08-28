@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">PhoneLLM Alpha 1 低延遲語音代理模型備忘卡</title>
+  <desc id="desc">深色科技風資訊卡，整理 PhoneLLM Alpha 1 的 voice agent 定位、Nemotron 3 Nano 基底、低延遲與成本 caveat。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#0b2537"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="30%" r="55%">
+      <stop offset="0" stop-color="#3dd6ff" stop-opacity="0.35"/>
+      <stop offset="0.48" stop-color="#7c3aed" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#glow)"/>
+  <g opacity="0.18" stroke="#91e7ff" stroke-width="1">
+    <path d="M80 565 C220 450, 320 475, 455 350 S720 175, 1120 120" fill="none"/>
+    <path d="M80 600 C260 520, 360 510, 520 405 S780 235, 1120 230" fill="none"/>
+    <path d="M80 515 C225 375, 390 415, 520 282 S750 115, 1120 70" fill="none"/>
+  </g>
+  <circle cx="900" cy="205" r="135" fill="#31d0ff" opacity="0.16" filter="url(#soft)"/>
+  <g transform="translate(830 118)">
+    <circle cx="88" cy="88" r="78" fill="#081625" stroke="#55e6ff" stroke-width="3"/>
+    <path d="M55 91 q33 -52 66 0" fill="none" stroke="#7df9ff" stroke-width="8" stroke-linecap="round"/>
+    <rect x="78" y="34" width="20" height="88" rx="10" fill="#7df9ff"/>
+    <path d="M58 130 h60" stroke="#a78bfa" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="53" cy="91" r="9" fill="#a78bfa"/>
+    <circle cx="123" cy="91" r="9" fill="#a78bfa"/>
+  </g>
+  <text x="70" y="90" fill="#7df9ff" font-family="Inter, Noto Sans TC, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="3">AI 學習雷達｜Voice Agent</text>
+  <text x="70" y="158" fill="#ffffff" font-family="Inter, Noto Sans TC, Arial, sans-serif" font-size="58" font-weight="800">PhoneLLM Alpha 1</text>
+  <text x="70" y="215" fill="#dbeafe" font-family="Inter, Noto Sans TC, Arial, sans-serif" font-size="34" font-weight="700">為電話客服／即時語音代理調校的開源權重 LLM</text>
+  <g font-family="Inter, Noto Sans TC, Arial, sans-serif" font-size="26" fill="#e5f4ff">
+    <rect x="70" y="275" width="520" height="64" rx="18" fill="#0f2a3d" stroke="#2dd4bf" opacity="0.95"/>
+    <text x="100" y="316">基底：NVIDIA Nemotron 3 Nano 30B-A3B</text>
+    <rect x="70" y="360" width="520" height="64" rx="18" fill="#0f2a3d" stroke="#38bdf8" opacity="0.95"/>
+    <text x="100" y="401">重點：低延遲、工具呼叫、長對話一致性</text>
+    <rect x="70" y="445" width="520" height="64" rx="18" fill="#0f2a3d" stroke="#a78bfa" opacity="0.95"/>
+    <text x="100" y="486">注意：成本與併發數是特定硬體／負載估算</text>
+  </g>
+  <g transform="translate(680 330)" font-family="Inter, Noto Sans TC, Arial, sans-serif">
+    <text x="0" y="0" fill="#ffffff" font-size="30" font-weight="800">保存重點</text>
+    <text x="0" y="50" fill="#dbeafe" font-size="24">• PhoneBench 針對電話代理評測</text>
+    <text x="0" y="90" fill="#dbeafe" font-size="24">• 建議 temperature=0、關閉 thinking</text>
+    <text x="0" y="130" fill="#dbeafe" font-size="24">• vLLM / SGLang / Modal 可部署</text>
+    <text x="0" y="170" fill="#fef3c7" font-size="22">社群數字需回查 Hugging Face model card</text>
+  </g>
+  <text x="70" y="620" fill="#94a3b8" font-family="Inter, Noto Sans TC, Arial, sans-serif" font-size="20">Source: Threads @aiposthub + Hugging Face pipecat-ai/phonellm-alpha-1</text>
+</svg>

@@ -1,5 +1,38 @@
 [
   {
+    "title": "Threads｜AI郵報：PhoneLLM Alpha 1，為低延遲電話語音代理打造的開源權重模型",
+    "date": "2026-08-28",
+    "source": "https://www.threads.com/share/BAPpiPhQZg/",
+    "author": "AI郵報／@aiposthub",
+    "type": "article",
+    "topics": [
+      "PhoneLLM",
+      "Voice Agent",
+      "Pipecat",
+      "Daily",
+      "NVIDIA Nemotron",
+      "Low Latency",
+      "Tool Calling",
+      "Open Weights",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DckzkgWEUQa",
+      "https://www.threads.com/share/BAPpiPhQZg/",
+      "https://www.threads.com/@aiposthub/post/DckzkgWEUQa",
+      "https://huggingface.co/pipecat-ai/phonellm-alpha-1",
+      "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+      "https://www.daily.co/blog/building-voice-agents-with-nvidia-open-models/"
+    ],
+    "excerpt": "PhoneLLM Alpha 1 值得保存，因為它把語音代理的焦點從「模型多會深度思考」移到「電話場景能不能低延遲、穩定 tool calling、長對話不跑題」，代表 voice agent 可能開始進入專用小模型與基礎建設優化的競爭階段。",
+    "slug": "2026-08-28-threads-aiposthub-phonellm-alpha-1-low-latency-voice-agent",
+    "html": "articles/2026-08-28-threads-aiposthub-phonellm-alpha-1-low-latency-voice-agent.html",
+    "markdown": "articles/2026/08/2026-08-28-threads-aiposthub-phonellm-alpha-1-low-latency-voice-agent.md"
+  },
+  {
     "title": "Threads｜軟體玩家：Google Antigravity 登陸 VS Code，官方延伸模組把 AI Agent 帶回原本編輯器",
     "date": "2026-08-28",
     "source": "https://www.threads.com/share/BAWr8UzhsS/",
