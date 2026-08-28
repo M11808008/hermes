@@ -1,5 +1,37 @@
 [
   {
+    "title": "Threads｜軟體玩家：Google Antigravity 登陸 VS Code，官方延伸模組把 AI Agent 帶回原本編輯器",
+    "date": "2026-08-28",
+    "source": "https://www.threads.com/share/BAWr8UzhsS/",
+    "author": "軟體玩家／@software.player",
+    "type": "article",
+    "topics": [
+      "Google Antigravity",
+      "VS Code",
+      "AI Agent",
+      "Gemini",
+      "Claude",
+      "MCP",
+      "IDE",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@software.player/post/DckffxGkg2v",
+      "https://www.threads.com/share/BAWr8UzhsS/",
+      "https://www.threads.com/@software.player/post/DckffxGkg2v",
+      "https://pcrookie.com/google-antigravity-vscode-extension-guide/",
+      "https://antigravity.google/docs/ide/extensions/vscode/",
+      "https://marketplace.visualstudio.com/items?itemName=Google.google-antigravity"
+    ],
+    "excerpt": "Google 已把 Antigravity 做成官方 VS Code 延伸模組；對已經住在 VS Code 的開發者來說，重點不是再換一套 IDE，而是把 Gemini、Claude、subagents、inline diff、MCP 與用量檢視帶進原本工作環境。",
+    "slug": "2026-08-28-threads-software-player-google-antigravity-vscode-extension",
+    "html": "articles/2026-08-28-threads-software-player-google-antigravity-vscode-extension.html",
+    "markdown": "articles/2026/08/2026-08-28-threads-software-player-google-antigravity-vscode-extension.md"
+  },
+  {
     "title": "旅程任意門｜Club Avolta 免稅店會籍可配對 Radisson 麗笙酒店會籍",
     "date": "2026-08-26",
     "source": "https://www.facebook.com/share/p/19Mt5DdFz9/?mibextid=wwXIfr",
