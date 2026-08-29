@@ -1,5 +1,37 @@
 [
   {
+    "title": "Threads｜Jin Xiong：為什麼 AI Agent 開發很難學？技術只是入口，真正難的是情境與流程",
+    "date": "2026-08-29",
+    "source": "https://www.threads.com/share/BAPUkr3WeV/",
+    "author": "Jin Xiong／@jin683014",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "Harness Engineering",
+      "Agent Architecture",
+      "Tools",
+      "Memory",
+      "Skill",
+      "MCP",
+      "Enterprise Workflow",
+      "AI 應用開發",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@jin683014/post/Dcie037kiKh",
+      "https://www.threads.com/share/BAPUkr3WeV/",
+      "https://www.threads.com/@jin683014/post/Dcie037kiKh",
+      "https://github.com/hardness1020/awesome-agent-architecture"
+    ],
+    "excerpt": "AI Agent 開發的學習難點不在「會不會串幾個工具」，而在於能否把 agent loop、工具、記憶、技能、MCP、權限與檢查機制，落到真實企業流程、工廠現場與可驗證的任務閉環。",
+    "slug": "2026-08-29-threads-jin683014-ai-agent-development-hard",
+    "html": "articles/2026-08-29-threads-jin683014-ai-agent-development-hard.html",
+    "markdown": "articles/2026/08/2026-08-29-threads-jin683014-ai-agent-development-hard.md"
+  },
+  {
     "title": "Threads｜AI郵報：PhoneLLM Alpha 1，為低延遲電話語音代理打造的開源權重模型",
     "date": "2026-08-28",
     "source": "https://www.threads.com/share/BAPpiPhQZg/",
