@@ -18452,6 +18452,39 @@
     "markdown": "articles/2025/12/2025-12-28-threads-heyduncannn-nano-banana-pro-prompts-case-library.md"
   },
   {
+    "title": "KiKiNote｜Google Gemini Nano Banana 公仔生成教學：用照片做 1/7 寫實角色手辦",
+    "date": "2025-09-03",
+    "source": "https://kikinote.net/163694",
+    "author": "KiKiNote／奇奇筆記",
+    "type": "article",
+    "topics": [
+      "Google Gemini",
+      "Nano Banana",
+      "AI 繪圖",
+      "AI 生圖",
+      "Prompt",
+      "3D 公仔",
+      "手辦",
+      "Google AI Studio",
+      "Image Generation",
+      "KiKiNote"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://kikinote.net/163694",
+      "https://kikinote.net/163694",
+      "https://aistudio.google.com/u/1/prompts/new_chat",
+      "https://apps.apple.com/us/app/google-gemini/id6477489729",
+      "https://play.google.com/store/apps/details?id=com.google.android.apps.bard&hl=zh_TW"
+    ],
+    "excerpt": "這篇教學示範如何用 Google AI Studio / Gemini 的 Nano Banana 圖片生成模型，把上傳的人物或角色照片轉成寫實 1/7 比例 3D 公仔手辦；核心價值在於 prompt 已把比例、材質、桌面情境、燈光、ZBrush 建模背景與外盒包裝一次指定清楚。",
+    "slug": "2025-09-03-kikinote-google-gemini-nano-banana-figurine-prompt",
+    "html": "articles/2025-09-03-kikinote-google-gemini-nano-banana-figurine-prompt.html",
+    "markdown": "articles/2025/09/2025-09-03-kikinote-google-gemini-nano-banana-figurine-prompt.md"
+  },
+  {
     "title": "食神鬍子哥｜台北宵夜 15 家清單（一）：北投、萬華、中山、大同深夜食堂索引",
     "date": "2025-07-01",
     "source": "https://eatfoodgod.com/eating-guide/taipei-midnight-snack-1/",
