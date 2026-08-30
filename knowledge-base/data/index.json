@@ -1,5 +1,39 @@
 [
   {
+    "title": "Facebook｜AI教學運用交流：Gemini Notebook 任務神助手與 Google Workspace Studio 學習資源",
+    "date": "2026-08-30",
+    "source": "https://www.facebook.com/share/p/1GJ444GUCe/",
+    "author": "蘇秦／AI教學運用交流",
+    "type": "article",
+    "topics": [
+      "Google Workspace",
+      "Gemini",
+      "Notebook",
+      "Google Workspace Studio",
+      "AI 教學",
+      "教學應用",
+      "Learning Center",
+      "個人帳號限制",
+      "Facebook",
+      "教師工具"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/176477159626940/posts/2076636262944344/",
+      "https://www.facebook.com/share/p/1GJ444GUCe/",
+      "https://www.facebook.com/groups/176477159626940/posts/2076636262944344/",
+      "https://support.google.com/a/users/?hl=en&sjid=1158682511564903441-NC#topic=11499463",
+      "https://support.google.com/a/users/?hl=zh-Hant#topic=11499463",
+      "https://workspace.google.com/"
+    ],
+    "excerpt": "這則貼文分享「Gemini Notebook 任務神助手」與 Google Workspace Studio 相關學習資源，重點提醒是：在把 Gemini / Workspace AI 功能帶進教學或工作流程前，要先確認個人帳號與 Workspace 帳號的使用限制。",
+    "slug": "2026-08-30-facebook-ai-teaching-google-workspace-studio-gemini-notebook",
+    "html": "articles/2026-08-30-facebook-ai-teaching-google-workspace-studio-gemini-notebook.html",
+    "markdown": "articles/2026/08/2026-08-30-facebook-ai-teaching-google-workspace-studio-gemini-notebook.md"
+  },
+  {
     "title": "Threads｜AI 焦慮所：Zeabur 用戶半小時遷移到 Cloudflare，Claude Code / Codex + MCP 降低 Vibe Coding 維運門檻",
     "date": "2026-08-30",
     "source": "https://www.threads.com/share/BAR4Ip4QT9/",
