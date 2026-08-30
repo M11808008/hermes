@@ -1,5 +1,39 @@
 [
   {
+    "title": "Threads｜AI 焦慮所：Zeabur 用戶半小時遷移到 Cloudflare，Claude Code / Codex + MCP 降低 Vibe Coding 維運門檻",
+    "date": "2026-08-30",
+    "source": "https://www.threads.com/share/BAR4Ip4QT9/",
+    "author": "AI 焦慮所／@ainxiety.lab",
+    "type": "article",
+    "topics": [
+      "Zeabur",
+      "Cloudflare",
+      "Claude Code",
+      "Codex",
+      "MCP",
+      "Vibe Coding",
+      "DevOps",
+      "Deployment",
+      "PaaS",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48",
+      "https://www.threads.com/share/BAR4Ip4QT9/",
+      "https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48",
+      "https://www.cloudflare.com/",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.html",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.html"
+    ],
+    "excerpt": "Zeabur 事件後，AI 焦慮所分享自己把服務遷移到 Cloudflare 的經驗：原本因為已訂閱 Zeabur 近兩年、花費數百美金而拖延搬家，但在 Claude Code、Codex 與 MCP 協助下，約半小時完成移植，並在 Cloudflare 免費方案內順利運行。",
+    "slug": "2026-08-30-threads-ainxiety-lab-zeabur-to-cloudflare-mcp-vibe-coding",
+    "html": "articles/2026-08-30-threads-ainxiety-lab-zeabur-to-cloudflare-mcp-vibe-coding.html",
+    "markdown": "articles/2026/08/2026-08-30-threads-ainxiety-lab-zeabur-to-cloudflare-mcp-vibe-coding.md"
+  },
+  {
     "title": "Threads｜Harold 哈洛：Zeabur 金鑰外洩後被迫搬家到 Railway，反而重估部署成本與 GPT 協作維運",
     "date": "2026-08-30",
     "source": "https://www.threads.com/share/BATuZS4Hy6/",

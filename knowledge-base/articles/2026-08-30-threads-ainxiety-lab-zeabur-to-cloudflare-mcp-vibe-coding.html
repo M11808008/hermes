@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜AI 焦慮所：Zeabur 用戶半小時遷移到 Cloudflare，Claude Code / Codex + MCP 降低 Vibe Coding 維運門檻</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜AI 焦慮所：Zeabur 用戶半小時遷移到 Cloudflare，Claude Code / Codex + MCP 降低 Vibe Coding 維運門檻</h1><figure><img src="../assets/source-images/2026-08-30-threads-ainxiety-lab-zeabur-to-cloudflare-mcp-vibe-coding-card.svg" alt="Zeabur 遷移到 Cloudflare 的 Vibe Coding DevOps 備忘卡" loading="lazy" referrerpolicy="no-referrer"><figcaption>Zeabur 遷移到 Cloudflare 的 Vibe Coding DevOps 備忘卡</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>Zeabur 事件後，AI 焦慮所分享自己把服務遷移到 Cloudflare 的經驗：原本因為已訂閱 Zeabur 近兩年、花費數百美金而拖延搬家，但在 Claude Code、Codex 與 MCP 協助下，約半小時完成移植，並在 Cloudflare 免費方案內順利運行。</p>
+<h2>來源脈絡</h2>
+<ul>
+<li>來源：AI 焦慮所（@ainxiety.lab）Threads 分享。</li>
+<li>連結：<a href="https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48" target="_blank" rel="noopener">https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48</a></li>
+<li>可見資訊：約 1.6K views，標籤包含 `zeabur`。</li>
+<li>事件背景：Zeabur 環境變數外洩與 AI API Key 遭盜用事件後，已有使用者開始把服務搬到 Railway 或 Cloudflare 等平台。</li>
+</ul>
+<h2>貼文重點</h2>
+<p>AI 焦慮所用「Cloudflare 完全治好了我的拖延症」描述這次遷移：</p>
+<ul>
+<li>訂閱 Zeabur 將近兩年，累積花費數百美金。</li>
+<li>原本想到要把服務遷移到別的平台就覺得很痛苦，因此一直拖延。</li>
+<li>Claude Code 與 Codex 都可以連接 MCP，用自然語言方式部署。</li>
+<li>遇到版本或環境問題時，不需要自己逐一排查，對 Vibe Coding 新手很友善。</li>
+<li>約半小時完成移植，服務已在 Cloudflare 上順利運行。</li>
+<li>目前仍在免費方案額度內，沒有額外費用，作者也認為安全性相對更有保障。</li>
+</ul>
+<h2>為什麼值得保存</h2>
+<p>這則貼文是 Zeabur 事件後的第二種用戶遷移樣本：前一則 Harold 哈洛分享搬到 Railway，這則則是搬到 Cloudflare。兩者共同顯示，安全事件不只造成「撤銷金鑰」這種短期補救，也會推動使用者重新選擇部署平台。</p>
+<p>更重要的是，AI coding agent 正在改變平台遷移的成本結構。過去開發者會因為環境差異、版本衝突、設定檔、部署流程與 DNS / domain 設定而拖延搬家；現在 Claude Code、Codex 若能透過 MCP 或平台 CLI 取得足夠上下文，就可以把很多摩擦轉成自然語言協作。</p>
+<h2>對 Vibe Coding 與課程設計的啟發</h2>
+<p>這則很適合放在「AI 協作維運」或「Vibe Coding 到 production」單元：</p>
+<ul>
+<li>不只教學生如何把 demo 做出來，也要教如何遷移、部署、排錯與控管成本。</li>
+<li>MCP / CLI / 文件清晰度會成為平台是否適合 AI agent 操作的重要指標。</li>
+<li>Cloudflare、Railway、Zeabur 這類平台的比較，不只看免費額度，也要看安全模型、環境變數治理、日誌、rollback、domain / DNS 整合與 agent 可操作性。</li>
+<li>對新手來說，AI agent 可把「看不懂錯誤訊息」降低為「描述需求，讓 agent 讀 log 與改設定」的流程。</li>
+</ul>
+<h2>建議行動</h2>
+<p>若團隊近期也想從 Zeabur 或其他 PaaS 遷移，可以把這則心得轉成檢查清單：</p>
+<ul>
+<li>先盤點服務類型：靜態站、API、背景 worker、資料庫、排程任務分開看。</li>
+<li>對每個服務建立可重現部署文件：環境變數、build command、start command、port、domain、資料庫連線。</li>
+<li>讓 Claude Code / Codex 讀取部署文件與錯誤 log，再協助產生 Cloudflare / Railway / 其他平台設定。</li>
+<li>遷移完成後，做 smoke test、費用檢查、流量限制與 secrets 輪替。</li>
+<li>保留 rollback 路徑，不要在新平台尚未驗證前刪除舊服務。</li>
+</ul>
+<h2>與前兩則 Zeabur 歸檔的關係</h2>
+<p>這則可與兩篇既有歸檔互相參照：</p>
+<ul>
+<li>Zeabur 事件背景：<a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.html</a></li>
+<li>Zeabur ➜ Railway 遷移心得：<a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.html</a></li>
+</ul>
+<p>三則合起來形成一條完整脈絡：平台憑證外洩 → 使用者輪替與撤離 → 使用者重新比較 Railway / Cloudflare 等替代部署方案 → AI coding agent 降低遷移門檻。</p>
+<h2>原始連結</h2>
+<p>Threads：</p>
+<p><a href="https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48" target="_blank" rel="noopener">https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48</a></p>
+<p>分享連結：</p>
+<p><a href="https://www.threads.com/share/BAR4Ip4QT9/" target="_blank" rel="noopener">https://www.threads.com/share/BAR4Ip4QT9/</a></p>
+<p>Cloudflare：</p>
+<p><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">https://www.cloudflare.com/</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-30 · https://www.threads.com/share/BAR4Ip4QT9/ · article</div><h3>標籤</h3><span class="tag">Zeabur</span><span class="tag">Cloudflare</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">MCP</span><span class="tag">Vibe Coding</span><span class="tag">DevOps</span><span class="tag">Deployment</span><span class="tag">PaaS</span><span class="tag">Threads</span><h3>原始連結</h3><p><a href="https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48" target="_blank" rel="noopener">https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48</a></p><p><a href="https://www.threads.com/share/BAR4Ip4QT9/" target="_blank" rel="noopener">https://www.threads.com/share/BAR4Ip4QT9/</a></p><p><a href="https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48" target="_blank" rel="noopener">https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48</a></p><p><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">https://www.cloudflare.com/</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.html</a></p><p><a href="https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.html" target="_blank" rel="noopener">https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.html</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
