@@ -1,5 +1,40 @@
 [
   {
+    "title": "INSIDE｜Zeabur 環境變數外洩：AI API Key 遭盜用後，團隊必須把「撤銷、輪替、帳單稽核」做成標準流程",
+    "date": "2026-08-29",
+    "source": "https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen",
+    "author": "Sisley／INSIDE",
+    "type": "article",
+    "topics": [
+      "Zeabur",
+      "資安事件",
+      "API Key",
+      "環境變數",
+      "OpenAI",
+      "Anthropic",
+      "OpenRouter",
+      "Cloud Security",
+      "Secret Management",
+      "AI Infrastructure"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen",
+      "https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen",
+      "https://status.zeabur.com/incident/1037896",
+      "https://zeabur.notion.site/3caa221c948e8063a998eb44bbdd2324",
+      "https://console.anthropic.com/settings/keys",
+      "https://platform.openai.com/api-keys",
+      "https://openrouter.ai/settings/keys"
+    ],
+    "excerpt": "Zeabur 這起事件提醒所有使用 AI API 與雲端部署平台的團隊：環境變數不是保險箱，一旦平台層級憑證或控制平面被突破，OpenAI、Anthropic、OpenRouter、Gemini、GitHub、AWS、Cloudflare、Stripe、資料庫連線字串與 JWT secret 都可能成為連鎖風險；補救的第一步不是「新增新 key」，而是「撤銷舊 key、重建、重新部署、查用量與帳單」。",
+    "slug": "2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen",
+    "html": "articles/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.html",
+    "markdown": "articles/2026/08/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.md"
+  },
+  {
     "title": "Threads｜Jin Xiong：為什麼 AI Agent 開發很難學？技術只是入口，真正難的是情境與流程",
     "date": "2026-08-29",
     "source": "https://www.threads.com/share/BAPUkr3WeV/",

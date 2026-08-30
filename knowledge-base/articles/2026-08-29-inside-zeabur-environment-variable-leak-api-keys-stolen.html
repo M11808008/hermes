@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>INSIDE｜Zeabur 環境變數外洩：AI API Key 遭盜用後，團隊必須把「撤銷、輪替、帳單稽核」做成標準流程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>INSIDE｜Zeabur 環境變數外洩：AI API Key 遭盜用後，團隊必須把「撤銷、輪替、帳單稽核」做成標準流程</h1><figure><img src="https://bucket-image.inkmaginecms.com/version/desktop/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/08/dcb2d921-f5bf-4af4-a69e-f661d1b94557.webp" alt="Zeabur 環境變數外洩新聞封面" loading="lazy" referrerpolicy="no-referrer"><figcaption>Zeabur 環境變數外洩新聞封面</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>Zeabur 這起事件提醒所有使用 AI API 與雲端部署平台的團隊：環境變數不是保險箱，一旦平台層級憑證或控制平面被突破，OpenAI、Anthropic、OpenRouter、Gemini、GitHub、AWS、Cloudflare、Stripe、資料庫連線字串與 JWT secret 都可能成為連鎖風險；補救的第一步不是「新增新 key」，而是「撤銷舊 key、重建、重新部署、查用量與帳單」。</p>
+<h2>來源脈絡</h2>
+<ul>
+<li>原文：INSIDE〈Zeabur 環境變數外洩！Anthropic、OpenAI、OpenRouter API 憑證遭盜用，官方公布輪替指南〉。</li>
+<li>作者：Sisley；發布時間：2026-08-29。</li>
+<li>事件時間：Zeabur 證實 2026-08-27 發生資安事件。</li>
+<li>官方狀態頁指出，攻擊路徑初步確認為：攻擊者取得 Zeabur 內部 AWS 管理憑證，存取東京區 shared AWS cluster，再取得 VPN / control-plane network 存取，最後連上 Zeabur primary database。</li>
+<li>官方輪替指南明確寫到：已實際觀察 Anthropic、OpenAI、OpenRouter 的 API 憑證遭到盜用。</li>
+</ul>
+<h2>事件重點</h2>
+<p>INSIDE 報導與 Zeabur 官方文件共同指向幾個關鍵風險：</p>
+<ul>
+<li>一組內部服務／AWS 管理憑證遭未授權存取，讓攻擊者能進一步取得部分使用者專案環境變數紀錄。</li>
+<li>暴露資料不只 AI API Key，也包含 GitHub、AWS、Cloudflare、Stripe 等服務 token，以及資料庫連線字串、密碼、JWT_Secret 等高敏感憑證。</li>
+<li>即使使用者自訂環境變數名稱，只要值本身符合 AWS、GitHub、Anthropic、OpenRouter、OpenAI 或 Stripe 等服務可辨識的憑證格式，官方也確認相關憑證曾暴露。</li>
+<li>Zeabur 已通知可能受影響使用者，並表示會配合上游廠商、執法機關與第三方資安調查，後續針對實際損失進行核實與賠償處理。</li>
+<li>Zeabur AI Hub 使用的 LiteLLM 也出現可疑活動，官方仍在確認是否與此次事件有關，因此暫停 AI Hub 服務。</li>
+</ul>
+<h2>對 AI 團隊最重要的處置清單</h2>
+<p>如果團隊曾在 Zeabur 或任何類似 PaaS / 部署平台存放 API Key，建議把這次事件轉成固定操作 SOP：</p>
+<ul>
+<li>立即撤銷舊金鑰：OpenAI、Anthropic、OpenRouter 等平台都要先 revoke 舊 key；只建立新 key 不會讓舊 key 失效。</li>
+<li>重建新金鑰：用最小權限、清楚命名、可追蹤用途的新 key 取代舊 key。</li>
+<li>更新部署環境：把新 key 更新到 Zeabur 專案或其他部署平台環境變數，重新部署使用該金鑰的服務。</li>
+<li>檢查用量與帳單：優先檢查 Anthropic、OpenAI、OpenRouter 的近期 usage、billing、rate limit 與異常請求。</li>
+<li>盤點非 AI 憑證：GitHub token、AWS key、Cloudflare token、Stripe key、database URL、Redis / MongoDB / MySQL / Postgres 密碼、JWT secret 也要同步輪替。</li>
+<li>建立事件紀錄：保留輪替時間、舊 key 撤銷證據、新 key 用途、異常帳單截圖與供應商申訴紀錄。</li>
+</ul>
+<h2>這則事件值得保存的原因</h2>
+<p>對 AI 學習雷達來說，這不是單一平台的新聞，而是「AI 原生團隊如何管理秘密」的典型案例。越多 vibe coding、agentic coding、no-code 部署與一鍵上雲流程被引入團隊，越容易把 API Key 當成貼到環境變數就結束的設定值。</p>
+<p>但 AI API Key 通常直接連到付費帳戶，且可被自動化腳本高速消耗；被盜用後的風險不只是資料外洩，也包含帳單爆量、服務額度耗盡、模型濫用與供應商帳號風控。這讓 secret management 從傳統 DevOps 問題，變成 AI 團隊日常營運與成本治理問題。</p>
+<h2>教學與導入啟發</h2>
+<p>這則適合納入 AI Agent / 自動化課程中的「工具治理與副作用」單元：</p>
+<ul>
+<li>Agent 能呼叫外部 API，就必須設計 key 權限邊界、預算上限與異常監控。</li>
+<li>Demo 專案與學生作品也需要 secrets hygiene，不能因為是教學或 prototype 就把 key 長期留在第三方環境變數中。</li>
+<li>平台方便性與控制平面風險要一起教：一鍵部署降低摩擦，但也集中化了秘密與權限。</li>
+<li>真正成熟的 AI workflow 不只會成功執行任務，也要能在憑證外洩時快速撤銷、輪替、重部署與驗證。</li>
+</ul>
+<h2>原始連結</h2>
+<p>INSIDE 原文：</p>
+<p><a href="https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen" target="_blank" rel="noopener">https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen</a></p>
+<p>Zeabur 官方事件頁：</p>
+<p><a href="https://status.zeabur.com/incident/1037896" target="_blank" rel="noopener">https://status.zeabur.com/incident/1037896</a></p>
+<p>Zeabur 憑證輪替指南：</p>
+<p><a href="https://zeabur.notion.site/3caa221c948e8063a998eb44bbdd2324" target="_blank" rel="noopener">https://zeabur.notion.site/3caa221c948e8063a998eb44bbdd2324</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-08-29 · https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen · article</div><h3>標籤</h3><span class="tag">Zeabur</span><span class="tag">資安事件</span><span class="tag">API Key</span><span class="tag">環境變數</span><span class="tag">OpenAI</span><span class="tag">Anthropic</span><span class="tag">OpenRouter</span><span class="tag">Cloud Security</span><span class="tag">Secret Management</span><span class="tag">AI Infrastructure</span><h3>原始連結</h3><p><a href="https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen" target="_blank" rel="noopener">https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen</a></p><p><a href="https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen" target="_blank" rel="noopener">https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen</a></p><p><a href="https://status.zeabur.com/incident/1037896" target="_blank" rel="noopener">https://status.zeabur.com/incident/1037896</a></p><p><a href="https://zeabur.notion.site/3caa221c948e8063a998eb44bbdd2324" target="_blank" rel="noopener">https://zeabur.notion.site/3caa221c948e8063a998eb44bbdd2324</a></p><p><a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">https://console.anthropic.com/settings/keys</a></p><p><a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">https://platform.openai.com/api-keys</a></p><p><a href="https://openrouter.ai/settings/keys" target="_blank" rel="noopener">https://openrouter.ai/settings/keys</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
