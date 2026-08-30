@@ -1,5 +1,38 @@
 [
   {
+    "title": "Threads｜Harold 哈洛：Zeabur 金鑰外洩後被迫搬家到 Railway，反而重估部署成本與 GPT 協作維運",
+    "date": "2026-08-30",
+    "source": "https://www.threads.com/share/BATuZS4Hy6/",
+    "author": "Harold 哈洛／@yuwinjhan",
+    "type": "article",
+    "topics": [
+      "Zeabur",
+      "Railway",
+      "API Key",
+      "資安事件",
+      "Secret Management",
+      "Deployment",
+      "DevOps",
+      "GPT",
+      "AI 協作維運",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@yuwinjhan/post/DcoXagIk36o",
+      "https://www.threads.com/share/BATuZS4Hy6/",
+      "https://www.threads.com/@yuwinjhan/post/DcoXagIk36o",
+      "https://railway.com/",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.html"
+    ],
+    "excerpt": "Zeabur 金鑰外洩事件讓部分使用者啟動「撤離與重部署」；Harold 哈洛分享自己把服務搬到 Railway.com 後，意外發現成本、部署流程與 GPT 協作維運都更順手，從一次資安補救轉成重新選型的契機。",
+    "slug": "2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration",
+    "html": "articles/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.html",
+    "markdown": "articles/2026/08/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.md"
+  },
+  {
     "title": "INSIDE｜Zeabur 環境變數外洩：AI API Key 遭盜用後，團隊必須把「撤銷、輪替、帳單稽核」做成標準流程",
     "date": "2026-08-29",
     "source": "https://www.inside.com.tw/article/42241-zeabur-environment-variable-leak-api-keys-stolen",

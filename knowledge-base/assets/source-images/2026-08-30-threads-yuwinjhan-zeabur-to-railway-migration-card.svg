@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="0.55" stop-color="#0f172a"/><stop offset="1" stop-color="#020617"/></linearGradient>
+    <radialGradient id="glow" cx="35%" cy="20%" r="70%"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.32"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g filter="url(#shadow)">
+    <rect x="80" y="90" width="1040" height="450" rx="36" fill="#0b1220" stroke="#334155"/>
+    <text x="120" y="155" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="28" fill="#fbbf24" letter-spacing="4">AI 學習雷達 · 部署治理</text>
+    <text x="120" y="230" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="54" font-weight="800" fill="#f8fafc">Zeabur 金鑰外洩後</text>
+    <text x="120" y="296" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="54" font-weight="800" fill="#f8fafc">被迫搬家到 Railway</text>
+    <g transform="translate(130 350)">
+      <rect x="0" y="0" width="250" height="86" rx="24" fill="#172554" stroke="#38bdf8"/>
+      <text x="125" y="55" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="32" fill="#dbeafe">Zeabur</text>
+      <path d="M295 43 H430" stroke="#fbbf24" stroke-width="10" stroke-linecap="round"/>
+      <path d="M430 43 l-32 -22 v44 z" fill="#fbbf24"/>
+      <rect x="480" y="0" width="270" height="86" rx="24" fill="#14532d" stroke="#86efac"/>
+      <text x="615" y="55" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="32" fill="#dcfce7">Railway</text>
+    </g>
+    <text x="120" y="490" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="28" fill="#cbd5e1">從災難復原，延伸到成本、維運與 GPT 協作流程重新評估</text>
+  </g>
+</svg>
