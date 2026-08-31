@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#111827"/><stop offset="0.48" stop-color="#3f3b33"/><stop offset="1" stop-color="#d6b78a"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect x="72" y="70" width="1056" height="490" rx="42" fill="#0b1020" opacity="0.72"/>
+<text x="110" y="136" fill="#fde68a" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="26" letter-spacing="4">PROMPT RADAR · THREADS</text>
+<text x="110" y="214" fill="#fff" font-family="Georgia,'Noto Serif TC',serif" font-size="56" font-weight="700">Luxury Travel Poster Prompt</text>
+<text x="110" y="282" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="31">35% 精品徽章海報 + 65% 原始照片保留</text>
+<text x="110" y="354" fill="#cbd5e1" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="27">旅行照片 → 安靜奢華風 IG carousel / 旅遊品牌視覺</text>
+<g transform="translate(110 410)"><rect width="245" height="64" rx="32" fill="#1f2937"/><text x="34" y="42" fill="#fef3c7" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">collectible magnet</text><rect x="270" width="210" height="64" rx="32" fill="#1f2937"/><text x="304" y="42" fill="#fef3c7" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">enamel pin</text><rect x="505" width="250" height="64" rx="32" fill="#1f2937"/><text x="539" y="42" fill="#fef3c7" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">quiet luxury</text></g>
+<text x="110" y="530" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="22">Luarn-Pin Knowledge Base · AI 學習雷達</text>
+</svg>
