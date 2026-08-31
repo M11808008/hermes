@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="0.48" stop-color="#11233a"/><stop offset="1" stop-color="#3b2f14"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1010" cy="120" r="210" fill="#d8b46a" opacity="0.12"/>
+  <circle cx="130" cy="530" r="260" fill="#7dd3fc" opacity="0.10"/>
+  <rect x="74" y="70" width="1052" height="490" rx="42" fill="rgba(9,13,22,.72)" stroke="#d8b46a" stroke-width="2"/>
+  <text x="110" y="142" fill="#d8b46a" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="30" letter-spacing="7">TRAVEL RADAR</text>
+  <text x="110" y="238" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="60" font-weight="800">台灣護照歐洲 e-Gate 備忘</text>
+  <text x="110" y="318" fill="#cbd5e1" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="34">法國 PARAFE 出境實測與各國條件整理</text>
+  <g fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="30">
+    <text x="122" y="410">• 法國 PARAFE：出境滿 18 歲晶片護照</text>
+    <text x="122" y="462">• 義大利 14+、西班牙 18+、捷克 15+</text>
+    <text x="122" y="514">• 被引導人工時可先確認 e-Gate 資格</text>
+  </g>
+</svg>
