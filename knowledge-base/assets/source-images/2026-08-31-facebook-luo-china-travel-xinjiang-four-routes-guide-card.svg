@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="0.55" stop-color="#18324a"/><stop offset="1" stop-color="#7c2d12"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1000" cy="110" r="190" fill="#fbbf24" opacity="0.14"/>
+  <circle cx="130" cy="520" r="210" fill="#38bdf8" opacity="0.12"/>
+  <text x="74" y="96" fill="#fde68a" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="28" letter-spacing="5">TRAVEL RADAR · FACEBOOK</text>
+  <text x="74" y="176" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="56" font-weight="800">新疆四大旅遊路線怎麼選？</text>
+  <text x="74" y="252" fill="#dbeafe" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="32">北疆全景｜伊犁風光｜南疆人文｜東疆絲路</text>
+  <g transform="translate(76 330)">
+    <rect x="0" y="0" width="220" height="86" rx="24" fill="#111827" opacity="0.78"/><text x="34" y="54" fill="#fff7ed" font-size="30" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">北疆全景</text>
+    <rect x="250" y="0" width="220" height="86" rx="24" fill="#111827" opacity="0.78"/><text x="284" y="54" fill="#fff7ed" font-size="30" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">伊犁風光</text>
+    <rect x="500" y="0" width="220" height="86" rx="24" fill="#111827" opacity="0.78"/><text x="534" y="54" fill="#fff7ed" font-size="30" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">南疆人文</text>
+    <rect x="750" y="0" width="220" height="86" rx="24" fill="#111827" opacity="0.78"/><text x="784" y="54" fill="#fff7ed" font-size="30" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">東疆絲路</text>
+  </g>
+  <text x="74" y="536" fill="#cbd5e1" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="25">整理重點：景點順序、最佳季節、氣溫穿搭、適合旅人類型</text>
+  <text x="74" y="586" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="22">Luarn-Pin Knowledge Base · AI 學習雷達</text>
+</svg>
