@@ -30,6 +30,38 @@
     "markdown": "articles/2026/08/2026-08-31-facebook-luo-china-travel-xinjiang-four-routes-guide.md"
   },
   {
+    "title": "Threads｜3chdog：iPhone-Backpacker，Windows 快速備份 iPhone 照片到硬碟的開源小工具",
+    "date": "2026-08-31",
+    "source": "https://www.threads.com/share/BBgO4vWPSk/",
+    "author": "張朝荃（@3chdog）／Threads",
+    "type": "article",
+    "topics": [
+      "iPhone",
+      "Windows",
+      "照片備份",
+      "GitHub",
+      "開源工具",
+      "Python",
+      "資料備份",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@3chdog/post/DcoEQzIE_-E",
+      "https://www.threads.com/share/BBgO4vWPSk/",
+      "https://www.threads.com/@3chdog/post/DcoEQzIE_-E",
+      "https://github.com/3chdog/iPhone-Backpacker",
+      "https://github.com/3chdog/iPhone-Backpacker/releases/",
+      "https://github.com/3chdog/iPhone-Backpacker/releases/download/v1.0.1/iPhoneBackpacker_v1.0.1.zip"
+    ],
+    "excerpt": "Threads 貼文介紹 3chdog 開源的 iPhone-Backpacker：一個給 Windows 使用者備份 iPhone 照片／影片到硬碟的免安裝小工具，可偵測 iPhone 相片資料夾、勾選後批次複製，解決 Windows 手動打開 DCIM 子資料夾又慢又容易失敗的痛點。",
+    "slug": "2026-08-31-threads-3chdog-iphone-backpacker-windows-backup-tool",
+    "html": "articles/2026-08-31-threads-3chdog-iphone-backpacker-windows-backup-tool.html",
+    "markdown": "articles/2026/08/2026-08-31-threads-3chdog-iphone-backpacker-windows-backup-tool.md"
+  },
+  {
     "title": "Threads｜77來吃：把旅行照片做成精品徽章風 Luxury Travel Poster 的 ChatGPT Prompt",
     "date": "2026-08-31",
     "source": "https://www.threads.com/share/BACTMOCKS5/",
