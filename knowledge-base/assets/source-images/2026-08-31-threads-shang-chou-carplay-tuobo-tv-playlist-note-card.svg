@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#0f766e"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/>
+<rect x="70" y="70" width="1060" height="490" rx="34" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.22)"/>
+<text x="105" y="140" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="30" fill="#99f6e4">生活雷達 · CarPlay</text>
+<text x="105" y="220" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="56" font-weight="700" fill="#f8fafc">途播 + 播放清單</text>
+<text x="105" y="290" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="56" font-weight="700" fill="#f8fafc">CarPlay 看電視線索</text>
+<text x="105" y="380" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="28" fill="#d1fae5">保存為車用娛樂實作備忘；不鏡像來源播放清單。</text>
+<text x="105" y="430" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="28" fill="#d1fae5">實作前需確認版權、法規、車機相容與行車安全。</text>
+<text x="105" y="520" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif" font-size="24" fill="#a7f3d0">AI 學習雷達 · 2026-08-31</text>
+</svg>
