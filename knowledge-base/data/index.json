@@ -1,5 +1,35 @@
 [
   {
+    "title": "Facebook｜Generative AI 技術交流中心：Zeabur API Key 外洩後的三步緊急應變與資安健檢",
+    "date": "2026-09-01",
+    "source": "https://www.facebook.com/share/p/1HvXKttnpe/?mibextid=wwXIfr",
+    "author": "王士麟／Generative AI 技術交流中心／Facebook",
+    "type": "article",
+    "topics": [
+      "Zeabur",
+      "API Key",
+      "資安",
+      "零信任",
+      "最小權限",
+      "雲端平台",
+      "AI開發",
+      "Facebook"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/gaitech/posts/1770555350795339/?mibextid=wwXIfr",
+      "https://www.facebook.com/share/p/1HvXKttnpe/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/gaitech/posts/1770555350795339/?mibextid=wwXIfr",
+      "https://youtu.be/ExWlrAQrfdc?si=hgRfkHql65EJmgc_"
+    ],
+    "excerpt": "Facebook「Generative AI 技術交流中心」貼文整理 Zeabur API Key 疑似外洩與盜刷事件後的緊急應變：撤銷並重建所有曾放入 Zeabur 的金鑰、設定 Hard Spend Limit 與 Rate Limit、關閉 Auto Recharge 並開啟 Budget Alert，同時以 Blast Radius 與最小權限原則重新盤點 API Key 權限與環境切分。",
+    "slug": "2026-09-01-facebook-gaitech-zeabur-api-key-leak-emergency-security-checklist",
+    "html": "articles/2026-09-01-facebook-gaitech-zeabur-api-key-leak-emergency-security-checklist.html",
+    "markdown": "articles/2026/09/2026-09-01-facebook-gaitech-zeabur-api-key-leak-emergency-security-checklist.md"
+  },
+  {
     "title": "Facebook｜點數旅人：台灣護照在法國 PARAFE 電子快速通關出境備忘",
     "date": "2026-09-01",
     "source": "https://www.facebook.com/share/18eLL29wXz/?mibextid=wwXIfr",
