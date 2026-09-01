@@ -1,5 +1,37 @@
 [
   {
+    "title": "Facebook｜AISongMan：把 AI 教學做成 MV 的 Veo3／Google Vids 創作實驗",
+    "date": "2026-09-01",
+    "source": "https://www.facebook.com/share/1JUhmWKTxC/?mibextid=wwXIfr",
+    "author": "AISongMan／Facebook／YouTube",
+    "type": "article",
+    "topics": [
+      "AI教學",
+      "AI MV",
+      "AI影片",
+      "Google Veo3",
+      "Google Vids",
+      "Gemini",
+      "Kling",
+      "Midjourney",
+      "Facebook",
+      "YouTube"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61591064259513/posts/122115967587368808/",
+      "https://www.facebook.com/share/1JUhmWKTxC/?mibextid=wwXIfr",
+      "https://www.facebook.com/61591064259513/posts/122115967587368808/",
+      "https://www.youtube.com/watch?v=H4fWGZaQQnU"
+    ],
+    "excerpt": "AISongMan 分享一個把 AI 教學內容改寫成歌詞、歌曲與 MV 的實驗案例：用 AI MV 形式講解 Google Veo3 免費／低成本生成影片的方法。貼文補充實際 workflow 是用 Gemini 與 Midjourney 生圖、再用 Kling 生成影片；影片內容則提到 Gemini／Google One AI Premium 的 Veo3 限制，以及 Google Vids 在 Workspace 方案中的每日生成彈性。",
+    "slug": "2026-09-01-facebook-aisongman-ai-tutorial-mv-veo3-google-vids-workflow",
+    "html": "articles/2026-09-01-facebook-aisongman-ai-tutorial-mv-veo3-google-vids-workflow.html",
+    "markdown": "articles/2026/09/2026-09-01-facebook-aisongman-ai-tutorial-mv-veo3-google-vids-workflow.md"
+  },
+  {
     "title": "Facebook｜Generative AI 技術交流中心：Zeabur API Key 外洩後的三步緊急應變與資安健檢",
     "date": "2026-09-01",
     "source": "https://www.facebook.com/share/p/1HvXKttnpe/?mibextid=wwXIfr",
