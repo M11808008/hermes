@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="0.48" stop-color="#164e63"/><stop offset="1" stop-color="#713f12"/></linearGradient>
+    <radialGradient id="r" cx="30%" cy="20%" r="70%"><stop offset="0" stop-color="#67e8f9" stop-opacity=".35"/><stop offset="1" stop-color="#020617" stop-opacity="0"/></radialGradient>
+    <style>text{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;fill:#f8fafc}.small{font-size:27px;fill:#bae6fd;letter-spacing:.08em}.title{font-size:58px;font-weight:800}.item{font-size:35px;font-weight:700}.muted{font-size:25px;fill:#cbd5e1}.pill{fill:rgba(15,23,42,.68);stroke:rgba(255,255,255,.18);stroke-width:2}</style>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect width="1200" height="675" fill="url(#r)"/>
+  <circle cx="1010" cy="95" r="130" fill="#fde68a" opacity=".16"/>
+  <path d="M0 555 C180 500 260 590 430 535 C590 485 760 520 920 455 C1050 405 1130 430 1200 390 L1200 675 L0 675Z" fill="#020617" opacity=".38"/>
+  <text x="64" y="82" class="small">FACEBOOK REEL · 新疆旅遊備忘</text>
+  <text x="64" y="164" class="title">8–9 月新疆旅遊</text>
+  <text x="64" y="232" class="title">四個出發前提醒</text>
+  <g transform="translate(64 292)">
+    <rect class="pill" x="0" y="0" width="500" height="62" rx="24"/><text class="item" x="26" y="43">交通：避免盲目自駕</text>
+    <rect class="pill" x="0" y="82" width="500" height="62" rx="24"/><text class="item" x="26" y="125">美食：避開景區網紅店</text>
+    <rect class="pill" x="548" y="0" width="535" height="62" rx="24"/><text class="item" x="574" y="43">住宿：先規劃落腳點</text>
+    <rect class="pill" x="548" y="82" width="535" height="62" rx="24"/><text class="item" x="574" y="125">行程：草原少選、景觀多元</text>
+  </g>
+  <text x="64" y="590" class="muted">整理自「新疆領隊山羊」公開 Reel；含 AI 攻略影片避坑提醒與十日路線示例。</text>
+</svg>
