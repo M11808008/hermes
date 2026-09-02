@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="b" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#1f1208"/><stop offset="0.55" stop-color="#3a2412"/><stop offset="1" stop-color="#7c2d12"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#b)"/><circle cx="995" cy="135" r="210" fill="#f59e0b" opacity=".22"/><circle cx="980" cy="500" r="260" fill="#16a34a" opacity=".13"/>
+<text x="72" y="92" fill="#facc15" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="28" letter-spacing="6">生活雷達 · 三重美食</text>
+<text x="72" y="178" fill="#fff7ed" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="58" font-weight="800">育婷越南法國麵包</text>
+<text x="72" y="246" fill="#fed7aa" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="40" font-weight="700">現烤酥脆 · 份量扎實 · 百元上下</text>
+<rect x="72" y="312" width="1000" height="174" rx="30" fill="#111827" opacity=".76" stroke="#fb923c"/>
+<text x="110" y="366" fill="#ffedd5" font-size="28" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">新北市三重區大同北路 57 號</text>
+<text x="110" y="416" fill="#ffffff" font-size="27" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">台北橋站／菜寮站步行約 8–10 分鐘</text>
+<text x="110" y="458" fill="#cbd5e1" font-size="22" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">推薦：牛肉法國麵包、越式特製火腿法國麵包 · 出發前確認營業時間</text>
+<text x="72" y="560" fill="#fed7aa" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">m11808008.github.io/hermes/knowledge-base/</text>
+</svg>
