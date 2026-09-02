@@ -1,5 +1,36 @@
 [
   {
+    "title": "Facebook Reel｜一人公司研究所：Wan 3.0 對決 Seedance 2.5，AI 影片工具競爭觀察",
+    "date": "2026-09-02",
+    "source": "https://www.facebook.com/share/v/1MG1A59SBE/",
+    "author": "一人公司研究所／Facebook",
+    "type": "article",
+    "topics": [
+      "AI影片生成",
+      "Wan 3.0",
+      "千問Wan3",
+      "Seedance 2.5",
+      "開源AI",
+      "本地部署",
+      "一人公司",
+      "內容創作",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/2184421035748903",
+      "https://www.facebook.com/share/v/1MG1A59SBE/",
+      "https://www.facebook.com/reel/2184421035748903",
+      "https://modelstudio.alibabacloud.com/intl/blog/wan3-ai-video-generation-model/"
+    ],
+    "excerpt": "一人公司研究所分享 Facebook Reel，主題是阿里千問 Wan 3.0 與 Seedance 2.5 的 AI 影片生成效果比較，整理人物表情、場景一致性、生成速度與開源／本地部署等觀察。本文保存貼文重點，並補充官方 Model Studio 對 Wan3.0 的定位：可由文字、圖片、音訊、影片與文件生成 30 秒影片；實際可用性、授權與效果仍需以官方入口與當下模型版本為準。",
+    "slug": "2026-09-02-facebook-one-person-company-wan-3-seedance-video-generation-comparison",
+    "html": "articles/2026-09-02-facebook-one-person-company-wan-3-seedance-video-generation-comparison.html",
+    "markdown": "articles/2026/09/2026-09-02-facebook-one-person-company-wan-3-seedance-video-generation-comparison.md"
+  },
+  {
     "title": "Facebook Reel｜新疆領隊山羊：8–9 月新疆旅遊四個出發前提醒",
     "date": "2026-09-02",
     "source": "https://www.facebook.com/share/v/19cHpFHfQS/?mibextid=wwXIfr",
