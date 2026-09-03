@@ -57,6 +57,32 @@
     "markdown": "articles/2026/09/2026-09-03-medium-pm-productivity-toolbox-obsidian-tutorial-index.md"
   },
   {
+    "title": "AI 雷達｜Breeze TTS 2 台灣口音聲音克隆：適合試作個人聲音分身",
+    "date": "2026-09-03",
+    "source": "https://www.threads.com/@romanticamaj/post/DcsiXibkwxo",
+    "author": "Gary Hsieh／@romanticamaj",
+    "type": "thread",
+    "topics": [
+      "AI 工具",
+      "語音 AI",
+      "台灣口音"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@romanticamaj/post/DcsiXibkwxo",
+      "https://www.threads.com/@romanticamaj/post/DcsiXibkwxo",
+      "https://github.com/mtkresearch/BreezyVoice",
+      "https://github.com/Saganaki22/ComfyUI-Breeze-TTS-2",
+      "https://huggingface.co/BreezeBlue/Breeze-TTS-2"
+    ],
+    "excerpt": "Gary Hsieh（@romanticamaj）分享 Breeze TTS 2 做聲音克隆的體驗：台灣口音與聲音表情複製相當像，並邀請有興趣的人一起試玩。留言串中也提到廣東話支援可能不是重點、Qwen／Fish 等工具可能可支援其他語言，以及 Windows 環境可安裝。",
+    "slug": "2026-09-03-threads-romanticamaj-breeze-tts-2-taiwanese-voice-cloning",
+    "html": "articles/2026-09-03-threads-romanticamaj-breeze-tts-2-taiwanese-voice-cloning.html",
+    "markdown": "articles/2026/09/2026-09-03-threads-romanticamaj-breeze-tts-2-taiwanese-voice-cloning.md"
+  },
+  {
     "title": "生活雷達｜三重育婷越南法國麵包：現烤酥脆、份量扎實的越式法國麵包",
     "date": "2026-09-02",
     "source": "https://achu.tw/yu-ting-banh/",
