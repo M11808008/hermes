@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.52" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="25%" cy="15%" r="70%">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(82 82)">
+    <rect x="0" y="0" width="1036" height="466" rx="38" fill="#0f172a" opacity="0.72" stroke="#8b5cf6" stroke-opacity="0.45"/>
+    <text x="48" y="72" fill="#c4b5fd" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="28" letter-spacing="3">TOOL RADAR · OBSIDIAN</text>
+    <text x="48" y="154" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="58" font-weight="800">Obsidian 使用教學總目錄</text>
+    <text x="48" y="225" fill="#e0e7ff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="34" font-weight="600">30+ 篇筆記、知識管理與內容產出路線圖</text>
+    <text x="48" y="310" fill="#cbd5e1" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="27">PM 的生產力工具箱 · 朱騏 · Medium</text>
+    <g transform="translate(48 356)">
+      <rect x="0" y="0" width="150" height="44" rx="22" fill="#312e81"/>
+      <text x="26" y="30" fill="#ddd6fe" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="22">筆記軟體</text>
+      <rect x="170" y="0" width="150" height="44" rx="22" fill="#312e81"/>
+      <text x="196" y="30" fill="#ddd6fe" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="22">知識管理</text>
+      <rect x="340" y="0" width="150" height="44" rx="22" fill="#312e81"/>
+      <text x="366" y="30" fill="#ddd6fe" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="22">生產力</text>
+    </g>
+    <g transform="translate(835 112)" opacity="0.9">
+      <path d="M92 0 L184 53 V159 L92 212 L0 159 V53 Z" fill="#6d28d9" stroke="#c4b5fd" stroke-width="5"/>
+      <path d="M92 28 L160 67 V145 L92 184 L24 145 V67 Z" fill="#111827" stroke="#ddd6fe" stroke-width="4"/>
+      <circle cx="92" cy="106" r="44" fill="#8b5cf6" opacity="0.65"/>
+    </g>
+  </g>
+</svg>
