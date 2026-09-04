@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜Will 保哥：VirtualBuddy 在 Apple Silicon 上多開 macOS 虛擬機</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜Will 保哥：VirtualBuddy 在 Apple Silicon 上多開 macOS 虛擬機</h1><figure><img src="../assets/source-images/2026-09-04-facebook-willh-virtualbuddy-macos-vm-apple-silicon-card.svg" alt="VirtualBuddy macOS 虛擬機工具整理卡" loading="lazy" referrerpolicy="no-referrer"><figcaption>VirtualBuddy macOS 虛擬機工具整理卡</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>Will 保哥分享 VirtualBuddy：一套免費開源、在 Apple Silicon Mac 上建立 macOS 12+ 虛擬機的 GUI 工具，適合開發者測試多版本 macOS、beta 系統與乾淨環境。貼文畫面顯示可直接選擇 macOS Tahoe/Sequoia/Sonoma、IPSW 或自訂連結建立 VM；留言補充 GitHub 專案 insidegui/VirtualBuddy。</p>
+<h2>來源脈絡</h2>
+<ul>
+<li>Facebook 分享連結：<a href="https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr</a></li>
+<li>Canonical：<a href="https://www.facebook.com/photo.php?fbid=1526037686216982&amp;set=a.348225173998245&amp;type=3" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=1526037686216982&amp;set=a.348225173998245&amp;type=3</a></li>
+<li>作者：Will 保哥的技術交流中心</li>
+<li>貼文主文：「VirtualBuddy 好好用喔，完全免費，在 macOS 的安裝體驗又好！我要多開幾個分身了，這時 128GB RAM + 8TB 硬碟就很好用！」</li>
+<li>留言補充 GitHub repo：<a href="https://github.com/insidegui/VirtualBuddy" target="_blank" rel="noopener">https://github.com/insidegui/VirtualBuddy</a></li>
+<li>可見互動：擷取時約 478 個心情、10 則留言、94 次分享；社群計數會隨時間變動。</li>
+</ul>
+<h2>代表畫面</h2>
+<figure><img src="../assets/source-images/2026-09-04-facebook-willh-virtualbuddy-macos-vm-apple-silicon-cover.jpg" alt="VirtualBuddy 建立 macOS VM 的版本選擇畫面" loading="lazy" referrerpolicy="no-referrer"><figcaption>VirtualBuddy 建立 macOS VM 的版本選擇畫面</figcaption></figure>
+<p>畫面是 VirtualBuddy 的「Virtual Machine Setup」流程，可從清單選擇多個 macOS 版本，包含 macOS Golden Gate、macOS Tahoe、macOS Sequoia、macOS Sonoma，也支援 LocalFile 與 CustomLink。</p>
+<h2>GitHub 專案重點</h2>
+<figure><img src="../assets/source-images/2026-09-04-facebook-willh-virtualbuddy-macos-vm-apple-silicon-github-og.png" alt="GitHub insidegui/VirtualBuddy OpenGraph 預覽圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>GitHub insidegui/VirtualBuddy OpenGraph 預覽圖</figcaption></figure>
+<ul>
+<li>Repo：<a href="https://github.com/insidegui/VirtualBuddy" target="_blank" rel="noopener">https://github.com/insidegui/VirtualBuddy</a></li>
+<li>GitHub description：Virtualize macOS 12 and later on Apple Silicon, VirtualBuddy is a virtual machine GUI for macOS M1, M2, M3, M4。</li>
+<li>主要語言：Swift，另有 Objective-C、Shell、C。</li>
+<li>License：BSD-2-Clause。</li>
+<li>最新 release（擷取時）：Version 2.1，發布於 2025-09-14。</li>
+<li>main README 註記：若要在 macOS 26 host 安裝 macOS Golden Gate beta，需要 VirtualBuddy 2.2 beta 2 或更新版本，並安裝 Apple 最新 device support files；若已安裝 Xcode 27 beta 則不需另裝。</li>
+<li>系統需求：Apple Silicon Mac、macOS 13 或更新版本。</li>
+</ul>
+<h2>主要用途</h2>
+<ul>
+<li>在 Apple Silicon Mac 上快速建立 macOS 12+ 虛擬機。</li>
+<li>測試不同 macOS 版本或 beta 系統，降低主系統被破壞的風險。</li>
+<li>用乾淨 VM 測試 app、安裝流程、權限、系統設定與相容性。</li>
+<li>透過 APFS clone 複製乾淨 VM，快速重置測試環境。</li>
+<li>搭配 Guest app 取得 host/guest 剪貼簿與共享資料夾能力。</li>
+</ul>
+<h2>對 AI 學習雷達的價值</h2>
+<p>這則不是直接介紹 AI 模型，但對 AI 工具開發與教學環境很實用：</p>
+<ul>
+<li>可以隔離測試 Claude Desktop、Ollama、MCP server、Hermes Agent、瀏覽器 automation 或各種 beta 版工具。</li>
+<li>適合做課程示範環境：每位學員可在乾淨 macOS VM 中演練，不污染主機。</li>
+<li>對需要大量測試 LINE/Telegram bot、macOS 權限、檔案處理、CLI 安裝流程的工作流，有可重現環境價值。</li>
+<li>欒帥若在 128GB RAM / 大容量 SSD 的 Mac 上操作，多開 macOS 分身可成為「AI 開發沙盒」策略。</li>
+</ul>
+<h2>導入前檢核</h2>
+<ul>
+<li>主機是否為 Apple Silicon，且 macOS 13+？</li>
+<li>是否需要測試 macOS beta？若是，先確認 VirtualBuddy beta 版本與 Apple device support files。</li>
+<li>VM 需要的 RAM、CPU、磁碟空間是否足夠？macOS restore image 與 VM 會佔大量空間。</li>
+<li>是否需要共享資料夾、剪貼簿、網路與快照/複製策略？</li>
+<li>若用於處理帳號、API key 或私密課程資料，需分清楚 host 與 guest 的資料邊界。</li>
+</ul>
+<h2>後續可實作方向</h2>
+<ul>
+<li>在本機建立一個乾淨 macOS VM，專門測試 Hermes Agent / LINE gateway / Claude Desktop / MCP server 安裝流程。</li>
+<li>建立「AI 工具 beta 測試 VM」與「課程示範 VM」兩種 baseline image。</li>
+<li>補一篇實測筆記：VirtualBuddy 下載 IPSW、建立 VM、安裝 Guest app、共享資料夾、APFS clone 重置流程。</li>
+</ul>
+<h2>原始連結</h2>
+<p>Facebook：</p>
+<p><a href="https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr</a></p>
+<p>GitHub：</p>
+<p><a href="https://github.com/insidegui/VirtualBuddy" target="_blank" rel="noopener">https://github.com/insidegui/VirtualBuddy</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-04 · https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">macOS</span><span class="tag">Apple Silicon</span><span class="tag">VirtualBuddy</span><span class="tag">虛擬機</span><span class="tag">開發工具</span><span class="tag">GitHub</span><span class="tag">Facebook</span><h3>原始連結</h3><p><a href="https://www.facebook.com/photo.php?fbid=1526037686216982&amp;set=a.348225173998245&amp;type=3" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=1526037686216982&amp;set=a.348225173998245&amp;type=3</a></p><p><a href="https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/photo.php?fbid=1526037686216982&amp;set=a.348225173998245&amp;type=3" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=1526037686216982&amp;set=a.348225173998245&amp;type=3</a></p><p><a href="https://github.com/insidegui/VirtualBuddy" target="_blank" rel="noopener">https://github.com/insidegui/VirtualBuddy</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

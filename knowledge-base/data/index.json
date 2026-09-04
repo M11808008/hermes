@@ -30,6 +30,36 @@
     "markdown": "articles/2026/09/2026-09-04-facebook-julian-goldie-claude-desktop-ollama-local-models-agent-os.md"
   },
   {
+    "title": "Facebook｜Will 保哥：VirtualBuddy 在 Apple Silicon 上多開 macOS 虛擬機",
+    "date": "2026-09-04",
+    "source": "https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr",
+    "author": "Will 保哥的技術交流中心／Facebook",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "macOS",
+      "Apple Silicon",
+      "VirtualBuddy",
+      "虛擬機",
+      "開發工具",
+      "GitHub",
+      "Facebook"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/photo.php?fbid=1526037686216982&set=a.348225173998245&type=3",
+      "https://www.facebook.com/share/1GqeyHJ5eA/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=1526037686216982&set=a.348225173998245&type=3",
+      "https://github.com/insidegui/VirtualBuddy"
+    ],
+    "excerpt": "Will 保哥分享 VirtualBuddy：一套免費開源、在 Apple Silicon Mac 上建立 macOS 12+ 虛擬機的 GUI 工具，適合開發者測試多版本 macOS、beta 系統與乾淨環境。貼文畫面顯示可直接選擇 macOS Tahoe/Sequoia/Sonoma、IPSW 或自訂連結建立 VM；留言補充 GitHub 專案 insidegui/VirtualBuddy。",
+    "slug": "2026-09-04-facebook-willh-virtualbuddy-macos-vm-apple-silicon",
+    "html": "articles/2026-09-04-facebook-willh-virtualbuddy-macos-vm-apple-silicon.html",
+    "markdown": "articles/2026/09/2026-09-04-facebook-willh-virtualbuddy-macos-vm-apple-silicon.md"
+  },
+  {
     "title": "Threads｜AI郵報：Anthropic 開源 Claude Commerce Agents 商務代理 Blueprint",
     "date": "2026-09-04",
     "source": "https://www.threads.com/share/BBRE4eGFiO/",
