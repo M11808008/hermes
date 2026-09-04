@@ -1,5 +1,35 @@
 [
   {
+    "title": "Facebook Reel｜Julian Goldie：Claude Desktop 串接 Ollama 本地模型與 Agent OS 導流案例",
+    "date": "2026-09-04",
+    "source": "https://www.facebook.com/share/r/1CPvABPEkY/?mibextid=wwXIfr",
+    "author": "Julian Goldie／Facebook Reel",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Claude Desktop",
+      "Ollama",
+      "Local AI",
+      "AI Agent",
+      "Agent OS",
+      "Facebook Reel",
+      "自動化工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/2080204132597258",
+      "https://www.facebook.com/share/r/1CPvABPEkY/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2080204132597258",
+      "https://m.facebook.com/watch/?v=2080204132597258&_rdr"
+    ],
+    "excerpt": "Julian Goldie 的 Facebook Reel 介紹把 Ollama 本地模型接進 Claude Desktop 的桌面工作流，主張可用本機模型保留更多隱私、降低雲端依賴，並把流程導向留言「Agent OS」索取完整教學。這則內容值得收進 AI 學習雷達，作為「Claude Desktop + Ollama + local models + AI agents」的入門線索與短影音導流案例。",
+    "slug": "2026-09-04-facebook-julian-goldie-claude-desktop-ollama-local-models-agent-os",
+    "html": "articles/2026-09-04-facebook-julian-goldie-claude-desktop-ollama-local-models-agent-os.html",
+    "markdown": "articles/2026/09/2026-09-04-facebook-julian-goldie-claude-desktop-ollama-local-models-agent-os.md"
+  },
+  {
     "title": "Facebook Reel｜亓大基金：人形機器人零件題材股促銷話術與投資風險筆記",
     "date": "2026-09-03",
     "source": "https://www.facebook.com/share/v/1Rjw5xaSgc/?mibextid=wwXIfr",
