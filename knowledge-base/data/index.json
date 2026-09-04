@@ -30,6 +30,37 @@
     "markdown": "articles/2026/09/2026-09-04-facebook-julian-goldie-claude-desktop-ollama-local-models-agent-os.md"
   },
   {
+    "title": "Threads｜AI郵報：Anthropic 開源 Claude Commerce Agents 商務代理 Blueprint",
+    "date": "2026-09-04",
+    "source": "https://www.threads.com/share/BBRE4eGFiO/",
+    "author": "AI郵報（@aiposthub）／Threads",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Claude",
+      "Anthropic",
+      "Claude Commerce Agents",
+      "AI Agent",
+      "商務代理",
+      "開源專案",
+      "GitHub",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DczxmdOkcO_",
+      "https://www.threads.com/share/BBRE4eGFiO/",
+      "https://www.threads.com/@aiposthub/post/DczxmdOkcO_",
+      "https://github.com/anthropics/commerce-agents"
+    ],
+    "excerpt": "AI郵報分享 Anthropic 開源的 Claude Commerce Agents：一套用 Claude 建構購物 Agent 與商家後台 Agent 的 reference blueprint，涵蓋 prompt、skills、tool contracts、gates、人類審核與多個垂直 demo。這則值得保存，因為它把「AI Agent 做生意」從聊天機器人升級成可嵌入商務流程的開源架構範例。",
+    "slug": "2026-09-04-threads-aiposthub-claude-commerce-agents-blueprint",
+    "html": "articles/2026-09-04-threads-aiposthub-claude-commerce-agents-blueprint.html",
+    "markdown": "articles/2026/09/2026-09-04-threads-aiposthub-claude-commerce-agents-blueprint.md"
+  },
+  {
     "title": "Facebook Reel｜亓大基金：人形機器人零件題材股促銷話術與投資風險筆記",
     "date": "2026-09-03",
     "source": "https://www.facebook.com/share/v/1Rjw5xaSgc/?mibextid=wwXIfr",

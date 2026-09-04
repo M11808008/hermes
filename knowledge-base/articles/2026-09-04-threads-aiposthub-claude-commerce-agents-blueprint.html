@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜AI郵報：Anthropic 開源 Claude Commerce Agents 商務代理 Blueprint</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜AI郵報：Anthropic 開源 Claude Commerce Agents 商務代理 Blueprint</h1><figure><img src="../assets/source-images/2026-09-04-threads-aiposthub-claude-commerce-agents-blueprint-card.svg" alt="Claude Commerce Agents 商務代理 Blueprint 整理卡" loading="lazy" referrerpolicy="no-referrer"><figcaption>Claude Commerce Agents 商務代理 Blueprint 整理卡</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>AI郵報分享 Anthropic 開源的 Claude Commerce Agents：一套用 Claude 建構購物 Agent 與商家後台 Agent 的 reference blueprint，涵蓋 prompt、skills、tool contracts、gates、人類審核與多個垂直 demo。這則值得保存，因為它把「AI Agent 做生意」從聊天機器人升級成可嵌入商務流程的開源架構範例。</p>
+<h2>來源脈絡</h2>
+<ul>
+<li>Threads 分享連結：<a href="https://www.threads.com/share/BBRE4eGFiO/" target="_blank" rel="noopener">https://www.threads.com/share/BBRE4eGFiO/</a></li>
+<li>Canonical：<a href="https://www.threads.com/@aiposthub/post/DczxmdOkcO_" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DczxmdOkcO_</a></li>
+<li>作者：AI郵報（@aiposthub）</li>
+<li>貼文可見主文：「Claude 這次連『幫你做生意的 Agent』都直接開源了」，介紹 Claude Commerce Agents 可用來做購物 Agent、商家 Agent、客服與交易流程 Agent 的開源 Blueprint。</li>
+<li>貼文附帶 GitHub 專案：anthropics/commerce-agents。</li>
+</ul>
+<h2>代表畫面</h2>
+<figure><img src="../assets/source-images/2026-09-04-threads-aiposthub-claude-commerce-agents-blueprint-cover.jpg" alt="Threads 影片封面，Building Commerce Agents on Claude" loading="lazy" referrerpolicy="no-referrer"><figcaption>Threads 影片封面，Building Commerce Agents on Claude</figcaption></figure>
+<p>封面文字為「Building Commerce Agents on Claude」，副標強調這是一套 building shopping and merchant agents on Claude 的 blueprint，包含 implementation code、patterns 與 guardrails。</p>
+<h2>GitHub 專案重點</h2>
+<figure><img src="../assets/source-images/2026-09-04-threads-aiposthub-claude-commerce-agents-blueprint-github-og.png" alt="GitHub anthropics/commerce-agents OpenGraph 預覽圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>GitHub anthropics/commerce-agents OpenGraph 預覽圖</figcaption></figure>
+<ul>
+<li>Repo：<a href="https://github.com/anthropics/commerce-agents" target="_blank" rel="noopener">https://github.com/anthropics/commerce-agents</a></li>
+<li>Owner：Anthropic（anthropics）</li>
+<li>GitHub description：Reference blueprint for building shopping and merchant agents with Claude. Examples in retail, commerce, telecom, and entertainment included.</li>
+<li>主要語言：Python，並包含 examples、plugins、shopping-agent、merchant-agent、commerce-common、tests 等目錄。</li>
+<li>License：Apache License 2.0。</li>
+<li>README 定位：兩種 commerce agents，一種是嵌入商家 app 給顧客使用的 shopping agent，另一種是給內部員工管理後台的 merchant agent。</li>
+<li>Demo verticals：retail、travel、telecom、entertainment。</li>
+<li>執行環境：Python 3.11+、Node 22、ANTHROPIC_API_KEY。</li>
+<li>也提供 Claude Code plugin，用於 scaffold / add commerce flow / author evals / review commerce agent。</li>
+</ul>
+<h2>兩種 Agent 的分工</h2>
+<p>### Shopping agent</p>
+<p>面向顧客，可處理搜尋商品、比較、規劃、填購物車、回答訂單與政策問題，並記住顧客提供的偏好。部署時需要把 `StorefrontBackend` 接到真實 catalog、cart、order、policy 等系統。</p>
+<p>### Merchant agent</p>
+<p>面向商家內部，可解釋營運表現、維護 listing、處理庫存與訂單 alerts、定價促銷、草擬 campaign。README 特別強調 merchant write 會先 staged，需由人類審核介面批准後才套用。</p>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<ul>
+<li>它把 AI Agent 從「能聊天」推進到「可嵌入商務流程」：購物、客服、庫存、訂單、定價、行銷。</li>
+<li>Blueprint 不只給 demo，還把 prompt、skills、tool contracts、gates、memory、grounding、presentation、executor frame 等工程切面拆出來。</li>
+<li>很適合未來課程或工作坊示範：如何把 Claude agent 放進真實業務流程，同時保留人工審核與安全護欄。</li>
+<li>對欒帥的 Hermes / LINE / 知識庫工作流來說，可延伸成「課程助教 Agent」、「報名與客服 Agent」、「資料庫查詢 + 審核式寫入 Agent」等模式。</li>
+</ul>
+<h2>導入前檢核</h2>
+<ul>
+<li>是否真的需要可執行交易流程，還是 FAQ/RAG 就足夠？</li>
+<li>哪些工具呼叫可以自動執行，哪些必須 staged + human approval？</li>
+<li>商品、訂單、會員、付款與客服資料的權限邊界是否清楚？</li>
+<li>是否有 evals 來測試錯誤推薦、越權操作、政策違規、價格錯誤與隱私洩漏？</li>
+<li>是否能用 read-only demo 先驗證，再逐步接上真實 backend？</li>
+</ul>
+<h2>後續可實作方向</h2>
+<ul>
+<li>Clone repo，先跑 retail demo，比較 shopping agent 與 merchant agent 的 UX 差異。</li>
+<li>研究 Claude Code plugin 如何 scaffold commerce agent，轉成 Hermes Agent 的教學案例。</li>
+<li>把「staged writes + human approval」抽成通用架構，套用到 Google Sheets 報名名單、課程客服、知識庫內容發布。</li>
+<li>補一篇實測筆記：Anthropic blueprint 的 package layout、prompt/skills/tool contract/gates 如何互相分工。</li>
+</ul>
+<h2>原始連結</h2>
+<p>Threads：</p>
+<p><a href="https://www.threads.com/@aiposthub/post/DczxmdOkcO_" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DczxmdOkcO_</a></p>
+<p>GitHub：</p>
+<p><a href="https://github.com/anthropics/commerce-agents" target="_blank" rel="noopener">https://github.com/anthropics/commerce-agents</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-04 · https://www.threads.com/share/BBRE4eGFiO/ · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">Claude</span><span class="tag">Anthropic</span><span class="tag">Claude Commerce Agents</span><span class="tag">AI Agent</span><span class="tag">商務代理</span><span class="tag">開源專案</span><span class="tag">GitHub</span><span class="tag">Threads</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aiposthub/post/DczxmdOkcO_" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DczxmdOkcO_</a></p><p><a href="https://www.threads.com/share/BBRE4eGFiO/" target="_blank" rel="noopener">https://www.threads.com/share/BBRE4eGFiO/</a></p><p><a href="https://www.threads.com/@aiposthub/post/DczxmdOkcO_" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DczxmdOkcO_</a></p><p><a href="https://github.com/anthropics/commerce-agents" target="_blank" rel="noopener">https://github.com/anthropics/commerce-agents</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
