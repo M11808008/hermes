@@ -91,6 +91,35 @@
     "markdown": "articles/2026/09/2026-09-04-threads-aiposthub-claude-commerce-agents-blueprint.md"
   },
   {
+    "title": "Threads｜Ann Cheng：NotebookLM 可編輯 PPTX 簡報輸出提示詞",
+    "date": "2026-09-04",
+    "source": "https://www.threads.com/share/_1jQKpxBZ/",
+    "author": "Ann Cheng（@anncheng_ann101）／Threads",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "NotebookLM",
+      "PowerPoint",
+      "PPTX",
+      "AI簡報",
+      "Prompt",
+      "教學工作流",
+      "Threads"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@anncheng_ann101/post/Dc2RFi2AddJ",
+      "https://www.threads.com/share/_1jQKpxBZ/",
+      "https://www.threads.com/@anncheng_ann101/post/Dc2RFi2AddJ"
+    ],
+    "excerpt": "Ann Cheng 實測 NotebookLM 產生簡報的新能力：可提示輸出「可編輯的 .pptx」，讓標題與內文保留為 PowerPoint 原生文字框，而不是整張投影片被壓成死圖；同時可指定配色、字型、背景圖、角色圖一致性與每頁講者備忘錄。本文保存貼文提示詞與判讀重點，作為 AI 簡報生成工作流案例。",
+    "slug": "2026-09-04-threads-anncheng-notebooklm-editable-pptx-slides",
+    "html": "articles/2026-09-04-threads-anncheng-notebooklm-editable-pptx-slides.html",
+    "markdown": "articles/2026/09/2026-09-04-threads-anncheng-notebooklm-editable-pptx-slides.md"
+  },
+  {
     "title": "Facebook Reel｜亓大基金：人形機器人零件題材股促銷話術與投資風險筆記",
     "date": "2026-09-03",
     "source": "https://www.facebook.com/share/v/1Rjw5xaSgc/?mibextid=wwXIfr",
