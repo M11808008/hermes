@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="24%" cy="22%" r="70%">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity="0.44"/>
+      <stop offset="0.45" stop-color="#d8b46a" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.24">
+    <path d="M80 410 C210 250, 310 510, 430 340 S660 350, 770 230 980 220, 1120 150" fill="none" stroke="#7dd3fc" stroke-width="18" stroke-linecap="round"/>
+    <path d="M70 475 C230 335, 335 560, 480 390 S705 410, 845 275 1010 310, 1140 245" fill="none" stroke="#f0abfc" stroke-width="12" stroke-linecap="round"/>
+    <path d="M90 520 C245 405, 370 575, 505 450 S720 455, 875 340 1025 390, 1150 330" fill="none" stroke="#fde68a" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <rect x="70" y="68" width="1060" height="494" rx="34" fill="#0b1220" opacity="0.78" stroke="#334155"/>
+  <text x="112" y="128" fill="#d8b46a" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="24" letter-spacing="5">AI 學習雷達 · Threads</text>
+  <text x="112" y="208" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="54" font-weight="800">MAI-Transcribe-2</text>
+  <text x="112" y="272" fill="#e2e8f0" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="38" font-weight="700">Microsoft 語音轉文字模型</text>
+  <text x="112" y="338" fill="#bfdbfe" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="30">速度約為 GPT-Transcribe 10.3 倍</text>
+  <g filter="url(#shadow)">
+    <rect x="112" y="392" width="260" height="86" rx="24" fill="#132238" stroke="#38bdf8"/>
+    <text x="142" y="427" fill="#bae6fd" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">AA-WER</text>
+    <text x="142" y="463" fill="#ffffff" font-size="34" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">2.0%</text>
+    <rect x="404" y="392" width="260" height="86" rx="24" fill="#1d2435" stroke="#d8b46a"/>
+    <text x="434" y="427" fill="#fde68a" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">1,000 分鐘</text>
+    <text x="434" y="463" fill="#ffffff" font-size="34" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">$1.67</text>
+    <rect x="696" y="392" width="320" height="86" rx="24" fill="#162033" stroke="#a78bfa"/>
+    <text x="726" y="427" fill="#ddd6fe" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">台灣導入提醒</text>
+    <text x="726" y="463" fill="#ffffff" font-size="30" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">繁中需實測校正</text>
+  </g>
+  <text x="112" y="526" fill="#94a3b8" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">AI郵報 @aiposthub · Microsoft AI · Public Preview</text>
+</svg>
