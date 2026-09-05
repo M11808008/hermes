@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020617"/><stop offset="0.52" stop-color="#0f172a"/><stop offset="1" stop-color="#14532d"/></linearGradient>
+    <radialGradient id="g" cx="22%" cy="18%" r="70%"><stop offset="0" stop-color="#76b900" stop-opacity="0.45"/><stop offset="0.45" stop-color="#22d3ee" stop-opacity="0.16"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#000" flood-opacity="0.38"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/><rect width="1200" height="630" fill="url(#g)"/>
+  <g opacity="0.28" stroke="#86efac" stroke-width="4" fill="none">
+    <path d="M250 180 L470 315 L250 450"/><path d="M470 315 L720 175 L980 315 L720 455 Z"/><path d="M720 175 L720 455"/><path d="M470 315 L980 315"/>
+    <circle cx="250" cy="180" r="34" fill="#111827"/><circle cx="250" cy="450" r="34" fill="#111827"/><circle cx="470" cy="315" r="42" fill="#111827"/><circle cx="720" cy="175" r="38" fill="#111827"/><circle cx="720" cy="455" r="38" fill="#111827"/><circle cx="980" cy="315" r="42" fill="#111827"/>
+  </g>
+  <rect x="70" y="64" width="1060" height="502" rx="36" fill="#07111f" opacity="0.84" stroke="#334155"/>
+  <text x="112" y="128" fill="#76b900" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="24" letter-spacing="5">AI 學習雷達 · Facebook 影片</text>
+  <text x="112" y="214" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="58" font-weight="850">NVIDIA PAIR</text>
+  <text x="112" y="278" fill="#e2e8f0" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="36" font-weight="750">Personal AI Router 本地推論路由</text>
+  <text x="112" y="340" fill="#bae6fd" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif" font-size="29">把同一區網多台 Ollama / LM Studio 機器接成可路由叢集</text>
+  <g filter="url(#shadow)">
+    <rect x="112" y="394" width="292" height="86" rx="24" fill="#102016" stroke="#76b900"/>
+    <text x="142" y="429" fill="#bbf7d0" font-size="23" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">端點相容</text>
+    <text x="142" y="464" fill="#fff" font-size="30" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">Ollama / OpenAI</text>
+    <rect x="438" y="394" width="292" height="86" rx="24" fill="#102033" stroke="#38bdf8"/>
+    <text x="468" y="429" fill="#bae6fd" font-size="23" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">支援引擎</text>
+    <text x="468" y="464" fill="#fff" font-size="30" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">Ollama / LM Studio</text>
+    <rect x="764" y="394" width="292" height="86" rx="24" fill="#1e1b2e" stroke="#c4b5fd"/>
+    <text x="794" y="429" fill="#ddd6fe" font-size="23" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">重要限制</text>
+    <text x="794" y="464" fill="#fff" font-size="29" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">不合併 GPU 記憶體</text>
+  </g>
+  <text x="112" y="528" fill="#94a3b8" font-size="24" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC','Segoe UI',sans-serif">胡嘉璽 · Generative AI 技術交流中心 · NVIDIA Personal-AI-Router</text>
+</svg>

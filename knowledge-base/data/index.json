@@ -1,5 +1,39 @@
 [
   {
+    "title": "Facebook｜胡嘉璽：NVIDIA PAIR 把區域網多台 GPU 電腦變成本地 LLM 推論路由叢集",
+    "date": "2026-09-05",
+    "source": "https://www.facebook.com/share/v/1DqzoeHpvM/",
+    "author": "胡嘉璽／Generative AI 技術交流中心（Facebook）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "NVIDIA PAIR",
+      "Personal AI Router",
+      "本地 LLM",
+      "Ollama",
+      "LM Studio",
+      "Local AI",
+      "Multi-node Inference",
+      "Facebook"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/gaitech/posts/1774156477101893/",
+      "https://www.facebook.com/share/v/1DqzoeHpvM/",
+      "https://www.facebook.com/groups/gaitech/posts/1774156477101893/",
+      "https://www.facebook.com/61579313407097/videos/1605493064315080/",
+      "https://build.nvidia.com/playbooks/pair",
+      "https://github.com/NVIDIA/Personal-AI-Router",
+      "https://github.com/NVIDIA/Personal-AI-Router/releases"
+    ],
+    "excerpt": "胡嘉璽在 Facebook 社團分享 NVIDIA PAIR（Personal AI Router）實測：它能把同一區網內多台安裝 Ollama 或 LM Studio 的 Windows / macOS / Linux 機器配對成 local inference router，對外提供 Ollama / OpenAI 相容 proxy endpoint，並依模型、引擎與負載把「獨立請求」路由到合適節點。關鍵限制是：PAIR 不會合併 GPU 記憶體，也不會把單一模型或單一請求切到多台機器；它更像本地 AI 請求的 router / failover / 並行工作分流器。",
+    "slug": "2026-09-05-facebook-hu-jiaxi-nvidia-pair-local-ai-router",
+    "html": "articles/2026-09-05-facebook-hu-jiaxi-nvidia-pair-local-ai-router.html",
+    "markdown": "articles/2026/09/2026-09-05-facebook-hu-jiaxi-nvidia-pair-local-ai-router.md"
+  },
+  {
     "title": "San Jose 金子半之助｜Mitsuwa Plaza 灣區首間天婦羅天丼開幕筆記",
     "date": "2026-09-05",
     "source": "LINE image screenshot",

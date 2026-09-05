@@ -1,0 +1,74 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜胡嘉璽：NVIDIA PAIR 把區域網多台 GPU 電腦變成本地 LLM 推論路由叢集</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜胡嘉璽：NVIDIA PAIR 把區域網多台 GPU 電腦變成本地 LLM 推論路由叢集</h1><figure><img src="../assets/source-images/2026-09-05-facebook-hu-jiaxi-nvidia-pair-local-ai-router-card.svg" alt="NVIDIA PAIR 本地推論路由整理卡" loading="lazy" referrerpolicy="no-referrer"><figcaption>NVIDIA PAIR 本地推論路由整理卡</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>胡嘉璽在 Facebook 社團分享 NVIDIA PAIR（Personal AI Router）實測：它能把同一區網內多台安裝 Ollama 或 LM Studio 的 Windows / macOS / Linux 機器配對成 local inference router，對外提供 Ollama / OpenAI 相容 proxy endpoint，並依模型、引擎與負載把「獨立請求」路由到合適節點。關鍵限制是：PAIR 不會合併 GPU 記憶體，也不會把單一模型或單一請求切到多台機器；它更像本地 AI 請求的 router / failover / 並行工作分流器。</p>
+<h2>來源脈絡</h2>
+<ul>
+<li>Facebook 分享連結：<a href="https://www.facebook.com/share/v/1DqzoeHpvM/" target="_blank" rel="noopener">https://www.facebook.com/share/v/1DqzoeHpvM/</a></li>
+<li>Canonical：<a href="https://www.facebook.com/groups/gaitech/posts/1774156477101893/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/posts/1774156477101893/</a></li>
+<li>影片連結：<a href="https://www.facebook.com/61579313407097/videos/1605493064315080/" target="_blank" rel="noopener">https://www.facebook.com/61579313407097/videos/1605493064315080/</a></li>
+<li>作者：胡嘉璽，發佈於「Generative AI 技術交流中心」社團</li>
+<li>NVIDIA 官方 Playbook：<a href="https://build.nvidia.com/playbooks/pair" target="_blank" rel="noopener">https://build.nvidia.com/playbooks/pair</a></li>
+<li>GitHub 專案：<a href="https://github.com/NVIDIA/Personal-AI-Router" target="_blank" rel="noopener">https://github.com/NVIDIA/Personal-AI-Router</a></li>
+</ul>
+<h2>貼文重點</h2>
+<ul>
+<li>作者實測 NVIDIA PAIR，可把同一區域網中的多台可跑 LLM 的電腦接成叢集。</li>
+<li>支援 Windows、macOS、Linux；推論引擎目前以 Ollama 與 LM Studio 為主。</li>
+<li>PAIR 對外提供單一 endpoint，使用者可以像呼叫本機 Ollama / OpenAI-style API 一樣送出請求。</li>
+<li>PAIR 會依 engine availability、model availability 與 current workload，把獨立 request 路由到合適節點。</li>
+<li>若某台 GPU 不能用，系統可轉往其他可用節點，實務上可作為 local inference 的 failover / 分流層。</li>
+<li>貼文特別提醒：PAIR 不能把多張 GPU 相加成更大的記憶體池，也不能讓單一大模型跨機器載入。</li>
+</ul>
+<h2>官方文件補強</h2>
+<p>NVIDIA Playbook 將 PAIR 定義為 NVIDIA Personal AI Router：連接本地網路中的電腦，並向應用程式與 agent 暴露 Ollama-compatible 與 OpenAI-compatible proxy endpoints。它適合 multi-agent applications 這種同時產生多個獨立推論請求的工作負載。</p>
+<p>官方 Playbook 的重要限制與需求：</p>
+<ul>
+<li>PAIR sends each request to one system。</li>
+<li>不會 combine GPU memory、join GPUs into one larger GPU、split a model、或 split an in-flight inference request。</li>
+<li>至少需要一台 compatible system 安裝 PAIR。</li>
+<li>至少一台將服務 request 的系統需要 Ollama 或 LM Studio 與已下載模型。</li>
+<li>配對多台系統時需在 trusted local network；六位數 PIN 是短效 setup code，不是長期憑證。</li>
+<li>PAIR accepts requests only from the local system，因此應安裝在 app / agent 執行的那台機器上；但該機器可以把請求路由到其他 cluster node。</li>
+</ul>
+<h2>支援範圍</h2>
+<ul>
+<li>作業系統：Windows 11、Linux、macOS。</li>
+<li>架構：x64 與 arm64；Windows on ARM 仍屬 experimental。</li>
+<li>安裝包：Windows .exe、Linux .deb、macOS .dmg；其他 Linux distributions 可自行 build from source。</li>
+<li>節點混合：Windows、Linux、macOS 可互相 pair。</li>
+<li>推論引擎：Ollama、LM Studio。</li>
+<li>多節點硬體：DGX Spark、NVIDIA GeForce RTX 20 Series or newer、NVIDIA RTX PRO Turing or newer。</li>
+</ul>
+<h2>代表畫面</h2>
+<figure><img src="../assets/source-images/2026-09-05-facebook-hu-jiaxi-nvidia-pair-local-ai-router-facebook-thumbnail.jpg" alt="Facebook 影片縮圖，展示 NVIDIA PAIR 多節點本地推論實測" loading="lazy" referrerpolicy="no-referrer"><figcaption>Facebook 影片縮圖，展示 NVIDIA PAIR 多節點本地推論實測</figcaption></figure>
+<p>此圖為 Facebook 影片縮圖，保留作為原貼文視覺證據。影片長度約 31 秒，貼文主要示範 PAIR 節點與 endpoint 路由概念。</p>
+<figure><img src="../assets/source-images/2026-09-05-facebook-hu-jiaxi-nvidia-pair-local-ai-router-github-og.png" alt="GitHub NVIDIA Personal-AI-Router 專案預覽圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>GitHub NVIDIA Personal-AI-Router 專案預覽圖</figcaption></figure>
+<p>GitHub 專案描述：Router that virtually distributes inference across connected devices in the home。README 也明確指出 PAIR 適合 concurrent local workloads，例如 multi-agent applications。</p>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<ul>
+<li>這是 local AI 從「單機跑模型」走向「區網推論資源協調」的重要拼圖。</li>
+<li>對 Hermes / Codex / Claude Code / multi-agent workflow 來說，PAIR 可降低多代理同時打本機模型時的排隊與單點故障問題。</li>
+<li>對家中或工作室有多台 Mac、RTX PC、Linux box、DGX Spark 的使用者，PAIR 提供比手動切 endpoint 更乾淨的路由層。</li>
+<li>關鍵限制寫得很清楚：它不是 vLLM / Tensor Parallel / 分散式大模型載入工具，而是 request-level router。</li>
+</ul>
+<h2>使用建議</h2>
+<ul>
+<li>先用兩台同區網機器測試：一台作為 app / agent 呼叫端，一台或多台作為模型服務節點。</li>
+<li>確認每個節點都已安裝 Ollama 或 LM Studio，且要服務的模型已下載並可正常載入。</li>
+<li>用 PAIR Playbook 的 curl 測試 endpoint，再觀察 Jobs 或節點狀態是否如預期分流。</li>
+<li>混合硬體時不要期待智慧資源最佳化；README 提到目前 scheduling 仍較適合同質性接近的機器。</li>
+<li>若在學校、公司、共享 Wi‑Fi 或不可信網路使用，務必先閱讀 SECURITY.md，確認 local HTTP endpoints、LAN discovery、PIN bootstrap 與 cluster networking 的風險。</li>
+</ul>
+<h2>原始貼文節錄</h2>
+<p>全網首發實測：用 NVIDIA PAIR 把區域網中的所有 GPU 合起來提供 LLM 服務。</p>
+<p>貼文作者實測指出，NVIDIA PAIR 支援 Windows、macOS、Linux，目前支援 Ollama 和 LM Studio；只要電腦安裝其中一個推論引擎，就可以加入 PAIR 叢集。叢集會提供單一 endpoint，當某台電腦 GPU 不能用時，PAIR 會自動轉到另一台有 GPU 的電腦，形成類似 failover 的效果。</p>
+<p>作者也提醒，PAIR 不是把 GPU 相加以放上更大的模型；它較適合家中或工作室有多台可跑 LLM 的機器、且都在同一區域網的情境。安裝後執行配對，看到 node 加入後，就能對代表機器 IP 的 endpoint 發 request，例如用 curl 存取 endpoint，觀察不同電腦被輪流存取。</p>
+<h2>原始連結</h2>
+<p>Facebook：</p>
+<p><a href="https://www.facebook.com/groups/gaitech/posts/1774156477101893/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/posts/1774156477101893/</a></p>
+<p>NVIDIA Playbook：</p>
+<p><a href="https://build.nvidia.com/playbooks/pair" target="_blank" rel="noopener">https://build.nvidia.com/playbooks/pair</a></p>
+<p>GitHub：</p>
+<p><a href="https://github.com/NVIDIA/Personal-AI-Router" target="_blank" rel="noopener">https://github.com/NVIDIA/Personal-AI-Router</a></p>
+<p>Releases：</p>
+<p><a href="https://github.com/NVIDIA/Personal-AI-Router/releases" target="_blank" rel="noopener">https://github.com/NVIDIA/Personal-AI-Router/releases</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-05 · https://www.facebook.com/share/v/1DqzoeHpvM/ · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">NVIDIA PAIR</span><span class="tag">Personal AI Router</span><span class="tag">本地 LLM</span><span class="tag">Ollama</span><span class="tag">LM Studio</span><span class="tag">Local AI</span><span class="tag">Multi-node Inference</span><span class="tag">Facebook</span><h3>原始連結</h3><p><a href="https://www.facebook.com/groups/gaitech/posts/1774156477101893/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/posts/1774156477101893/</a></p><p><a href="https://www.facebook.com/share/v/1DqzoeHpvM/" target="_blank" rel="noopener">https://www.facebook.com/share/v/1DqzoeHpvM/</a></p><p><a href="https://www.facebook.com/groups/gaitech/posts/1774156477101893/" target="_blank" rel="noopener">https://www.facebook.com/groups/gaitech/posts/1774156477101893/</a></p><p><a href="https://www.facebook.com/61579313407097/videos/1605493064315080/" target="_blank" rel="noopener">https://www.facebook.com/61579313407097/videos/1605493064315080/</a></p><p><a href="https://build.nvidia.com/playbooks/pair" target="_blank" rel="noopener">https://build.nvidia.com/playbooks/pair</a></p><p><a href="https://github.com/NVIDIA/Personal-AI-Router" target="_blank" rel="noopener">https://github.com/NVIDIA/Personal-AI-Router</a></p><p><a href="https://github.com/NVIDIA/Personal-AI-Router/releases" target="_blank" rel="noopener">https://github.com/NVIDIA/Personal-AI-Router/releases</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
