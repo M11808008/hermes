@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#151023"/><stop offset="0.5" stop-color="#3b1f55"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/><circle cx="980" cy="140" r="170" fill="#a78bfa" opacity=".18"/><circle cx="190" cy="540" r="210" fill="#22d3ee" opacity=".12"/>
+<rect x="82" y="76" width="1036" height="478" rx="42" fill="#fff" opacity=".08"/>
+<text x="116" y="148" fill="#c4b5fd" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="30" font-weight="700">AI 學習雷達｜短影音工作流觀察</text>
+<text x="116" y="230" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="54" font-weight="800">AI 漫劇拆解與再生成</text>
+<text x="116" y="302" fill="#e9d5ff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="34" font-weight="650">抖音片段 → 劇本提取 → 角色設定 → 即夢 / Seedance 生成</text>
+<text x="116" y="392" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="28">• 可見工具：豆包、即夢 AI、Seedance 2.0、抖音分享連結</text>
+<text x="116" y="440" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="28">• 核心價值：把短劇視覺、秒數、對白轉成可再生產腳本</text>
+<text x="116" y="488" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="28">• 風險：灰產話術、侵權仿作、平台搬運與肖像/版權問題</text>
+<text x="116" y="560" fill="#93c5fd" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="24">2026-09-06 · 林娜呀 Facebook Reel · 公開片段歸檔</text>
+</svg>
