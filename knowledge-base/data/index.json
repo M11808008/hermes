@@ -1,5 +1,40 @@
 [
   {
+    "title": "Facebook｜WithKat：Claude 串 Meta Ads MCP 與 Krea MCP 的對話式廣告素材工作流",
+    "date": "2026-09-06",
+    "source": "https://www.facebook.com/share/r/19PQDpTXfU/?mibextid=wwXIfr",
+    "author": "WithKat（Facebook）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Claude",
+      "MCP",
+      "Meta Ads",
+      "Krea",
+      "Marketing Automation",
+      "Creative Workflow",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61593193388894/videos/looking-to-make-scroll-stopping-videos-fast-you-need-to-check-this-out-creating-/1557768659428569/",
+      "https://www.facebook.com/share/r/19PQDpTXfU/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1557768659428569",
+      "https://www.facebook.com/61593193388894/videos/looking-to-make-scroll-stopping-videos-fast-you-need-to-check-this-out-creating-/1557768659428569/",
+      "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+      "https://mcp.facebook.com/ads",
+      "https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp",
+      "https://www.krea.ai/",
+      "https://api.krea.ai/mcp"
+    ],
+    "excerpt": "這支 WithKat Facebook Reel 把三個已經成形的能力串在一起：Claude 的 remote MCP custom connectors、Meta 官方 Ads MCP server，以及 Krea 的創意生成 MCP。它代表廣告工作流正在從「手動開後台、匯出報表、另外做素材」走向「用 AI agent 在對話中讀取資料、生成素材、準備 campaign 草稿」。但短影音封面的「$10k/month」應視為創作者行銷標語，不是 Meta、Anthropic 或 Krea 的官方承諾。",
+    "slug": "2026-09-06-facebook-withkat-krea-mcp-meta-ads-claude-workflow",
+    "html": "articles/2026-09-06-facebook-withkat-krea-mcp-meta-ads-claude-workflow.html",
+    "markdown": "articles/2026/09/2026-09-06-facebook-withkat-krea-mcp-meta-ads-claude-workflow.md"
+  },
+  {
     "title": "Facebook｜胡嘉璽：NVIDIA PAIR 把區域網多台 GPU 電腦變成本地 LLM 推論路由叢集",
     "date": "2026-09-05",
     "source": "https://www.facebook.com/share/v/1DqzoeHpvM/",

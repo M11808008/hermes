@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121826"/>
+      <stop offset="0.52" stop-color="#202b57"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1030" cy="120" r="150" fill="#60a5fa" opacity="0.16"/>
+  <circle cx="160" cy="560" r="190" fill="#f97316" opacity="0.12"/>
+  <rect x="80" y="78" width="1040" height="474" rx="42" fill="#ffffff" opacity="0.08" filter="url(#shadow)"/>
+  <text x="110" y="150" fill="#a7f3d0" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial,sans-serif" font-size="30" font-weight="700">AI 學習雷達｜Social Reel Archive</text>
+  <text x="110" y="232" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial,sans-serif" font-size="58" font-weight="800">Claude × Meta Ads × Krea MCP</text>
+  <text x="110" y="303" fill="#dbeafe" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial,sans-serif" font-size="34" font-weight="650">用遠端 MCP 把創意生成與廣告後台串成對話式投放流程</text>
+  <text x="110" y="392" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial,sans-serif" font-size="27">• Meta Ads MCP：報表、建立/管理 campaign、catalog、A/B test</text>
+  <text x="110" y="438" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial,sans-serif" font-size="27">• Krea MCP：在 Claude 內生成商品與社群廣告素材</text>
+  <text x="110" y="484" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial,sans-serif" font-size="27">• 關鍵：先讀取/草稿/暫停，上線前必須人工審核</text>
+  <text x="110" y="560" fill="#93c5fd" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial,sans-serif" font-size="24">2026-09-06 · WithKat Facebook Reel · 官方文件交叉驗證</text>
+</svg>
