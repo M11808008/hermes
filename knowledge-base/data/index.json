@@ -64,6 +64,38 @@
     "markdown": "articles/2026/09/2026-09-06-facebook-andy-cheng-deevid-classic-painting-live-action-video.md"
   },
   {
+    "title": "Facebook｜Buildingwmaria：用 Composio Custom Connector 把 Claude 接到 1,500+ Apps",
+    "date": "2026-09-06",
+    "source": "https://www.facebook.com/reel/1562247731950619",
+    "author": "Buildingwmaria（Facebook）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Claude",
+      "MCP",
+      "Composio",
+      "Custom Connector",
+      "AI Agents",
+      "Workflow Automation",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61593005426180/videos/this-is-actually-insaneclaude-aitools-designtools-aitoolsfordesign-composiopartn/1562247731950619/",
+      "https://www.facebook.com/reel/1562247731950619",
+      "https://www.facebook.com/61593005426180/videos/this-is-actually-insaneclaude-aitools-designtools-aitoolsfordesign-composiopartn/1562247731950619/",
+      "https://composio.dev/for-you",
+      "https://docs.composio.dev/docs/single-toolkit-mcp",
+      "https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp"
+    ],
+    "excerpt": "這支 Reel 的核心是：用 Claude 的 Custom Connector / remote MCP 功能，把 Composio 接進 Claude，讓 Claude 能透過 Composio 操作外部 App。它很適合作為 AI agent 從「聊天助手」進入「可執行工作流代理」的入門案例，但也必須加上權限控管、資料安全與人工審核。",
+    "slug": "2026-09-06-facebook-buildingwmaria-claude-composio-custom-connector",
+    "html": "articles/2026-09-06-facebook-buildingwmaria-claude-composio-custom-connector.html",
+    "markdown": "articles/2026/09/2026-09-06-facebook-buildingwmaria-claude-composio-custom-connector.md"
+  },
+  {
     "title": "Facebook｜林娜呀：用 AI 提取抖音漫劇腳本，再用即夢 / Seedance 生成短劇的灰產化工作流觀察",
     "date": "2026-09-06",
     "source": "https://www.facebook.com/share/r/1ENdBWUBT2/?mibextid=wwXIfr",
