@@ -1,5 +1,37 @@
 [
   {
+    "title": "Facebook｜AI Mastery：用 Claude 製作電影感動畫網站的 7 段高端提示詞流程",
+    "date": "2026-09-06",
+    "source": "https://www.facebook.com/share/p/1CwQQPHWTT/?mibextid=wwXIfr",
+    "author": "AI Mastery（Facebook）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Claude",
+      "Claude Code",
+      "Prompt Engineering",
+      "Web Design",
+      "Creative Coding",
+      "Motion Design",
+      "Frontend",
+      "Facebook"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61585600673719/posts/-breaking-claude-can-now-build-cinematic-animated-websites-that-look-like-a-20k-/122145478647186689/",
+      "https://www.facebook.com/share/p/1CwQQPHWTT/?mibextid=wwXIfr",
+      "https://www.facebook.com/61585600673719/posts/-breaking-claude-can-now-build-cinematic-animated-websites-that-look-like-a-20k-/122145478647186689/",
+      "https://claude.com/product/claude-code",
+      "https://docs.anthropic.com/en/docs/claude-code/overview"
+    ],
+    "excerpt": "這篇貼文的價值不在「Claude 免費取代 20K 美元 agency」這句誇張標語，而在它把高端互動網站的 AI 工作流拆成七個角色與階段：創意方向、UX 體驗架構、hero 設計、動態系統、逐步工程實作、品質升級稽核、上線前總檢。對 AI 學習雷達來說，它可轉成一套可教、可驗收、可加入人工審美與工程 QA 的提示詞框架。",
+    "slug": "2026-09-06-facebook-ai-mastery-claude-cinematic-website-prompts",
+    "html": "articles/2026-09-06-facebook-ai-mastery-claude-cinematic-website-prompts.html",
+    "markdown": "articles/2026/09/2026-09-06-facebook-ai-mastery-claude-cinematic-website-prompts.md"
+  },
+  {
     "title": "Facebook｜鄭騰紘 Andy Cheng：用 DeeVid AI 把世界名畫做成真人電影感影片",
     "date": "2026-09-06",
     "source": "https://www.facebook.com/share/r/1C7N4CZmwY/?mibextid=wwXIfr",

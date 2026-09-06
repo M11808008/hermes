@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="0.45" stop-color="#2b1647"/><stop offset="1" stop-color="#111827"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/><circle cx="1010" cy="125" r="185" fill="#a855f7" opacity=".17"/><circle cx="170" cy="545" r="230" fill="#06b6d4" opacity=".12"/>
+<rect x="78" y="74" width="1044" height="484" rx="44" fill="#ffffff" opacity=".08"/>
+<text x="116" y="148" fill="#c4b5fd" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="30" font-weight="700">AI 學習雷達｜Prompt Workflow Archive</text>
+<text x="116" y="230" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="54" font-weight="800">Claude Cinematic Website Prompts</text>
+<text x="116" y="302" fill="#e9d5ff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="34" font-weight="650">7 段提示詞：從創意方向到上線前體驗稽核</text>
+<text x="116" y="392" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="27">• Creative Direction / UX Architecture / Hero / Motion System</text>
+<text x="116" y="438" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="27">• Step-by-step Build / $20K Quality Audit / Final Launch Audit</text>
+<text x="116" y="484" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="27">• Caveat：$20K agency build 是行銷定位，不是免費品質保證</text>
+<text x="116" y="560" fill="#93c5fd" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="24">2026-09-06 · AI Mastery Facebook Post · Claude / Creative Web Design</text>
+</svg>
