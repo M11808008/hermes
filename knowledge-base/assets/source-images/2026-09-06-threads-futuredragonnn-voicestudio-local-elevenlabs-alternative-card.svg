@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="0.45" stop-color="#3b0764"/><stop offset="1" stop-color="#052e16"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity="0.36"/></filter></defs>
+<rect width="1200" height="630" fill="url(#g)"/><circle cx="990" cy="120" r="230" fill="#22c55e" opacity=".17"/><circle cx="180" cy="510" r="240" fill="#a855f7" opacity=".18"/>
+<rect x="78" y="76" width="1044" height="478" rx="38" fill="#020617" opacity=".84" filter="url(#s)"/>
+<text x="122" y="148" fill="#86efac" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">AI 學習雷達 · Threads / GitHub</text>
+<text x="122" y="238" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="66" font-weight="850">VoiceStudio</text>
+<text x="122" y="310" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="760">本機版 ElevenLabs 替代方案</text>
+<text x="122" y="388" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="28">16 TTS · 11 ASR · 646 languages · MCP Server · AGPL-3.0</text>
+<g transform="translate(122,442)"><rect width="190" height="58" rx="29" fill="#7c3aed"/><text x="95" y="38" text-anchor="middle" fill="white" font-family="Inter,Arial" font-size="22" font-weight="700">Voice Clone</text><text x="232" y="38" fill="#e5e7eb" font-size="28">→</text><rect x="280" width="170" height="58" rx="29" fill="#0f766e"/><text x="365" y="38" text-anchor="middle" fill="white" font-family="Inter,Arial" font-size="22" font-weight="700">Dubbing</text><text x="490" y="38" fill="#e5e7eb" font-size="28">→</text><rect x="538" width="230" height="58" rx="29" fill="#16a34a"/><text x="653" y="38" text-anchor="middle" fill="white" font-family="Inter,Arial" font-size="22" font-weight="700">Local-first</text></g>
+</svg>

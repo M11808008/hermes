@@ -236,6 +236,39 @@
     "markdown": "articles/2026/09/2026-09-06-threads-aiposthub-google-lyria-3-5-ai-studio-api.md"
   },
   {
+    "title": "Threads｜遠地平線：VoiceStudio，本機版 ElevenLabs 替代方案與 MCP 語音工作台",
+    "date": "2026-09-06",
+    "source": "https://www.threads.com/share/BADHYmarZj/",
+    "author": "遠地平線（@futuredragonnn） / debpalash/VoiceStudio",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Threads",
+      "VoiceStudio",
+      "Local AI",
+      "ElevenLabs Alternative",
+      "Voice Cloning",
+      "Text to Speech",
+      "Speech to Text",
+      "MCP",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@futuredragonnn/post/Dc7oJkBm_9g",
+      "https://www.threads.com/share/BADHYmarZj/",
+      "https://www.threads.com/@futuredragonnn/post/Dc7oJkBm_9g",
+      "https://github.com/debpalash/VoiceStudio",
+      "https://github.com/debpalash/VoiceStudio/releases/latest"
+    ],
+    "excerpt": "VoiceStudio 把 voice cloning、voice design、video dubbing、dictation、transcription、audiobook generation 做成一個本機優先的桌面工作台。它的價值不只是「免費版 ElevenLabs」，而是讓敏感錄音、內部配音、課程素材與離線工作站可以在自己的硬體上完成處理；但也要留意 active beta、模型下載容量、CPU/GPU 速度差異、AGPL-3.0 授權與聲音複製合規風險。",
+    "slug": "2026-09-06-threads-futuredragonnn-voicestudio-local-elevenlabs-alternative",
+    "html": "articles/2026-09-06-threads-futuredragonnn-voicestudio-local-elevenlabs-alternative.html",
+    "markdown": "articles/2026/09/2026-09-06-threads-futuredragonnn-voicestudio-local-elevenlabs-alternative.md"
+  },
+  {
     "title": "YouTube｜freeCodeCamp：Claude Code Essentials 12 小時代理式程式開發完整課",
     "date": "2026-09-06",
     "source": "https://youtu.be/brLhhkUqcn4?si=_okUbzFdTtrs65QP",
