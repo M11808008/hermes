@@ -98,10 +98,10 @@
     "markdown": "articles/2026/09/2026-09-06-facebook-lin-naya-ai-microdrama-script-extraction-jimeng-workflow.md"
   },
   {
-    "title": "Facebook｜WithKat／Mae Krea：Claude 串 Meta Ads MCP 與 Krea MCP 的對話式廣告素材工作流",
+    "title": "Facebook｜WithKat／Mae Krea／jschai.builds：Claude 串 Meta Ads MCP 與 Krea MCP 的對話式廣告素材工作流",
     "date": "2026-09-06",
     "source": "https://www.facebook.com/share/r/19PQDpTXfU/?mibextid=wwXIfr",
-    "author": "WithKat／Mae Krea（Facebook）",
+    "author": "WithKat／Mae Krea／jschai.builds（Facebook）",
     "type": "article",
     "topics": [
       "AI學習雷達",
@@ -124,13 +124,15 @@
       "https://www.facebook.com/share/r/1aAXWC9HZ4/?mibextid=wwXIfr",
       "https://www.facebook.com/reel/1096078209655324",
       "https://www.facebook.com/maeekrea/videos/claude-meta-print-method-is-here-boston-aitools-sidehustle-claude-kreapartner/1096078209655324/",
+      "https://www.facebook.com/reel/1426712989347409",
+      "https://www.facebook.com/jchai.builds/videos/if-you-wanna-know-how-i-did-it-comment-krea-krea-sidehustle-metaads-college/1426712989347409/",
       "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
       "https://mcp.facebook.com/ads",
       "https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp",
       "https://www.krea.ai/",
       "https://api.krea.ai/mcp"
     ],
-    "excerpt": "這支 WithKat Facebook Reel 把三個已經成形的能力串在一起：Claude 的 remote MCP custom connectors、Meta 官方 Ads MCP server，以及 Krea 的創意生成 MCP。它代表廣告工作流正在從「手動開後台、匯出報表、另外做素材」走向「用 AI agent 在對話中讀取資料、生成素材、準備 campaign 草稿」。但短影音封面的「$10k/month」應視為創作者行銷標語，不是 Meta、Anthropic 或 Krea 的官方承諾。",
+    "excerpt": "WithKat、Mae Krea 與 jschai.builds 這幾支同系列 Facebook Reel 都把三個已經成形的能力串在一起：Claude 的 remote MCP custom connectors、Meta 官方 Ads MCP server，以及 Krea 的創意生成 MCP。它代表廣告工作流正在從「手動開後台、匯出報表、另外做素材」走向「用 AI agent 在對話中讀取資料、生成素材、準備 campaign 草稿」。但短影音封面的「$10k/month」應視為創作者行銷標語，不是 Meta、Anthropic 或 Krea 的官方承諾。",
     "slug": "2026-09-06-facebook-withkat-krea-mcp-meta-ads-claude-workflow",
     "html": "articles/2026-09-06-facebook-withkat-krea-mcp-meta-ads-claude-workflow.html",
     "markdown": "articles/2026/09/2026-09-06-facebook-withkat-krea-mcp-meta-ads-claude-workflow.md"
