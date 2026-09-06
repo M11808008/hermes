@@ -72,6 +72,40 @@
     "markdown": "articles/2026/09/2026-09-06-facebook-withkat-krea-mcp-meta-ads-claude-workflow.md"
   },
   {
+    "title": "YouTube｜freeCodeCamp：Claude Code Essentials 12 小時代理式程式開發完整課",
+    "date": "2026-09-06",
+    "source": "https://youtu.be/brLhhkUqcn4?si=_okUbzFdTtrs65QP",
+    "author": "freeCodeCamp.org／ExamPro",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Claude Code",
+      "Agentic Coding",
+      "AI Coding Agent",
+      "MCP",
+      "Subagents",
+      "GitHub Actions",
+      "Developer Workflow",
+      "YouTube"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=brLhhkUqcn4",
+      "https://youtu.be/brLhhkUqcn4?si=_okUbzFdTtrs65QP",
+      "https://www.youtube.com/watch?v=brLhhkUqcn4",
+      "https://www.youtube.com/@freecodecamp",
+      "https://www.exampro.co/exp-claudecode-01",
+      "https://claude.com/product/claude-code",
+      "https://docs.anthropic.com/en/docs/claude-code/overview"
+    ],
+    "excerpt": "freeCodeCamp.org 這支《Claude Code Essentials》把 Claude Code 從「會下 prompt 的 coding agent」拉到完整工程工作流：安裝、授權、session、context、permission、sandbox、安全 hooks、IDE / GitHub Actions / remote control、skills、MCP、sub-agents 與 multi-agent teams 都有章節。它很適合收進 AI 學習雷達，作為 Claude Code 課程設計、企業導入與工程團隊訓練的索引。",
+    "slug": "2026-09-06-youtube-freecodecamp-claude-code-essentials",
+    "html": "articles/2026-09-06-youtube-freecodecamp-claude-code-essentials.html",
+    "markdown": "articles/2026/09/2026-09-06-youtube-freecodecamp-claude-code-essentials.md"
+  },
+  {
     "title": "Facebook｜胡嘉璽：NVIDIA PAIR 把區域網多台 GPU 電腦變成本地 LLM 推論路由叢集",
     "date": "2026-09-05",
     "source": "https://www.facebook.com/share/v/1DqzoeHpvM/",
