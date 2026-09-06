@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="0.48" stop-color="#3b2f24"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/><circle cx="1010" cy="145" r="175" fill="#fbbf24" opacity=".15"/><circle cx="160" cy="540" r="220" fill="#60a5fa" opacity=".12"/>
+<rect x="78" y="74" width="1044" height="484" rx="44" fill="#ffffff" opacity=".08"/>
+<text x="116" y="148" fill="#fde68a" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="30" font-weight="700">AI 學習雷達｜Reels Tutorial Archive</text>
+<text x="116" y="230" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="54" font-weight="800">世界名畫真人影片效果</text>
+<text x="116" y="302" fill="#ffedd5" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="34" font-weight="650">DeeVid AI：圖片角色表 → 影片模型 → 古典畫作動態化</text>
+<text x="116" y="392" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="27">• 工具：deevid.ai，一站式 AI 導演 / 影片、圖片、虛擬人</text>
+<text x="116" y="438" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="27">• 流程：上傳照片 → GPT Image 2 角色設定表 → Veo V4.5 影片</text>
+<text x="116" y="484" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="27">• 風險：名畫、公版素材、肖像與創作者 prompt 私域導流</text>
+<text x="116" y="560" fill="#93c5fd" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans TC',Arial" font-size="24">2026-09-06 · 鄭騰紘 Andy Cheng · DeeVid / AI video workflow</text>
+</svg>

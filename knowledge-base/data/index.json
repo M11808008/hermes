@@ -1,5 +1,37 @@
 [
   {
+    "title": "Facebook｜鄭騰紘 Andy Cheng：用 DeeVid AI 把世界名畫做成真人電影感影片",
+    "date": "2026-09-06",
+    "source": "https://www.facebook.com/share/r/1C7N4CZmwY/?mibextid=wwXIfr",
+    "author": "鄭騰紘 . Andy Cheng（Facebook）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "DeeVid",
+      "AI影片生成",
+      "圖片轉影片",
+      "GPT Image 2",
+      "Veo",
+      "世界名畫",
+      "剪輯教學",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61567324513096/videos/4412007099116460/",
+      "https://www.facebook.com/share/r/1C7N4CZmwY/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/4412007099116460",
+      "https://www.facebook.com/61567324513096/videos/4412007099116460/",
+      "https://deevid.ai/"
+    ],
+    "excerpt": "這支 Reel 展示的是「古典名畫 → 角色設定表 → 電影感真人影片」的快速 AI 工作流。核心工具是 DeeVid AI；流程先用圖片模型做角色設定表，再把設定表交給影片模型生成帶有真人演出感的短片。它適合收進 AI 學習雷達，作為 image-to-video、角色一致性與視覺再詮釋教學案例。",
+    "slug": "2026-09-06-facebook-andy-cheng-deevid-classic-painting-live-action-video",
+    "html": "articles/2026-09-06-facebook-andy-cheng-deevid-classic-painting-live-action-video.html",
+    "markdown": "articles/2026/09/2026-09-06-facebook-andy-cheng-deevid-classic-painting-live-action-video.md"
+  },
+  {
     "title": "Facebook｜林娜呀：用 AI 提取抖音漫劇腳本，再用即夢 / Seedance 生成短劇的灰產化工作流觀察",
     "date": "2026-09-06",
     "source": "https://www.facebook.com/share/r/1ENdBWUBT2/?mibextid=wwXIfr",
