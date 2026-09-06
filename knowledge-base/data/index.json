@@ -203,6 +203,39 @@
     "markdown": "articles/2026/09/2026-09-06-facebook-withkat-krea-mcp-meta-ads-claude-workflow.md"
   },
   {
+    "title": "Threads｜AI郵報：Google Lyria 3.5 在 AI Studio 與 Gemini API 開放，完整歌曲生成進入產品化",
+    "date": "2026-09-06",
+    "source": "https://www.threads.com/share/BAVy1oxFOi/",
+    "author": "AI郵報（@aiposthub）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Threads",
+      "Google AI Studio",
+      "Gemini API",
+      "Lyria 3.5",
+      "AI Music",
+      "SynthID",
+      "Suno",
+      "Udio"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/Dc49CUSgfgw",
+      "https://www.threads.com/share/BAVy1oxFOi/",
+      "https://www.threads.com/@aiposthub/post/Dc49CUSgfgw",
+      "https://www.aiposthub.com/google-lyria-3-5-music-generation-guide/",
+      "https://ai.google.dev/gemini-api/docs/music-generation?hl=zh-tw",
+      "https://aistudio.google.com/welcome"
+    ],
+    "excerpt": "AI郵報這則 Threads 串文把 Lyria 3.5 定位成 Google 正式進入 Suno / Udio 競爭帶的訊號：不只是生成短 BGM，而是開始支援幾分鐘的完整歌曲、主歌/副歌/Bridge 結構、人聲歌唱、圖片導引音樂與 API 整合。官方文件證實核心能力，但也明確指出目前仍是單輪生成，不支援多輪局部修補；版權、歌手聲音模仿與 AI 音訊標示也有安全限制。",
+    "slug": "2026-09-06-threads-aiposthub-google-lyria-3-5-ai-studio-api",
+    "html": "articles/2026-09-06-threads-aiposthub-google-lyria-3-5-ai-studio-api.html",
+    "markdown": "articles/2026/09/2026-09-06-threads-aiposthub-google-lyria-3-5-ai-studio-api.md"
+  },
+  {
     "title": "YouTube｜freeCodeCamp：Claude Code Essentials 12 小時代理式程式開發完整課",
     "date": "2026-09-06",
     "source": "https://youtu.be/brLhhkUqcn4?si=_okUbzFdTtrs65QP",
