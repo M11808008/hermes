@@ -33,6 +33,37 @@
     "markdown": "articles/2026/09/2026-09-09-threads-ai-engineering-from-scratch.md"
   },
   {
+    "title": "Threads｜Claude 一句指令建立 Meta 廣告活動：從研究到 Ads Manager 草稿",
+    "date": "2026-09-09",
+    "source": "https://www.threads.com/share/BABB8evZzg/",
+    "author": "Ryan Foster (@ryanfoster.voice)",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Claude",
+      "Meta Ads",
+      "廣告自動化",
+      "Agent工作流",
+      "行銷科技",
+      "人機協作"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@ryanfoster.voice/post/Dc3FiR8AKDu",
+      "https://www.threads.com/share/BABB8evZzg/",
+      "https://www.threads.com/@ryanfoster.voice/post/Dc3FiR8AKDu",
+      "https://contactloop.com/",
+      "https://www.facebook.com/business/tools/ads-manager",
+      "https://claude.com/product/overview"
+    ],
+    "excerpt": "這則 Threads 貼文把 Claude 描述成行銷活動的執行型協作者：從受眾與市場研究、廣告文案、創意素材，到 Meta Ads Manager 的活動草稿都能協助完成，但刻意保留在 paused 狀態，避免未經確認就開始花費廣告預算。",
+    "slug": "2026-09-09-threads-claude-meta-campaign",
+    "html": "articles/2026-09-09-threads-claude-meta-campaign.html",
+    "markdown": "articles/2026/09/2026-09-09-threads-claude-meta-campaign.md"
+  },
+  {
     "title": "Threads｜GPT-6 Astra 自動製作可玩遊戲：從手遊騙流廣告到 AI 遊戲原型",
     "date": "2026-09-09",
     "source": "https://www.threads.com/share/BCKqok6m-h/",
