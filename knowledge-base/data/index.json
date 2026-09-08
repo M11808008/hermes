@@ -28,6 +28,63 @@
     "markdown": "articles/2026/09/2026-09-08-blake-long-ren-ramen.md"
   },
   {
+    "title": "Facebook｜Codex 中文社群：把專案規則整理成 Markdown，讓 AI 不必每次從零開始",
+    "date": "2026-09-08",
+    "source": "https://www.facebook.com/share/p/1EWbHw1FLx/?mibextid=wwXIfr",
+    "author": "陳立承／Codex 中文社群",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "ChatGPT",
+      "Codex",
+      "Markdown",
+      "專案知識庫",
+      "AI工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/1713764039757273/posts/1820710792395930/",
+      "https://www.facebook.com/share/p/1EWbHw1FLx/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/1713764039757273/posts/1820710792395930/"
+    ],
+    "excerpt": "把「每次都要重新交代的工作規則」寫成一份經過確認的 Markdown，放進專案資料來源，讓 AI 更容易沿用同一套方法；但仍要做來源、版本與實際讀取結果的驗收。",
+    "slug": "2026-09-08-facebook-codex-project-markdown-knowledge-base",
+    "html": "articles/2026-09-08-facebook-codex-project-markdown-knowledge-base.html",
+    "markdown": "articles/2026/09/2026-09-08-facebook-codex-project-markdown-knowledge-base.md"
+  },
+  {
+    "title": "Facebook｜數位敘事力期刊：用簡報 Skill 從題目對齊到 Canva 班親會範本",
+    "date": "2026-09-08",
+    "source": "https://www.facebook.com/share/1DHrJr9oeK/?mibextid=wwXIfr",
+    "author": "數位敘事力期刊（Journal of Digital Narrative）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "AI簡報",
+      "Agent Skill",
+      "Codex",
+      "ChatGPT",
+      "Canva",
+      "教學設計"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/photo.php?fbid=122216159732587238&set=a.122108253992587238&type=3",
+      "https://www.facebook.com/share/1DHrJr9oeK/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=122216159732587238&set=a.122108253992587238&type=3",
+      "https://github.com/FW1201/visual-presentation-production",
+      "https://canva.link/vntbrjneoedgzfz"
+    ],
+    "excerpt": "這則貼文把 AI 簡報製作拆成「安裝 Skill → 提供題目 → 對齊規格與大綱 → 產出簡報」的流程，並附上 GitHub Skill 與 Canva 班親會範本，適合當作教學、家長會或課程簡報的起始工作流。",
+    "slug": "2026-09-08-facebook-presentation-skill-canva-template",
+    "html": "articles/2026-09-08-facebook-presentation-skill-canva-template.html",
+    "markdown": "articles/2026/09/2026-09-08-facebook-presentation-skill-canva-template.md"
+  },
+  {
     "title": "三重美食｜阿田麵：台北橋站旁 70 年老字號全套麵",
     "date": "2026-09-08",
     "source": "https://kkmurmur.com/a-tian-noodles/",
