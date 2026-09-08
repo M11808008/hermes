@@ -144,6 +144,37 @@
     "markdown": "articles/2026/09/2026-09-08-shotfunlady-lu-guang-da-jie.md"
   },
   {
+    "title": "Threads｜Gemini 桌面版朝超級應用發展：Ask／Assign、Computer Use 與 Obsidian 整合封測",
+    "date": "2026-09-08",
+    "source": "https://www.threads.com/share/BAZziYQkeK/",
+    "author": "garlia.t／蔡宗佐",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Gemini",
+      "Google",
+      "Computer Use",
+      "Obsidian",
+      "AI Agent",
+      "桌面代理",
+      "個人知識管理"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@garlia.t/post/DdBBSOik_Z-",
+      "https://www.threads.com/share/BAZziYQkeK/",
+      "https://www.threads.com/@garlia.t/post/DdBBSOik_Z-",
+      "https://tw.news.yahoo.com/google-%E6%89%93%E7%AE%97%E5%B0%87-gemini-%E6%A1%8C%E9%9D%A2%E7%89%88%E6%89%93%E9%80%A0%E6%88%90%E8%B6%85%E7%B4%9A%E6%87%89%E7%94%A8-computer-230523183.html",
+      "https://www.kocpc.com.tw/"
+    ],
+    "excerpt": "這則 Threads 分享的重點，不是 Gemini 又多了一個聊天功能，而是 Google 可能把桌面版 Gemini 往「能理解本機檔案、操作桌面應用、連接個人知識庫並執行任務」的代理平台方向推進；不過目前多數新能力仍屬封閉測試或媒體根據測試版線索的整理。",
+    "slug": "2026-09-08-threads-gemini-desktop-obsidian",
+    "html": "articles/2026-09-08-threads-gemini-desktop-obsidian.html",
+    "markdown": "articles/2026/09/2026-09-08-threads-gemini-desktop-obsidian.md"
+  },
+  {
     "title": "Facebook｜AI Mastery：用 Claude 製作電影感動畫網站的 7 段高端提示詞流程",
     "date": "2026-09-06",
     "source": "https://www.facebook.com/share/p/1CwQQPHWTT/?mibextid=wwXIfr",
