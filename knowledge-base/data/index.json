@@ -1,5 +1,38 @@
 [
   {
+    "title": "Threads｜AI Engineering from Scratch：從第一原理打造 AI 系統的開源課程",
+    "date": "2026-09-09",
+    "source": "https://www.threads.com/share/BAHR-1U16w/",
+    "author": "無聊就學AI Lab | Boring Traveler (@akiraxtwo)",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "AI工程",
+      "深度學習",
+      "大型語言模型",
+      "Agent",
+      "MCP",
+      "開源課程",
+      "第一原理"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@akiraxtwo/post/DdCOMTUkktw",
+      "https://www.threads.com/share/BAHR-1U16w/",
+      "https://www.threads.com/@akiraxtwo/post/DdCOMTUkktw",
+      "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "https://aiengineeringfromscratch.com",
+      "https://github.com/fancyboi999/ai-engineering-from-scratch-zh",
+      "https://aieng-zh.cn"
+    ],
+    "excerpt": "這是一套以「先自己做出來，再用成熟函式庫對照」為方法的免費開源 AI 工程課程；它不追求週末速成，而是帶學習者從數學與底層實作一路走到 LLM、MCP、Agent 與生產部署。",
+    "slug": "2026-09-09-threads-ai-engineering-from-scratch",
+    "html": "articles/2026-09-09-threads-ai-engineering-from-scratch.html",
+    "markdown": "articles/2026/09/2026-09-09-threads-ai-engineering-from-scratch.md"
+  },
+  {
     "title": "Threads｜GPT-6 Astra 自動製作可玩遊戲：從手遊騙流廣告到 AI 遊戲原型",
     "date": "2026-09-09",
     "source": "https://www.threads.com/share/BCKqok6m-h/",

@@ -1,0 +1,78 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜AI Engineering from Scratch：從第一原理打造 AI 系統的開源課程</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜AI Engineering from Scratch：從第一原理打造 AI 系統的開源課程</h1><h1>AI Engineering from Scratch：把「會用 AI」補成「能造出 AI 系統」</h1>
+<h2>一句話摘要</h2>
+<p>這是一套以「先自己做出來，再用成熟函式庫對照」為方法的免費開源 AI 工程課程；它不追求週末速成，而是帶學習者從數學與底層實作一路走到 LLM、MCP、Agent 與生產部署。</p>
+<h2>來源脈絡</h2>
+<p>Threads 貼文由「無聊就學AI Lab | Boring Traveler」分享，原文將它定位為適合會寫程式、希望把「會用 ChatGPT」提升到「能把系統做出來」的人所使用的長期自學地圖。</p>
+<p>貼文提到約 20 個階段、500 多課，以及每一課都留下可再利用的提示詞、技能包、Agent 或 MCP 伺服器。貼文圖片與原始 GitHub README 可交叉確認這個專案的名稱、MIT 授權、20 phases 與完整課程方向。</p>
+<h2>課程重點</h2>
+<p>### 從底層基礎逐層往上</p>
+<p>原始課程的架構從以下主題展開：</p>
+<ul>
+<li>Setup and Tooling：開發環境與工具鏈</li>
+<li>Math Foundations：線性代數、機率與數學直覺</li>
+<li>ML Fundamentals：機器學習基礎</li>
+<li>Deep Learning：神經網路與深度學習核心</li>
+<li>Vision、Speech、NLP：視覺、語音與自然語言</li>
+<li>Reinforcement Learning：強化學習</li>
+<li>Transformers、Generative AI、從零實作 LLM</li>
+<li>LLM Engineering 與 Multimodal AI</li>
+<li>Tools and Protocols：工具呼叫與 Model Context Protocol（MCP）</li>
+<li>Agent Engineering、自主系統、多 Agent 與群體</li>
+<li>Infrastructure、Production、倫理安全與綜合專案</li>
+</ul>
+<p>GitHub README 目前列出 20 個階段、523 節課，約 342 小時；Threads 貼文則以「500 多課」概括介紹。課程內容與統計可能隨專案更新，數字應以原始 repository 為準。</p>
+<p>### 每課的實作循環</p>
+<p>課程不是只讀概念或複製框架範例，而是反覆走過：</p>
+<ul>
+<li>讀懂問題與背景</li>
+<li>推導數學與核心概念</li>
+<li>不依賴大型框架，先手寫一個可理解的版本</li>
+<li>用 PyTorch、scikit-learn 等生產級函式庫重新實作</li>
+<li>留下提示詞、技能、Agent 或 MCP server 等可重用產物</li>
+</ul>
+<p>這種安排的價值在於：使用框架時，不必把它當成黑盒子；學習者會知道 API 背後正在處理什麼。</p>
+<h2>相關資源</h2>
+<ul>
+<li>原始英文課程：`rohitg00/ai-engineering-from-scratch`，MIT License</li>
+<li>官方課程網站：`aiengineeringfromscratch.com`</li>
+<li>簡體中文衍生版：`fancyboi999/ai-engineering-from-scratch-zh`</li>
+<li>簡體中文網站：`aieng-zh.cn`</li>
+</ul>
+<p>中文衍生版 README 說明，已將課程正文、術語、測驗與圖表翻譯成簡體中文，並提供可搜尋網站、學習路徑與部分數學動畫；它是原始英文課程的衍生專案，不是原作者的官方繁體中文版。</p>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<p>這個專案特別適合作為「從工具使用者走向系統建造者」的課程索引：</p>
+<ul>
+<li>把數學、模型、工程、Agent 與部署串成同一條路徑。</li>
+<li>每一階段都有可以執行或保存的成果，不只留下閱讀筆記。</li>
+<li>內容同時涵蓋 Python、TypeScript、Rust 與 Julia，適合觀察不同語言在 AI 工程中的角色。</li>
+<li>Agent 與 MCP 被放在完整工程脈絡中，而不是孤立的提示詞技巧。</li>
+<li>MIT 授權、原始碼公開，方便自行閱讀、修改與建立學習分支。</li>
+</ul>
+<h2>適合怎麼開始</h2>
+<p>不建議直接從第一課一路硬啃。可以依目標選路：</p>
+<ul>
+<li>初學或環境未整理好：從 Phase 0 Setup and Tooling 開始。</li>
+<li>已會 Python、想補理論：先看 Math Foundations 與 ML Fundamentals。</li>
+<li>想做 LLM 應用：進入 Transformer、從零實作 LLM 與 LLM Engineering。</li>
+<li>想做 Agent：先理解 LLM 基礎，再進入 Tools and Protocols、MCP 與 Agent Engineering。</li>
+<li>想用編碼 Agent 做真實專案：使用 repository 提供的 Agent-Assisted Engineering learning path。</li>
+</ul>
+<p>建議以「每週完成一個小階段、每課保留可執行產物」取代追求快速看完全部內容。</p>
+<h2>代表畫面</h2>
+<p>封面圖以參考手冊形式呈現課程堆疊：從 Setup &amp; Tooling、Math Foundations、ML Fundamentals，延伸到 Deep Learning、Vision／Speech／NLP、LLMs／Transformers，最後抵達 Agents／Swarms／Prod。圖片也標示 MIT、20 phases 與課程網站。</p>
+<h2>查核註記</h2>
+<ul>
+<li>Threads 原文：介紹課程方向與適合對象。</li>
+<li>原始 GitHub README：確認 repository、作者、MIT 授權、課程階段、課數、語言與官方網站。</li>
+<li>中文衍生 repository：確認簡體中文翻譯版本與其中文網站，並標示為衍生版。</li>
+<li>課程課數、星數與網站內容會持續變動；本文保存的是 2026-09-09 查核時的狀態，不將社群貼文的概略數字誤當成永久固定資料。</li>
+</ul>
+<h2>原始連結</h2>
+<ul>
+<li>Threads 分享連結：<a href="https://www.threads.com/share/BAHR-1U16w/" target="_blank" rel="noopener">https://www.threads.com/share/BAHR-1U16w/</a></li>
+<li>Threads 原始貼文：<a href="https://www.threads.com/@akiraxtwo/post/DdCOMTUkktw" target="_blank" rel="noopener">https://www.threads.com/@akiraxtwo/post/DdCOMTUkktw</a></li>
+<li>原始 GitHub：<a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">https://github.com/rohitg00/ai-engineering-from-scratch</a></li>
+<li>官方網站：<a href="https://aiengineeringfromscratch.com" target="_blank" rel="noopener">https://aiengineeringfromscratch.com</a></li>
+<li>簡體中文衍生版：<a href="https://github.com/fancyboi999/ai-engineering-from-scratch-zh" target="_blank" rel="noopener">https://github.com/fancyboi999/ai-engineering-from-scratch-zh</a></li>
+<li>簡體中文網站：<a href="https://aieng-zh.cn" target="_blank" rel="noopener">https://aieng-zh.cn</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-09 · https://www.threads.com/share/BAHR-1U16w/ · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">AI工程</span><span class="tag">深度學習</span><span class="tag">大型語言模型</span><span class="tag">Agent</span><span class="tag">MCP</span><span class="tag">開源課程</span><span class="tag">第一原理</span><h3>原始連結</h3><p><a href="https://www.threads.com/@akiraxtwo/post/DdCOMTUkktw" target="_blank" rel="noopener">https://www.threads.com/@akiraxtwo/post/DdCOMTUkktw</a></p><p><a href="https://www.threads.com/share/BAHR-1U16w/" target="_blank" rel="noopener">https://www.threads.com/share/BAHR-1U16w/</a></p><p><a href="https://www.threads.com/@akiraxtwo/post/DdCOMTUkktw" target="_blank" rel="noopener">https://www.threads.com/@akiraxtwo/post/DdCOMTUkktw</a></p><p><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">https://github.com/rohitg00/ai-engineering-from-scratch</a></p><p><a href="https://aiengineeringfromscratch.com" target="_blank" rel="noopener">https://aiengineeringfromscratch.com</a></p><p><a href="https://github.com/fancyboi999/ai-engineering-from-scratch-zh" target="_blank" rel="noopener">https://github.com/fancyboi999/ai-engineering-from-scratch-zh</a></p><p><a href="https://aieng-zh.cn" target="_blank" rel="noopener">https://aieng-zh.cn</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
