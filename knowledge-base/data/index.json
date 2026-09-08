@@ -205,6 +205,35 @@
     "markdown": "articles/2026/09/2026-09-08-threads-openai-writing-style.md"
   },
   {
+    "title": "Threads｜照片轉復古海報 Prompt：把旅遊照片重構成 1960–70 年代日式觀光海報",
+    "date": "2026-09-08",
+    "source": "https://www.threads.com/share/_e0SMAPdD/",
+    "author": "andrew_hsin／AI Threads",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "ChatGPT",
+      "AI圖像生成",
+      "Prompt",
+      "復古海報",
+      "日本觀光海報",
+      "影像重構"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@andrew_hsin/post/Dc8fjiaD6Ax",
+      "https://www.threads.com/share/_e0SMAPdD/",
+      "https://www.threads.com/@andrew_hsin/post/Dc8fjiaD6Ax",
+      "https://chatgpt.com/s/p_6a9d569fe6b08191a21b15454ee52353"
+    ],
+    "excerpt": "這個 Prompt 的關鍵不是「把照片套成復古濾鏡」，而是要求模型保留原始地點的辨識特徵，再用幾何形狀、平面色塊、強烈透視與網版印刷質感，把照片重新設計成一張可收藏的日式旅遊海報。",
+    "slug": "2026-09-08-threads-vintage-japanese-poster-prompt",
+    "html": "articles/2026-09-08-threads-vintage-japanese-poster-prompt.html",
+    "markdown": "articles/2026/09/2026-09-08-threads-vintage-japanese-poster-prompt.md"
+  },
+  {
     "title": "Facebook｜AI Mastery：用 Claude 製作電影感動畫網站的 7 段高端提示詞流程",
     "date": "2026-09-06",
     "source": "https://www.facebook.com/share/p/1CwQQPHWTT/?mibextid=wwXIfr",
