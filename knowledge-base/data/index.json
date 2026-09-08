@@ -175,6 +175,36 @@
     "markdown": "articles/2026/09/2026-09-08-threads-gemini-desktop-obsidian.md"
   },
   {
+    "title": "Threads｜OpenAI Writing style：讓 ChatGPT 參考個人文字習慣的寫作風格功能",
+    "date": "2026-09-08",
+    "source": "https://www.threads.com/share/BAWveCekRB/",
+    "author": "Prompt Case（@prompt_case）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "ChatGPT",
+      "OpenAI",
+      "Writing style",
+      "個人化",
+      "AI寫作",
+      "隱私與權限"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/DdBi4_KjSxE",
+      "https://www.threads.com/share/BAWveCekRB/",
+      "https://www.threads.com/@prompt_case/post/DdBi4_KjSxE",
+      "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions"
+    ],
+    "excerpt": "Writing style 的核心不是讓 AI「假裝成你」，而是讓模型在你授權的資料範圍內，參考既有文字的語氣、用字與節奏，減少每次重新交代寫作偏好的成本；但連接郵件、雲端硬碟或工作協作工具前，必須先確認資料權限與使用範圍。",
+    "slug": "2026-09-08-threads-openai-writing-style",
+    "html": "articles/2026-09-08-threads-openai-writing-style.html",
+    "markdown": "articles/2026/09/2026-09-08-threads-openai-writing-style.md"
+  },
+  {
     "title": "Facebook｜AI Mastery：用 Claude 製作電影感動畫網站的 7 段高端提示詞流程",
     "date": "2026-09-06",
     "source": "https://www.facebook.com/share/p/1CwQQPHWTT/?mibextid=wwXIfr",

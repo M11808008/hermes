@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜OpenAI Writing style：讓 ChatGPT 參考個人文字習慣的寫作風格功能</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜OpenAI Writing style：讓 ChatGPT 參考個人文字習慣的寫作風格功能</h1><figure><img src="../assets/source-images/2026-09-08-threads-openai-writing-style-cover.jpg" alt="Threads 分享 OpenAI Writing style 寫作風格功能的貼文圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>Threads 分享 OpenAI Writing style 寫作風格功能的貼文圖</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>Writing style 的核心不是讓 AI「假裝成你」，而是讓模型在你授權的資料範圍內，參考既有文字的語氣、用字與節奏，減少每次重新交代寫作偏好的成本；但連接郵件、雲端硬碟或工作協作工具前，必須先確認資料權限與使用範圍。</p>
+<h2>來源脈絡</h2>
+<p>本篇整理自 Prompt Case（@prompt_case）的 Threads 貼文。貼文指出，OpenAI 推出「寫作風格」功能，並提到可連接 Gmail、Google Drive、Notion、Slack、SharePoint 等工具，從過去的電郵、訊息與文件中理解使用者常用字詞、語氣、句子節奏、結尾習慣，甚至大小寫等個人書寫特徵。</p>
+<p>貼文提供的設定路徑是：`Settings → Personalization → Writing style`。由於官方 Help Center 在本次自動查證時未能正常提供可讀頁面，本文將貼文所述功能定位為「來源分享與待確認的新功能」，不把所有細節寫成已對所有帳號正式開放的保證。</p>
+<h2>功能概念</h2>
+<p>### 從指令式風格到範例式風格</p>
+<p>傳統做法是直接告訴 ChatGPT：「請用我的語氣寫，句子短一點、少用形容詞、結尾要有行動呼籲。」Writing style 的方向則可能改為讓系統從使用者過去的文字樣本中，歸納出較穩定的風格特徵。</p>
+<p>可被參考的特徵可能包括：</p>
+<ul>
+<li>慣用詞與用字選擇</li>
+<li>句子長短與節奏</li>
+<li>開頭、轉折與結尾習慣</li>
+<li>標點符號與大小寫偏好</li>
+<li>正式、口語、幽默或簡潔程度</li>
+<li>特定工作情境下的格式習慣</li>
+</ul>
+<p>### 可能的工作流</p>
+<p>若功能與貼文描述一致，使用情境可以是：先授權特定資料來源，再讓 ChatGPT 產生草稿，最後由使用者檢查事實、語氣與敏感資訊。它適合減少重複設定，不代表使用者可以跳過編輯與審核。</p>
+<h2>為什麼值得注意</h2>
+<p>這個方向把個人化從「記住幾條偏好」推進到「理解一組長期寫作樣本」。對內容創作者、教師、研究者與需要大量產製文字的人來說，價值可能在於：</p>
+<ul>
+<li>降低每次描述語氣與格式的成本。</li>
+<li>讓不同工作情境維持較一致的個人品牌。</li>
+<li>讓草稿更接近平常的用字與節奏。</li>
+<li>把個人風格規則與實際寫作樣本結合。</li>
+</ul>
+<p>但「更像本人」不等於「一定更好」。如果歷史文件中有過時觀念、錯誤資訊、情緒性語言或不應外流的資料，模型學到的也可能是那些問題。</p>
+<h2>連接前的隱私與權限檢核</h2>
+<p>Gmail、Google Drive、Notion、Slack 與 SharePoint 可能包含個資、公司機密、客戶資料、內部對話與尚未公開的文件。建議採取最小權限與分層測試：</p>
+<ul>
+<li>[ ] 先確認實際連接的是哪些資料夾、頁面、頻道或帳號。</li>
+<li>[ ] 優先使用專門的寫作樣本資料夾，不要一開始開放整個信箱或 Vault。</li>
+<li>[ ] 先移除個資、密碼、API 金鑰、合約與機密內容。</li>
+<li>[ ] 確認資料會被如何使用、保存多久，以及如何停用或撤銷連接。</li>
+<li>[ ] 釐清「參考風格」與「讀取內容」的權限是否可以分開控制。</li>
+<li>[ ] 產出前後檢查是否不小心複製了原始文件中的敏感內容。</li>
+<li>[ ] 對公開文章仍進行事實查核與人工改稿。</li>
+</ul>
+<h2>與 Markdown 個人知識庫的搭配</h2>
+<p>欒帥目前採用本地 Markdown 知識庫，這類本地、可版本控制的寫作樣本其實很適合作為風格資產：可以明確挑選哪些文章代表目前風格，也能透過 Git 保留版本與刪除歷史內容。</p>
+<p>較穩定的做法是建立一份「寫作風格規格」：</p>
+<ul>
+<li>常用語氣與稱呼</li>
+<li>段落長度與標題層級</li>
+<li>禁用詞與容易誤解的表達</li>
+<li>引用、連結與查證格式</li>
+<li>不同渠道的字數與格式限制</li>
+<li>3–5 篇經人工確認的代表作品</li>
+</ul>
+<p>如此一來，Writing style 功能即使尚未開放或日後變更，也不會讓個人風格完全依賴單一平台。</p>
+<h2>查證狀態與限制</h2>
+<ul>
+<li>Threads 分享連結已解析至 Prompt Case 的原始貼文。</li>
+<li>貼文內容與設定路徑已保存為來源證據。</li>
+<li>官方 Help Center 在本次擷取時回傳不可讀的錯誤頁，尚未能從官方文件獨立確認完整功能規格。</li>
+<li>Gmail、Google Drive、Notion、Slack、SharePoint 的可用範圍、方案限制、地區 rollout、資料保留與訓練用途，應以使用者帳號實際顯示及 OpenAI 最新官方文件為準。</li>
+</ul>
+<h2>原始連結</h2>
+<ul>
+<li>Threads 分享：<a href="https://www.threads.com/share/BAWveCekRB/" target="_blank" rel="noopener">https://www.threads.com/share/BAWveCekRB/</a></li>
+<li>Threads 原始貼文：<a href="https://www.threads.com/@prompt_case/post/DdBi4_KjSxE" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DdBi4_KjSxE</a></li>
+<li>OpenAI ChatGPT Release Notes：<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">https://help.openai.com/en/articles/6825453-chatgpt-release-notes</a></li>
+<li>OpenAI Custom Instructions 說明：<a href="https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions" target="_blank" rel="noopener">https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-08 · https://www.threads.com/share/BAWveCekRB/ · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">ChatGPT</span><span class="tag">OpenAI</span><span class="tag">Writing style</span><span class="tag">個人化</span><span class="tag">AI寫作</span><span class="tag">隱私與權限</span><h3>原始連結</h3><p><a href="https://www.threads.com/@prompt_case/post/DdBi4_KjSxE" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DdBi4_KjSxE</a></p><p><a href="https://www.threads.com/share/BAWveCekRB/" target="_blank" rel="noopener">https://www.threads.com/share/BAWveCekRB/</a></p><p><a href="https://www.threads.com/@prompt_case/post/DdBi4_KjSxE" target="_blank" rel="noopener">https://www.threads.com/@prompt_case/post/DdBi4_KjSxE</a></p><p><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">https://help.openai.com/en/articles/6825453-chatgpt-release-notes</a></p><p><a href="https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions" target="_blank" rel="noopener">https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
