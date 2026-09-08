@@ -1,5 +1,38 @@
 [
   {
+    "title": "Threads｜GPT-6 Astra 自動製作可玩遊戲：從手遊騙流廣告到 AI 遊戲原型",
+    "date": "2026-09-09",
+    "source": "https://www.threads.com/share/BCKqok6m-h/",
+    "author": "prompt_case",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "GPT-6 Astra",
+      "AI遊戲開發",
+      "Codex",
+      "Headless Blender",
+      "Computer Use",
+      "遊戲原型",
+      "Vibe Coding"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/Dc7jE7HDSis",
+      "https://www.threads.com/share/BCKqok6m-h/",
+      "https://www.threads.com/@prompt_case/post/Dc7jE7HDSis",
+      "https://x.com/buildingadlicio/status/2096111709496680842",
+      "https://www.threads.com/@akirayeh/post/Dc77c6OCuo8",
+      "https://www.threads.com/@brainness.ai/post/Dc8CaLyAU1u",
+      "https://www.threads.com/@faustforgame/post/Dc8lSkLDET3"
+    ],
+    "excerpt": "這則 Threads 貼文討論一種很有趣的 AI 遊戲製作方向：讓模型先觀察「手遊騙流廣告」中的玩法，再自行產生遊戲原型、建模、測試與調整，最後把原本只存在於廣告裡的遊戲自由度做成可玩的版本。",
+    "slug": "2026-09-09-threads-gpt6-astra-game-generation",
+    "html": "articles/2026-09-09-threads-gpt6-astra-game-generation.html",
+    "markdown": "articles/2026/09/2026-09-09-threads-gpt6-astra-game-generation.md"
+  },
+  {
     "title": "台北拉麵｜龍人拉麵台灣本店：市民大道二郎系小山系拉麵",
     "date": "2026-09-08",
     "source": "https://blake.com.tw/blog/post/long-ren",
