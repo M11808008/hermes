@@ -1,0 +1,87 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OpenAI 官方｜GPT Image 2.5 圖像提示詞與編修方法指南</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>OpenAI 官方｜GPT Image 2.5 圖像提示詞與編修方法指南</h1><h2>一句話摘要</h2>
+<p>OpenAI 官方文件把圖像生成 Prompt 定義成一份可維護的視覺規格：先說清楚主體、構圖、風格與限制；進行編修時明確區分「要改什麼」與「必須保留什麼」，再一次只調整一項並檢查結果。</p>
+<h2>官方文件重點</h2>
+<p>這份指南目前以 GPT Image 2.5 為主要範例，提供兩種模型選擇：</p>
+<ul>
+<li>`gpt-image-2.5-flare`：小型模型，優先速度，官方描述為影像品質可與 GPT Image 2 相比。</li>
+<li>`gpt-image-2.5-sunburst`：基礎模型，優先品質，適合較複雜或品質要求較高的工作流。</li>
+</ul>
+<p>官方建議不要只看模型名稱或單次示範，而要用自己的代表性工作負載比較：固定 Prompt、參考圖、尺寸與輸出格式，測量品質、延遲、失敗率、重試率與每張可接受圖片的成本。</p>
+<h2>Prompt 的核心結構</h2>
+<p>### 1. 先定義結果與用途</p>
+<p>先說明這是一張產品照、廣告、流程圖、教學圖、簡報頁或介面預覽，再補上畫布比例、構圖與重要位置限制。複雜任務可用以下結構整理：</p>
+<ul>
+<li>場景</li>
+<li>主體</li>
+<li>可見細節</li>
+<li>限制與排除項目</li>
+</ul>
+<p>官方並不要求特殊 Prompt 語法。短句、描述段落、JSON-like 結構、指令或標籤都可以；重點是選擇最容易閱讀、維護與更新的格式。</p>
+<p>### 2. 描述看得見的細節</p>
+<p>具體寫出材質、光線、色彩、視覺媒介、鏡位、景深、紋理與畫面尺度。若目標是照片，直接寫「photorealistic」或「real photograph」，不要只依賴「電影感」「高級感」等抽象形容詞。</p>
+<p>### 3. 把人物姿勢與動作寫清楚</p>
+<p>指定身體取景、相對比例、視線方向，以及人物如何與物件互動，例如「全身可見，包含腳部」或「低頭看向打開的書」。這比只寫一個情緒或風格詞更能穩定控制畫面。</p>
+<p>### 4. 精確處理文字</p>
+<p>必要文案應放在引號中，說明出現位置、字體感、大小與應出現幾次；可加上「不要加入其他文字」。品牌名或特殊字詞必要時逐字拼寫，輸出後仍要人工檢查拼字與可讀性。小字、密集資訊或多字體內容，官方建議比較 medium 與 high 品質設定。</p>
+<p>### 5. 編修時分開「變更」與「保留」</p>
+<p>使用「只改變 X」的寫法，並列出身份、幾何、版面、光線、標籤、相機角度及周邊物件等必須保留的條件。也要明確排除不希望出現的文字、Logo 或浮水印。</p>
+<p>### 6. 為參考圖分配角色</p>
+<p>若有多張輸入圖，依序說明每張圖是主體、風格、服裝或背景，並描述它們如何組合、哪些元素要移到哪裡。不要只寫「參考以上圖片」。</p>
+<h2>API 參數與畫面規格</h2>
+<p>文件提醒：API 參數應與自然語言 Prompt 分開設定。GPT Image 2.5 常用設定包括：</p>
+<ul>
+<li>`quality`：`auto`、`low`、`medium`、`high`、`xhigh`、`max`。</li>
+<li>`size`：`auto` 或自訂解析度；常見尺寸包含 1024×1024、1536×1024、1024×1536、2048×2048、2048×1152、3840×2160 與 2160×3840。</li>
+<li>`background`：`auto`、`opaque` 或 `transparent`。</li>
+<li>自訂尺寸每邊不得超過 3,840 像素，兩邊須為 16 的倍數，長短邊比例不得超過 3:1，總像素需介於 655,360 與 8,294,400 之間。</li>
+</ul>
+<p>透明素材要在 API 使用 `background=&quot;transparent&quot;`，並輸出 PNG 或 WebP；要檢查實際解碼後的 alpha channel，包括頭髮、玻璃、陰影與物件邊緣。PNG 不應使用 `output_compression`。</p>
+<h2>六種值得直接套用的工作流</h2>
+<p>### 生成照片</p>
+<p>把主體、取景、光線、材質與真實感寫成攝影規格；若要自然結果，明確要求自然膚質、磨損材質、日常細節，並排除過度修圖。</p>
+<p>### 生成流程圖與資訊圖</p>
+<p>先指定受眾與要理解的流程，再列出每個元件、箭頭關係與必須出現的標籤。資訊圖不是只追求漂亮，還要逐一檢查文字與事實關係。</p>
+<p>### 生成品牌 Logo</p>
+<p>說明品牌、形狀、負空間、可縮放性與構圖；要求原創、非侵權、透明背景、乾淨 alpha 邊緣與足夠留白。若要多個版本，可設定 `n`。</p>
+<p>### 編修與翻譯</p>
+<p>把原圖作為輸入，明確要求「只翻譯文字，不改變其他內容」，完成後檢查是否仍殘留原語言或版面漂移。</p>
+<p>### 身份與服裝保留</p>
+<p>要求只改服裝，保留臉部、膚色、身形、姿勢、背景、鏡位、光線與原始辨識度。這個模式也適用於產品或物件必須維持可辨識的編修。</p>
+<p>### 簡報、圖表與教學素材</p>
+<p>把 Prompt 寫成「成品規格」而不是插畫描述：指定畫布、標題、真實文字、資料、圖表、層級、間距與禁止的裝飾。簡報與密集標籤通常適合橫式尺寸及 `quality=&quot;high&quot;`。官方特別提醒，示範中的市場數字與引用可能只是虛構設計輸入，正式使用前必須替換成已驗證資料。</p>
+<h2>反覆編修的實務規則</h2>
+<ul>
+<li>先建立代表性基準，包括困難編修、精確文字、人臉、產品幾何與透明素材。</li>
+<li>第一輪比較固定 Prompt、參考圖、尺寸、輸出格式與品質設定。</li>
+<li>品質達標後，再測試較低品質設定是否能降低延遲與成本。</li>
+<li>每次只調整一個設定或一個要求，避免無法判斷是哪項變更造成結果差異。</li>
+<li>編修每一輪都重述重要的保留條件，因為多次編修仍可能改變原本想固定的細節。</li>
+<li>若某個區域必須逐像素不變，不要只依賴 Prompt；應把通過審核的編修結果與原圖進行合成。</li>
+<li>正式上線時採小流量逐步推出，保留舊模型作為回滾方案。</li>
+</ul>
+<h2>對欒帥的可用價值</h2>
+<ul>
+<li>可直接轉成 AI 課程中的「圖像 Prompt 五層結構」：用途、主體、構圖、可見細節、限制。</li>
+<li>適合建立 AI 學習雷達的封面、教學圖卡、簡報插圖、流程圖與產品示意圖規格。</li>
+<li>對課程與簡報最重要的不是一次生成漂亮圖片，而是先固定真實文字、資料、版面與可讀性驗收條件。</li>
+<li>可把「只改一件事、其餘保留」作為圖像編修與品質控制的核心教學原則。</li>
+</ul>
+<h2>使用前檢核表</h2>
+<ul>
+<li>[ ] 是否說明圖片用途與目標受眾？</li>
+<li>[ ] 是否明確指定主體、構圖、尺寸與位置？</li>
+<li>[ ] 是否寫出材質、光線、色彩與可見細節？</li>
+<li>[ ] 必須出現的文字是否放在引號中並要求檢查拼字？</li>
+<li>[ ] 編修是否明確區分變更項目與保留項目？</li>
+<li>[ ] 多張參考圖是否逐一指定角色？</li>
+<li>[ ] 透明背景是否使用 API 參數而非只在 Prompt 中描述？</li>
+<li>[ ] 圖表、流程圖與教材是否有人工核對文字和事實關係？</li>
+<li>[ ] 是否以自己的工作負載比較品質、延遲、成本與一致性？</li>
+</ul>
+<h2>原始連結</h2>
+<ul>
+<li>OpenAI 官方 Image Prompting：&lt;<a href="https://developers.openai.com/api/docs/guides/image-prompting&gt;" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/image-prompting&gt;</a></li>
+<li>OpenAI 官方 Image Generation：&lt;<a href="https://developers.openai.com/api/docs/guides/image-generation&gt;" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/image-generation&gt;</a></li>
+</ul>
+<h2>查核註記</h2>
+<p>本文依 OpenAI Developers 官方頁面於 2026-09-10 擷取的內容整理。模型名稱、可用參數、品質選項、解析度限制與文件範例可能更新；實作前應再次查看官方文件與 API 參考。文中示範的市場數據明確標示為設計輸入，不應直接當作真實市場研究。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-10 · OpenAI Developers · official-doc</div><h3>標籤</h3><span class="tag">OpenAI API</span><span class="tag">GPT Image</span><span class="tag">圖像生成</span><span class="tag">圖像編修</span><span class="tag">Prompt Engineering</span><span class="tag">教學設計</span><h3>原始連結</h3><p><a href="https://developers.openai.com/api/docs/guides/image-prompting" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/image-prompting</a></p><p><a href="https://developers.openai.com/api/docs/guides/image-prompting" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/image-prompting</a></p><p><a href="https://developers.openai.com/api/docs/guides/image-prompting" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/image-prompting</a></p><p><a href="https://developers.openai.com/api/docs/guides/image-generation" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/image-generation</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

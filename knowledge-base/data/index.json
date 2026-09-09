@@ -1,5 +1,33 @@
 [
   {
+    "title": "OpenAI 官方｜GPT Image 2.5 圖像提示詞與編修方法指南",
+    "date": "2026-09-10",
+    "source": "OpenAI Developers",
+    "author": "OpenAI",
+    "type": "official-doc",
+    "topics": [
+      "OpenAI API",
+      "GPT Image",
+      "圖像生成",
+      "圖像編修",
+      "Prompt Engineering",
+      "教學設計"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://developers.openai.com/api/docs/guides/image-prompting",
+      "https://developers.openai.com/api/docs/guides/image-prompting",
+      "https://developers.openai.com/api/docs/guides/image-prompting",
+      "https://developers.openai.com/api/docs/guides/image-generation"
+    ],
+    "excerpt": "OpenAI 官方文件把圖像生成 Prompt 定義成一份可維護的視覺規格：先說清楚主體、構圖、風格與限制；進行編修時明確區分「要改什麼」與「必須保留什麼」，再一次只調整一項並檢查結果。",
+    "slug": "2026-09-10-openai-gpt-image-prompting-guide",
+    "html": "articles/2026-09-10-openai-gpt-image-prompting-guide.html",
+    "markdown": "articles/2026/09/2026-09-10-openai-gpt-image-prompting-guide.md"
+  },
+  {
     "title": "Facebook｜AI 研究資料、Navier–Stokes 爭議與商用模型資料治理",
     "date": "2026-09-09",
     "source": "https://m.facebook.com/story.php?story_fbid=pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l&id=637944199&mibextid=wwXIfr",
