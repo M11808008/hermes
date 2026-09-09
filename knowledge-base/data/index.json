@@ -1,5 +1,41 @@
 [
   {
+    "title": "Facebook｜AI 研究資料、Navier–Stokes 爭議與商用模型資料治理",
+    "date": "2026-09-09",
+    "source": "https://m.facebook.com/story.php?story_fbid=pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l&id=637944199&mibextid=wwXIfr",
+    "author": "葉佰蒼",
+    "type": "article",
+    "topics": [
+      "AI 資料治理",
+      "AI 隱私",
+      "OpenAI",
+      "Claude",
+      "Gemini",
+      "Codex",
+      "AI 研究",
+      "Navier-Stokes",
+      "AI 倫理"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/janyeh/posts/pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l",
+      "https://m.facebook.com/story.php?story_fbid=pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l&id=637944199&mibextid=wwXIfr",
+      "https://www.facebook.com/janyeh/posts/pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l",
+      "https://www.usatoday.com/story/tech/2026/09/08/openai-navier-stokes-breakthrough/91664870007/",
+      "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+      "https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy",
+      "https://help.openai.com/en/articles/7730893-data-controls-faq",
+      "https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance",
+      "https://openai.com/business-data/"
+    ],
+    "excerpt": "這則貼文真正值得保存的重點，不是直接替任何一方定罪，而是提醒企業：把研究、程式碼或商業機密交給 AI 服務前，必須先弄清楚資料是否用於模型改進、誰能存取、保留多久，以及發生爭議時能不能留下可稽核紀錄。",
+    "slug": "2026-09-09-facebook-ai-data-governance-navier-stokes-dispute",
+    "html": "articles/2026-09-09-facebook-ai-data-governance-navier-stokes-dispute.html",
+    "markdown": "articles/2026/09/2026-09-09-facebook-ai-data-governance-navier-stokes-dispute.md"
+  },
+  {
     "title": "Threads｜AI Engineering from Scratch：從第一原理打造 AI 系統的開源課程",
     "date": "2026-09-09",
     "source": "https://www.threads.com/share/BAHR-1U16w/",

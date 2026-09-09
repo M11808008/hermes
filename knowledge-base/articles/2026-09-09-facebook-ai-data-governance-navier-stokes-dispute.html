@@ -1,0 +1,75 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜AI 研究資料、Navier–Stokes 爭議與商用模型資料治理</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜AI 研究資料、Navier–Stokes 爭議與商用模型資料治理</h1><h2>一句話摘要</h2>
+<p>這則貼文真正值得保存的重點，不是直接替任何一方定罪，而是提醒企業：把研究、程式碼或商業機密交給 AI 服務前，必須先弄清楚資料是否用於模型改進、誰能存取、保留多久，以及發生爭議時能不能留下可稽核紀錄。</p>
+<h2>Facebook 貼文重點</h2>
+<p>葉佰蒼以「一秒變駭客」為標題，表示自己雖然同時訂閱 OpenAI、Google 和 Claude，但公司商用內容只使用他稱為「負責任的 AI」的 Claude。</p>
+<p>貼文提出幾個判斷：</p>
+<ul>
+<li>OpenAI：作者質疑公司治理與「商業價值勝於安全」的取向。</li>
+<li>Google：作者以 Chrome 無痕模式和 Gemini 記憶功能，提醒使用者不要把「不在畫面上顯示」誤認為「平台完全不知道」或「不會保留」。</li>
+<li>Claude：作者把它當成公司商用工作的主要選擇。</li>
+</ul>
+<p>這些是作者的立場和風險提醒，不是對三家公司目前所有方案、帳戶層級和資料設定的完整比較。</p>
+<h2>Navier–Stokes 研究爭議</h2>
+<p>貼文轉述一篇文章，內容涉及 NYU 數學教授 Tristan Buckmaster、Anthropic 數學家 Levent Alpöge，以及 OpenAI 對 Navier–Stokes 千禧年難題的研究競爭。貼文的說法是：</p>
+<ul>
+<li>Buckmaster 與 Alpöge 使用 Codex 和 Claude 推進研究。</li>
+<li>OpenAI 後來用未公開的下一代模型發表相關證明。</li>
+<li>OpenAI 的研究路線被指與兩位研究者相近。</li>
+<li>Buckmaster 認為，若平台掌握使用者完整工作痕跡，再用遠高於個人的算力競爭，便會產生公平性問題。</li>
+</ul>
+<p>Facebook 貼文還寫到 3,000 億輸出 token、約 2,250 萬美元算力成本，以及 OpenAI 研究員對 Buckmaster 的回應。這些細節目前應視為貼文轉述，不能只靠 Facebook 文字確認。</p>
+<h2>外部報導查核</h2>
+<p>USA Today 2026-09-08 的報導確認：OpenAI 宣稱內部未公開模型解出 Navier–Stokes 相關問題；Buckmaster 則表示自己和 Alpöge 已投入約一年研究，並指控 OpenAI 可能在他們的成果公開前沿用了相近路線。報導也引述 OpenAI，稱研究者的說法「categorically false」，並表示在研究者公開前，OpenAI 研究者沒有透過任何方式看到他們的工作，尤其沒有存取特定使用者資料來解題。</p>
+<p>TechCrunch 同日報導了三篇證明、Codex 與 Claude 的使用，以及 OpenAI 隨後公開相關證明的時間線；其報導也把「300 billion output tokens」和約 2,250 萬美元的估算寫成事件中的說法，但這不是獨立審計結果。</p>
+<p>Science 的文章標題則將事件描述為 AI 數學突破引發的爭議。由於該頁在本次擷取時受到安全驗證限制，本文不把其未能讀取的內容延伸成額外結論。</p>
+<h2>目前可以說什麼，不能說什麼</h2>
+<p>### 可以確認</p>
+<ul>
+<li>這起 Navier–Stokes 研究信用爭議已有 USA Today、TechCrunch 等媒體報導。</li>
+<li>Buckmaster、Alpöge 和 OpenAI 對研究時間線、研究路線和資料是否被看到，存在不同說法。</li>
+<li>OpenAI 對 USA Today 否認研究者的核心指控，並表示沒有存取特定使用者資料。</li>
+<li>Facebook 原貼文確實把這起爭議連結到 AI 服務的資料治理與企業使用選擇。</li>
+</ul>
+<p>### 不宜直接當成事實</p>
+<ul>
+<li>OpenAI 已經證實使用 Buckmaster 的私有 Codex 工作紀錄。</li>
+<li>3,000 億 token 和 2,250 萬美元就是實際、可稽核的成本。</li>
+<li>OpenAI 一定是因為看到了研究者的資料才找到相同路線。</li>
+<li>所有 OpenAI、Google 或 Claude 帳戶都採用同一套資料訓練政策。</li>
+<li>使用 Claude 就代表公司資料天然安全，或完全不需要權限、保留與合規設定。</li>
+</ul>
+<h2>對企業導入 AI 的實際提醒</h2>
+<p>### 1. 先分清楚帳戶類型</p>
+<p>個人消費者方案、團隊方案、企業方案、API、雲端代管模型，資料使用、保留、管理員權限和合約條件可能不同。不要用社群文章的單一句話概括整個平台。</p>
+<p>### 2. 機密資料先做分級</p>
+<p>研究草稿、未發表論文、原始碼、客戶資料、商業策略和個資，不應直接丟進未經核准的聊天工具。先定義哪些資料可以外部處理，哪些只能走企業租戶或內網模型。</p>
+<p>### 3. 保存可稽核紀錄</p>
+<p>對重要研究或商業決策，保存模型版本、提示詞、輸入檔案、輸出內容、時間戳、操作者和權限。這不只為了防止模型訓練爭議，也能釐清人類與模型各自做了什麼。</p>
+<p>### 4. 把資料政策變成操作規則</p>
+<p>不要只寫「請勿上傳機密資料」。應明確規定：哪些資料可用個人帳號、哪些必須使用 API 或企業租戶、是否允許記憶功能、多久刪除紀錄、誰可以匯出，以及發生資料事件時由誰處理。</p>
+<h2>一個可直接使用的檢核表</h2>
+<ul>
+<li>[ ] 確認目前使用的是個人、團隊、企業、API 或雲端代管方案。</li>
+<li>[ ] 閱讀當前方案的資料使用、模型改進、保留和刪除政策。</li>
+<li>[ ] 將研究與商業資料分成公開、內部、機密、受法規保護四級。</li>
+<li>[ ] 對機密資料先去識別化、摘要化或使用受控環境。</li>
+<li>[ ] 關閉不需要的記憶、連接器、外部同步和自動分享功能。</li>
+<li>[ ] 為 AI 產出的研究結論保留來源、版本和人工審查紀錄。</li>
+<li>[ ] 對供應商的「不使用資料訓練」聲明保存合約或官方政策版本。</li>
+<li>[ ] 不把單一事件直接推論成所有平台都不安全，改用具體方案和資料流分析。</li>
+</ul>
+<h2>原始連結</h2>
+<p>Facebook 分享連結：</p>
+<p><a href="https://m.facebook.com/story.php?story_fbid=pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l&amp;id=637944199&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://m.facebook.com/story.php?story_fbid=pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l&amp;id=637944199&amp;mibextid=wwXIfr</a></p>
+<p>Facebook canonical 貼文：</p>
+<p><a href="https://www.facebook.com/janyeh/posts/pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l" target="_blank" rel="noopener">https://www.facebook.com/janyeh/posts/pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l</a></p>
+<p>USA Today：</p>
+<p><a href="https://www.usatoday.com/story/tech/2026/09/08/openai-navier-stokes-breakthrough/91664870007/" target="_blank" rel="noopener">https://www.usatoday.com/story/tech/2026/09/08/openai-navier-stokes-breakthrough/91664870007/</a></p>
+<p>TechCrunch：</p>
+<p><a href="https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/" target="_blank" rel="noopener">https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/</a></p>
+<p>Science：</p>
+<p><a href="https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy" target="_blank" rel="noopener">https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy</a></p>
+<p>OpenAI 資料政策參考：</p>
+<p><a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener">https://help.openai.com/en/articles/7730893-data-controls-faq</a></p>
+<p><a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance" target="_blank" rel="noopener">https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance</a></p>
+<p><a href="https://openai.com/business-data/" target="_blank" rel="noopener">https://openai.com/business-data/</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-09 · https://m.facebook.com/story.php?story_fbid=pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l&amp;id=637944199&amp;mibextid=wwXIfr · article</div><h3>標籤</h3><span class="tag">AI 資料治理</span><span class="tag">AI 隱私</span><span class="tag">OpenAI</span><span class="tag">Claude</span><span class="tag">Gemini</span><span class="tag">Codex</span><span class="tag">AI 研究</span><span class="tag">Navier-Stokes</span><span class="tag">AI 倫理</span><h3>原始連結</h3><p><a href="https://www.facebook.com/janyeh/posts/pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l" target="_blank" rel="noopener">https://www.facebook.com/janyeh/posts/pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l</a></p><p><a href="https://m.facebook.com/story.php?story_fbid=pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l&amp;id=637944199&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://m.facebook.com/story.php?story_fbid=pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l&amp;id=637944199&amp;mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/janyeh/posts/pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l" target="_blank" rel="noopener">https://www.facebook.com/janyeh/posts/pfbid02KMyZU5tQrePnEG2xc5MoZLvDqmum1SFVm7cqzRv8NgU4K3CkkeFohQBpiVr4Gqc5l</a></p><p><a href="https://www.usatoday.com/story/tech/2026/09/08/openai-navier-stokes-breakthrough/91664870007/" target="_blank" rel="noopener">https://www.usatoday.com/story/tech/2026/09/08/openai-navier-stokes-breakthrough/91664870007/</a></p><p><a href="https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/" target="_blank" rel="noopener">https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/</a></p><p><a href="https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy" target="_blank" rel="noopener">https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy</a></p><p><a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener">https://help.openai.com/en/articles/7730893-data-controls-faq</a></p><p><a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance" target="_blank" rel="noopener">https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance</a></p><p><a href="https://openai.com/business-data/" target="_blank" rel="noopener">https://openai.com/business-data/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
