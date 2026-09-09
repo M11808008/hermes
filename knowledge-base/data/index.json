@@ -212,6 +212,41 @@
     "markdown": "articles/2026/09/2026-09-09-threads-the-last-bond-filmera.md"
   },
   {
+    "title": "Threads｜AI Creator Base：Gemini 無臉短影音 30 天內容提示詞系統",
+    "date": "2026-09-09",
+    "source": "https://www.threads.com/share/_9v7LUTEU/",
+    "author": "Threads @aicre_atorbase / AI Creator Base",
+    "type": "article",
+    "topics": [
+      "Gemini",
+      "短影音",
+      "Prompt Engineering",
+      "內容行銷",
+      "無臉頻道",
+      "YouTube Shorts",
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aicre_atorbase/post/DdCuadbiPY-",
+      "https://www.threads.com/share/_9v7LUTEU/",
+      "https://www.threads.com/@aicre_atorbase/post/DdCuadbiPY-",
+      "https://www.threads.com/@aicre_atorbase/post/DdCuaYPCMmw",
+      "https://www.threads.com/@aicre_atorbase/post/DdCuaXlCIhT",
+      "https://www.threads.com/@aicre_atorbase/post/DdCuaYWiGF6",
+      "https://www.threads.com/@aicre_atorbase/post/DdCuaXdiOUc",
+      "https://aicreatorbase.gumroad.com/l/gemini-faceless-system",
+      "https://ai.google.dev/gemini-api/docs/video-understanding?hl=zh-tw"
+    ],
+    "excerpt": "這則串文把無臉短影音拆成四個提示詞模組：題材研究、腳本、視覺與音效、標題與標籤。它適合當作內容工作流的骨架，但「15 分鐘做完 30 天」「viral」和「免費」仍是創作者的宣稱，不能當成穩定結果或 Gemini 官方承諾。",
+    "slug": "2026-09-09-threads-aicreatorbase-gemini-faceless-short-video-prompt-system",
+    "html": "articles/2026-09-09-threads-aicreatorbase-gemini-faceless-short-video-prompt-system.html",
+    "markdown": "articles/2026-09-09-threads-aicreatorbase-gemini-faceless-short-video-prompt-system.md"
+  },
+  {
     "title": "台北拉麵｜龍人拉麵台灣本店：市民大道二郎系小山系拉麵",
     "date": "2026-09-08",
     "source": "https://blake.com.tw/blog/post/long-ren",

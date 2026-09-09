@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜AI Creator Base：Gemini 無臉短影音 30 天內容提示詞系統</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜AI Creator Base：Gemini 無臉短影音 30 天內容提示詞系統</h1><figure><img src="../assets/source-images/2026-09-09-threads-aicreatorbase-gemini-faceless-content-system.jpg" alt="The Gemini Faceless Content System 商品預覽圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>The Gemini Faceless Content System 商品預覽圖</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這則串文把無臉短影音拆成四個提示詞模組：題材研究、腳本、視覺與音效、標題與標籤。它適合當作內容工作流的骨架，但「15 分鐘做完 30 天」「viral」和「免費」仍是創作者的宣稱，不能當成穩定結果或 Gemini 官方承諾。</p>
+<h2>Threads 可見重點</h2>
+<p>@aicre_atorbase 的主貼文標題是：Gemini 可以在不到 15 分鐘、免費產出 YouTube Shorts、Reels、TikTok 的 30 天病毒式短影音腳本。作者把手動找題材與寫稿的 3 小時，對比成可自動化的內容工廠。</p>
+<p>串文接著提供四個「master prompts」，最後導向 Gumroad 商品 The Gemini Faceless Content System。商品頁標示售價 9.99 美元，內容是 100 個提示詞、4 個完整流程提示詞，以及 Gemini AI Studio 搭配 Claude 的工作流；這是商品頁資訊，不等同於 Threads 貼文主張已被獨立驗證。</p>
+<h2>四組完整可重用提示詞</h2>
+<p>### 1. The High-Friction Topic &amp; Research Finder</p>
+<p>```text</p>
+<p>Act as an elite viral media researcher. Scan current trends, debates, and breaking news in [my niche]. Identify 5 high-friction topics that trigger intense curiosity and comment section arguments.</p>
+<p>For each topic, provide:</p>
+<p>• The &quot;Hidden Reality&quot; angle (what mainstream commentary misses).</p>
+<p>• The &quot;Villain / Betrayal&quot; framing (who or what is causing the controversy).</p>
+<p>• A 1-sentence provocative core hypothesis that demands a response.</p>
+<p>```</p>
+<p>這個模組的輸出容易偏向衝突和陰謀式敘事。使用時應加上來源、日期、地區，以及「區分已證實事實、推論和意見」的要求；否則高互動不代表高可信度。</p>
+<p>### 2. The Evidence-Shift-Provocation Script Generator</p>
+<p>```text</p>
+<p>Act as a short-form video copywriter specializing in high-retention faceless videos. Write a complete 30-second script on [topic].</p>
+<p>Structure the script into three strict phases:</p>
+<p>0-3s Hook: Present hard evidence or an undeniable bold claim that stops scrolling immediately.</p>
+<p>4-30s Narrative Shift: Reveal a plot twist, hidden detail, or unexpected turn of events.</p>
+<p>```</p>
+<p>原始 Threads 貼文在可見文字中止於 Narrative Shift 這一段，沒有顯示後續階段。不要自行補寫成作者原本的第三階段。若要實際使用，可另加結尾、來源字幕、免責聲明和 CTA，但那是導入者的擴充，不是原文內容。</p>
+<p>### 3. The Faceless Visual &amp; SFX Layout Engine</p>
+<p>```text</p>
+<p>Act as a visual video director for faceless short-form accounts utilizing background gameplay, stock footage, or 3D visual loops.</p>
+<p>Provide a complete frame-by-frame production guide for the script above:</p>
+<p>• Text-on-Screen Overlays (bold 2-to-3 word captions highlighted for key emphasis).</p>
+<p>• Sound Effect (SFX) Cues (exact moments for risers, swooshes, or bass drops).</p>
+<p>```</p>
+<p>這組提示詞把腳本轉成剪輯規格，但目前只有文字覆蓋和音效兩項要求。正式製作還需要補上素材授權、旁白、字幕時間軸、畫面比例、品牌安全和人工 QA。</p>
+<p>### 4. The High-CTR Title &amp; Hashtag Stack Generator</p>
+<p>```text</p>
+<p>Act as a short-form algorithm optimization specialist. Analyze the metadata requirements for YouTube Shorts, TikTok, and Instagram Reels in [my niche].</p>
+<p>Generate:</p>
+<p>• 5 viral title variations (under 50 characters) utilizing the curiosity gap.</p>
+<p>• 3 Thumbnail Text overlays (maximum 3 words) that complement the title without repeating it.</p>
+<p>• 10 algorithmic search terms and tag clusters to place the video directly on target feed recommendations.</p>
+<p>```</p>
+<p>「Under 50 characters」和縮圖最多三個字是可執行的格式限制；「viral」和「directly on target feed recommendations」則不是模型能保證的分發結果。建議把平台規則、受眾語言、禁止誤導性標題和實測數據納入提示詞。</p>
+<h2>官方能力查核：Gemini 能做什麼</h2>
+<p>Google Gemini API 官方影片理解文件說明，Gemini 模型可以描述、區隔、擷取影片資訊，回答影片問題，也能參照時間戳。影片可以透過 File API、內嵌資料或公開 YouTube 網址提供給模型；官方建議大型檔案或長影片使用 File API。</p>
+<p>這能支持「用 Gemini 分析影片、抽取內容、協助生成腳本」這類工作流，但不直接支持以下更強的說法：</p>
+<ul>
+<li>產出一定會「病毒式」傳播。</li>
+<li>每個人都能在 15 分鐘內完成 30 天內容。</li>
+<li>相關功能永遠免費。</li>
+<li>模型會自動完成剪輯、發布、成長和變現。</li>
+</ul>
+<p>Google 文件也把影片理解和內容生成分開描述。要把腳本轉成成片，仍需要剪輯器、素材、旁白／音效工具、發布平台，以及人類審稿。</p>
+<h2>對 AI 學習雷達的實作價值</h2>
+<p>這則貼文最值得保存的地方，不是「15 分鐘」這個數字，而是它把短影音內容拆成可重複串接的階段：</p>
+<ul>
+<li>研究：從利基市場找可討論的題材。</li>
+<li>敘事：用證據、轉折和明確時長寫稿。</li>
+<li>製作：把腳本轉成逐幀畫面與音效規格。</li>
+<li>包裝：產生標題、縮圖文字、搜尋字詞和標籤。</li>
+</ul>
+<p>這種拆解適合接到內容日曆、素材資料夾和 QA 表單。若要用於教育或品牌內容，應把「高衝突」改成「高相關且有來源」，把「provocative」限制在不誤導的範圍內。</p>
+<h2>導入檢核表</h2>
+<ul>
+<li>[ ] 將 `[my niche]` 改成清楚的主題、受眾、地區和語言。</li>
+<li>[ ] 要求每個題材列出來源 URL、發布日期與證據強度。</li>
+<li>[ ] 把事實、推論、作者觀點分欄，不用「Hidden Reality」取代查證。</li>
+<li>[ ] 為腳本設定 30 秒的字數或語速上限，並保留來源字幕。</li>
+<li>[ ] 確認背景遊戲、stock footage、音樂和音效的商用授權。</li>
+<li>[ ] 讓人類檢查誤導性標題、版權、個資、仇恨或煽動性內容。</li>
+<li>[ ] 先做小批量 A/B 測試，再談內容成長或變現。</li>
+<li>[ ] 不把 Gemini、Claude 或任何平台的輸出視為自動符合 YouTube YPP 或其他平台政策。</li>
+</ul>
+<h2>來源與限制</h2>
+<ul>
+<li>Threads 主文及四則回覆的可見文字已保存於本條目與來源 JSON；Threads 頁面顯示主文約 4,447 次瀏覽，數字會變動。</li>
+<li>Gumroad 商品頁目前顯示 9.99 美元、100 個提示詞與 4 個 bonus systems。商品內容本身未購買，本文不宣稱已檢視 PDF 全文。</li>
+<li>Google 官方文件支持 Gemini 的影片理解、影片檔案輸入和 YouTube URL 輸入；它沒有替這則貼文的產量、成效或價格主張背書。</li>
+</ul>
+<h2>原始連結</h2>
+<ul>
+<li>Threads 分享連結：<a href="https://www.threads.com/share/_9v7LUTEU/" target="_blank" rel="noopener">https://www.threads.com/share/_9v7LUTEU/</a></li>
+<li>Threads 主文：<a href="https://www.threads.com/@aicre_atorbase/post/DdCuadbiPY-" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuadbiPY-</a></li>
+<li>研究提示詞：<a href="https://www.threads.com/@aicre_atorbase/post/DdCuaYPCMmw" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuaYPCMmw</a></li>
+<li>腳本提示詞：<a href="https://www.threads.com/@aicre_atorbase/post/DdCuaXlCIhT" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuaXlCIhT</a></li>
+<li>視覺與音效提示詞：<a href="https://www.threads.com/@aicre_atorbase/post/DdCuaYWiGF6" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuaYWiGF6</a></li>
+<li>標題與標籤提示詞：<a href="https://www.threads.com/@aicre_atorbase/post/DdCuaXdiOUc" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuaXdiOUc</a></li>
+<li>Gumroad 商品頁：<a href="https://aicreatorbase.gumroad.com/l/gemini-faceless-system" target="_blank" rel="noopener">https://aicreatorbase.gumroad.com/l/gemini-faceless-system</a></li>
+<li>Google Gemini 官方影片理解文件：<a href="https://ai.google.dev/gemini-api/docs/video-understanding?hl=zh-tw" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/video-understanding?hl=zh-tw</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-09 · https://www.threads.com/share/_9v7LUTEU/ · article</div><h3>標籤</h3><span class="tag">Gemini</span><span class="tag">短影音</span><span class="tag">Prompt Engineering</span><span class="tag">內容行銷</span><span class="tag">無臉頻道</span><span class="tag">YouTube Shorts</span><span class="tag">TikTok</span><span class="tag">Instagram Reels</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aicre_atorbase/post/DdCuadbiPY-" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuadbiPY-</a></p><p><a href="https://www.threads.com/share/_9v7LUTEU/" target="_blank" rel="noopener">https://www.threads.com/share/_9v7LUTEU/</a></p><p><a href="https://www.threads.com/@aicre_atorbase/post/DdCuadbiPY-" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuadbiPY-</a></p><p><a href="https://www.threads.com/@aicre_atorbase/post/DdCuaYPCMmw" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuaYPCMmw</a></p><p><a href="https://www.threads.com/@aicre_atorbase/post/DdCuaXlCIhT" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuaXlCIhT</a></p><p><a href="https://www.threads.com/@aicre_atorbase/post/DdCuaYWiGF6" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuaYWiGF6</a></p><p><a href="https://www.threads.com/@aicre_atorbase/post/DdCuaXdiOUc" target="_blank" rel="noopener">https://www.threads.com/@aicre_atorbase/post/DdCuaXdiOUc</a></p><p><a href="https://aicreatorbase.gumroad.com/l/gemini-faceless-system" target="_blank" rel="noopener">https://aicreatorbase.gumroad.com/l/gemini-faceless-system</a></p><p><a href="https://ai.google.dev/gemini-api/docs/video-understanding?hl=zh-tw" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/video-understanding?hl=zh-tw</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
