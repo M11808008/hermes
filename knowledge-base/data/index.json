@@ -28,21 +28,24 @@
     "markdown": "articles/2026/09/2026-09-10-openai-gpt-image-prompting-guide.md"
   },
   {
-    "title": "雷司紀｜ChatGPT 小型企業 16 個 Plugins 指南（原文目前失效）",
+    "title": "Threads｜ChatGPT 小型企業 Small Business Plugins：把營運服務接進同一個工作台",
     "date": "2026-09-10",
-    "source": "雷司紀 Raysky",
-    "author": "雷司紀 Raysky",
-    "type": "web-article",
+    "source": "Threads／kufutw",
+    "author": "kufutw（AI Threads）",
+    "type": "social-archive",
     "topics": [],
     "use": [],
-    "importance": "medium",
-    "status": "pending-source",
+    "importance": "high",
+    "status": "partially-verified",
     "links": [
-      "https://www.rayskyinvest.com/chatgpt-small-business-16-plugins-guide/",
-      "https://www.rayskyinvest.com/chatgpt-small-business-16-plugins-guide/",
-      "https://www.rayskyinvest.com/chatgpt-small-business-16-plugins-guide/"
+      "https://www.threads.com/share/BAWqulrX6K/",
+      "https://www.threads.com/@kufutw/post/DdFubmnAH2n",
+      "https://www.threads.com/share/BAWqulrX6K/",
+      "https://www.threads.com/@kufutw/post/DdFubmnAH2n",
+      "https://chatgpt.com/plugins?category=small-business",
+      "https://x.com/OpenAI/status/2097523484629090408"
     ],
-    "excerpt": "這是一個指向雷司紀網站的 ChatGPT 小型企業 Plugins 指南連結，但截至 2026-09-10，原始頁面已回傳 `Page not found`，目前無法可靠擷取文章正文或驗證所列的 16 個工具。",
+    "excerpt": "這則 Threads 的重點不是「多了 16 個 AI 工具」，而是 ChatGPT 正嘗試成為小型團隊的營運入口：把既有的檔案、CRM、收款、設計、通訊與商店服務接進同一個對話工作流。",
     "slug": "2026-09-10-raysky-chatgpt-small-business-16-plugins-guide",
     "html": "articles/2026-09-10-raysky-chatgpt-small-business-16-plugins-guide.html",
     "markdown": "articles/2026/09/2026-09-10-raysky-chatgpt-small-business-16-plugins-guide.md"
