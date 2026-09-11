@@ -63,6 +63,44 @@
     "markdown": "articles/2026/09/2026-09-11-threads-codex-line-desktop-mcp-windows.md"
   },
   {
+    "title": "Threads｜GPT-6 Astra 倉庫影像標註工作流：從合成 CCTV 到 warehouse-observation-lab",
+    "date": "2026-09-11",
+    "source": "https://www.threads.com/share/_08yaxTaK/",
+    "author": "LIQ AI／@liq_media",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "GPT-6 Astra",
+      "電腦視覺",
+      "影片資料標註",
+      "AI Agent",
+      "Vibe Coding",
+      "Higgsfield",
+      "物流科技"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@liq_media/post/DdIgKTSDNjL",
+      "https://www.threads.com/share/_08yaxTaK/",
+      "https://www.threads.com/@liq_media/post/DdIgKTSDNjL",
+      "https://www.threads.com/@liq_media/post/DdIgOd_nX9F",
+      "https://www.threads.com/@liq_media/post/DdIgQhDnQjJ",
+      "https://www.threads.com/@ubermingcourse/post/DdBxLn8CgD1",
+      "https://www.threads.com/@kufutw/post/DdA-kbrD5Vb",
+      "https://www.threads.com/@bbbachh.ww/post/Dc86SQDESKK",
+      "https://www.threads.com/@sliven0722/post/DdAaYkZAeuS",
+      "https://www.threads.com/@ouknowtw/post/Dc_EvulE1-4",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-09-09-threads-gpt6-astra-game-generation.html",
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-09-09-threads-gpt6-astra-seedance-video.html"
+    ],
+    "excerpt": "這則 Threads 展示一個「AI 自己產生測試資料、自己寫標註工具」的倉庫視覺工作流：先生成合成 CCTV，再建立可切換原始畫面／標註畫面的網站，為物件與人員加框、編號與追蹤資訊。",
+    "slug": "2026-09-11-threads-liq-gpt6-warehouse-observation-lab",
+    "html": "articles/2026-09-11-threads-liq-gpt6-warehouse-observation-lab.html",
+    "markdown": "articles/2026/09/2026-09-11-threads-liq-gpt6-warehouse-observation-lab.md"
+  },
+  {
     "title": "Threads｜missk___daily 旅遊照片轉微縮模型海報提示詞：實景與等距紙雕雙區構圖",
     "date": "2026-09-11",
     "source": "https://www.threads.com/share/BAeoKE5cc1/",
