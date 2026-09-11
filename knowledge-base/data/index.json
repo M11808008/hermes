@@ -1,5 +1,36 @@
 [
   {
+    "title": "Facebook｜李佳達：用米其林廚房理解 Skill、Project、Agent 與 MCP",
+    "date": "2026-09-11",
+    "source": "https://www.facebook.com/share/v/14oryYr4VBG/?mibextid=wwXIfr",
+    "author": "李佳達（Facebook）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "AI Skills",
+      "AI Agents",
+      "MCP",
+      "Project",
+      "Context Engineering",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1089007086919812",
+      "https://www.facebook.com/share/v/14oryYr4VBG/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1089007086919812",
+      "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "https://openai.github.io/openai-agents-python/",
+      "https://shifucourse.com/c/superAI?affcode=0819_superai_gavin_fb_post_video8_july_term&utm_source=fb&utm_medium=ads&utm_campaign=0819_superai_gavin_fb_post_video8_july_term"
+    ],
+    "excerpt": "把 AI 系統想成廚房：Skill 是食譜，Project 是廚房配置，Agent 是會判斷與調度的廚師，MCP 是外部倉庫與冰箱。這個比喻能快速建立概念分工，但導入時要回到各平台的實際文件與權限模型。",
+    "slug": "2026-09-11-facebook-reel-skill-project-agent-mcp-kitchen",
+    "html": "articles/2026-09-11-facebook-reel-skill-project-agent-mcp-kitchen.html",
+    "markdown": "articles/2026/09/2026-09-11-facebook-reel-skill-project-agent-mcp-kitchen.md"
+  },
+  {
     "title": "OpenAI 官方｜GPT Image 2.5 圖像提示詞與編修方法指南",
     "date": "2026-09-10",
     "source": "OpenAI Developers",
