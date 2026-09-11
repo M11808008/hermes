@@ -6361,41 +6361,6 @@
     "markdown": "articles/2026/07/2026-07-26-heygen-official-ai-video-platform.md"
   },
   {
-    "title": "Threads｜sliven0722：GPT-Live／Realtime Voice 接上即時數字人，AI 伴侶互動開始走向低延遲化",
-    "date": "2026-07-26",
-    "source": "https://www.threads.com/@sliven0722/post/DbPRKJZjPou?xmt=AQG0JMWBwu3a17KWtps4IhTSZoMG6czMsefbD3sfZ0ssglNVgS-lSbRT51iIYRQieLgjf1hl1w&slof=1",
-    "author": "褚崇名 Sliven / @sliven0722",
-    "type": "link-archive",
-    "topics": [
-      "Threads",
-      "sliven0722",
-      "GPT-Live",
-      "OpenAI Realtime",
-      "Digital Human",
-      "LiveTalking",
-      "MuseTalk",
-      "Wav2Lip",
-      "AI Companion",
-      "Voice Agent"
-    ],
-    "use": [],
-    "importance": "high",
-    "status": "archived",
-    "links": [
-      "https://www.threads.com/@sliven0722/post/DbPRKJZjPou",
-      "https://www.threads.com/@sliven0722/post/DbPRKJZjPou",
-      "https://platform.openai.com/docs/guides/realtime",
-      "https://platform.openai.com/docs/models",
-      "https://github.com/lipku/LiveTalking",
-      "https://github.com/TMElyralab/MuseTalk",
-      "https://github.com/Rudrabha/Wav2Lip"
-    ],
-    "excerpt": "# Threads｜sliven0722：GPT-Live／Realtime Voice 接上即時數字人，AI 伴侶互動開始走向低延遲化 來源是褚崇名 Sliven（@sliven0722）在 Threads 分享的案例：抖音上有人把「GPT-Live」接到即時數字人上，讓長髮女性數字人可以即時語音對話，並呈現口型與表",
-    "slug": "2026-07-26-threads-sliven0722-gpt-live-realtime-digital-human-ai-companion",
-    "html": "articles/2026-07-26-threads-sliven0722-gpt-live-realtime-digital-human-ai-companion.html",
-    "markdown": "articles/2026/07/2026-07-26-threads-sliven0722-gpt-live-realtime-digital-human-ai-companion.md"
-  },
-  {
     "title": "Threads｜zhenzhu600：Codex 串 HeyGen + MiniMax，五分鐘生成 15 秒數字人口播",
     "date": "2026-07-26",
     "source": "https://www.threads.com/@zhenzhu600/post/DbODstVmhWM?xmt=AQG0CAl1nim4aEcEBbsY8aWcQ9EIxN1ceNr00IXs_q1GKuoa7-lQod75giJf6nKgYeyRB937mQ&slof=1",
@@ -20387,5 +20352,21 @@
     "slug": "2023-11-28-lordcat-caishen-tainan-danzai-noodles-nanjing-sanmin",
     "html": "articles/2023-11-28-lordcat-caishen-tainan-danzai-noodles-nanjing-sanmin.html",
     "markdown": "articles/2023/11/2023-11-28-lordcat-caishen-tainan-danzai-noodles-nanjing-sanmin.md"
+  },
+  {
+    "title": "2026-07-26-threads-sliven0722-gpt-live-realtime-digital-human-ai-companion",
+    "date": "1970-01-01",
+    "source": "",
+    "author": "",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [],
+    "excerpt": " 1|--- 2|title: Threads｜sliven0722：GPT-Live／Realtime Voice 接上即時數字人，AI 伴侶互動開始走向低延遲化 3|description: 歸檔 sliven0722 在 Threads 分享抖音上把 GPT-Live / 即時語音模型接到長髮女性數字人的案例，並",
+    "slug": "2026-07-26-threads-sliven0722-gpt-live-realtime-digital-human-ai-companion",
+    "html": "articles/2026-07-26-threads-sliven0722-gpt-live-realtime-digital-human-ai-companion.html",
+    "markdown": "articles/2026/07/2026-07-26-threads-sliven0722-gpt-live-realtime-digital-human-ai-companion.md"
   }
 ]
