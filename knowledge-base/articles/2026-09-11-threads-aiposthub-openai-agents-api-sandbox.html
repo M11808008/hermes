@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜OpenAI Agents API 與 Hosted Sandbox：把 Agent Runtime 交給雲端管理</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜OpenAI Agents API 與 Hosted Sandbox：把 Agent Runtime 交給雲端管理</h1><figure><img src="../assets/source-images/2026-09-11-threads-aiposthub-openai-agents-api.jpg" alt="AI郵報 Threads 貼文介紹 OpenAI Agents API 與 Hosted Sandbox" loading="lazy" referrerpolicy="no-referrer"><figcaption>AI郵報 Threads 貼文介紹 OpenAI Agents API 與 Hosted Sandbox</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這則 Threads 抓到 OpenAI Agent 平台化的核心方向：開發者不只呼叫模型，而是可以選擇由 OpenAI 管理 Codex harness 的 Agents API，或在自己的應用程式內使用 Agents SDK 控制 Agent loop，再搭配不同型態的 Sandbox 執行程式碼、檔案與工具任務。</p>
+<h2>社群貼文說了什麼</h2>
+<p>AI郵報（`@aiposthub`）宣稱 OpenAI 已推出進入 Public Beta 的 Agents API，並將下列基礎設施包裝成可直接使用的 Agent runtime：</p>
+<ul>
+<li>Agent loop</li>
+<li>Tool calling</li>
+<li>Context 管理</li>
+<li>長時間任務</li>
+<li>Sandbox</li>
+<li>檔案處理</li>
+<li>執行環境</li>
+</ul>
+<p>貼文進一步描述：Agents API 可以使用 Codex harness，在 OpenAI 雲端基礎設施上執行 Agent；Sandbox 則可選擇 OpenAI-hosted、第三方提供者或自管環境，Agent 可在其中執行程式碼、讀寫檔案、安裝套件、使用 Skills／Plugins 與產出 artifacts。</p>
+<p>以上是社群貼文的整理與解讀；以下以 OpenAI 官方文件校正名稱與邊界。</p>
+<h2>官方文件如何定位三個入口</h2>
+<p>OpenAI Developers 的 Agents 指南目前把入口分成三種：</p>
+<p>| 入口 | 執行位置／控制權 | 適合情境 |</p>
+<p>|---|---|---|</p>
+<p>| **Agents API** | OpenAI 管理 Codex harness，支援長時間任務並保存進度 | 想讓 OpenAI 管理 Agent runtime 與狀態 |</p>
+<p>| **Agents SDK** | SDK 在自己的應用程式內執行，開發者掌握 loop、tools、handoffs | 需要自訂工作流、多 Agent 與應用層控制 |</p>
+<p>| **Responses API** | 直接處理模型回應與整合邏輯 | 想自行組裝 Agent，而非採用完整 runtime |</p>
+<p>官方文件的關鍵表述是：Agents API 適合「OpenAI 管理 Agent 並保存進度的長時間任務」；Agents SDK 則適合在應用程式內建立自訂 tools、workflow 與 handoff。這比「OpenAI 幫你全部處理」更精確，因為權限、資料邊界、部署位置與應用程式狀態仍需由團隊設計。</p>
+<h2>Sandbox 選擇</h2>
+<p>官方 Agents 文件提供幾種環境方向：</p>
+<ul>
+<li>**OpenAI-hosted sandbox**：由 OpenAI 提供受管理的執行空間，適合希望快速啟動且不想自行維護底層環境的工作流。</li>
+<li>**Self-hosted sandbox**：由團隊自行管理執行環境、網路、檔案系統、映像與安全政策。</li>
+<li>**第三方 Sandbox provider**：由外部執行環境供應商承擔部分基礎設施責任，需另查核其資料、網路與隔離政策。</li>
+</ul>
+<p>「Bring Your Own Sandbox」不是把所有安全責任轉移給 OpenAI；相反地，團隊仍要定義允許的檔案、網路、Secrets、套件來源、資源上限、日誌與清理週期。</p>
+<h2>為什麼這比單純模型 API 更接近 Agent 平台</h2>
+<p>傳統模型 API 通常需要開發者自行處理：</p>
+<ul>
+<li>何時繼續呼叫模型</li>
+<li>工具呼叫結果如何回填</li>
+<li>任務狀態如何保存</li>
+<li>任務中斷或重試如何處理</li>
+<li>程式碼在哪裡執行</li>
+<li>檔案與產物怎麼保存</li>
+<li>如何觀察成本、工具呼叫與失敗原因</li>
+</ul>
+<p>Agent runtime 的價值是把這些問題變成平台元件，但代價是更大的權限面與供應商依賴。真正需要比較的，不只是模型 benchmark，而是任務成功率、重試成本、隔離品質、可觀測性、資料駐留、VPC 整合與人工核准流程。</p>
+<h2>導入檢核表</h2>
+<p>### Runtime 與任務狀態</p>
+<ul>
+<li>任務是否可能執行數分鐘、數小時或跨日？</li>
+<li>任務中斷後能否恢復，還是會重複執行副作用？</li>
+<li>Agent loop、工具呼叫、重試與 handoff 是否有明確上限？</li>
+<li>成功的定義是產生文字、完成檔案、通過測試，還是完成外部交易？</li>
+</ul>
+<p>### Sandbox 與權限</p>
+<ul>
+<li>是否限制檔案讀取、寫入與刪除範圍？</li>
+<li>是否限制出站網路、套件安裝與任意命令執行？</li>
+<li>Secrets 是否只在必要步驟短暫注入，並避免寫入 log 或 artifacts？</li>
+<li>是否需要自管 VPC、私有資料庫或內部 API？</li>
+<li>是否有 CPU、GPU、記憶體、磁碟、時間與費用上限？</li>
+</ul>
+<p>### 人工確認與資料治理</p>
+<ul>
+<li>發送郵件、修改資料庫、部署、付款或刪除資料前是否強制人工確認？</li>
+<li>Agent 產出的程式碼、報告與檔案是否要經過安全掃描？</li>
+<li>是否保存可稽核的 prompt、tool call、輸出、版本與操作者紀錄？</li>
+<li>長時間任務完成後，Sandbox、暫存檔與權限是否確實清理？</li>
+</ul>
+<h2>與 OpenAI Agents SDK 的關係</h2>
+<p>OpenAI Agents SDK 官方文件仍是另一個重要入口。它提供 Agent、handoff、guardrail、tracing、context management、MCP 與 sandbox agents 等能力，重點是讓開發者在自己的應用程式內控制 Agent workflow。不要把 Agents API、Agents SDK 與 Responses API 混寫成同一個產品：三者的 runtime 所在位置與控制權不同。</p>
+<h2>查核結論</h2>
+<ul>
+<li>**已由官方文件確認**：OpenAI 現有 Agents 文件明確列出 Agents API、Agents SDK、Responses API 三種入口；Agents API 對應 OpenAI 管理的 Codex harness 與長時間任務；文件也列出 OpenAI-hosted、self-hosted 等 Sandbox 路線。</li>
+<li>**社群貼文的合理解讀**：OpenAI 正把 Agent 的執行環境、狀態、工具與 Sandbox 納入平台化產品邊界。</li>
+<li>**需避免過度延伸**：社群貼文所稱 Public Beta、所有硬體資源、Secrets、VPC 與 Plugins 的具體可用範圍，仍應以對應 API 文件、帳號可見性、區域與方案限制為準。</li>
+<li>**實務結論**：Agents API 降低了建立長時間 Agent runtime 的基礎設施門檻，但不會自動解決權限、資料治理、成本、錯誤恢復與人工核准問題。</li>
+</ul>
+<h2>原始與官方連結</h2>
+<ul>
+<li><a href="https://www.threads.com/share/BBh6ocp64v/" target="_blank" rel="noopener">https://www.threads.com/share/BBh6ocp64v/</a></li>
+<li><a href="https://www.threads.com/@aiposthub/post/DdIxOKSEYgA" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DdIxOKSEYgA</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/agents" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/agents-api/overview" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/overview</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/agents-api/quickstart" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/quickstart</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/agents-api/environments/security" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/environments/security</a></li>
+<li><a href="https://openai.github.io/openai-agents-python/" target="_blank" rel="noopener">https://openai.github.io/openai-agents-python/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-11 · https://www.threads.com/share/BBh6ocp64v/ · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">OpenAI</span><span class="tag">Agents API</span><span class="tag">Agents SDK</span><span class="tag">Responses API</span><span class="tag">Codex</span><span class="tag">Sandbox</span><span class="tag">Agent Runtime</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aiposthub/post/DdIxOKSEYgA" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DdIxOKSEYgA</a></p><p><a href="https://www.threads.com/share/BBh6ocp64v/" target="_blank" rel="noopener">https://www.threads.com/share/BBh6ocp64v/</a></p><p><a href="https://www.threads.com/@aiposthub/post/DdIxOKSEYgA" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/DdIxOKSEYgA</a></p><p><a href="https://developers.openai.com/api/docs/guides/agents" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents</a></p><p><a href="https://developers.openai.com/api/docs/guides/agents-api/overview" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/overview</a></p><p><a href="https://developers.openai.com/api/docs/guides/agents-api/quickstart" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/quickstart</a></p><p><a href="https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted</a></p><p><a href="https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted</a></p><p><a href="https://developers.openai.com/api/docs/guides/agents-api/environments/security" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/agents-api/environments/security</a></p><p><a href="https://openai.github.io/openai-agents-python/" target="_blank" rel="noopener">https://openai.github.io/openai-agents-python/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

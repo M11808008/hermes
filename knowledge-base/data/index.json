@@ -31,6 +31,42 @@
     "markdown": "articles/2026/09/2026-09-11-facebook-reel-skill-project-agent-mcp-kitchen.md"
   },
   {
+    "title": "Threads｜OpenAI Agents API 與 Hosted Sandbox：把 Agent Runtime 交給雲端管理",
+    "date": "2026-09-11",
+    "source": "https://www.threads.com/share/BBh6ocp64v/",
+    "author": "AI郵報／@aiposthub",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "OpenAI",
+      "Agents API",
+      "Agents SDK",
+      "Responses API",
+      "Codex",
+      "Sandbox",
+      "Agent Runtime"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DdIxOKSEYgA",
+      "https://www.threads.com/share/BBh6ocp64v/",
+      "https://www.threads.com/@aiposthub/post/DdIxOKSEYgA",
+      "https://developers.openai.com/api/docs/guides/agents",
+      "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "https://developers.openai.com/api/docs/guides/agents-api/quickstart",
+      "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted",
+      "https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted",
+      "https://developers.openai.com/api/docs/guides/agents-api/environments/security",
+      "https://openai.github.io/openai-agents-python/"
+    ],
+    "excerpt": "這則 Threads 抓到 OpenAI Agent 平台化的核心方向：開發者不只呼叫模型，而是可以選擇由 OpenAI 管理 Codex harness 的 Agents API，或在自己的應用程式內使用 Agents SDK 控制 Agent loop，再搭配不同型態的 Sandbox 執行程式碼、檔案與工具任務。",
+    "slug": "2026-09-11-threads-aiposthub-openai-agents-api-sandbox",
+    "html": "articles/2026-09-11-threads-aiposthub-openai-agents-api-sandbox.html",
+    "markdown": "articles/2026/09/2026-09-11-threads-aiposthub-openai-agents-api-sandbox.md"
+  },
+  {
     "title": "Threads｜Benson 李培正：Codex × LINE Desktop MCP Windows 社群版",
     "date": "2026-09-11",
     "source": "https://www.threads.com/share/_-Ufn_qJC/",
