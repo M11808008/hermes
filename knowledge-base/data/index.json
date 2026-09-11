@@ -63,6 +63,35 @@
     "markdown": "articles/2026/09/2026-09-11-threads-codex-line-desktop-mcp-windows.md"
   },
   {
+    "title": "Threads｜missk___daily 旅遊照片轉微縮模型海報提示詞：實景與等距紙雕雙區構圖",
+    "date": "2026-09-11",
+    "source": "https://www.threads.com/share/BAeoKE5cc1/",
+    "author": "missk___daily / @missk___daily",
+    "type": "link-archive",
+    "topics": [
+      "Threads",
+      "AI影像生成",
+      "Prompt",
+      "旅遊影像",
+      "微縮模型",
+      "等距插畫",
+      "紙雕",
+      "海報設計"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@missk___daily/post/DdETeT6kxVS",
+      "https://www.threads.com/share/BAeoKE5cc1/",
+      "https://www.threads.com/@missk___daily/post/DdETeT6kxVS"
+    ],
+    "excerpt": "這則 Threads 分享一段可重用的 AI 影像提示詞：將每張上傳的旅遊照片各自輸出成 3:4 直式高端設計海報，上半部保留原始實景，下半部抽取景點最具辨識度的主體，重建為等距視角的微縮模型、紙上景觀或建築沙盤。 ![Threads 旅遊影像提示詞貼文畫面：旅遊景點被轉化為微縮模型與高端海報風格](../assets/source-images/2026-09-11-threads-missk-travel-miniature-poster-screenshot.png)",
+    "slug": "2026-09-11-threads-missk-travel-miniature-poster-prompt",
+    "html": "articles/2026-09-11-threads-missk-travel-miniature-poster-prompt.html",
+    "markdown": "articles/2026/09/2026-09-11-threads-missk-travel-miniature-poster-prompt.md"
+  },
+  {
     "title": "OpenAI 官方｜GPT Image 2.5 圖像提示詞與編修方法指南",
     "date": "2026-09-10",
     "source": "OpenAI Developers",
