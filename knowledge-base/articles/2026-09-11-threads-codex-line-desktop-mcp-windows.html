@@ -1,0 +1,124 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Benson 李培正：Codex × LINE Desktop MCP Windows 社群版</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Benson 李培正：Codex × LINE Desktop MCP Windows 社群版</h1><figure><img src="../assets/source-images/line-desktop-mcp-cover.png" alt="Codex × LINE Desktop MCP Windows 社群版功能示意圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>Codex × LINE Desktop MCP Windows 社群版功能示意圖</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這個開源專案把已登入的 Windows LINE Desktop 接成 MCP server，讓 Codex 能在受控範圍內讀取聊天、搜尋訊息、準備草稿、發送回覆與匯出紀錄；它的價值不只是「LINE 有 MCP」，而是把 AI agent 接到既有桌面工作流，同時保留草稿與確認邊界。</p>
+<h2>來源脈絡</h2>
+<p>| 欄位 | 內容 |</p>
+<p>|---|---|</p>
+<p>| Threads 原始分享 | <a href="https://www.threads.com/share/_-Ufn_qJC/" target="_blank" rel="noopener">https://www.threads.com/share/_-Ufn_qJC/</a> |</p>
+<p>| Canonical Threads | <a href="https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq" target="_blank" rel="noopener">https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq</a> |</p>
+<p>| 作者 | Benson 李培正（@benson.pcl） |</p>
+<p>| GitHub 專案 | <a href="https://github.com/bensonmaxai/line-desktop-mcp" target="_blank" rel="noopener">https://github.com/bensonmaxai/line-desktop-mcp</a> |</p>
+<p>| 專案型態 | fork 自 dtwang/line-desktop-mcp 的 Windows 社群版 |</p>
+<p>| 最新 Release | v1.2.0，2026-09-10 發布 |</p>
+<p>| GitHub 狀態 | 公開、MIT License、62 stars、16 forks（2026-09-11 擷取） |</p>
+<p>| Threads 顯示 | 約 1.3 萬次瀏覽、190 個心情、20 則回覆、34 次引用、417 次分享 |</p>
+<h2>Threads 貼文重點</h2>
+<p>作者表示，這套 Codex × LINE 工具已經使用一段時間，現在整理成公開專案。Threads 提到的能力包括：</p>
+<ul>
+<li>讀取指定聊天室。</li>
+<li>搜尋訊息。</li>
+<li>發送回覆。</li>
+<li>管理草稿。</li>
+<li>將聊天紀錄匯出成 TXT、JSON、CSV。</li>
+<li>Windows 擴充版提供 24 個工具。</li>
+<li>專案宣稱本次發布的 93 項自動測試全部通過。</li>
+</ul>
+<p>留言中作者補充：自己已使用約 2 至 3 個月；最高一次約向 20 位對象發送不同內容。作者也說明，LINE Official Account 可直接串官方 API，但一般個人帳號沒有同等 API，因此採用 MCP 連接桌面版。</p>
+<h2>GitHub README 核對結果</h2>
+<p>### 專案定位</p>
+<p>GitHub README 將它定位為 Codex × LINE Desktop 的 Windows 社群版，透過已登入的 LINE Desktop 與 MCP，讓 Codex 協助處理聊天內容、回覆與工作紀錄。專案明確聲明：與 LINE 官方無關。</p>
+<p>這是一個 fork：</p>
+<ul>
+<li>社群版：<a href="https://github.com/bensonmaxai/line-desktop-mcp" target="_blank" rel="noopener">https://github.com/bensonmaxai/line-desktop-mcp</a></li>
+<li>上游專案：<a href="https://github.com/dtwang/line-desktop-mcp" target="_blank" rel="noopener">https://github.com/dtwang/line-desktop-mcp</a></li>
+</ul>
+<p>### 5 個預設工具與 24 個擴充工具</p>
+<p>README 說明，預設保留原本的 5 個工具；Windows 設定 `LINE_MCP_EXTENSIONS=1` 後，可啟用 24 個工具。部分介面操作還需要相容的 CUA Driver，macOS 維持原本介面，這次擴充的驗證重點是 Windows。</p>
+<p>主要工具類別包括：</p>
+<ul>
+<li>記錄與搜尋：讀取聊天歷史、搜尋、文字存在驗證、匯出。</li>
+<li>能力與狀態：查看可用能力、工作流、LINE 狀態與 UI 狀態。</li>
+<li>草稿與傳送：讀取、寫入、清除草稿；手動或自動發送文字；準備檔案傳送。</li>
+<li>訊息操作：準備回覆、複製、翻譯、轉傳與開啟聊天室功能。</li>
+</ul>
+<p>### 安裝前提</p>
+<p>README 列出的 Windows 前置需求：</p>
+<ul>
+<li>已登入的 Windows LINE Desktop。</li>
+<li>Node.js。</li>
+<li>AutoHotkey v2。</li>
+<li>若要使用 UI 工具，另需相容的 CUA Driver。</li>
+</ul>
+<p>範例設定會啟用擴充工具並指定 CUA Driver：</p>
+<p>```powershell</p>
+<p>codex mcp add line-desktop-mcp `</p>
+<p>  --env LINE_MCP_EXTENSIONS=1 `</p>
+<p>  --env LINE_MCP_CUA_DRIVER=C:/Tools/cua-driver/cua-driver.exe `</p>
+<p>  --node C:/Tools/line-desktop-mcp/src/server.js</p>
+<p>```</p>
+<p>實際使用時，路徑必須換成自己的絕對路徑；加入後可先呼叫 `get_line_capabilities`，確認工具與能力，不會先讀取聊天內容。</p>
+<p>### 測試與驗證範圍</p>
+<p>GitHub README 宣稱 `npm test` 有 93 項測試通過，涵蓋：</p>
+<ul>
+<li>MCP 協定相容性。</li>
+<li>訊息篩選與匯出。</li>
+<li>草稿與視窗保護。</li>
+<li>AutoHotkey 產生。</li>
+<li>跨程序鎖。</li>
+<li>無互動啟動。</li>
+</ul>
+<p>README 也列出驗證環境為 Node.js 24.16.0、Windows LINE 26.4.2.3957、CUA Driver 0.23.2。這些是作者的驗證環境，不代表所有 Windows、LINE 或 Codex 版本都相容。</p>
+<h2>它如何運作</h2>
+<p>```text</p>
+<p>Codex</p>
+<p>  ↓ MCP</p>
+<p>LINE Desktop MCP</p>
+<p>  ├─ AutoHotkey：受範圍限制的記錄讀取</p>
+<p>  ├─ CUA Driver：視窗與介面操作</p>
+<p>  └─ Windows 本機 OCR</p>
+<p>        ↓</p>
+<p>已登入的 Windows LINE Desktop</p>
+<p>```</p>
+<p>README 表示 OCR 在本機執行，不使用雲端 OCR；但 AI 客戶端如何處理工具回傳內容，仍取決於客戶端與模型設定。這代表「本機 OCR」不等於整個工作流必然不會把聊天內容送到雲端模型，使用前仍要檢查 Codex 與 MCP client 的資料處理方式。</p>
+<h2>對欒帥現有 Hermes 工作流的意義</h2>
+<p>這個專案與目前的 Hermes、Codex、LINE 自動回覆與知識庫工作流高度相關，但定位不同：</p>
+<ul>
+<li>LINE Official Account：適合官方帳號的 Messaging API、Webhook 與正式自動化。</li>
+<li>LINE Desktop MCP：適合個人帳號或桌面端已載入內容的輔助操作。</li>
+<li>Hermes：可再透過 MCP、檔案與流程治理，把讀取、摘要、草稿、人工確認與知識庫歸檔串起來。</li>
+</ul>
+<p>較安全的導入順序是「讀取 → 搜尋 → 摘要 → 產生草稿 → 人工確認 → 發送」，而不是一開始就開啟自動發送。</p>
+<h2>導入檢核表</h2>
+<ul>
+<li>先固定使用 v1.2.0，不要直接依賴未審查的 `latest`。</li>
+<li>先只啟用讀取、搜尋、匯出與草稿工具，確認資料範圍。</li>
+<li>建立測試聊天室與假資料，先驗證讀取、搜尋、草稿與匯出。</li>
+<li>自動發送前，保留 `send_message_manual` 或等價的草稿確認流程。</li>
+<li>對群組訊息、個資、課程私密資料與 LINE 聯絡人內容，設定明確不可讀取或不可外傳的範圍。</li>
+<li>匯出 TXT／JSON／CSV 後檢查檔案權限與保存位置，避免聊天紀錄被其他帳號讀取。</li>
+<li>不要把「文字存在驗證」當成送達證明；README 也說它只能確認指定範圍內存在相同文字。</li>
+<li>UI 操作遇到無法辨識的控制項時要停止，不要讓 agent 猜座標繼續執行。</li>
+<li>注意 fork 專案的更新來源、上游變更、依賴與 Windows LINE 版本相容性。</li>
+</ul>
+<h2>限制與安全邊界</h2>
+<ul>
+<li>這是社群 fork，不是 LINE 官方產品或官方背書的 MCP。</li>
+<li>記錄讀取受限於 LINE Desktop 當下已載入的內容；匯出檔不能還原成 LINE 帳號備份。</li>
+<li>引用回覆、複製、翻譯、轉傳與附件功能尚未代表所有客戶端都完成實機驗證。</li>
+<li>自動發送、檔案傳送與轉傳都可能產生不可逆的外部副作用，應預設人工確認。</li>
+<li>「93 項測試全數通過」是 README 與作者發布的專案聲明；測試使用合成訊息與模擬介面，不等於已驗證所有真實聊天室情境。</li>
+<li>README 的 24 工具、Windows 版本、Node.js 與 CUA Driver 版本都可能隨 release 變動；使用前應查看最新 release 與文件。</li>
+</ul>
+<h2>原始與官方參考</h2>
+<p>Threads 原文：</p>
+<p><a href="https://www.threads.com/share/_-Ufn_qJC/" target="_blank" rel="noopener">https://www.threads.com/share/_-Ufn_qJC/</a></p>
+<p>Canonical Threads：</p>
+<p><a href="https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq" target="_blank" rel="noopener">https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq</a></p>
+<p>GitHub 專案：</p>
+<p><a href="https://github.com/bensonmaxai/line-desktop-mcp" target="_blank" rel="noopener">https://github.com/bensonmaxai/line-desktop-mcp</a></p>
+<p>v1.2.0 Release：</p>
+<p><a href="https://github.com/bensonmaxai/line-desktop-mcp/releases/tag/v1.2.0" target="_blank" rel="noopener">https://github.com/bensonmaxai/line-desktop-mcp/releases/tag/v1.2.0</a></p>
+<p>上游專案：</p>
+<p><a href="https://github.com/dtwang/line-desktop-mcp" target="_blank" rel="noopener">https://github.com/dtwang/line-desktop-mcp</a></p>
+<p>MCP 官方入門：</p>
+<p><a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener">https://modelcontextprotocol.io/docs/getting-started/intro</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-11 · https://www.threads.com/share/_-Ufn_qJC/ · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">Codex</span><span class="tag">LINE</span><span class="tag">MCP</span><span class="tag">Desktop Automation</span><span class="tag">Windows</span><span class="tag">Open Source</span><h3>原始連結</h3><p><a href="https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq" target="_blank" rel="noopener">https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq</a></p><p><a href="https://www.threads.com/share/_-Ufn_qJC/" target="_blank" rel="noopener">https://www.threads.com/share/_-Ufn_qJC/</a></p><p><a href="https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq" target="_blank" rel="noopener">https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq</a></p><p><a href="https://github.com/bensonmaxai/line-desktop-mcp" target="_blank" rel="noopener">https://github.com/bensonmaxai/line-desktop-mcp</a></p><p><a href="https://github.com/bensonmaxai/line-desktop-mcp/releases/tag/v1.2.0" target="_blank" rel="noopener">https://github.com/bensonmaxai/line-desktop-mcp/releases/tag/v1.2.0</a></p><p><a href="https://github.com/dtwang/line-desktop-mcp" target="_blank" rel="noopener">https://github.com/dtwang/line-desktop-mcp</a></p><p><a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener">https://modelcontextprotocol.io/docs/getting-started/intro</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

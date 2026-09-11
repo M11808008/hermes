@@ -31,6 +31,38 @@
     "markdown": "articles/2026/09/2026-09-11-facebook-reel-skill-project-agent-mcp-kitchen.md"
   },
   {
+    "title": "Threads｜Benson 李培正：Codex × LINE Desktop MCP Windows 社群版",
+    "date": "2026-09-11",
+    "source": "https://www.threads.com/share/_-Ufn_qJC/",
+    "author": "Benson 李培正（@benson.pcl）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Codex",
+      "LINE",
+      "MCP",
+      "Desktop Automation",
+      "Windows",
+      "Open Source"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq",
+      "https://www.threads.com/share/_-Ufn_qJC/",
+      "https://www.threads.com/@benson.pcl/post/DdHJL3So6Pq",
+      "https://github.com/bensonmaxai/line-desktop-mcp",
+      "https://github.com/bensonmaxai/line-desktop-mcp/releases/tag/v1.2.0",
+      "https://github.com/dtwang/line-desktop-mcp",
+      "https://modelcontextprotocol.io/docs/getting-started/intro"
+    ],
+    "excerpt": "這個開源專案把已登入的 Windows LINE Desktop 接成 MCP server，讓 Codex 能在受控範圍內讀取聊天、搜尋訊息、準備草稿、發送回覆與匯出紀錄；它的價值不只是「LINE 有 MCP」，而是把 AI agent 接到既有桌面工作流，同時保留草稿與確認邊界。",
+    "slug": "2026-09-11-threads-codex-line-desktop-mcp-windows",
+    "html": "articles/2026-09-11-threads-codex-line-desktop-mcp-windows.html",
+    "markdown": "articles/2026/09/2026-09-11-threads-codex-line-desktop-mcp-windows.md"
+  },
+  {
     "title": "OpenAI 官方｜GPT Image 2.5 圖像提示詞與編修方法指南",
     "date": "2026-09-10",
     "source": "OpenAI Developers",
