@@ -1,5 +1,39 @@
 [
   {
+    "title": "Threads｜蔡明和：用 LINE、Google Apps Script 與 Gemini 打造 AI 智慧記帳小幫手",
+    "date": "2026-09-13",
+    "source": "https://www.threads.com/share/_w7qCbSd4/",
+    "author": "蔡明和（@imingho）／經驗分享-彰化一整天的blog",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Threads",
+      "LINE",
+      "Google Apps Script",
+      "Gemini",
+      "Google Sheets",
+      "OCR",
+      "個人自動化"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@imingho/post/DdNH8YAgcSq",
+      "https://www.threads.com/share/_w7qCbSd4/",
+      "https://www.threads.com/@imingho/post/DdNH8YAgcSq",
+      "https://skill-bestdaylong.blogspot.com/2026/09/line-google-apps-script-gemini-ai-google.html",
+      "https://developers.line.biz/en/docs/messaging-api/receiving-messages/",
+      "https://developers.google.com/apps-script/guides/web",
+      "https://ai.google.dev/gemini-api/docs/quickstart",
+      "https://ai.google.dev/gemini-api/docs/models"
+    ],
+    "excerpt": "把日常記帳入口放進 LINE：文字輸入或拍攝收據後，由 Google Apps Script 接收 webhook、Gemini 解析內容，再把結構化欄位追加到 Google Sheets。",
+    "slug": "2026-09-13-threads-line-gemini-google-sheets-expense-tracker",
+    "html": "articles/2026-09-13-threads-line-gemini-google-sheets-expense-tracker.html",
+    "markdown": "articles/2026/09/2026-09-13-threads-line-gemini-google-sheets-expense-tracker.md"
+  },
+  {
     "title": "士林｜一派胡塩酵素臭豆腐：外酥內多汁的劍潭站小吃推薦",
     "date": "2026-09-12",
     "source": "https://nash.tw/hereweshilinyipai202606/",
