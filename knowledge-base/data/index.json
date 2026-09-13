@@ -64,6 +64,38 @@
     "markdown": "articles/2026/09/2026-09-13-hackmd-multimodal-rag-notes.md"
   },
   {
+    "title": "Threads｜AI平凡人創業學院：ChatGPT Desktop 接 Ollama，本機模型保留原本介面",
+    "date": "2026-09-13",
+    "source": "https://www.threads.com/share/_n2Up-a-g/",
+    "author": "AI平凡人創業學院／aistart_up",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "ChatGPT Desktop",
+      "Ollama",
+      "Local AI",
+      "macOS",
+      "Open Models",
+      "隱私運算",
+      "AI工具整合"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aistart_up/post/DdNXyvWE8C0",
+      "https://www.threads.com/share/_n2Up-a-g/",
+      "https://www.threads.com/@aistart_up/post/DdNXyvWE8C0",
+      "https://github.com/ollama/ollama/releases/tag/v0.34.0",
+      "https://ollama.com/download/mac",
+      "https://ollama.com/blog/new-app"
+    ],
+    "excerpt": "這則 Threads 的重點不是換一個聊天前端，而是把 ChatGPT Desktop 的模型來源切換成本機 Ollama：使用者可以保留熟悉的 ChatGPT 介面，同時讓開放模型在自己的電腦上執行，降低敏感資料直接送往雲端的需求。",
+    "slug": "2026-09-13-threads-aistart-up-chatgpt-ollama-desktop-local-models",
+    "html": "articles/2026-09-13-threads-aistart-up-chatgpt-ollama-desktop-local-models.html",
+    "markdown": "articles/2026/09/2026-09-13-threads-aistart-up-chatgpt-ollama-desktop-local-models.md"
+  },
+  {
     "title": "Threads｜公園紙箱首席分析師：把人生轉譯成個人品牌的圖像提示詞",
     "date": "2026-09-13",
     "source": "https://www.threads.com/share/BAWRrDt6AU/",

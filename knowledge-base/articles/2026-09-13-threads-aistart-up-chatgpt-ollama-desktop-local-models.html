@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜AI平凡人創業學院：ChatGPT Desktop 接 Ollama，本機模型保留原本介面</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜AI平凡人創業學院：ChatGPT Desktop 接 Ollama，本機模型保留原本介面</h1><figure><img src="../assets/source-images/2026-09-13-threads-aistart-up-chatgpt-ollama-desktop-local-models.png" alt="Ollama v0.34.0 官方示意畫面：在 ChatGPT Desktop 使用 Ollama 模型" loading="lazy" referrerpolicy="no-referrer"><figcaption>Ollama v0.34.0 官方示意畫面：在 ChatGPT Desktop 使用 Ollama 模型</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這則 Threads 的重點不是換一個聊天前端，而是把 ChatGPT Desktop 的模型來源切換成本機 Ollama：使用者可以保留熟悉的 ChatGPT 介面，同時讓開放模型在自己的電腦上執行，降低敏感資料直接送往雲端的需求。</p>
+<h2>來源脈絡</h2>
+<ul>
+<li>分享連結：<a href="https://www.threads.com/share/_n2Up-a-g/" target="_blank" rel="noopener">https://www.threads.com/share/_n2Up-a-g/</a></li>
+<li>Threads canonical：<a href="https://www.threads.com/@aistart_up/post/DdNXyvWE8C0" target="_blank" rel="noopener">https://www.threads.com/@aistart_up/post/DdNXyvWE8C0</a></li>
+<li>作者：AI平凡人創業學院（@aistart_up）</li>
+<li>Threads 頁面顯示為一串貼文，約於 2026-09-13 擷取。</li>
+<li>官方交叉來源：Ollama v0.34.0 GitHub Release，發布時間為 2026-09-05 UTC。</li>
+</ul>
+<h2>貼文重點</h2>
+<p>主文先提出一個使用情境：不想把公司文件、客戶資料丟上雲端的人，可以考慮讓 ChatGPT Desktop 接 Ollama，模型直接在自己的電腦裡跑。</p>
+<p>貼文列出的簡化流程：</p>
+<ul>
+<li>下載或更新 Ollama 至 0.34 版。</li>
+<li>開啟 Ollama app，在其中啟用 ChatGPT。</li>
+<li>回到 ChatGPT 設定，在模型選單挑選要使用的本機或雲端模型。</li>
+</ul>
+<p>作者後續補充：設定入口目前只開放 macOS，Windows 與 Linux 暫時無法走相同路徑；本機跑模型很吃記憶體，普通規格電腦不宜直接挑大型模型。貼文也轉述，外掛、網頁搜尋、電腦操作等功能「不用另外設定即可使用」；這一點屬於社群貼文的實測／轉述，不能視為所有版本、所有模型都已獲官方保證。</p>
+<h2>官方驗證</h2>
+<p>Ollama v0.34.0 官方 Release Notes 明確寫出：Ollama models can now be used directly in ChatGPT Desktop，設定可從 Ollama 的 macOS app 進行。官方同一版本也提到 Apple Silicon 的 structured output 效能改善，以及 OpenAI-compatible client tool search 和 response compaction 支援。</p>
+<p>目前可確認的範圍：</p>
+<ul>
+<li>Ollama 0.34.0 確實新增 ChatGPT Desktop 使用 Ollama 模型的官方支援說明。</li>
+<li>官方 Release Notes 指向 macOS app 的設定流程。</li>
+<li>這不等於所有 ChatGPT Desktop 功能都能由每一個本機模型完整支援。</li>
+<li>ChatGPT 介面「看起來不變」與模型實際能力、上下文長度、工具呼叫能力是不同層次的事。</li>
+</ul>
+<h2>實作理解：三層不要混在一起</h2>
+<p>### 1. 介面層</p>
+<p>ChatGPT Desktop 負責對話介面、模型選擇和使用者操作體驗。維持原本介面，能降低學習成本，但不代表所有後端功能完全等價。</p>
+<p>### 2. 模型執行層</p>
+<p>Ollama 負責在本機載入與執行模型。實際速度、記憶體需求、上下文容量與輸出品質，取決於模型大小、量化方式、Apple Silicon／GPU／RAM，以及 Ollama 當前版本。</p>
+<p>### 3. 工具與資料邊界</p>
+<p>網頁搜尋、外掛、電腦操作或其他工具可能涉及額外的權限、網路連線與資料外傳。即使模型在本機，工具執行結果仍可能離開本機；導入前必須逐項確認。</p>
+<h2>導入檢核表</h2>
+<ul>
+<li>[ ] 確認使用 macOS，且 ChatGPT Desktop、Ollama 都更新到支援的版本。</li>
+<li>[ ] 先從小型模型開始，觀察 RAM、GPU／統一記憶體、溫度與回應速度。</li>
+<li>[ ] 用不含個資、金鑰、公司機密的測試文件驗證資料流向。</li>
+<li>[ ] 分別測試純聊天、長文件、結構化輸出與工具呼叫，不要只測一個問答。</li>
+<li>[ ] 檢查模型授權、商業使用限制與下載來源。</li>
+<li>[ ] 若啟用網頁搜尋、外掛或電腦操作，逐項檢視權限和可能的資料外傳。</li>
+<li>[ ] 不要因為介面仍像 ChatGPT，就假設本機模型具備雲端模型的相同推理能力。</li>
+<li>[ ] 為正式工作保留雲端模型 fallback，並設定敏感資料不可外傳的規則。</li>
+</ul>
+<h2>對 AI 學習雷達的價值</h2>
+<p>這則分享補上「熟悉的雲端 AI 介面 × 本地模型執行」的混合工作流。它適合拿來教學或實驗：先讓使用者理解本地推理的隱私、硬體和成本取捨，再比較同一個任務在本機與雲端模型的品質、速度和工具支援差異。</p>
+<p>最精準的定位不是「ChatGPT 變免費」或「所有功能都離線」，而是：Ollama 提供一個本機模型後端，ChatGPT Desktop 提供熟悉的操作入口；兩者之間的可用功能與資料邊界，仍受版本、平台、模型和工具設定影響。</p>
+<h2>原始連結</h2>
+<ul>
+<li>Threads 分享：<a href="https://www.threads.com/share/_n2Up-a-g/" target="_blank" rel="noopener">https://www.threads.com/share/_n2Up-a-g/</a></li>
+<li>Threads canonical：<a href="https://www.threads.com/@aistart_up/post/DdNXyvWE8C0" target="_blank" rel="noopener">https://www.threads.com/@aistart_up/post/DdNXyvWE8C0</a></li>
+<li>Ollama v0.34.0 Release：<a href="https://github.com/ollama/ollama/releases/tag/v0.34.0" target="_blank" rel="noopener">https://github.com/ollama/ollama/releases/tag/v0.34.0</a></li>
+<li>Ollama macOS 下載：<a href="https://ollama.com/download/mac" target="_blank" rel="noopener">https://ollama.com/download/mac</a></li>
+<li>Ollama 新版 app 介紹：<a href="https://ollama.com/blog/new-app" target="_blank" rel="noopener">https://ollama.com/blog/new-app</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-13 · https://www.threads.com/share/_n2Up-a-g/ · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">ChatGPT Desktop</span><span class="tag">Ollama</span><span class="tag">Local AI</span><span class="tag">macOS</span><span class="tag">Open Models</span><span class="tag">隱私運算</span><span class="tag">AI工具整合</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aistart_up/post/DdNXyvWE8C0" target="_blank" rel="noopener">https://www.threads.com/@aistart_up/post/DdNXyvWE8C0</a></p><p><a href="https://www.threads.com/share/_n2Up-a-g/" target="_blank" rel="noopener">https://www.threads.com/share/_n2Up-a-g/</a></p><p><a href="https://www.threads.com/@aistart_up/post/DdNXyvWE8C0" target="_blank" rel="noopener">https://www.threads.com/@aistart_up/post/DdNXyvWE8C0</a></p><p><a href="https://github.com/ollama/ollama/releases/tag/v0.34.0" target="_blank" rel="noopener">https://github.com/ollama/ollama/releases/tag/v0.34.0</a></p><p><a href="https://ollama.com/download/mac" target="_blank" rel="noopener">https://ollama.com/download/mac</a></p><p><a href="https://ollama.com/blog/new-app" target="_blank" rel="noopener">https://ollama.com/blog/new-app</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
