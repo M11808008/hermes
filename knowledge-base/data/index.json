@@ -1,5 +1,32 @@
 [
   {
+    "title": "Facebook｜周含鍾：蘇氏麵館的牛油皮蛋麵與大肉拌麵",
+    "date": "2026-09-13",
+    "source": "https://www.facebook.com/share/p/17uHcCjWSS/?mibextid=wwXIfr",
+    "author": "周含鍾",
+    "type": "food-note",
+    "topics": [
+      "台北美食",
+      "中山區",
+      "天津街",
+      "上海拌麵",
+      "蘇氏麵館",
+      "牛油皮蛋麵"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/story.php?story_fbid=29446977991559419&id=100000218229111&mibextid=wwXIfr",
+      "https://www.facebook.com/share/p/17uHcCjWSS/?mibextid=wwXIfr",
+      "https://www.facebook.com/zhou.han.zhong.207326/posts/29446977991559419/"
+    ],
+    "excerpt": "這篇食記的主角不是三十公分大肉，而是兩碗風格截然不同的上海拌麵：牛油皮蛋麵走濃厚滑順路線，大肉拌麵則靠蔥油香與細麵咬勁取勝。",
+    "slug": "2026-09-13-facebook-sushi-noodle-house-tianjin-street",
+    "html": "articles/2026-09-13-facebook-sushi-noodle-house-tianjin-street.html",
+    "markdown": "articles/2026/09/2026-09-13-facebook-sushi-noodle-house-tianjin-street.md"
+  },
+  {
     "title": "HackMD｜Multi-Modal RAG Notes：多模態 RAG 檢索、實作與評估筆記",
     "date": "2026-09-13",
     "source": "https://hackmd.io/@YungHuiHsu/B1LJcOlfA",
