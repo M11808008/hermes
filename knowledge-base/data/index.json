@@ -1,5 +1,42 @@
 [
   {
+    "title": "HackMD｜Multi-Modal RAG Notes：多模態 RAG 檢索、實作與評估筆記",
+    "date": "2026-09-13",
+    "source": "https://hackmd.io/@YungHuiHsu/B1LJcOlfA",
+    "author": "YH Hsu",
+    "type": "notes",
+    "topics": [
+      "AI學習雷達",
+      "多模態RAG",
+      "RAG",
+      "LangChain",
+      "LlamaIndex",
+      "多模態檢索",
+      "評估",
+      "幻覺控制"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://hackmd.io/@YungHuiHsu/B1LJcOlfA",
+      "https://hackmd.io/@YungHuiHsu/B1LJcOlfA",
+      "https://zilliz.com/learn/multimodal-RAG",
+      "https://developer.nvidia.com/blog/an-easy-introduction-to-multimodal-retrieval-augmented-generation/",
+      "https://weaviate.io/blog/multimodal-rag",
+      "https://blog.langchain.dev/semi-structured-multi-modal-rag/",
+      "https://blog.langchain.dev/multi-modal-rag-template/",
+      "https://docs.llamaindex.ai/en/stable/module_guides/models/multi_modal/",
+      "https://docs.llamaindex.ai/en/stable/examples/evaluation/multi_modal/multi_modal_rag_evaluation/",
+      "https://arxiv.org/abs/2312.01714",
+      "https://arxiv.org/abs/2312.15915"
+    ],
+    "excerpt": "多模態 RAG 的關鍵不是單純把圖片丟給多模態模型，而是要決定「如何表示、如何檢索、檢索後把什麼交給生成模型」，並用獨立的 retriever、generator 與資料品質指標評估整條管線。",
+    "slug": "2026-09-13-hackmd-multimodal-rag-notes",
+    "html": "articles/2026-09-13-hackmd-multimodal-rag-notes.html",
+    "markdown": "articles/2026/09/2026-09-13-hackmd-multimodal-rag-notes.md"
+  },
+  {
     "title": "Threads｜公園紙箱首席分析師：把人生轉譯成個人品牌的圖像提示詞",
     "date": "2026-09-13",
     "source": "https://www.threads.com/share/BAWRrDt6AU/",

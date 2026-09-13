@@ -1,0 +1,96 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HackMD｜Multi-Modal RAG Notes：多模態 RAG 檢索、實作與評估筆記</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>HackMD｜Multi-Modal RAG Notes：多模態 RAG 檢索、實作與評估筆記</h1><h1>Multi-Modal RAG Notes：多模態 RAG 檢索、實作與評估</h1>
+<h2>一句話摘要</h2>
+<p>多模態 RAG 的關鍵不是單純把圖片丟給多模態模型，而是要決定「如何表示、如何檢索、檢索後把什麼交給生成模型」，並用獨立的 retriever、generator 與資料品質指標評估整條管線。</p>
+<h2>來源脈絡</h2>
+<ul>
+<li>原始筆記：<a href="https://hackmd.io/@YungHuiHsu/B1LJcOlfA" target="_blank" rel="noopener">https://hackmd.io/@YungHuiHsu/B1LJcOlfA</a></li>
+<li>作者：YH Hsu</li>
+<li>HackMD 顯示最後編輯：2024 年 7 月 9 日</li>
+<li>筆記定位：AI／ML 學習入口下的多模態 RAG 研究、實作與評估彙整</li>
+<li>本次擷取：2026 年 9 月 13 日</li>
+</ul>
+<p>這是一份學習型整理，不是單一產品的官方文件。文中引用的模型、套件 API、版本與服務能力都可能已變動；實作前應回到各專案目前版本的官方文件。</p>
+<h2>筆記涵蓋範圍</h2>
+<ul>
+<li>Multi-Modal Retrieval-Augmented Generation 的基本架構。</li>
+<li>LangChain 的 MultiVectorRetriever 與文字、表格、圖片的摘要檢索。</li>
+<li>LlamaIndex 的多模態文件與 PDF 表格處理。</li>
+<li>多模態 RAG 評估、retriever／generator 品質與 hallucination detection。</li>
+<li>Cross-Modal Retrieval Integration and Enhancement，以及多模態 Chain-of-Thought 研究。</li>
+<li>ChartBench 圖表理解 benchmark。</li>
+<li>多模態提示詞與幻覺控制。</li>
+</ul>
+<h2>核心架構：三種檢索策略</h2>
+<p>筆記將多模態資料處理拆成三種主要方案：</p>
+<p>### Option 1：直接使用多模態 embedding</p>
+<p>將圖片、表格與文字轉成多模態向量，直接存入向量資料庫，再檢索原始資料。這種方式理論上的能力上限較高，但可用且成熟的多模態 embedding 模型仍相對有限，且需要處理不同模態向量空間與索引策略。</p>
+<p>### Option 2：先做影像摘要，再以文字 embedding 檢索</p>
+<p>先讓視覺模型產生圖片或表格摘要，再用文字 embedding 做檢索，最後以摘要或相關內容產生回答。優點是容易實作、可沿用成熟的文字向量管線；缺點是摘要是有損壓縮，細節遺失後無法靠檢索補回。</p>
+<p>### Option 3：以影像摘要檢索，再把原始圖片交給生成模型</p>
+<p>使用文字摘要找到候選圖片，再將原始圖片交給多模態 LLM 生成答案。這種方式兼顧較容易的文字檢索與原始視覺資訊，但檢索階段仍受摘要品質影響，可能漏掉未寫入摘要的視覺細節。</p>
+<p>筆記的整體觀察是：在當時的測試條件下，MultiVector／摘要檢索方案很有潛力；但最佳方案必須由資料型態、模型、圖片解析度與任務共同決定，不能直接把單次實驗結果當成普遍定律。</p>
+<h2>LangChain MultiVectorRetriever 的實作觀念</h2>
+<p>MultiVectorRetriever 的重要分工是：</p>
+<ul>
+<li>vectorstore 儲存可被 embedding 與搜尋的摘要文件。</li>
+<li>docstore 儲存檢索命中後要返回的原始內容。</li>
+<li>`doc_id` 將摘要與原始文字、表格或圖片關聯起來。</li>
+<li>檢索得到的是摘要，但回傳給下游的可以是原始文件、表格或圖片。</li>
+</ul>
+<p>這個設計讓「檢索單位」與「生成輸入」可以分離。例如，圖片可先轉成文字摘要來做 text-to-image-summary 檢索，命中後再把原始 base64 圖像交給多模態模型。對長文章、投影片、表格與圖片混合的企業文件特別實用。</p>
+<p>筆記也記錄了一個實作方向：將表格摘要、文字摘要與圖片摘要全部統一成文字格式進行檢索。這樣可以快速建立共同檢索介面，但三種摘要會互相競爭，因此需要觀察不同資料類型的召回率與排序穩定性。</p>
+<h2>PDF、表格與投影片的實務重點</h2>
+<ul>
+<li>PDF 不應只抽取純文字；表格、版面與圖像往往承載關鍵語意。</li>
+<li>長文字可以先切分、摘要，再進入向量索引。</li>
+<li>圖片可由人工 crop 或版面分析流程取得，再產生摘要或假設性問題。</li>
+<li>圖片解析度會同時影響 OCR／理解品質與後續生成品質。</li>
+<li>如果目標是回答圖表問題，應保存原始圖像，不能只保存摘要。</li>
+<li>使用 PyMuPDF 或其他 PDF 解析器時，需同步保留頁碼、區塊座標與原始檔案識別資訊，以便引用與除錯。</li>
+</ul>
+<h2>評估：不要只看生成答案</h2>
+<p>筆記彙整了多模態 RAG 評估的幾個層次：</p>
+<p>### Retriever 評估</p>
+<p>檢查 top-k 是否真的找回與問題同源或相關的文件、圖片與表格，並觀察召回率、排序一致性、跨模態相似度與不同 query 的穩定性。</p>
+<p>### Generator 評估</p>
+<p>檢查答案是否忠於檢索內容、是否回答問題、是否引入檢索資料沒有支持的內容。對開放式摘要或對話，單一 BLEU／ROUGE 類指標通常不足，可搭配強模型評估與人工抽樣。</p>
+<p>### 端到端評估</p>
+<p>應分開記錄：</p>
+<ul>
+<li>context relevance：取回的內容是否相關。</li>
+<li>faithfulness／groundedness：答案是否由取回內容支持。</li>
+<li>answer relevance：答案是否真正回應問題。</li>
+<li>latency、成本、失敗率與可追溯性。</li>
+</ul>
+<p>高品質輸出通常同時依賴好的 retriever 與 generator；只換更大的生成模型，不一定能修好召回錯誤。</p>
+<h2>跨模態推理與圖表理解</h2>
+<p>筆記引用 Cross-Modal Retrieval Integration and Enhancement 與 ChartBench，指出多模態系統可選取與文字及圖片問題相近的示例，再進行更有上下文的推理。對圖表任務，提示詞中的逐步分析要求可能提升弱模型的表現，但模型能力、資料集與評估設計會影響結果，不能把 benchmark 分數直接等同於真實企業文件表現。</p>
+<h2>導入檢核表</h2>
+<ul>
+<li>[ ] 先定義要檢索的是文字、表格、圖片、版面區塊，還是它們的組合。</li>
+<li>[ ] 決定使用直接多模態 embedding、摘要文字檢索，或兩者混合。</li>
+<li>[ ] 為每個摘要保留穩定 `doc_id`，可追溯回原始頁碼與檔案。</li>
+<li>[ ] 生成答案時保留原始圖片／表格，而不是只傳摘要。</li>
+<li>[ ] 對 PDF 保存頁碼、座標、來源檔案與版本資訊。</li>
+<li>[ ] 分開量測 retrieval、grounding、answer relevance、延遲與成本。</li>
+<li>[ ] 用人工抽樣檢查 OCR、表格欄位、圖表數值與引用位置。</li>
+<li>[ ] 對現行 LangChain、LlamaIndex、embedding model 與多模態 API 重新核對版本。</li>
+<li>[ ] 避免把研究筆記中的 2023–2024 實驗數字直接當成現行模型保證。</li>
+<li>[ ] 文件含個資、商業機密或敏感影像時，先確認資料保留、第三方 API 與存取權限政策。</li>
+</ul>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<p>這份筆記的價值在於把多模態 RAG 從「圖片問答」提升到完整系統設計：資料解析、模態對齊、摘要、向量檢索、原始內容回傳、生成與評估都必須一起考慮。對正在建置 PDF／投影片／表格知識庫的人，最值得帶走的不是某個套件呼叫，而是摘要索引與原始內容分離、以及 retriever 與 generator 分層評估的思路。</p>
+<h2>參考來源</h2>
+<ul>
+<li>Zilliz：Multimodal RAG：<a href="https://zilliz.com/learn/multimodal-RAG" target="_blank" rel="noopener">https://zilliz.com/learn/multimodal-RAG</a></li>
+<li>NVIDIA：An Easy Introduction to Multimodal RAG：<a href="https://developer.nvidia.com/blog/an-easy-introduction-to-multimodal-retrieval-augmented-generation/" target="_blank" rel="noopener">https://developer.nvidia.com/blog/an-easy-introduction-to-multimodal-retrieval-augmented-generation/</a></li>
+<li>Weaviate：Multimodal RAG：<a href="https://weaviate.io/blog/multimodal-rag" target="_blank" rel="noopener">https://weaviate.io/blog/multimodal-rag</a></li>
+<li>LangChain：Multi-Vector Retriever：<a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/" target="_blank" rel="noopener">https://blog.langchain.dev/semi-structured-multi-modal-rag/</a></li>
+<li>LangChain：Multi-modal RAG template：<a href="https://blog.langchain.dev/multi-modal-rag-template/" target="_blank" rel="noopener">https://blog.langchain.dev/multi-modal-rag-template/</a></li>
+<li>LlamaIndex 多模態文件：<a href="https://docs.llamaindex.ai/en/stable/module_guides/models/multi_modal/" target="_blank" rel="noopener">https://docs.llamaindex.ai/en/stable/module_guides/models/multi_modal/</a></li>
+<li>LlamaIndex 多模態 RAG 評估：<a href="https://docs.llamaindex.ai/en/stable/examples/evaluation/multi_modal/multi_modal_rag_evaluation/" target="_blank" rel="noopener">https://docs.llamaindex.ai/en/stable/examples/evaluation/multi_modal/multi_modal_rag_evaluation/</a></li>
+<li>arXiv 2312.01714：Retrieval-Augmented Multi-Modal Chain-of-Thoughts：<a href="https://arxiv.org/abs/2312.01714" target="_blank" rel="noopener">https://arxiv.org/abs/2312.01714</a></li>
+<li>ChartBench：<a href="https://arxiv.org/abs/2312.15915" target="_blank" rel="noopener">https://arxiv.org/abs/2312.15915</a></li>
+</ul>
+<h2>原始連結</h2>
+<p><a href="https://hackmd.io/@YungHuiHsu/B1LJcOlfA" target="_blank" rel="noopener">https://hackmd.io/@YungHuiHsu/B1LJcOlfA</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-13 · https://hackmd.io/@YungHuiHsu/B1LJcOlfA · notes</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">多模態RAG</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">LlamaIndex</span><span class="tag">多模態檢索</span><span class="tag">評估</span><span class="tag">幻覺控制</span><h3>原始連結</h3><p><a href="https://hackmd.io/@YungHuiHsu/B1LJcOlfA" target="_blank" rel="noopener">https://hackmd.io/@YungHuiHsu/B1LJcOlfA</a></p><p><a href="https://hackmd.io/@YungHuiHsu/B1LJcOlfA" target="_blank" rel="noopener">https://hackmd.io/@YungHuiHsu/B1LJcOlfA</a></p><p><a href="https://zilliz.com/learn/multimodal-RAG" target="_blank" rel="noopener">https://zilliz.com/learn/multimodal-RAG</a></p><p><a href="https://developer.nvidia.com/blog/an-easy-introduction-to-multimodal-retrieval-augmented-generation/" target="_blank" rel="noopener">https://developer.nvidia.com/blog/an-easy-introduction-to-multimodal-retrieval-augmented-generation/</a></p><p><a href="https://weaviate.io/blog/multimodal-rag" target="_blank" rel="noopener">https://weaviate.io/blog/multimodal-rag</a></p><p><a href="https://blog.langchain.dev/semi-structured-multi-modal-rag/" target="_blank" rel="noopener">https://blog.langchain.dev/semi-structured-multi-modal-rag/</a></p><p><a href="https://blog.langchain.dev/multi-modal-rag-template/" target="_blank" rel="noopener">https://blog.langchain.dev/multi-modal-rag-template/</a></p><p><a href="https://docs.llamaindex.ai/en/stable/module_guides/models/multi_modal/" target="_blank" rel="noopener">https://docs.llamaindex.ai/en/stable/module_guides/models/multi_modal/</a></p><p><a href="https://docs.llamaindex.ai/en/stable/examples/evaluation/multi_modal/multi_modal_rag_evaluation/" target="_blank" rel="noopener">https://docs.llamaindex.ai/en/stable/examples/evaluation/multi_modal/multi_modal_rag_evaluation/</a></p><p><a href="https://arxiv.org/abs/2312.01714" target="_blank" rel="noopener">https://arxiv.org/abs/2312.01714</a></p><p><a href="https://arxiv.org/abs/2312.15915" target="_blank" rel="noopener">https://arxiv.org/abs/2312.15915</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
