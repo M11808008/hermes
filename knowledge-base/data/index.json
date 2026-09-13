@@ -8842,7 +8842,9 @@
       "https://developers.openai.com/codex/guides/agents-md.md",
       "https://agents.md/",
       "https://github.com/openai/codex/blob/main/docs/agents_md.md",
-      "https://github.com/openai/codex/blob/main/AGENTS.md"
+      "https://github.com/openai/codex/blob/main/AGENTS.md",
+      "https://www.facebook.com/share/p/1Fc72im4P9/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/366863238003058/permalink/1843387453683955/"
     ],
     "excerpt": "`AGENTS.md` 可以理解成「給 coding agent 看的 README」：把安裝、測試、程式風格、安全邊界、PR/commit 慣例與專案特殊限制寫成可自動讀取的規則，讓 Codex 每次開始工作前先載入同一套上下文，減少重複提示與 agent 自行猜測。",
     "slug": "2026-07-18-threads-eason-codex-agents-md-project-rules",
