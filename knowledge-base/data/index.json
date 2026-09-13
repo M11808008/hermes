@@ -97,6 +97,38 @@
     "markdown": "articles/2026/09/2026-09-13-isuperman-seedance-25-free-trial-ai-generators.md"
   },
   {
+    "title": "Substack｜Meta Muse：把一台持續運作的雲端電腦交給 AI Agent",
+    "date": "2026-09-13",
+    "source": "https://daniel578120.substack.com/p/meta",
+    "author": "Daniel Wu",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "AI Agent",
+      "Meta Muse",
+      "Agentic Commerce",
+      "雲端電腦",
+      "虛擬機",
+      "Prompt Injection",
+      "AI資安",
+      "隱私與資料治理",
+      "AI產品策略"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://daniel578120.substack.com/p/meta",
+      "https://daniel578120.substack.com/p/meta",
+      "https://stratechery.com/2026/mythos-muse-and-the-opportunity-cost-of-compute/",
+      "https://about.fb.com/"
+    ],
+    "excerpt": "Meta Muse 的真正產品不是「另一個聊天介面」，而是把一台專屬、持續存在的雲端電腦交給 agent，讓它替使用者處理購物、退訂閱、寄信、比價與長時間瀏覽任務；這也讓 AI 產品第一次必須直接面對「每多一位使用者，就多一份基礎設施帳單」的商業現實。",
+    "slug": "2026-09-13-substack-meta-muse-agent-cloud-computer",
+    "html": "articles/2026-09-13-substack-meta-muse-agent-cloud-computer.html",
+    "markdown": "articles/2026/09/2026-09-13-substack-meta-muse-agent-cloud-computer.md"
+  },
+  {
     "title": "Threads｜AI平凡人創業學院：ChatGPT Desktop 接 Ollama，本機模型保留原本介面",
     "date": "2026-09-13",
     "source": "https://www.threads.com/share/_n2Up-a-g/",
