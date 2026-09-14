@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜ChatGPT 連接 GitHub：查詢專案、程式修改與分支隔離工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜ChatGPT 連接 GitHub：查詢專案、程式修改與分支隔離工作流</h1><figure><img src="../assets/source-images/2026-09-14-facebook-chatgpt-github-connector.png" alt="Facebook 貼文與 ChatGPT／GitHub 工具呼叫畫面截圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>Facebook 貼文與 ChatGPT／GitHub 工具呼叫畫面截圖</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這則貼文把 ChatGPT 與 GitHub 串接成網站維護入口：先指定 repository，再讓 AI 讀取專案、提出或執行修改，並以 branch／pull request 降低直接碰觸主線的風險。</p>
+<h2>Facebook 貼文重點</h2>
+<p>作者陳盟升公開分享的操作描述如下：</p>
+<ul>
+<li>在 ChatGPT 左上方的外掛程式區域選擇 GitHub。</li>
+<li>綁定 GitHub 後，在對話框左下角的加號選取專案。</li>
+<li>告訴 GPT 要處理哪個 repository，讓它查詢專案內容。</li>
+<li>需要時要求 AI 修改網站或程式。</li>
+<li>貼文稱系統會建立分支，避免直接影響主線。</li>
+<li>作者以自己放在 GitHub 上的網站作為使用情境。</li>
+</ul>
+<p>貼文圖片中可辨識到 ChatGPT 的工具呼叫紀錄與約 3 分 48 秒的處理時間；圖片解析度不足，無法可靠逐字抄錄完整 prompt 或確認畫面上的正式產品名稱。</p>
+<h2>還原後的實作流程</h2>
+<ul>
+<li>先確認 repository、目前 branch 與目標工作範圍。</li>
+<li>讓 ChatGPT／Codex 先讀取 README、專案結構與相關檔案。</li>
+<li>先要求提出修改計畫與影響範圍，不要一開始就直接改 main。</li>
+<li>在獨立 branch 執行修改，或讓 Codex 以 pull request 為交付單位。</li>
+<li>執行測試、建置與網站預覽檢查。</li>
+<li>人工檢視 diff、權限變更、環境變數與部署設定。</li>
+<li>通過檢查後才合併 pull request，並確認 GitHub Pages 或其他部署結果。</li>
+</ul>
+<h2>官方查核與需要校準的地方</h2>
+<p>OpenAI 的 GitHub Codex 文件目前可讀取，頁面標題為「Review GitHub pull requests with Codex」。文件描述 Codex 會檢視 pull request diff、遵循 repository guidance，並發佈標準 GitHub code review；這支持「ChatGPT／Codex 可進入 GitHub 工程工作流」的大方向。</p>
+<p>但這不等於下列說法已被官方文件普遍保證：</p>
+<ul>
+<li>ChatGPT 的所有方案都能直接修改任意 GitHub repository。</li>
+<li>所有帳號介面都仍叫「外掛程式」，或都在左下角加號提供相同 GitHub 選擇器。</li>
+<li>每次操作都會自動建立 branch。</li>
+<li>GitHub 連接操作一定不消耗 Codex 額度。</li>
+<li>AI 產出的修改可以不經人工 review 直接部署。</li>
+</ul>
+<p>較精準的理解是：GitHub connector、Codex 任務、pull request review 與 repository 權限可能是不同能力層；可用功能取決於產品介面、帳號方案、組織政策、OAuth scope 與 repository 權限。貼文的「不佔 Codex 額度」保留為作者的使用心得，未視為通用規則。</p>
+<h2>對 GitHub Pages 網站的安全用法</h2>
+<ul>
+<li>先使用 preview branch，不直接在 main 上試錯。</li>
+<li>把 API key、token、學生資料與私密設定留在 GitHub Secrets 或伺服器端，不能交給前端 bundle。</li>
+<li>要求 AI 只修改明確列出的檔案，避免無意間改動部署 workflow。</li>
+<li>合併前檢查 diff、連結、圖片、HTML／JavaScript 錯誤與 mobile layout。</li>
+<li>若 repository 具有自動部署，任何 merge 都可能觸發公開發布，需先確認 Actions 與環境變數。</li>
+<li>將 ChatGPT 的建議視為 draft；權限、刪除檔案、付款、發佈與資料外洩相關操作必須保留人工批准。</li>
+</ul>
+<h2>對 AI 學習雷達的價值</h2>
+<p>這則分享的重點不只是「把 ChatGPT 接上 GitHub」，而是把網站維護從單次問答改成可追蹤的工程流程：AI 讀取 repository，分支承接修改，pull request 留下 diff 與審查紀錄，再由人決定是否合併。對教學網站、GitHub Pages 與個人作品集尤其實用。</p>
+<p>可用一句話記住：</p>
+<p>ChatGPT 讀 repo → branch 隔離修改 → pull request 審查 → 測試 → 人工合併 → 自動部署</p>
+<h2>原始連結與查核來源</h2>
+<ul>
+<li>Facebook 原始分享：<a href="https://www.facebook.com/share/1926PVnm2C/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/1926PVnm2C/?mibextid=wwXIfr</a></li>
+<li>Facebook 解析後的相片貼文：<a href="https://www.facebook.com/photo.php?fbid=1612566190504877&amp;set=a.118972106530967&amp;type=3&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=1612566190504877&amp;set=a.118972106530967&amp;type=3&amp;mibextid=wwXIfr</a></li>
+<li>OpenAI／ChatGPT Learn：Review GitHub pull requests with Codex：<a href="https://learn.chatgpt.com/docs/third-party/github" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/third-party/github</a></li>
+<li>OpenAI Codex GitHub repository：<a href="https://github.com/openai/codex" target="_blank" rel="noopener">https://github.com/openai/codex</a></li>
+<li>GitHub pull request 文件：<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests" target="_blank" rel="noopener">https://docs.github.com/en/pull-requests/collaborating-with-pull-requests</a></li>
+</ul>
+<h2>擷取限制</h2>
+<p>Facebook 在未登入狀態仍提供作者、貼文文字、公開圖片與一則留言；完整互動與部分官方 Help Center 頁面可能受登入或 Cloudflare 限制。本文保留 Facebook 原始分享 URL 與解析後 canonical URL，並把圖片作為來源證據保存；官方能力以目前可讀取的 Codex GitHub 文件為準，不把社群示範擴大解讀成所有帳號的產品保證。</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-14 · Facebook / OpenAI Developers / GitHub · social-post</div><h3>標籤</h3><h3>原始連結</h3><p><a href="https://www.facebook.com/share/1926PVnm2C/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/1926PVnm2C/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/darkschen/photos/chatgpt-%E7%B6%81-github-%E5%B0%B1%E8%83%BD%E5%B9%AB%E8%87%AA%E5%B7%B1%E6%94%B9%E7%B6%B2%E9%A0%81%E4%B8%8D%E4%BD%94-codex-%E9%A1%8D%E5%BA%A6%E9%80%99%E6%AC%A1%E4%BB%8D%E7%84%B6%E6%98%AF%E5%80%8B%E5%B7%B2%E7%9F%A5%E7%94%A8%E7%81%AB%E7%9A%84%E5%88%86%E4%BA%AB%E5%9C%A8-chatgpt-%E5%B7%A6%E4%B8%8A%E7%9A%84%E5%A4%96%E6%8E%9B%E7%A8%8B%E5%BC%8F%E8%A3%A1%E9%81%B8-github%E7%B6%81%E5%AE%9A%E5%BE%8C%E5%9C%A8%E5%B0%8D/1612566190504877/" target="_blank" rel="noopener">https://www.facebook.com/darkschen/photos/chatgpt-%E7%B6%81-github-%E5%B0%B1%E8%83%BD%E5%B9%AB%E8%87%AA%E5%B7%B1%E6%94%B9%E7%B6%B2%E9%A0%81%E4%B8%8D%E4%BD%94-codex-%E9%A1%8D%E5%BA%A6%E9%80%99%E6%AC%A1%E4%BB%8D%E7%84%B6%E6%98%AF%E5%80%8B%E5%B7%B2%E7%9F%A5%E7%94%A8%E7%81%AB%E7%9A%84%E5%88%86%E4%BA%AB%E5%9C%A8-chatgpt-%E5%B7%A6%E4%B8%8A%E7%9A%84%E5%A4%96%E6%8E%9B%E7%A8%8B%E5%BC%8F%E8%A3%A1%E9%81%B8-github%E7%B6%81%E5%AE%9A%E5%BE%8C%E5%9C%A8%E5%B0%8D/1612566190504877/</a></p><p><a href="https://www.facebook.com/share/1926PVnm2C/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/1926PVnm2C/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/photo.php?fbid=1612566190504877&amp;set=a.118972106530967&amp;type=3&amp;mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=1612566190504877&amp;set=a.118972106530967&amp;type=3&amp;mibextid=wwXIfr</a></p><p><a href="https://learn.chatgpt.com/docs/third-party/github" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/third-party/github</a></p><p><a href="https://github.com/openai/codex" target="_blank" rel="noopener">https://github.com/openai/codex</a></p><p><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests" target="_blank" rel="noopener">https://docs.github.com/en/pull-requests/collaborating-with-pull-requests</a></p><p><a href="AI學習雷達" target="_blank" rel="noopener">AI學習雷達</a></p><p><a href="ChatGPT" target="_blank" rel="noopener">ChatGPT</a></p><p><a href="GitHub" target="_blank" rel="noopener">GitHub</a></p><p><a href="Codex" target="_blank" rel="noopener">Codex</a></p><p><a href="coding-agent" target="_blank" rel="noopener">coding-agent</a></p><p><a href="pull-request" target="_blank" rel="noopener">pull-request</a></p><p><a href="branch" target="_blank" rel="noopener">branch</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

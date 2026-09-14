@@ -1,5 +1,36 @@
 [
   {
+    "title": "Facebook｜ChatGPT 連接 GitHub：查詢專案、程式修改與分支隔離工作流",
+    "date": "2026-09-14",
+    "source": "Facebook / OpenAI Developers / GitHub",
+    "author": "",
+    "type": "social-post",
+    "topics": [],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/1926PVnm2C/?mibextid=wwXIfr",
+      "https://www.facebook.com/darkschen/photos/chatgpt-%E7%B6%81-github-%E5%B0%B1%E8%83%BD%E5%B9%AB%E8%87%AA%E5%B7%B1%E6%94%B9%E7%B6%B2%E9%A0%81%E4%B8%8D%E4%BD%94-codex-%E9%A1%8D%E5%BA%A6%E9%80%99%E6%AC%A1%E4%BB%8D%E7%84%B6%E6%98%AF%E5%80%8B%E5%B7%B2%E7%9F%A5%E7%94%A8%E7%81%AB%E7%9A%84%E5%88%86%E4%BA%AB%E5%9C%A8-chatgpt-%E5%B7%A6%E4%B8%8A%E7%9A%84%E5%A4%96%E6%8E%9B%E7%A8%8B%E5%BC%8F%E8%A3%A1%E9%81%B8-github%E7%B6%81%E5%AE%9A%E5%BE%8C%E5%9C%A8%E5%B0%8D/1612566190504877/",
+      "https://www.facebook.com/share/1926PVnm2C/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=1612566190504877&set=a.118972106530967&type=3&mibextid=wwXIfr",
+      "https://learn.chatgpt.com/docs/third-party/github",
+      "https://github.com/openai/codex",
+      "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests",
+      "AI學習雷達",
+      "ChatGPT",
+      "GitHub",
+      "Codex",
+      "coding-agent",
+      "pull-request",
+      "branch"
+    ],
+    "excerpt": "這則貼文把 ChatGPT 與 GitHub 串接成網站維護入口：先指定 repository，再讓 AI 讀取專案、提出或執行修改，並以 branch／pull request 降低直接碰觸主線的風險。",
+    "slug": "2026-09-14-facebook-chatgpt-github-connector-branch-workflow",
+    "html": "articles/2026-09-14-facebook-chatgpt-github-connector-branch-workflow.html",
+    "markdown": "articles/2026/09/2026-09-14-facebook-chatgpt-github-connector-branch-workflow.md"
+  },
+  {
     "title": "Facebook｜周含鍾：蘇氏麵館的牛油皮蛋麵與大肉拌麵",
     "date": "2026-09-13",
     "source": "https://www.facebook.com/share/p/17uHcCjWSS/?mibextid=wwXIfr",
