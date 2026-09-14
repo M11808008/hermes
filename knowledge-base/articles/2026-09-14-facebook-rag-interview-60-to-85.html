@@ -1,0 +1,82 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook Reel｜RAG 準確率如何從 60% 提升到 85%：面試題拆解與工程檢核</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook Reel｜RAG 準確率如何從 60% 提升到 85%：面試題拆解與工程檢核</h1><h1>RAG 準確率如何從 60% 提升到 85%：面試題拆解與工程檢核</h1>
+<h2>一句話摘要</h2>
+<p>RAG 的品質通常不是靠「換一個更大的模型」單點解決，而是要把資料切分、查詢理解、召回／排序、流量路由與評估指標拆開量測，逐層找出錯誤來源。</p>
+<h2>來源脈絡</h2>
+<ul>
+<li>作者／帳號：一人公司研究所</li>
+<li>影片長度：約 4 分 41 秒；yt-dlp 擷取到 281.31 秒</li>
+<li>Facebook 頁面擷取時顯示：約 4.5 萬次觀看、267 個心情、6 則留言、83 次分享</li>
+<li>yt-dlp metadata 擷取到的觀看數：19,861；社群平台不同端點的計數可能受快取、地區與時間差影響，不視為需要強行統一的矛盾。</li>
+<li>影片自稱案例來源：B 站「AI 工程師面試」內容；本條目未將該來源視為已獨立核實的原始影片。</li>
+<li>本次擷取：2026 年 9 月 14 日</li>
+</ul>
+<p>影片可下載並已保存本地封面、畫面拼貼與 Whisper 草稿轉錄；原始影片只作本機分析，不公開鏡像。</p>
+<h2>影片主張的改善路徑</h2>
+<p>### 1. 先修正資料切分，不要只用固定字數一刀切</p>
+<p>影片用「每 500 個 token 固定切斷」作為反例，指出句子、段落、表格可能被切開，導致檢索命中的是殘缺內容。它建議依 NLP 边界／標題／段落做動態切分，並保留約 100–200 token 的重疊窗口，讓相鄰片段保留上下文連續性。</p>
+<p>實務上，重疊不是越大越好：它會增加索引量、重複召回與成本。應用固定評估集比較 chunk size、overlap、語意邊界與表格／程式碼特殊處理，而不是直接採用影片的數字。</p>
+<p>### 2. Query rewriting 後要做語意護欄</p>
+<p>對「怎麼退款？」這類短而含糊的問題，影片建議先用小模型擴寫或產生多個查詢，再進行檢索。但它特別提醒：改寫模型可能把「怎麼退款」誤改成「怎麼賺錢」，所以要用 embedding 相似度或其他語意檢查，比對原問題與改寫問題；低於門檻就捨棄或回退原問題。</p>
+<p>這個想法的重點不是固定 0.8 這個門檻，而是建立 query rewrite 的可觀測性：保存原始 query、改寫結果、採用／拒絕原因、召回差異與最終答案品質。</p>
+<p>### 3. 混合檢索不能直接把不同量綱的分數相加</p>
+<p>影片指出向量檢索分數與 BM25 關鍵字分數的量綱不同，直接用 `向量分數 + BM25 分數` 可能讓其中一種分數完全壓過另一種。畫面與旁白提到要先做分數融合／統一排序，再搭配 reranker；影片 ASR 對相關英文名稱不穩定，畫面可辨識的概念是混合檢索與排序模型，而非某個已核實的特定模型名稱。</p>
+<p>Elastic 的 Reciprocal Rank Fusion（RRF）文件提供了一種以排名融合多個 retriever 結果的正式做法；它與影片「不要直接相加」的工程提醒方向一致，但不代表 RRF 在所有資料集都會勝出。</p>
+<p>### 4. 用策略路由平衡品質、延遲與成本</p>
+<p>影片以 reranker 約需 200 毫秒、併發上升後系統壓力變大作為示例，建議簡單問題走較快的向量檢索，複雜問題才啟用 reranking。這是一種 query／流量路由策略，不是「所有請求都加上最重的模型」。</p>
+<p>導入時應記錄：問題類型、是否啟用 reranker、top-k、端到端延遲、token／API 成本、答案品質與失敗率，並以離線資料集加線上抽樣確認路由沒有把困難問題誤判成簡單問題。</p>
+<p>### 5. 把「答案不好」拆成 retrieval 與 generation 問題</p>
+<p>影片最後提醒，不要只看一個總體準確率：</p>
+<ul>
+<li>Context Recall：必要答案是否出現在取回的 context 中；若不在，優先查 retrieval。</li>
+<li>Faithfulness／groundedness：答案是否忠於取回資料；若資料有答案但模型答錯或添加未支持內容，優先查 generation／提示與引用約束。</li>
+<li>Answer relevance：答案是否真的回應使用者問題。</li>
+</ul>
+<p>Ragas 的指標文件、LangChain 的 retrieval 架構文件與相關 RAG 工具鏈都支持把檢索和生成分層觀察的方向；實際指標定義與評估方法仍需依資料集校準。</p>
+<h2>影片重點流程</h2>
+<ul>
+<li>文件解析與語意／結構化切分。</li>
+<li>建立帶有適度 overlap 的索引。</li>
+<li>對短 query 做受控的 query rewriting 或多路查詢。</li>
+<li>使用向量檢索與關鍵字檢索取得候選。</li>
+<li>以 RRF 等排名融合方法或 reranker 統一排序。</li>
+<li>依問題難度做策略路由，控制延遲與成本。</li>
+<li>分開量測 context recall、faithfulness、answer relevance、延遲與失敗率。</li>
+<li>以錯誤案例回饋 chunk、query、retriever、reranker 與 generator 的下一輪調整。</li>
+</ul>
+<h2>工程導入檢核表</h2>
+<ul>
+<li>[ ] 建立固定、具代表性的 query／答案／來源文件評估集。</li>
+<li>[ ] 分別測量 chunk size、overlap、語意切分與表格／程式碼切分。</li>
+<li>[ ] 保存原始 query 與所有 query rewrite 結果，並設計回退機制。</li>
+<li>[ ] 不直接混加不同量綱的向量分數與 BM25 分數。</li>
+<li>[ ] 比較 RRF、正規化加權、reranker 的品質、延遲與成本。</li>
+<li>[ ] 對每次檢索保留 doc ID、rank、分數、retriever 類型與版本。</li>
+<li>[ ] 分開判斷「答案不在 context」與「答案沒有忠於 context」。</li>
+<li>[ ] 對 60%→85% 這類改善數字保存基準線、資料集、指標定義與實驗條件。</li>
+<li>[ ] 對線上資料、個資與機密文件設定權限、保留期限與人工覆核邊界。</li>
+</ul>
+<h2>重要辨識與限制</h2>
+<ul>
+<li>影片是教學／面試型內容，60%→85% 應視為案例敘事，不是 RAG 的普遍性能保證。</li>
+<li>Whisper 對英文技術名詞有明顯誤聽；本條目以畫面和上下文校正為「NLP、query rewriting、BM25、reranking、Context Recall、Faithfulness」，未把不清楚的 ASR 音節擴寫成特定模型名稱。</li>
+<li>社群貼文中的觀看、互動數字會變動；本次保存的是擷取當下的頁面 metadata 與 yt-dlp metadata。</li>
+<li>本條目保存的是公開 caption、可下載影片的本機分析結果與官方文件交叉查核，不宣稱已找到影片聲稱的 B 站原始影片。</li>
+</ul>
+<h2>官方與延伸參考</h2>
+<ul>
+<li>Elastic：Reciprocal Rank Fusion：<a href="https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion" target="_blank" rel="noopener">https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion</a></li>
+<li>Cohere：Reranking：<a href="https://docs.cohere.com/docs/reranking-with-cohere" target="_blank" rel="noopener">https://docs.cohere.com/docs/reranking-with-cohere</a></li>
+<li>LangChain：Retrieval architecture：<a href="https://docs.langchain.com/oss/python/langchain/overview" target="_blank" rel="noopener">https://docs.langchain.com/oss/python/langchain/overview</a></li>
+<li>Ragas：Available metrics：<a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/" target="_blank" rel="noopener">https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/</a></li>
+</ul>
+<h2>原始連結</h2>
+<p><a href="https://www.facebook.com/reel/1424170759651719" target="_blank" rel="noopener">https://www.facebook.com/reel/1424170759651719</a></p>
+<p>Canonical：</p>
+<p><a href="https://www.facebook.com/61588107756334/videos/untitled-video/1424170759651719/" target="_blank" rel="noopener">https://www.facebook.com/61588107756334/videos/untitled-video/1424170759651719/</a></p>
+<p>本地來源證據：</p>
+<ul>
+<li>`source-archive/2026-09-14-facebook-rag-interview-60-to-85.json`</li>
+<li>`source-archive/2026-09-14-facebook-rag-interview-60-to-85-whisper.txt`</li>
+<li>`assets/source-images/2026-09-14-facebook-rag-interview-60-to-85-cover.jpg`</li>
+<li>`assets/source-images/2026-09-14-facebook-rag-interview-60-to-85-montage.jpg`</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-14 · https://www.facebook.com/reel/1424170759651719 · video</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">RAG</span><span class="tag">檢索增強生成</span><span class="tag">混合檢索</span><span class="tag">reranking</span><span class="tag">AI面試</span><span class="tag">LLM</span><h3>原始連結</h3><p><a href="https://www.facebook.com/61588107756334/videos/untitled-video/1424170759651719/" target="_blank" rel="noopener">https://www.facebook.com/61588107756334/videos/untitled-video/1424170759651719/</a></p><p><a href="https://www.facebook.com/reel/1424170759651719" target="_blank" rel="noopener">https://www.facebook.com/reel/1424170759651719</a></p><p><a href="https://www.facebook.com/61588107756334/videos/untitled-video/1424170759651719/" target="_blank" rel="noopener">https://www.facebook.com/61588107756334/videos/untitled-video/1424170759651719/</a></p><p><a href="https://m.facebook.com/watch/?v=1424170759651719&amp;_rdr" target="_blank" rel="noopener">https://m.facebook.com/watch/?v=1424170759651719&amp;_rdr</a></p><p><a href="https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion" target="_blank" rel="noopener">https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion</a></p><p><a href="https://docs.cohere.com/docs/reranking-with-cohere" target="_blank" rel="noopener">https://docs.cohere.com/docs/reranking-with-cohere</a></p><p><a href="https://docs.langchain.com/oss/python/langchain/overview" target="_blank" rel="noopener">https://docs.langchain.com/oss/python/langchain/overview</a></p><p><a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/" target="_blank" rel="noopener">https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
