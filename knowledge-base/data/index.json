@@ -1,5 +1,32 @@
 [
   {
+    "title": "Facebook｜Gemini NotebookLM 新增互動式報告：把來源轉成文字、多媒體、圖表與測驗",
+    "date": "2026-09-15",
+    "source": "Facebook",
+    "author": "",
+    "type": "social-post",
+    "topics": [
+      "AI學習雷達",
+      "Google",
+      "Gemini",
+      "NotebookLM",
+      "互動式報告",
+      "文件理解",
+      "學習診斷"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1HdrddzSXU/",
+      "https://www.facebook.com/tinywhite.lai/posts/pfbid02jyaEyEu9DiBUFkj3oG8XssHgA7ygr3HhKYRLVALJVC22vW2TFsUpcCs5MgNiBNrel"
+    ],
+    "excerpt": "這則分享指出，Gemini NotebookLM 在原有「報告」功能中加入「互動式報告」模式，可把工作區來源整理成一份綜合型產出，並將文字說明、多媒體、數據圖表、建議提示與測驗串成同一個閱讀與學習介面。",
+    "slug": "2026-09-15-facebook-gemini-notebooklm-interactive-report",
+    "html": "articles/2026-09-15-facebook-gemini-notebooklm-interactive-report.html",
+    "markdown": "articles/2026/09/2026-09-15-facebook-gemini-notebooklm-interactive-report.md"
+  },
+  {
     "title": "Facebook｜ChatGPT 連接 GitHub：查詢專案、程式修改與分支隔離工作流",
     "date": "2026-09-14",
     "source": "Facebook / OpenAI Developers / GitHub",
