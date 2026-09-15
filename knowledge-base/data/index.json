@@ -86,6 +86,31 @@
     "markdown": "articles/2026/09/2026-09-15-facebook-google-stitch-chat-design-web-ui.md"
   },
   {
+    "title": "Facebook Reel｜Nate Herk：面向一般人的 Claude 入門系列（Part 1）",
+    "date": "2026-09-15",
+    "source": "Facebook Reel",
+    "author": "",
+    "type": "video",
+    "topics": [
+      "AI學習雷達",
+      "Claude",
+      "AI入門",
+      "AI素養",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1F5SLe28xn/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1079309988129366"
+    ],
+    "excerpt": "這支 Reel 是 Nate Herk 宣稱的三集 Claude 入門系列第一集，目標是把 Claude 以較容易理解的方式介紹給一般使用者；公開可讀資訊不足以重建完整內容，故不把它延伸解讀成特定功能教學。",
+    "slug": "2026-09-15-facebook-nate-herk-claude-beginners-part-1",
+    "html": "articles/2026-09-15-facebook-nate-herk-claude-beginners-part-1.html",
+    "markdown": "articles/2026/09/2026-09-15-facebook-nate-herk-claude-beginners-part-1.md"
+  },
+  {
     "title": "Facebook｜ChatGPT 連接 GitHub：查詢專案、程式修改與分支隔離工作流",
     "date": "2026-09-14",
     "source": "Facebook / OpenAI Developers / GitHub",
