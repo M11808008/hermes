@@ -1,5 +1,35 @@
 [
   {
+    "title": "EdwardAI｜Claude × Obsidian 第二大腦安裝頁：開源 claude-obsidian 的安全導入與正確指令",
+    "date": "2026-09-15",
+    "source": "EdwardAI / GitHub",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Claude Code",
+      "Obsidian",
+      "Second Brain",
+      "Knowledge Management",
+      "Agent Skills",
+      "本地優先"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://edwardai-obsidian-brain.pages.dev/",
+      "https://edwardai-obsidian-brain.pages.dev/",
+      "https://edwardai-obsidian-brain.pages.dev/",
+      "https://github.com/AgriciDaniel/claude-obsidian",
+      "https://github.com/AgriciDaniel/claude-obsidian/blob/main/docs/install-guide.md"
+    ],
+    "excerpt": "這個教學頁把 claude-obsidian 包裝為「兩分鐘把 Obsidian 升級成 AI 第二大腦」：丟入來源後，由 Claude 讀取、建立連結與歸檔。核心概念可行，但真正可靠的導入不該直接讓 agent 對既有筆記庫任意寫入，而要先建立或採用一個界線清楚、可備份、可審閱的 vault。",
+    "slug": "2026-09-15-edwardai-claude-obsidian-installation-guide",
+    "html": "articles/2026-09-15-edwardai-claude-obsidian-installation-guide.html",
+    "markdown": "articles/2026/09/2026-09-15-edwardai-claude-obsidian-installation-guide.md"
+  },
+  {
     "title": "Facebook｜Gemini NotebookLM 新增互動式報告：把來源轉成文字、多媒體、圖表與測驗",
     "date": "2026-09-15",
     "source": "Facebook",
