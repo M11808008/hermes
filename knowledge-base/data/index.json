@@ -27,6 +27,35 @@
     "markdown": "articles/2026/09/2026-09-15-facebook-gemini-notebooklm-interactive-report.md"
   },
   {
+    "title": "Facebook Reel｜Google Stitch：用對話快速生成網頁與 App UI 的 Vibe Design 工作流",
+    "date": "2026-09-15",
+    "source": "Facebook Reel / Google Stitch",
+    "author": "",
+    "type": "social-video",
+    "topics": [
+      "AI學習雷達",
+      "Google",
+      "Stitch",
+      "Vibe Design",
+      "UI設計",
+      "網頁設計",
+      "原型製作"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/19VUEXcfWr/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2131683667663008",
+      "https://stitch.withgoogle.com/",
+      "https://blog.google/technology/google-labs/stitch-vibe-design/"
+    ],
+    "excerpt": "這支 Reel 用一句「用講的、聊天設計網頁」概括 Google Stitch 的吸引力：以自然語言描述需求，快速得到 Web 或 mobile UI 的設計方向，讓原型發想從畫面空白變成可討論的起點。",
+    "slug": "2026-09-15-facebook-google-stitch-chat-design-web-ui",
+    "html": "articles/2026-09-15-facebook-google-stitch-chat-design-web-ui.html",
+    "markdown": "articles/2026/09/2026-09-15-facebook-google-stitch-chat-design-web-ui.md"
+  },
+  {
     "title": "Facebook｜ChatGPT 連接 GitHub：查詢專案、程式修改與分支隔離工作流",
     "date": "2026-09-14",
     "source": "Facebook / OpenAI Developers / GitHub",
