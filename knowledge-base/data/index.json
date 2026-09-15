@@ -1,5 +1,34 @@
 [
   {
+    "title": "Threads｜Perplexity Portable Computer 登陸 Windows：把 RTX PC 變成本地 AI Agent 工作站",
+    "date": "2026-09-16",
+    "source": "Threads",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Perplexity",
+      "Portable Computer",
+      "NVIDIA RTX",
+      "Local AI",
+      "AI Agent",
+      "Windows",
+      "隱私運算",
+      "MCP"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAWxpaEKdp/",
+      "https://www.threads.com/@aiposthub/post/DdTFa1egbLH"
+    ],
+    "excerpt": "Perplexity 的 Portable Computer 把「模型 + AI agent + 工具執行 + 排程」搬進 Windows RTX PC：適合想讓文件分析、程式碼整理或例行工作盡量留在自己設備上的人；前提是你得有符合門檻的 GPU，並且仍要清楚管理雲端升級與外部連接器的資料邊界。",
+    "slug": "2026-09-16-threads-perplexity-portable-computer-windows",
+    "html": "articles/2026-09-16-threads-perplexity-portable-computer-windows.html",
+    "markdown": "articles/2026/09/2026-09-16-threads-perplexity-portable-computer-windows.md"
+  },
+  {
     "title": "EdwardAI｜Claude × Obsidian 第二大腦安裝頁：開源 claude-obsidian 的安全導入與正確指令",
     "date": "2026-09-15",
     "source": "EdwardAI / GitHub",
