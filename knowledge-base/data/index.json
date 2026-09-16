@@ -147,6 +147,35 @@
     "markdown": "articles/2026/09/2026-09-16-threads-kufutw-motion-codex-mcp-video-generation.md"
   },
   {
+    "title": "Threads｜DeepSeek Harness：一切皆插件的開源 Agent 執行框架，先讀安全公告再上手",
+    "date": "2026-09-16",
+    "source": "https://www.threads.com/share/BAB6l8P_ct/",
+    "author": "@magic.tw",
+    "type": "social-post",
+    "topics": [
+      "DeepSeek",
+      "AI Agent",
+      "TypeScript",
+      "MCP",
+      "開源框架"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@magic.tw/post/DdWHF5WE9xX",
+      "https://www.threads.com/share/BAB6l8P_ct/",
+      "https://www.threads.com/@magic.tw/post/DdWHF5WE9xX",
+      "https://github.com/deepseek-ai/deepseek-harness",
+      "https://deepseek-harness.github.io/deepseek-harness/",
+      "https://github.com/deepseek-ai/deepseek-harness/blob/master/SAFETY.md"
+    ],
+    "excerpt": "DeepSeek Harness 是可替換模型、工具、session 與 agent loop 的 Agent 執行框架；它適合研究私有 Agent 基礎設施與插件化設計，但官方定位仍是快速演進中的 developer preview，安全隔離不可省略。",
+    "slug": "2026-09-16-threads-magic-deepseek-harness-plugin-agent-framework",
+    "html": "articles/2026-09-16-threads-magic-deepseek-harness-plugin-agent-framework.html",
+    "markdown": "articles/2026/09/2026-09-16-threads-magic-deepseek-harness-plugin-agent-framework.md"
+  },
+  {
     "title": "Threads｜Perplexity Portable Computer 登陸 Windows：把 RTX PC 變成本地 AI Agent 工作站",
     "date": "2026-09-16",
     "source": "Threads",
