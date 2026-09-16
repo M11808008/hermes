@@ -1,5 +1,33 @@
 [
   {
+    "title": "Threads｜AI郵報：Salesforce in Claude Beta，把 CRM 資料、銷售技能與受控流程帶進對話",
+    "date": "2026-09-16",
+    "source": "https://www.threads.com/share/BA0WDxcb-U/",
+    "author": "AI郵報（@aiposthub）",
+    "type": "social-post",
+    "topics": [
+      "Claude",
+      "Salesforce",
+      "CRM",
+      "企業AI",
+      "Agentic AI",
+      "銷售流程"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DdVaFy2kb3Q",
+      "https://www.threads.com/share/BA0WDxcb-U/",
+      "https://www.threads.com/@aiposthub/post/DdVaFy2kb3Q",
+      "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/"
+    ],
+    "excerpt": "Salesforce in Claude 的目標不是只讓 Claude「查 CRM」，而是讓 Claude 在既有 Salesforce 資料、業務規則、權限與稽核邊界內，協助銷售人員理解情境並執行受控行動。",
+    "slug": "2026-09-16-threads-aiposthub-salesforce-in-claude-claudeforce",
+    "html": "articles/2026-09-16-threads-aiposthub-salesforce-in-claude-claudeforce.html",
+    "markdown": "articles/2026/09/2026-09-16-threads-aiposthub-salesforce-in-claude-claudeforce.md"
+  },
+  {
     "title": "Threads｜Kufu 酷服：Motion MCP 讓 Codex 與 AI Agent 把產品素材轉成發布影片工作流",
     "date": "2026-09-16",
     "source": "https://www.threads.com/share/BBQjHIdivk/",
