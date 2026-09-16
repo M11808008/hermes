@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜Kufu 酷服：Motion MCP 讓 Codex 與 AI Agent 把產品素材轉成發布影片工作流",
+    "date": "2026-09-16",
+    "source": "https://www.threads.com/share/BBQjHIdivk/",
+    "author": "Kufu 酷服｜AI 智能客服平台（@kufutw）",
+    "type": "social-post",
+    "topics": [
+      "Codex",
+      "MCP",
+      "Motion",
+      "AI影片生成",
+      "產品發布",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DdVF8ZCEsmd",
+      "https://www.threads.com/share/BBQjHIdivk/",
+      "https://www.threads.com/@kufutw/post/DdVF8ZCEsmd",
+      "https://x.com/motion_so/status/2099542179697902025?s=20",
+      "https://docs.motion.so/guides/mcp",
+      "https://mcp.motion.so/mcp"
+    ],
+    "excerpt": "這則分享的重點不是「Codex 突然會生成影片」，而是 Motion 把影片製作能力透過 MCP 開放給 AI Agent：Agent 能先上傳素材、建立影片任務、取得完成狀態，並在成片後用後續指令調整。",
+    "slug": "2026-09-16-threads-kufutw-motion-codex-mcp-video-generation",
+    "html": "articles/2026-09-16-threads-kufutw-motion-codex-mcp-video-generation.html",
+    "markdown": "articles/2026/09/2026-09-16-threads-kufutw-motion-codex-mcp-video-generation.md"
+  },
+  {
     "title": "Threads｜Perplexity Portable Computer 登陸 Windows：把 RTX PC 變成本地 AI Agent 工作站",
     "date": "2026-09-16",
     "source": "Threads",
