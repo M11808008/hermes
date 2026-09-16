@@ -89,6 +89,36 @@
     "markdown": "articles/2026/09/2026-09-16-threads-aiposthub-salesforce-in-claude-claudeforce.md"
   },
   {
+    "title": "Threads｜OpenCode + 本地模型：從 Telegram 遠端控制轉向自管 Web Agent 的隱私取捨",
+    "date": "2026-09-16",
+    "source": "https://www.threads.com/share/_eYN-IuCL/",
+    "author": "@arthurlin1979",
+    "type": "social-post",
+    "topics": [
+      "OpenCode",
+      "本地模型",
+      "AI Agent",
+      "Cloudflare Tunnel",
+      "隱私",
+      "遠端管理"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@arthurlin1979/post/DdV5Kb3E7y0",
+      "https://www.threads.com/share/_eYN-IuCL/",
+      "https://www.threads.com/@arthurlin1979/post/DdV5Kb3E7y0",
+      "https://opencode.ai/docs",
+      "https://opencode.ai/docs/web",
+      "https://github.com/anomalyco/opencode"
+    ],
+    "excerpt": "把 agent 的控制面改成自管 OpenCode Web、再搭配本地模型，確實可減少 Telegram 與第三方雲端模型的資料路徑；但公開 tunnel、Web server、工具權限與機器本身仍是安全邊界，不能把它等同於「完全隱私」。",
+    "slug": "2026-09-16-threads-arthurlin-opencode-local-agent-remote-web",
+    "html": "articles/2026-09-16-threads-arthurlin-opencode-local-agent-remote-web.html",
+    "markdown": "articles/2026/09/2026-09-16-threads-arthurlin-opencode-local-agent-remote-web.md"
+  },
+  {
     "title": "Threads｜GitHub Pages Publisher Skill：把靜態教材從本機變成可分享網址",
     "date": "2026-09-16",
     "source": "https://www.threads.com/share/BBNKxPgqiS/",
