@@ -1,5 +1,40 @@
 [
   {
+    "title": "Facebook Reel｜Seb Intel：讓 Claude Code 接上即時研究、瀏覽器、爬蟲與創意生成的 5 個 MCP",
+    "date": "2026-09-16",
+    "source": "https://www.facebook.com/share/r/1DPhMDJKVo/",
+    "author": "Seb Intel",
+    "type": "social-video",
+    "topics": [
+      "Claude Code",
+      "MCP",
+      "Perplexity",
+      "Playwright",
+      "Firecrawl",
+      "Higgsfield",
+      "Chrome DevTools",
+      "Agent工具"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1890278295689289",
+      "https://www.facebook.com/share/r/1DPhMDJKVo/",
+      "https://www.facebook.com/reel/1890278295689289",
+      "https://docs.anthropic.com/en/docs/claude-code/mcp",
+      "https://docs.perplexity.ai/guides/mcp-server",
+      "https://github.com/microsoft/playwright-mcp",
+      "https://docs.firecrawl.dev/mcp-server",
+      "https://higgsfield.ai/mcp",
+      "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    ],
+    "excerpt": "這支 Reel 的價值不在「裝越多 MCP 越好」，而在於把 Claude Code 的外部能力拆成五個可選模組：搜尋、瀏覽器測試、網站資料擷取、創意媒體生成與 Chrome 偵錯／互動；每個模組都應依任務、帳號權限、成本與資料敏感度選擇性啟用。",
+    "slug": "2026-09-16-facebook-seb-intel-five-mcp-servers-claude-code",
+    "html": "articles/2026-09-16-facebook-seb-intel-five-mcp-servers-claude-code.html",
+    "markdown": "articles/2026/09/2026-09-16-facebook-seb-intel-five-mcp-servers-claude-code.md"
+  },
+  {
     "title": "Threads｜AI郵報：Salesforce in Claude Beta，把 CRM 資料、銷售技能與受控流程帶進對話",
     "date": "2026-09-16",
     "source": "https://www.threads.com/share/BA0WDxcb-U/",
