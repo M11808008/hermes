@@ -29,6 +29,39 @@
     "markdown": "articles/2026/09/2026-09-16-threads-perplexity-portable-computer-windows.md"
   },
   {
+    "title": "YouTube｜Debug 土撥鼠：AI 時代的 SEO 生存指南，從 Google 收錄到 AEO 的實作地基",
+    "date": "2026-09-16",
+    "source": "https://www.youtube.com/watch?v=iE8Byp-mMsc",
+    "author": "Debug 土撥鼠",
+    "type": "video",
+    "topics": [
+      "SEO",
+      "AI網站",
+      "Google Search",
+      "技術SEO",
+      "AEO",
+      "Claude Code",
+      "Core Web Vitals"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=iE8Byp-mMsc",
+      "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+      "https://developers.google.com/search/docs/appearance/page-experience",
+      "https://search.google.com/search-console/about",
+      "https://pagespeed.web.dev/",
+      "https://github.com/AgriciDaniel/claude-seo",
+      "https://github.com/every-app/open-seo"
+    ],
+    "excerpt": "AI 可以把網站做得很快，但「可發布」不等於「可被找到」：先讓 Google 能發現、抓取、理解並收錄，再以符合搜尋意圖的內容與良好頁面體驗爭取能見度；這也是後續 AEO 的必要底座。",
+    "slug": "2026-09-16-youtube-debug-tuboshu-ai-seo-survival-guide",
+    "html": "articles/2026-09-16-youtube-debug-tuboshu-ai-seo-survival-guide.html",
+    "markdown": "articles/2026/09/2026-09-16-youtube-debug-tuboshu-ai-seo-survival-guide.md"
+  },
+  {
     "title": "EdwardAI｜Claude × Obsidian 第二大腦安裝頁：開源 claude-obsidian 的安全導入與正確指令",
     "date": "2026-09-15",
     "source": "EdwardAI / GitHub",
