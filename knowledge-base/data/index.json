@@ -89,6 +89,34 @@
     "markdown": "articles/2026/09/2026-09-16-threads-aiposthub-salesforce-in-claude-claudeforce.md"
   },
   {
+    "title": "Threads｜GitHub Pages Publisher Skill：把靜態教材從本機變成可分享網址",
+    "date": "2026-09-16",
+    "source": "https://www.threads.com/share/BBNKxPgqiS/",
+    "author": "方方老師，教學有方（@funfunteacher_0612）",
+    "type": "social-post",
+    "topics": [
+      "GitHub Pages",
+      "Codex Skill",
+      "教學工具",
+      "靜態網站",
+      "自動部署"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@funfunteacher_0612/post/DdWPOpyiN7q",
+      "https://www.threads.com/share/BBNKxPgqiS/",
+      "https://www.threads.com/@funfunteacher_0612/post/DdWPOpyiN7q",
+      "https://github.com/chunsheng612/github-pages-publisher",
+      "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+    ],
+    "excerpt": "這個 Skill 把「GitHub、repository、push、Pages」的部署細節收在 agent 工作流裡，讓老師與一般使用者把已完成的靜態網頁安全發布成公開網址；它降低的是操作門檻，不會改變 GitHub Pages 的公開性與靜態網站限制。",
+    "slug": "2026-09-16-threads-funfun-github-pages-publisher-skill",
+    "html": "articles/2026-09-16-threads-funfun-github-pages-publisher-skill.html",
+    "markdown": "articles/2026/09/2026-09-16-threads-funfun-github-pages-publisher-skill.md"
+  },
+  {
     "title": "Threads｜Kufu 酷服：Motion MCP 讓 Codex 與 AI Agent 把產品素材轉成發布影片工作流",
     "date": "2026-09-16",
     "source": "https://www.threads.com/share/BBQjHIdivk/",
