@@ -1,5 +1,33 @@
 [
   {
+    "title": "YouTube｜「桌面 AI 女友」實作拆解：它其實是 ComfyUI 生成的影片動態桌布，不是即時 AI 伴侶",
+    "date": "2026-09-17",
+    "source": "https://www.youtube.com/watch?v=JUu_J2NvoDA",
+    "author": "零度解說",
+    "type": "video",
+    "topics": [
+      "ComfyUI",
+      "AI 影片生成",
+      "動態桌布",
+      "提示詞工程",
+      "本地部署",
+      "數位人"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.youtube.com/watch?v=JUu_J2NvoDA",
+      "https://www.youtube.com/watch?v=JUu_J2NvoDA",
+      "https://www.freedidi.com/25480.html",
+      "https://comfy.org/"
+    ],
+    "excerpt": "這是一個「以 AI 影片偽裝成會互動的桌面角色」的工作流：先用 ComfyUI 依參考圖生成固定鏡位影片，再把成品用作動態桌布；視覺效果可以很像桌面助手，但影片描述並未提供即時語音辨識、LLM 對話、狀態管理或桌面控制的證據。",
+    "slug": "2026-09-17-youtube-lingdu-desktop-ai-girlfriend-comfyui-video-wallpaper",
+    "html": "articles/2026-09-17-youtube-lingdu-desktop-ai-girlfriend-comfyui-video-wallpaper.html",
+    "markdown": "articles/2026/09/2026-09-17-youtube-lingdu-desktop-ai-girlfriend-comfyui-video-wallpaper.md"
+  },
+  {
     "title": "Facebook Reel｜Seb Intel：讓 Claude Code 接上即時研究、瀏覽器、爬蟲與創意生成的 5 個 MCP",
     "date": "2026-09-16",
     "source": "https://www.facebook.com/share/r/1DPhMDJKVo/",
