@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜Meta WhatsApp Business Tools MCP：把商務訊息開通流程交給 AI Agent，但仍保留真人授權邊界",
+    "date": "2026-09-17",
+    "source": "https://www.threads.com/share/_6ihmFRcB/",
+    "author": "perkin0909／Perkin | Entrepreneur",
+    "type": "social-post",
+    "topics": [
+      "WhatsApp Business",
+      "MCP",
+      "Meta",
+      "AI Agent",
+      "客服自動化",
+      "Cloud API"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@perkin0909/post/DdWzrKfGme-",
+      "https://www.threads.com/share/_6ihmFRcB/",
+      "https://www.threads.com/@perkin0909/post/DdWzrKfGme-",
+      "https://perkin0909.substack.com/p/2026-9-16",
+      "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/",
+      "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/"
+    ],
+    "excerpt": "Meta 把 WhatsApp Business 的帳號、號碼、Cloud API、訊息範本、webhook 與測試等繁瑣開通流程，包成可由 AI coding agent 呼叫的 MCP server；真正的價值不是「不用懂 API」，而是讓開發者在有登入、權限、稽核與真人確認的條件下，少在多個後台之間切換。",
+    "slug": "2026-09-17-threads-perkin-meta-whatsapp-business-tools-mcp",
+    "html": "articles/2026-09-17-threads-perkin-meta-whatsapp-business-tools-mcp.html",
+    "markdown": "articles/2026/09/2026-09-17-threads-perkin-meta-whatsapp-business-tools-mcp.md"
+  },
+  {
     "title": "YouTube｜「桌面 AI 女友」實作拆解：它其實是 ComfyUI 生成的影片動態桌布，不是即時 AI 伴侶",
     "date": "2026-09-17",
     "source": "https://www.youtube.com/watch?v=JUu_J2NvoDA",
