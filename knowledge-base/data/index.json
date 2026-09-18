@@ -30,6 +30,35 @@
     "markdown": "articles/2026/09/2026-09-18-aiposthub-grok-bot-agent-fleet-cloud-computer.md"
   },
   {
+    "title": "Facebook Reel｜Agnes AI：宣稱免費的文字、圖片、影片全模態模型平台查核",
+    "date": "2026-09-18",
+    "source": "https://www.facebook.com/reel/1708280823926350",
+    "author": "AI 免费 一起学习（Facebook 影片來源）",
+    "type": "video",
+    "topics": [
+      "Agnes AI",
+      "多模態 AI",
+      "免費 API",
+      "文字模型",
+      "圖像生成",
+      "影片生成",
+      "AI Agent",
+      "Claude Code"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61558135240359/videos/%E7%BB%88%E4%BA%8E%E6%89%BE%E5%88%B0%E4%BA%86%E5%85%8D%E8%B4%B9ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%96%87%E5%AD%97%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91%E9%80%9A%E5%90%83al-agent-agnes-claudecode-claude/1708280823926350/",
+      "https://www.facebook.com/reel/1708280823926350",
+      "https://agnes-ai.com/"
+    ],
+    "excerpt": "Agnes AI 是一個將文字、圖像與影片模型整合到應用與 API 平台的多模態 AI 服務；它可作為低成本實驗與 agent 原型的候選，但使用前必須先確認當期免費方案、資料政策、模型實力與生產環境的可靠性。",
+    "slug": "2026-09-18-facebook-agnes-ai-free-omnimodal-reel",
+    "html": "articles/2026-09-18-facebook-agnes-ai-free-omnimodal-reel.html",
+    "markdown": "articles/2026/09/2026-09-18-facebook-agnes-ai-free-omnimodal-reel.md"
+  },
+  {
     "title": "Facebook｜Claudex + Remote Desktop Commander：把跨模型審查與遠端電腦 MCP 分開看",
     "date": "2026-09-18",
     "source": "https://www.facebook.com/share/p/1Tv4iJfdKU/?mibextid=wwXIfr",
