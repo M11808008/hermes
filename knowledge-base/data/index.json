@@ -1,5 +1,23 @@
 [
   {
+    "title": "Threads｜AgentVerse OS：把 Claude Code、Codex 與自架服務放進個人雲端工作站",
+    "date": "2026-09-19",
+    "source": "https://www.threads.com/@leeunhn/post/DdbLUJen7C-",
+    "author": "leeunhn（Threads）",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/agentverse-os/AgentVerse-OS"
+    ],
+    "excerpt": "來源：Threads 貼文所連結的 AgentVerse OS GitHub repository；功能與限制已依 README、安裝流程與專案 status 交叉查核。 # AgentVerse OS：給「一位開發者＋多個 AI agents」的個人雲端 OS AgentVerse OS 是一個 Apache-2.0",
+    "slug": "2026-09-19-threads-agentverse-os-personal-cloud-agents",
+    "html": "articles/2026-09-19-threads-agentverse-os-personal-cloud-agents.html",
+    "markdown": "articles/2026/09/2026-09-19-threads-agentverse-os-personal-cloud-agents.md"
+  },
+  {
     "title": "AI郵報｜Claude Projects 重構：Coordinator 調度平行 Threads、共享記憶與跨 Repo PR",
     "date": "2026-09-18",
     "source": "https://www.aiposthub.com/claude-projects-redesigned-folder-to-conversation-parallel-threads/",
