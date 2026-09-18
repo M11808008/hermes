@@ -1,5 +1,35 @@
 [
   {
+    "title": "AI郵報｜Grok Bot 的雲端電腦與多 Agent 艦隊：效率承諾背後的共享權限邊界",
+    "date": "2026-09-18",
+    "source": "https://www.aiposthub.com/grok-bot-guides-deepdive-ai-agent-fleet-cloud-computer/",
+    "author": "Philo／AI郵報",
+    "type": "article",
+    "topics": [
+      "Grok Bot",
+      "AI Agent",
+      "雲端電腦",
+      "多代理",
+      "軟體工程",
+      "工作流",
+      "權限管理",
+      "安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.aiposthub.com/grok-bot-guides-deepdive-ai-agent-fleet-cloud-computer/",
+      "https://www.aiposthub.com/grok-bot-guides-deepdive-ai-agent-fleet-cloud-computer/",
+      "https://x.ai/bot/guides/grok-bot-101",
+      "https://x.ai/bot/guides/grok-bot-for-engineering"
+    ],
+    "excerpt": "Grok Bot 的重點不只是更會聊天，而是讓 agent 擁有一台可持續運作、可由人類隨時接手的雲端電腦；真正的落地門檻則是權限隔離、可觀測性與把多 agent 產出收斂成可驗證工作成果的治理能力。",
+    "slug": "2026-09-18-aiposthub-grok-bot-agent-fleet-cloud-computer",
+    "html": "articles/2026-09-18-aiposthub-grok-bot-agent-fleet-cloud-computer.html",
+    "markdown": "articles/2026/09/2026-09-18-aiposthub-grok-bot-agent-fleet-cloud-computer.md"
+  },
+  {
     "title": "Facebook｜Claudex + Remote Desktop Commander：把跨模型審查與遠端電腦 MCP 分開看",
     "date": "2026-09-18",
     "source": "https://www.facebook.com/share/p/1Tv4iJfdKU/?mibextid=wwXIfr",
