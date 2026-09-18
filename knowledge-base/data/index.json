@@ -1,5 +1,23 @@
 [
   {
+    "title": "AI郵報｜One Claude：Cowork、Chat、Docs、Slides 與 Design 合流",
+    "date": "2026-09-19",
+    "source": "https://www.threads.com/@aiposthub/post/DdX6VzAgRNS",
+    "author": "Philo／AI郵報",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://claude.com/blog/cowork-is-now-claude"
+    ],
+    "excerpt": "來源：AI郵報 Threads 與深度文章；核心產品事實以 Anthropic 官方公告〈Claude Cowork and chat are now one Claude〉（2026-09-16）交叉確認。 # One Claude：從選工具，變成直接交付成果 Anthropic 將 Claude Cowork 與一",
+    "slug": "2026-09-19-aiposthub-one-claude-cowork-chat-docs-slides",
+    "html": "articles/2026-09-19-aiposthub-one-claude-cowork-chat-docs-slides.html",
+    "markdown": "articles/2026/09/2026-09-19-aiposthub-one-claude-cowork-chat-docs-slides.md"
+  },
+  {
     "title": "Threads｜AgentVerse OS：把 Claude Code、Codex 與自架服務放進個人雲端工作站",
     "date": "2026-09-19",
     "source": "https://www.threads.com/@leeunhn/post/DdbLUJen7C-",
