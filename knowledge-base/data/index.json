@@ -1,5 +1,23 @@
 [
   {
+    "title": "AI郵報｜Claude Projects 重構：Coordinator 調度平行 Threads、共享記憶與跨 Repo PR",
+    "date": "2026-09-18",
+    "source": "https://www.aiposthub.com/claude-projects-redesigned-folder-to-conversation-parallel-threads/",
+    "author": "Philo／AI郵報",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://claude.com/blog/projects-redesigned"
+    ],
+    "excerpt": "> 來源：AI郵報的深度整理；主要事實已交叉核對 Anthropic 官方公告〈Projects redesigned: from folder to conversation〉（2026-09-17）。 # Claude Projects 從資料夾變成「對話式協調器」：工程工作流的真正改變 Anthropic 將 C",
+    "slug": "2026-09-18-aiposthub-claude-projects-redesigned-threads",
+    "html": "articles/2026-09-18-aiposthub-claude-projects-redesigned-threads.html",
+    "markdown": "articles/2026/09/2026-09-18-aiposthub-claude-projects-redesigned-threads.md"
+  },
+  {
     "title": "AI郵報｜Grok Bot 的雲端電腦與多 Agent 艦隊：效率承諾背後的共享權限邊界",
     "date": "2026-09-18",
     "source": "https://www.aiposthub.com/grok-bot-guides-deepdive-ai-agent-fleet-cloud-computer/",
