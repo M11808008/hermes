@@ -36,6 +36,10 @@
 <li>**共享記憶需要治理**：把專案決策、帳務服務聯絡人、發布資訊寫入 shared memory 很方便，也提高過期資訊、錯誤假設或敏感資訊被後續 thread 取用的風險。建議建立可編輯的決策紀錄、資料分類與定期 review。</li>
 <li>**PR 不是自動上線授權**：保留 CI、code review、branch protection、secrets scanning 與 production approval。agent 能開 PR，不代表應自動 merge 或 deploy。</li>
 </ul>
+<h2>補充觀察：Threads 實測／公告轉述所補上的操作畫面</h2>
+<p>2026-09-19 的 Threads 串文補充了產品使用流程：主對話可接收一批工作、判斷如何拆分為 cloud threads；使用者可在 Overview 追蹤完成任務、待 review 的 PR，或等待人類回覆的 thread。其「關掉筆電仍繼續」描述符合官方 cloud session 設計。</p>
+<p>該串文亦轉述較細的 rollout 條件：優先對曾使用 Claude Code cloud sessions、且尚未在 Claude.ai Chat 或 Cowork 建立舊 Projects 的 Pro／Max 用戶開放；既有 Projects 用戶會為移轉而稍後加入，Team／Enterprise 尚未支援。本段作為社群轉述與使用經驗保存；實際資格與時程仍應以 Claude 產品內提示及官方公告為準，因 Beta 規則可能變更。</p>
+<p>串文來源：<a href="https://www.threads.com/@kufutw/post/DdahbYbD-ft" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DdahbYbD-ft</a></p>
 <h2>對欒帥的實作建議：先做「小型可觀測 agent program」</h2>
 <p>將它用在可拆分、可驗收、低到中風險的工作，例如「網站三個不相依頁面的內容／測試／效能整理」，而不是一開始交給它整個關鍵系統重構。每個 project 建議先寫清楚：</p>
 <ul>
