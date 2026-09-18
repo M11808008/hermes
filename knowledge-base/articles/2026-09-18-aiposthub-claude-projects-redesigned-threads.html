@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI郵報｜Claude Projects 重構：Coordinator 調度平行 Threads、共享記憶與跨 Repo PR</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI郵報｜Claude Projects 重構：Coordinator 調度平行 Threads、共享記憶與跨 Repo PR</h1><p>&gt; 來源：AI郵報的深度整理；主要事實已交叉核對 Anthropic 官方公告〈Projects redesigned: from folder to conversation〉（2026-09-17）。</p>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI郵報｜Claude Projects 重構：Coordinator 調度平行 Threads、共享記憶與跨 Repo PR</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI郵報｜Claude Projects 重構：Coordinator 調度平行 Threads、共享記憶與跨 Repo PR</h1><p>來源：AI郵報的深度整理；主要事實已交叉核對 Anthropic 官方公告〈Projects redesigned: from folder to conversation〉（2026-09-17）。</p>
 <h1>Claude Projects 從資料夾變成「對話式協調器」：工程工作流的真正改變</h1>
 <p>Anthropic 將 Claude Projects 重新設計為目標導向的長時程工作空間。它不再只是放置檔案、指令與對話的資料夾，而是由一個 project chat 擔任 **Coordinator（協調器）**，依目標安排多個雲端 Claude Code sessions（**Threads**）並行執行、追蹤與整合工作。</p>
 <p>這項能力的重點不只是「同時開多個 agent」，而是把原本由人類承擔的任務切分、上下文交接、進度追問與成果回收，放入一個可持續管理的專案層。</p>
@@ -12,13 +12,13 @@
 <li>**人仍須處理衝突與決策**：兩個 threads 改到同一段程式碼時，依然是正常 Git merge conflict，不會被黑箱自動覆蓋。</li>
 </ul>
 <h2>官方已確認的運作方式</h2>
-<p>### 1. Coordinator：對話式專案控制面</p>
+<h2>1. Coordinator：對話式專案控制面</h2>
 <p>使用者可以在專案主對話中交辦完整目標，例如「把 checkout 的 p75 latency 降低」。Claude 可將 endpoint profiling、效能優化測試與 PR 建立，分派到平行 threads；使用者也可從手機查看、引導或調整工作。</p>
 <p>官方用語是：使用者像向 chief of staff briefing 一樣說明需求，Claude 將工作路由到既有或新的 threads。這代表主對話專注在範圍、優先順序、決策與驗收，而非親自執行每項程式修改。</p>
-<p>### 2. Threads：隔離的雲端 Claude Code 工作單元</p>
+<h2>2. Threads：隔離的雲端 Claude Code 工作單元</h2>
 <p>每個 thread 是一個雲端 Claude Code session，擁有自己的 branch 與 repo copy。它可在連接的 repository 中執行測試、開啟 pull request；大型任務也可在 thread 內再使用 subagents、loops 與 workflows 拆解。</p>
 <p>這能明顯改善傳統多 chat 的「stitching tax」：人類不用手動把 A 對話的結果搬到 B 對話、再人工拼接。不過隔離不等於完全免整合；凡是修改重疊，仍要以 PR review、測試與 merge conflict 流程處理。</p>
-<p>### 3. 動態共享記憶：降低上下文重工</p>
+<h2>3. 動態共享記憶：降低上下文重工</h2>
 <p>官方說明每個 thread 都會對 shared memory 有所貢獻並從中取用。例如系統能記住發布日改到週五、取消 export 功能的原因，或修改 billing service 前需先找誰確認。專案也會累積使用者偏好的更新頻率、是否積極啟動新 threads、回報詳細度等工作風格。</p>
 <p>這是它與傳統「上傳文件＋固定 custom instructions」專案資料夾最實質的差別：context 不只被儲存，而會隨執行中的決策演進。</p>
 <h2>適合的實戰場景</h2>
@@ -47,12 +47,10 @@
 </ul>
 <p>成熟的用法是：**人類維持目標、邊界與最終問責；Coordinator 負責編排；Threads 在可觀測且可逆的範圍內加速執行。**</p>
 <h2>可直接採用的英文指令框架</h2>
-<p>```text</p>
 <p>You are the project coordinator. Our goal is to reduce checkout p75 latency by 25% without changing payment behavior.</p>
 <p>First, propose a scoped plan and success metrics. Then create independent threads only where work can be safely parallelized.</p>
 <p>Each thread must: work on its own branch, run relevant tests, document assumptions and risks, and open a PR rather than merge.</p>
 <p>Do not modify payment authorization, production configuration, secrets, or customer data flows. Report dependencies, conflicts, and recommended PR merge order in the main project chat.</p>
-<p>```</p>
 <h2>來源與延伸閱讀</h2>
 <ul>
 <li>Anthropic 官方公告：<a href="https://claude.com/blog/projects-redesigned" target="_blank" rel="noopener">https://claude.com/blog/projects-redesigned</a></li>
