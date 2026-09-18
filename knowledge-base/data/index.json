@@ -36,6 +36,24 @@
     "markdown": "articles/2026/09/2026-09-19-threads-agentverse-os-personal-cloud-agents.md"
   },
   {
+    "title": "Threads｜Talky：Mac 本機繁中語音輸入法，把口述整理後貼入游標",
+    "date": "2026-09-19",
+    "source": "https://www.threads.com/@intention.made/post/DdbXLwjE73R",
+    "author": "INTENTION made（Threads）",
+    "type": "article",
+    "topics": [],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/intentionltd888/talky"
+    ],
+    "excerpt": "來源：INTENTION made 的 Threads 貼文、產品網站與公開 GitHub repository。功能與資料流說明以專案 README／官網為主；效率數字是團隊自測或估算，不視為一般使用者保證。 # Talky：不必切換 App 的語音輸入法 Talky 是面向 macOS 的繁體中文語音輸入工具。使用",
+    "slug": "2026-09-19-threads-talky-macos-voice-typing",
+    "html": "articles/2026-09-19-threads-talky-macos-voice-typing.html",
+    "markdown": "articles/2026/09/2026-09-19-threads-talky-macos-voice-typing.md"
+  },
+  {
     "title": "AI郵報｜Claude Projects 重構：Coordinator 調度平行 Threads、共享記憶與跨 Repo PR",
     "date": "2026-09-18",
     "source": "https://www.aiposthub.com/claude-projects-redesigned-folder-to-conversation-parallel-threads/",
