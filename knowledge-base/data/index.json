@@ -1,5 +1,35 @@
 [
   {
+    "title": "Facebook｜Claudex + Remote Desktop Commander：把跨模型審查與遠端電腦 MCP 分開看",
+    "date": "2026-09-18",
+    "source": "https://www.facebook.com/share/p/1Tv4iJfdKU/?mibextid=wwXIfr",
+    "author": "Claude Taiwan 社團貼文",
+    "type": "social-post",
+    "topics": [
+      "Claude Code",
+      "Codex",
+      "Claudex",
+      "MCP",
+      "Remote Desktop Commander",
+      "遠端控制",
+      "程式碼審查",
+      "安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/1224997379198346/posts/1396252808739468/",
+      "https://github.com/promptadvisers/claudex",
+      "https://github.com/desktop-commander/remote-desktop-commander",
+      "https://mcp.desktopcommander.app/mcp"
+    ],
+    "excerpt": "這不是兩個能互相替代的工具：Claudex 解決「計畫與程式碼是否被不同模型挑戰過」，Remote Desktop Commander 解決「AI 能否從遠端連回指定電腦執行工具」；把兩者一起用時，應先建立最小權限與可撤銷的遠端存取邊界。",
+    "slug": "2026-09-18-facebook-claudex-remote-desktop-commander",
+    "html": "articles/2026-09-18-facebook-claudex-remote-desktop-commander.html",
+    "markdown": "articles/2026/09/2026-09-18-facebook-claudex-remote-desktop-commander.md"
+  },
+  {
     "title": "Threads｜Meta WhatsApp Business Tools MCP：把商務訊息開通流程交給 AI Agent，但仍保留真人授權邊界",
     "date": "2026-09-17",
     "source": "https://www.threads.com/share/_6ihmFRcB/",
