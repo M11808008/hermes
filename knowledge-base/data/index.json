@@ -18,6 +18,35 @@
     "markdown": "articles/2026/09/2026-09-19-aiposthub-one-claude-cowork-chat-docs-slides.md"
   },
   {
+    "title": "Facebook｜Codex with ChatGPT：用唯讀 MCP 讓 ChatGPT 網頁版參與本機專案規劃與審查",
+    "date": "2026-09-19",
+    "source": "https://www.facebook.com/share/p/1F2HhYDu2S/",
+    "author": "Codex 中文社群貼文；XiaoDuoYa/codex-with-chatgpt",
+    "type": "social-post",
+    "topics": [
+      "Codex",
+      "ChatGPT",
+      "MCP",
+      "Cloudflare Tunnel",
+      "程式碼審查",
+      "本機開發",
+      "安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/1713764039757273/posts/1829182968215379/",
+      "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "https://github.com/XiaoDuoYa/codex-with-chatgpt/blob/main/README.zh-CN.md",
+      "https://github.com/XiaoDuoYa/codex-with-chatgpt/blob/main/docs/security.md"
+    ],
+    "excerpt": "這個社群專案不是把整個 repo 上傳給 ChatGPT，而是讓 ChatGPT 網頁版透過一條公開可達、但以 OAuth 與一次性配對碼保護的唯讀 MCP 連線，按需讀取當前本機工作區的檔案與 Git／測試資訊；真正修改、跑 shell、Git 操作仍由本機 Codex 執行。",
+    "slug": "2026-09-19-facebook-codex-with-chatgpt-read-only-mcp-bridge",
+    "html": "articles/2026-09-19-facebook-codex-with-chatgpt-read-only-mcp-bridge.html",
+    "markdown": "articles/2026/09/2026-09-19-facebook-codex-with-chatgpt-read-only-mcp-bridge.md"
+  },
+  {
     "title": "Threads｜AgentVerse OS：把 Claude Code、Codex 與自架服務放進個人雲端工作站",
     "date": "2026-09-19",
     "source": "https://www.threads.com/@leeunhn/post/DdbLUJen7C-",
