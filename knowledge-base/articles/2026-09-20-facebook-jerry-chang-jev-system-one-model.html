@@ -1,4 +1,5 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜Jev：不是聊天模型，而是用於快速結構化判斷的 System One Model</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜Jev：不是聊天模型，而是用於快速結構化判斷的 System One Model</h1><h2>一句話摘要</h2>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜Jev：不是聊天模型，而是用於快速結構化判斷的 System One Model</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜Jev：不是聊天模型，而是用於快速結構化判斷的 System One Model</h1><figure><img src="../assets/source-images/2026-09-20-x-goan-jev-projects.jpg" alt="X 貼文整理的 Jev 專案清單" loading="lazy" referrerpolicy="no-referrer"><figcaption>X 貼文整理的 Jev 專案清單</figcaption></figure>
+<h2>一句話摘要</h2>
 <p>Jev 的核心概念不是讓模型「回答得更像人」，而是讓軟體在固定選項與固定 schema 中更快地做分類、評分、路由或分支；它適合嵌入自動化流程的 smart if-statement，而不是拿來長篇對話或自由創作。</p>
 <h2>貼文與官方說法交叉查核</h2>
 <p>Facebook 的可見預覽指出，Jev 不是聊天機器人，而是「快速評分機器／快速分類器」，不會輸出選項外的自由答案。未登入 Facebook 無法取得完整內文與留言，故本文只把可見預覽當作社群觀點，並以 Jev 官方網站補足產品定位。</p>
@@ -24,6 +25,18 @@
 <li>將「模型只會輸出既定選項」和「選到正確選項」分開驗證。</li>
 <li>在 early access 與商用前，另確認資料保留、API 條款、區域、速率限制與支援 SLA。</li>
 </ul>
+<h2>同系列補充｜X 的 Jev 專案清單</h2>
+<p>X 使用者 govin.eth（@goan999999）整理 10 個把 Jev 接進 agent、桌面控制、程式碼審查、模型路由、知識圖譜、程式碼搜尋與 MCP 的公開專案。本文以 GitHub repository API 逐一確認這些 repository 當時仍可存取；這只能確認專案存在與其作者描述，不能驗證貼文中的速度、成本、飛航搜尋秒數、回放成本或金融策略表現。</p>
+<ul>
+<li>Browser Use：jev-ultrafast，將 Jev 用於 Browser Use 的動作選擇。GitHub：browser-use/jev-ultrafast，MIT。</li>
+<li>桌面自動化：jev-desktop，描述為在 Codex Computer Use 中使用 TypeSafe Jev 選動作。GitHub：yikangy873-gif/jev-desktop，MIT。</li>
+<li>程式碼審查：jev-review，分階段的 correctness、security、reliability review workflow 與本機 dashboard。GitHub：devagrawal09/jev-review，MIT。</li>
+<li>Codex 路由：jev-codex-router，依每個 turn 選模型、推理深度與速度模式。GitHub：0xNatoshi/jev-codex-router，MIT；但 repository 已標示 archived，宜當參考實作而非活躍依賴。</li>
+<li>金融／流動性：prism-liquidity-agent，repo 自稱為支援 Meteora DLMM 的自動 rebalancing LP agent。GitHub：irfndi/prism-liquidity-agent，MIT；投資、回測與市場判斷不能視為保證，勿據此自動下單。</li>
+<li>MCP／工具層：jev-mcp、typesafe-mcp，將 Jev 的 typed judgment 暴露為 MCP tools 或 connector。GitHub：jkudish/jev-mcp、itsmostafa/typesafe-mcp，皆為 MIT。</li>
+<li>圖譜與搜尋：neo4jev 以分類器在 Neo4j 關係間導航；Blink 以 Jev 輔助程式碼庫搜尋；Winnow 在工具輸出進入 Claude Code context 前做篩選。前者與 Winnow 為 MIT；Blink 的 GitHub API 未標示 license，使用前需另查 LICENSE 或取得作者授權。</li>
+</ul>
+<p>實作方向很一致：把大量「有限選項、低風險、可量測」的小判斷移給 Jev，保留昂貴 LLM 給需要生成、工具推理或高不確定性的步驟。先以離線資料比較 quality、p95 latency、總 token 成本與錯誤外溢，再把它放入正式流程。</p>
 <h2>同系列補充｜AI 技術研究社貼文</h2>
 <p>2026 年 9 月 20 日，AI 技術研究社的公開貼文以「不跟你聊天、只負責做決定」介紹 Jev，將 GPT、Claude、Gemini 的內容生成取向對照 Jev 的軟體決策取向。這與本文既有查核一致，但它是社群貼文對產品的轉述，不能取代官方文件或實測。完整 Facebook 內文與留言在未登入狀態下不可取得；本次僅保存可見 Open Graph 預覽與穩定貼文網址。</p>
 <h2>原始連結</h2>
@@ -31,6 +44,8 @@
 <li>Facebook 原分享：<a href="https://www.facebook.com/share/p/1HJch2eLP1/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1HJch2eLP1/</a></li>
 <li>Facebook 貼文：<a href="https://www.facebook.com/jerry.chang.505523/posts/10242223473938510" target="_blank" rel="noopener">https://www.facebook.com/jerry.chang.505523/posts/10242223473938510</a></li>
 <li>AI 技術研究社補充貼文：<a href="https://www.facebook.com/groups/366863238003058/posts/1849934313029269/" target="_blank" rel="noopener">https://www.facebook.com/groups/366863238003058/posts/1849934313029269/</a></li>
+<li>X 專案清單：<a href="https://x.com/goan999999/status/2101284406359179732" target="_blank" rel="noopener">https://x.com/goan999999/status/2101284406359179732</a></li>
+<li>Jev 專案來源：<a href="https://github.com/browser-use/jev-ultrafast/" target="_blank" rel="noopener">https://github.com/browser-use/jev-ultrafast/</a> 、<a href="https://github.com/yikangy873-gif/jev-desktop/" target="_blank" rel="noopener">https://github.com/yikangy873-gif/jev-desktop/</a> 、<a href="https://github.com/devagrawal09/jev-review/" target="_blank" rel="noopener">https://github.com/devagrawal09/jev-review/</a> 、<a href="https://github.com/0xNatoshi/jev-codex-router/" target="_blank" rel="noopener">https://github.com/0xNatoshi/jev-codex-router/</a> 、<a href="https://github.com/irfndi/prism-liquidity-agent/" target="_blank" rel="noopener">https://github.com/irfndi/prism-liquidity-agent/</a> 、<a href="https://github.com/jkudish/jev-mcp/" target="_blank" rel="noopener">https://github.com/jkudish/jev-mcp/</a> 、<a href="https://github.com/jexp/neo4jev/" target="_blank" rel="noopener">https://github.com/jexp/neo4jev/</a> 、<a href="https://github.com/ellipsis-dev/blink/" target="_blank" rel="noopener">https://github.com/ellipsis-dev/blink/</a> 、<a href="https://github.com/GhalebDweikat/winnow/" target="_blank" rel="noopener">https://github.com/GhalebDweikat/winnow/</a> 、<a href="https://github.com/itsmostafa/typesafe-mcp/" target="_blank" rel="noopener">https://github.com/itsmostafa/typesafe-mcp/</a></li>
 <li>Jev 官方網站：<a href="https://jevai.net/" target="_blank" rel="noopener">https://jevai.net/</a></li>
 <li>Jev 說明文件入口：<a href="https://whatisjev.com/" target="_blank" rel="noopener">https://whatisjev.com/</a></li>
 </ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-09-20 · https://www.facebook.com/share/p/1HJch2eLP1/ · social-post</div><h3>標籤</h3><span class="tag">Jev</span><span class="tag">AI模型</span><span class="tag">結構化輸出</span><span class="tag">Agent工具</span><span class="tag">自動化</span><span class="tag">分類</span><h3>原始連結</h3><p><a href="https://www.facebook.com/jerry.chang.505523/posts/10242223473938510" target="_blank" rel="noopener">https://www.facebook.com/jerry.chang.505523/posts/10242223473938510</a></p><p><a href="https://www.facebook.com/share/p/1HJch2eLP1/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1HJch2eLP1/</a></p><p><a href="https://www.facebook.com/jerry.chang.505523/posts/10242223473938510" target="_blank" rel="noopener">https://www.facebook.com/jerry.chang.505523/posts/10242223473938510</a></p><p><a href="https://www.facebook.com/groups/366863238003058/posts/1849934313029269/" target="_blank" rel="noopener">https://www.facebook.com/groups/366863238003058/posts/1849934313029269/</a></p><p><a href="https://jevai.net/" target="_blank" rel="noopener">https://jevai.net/</a></p><p><a href="https://whatisjev.com/" target="_blank" rel="noopener">https://whatisjev.com/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
