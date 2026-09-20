@@ -1,5 +1,35 @@
 [
   {
+    "title": "Facebook Reel｜God's Eye View：把公開即時資料疊到 3D 地球的開源空間情報介面",
+    "date": "2026-09-20",
+    "source": "https://www.facebook.com/share/r/14u5xqb7uLq/",
+    "author": "資訊學院techtips／Bilawal Sidhu",
+    "type": "social-video",
+    "topics": [
+      "GitHub",
+      "開源工具",
+      "3D地圖",
+      "空間情報",
+      "OSINT",
+      "資料視覺化"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/reel/1732336071215835",
+      "https://www.facebook.com/share/r/14u5xqb7uLq/",
+      "https://www.facebook.com/reel/1732336071215835",
+      "https://github.com/bilawalsidhu/gods-eye-view",
+      "https://maptheworld.ai/",
+      "https://github.com/bilawalsidhu/gods-eye-view/blob/main/LICENSE"
+    ],
+    "excerpt": "這不是「取得機密情報」的工具，而是把原本分散的公開訊號做成可探索的空間介面；適合視覺化學習、公開資料研究與展示，不適合把即時資料、鏡頭畫面或模型資料的可用性誤解成無限制商用授權。",
+    "slug": "2026-09-20-facebook-reel-gods-eye-view-open-source-spatial-intelligence",
+    "html": "articles/2026-09-20-facebook-reel-gods-eye-view-open-source-spatial-intelligence.html",
+    "markdown": "articles/2026/09/2026-09-20-facebook-reel-gods-eye-view-open-source-spatial-intelligence.md"
+  },
+  {
     "title": "AI郵報｜One Claude：Cowork、Chat、Docs、Slides 與 Design 合流",
     "date": "2026-09-19",
     "source": "https://www.threads.com/@aiposthub/post/DdX6VzAgRNS",
