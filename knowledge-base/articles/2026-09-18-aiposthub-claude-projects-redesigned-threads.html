@@ -43,6 +43,17 @@
 <p>串文來源：<a href="https://www.threads.com/@kufutw/post/DdahbYbD-ft" target="_blank" rel="noopener">https://www.threads.com/@kufutw/post/DdahbYbD-ft</a></p>
 <h2>同系列補充｜張維峰的 Claude Projects 轉述</h2>
 <p>2026 年 9 月 20 日，張維峰的公開 Facebook 貼文以「Claude Code 從靜態資料夾變成會自己拆工作的協調者」概括此次改版，並提及由 coordinator 對話統籌、可在雲端運行的多個 threads。這與 Anthropic 官方公告和本文既有整理相符，因此納入同一篇追蹤；不過貼文其他細節在未登入狀態下無法完整擷取，且 Boris 的示範截圖僅能作為社群佐證，而不是額外的官方規格。</p>
+<h2>2026-09-25 補充：Cloud sessions 試用額度是帳戶活動，不是普遍規格</h2>
+<p>Midas 的 Threads 貼文補上 Claude Code cloud sessions 的帳戶活動資訊：可從 Claude.ai Code、行動版 Code 分頁、桌面 app 或 `claude --cloud` 啟動，並提到先連接 GitHub 與選定 repository。這與本文先前的「雲端 thread／repo 副本」脈絡相符：工作可在雲端持續執行，但 repo 存取與 GitHub 授權是明確邊界。</p>
+<p>貼文所稱的 Pro／Max 一次性額度、`/claim-credit`、領取與到期時間，均屬限時且帳戶特定的社群轉述。本次查核 `<a href="https://claude.ai/code/claim-credit/10`" target="_blank" rel="noopener">https://claude.ai/code/claim-credit/10`</a> 時遇到 Cloudflare 安全驗證，未能在未登入狀態讀取官方活動內容，也沒有替任何帳戶領取額度。因此不得把金額、資格、期限或「所有訂閱者均可領」視為已獨立驗證的承諾；若帳戶內出現活動提示，應在 Anthropic 官方介面閱讀條款後再自行決定是否領取。</p>
+<p>操作上，使用 cloud session 前應先檢查：GitHub 授權的 repository 範圍、可讀取的 secrets／環境設定、成本或額度上限，以及 PR／部署是否仍保有人類核准。關掉筆電不等於自動擁有本機檔案、內網服務或 production 權限。</p>
+<p>來源：</p>
+<ul>
+<li>Threads 原分享：<a href="https://www.threads.com/share/BAMfS0NEmR/" target="_blank" rel="noopener">https://www.threads.com/share/BAMfS0NEmR/</a></li>
+<li>Threads canonical：<a href="https://www.threads.com/@midas4935715/post/Ddq9g6en2Yi" target="_blank" rel="noopener">https://www.threads.com/@midas4935715/post/Ddq9g6en2Yi</a></li>
+<li>帳戶活動入口（需登入）：<a href="https://claude.ai/code/claim-credit/10" target="_blank" rel="noopener">https://claude.ai/code/claim-credit/10</a></li>
+<li>Claude Code：<a href="https://claude.ai/code" target="_blank" rel="noopener">https://claude.ai/code</a></li>
+</ul>
 <h2>對欒帥的實作建議：先做「小型可觀測 agent program」</h2>
 <p>將它用在可拆分、可驗收、低到中風險的工作，例如「網站三個不相依頁面的內容／測試／效能整理」，而不是一開始交給它整個關鍵系統重構。每個 project 建議先寫清楚：</p>
 <ul>
