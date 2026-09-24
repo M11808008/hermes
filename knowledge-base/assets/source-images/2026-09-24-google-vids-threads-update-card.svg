@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Google Vids AI 影片功能更新</title><desc id="desc">以紫藍漸層呈現 Google Vids 影片生成、場景延長、1080p 與 SynthID 的資訊卡</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset=".55" stop-color="#1e1b4b"/><stop offset="1" stop-color="#155e75"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><circle cx="1370" cy="120" r="250" fill="#7c3aed" opacity=".3"/><circle cx="240" cy="780" r="280" fill="#06b6d4" opacity=".2"/>
+  <text x="120" y="190" fill="#a5f3fc" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="5">AI 學習雷達｜Threads 來源整理</text>
+  <text x="120" y="330" fill="white" font-family="Arial, sans-serif" font-size="88" font-weight="700">Google Vids</text>
+  <text x="120" y="430" fill="#e0e7ff" font-family="Arial, sans-serif" font-size="52">AI 影片生成更新</text>
+  <g font-family="Arial, sans-serif" font-size="36" fill="white"><text x="130" y="570">• 場景秒數與延長控制</text><text x="130" y="640">• 1080p 與 SynthID 標記</text><text x="130" y="710">• 帳號、方案與地區資格需確認</text></g>
+  <text x="120" y="825" fill="#a5f3fc" font-family="Arial, sans-serif" font-size="28">社群轉述與官方入口分層保存｜2026-09-24</text>
+</svg>
