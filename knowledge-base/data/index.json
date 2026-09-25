@@ -9070,7 +9070,10 @@
       "https://github.com/notoriouslab/vault-curate",
       "https://community.obsidian.md/plugins/vault-curate",
       "https://raw.githubusercontent.com/notoriouslab/vault-curate/main/manifest.json",
-      "https://raw.githubusercontent.com/notoriouslab/vault-curate/main/README.md"
+      "https://raw.githubusercontent.com/notoriouslab/vault-curate/main/README.md",
+      "https://www.facebook.com/share/p/1Cu5unrM84/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/167427868220279/posts/1406696177626769/?mibextid=wwXIfr",
+      "https://notoriouslab.github.io/vault-curate/index.zh-TW.html"
     ],
     "excerpt": "Vault Curate 正從「中文友善本地語意搜尋」擴展成 Obsidian 的第二大腦循環：先用 BM25 + on-device embeddings + fuzzy title 找到筆記，再把未手動連結但語意接近的筆記畫成 Canvas 關係圖，最後把冷掉但相關的舊筆記重新浮出來，讓人不用一直重跑 LLM 也能發現知識庫內的隱形連結。",
     "slug": "2026-07-20-facebook-jacob-mei-vault-curate-find-connect-rediscover",
