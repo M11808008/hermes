@@ -1,5 +1,30 @@
 [
   {
+    "title": "影片筆記｜ChatGPT／Codex 工作空間、站點與跨裝置協作：功能觀察與實務邊界",
+    "date": "2026-09-28",
+    "source": "LINE 群組上傳影片（未附原始公開連結）",
+    "author": "未標示；影片內為兩位中文講者",
+    "type": "article",
+    "topics": [
+      "ChatGPT",
+      "Codex",
+      "AI 工作空間",
+      "Vibe Coding",
+      "跨裝置協作",
+      "影片筆記"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "[]"
+    ],
+    "excerpt": "這組影片描繪的方向很清楚：AI 產品不再只回答問題或寫程式，而是試圖把檔案、圖像、網站、資料庫、地圖與跨設備任務串成一個工作空間。不過，影片中的入口名稱、額度描述與功能可用性都可能因版本、地區、方案及帳號而不同，不能直接當成所有使用者都已可用的規格。",
+    "slug": "2026-09-28-chatgpt-codex-workspace-video-notes",
+    "html": "articles/2026-09-28-chatgpt-codex-workspace-video-notes.html",
+    "markdown": "articles/2026-09-28-chatgpt-codex-workspace-video-notes.md"
+  },
+  {
     "title": "海王燒鵝遼寧店｜南京復興站外帶燒味：燒鵝、叉燒雙拼與售罄提醒",
     "date": "2026-09-25",
     "source": "https://blake.com.tw/blog/post/haiwang-shao-e",
