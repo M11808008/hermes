@@ -208,6 +208,28 @@
 <p><a href="https://www.facebook.com/miulaperspective/posts/pfbid025M8rZk2Uq7hAzLmwVA1uJ1TdVeBWmejfYV65qfJNASqKWjtKo6tfgA5h8t2ciCQxl" target="_blank" rel="noopener">https://www.facebook.com/miulaperspective/posts/pfbid025M8rZk2Uq7hAzLmwVA1uJ1TdVeBWmejfYV65qfJNASqKWjtKo6tfgA5h8t2ciCQxl</a></p>
 <p>來源擷取紀錄：</p>
 <p>source-archive/2026-09-29-facebook-mview-muse-grok-bot-comparison.json</p>
+<h2>2026-09-29 補充：把 Muse 資源分成產品、案例、安全、開發與範例五層</h2>
+<p>Threads 作者 bytesundries 整理了五個與 Muse 有關的網站。這份清單適合當作閱讀入口，但各站的證據地位不同，不能把案例站或社群描述直接等同於 Meta 的產品承諾。</p>
+<ul>
+<li>產品入口：muse.ai 是官方產品頁；可用來確認當下的帳號、產品說明與入口狀態，但地區、帳號資格、連接器與方案仍屬易變資訊。</li>
+<li>案例入口：howtousemuse.com 可讀取實際任務、貼文與可複用 prompt。它的首頁自稱彙整 Meta Muse 的案例與工作流，定位是第三方資源庫；其中的情境、成功率或流程不代表 Meta 官方保證，也不應在未檢視權限前照抄到付款、保險、帳號或取消服務等高風險任務。</li>
+<li>安全入口：security.muse.ai 在本次擷取時會重導至 Meta AI Research 的〈How We Built Safety Into Muse〉。若要評估 browser agent，應優先閱讀這類一手技術材料，並用它檢查執行環境隔離、瀏覽器隔離、權限、網路控制、可觀測性與人類核准，而不是只看任務展示。</li>
+<li>開發入口：dev.meta.ai 是 Meta 開發者入口。Threads 所列出的 Muse Spark、API、Computer Use、Prompt Cache、Multi-Agent 等名詞，不應自動推論為每個帳號皆可取得的 Muse 功能；實作前要在對應產品頁、版本文件與帳號控制台確認 availability、權限與計費。</li>
+<li>程式範例入口：github.com/meta-models/meta-model-cookbook 可公開讀取。它適合作為 Meta 模型與 agent 相關範例的起點；使用其中 Muse Code、subagent、skill 或 sandbox 類內容時，仍要逐一看 README、依賴項、授權與實際執行權限。</li>
+</ul>
+<p>這五層可以變成更安全的導入順序：先在官方產品入口釐清帳號與可用範圍，再用低風險案例驗證任務品質，接著閱讀安全設計與開發文件，最後才將 cookbook 範例放進隔離測試環境。任何涉及登入、個人信件、支付、保險、取消訂閱或對外送出的動作，都應保留最終人工核准與可撤回機制。</p>
+<p>原始 Threads 分享連結：</p>
+<p><a href="https://www.threads.com/share/_ufhShuQH/" target="_blank" rel="noopener">https://www.threads.com/share/_ufhShuQH/</a></p>
+<p>解析後貼文：</p>
+<p><a href="https://www.threads.com/@bytesundries/post/Dd1uTJuGk8L" target="_blank" rel="noopener">https://www.threads.com/@bytesundries/post/Dd1uTJuGk8L</a></p>
+<p>資源連結：</p>
+<p><a href="https://muse.ai/" target="_blank" rel="noopener">https://muse.ai/</a></p>
+<p><a href="https://howtousemuse.com/" target="_blank" rel="noopener">https://howtousemuse.com/</a></p>
+<p><a href="https://security.muse.ai/" target="_blank" rel="noopener">https://security.muse.ai/</a></p>
+<p><a href="https://dev.meta.ai/" target="_blank" rel="noopener">https://dev.meta.ai/</a></p>
+<p><a href="https://github.com/meta-models/meta-model-cookbook" target="_blank" rel="noopener">https://github.com/meta-models/meta-model-cookbook</a></p>
+<p>來源擷取紀錄：</p>
+<p>source-archive/2026-09-29-threads-bytesundries-muse-five-official-sites.json</p>
 <h2>結論</h2>
 <p>Daniel Wu 的文章最有價值的地方，不是預測 Meta Muse 一定會成為下一個聚合平台，而是指出 agent 商業化的成本結構已經改變：當產品替每位使用者保留一台可執行任務的雲端電腦，AI 就不再只是「回答一次問題」的變動成本。Meta 能否成功，取決於一般人的日常是否有足夠多值得長時間委派的工作，以及使用者是否願意把個人資料、付款能力與行動權限交給它。</p>
 <p>對實作團隊而言，最可複製的答案不是照抄 Muse，而是採用它揭示的工程原則：隔離執行環境、權限裁決元件、秘密不進模型、核准通道獨立、可觀測的成本上限，以及把「agent 出錯」當成設計前提。</p>
