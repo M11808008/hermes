@@ -1,5 +1,34 @@
 [
   {
+    "title": "Strata｜用 12GB NVIDIA GPU 與 64GB RAM 跑 Qwen3.8-Flash-Next 的本機推理引擎",
+    "date": "2026-09-29",
+    "source": "https://www.facebook.com/share/1FtauMayKu/?mibextid=wwXIfr",
+    "author": "陳盟升（Facebook）／Niko1221（GitHub）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "本機推理",
+      "Qwen",
+      "NVIDIA",
+      "開源",
+      "Strata"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/Niko1221/Strata",
+      "https://www.facebook.com/share/1FtauMayKu/?mibextid=wwXIfr",
+      "https://www.facebook.com/darkschen/posts/pfbid0wJ9sh8nB7x6hkqmiPDaFj3K4Cw3ZuKbPkYQZmVXzLEwhLrrTqBVRYXFgGS6Y47Rsl",
+      "https://github.com/Niko1221/Strata",
+      "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+    ],
+    "excerpt": "Strata 是公開的本機推理引擎，目標是在 Windows 或 Linux 的 NVIDIA 遊戲電腦上執行 Qwen3.8-Flash-Next 125B MoE；它不是把 125B 全部塞進 12GB 顯存，而是把工作分散到 GPU、系統 RAM、CPU 和 SSD。",
+    "slug": "2026-09-29-facebook-chen-mengsheng-strata-local-qwen",
+    "html": "articles/2026-09-29-facebook-chen-mengsheng-strata-local-qwen.html",
+    "markdown": "articles/2026/09/2026-09-29-facebook-chen-mengsheng-strata-local-qwen.md"
+  },
+  {
     "title": "Threads｜AI 盯盤通知的社群展示：先把自動化、驗證與投資決策分開",
     "date": "2026-09-29",
     "source": "https://www.threads.com/share/BBLBqT9OcQ/",
