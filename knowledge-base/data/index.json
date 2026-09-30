@@ -288,7 +288,11 @@
       "https://www.threads.com/share/BARU8jfbpU/",
       "https://www.threads.com/@sw_ai_life/post/DdlU0rWGYQL",
       "https://github.com/jerryjliu/docjev",
-      "https://typesafe.ai/"
+      "https://typesafe.ai/",
+      "https://www.facebook.com/share/p/1CdxWjGLFc/?mibextid=wwXIfr",
+      "https://www.facebook.com/jerry.chang.505523/posts/10242369567790765",
+      "https://x.com/HeyGen/status/2104633906217840701",
+      "https://x.com/i/article/2104627451712417792"
     ],
     "excerpt": "Jev 的核心概念不是讓模型「回答得更像人」，而是讓軟體在固定選項與固定 schema 中更快地做分類、評分、路由或分支；它適合嵌入自動化流程的 smart if-statement，而不是拿來長篇對話或自由創作。",
     "slug": "2026-09-20-facebook-jerry-chang-jev-system-one-model",
