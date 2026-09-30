@@ -1,5 +1,33 @@
 [
   {
+    "title": "Threads｜所謂 OpenAI「Dots 全天候 Agent」：社群宣稱與查核邊界",
+    "date": "2026-09-30",
+    "source": "https://www.threads.com/share/BAPqVSGDfb/",
+    "author": "Prompt Case／@prompt_case",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "OpenAI",
+      "AI Agent",
+      "社群查核",
+      "權限安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@prompt_case/post/Dd4V5AUjbB-",
+      "https://www.threads.com/share/BAPqVSGDfb/",
+      "https://www.threads.com/@prompt_case/post/Dd4V5AUjbB-",
+      "https://openai.com/news/",
+      "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    ],
+    "excerpt": "這則 Threads 貼文描繪一個很吸引人的「長駐型、可主動辦事的 AI Agent」願景；但貼文沒有連到 OpenAI 官方公告，截至擷取時也沒有找到可核對的官方 Dots 或 GPT-6 Astra 資訊，因此不能把它當成 OpenAI 已正式上線的產品消息。",
+    "slug": "2026-09-30-threads-prompt-case-openai-dots-unverified",
+    "html": "articles/2026-09-30-threads-prompt-case-openai-dots-unverified.html",
+    "markdown": "articles/2026/09/2026-09-30-threads-prompt-case-openai-dots-unverified.md"
+  },
+  {
     "title": "Strata｜用 12GB NVIDIA GPU 與 64GB RAM 跑 Qwen3.8-Flash-Next 的本機推理引擎",
     "date": "2026-09-29",
     "source": "https://www.facebook.com/share/1FtauMayKu/?mibextid=wwXIfr",
