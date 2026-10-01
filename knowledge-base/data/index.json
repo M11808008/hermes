@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜Google Vids 免費試用 AI 影片：把腳本、版面與旁白整合成影片簡報",
+    "date": "2026-10-01",
+    "source": "Threads",
+    "author": "rememberyouenterprise",
+    "type": "social-post",
+    "topics": [
+      "AI學習雷達",
+      "Google Vids",
+      "Google AI",
+      "AI影片",
+      "影片製作",
+      "簡報",
+      "教學設計",
+      "工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BABCX-_FGW/",
+      "https://www.threads.com/@rememberyouenterprise/post/Dd9AQAeE6Hy",
+      "https://vids.google.com/",
+      "https://workspace.google.com/products/vids/"
+    ],
+    "excerpt": "Google Vids 是 Google Workspace 的協作影片工具，可結合 AI 協助發想、腳本、旁白、版面與場景製作；官方確認可用 Google 帳戶免費試用，但各項 AI 生成能力、可用次數和方案權益須以登入後帳號顯示為準。",
+    "slug": "2026-10-01-threads-google-vids-free-ai-video-generation",
+    "html": "articles/2026-10-01-threads-google-vids-free-ai-video-generation.html",
+    "markdown": "articles/2026/10/2026-10-01-threads-google-vids-free-ai-video-generation.md"
+  },
+  {
     "title": "ETtoday｜Gemini「技能」上線：用 / 指令把常用提示詞帶進每個對話",
     "date": "2026-09-30",
     "source": "ETtoday AI 科技新聞",
