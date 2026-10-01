@@ -1,5 +1,36 @@
 [
   {
+    "title": "AI郵報｜WSL Containers：替 Windows 上的 AI Agent 建立可重現、可驗證的 Linux 執行環境",
+    "date": "2026-10-01",
+    "source": "AI郵報",
+    "author": "Philo",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "WSL Containers",
+      "WSL",
+      "Windows",
+      "Docker",
+      "AI Agent",
+      "可重現環境",
+      "MLOps",
+      "GPU"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.aiposthub.com/wsl-containers-windows-ai-agent-execution-environment/",
+      "https://www.aiposthub.com/wsl-containers-windows-ai-agent-execution-environment/",
+      "https://learn.microsoft.com/en-us/windows/wsl/wsl-container",
+      "https://raw.githubusercontent.com/MicrosoftDocs/WSL/main/WSL/wsl-container.md"
+    ],
+    "excerpt": "WSL Containers 讓 Windows 團隊能以 Linux 容器承載 Agent 的工具鏈與依賴；最佳實務不是只把 Agent 丟進容器，而是把映像版本、掛載範圍、網路／GPU 權限、任務輸入與可驗證輸出一併納入執行紀錄。",
+    "slug": "2026-10-01-aiposthub-wsl-containers-windows-ai-agent-environment",
+    "html": "articles/2026-10-01-aiposthub-wsl-containers-windows-ai-agent-environment.html",
+    "markdown": "articles/2026/10/2026-10-01-aiposthub-wsl-containers-windows-ai-agent-environment.md"
+  },
+  {
     "title": "studiox｜AI 店長工作流：客服、訂單與 SEO 自動化，關鍵在 MCP 與人工核准",
     "date": "2026-10-01",
     "source": "studiox",

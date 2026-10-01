@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI郵報｜WSL Containers：替 Windows 上的 AI Agent 建立可重現、可驗證的 Linux 執行環境</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI郵報｜WSL Containers：替 Windows 上的 AI Agent 建立可重現、可驗證的 Linux 執行環境</h1><figure><img src="https://storage.ghost.io/c/5e/61/5e6189f0-c5e0-49a0-97b4-5eddd3f43c77/content/images/size/w1200/2026/09/x20261001-20-wsl-containers.png" alt="Microsoft Learn 的 WSL Containers 官方文件截圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>Microsoft Learn 的 WSL Containers 官方文件截圖</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>WSL Containers 讓 Windows 團隊能以 Linux 容器承載 Agent 的工具鏈與依賴；最佳實務不是只把 Agent 丟進容器，而是把映像版本、掛載範圍、網路／GPU 權限、任務輸入與可驗證輸出一併納入執行紀錄。</p>
+<h2>官方已確認的內容</h2>
+<p>Microsoft Learn 的 WSL container 文件說明：</p>
+<ul>
+<li>WSL container 功能包含內建命令列工具 `wslc.exe`，用於建立、執行與互動 Linux 容器。</li>
+<li>也提供 WSL container API，讓 Windows 應用程式在自身邏輯中使用 Linux 容器。</li>
+<li>使用前要求 WSL 版本為 2.9.3 或以上；可透過 `wsl --update` 更新，以 `wsl --version` 查看目前版本。</li>
+<li>API 可處理 stdin／stdout、檔案掛載、網路、GPU 存取等互動。</li>
+<li>`Microsoft.WSL.Containers` NuGet 套件提供 C# 投影與 C++/WinRT 標頭；其中 C++/WinRT 投影仍標示為 preview，可能有破壞性變更。</li>
+</ul>
+<h2>為什麼對 AI Agent 有用</h2>
+<p>Agent 寫程式或跑資料流程時，常把時間耗在「缺少套件、版本不合、工具只支援 Linux、每台電腦環境不同」。把語言執行環境、系統依賴和特定工具鎖進映像，可讓每次任務從較一致的基準開始。</p>
+<p>但可重現不是只記下 `ubuntu:latest`。真正需要記錄的是：</p>
+<ul>
+<li>基底映像的不可變版本或 digest。</li>
+<li>套件清單與工具版本。</li>
+<li>啟動命令、環境變數和 Agent 使用的任務指令。</li>
+<li>掛載的輸入與輸出目錄。</li>
+<li>是否開放網路、GPU 與其他設備。</li>
+<li>實際輸出、測試結果與失敗紀錄。</li>
+</ul>
+<h2>最小可行的 Agent 容器設計</h2>
+<p>### 1. 一種任務，一個明確輸入／輸出契約</p>
+<p>先選擇可驗證的小任務，例如把 CSV 轉換為指定 JSON schema、執行測試套件，或生成固定格式報告。明確定義輸入檔、預期輸出目錄與驗收條件，而不是一開始就把整個專案交給 Agent 自由操作。</p>
+<p>### 2. 將掛載視為資料權限</p>
+<p>容器不會自動知道哪些檔案應可讀寫。建議把輸入以唯讀方式掛載，將產物寫到獨立輸出目錄；不要為了方便把整個使用者家目錄、憑證或所有專案資料夾都掛進去。</p>
+<p>### 3. 網路與 GPU 採最小開放</p>
+<p>離線轉檔通常不需要網路；需要下載模型或查詢 API 的任務則應記錄來源與取得時間。GPU 也不是「API 支援」就保證可用，仍要驗證主機、驅動、模型大小與併發負載。</p>
+<p>### 4. 用測試與產物驗證取代「退出碼為 0」</p>
+<p>零結束碼只代表程序正常結束，不代表資料沒漏、程式修正正確或報告內容合格。交付前至少檢查：輸出檔是否存在、筆數／schema 是否符合、測試是否通過，以及產物是否位於指定目錄。</p>
+<h2>可直接採用的執行紀錄模板</h2>
+<ul>
+<li>任務 ID 與執行時間</li>
+<li>映像名稱、tag 與 digest</li>
+<li>WSL／`wslc`／工具版本</li>
+<li>Agent 指令與使用的任務描述版本</li>
+<li>唯讀輸入掛載、可寫輸出掛載</li>
+<li>網路、GPU、環境變數與資源限制</li>
+<li>程序退出碼、stderr 摘要</li>
+<li>產物路徑與驗收結果</li>
+<li>核准人或人工覆核結果</li>
+</ul>
+<p>這份紀錄能把「Agent 說做完了」轉成後續人員能重跑、定位和覆核的工程證據。</p>
+<h2>試做路線</h2>
+<ul>
+<li>先執行 `wsl --version`；若未達 2.9.3，先依官方文件更新。</li>
+<li>建立只含任務所需工具的小型映像，鎖定重要版本，不使用無版本控制的 `latest` 作為唯一依據。</li>
+<li>以獨立的 `input/`、`output/`、`logs/` 目錄進行第一個任務。</li>
+<li>加入一個已知失敗案例，例如缺少欄位或無法存取輸入，確認 Agent 是否留下正確失敗狀態而非偽造完成。</li>
+<li>比較多次重跑的輸出與準備時間，再決定是否擴大至更高風險的建置、部署或模型工作。</li>
+</ul>
+<h2>查核與限制</h2>
+<ul>
+<li>AI郵報原文對 Windows Agent 執行環境的工程分析，已以 Microsoft Learn 的 WSL container 官方文件核對核心功能與 WSL 2.9.3 最低版本要求。</li>
+<li>`wslc.exe` 的存在、容器 API，以及檔案掛載、網路與 GPU 互動均有官方文件依據。</li>
+<li>C++/WinRT 投影仍是 preview；不可把整個 WSL Containers 生態一概視為每個 API 都同等穩定。</li>
+<li>容器能改善一致性與控制面，不能自動提供完整安全隔離、保證 Agent 程式正確，或取代輸入／輸出驗證與權限治理。</li>
+<li>原文提及的 `wslc compose` 為規劃性資訊；官方目前文件未列出 compose 命令，故不作為已可用功能歸檔。</li>
+</ul>
+<h2>原始連結</h2>
+<ul>
+<li>AI郵報原文：<a href="https://www.aiposthub.com/wsl-containers-windows-ai-agent-execution-environment/" target="_blank" rel="noopener">https://www.aiposthub.com/wsl-containers-windows-ai-agent-execution-environment/</a></li>
+<li>Microsoft Learn：WSL container：<a href="https://learn.microsoft.com/en-us/windows/wsl/wsl-container" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/windows/wsl/wsl-container</a></li>
+<li>官方文件原始 Markdown：<a href="https://raw.githubusercontent.com/MicrosoftDocs/WSL/main/WSL/wsl-container.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/MicrosoftDocs/WSL/main/WSL/wsl-container.md</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-01 · AI郵報 · article</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">WSL Containers</span><span class="tag">WSL</span><span class="tag">Windows</span><span class="tag">Docker</span><span class="tag">AI Agent</span><span class="tag">可重現環境</span><span class="tag">MLOps</span><span class="tag">GPU</span><h3>原始連結</h3><p><a href="https://www.aiposthub.com/wsl-containers-windows-ai-agent-execution-environment/" target="_blank" rel="noopener">https://www.aiposthub.com/wsl-containers-windows-ai-agent-execution-environment/</a></p><p><a href="https://www.aiposthub.com/wsl-containers-windows-ai-agent-execution-environment/" target="_blank" rel="noopener">https://www.aiposthub.com/wsl-containers-windows-ai-agent-execution-environment/</a></p><p><a href="https://learn.microsoft.com/en-us/windows/wsl/wsl-container" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/windows/wsl/wsl-container</a></p><p><a href="https://raw.githubusercontent.com/MicrosoftDocs/WSL/main/WSL/wsl-container.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/MicrosoftDocs/WSL/main/WSL/wsl-container.md</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
