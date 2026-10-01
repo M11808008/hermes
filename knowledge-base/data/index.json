@@ -30,6 +30,36 @@
     "markdown": "articles/2026/10/2026-10-01-threads-google-vids-free-ai-video-generation.md"
   },
   {
+    "title": "Threads｜Meta Muse 與「入口遷移」：AI 代理可能如何重分旅遊與電商平台價值",
+    "date": "2026-10-01",
+    "source": "Threads",
+    "author": "cfdjungle",
+    "type": "social-post",
+    "topics": [
+      "AI學習雷達",
+      "Meta Muse",
+      "AI Agent",
+      "主動式電商",
+      "旅遊科技",
+      "Airbnb",
+      "電商平台",
+      "AI安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_zD-qy1_X/",
+      "https://www.threads.com/@cfdjungle/post/Dd8sxVEjlte",
+      "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "https://www.cnbc.com/2026/09/27/meta-muse-ai-personal-agent.html"
+    ],
+    "excerpt": "當 AI 代理能在瀏覽器內比較、篩選並代為完成跨網站任務，使用者的第一個入口可能從「開啟平台 App」轉為「交代代理目標」；但這不等於平台的供給、履約、客服與信任機制會立即失去價值。",
+    "slug": "2026-10-01-threads-meta-muse-agent-platform-disintermediation",
+    "html": "articles/2026-10-01-threads-meta-muse-agent-platform-disintermediation.html",
+    "markdown": "articles/2026/10/2026-10-01-threads-meta-muse-agent-platform-disintermediation.md"
+  },
+  {
     "title": "ETtoday｜Gemini「技能」上線：用 / 指令把常用提示詞帶進每個對話",
     "date": "2026-09-30",
     "source": "ETtoday AI 科技新聞",
