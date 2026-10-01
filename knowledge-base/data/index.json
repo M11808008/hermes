@@ -1,5 +1,33 @@
 [
   {
+    "title": "ETtoday｜Gemini「技能」上線：用 / 指令把常用提示詞帶進每個對話",
+    "date": "2026-09-30",
+    "source": "ETtoday AI 科技新聞",
+    "author": "黃肇祥／ETtoday 科技雲",
+    "type": "news",
+    "topics": [
+      "AI學習雷達",
+      "Gemini",
+      "Gemini Skills",
+      "Google AI",
+      "Prompt Engineering",
+      "工作流",
+      "自動化"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://ai.ettoday.net/amp/amp_news.php7?news_id=3246204",
+      "https://ai.ettoday.net/amp/amp_news.php7?news_id=3246204",
+      "https://gemini.google.com/skills"
+    ],
+    "excerpt": "Gemini 的「技能」可把反覆使用的提示詞儲存為具名捷徑，在新舊對話中以「/＋技能名稱」叫用；它更像可攜式的指令模板，而不是限定在單一聊天空間內運作的專屬 AI 角色。",
+    "slug": "2026-09-30-ettoday-gemini-skills-replace-gems",
+    "html": "articles/2026-09-30-ettoday-gemini-skills-replace-gems.html",
+    "markdown": "articles/2026/09/2026-09-30-ettoday-gemini-skills-replace-gems.md"
+  },
+  {
     "title": "Threads｜所謂 OpenAI「Dots 全天候 Agent」：社群宣稱與查核邊界",
     "date": "2026-09-30",
     "source": "https://www.threads.com/share/BAPqVSGDfb/",
