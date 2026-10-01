@@ -1,5 +1,37 @@
 [
   {
+    "title": "studiox｜AI 店長工作流：客服、訂單與 SEO 自動化，關鍵在 MCP 與人工核准",
+    "date": "2026-10-01",
+    "source": "studiox",
+    "author": "studiox 編輯部",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "AI Agent",
+      "MCP",
+      "電商自動化",
+      "客服自動化",
+      "SEO",
+      "Human in the Loop",
+      "Meta Muse",
+      "OpenAI dots"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://studiox.tw/news/ai-agent-store-manager",
+      "https://studiox.tw/news/ai-agent-store-manager",
+      "https://openai.com/index/introducing-dots/",
+      "https://about.fb.com/news/2026/09/introducing-muse-small-business/",
+      "https://studiox.tw/news/mcp-model-context-protocol"
+    ],
+    "excerpt": "「AI 店長」不是讓 AI 無限制接管商店，而是把可重複、低風險的查詢與整理先交給 Agent，再把退款、折扣、公開發布與付款等高風險操作留給人類核准；能否做到這件事，取決於後台是否提供結構化、可授權、可回溯的工具介面。",
+    "slug": "2026-10-01-studiox-ai-agent-store-manager",
+    "html": "articles/2026-10-01-studiox-ai-agent-store-manager.html",
+    "markdown": "articles/2026/10/2026-10-01-studiox-ai-agent-store-manager.md"
+  },
+  {
     "title": "Threads｜Google Vids 免費試用 AI 影片：把腳本、版面與旁白整合成影片簡報",
     "date": "2026-10-01",
     "source": "Threads",
