@@ -29,6 +29,34 @@
     "markdown": "articles/2026/10/2026-10-02-facebook-cava-fantasy-ai-short-dramas.md"
   },
   {
+    "title": "Threads｜ChatGPT 購物「Try On」：試穿主張與照片隱私的查核清單",
+    "date": "2026-10-02",
+    "source": "Threads",
+    "author": "airunfirst",
+    "type": "social-post",
+    "topics": [
+      "ChatGPT",
+      "AI購物",
+      "虛擬試穿",
+      "圖像生成",
+      "隱私設定",
+      "個資保護"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BADjz2cLIT/",
+      "https://www.threads.com/@airunfirst/post/Dd_REWWE3us",
+      "https://www.threads.com/@airunfirst/post/Dd_REWWE3us",
+      "https://chatgpt.com"
+    ],
+    "excerpt": "虛擬試穿的便利，建立在你交出可識別外貌與身形的照片之上。即使 Try On 功能確實可用，也應先確認圖片是否用於模型訓練、保存多久、是否會與聊天紀錄或帳號關聯，以及能否事後刪除。",
+    "slug": "2026-10-02-threads-airunfirst-chatgpt-shopping-try-on-privacy",
+    "html": "articles/2026-10-02-threads-airunfirst-chatgpt-shopping-try-on-privacy.html",
+    "markdown": "articles/2026/10/2026-10-02-threads-airunfirst-chatgpt-shopping-try-on-privacy.md"
+  },
+  {
     "title": "Threads｜Grok Bot 能取代 Muse 嗎？長時程 Agent 工作流主張的查核邊界",
     "date": "2026-10-02",
     "source": "Threads",
