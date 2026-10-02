@@ -99,6 +99,39 @@
     "markdown": "articles/2026/10/2026-10-02-threads-meta-muse-article-to-podcast.md"
   },
   {
+    "title": "Threads｜Muse、Grok Bots 與「OpenAI dots」：Agent 比較貼文的可驗證邊界",
+    "date": "2026-10-02",
+    "source": "Threads",
+    "author": "toppyhuang",
+    "type": "social-post",
+    "topics": [
+      "AI Agent",
+      "Meta Muse",
+      "Grok",
+      "OpenAI",
+      "AI安全",
+      "任務自動化",
+      "AI產品查核"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_9C0ls6mW/",
+      "https://www.threads.com/@toppyhuang/post/Dd_BVm8kxfj",
+      "https://www.threads.com/@toppyhuang/post/Dd_BVm8kxfj",
+      "https://muse.ai",
+      "https://introducing.muse.ai",
+      "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "/articles/2026-10-01-threads-meta-muse-agent-platform-disintermediation.html",
+      "/articles/2026-10-02-threads-meta-muse-article-to-podcast.html"
+    ],
+    "excerpt": "這篇貼文抓到 Agent 競爭將從「誰回答得更好」走向「誰能在受控環境中完成更多任務」；不過三家能力、名稱與整合清單的可驗證程度差異很大。使用前應先拆開看產品是否已正式發表、在哪個地區與帳號可用、哪些權限要交出去。",
+    "slug": "2026-10-02-threads-toppyhuang-muse-grok-dots-agent-comparison",
+    "html": "articles/2026-10-02-threads-toppyhuang-muse-grok-dots-agent-comparison.html",
+    "markdown": "articles/2026/10/2026-10-02-threads-toppyhuang-muse-grok-dots-agent-comparison.md"
+  },
+  {
     "title": "AI郵報｜WSL Containers：替 Windows 上的 AI Agent 建立可重現、可驗證的 Linux 執行環境",
     "date": "2026-10-01",
     "source": "AI郵報",
