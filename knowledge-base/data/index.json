@@ -116,6 +116,33 @@
     "markdown": "articles/2026/10/2026-10-02-threads-it-oppa-tavus-griffin-video-turing-test.md"
   },
   {
+    "title": "Threads｜AI 天菜歌手與推薦演算法：一則無法辨識來源的觀看筆記",
+    "date": "2026-10-02",
+    "source": "Threads",
+    "author": "kuniisme",
+    "type": "social-post",
+    "topics": [
+      "AI音樂",
+      "虛擬歌手",
+      "合成媒體",
+      "YouTube",
+      "推薦演算法",
+      "來源查核"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/__9kpvC9e/",
+      "https://www.threads.com/@kuniisme/post/Dd8x3j6nyOc",
+      "https://www.threads.com/@kuniisme/post/Dd8x3j6nyOc"
+    ],
+    "excerpt": "AI 歌手最容易讓人沉迷的，往往不是單一首歌，而是推薦系統把聲音、臉孔、角色感與連續更新綁成可反覆追看的內容流。當來源沒有被清楚標示時，喜歡可以保留，但身分、聲音來源與授權不能自行腦補。",
+    "slug": "2026-10-02-threads-kuniisme-ai-singer-youtube-recommendation",
+    "html": "articles/2026-10-02-threads-kuniisme-ai-singer-youtube-recommendation.html",
+    "markdown": "articles/2026/10/2026-10-02-threads-kuniisme-ai-singer-youtube-recommendation.md"
+  },
+  {
     "title": "Threads｜Codync：把 Claude Code、Codex 等 Coding Agent 變成可從手機交辦的常駐 Bot",
     "date": "2026-10-02",
     "source": "Threads",
