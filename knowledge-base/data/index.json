@@ -29,6 +29,65 @@
     "markdown": "articles/2026/10/2026-10-02-facebook-cava-fantasy-ai-short-dramas.md"
   },
   {
+    "title": "Threads｜Grok Bot 能取代 Muse 嗎？長時程 Agent 工作流主張的查核邊界",
+    "date": "2026-10-02",
+    "source": "Threads",
+    "author": "deepai.lab",
+    "type": "social-post",
+    "topics": [
+      "Grok",
+      "AI Agent",
+      "長時程任務",
+      "多代理協作",
+      "AI產品查核",
+      "Meta Muse"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BBJ-PdX6pW/",
+      "https://www.threads.com/@deepai.lab/post/Dd_Olm7k3m9",
+      "https://www.threads.com/@deepai.lab/post/Dd_Olm7k3m9",
+      "https://x.ai/news",
+      "https://muse.ai",
+      "/articles/2026-10-02-threads-toppyhuang-muse-grok-dots-agent-comparison.html"
+    ],
+    "excerpt": "真正值得比較的不是「哪個 Agent 比較強」，而是它能否在你的工作環境穩定完成可驗證的長任務、留下可稽核紀錄，並在權限與成本失控前停下來。這篇貼文對 Grok Bot 的描述具有參考價值，但尚不足以當成正式規格或採購依據。",
+    "slug": "2026-10-02-threads-deepai-lab-grok-bot-long-running-agents",
+    "html": "articles/2026-10-02-threads-deepai-lab-grok-bot-long-running-agents.html",
+    "markdown": "articles/2026/10/2026-10-02-threads-deepai-lab-grok-bot-long-running-agents.md"
+  },
+  {
+    "title": "Threads｜Tavus Griffin：即時視訊圖靈測試突破，企業為何更要重做驗證流程",
+    "date": "2026-10-02",
+    "source": "Threads",
+    "author": "it.oppa.twhk",
+    "type": "social-post",
+    "topics": [
+      "Tavus",
+      "Griffin",
+      "Human Interaction Model",
+      "視訊AI",
+      "數位人",
+      "AI安全",
+      "防詐"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/__inoZ2M-/",
+      "https://www.threads.com/@it.oppa.twhk/post/Dd_iu8Sknvt",
+      "https://www.threads.com/@it.oppa.twhk/post/Dd_iu8Sknvt",
+      "https://www.tavus.io/griffin"
+    ],
+    "excerpt": "Griffin 的重要性不只在「更像真人」，而在它將看、聽、判斷何時回應、表情與影像生成整合成即時互動系統。這會改善客服、教學與陪伴式介面，但也讓「看到真人臉」不再足以證明對方身分。",
+    "slug": "2026-10-02-threads-it-oppa-tavus-griffin-video-turing-test",
+    "html": "articles/2026-10-02-threads-it-oppa-tavus-griffin-video-turing-test.html",
+    "markdown": "articles/2026/10/2026-10-02-threads-it-oppa-tavus-griffin-video-turing-test.md"
+  },
+  {
     "title": "Threads｜Codync：把 Claude Code、Codex 等 Coding Agent 變成可從手機交辦的常駐 Bot",
     "date": "2026-10-02",
     "source": "Threads",
