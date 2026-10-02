@@ -64,6 +64,41 @@
     "markdown": "articles/2026/10/2026-10-02-threads-leepokai-codync-mobile-coding-agents.md"
   },
   {
+    "title": "Threads｜把文章變成雙人 Podcast：Meta Muse 的「輸入轉可聽內容」主張與查核",
+    "date": "2026-10-02",
+    "source": "Threads",
+    "author": "vj.beautiful030",
+    "type": "social-post",
+    "topics": [
+      "Meta Muse",
+      "AI Agent",
+      "Podcast",
+      "文字轉語音",
+      "學習設計",
+      "音訊摘要",
+      "AI 安全",
+      "Muse Secure VM"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BATnpN0z85/",
+      "https://www.threads.com/@vj.beautiful030/post/Dd-bTCnj_ns",
+      "https://www.threads.com/share/BATnpN0z85/",
+      "https://www.threads.com/@vj.beautiful030/post/Dd-bTCnj_ns",
+      "https://muse.ai/join",
+      "https://muse.ai",
+      "https://introducing.muse.ai",
+      "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "/articles/2026-10-01-threads-meta-muse-agent-platform-disintermediation.html"
+    ],
+    "excerpt": "把長文轉成可在通勤時收聽的「對話式音訊」，確實是提升複習摩擦力的好用工作流；但此貼文關於 Muse 產製雙人 Podcast 與 MP3 的細節，目前只能視為作者經驗，不能直接推論為所有帳號、地區或方案皆有的公開功能。",
+    "slug": "2026-10-02-threads-meta-muse-article-to-podcast",
+    "html": "articles/2026-10-02-threads-meta-muse-article-to-podcast.html",
+    "markdown": "articles/2026/10/2026-10-02-threads-meta-muse-article-to-podcast.md"
+  },
+  {
     "title": "AI郵報｜WSL Containers：替 Windows 上的 AI Agent 建立可重現、可驗證的 Linux 執行環境",
     "date": "2026-10-01",
     "source": "AI郵報",
