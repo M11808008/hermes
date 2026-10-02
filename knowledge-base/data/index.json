@@ -29,6 +29,41 @@
     "markdown": "articles/2026/10/2026-10-02-facebook-cava-fantasy-ai-short-dramas.md"
   },
   {
+    "title": "Threads｜Codync：把 Claude Code、Codex 等 Coding Agent 變成可從手機交辦的常駐 Bot",
+    "date": "2026-10-02",
+    "source": "Threads",
+    "author": "leepokai20",
+    "type": "social-post",
+    "topics": [
+      "Coding Agent",
+      "AI Agent",
+      "Codex",
+      "Claude Code",
+      "ACP",
+      "Remote Desktop",
+      "Rust",
+      "iOS",
+      "Tailscale",
+      "Cloudflare"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BCNFXGM0KB/",
+      "https://www.threads.com/@leepokai20/post/Dd9TlKVCqqQ",
+      "https://www.threads.com/share/BCNFXGM0KB/",
+      "https://www.threads.com/@leepokai20/post/Dd9TlKVCqqQ",
+      "https://github.com/leepokai/Codync",
+      "https://www.codync.dev",
+      "https://apps.apple.com/tw/app/codync/id6760984418?l=en-GB"
+    ],
+    "excerpt": "Codync 想解的不是「再做一個聊天介面」，而是把已在電腦上授權、執行的 Coding Agent 包裝成可從手機直接指派工作的持久 Bot：交辦任務、等通知、在需要批准時回來處理；適合已有多台主機與多個 coding agent 的使用者，但安全邊界必須先設計好。",
+    "slug": "2026-10-02-threads-leepokai-codync-mobile-coding-agents",
+    "html": "articles/2026-10-02-threads-leepokai-codync-mobile-coding-agents.html",
+    "markdown": "articles/2026/10/2026-10-02-threads-leepokai-codync-mobile-coding-agents.md"
+  },
+  {
     "title": "AI郵報｜WSL Containers：替 Windows 上的 AI Agent 建立可重現、可驗證的 Linux 執行環境",
     "date": "2026-10-01",
     "source": "AI郵報",
