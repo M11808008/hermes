@@ -1,5 +1,37 @@
 [
   {
+    "title": "Threads｜ChatGPT 虛擬試穿：把「功能可用」與「照片控制權」拆開檢查",
+    "date": "2026-10-03",
+    "source": "Threads",
+    "author": "clover_ai_0718",
+    "type": "social-post",
+    "topics": [
+      "ChatGPT",
+      "AI購物",
+      "虛擬試穿",
+      "隱私設定",
+      "個資保護",
+      "Temporary Chat",
+      "Data Controls"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAaW-LO1XO/",
+      "https://www.threads.com/@clover_ai_0718/post/DeAzqpYmK2S",
+      "https://www.threads.com/share/BAaW-LO1XO/",
+      "https://www.threads.com/@clover_ai_0718/post/DeAzqpYmK2S",
+      "https://chatgpt.com/",
+      "https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance",
+      "https://help.openai.com/en/articles/8914046-temporary-chat-faq"
+    ],
+    "excerpt": "AI 試穿最容易混淆的不是衣服合不合身，而是「聊天紀錄、上傳檔案、參考照片、模型改進」可能是不同的資料控制層；完成試穿後，應逐一確認，而不是只刪除對話。",
+    "slug": "2026-10-03-threads-clover-ai-chatgpt-try-on-privacy-controls",
+    "html": "articles/2026-10-03-threads-clover-ai-chatgpt-try-on-privacy-controls.html",
+    "markdown": "articles/2026/10/2026-10-03-threads-clover-ai-chatgpt-try-on-privacy-controls.md"
+  },
+  {
     "title": "Threads｜VDO.Ninja：把手機變成 OBS 的低延遲第二機位",
     "date": "2026-10-03",
     "source": "Threads",
