@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜VDO.Ninja：把手機變成 OBS 的低延遲第二機位",
+    "date": "2026-10-03",
+    "source": "Threads",
+    "author": "synapsecore.tw",
+    "type": "social-post",
+    "topics": [
+      "VDO.Ninja",
+      "OBS",
+      "直播",
+      "手機攝影機",
+      "WebRTC",
+      "遠端協作"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BATHW_Nz6W/",
+      "https://www.threads.com/@synapsecore.tw/post/Dd-gUMckc4-",
+      "https://www.threads.com/share/BATHW_Nz6W/",
+      "https://www.threads.com/@synapsecore.tw/post/Dd-gUMckc4-",
+      "https://vdo.ninja/",
+      "https://docs.vdo.ninja/"
+    ],
+    "excerpt": "若直播時想多一個拍桌面、手作或開箱的鏡頭，不必先買擷取卡：可先用 VDO.Ninja 讓手機從瀏覽器送出畫面，再以 OBS 的 Browser Source 接收。",
+    "slug": "2026-10-03-threads-synapsecore-vdo-ninja-phone-camera-obs",
+    "html": "articles/2026-10-03-threads-synapsecore-vdo-ninja-phone-camera-obs.html",
+    "markdown": "articles/2026/10/2026-10-03-threads-synapsecore-vdo-ninja-phone-camera-obs.md"
+  },
+  {
     "title": "Facebook｜10 部「腦洞大開」奇幻 AI 短劇：《奇葩早餐店》爆紅、《天機入夢》入圍坎城",
     "date": "2026-10-02",
     "source": "Facebook／東森娛樂",
