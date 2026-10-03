@@ -1,5 +1,35 @@
 [
   {
+    "title": "Facebook Reel｜OpenMontage 實測：AI Agent 影片工作室不是一鍵成片，而是可審核的製作管線",
+    "date": "2026-10-03",
+    "source": "Facebook Reel",
+    "author": "AI郵報",
+    "type": "social-post",
+    "topics": [
+      "OpenMontage",
+      "AI Agent",
+      "AI 影片",
+      "Remotion",
+      "Blender",
+      "FFmpeg",
+      "Agentic Workflow"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1Dhtj8mrTS/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1654380169540707/",
+      "https://www.facebook.com/share/r/1Dhtj8mrTS/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1654380169540707/",
+      "https://github.com/calesthio/OpenMontage"
+    ],
+    "excerpt": "![Facebook Reel 的 OpenMontage 分享頁登入牆證據截圖](../assets/source-images/2026-10-03-facebook-aipost-openmontage-reel-evidence.png \"Facebook Reel 證據截圖\") ## 重點摘要 這支 AI郵報",
+    "slug": "2026-10-03-facebook-aipost-openmontage-agentic-video-production",
+    "html": "articles/2026-10-03-facebook-aipost-openmontage-agentic-video-production.html",
+    "markdown": "articles/2026/10/2026-10-03-facebook-aipost-openmontage-agentic-video-production.md"
+  },
+  {
     "title": "Facebook｜用 Ollama 的 Anthropic 相容 API 對接 Claude Code：本機模型、雲端模型與能力邊界",
     "date": "2026-10-03",
     "source": "Facebook",
