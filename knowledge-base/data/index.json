@@ -1,5 +1,35 @@
 [
   {
+    "title": "Facebook｜用 Ollama 的 Anthropic 相容 API 對接 Claude Code：本機模型、雲端模型與能力邊界",
+    "date": "2026-10-03",
+    "source": "Facebook",
+    "author": "傑森創工 - AI 科技新知",
+    "type": "social-post",
+    "topics": [
+      "Ollama",
+      "Claude Code",
+      "Anthropic API",
+      "Local LLM",
+      "Coding Agent",
+      "Qwen3-Coder"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/19nn7z5Z8u/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=1589584806522798&set=a.451583130322977&type=3",
+      "https://www.facebook.com/share/19nn7z5Z8u/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=1589584806522798&set=a.451583130322977&type=3",
+      "https://docs.ollama.com/api/anthropic-compatibility",
+      "https://docs.ollama.com/api/openai-compatibility"
+    ],
+    "excerpt": "可以，**Ollama 官方確實提供 Anthropic Messages API 相容介面，且官方文件明確提到可連接 Claude Code**。但這是把 Claude Code 的 API 請求導向另一個模型供應端，不是離線使用 Anthropic Claude 模型本身；程式能力、長上下文、工具呼叫與可靠性要以所選模型和實測為準。",
+    "slug": "2026-10-03-facebook-jason-ollama-claude-code-anthropic-compatibility",
+    "html": "articles/2026-10-03-facebook-jason-ollama-claude-code-anthropic-compatibility.html",
+    "markdown": "articles/2026/10/2026-10-03-facebook-jason-ollama-claude-code-anthropic-compatibility.md"
+  },
+  {
     "title": "Threads｜ChatGPT 虛擬試穿：把「功能可用」與「照片控制權」拆開檢查",
     "date": "2026-10-03",
     "source": "Threads",
