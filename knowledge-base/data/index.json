@@ -1,5 +1,36 @@
 [
   {
+    "title": "Facebook Reel｜程式逐格渲染的 AI Motion Graphic：把 AI 影片做成可審查的製作流程",
+    "date": "2026-10-04",
+    "source": "Facebook Reel",
+    "author": "廖韋評",
+    "type": "social-post",
+    "topics": [
+      "AI 影片",
+      "Motion Graphic",
+      "Claude Code",
+      "Playwright",
+      "FFmpeg",
+      "F5-TTS",
+      "旁白"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/v/1DhtnJs2HP/",
+      "https://www.facebook.com/reel/1416224930580554/",
+      "https://www.facebook.com/share/v/1DhtnJs2HP/",
+      "https://www.facebook.com/reel/1416224930580554/",
+      "https://code.claude.com/docs/en/overview",
+      "https://github.com/SWivid/F5-TTS"
+    ],
+    "excerpt": "這支 Reel 示範的核心不是「一句話生出影片」，而是把教學動畫拆成分鏡、固定時間函數、逐格 render、抽樣檢查、音訊合成與交付檔案；讓每一個步驟都能被人審查與重做。",
+    "slug": "2026-10-04-facebook-liao-weiping-code-rendered-ai-motion-graphic",
+    "html": "articles/2026-10-04-facebook-liao-weiping-code-rendered-ai-motion-graphic.html",
+    "markdown": "articles/2026/10/2026-10-04-facebook-liao-weiping-code-rendered-ai-motion-graphic.md"
+  },
+  {
     "title": "Facebook Reel｜OpenMontage 實測：AI Agent 影片工作室不是一鍵成片，而是可審核的製作管線",
     "date": "2026-10-03",
     "source": "Facebook Reel",
