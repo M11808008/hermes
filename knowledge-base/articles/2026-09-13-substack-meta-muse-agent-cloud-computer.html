@@ -245,6 +245,24 @@
 <p><a href="https://github.com/mickyyang-1407/muse-skills-tw" target="_blank" rel="noopener">https://github.com/mickyyang-1407/muse-skills-tw</a></p>
 <p>來源擷取紀錄：</p>
 <p>source-archives/2026-10-07-github-mickyyang-muse-skills-tw.json</p>
+<h2>2026-10-07 補充：把 agent 任務寫成「成果、脈絡、限制、標準」</h2>
+<p>Threads 作者 `itsabrarhussains` 將 Muse 描述為可被交辦工作的 operator，而非只負責對話的 chatbot。貼文的核心不是某個獨家功能，而是一個可移植到各種 agent 的任務 brief：明確說出預期成果、任務前必知的脈絡、不能做的事、何謂合格輸出，並授權它在限定範圍內搜尋、比較、測試及質疑假設。</p>
+<p>這個框架可整理成以下較可驗收的任務模板：</p>
+<ul>
+<li>成果：最後要交付什麼，例如「列出三家符合條件的供應商，附來源與差異」。</li>
+<li>脈絡：已知背景、目標受眾、既有決策與可使用資料，避免 agent 從錯誤前提展開。</li>
+<li>限制：明確列出不可登入的帳號、不可使用的資料、不可送出的訊息、不可執行的付款或變更。</li>
+<li>品質標準：定義資料時效、來源數量、比較維度、輸出格式與「不知道時必須標示不知道」。</li>
+<li>調查範圍與檢查點：允許哪些查找、比較與測試；長任務先回報計畫，在執行外部動作或耗用較多資源前等待確認。</li>
+</ul>
+<p>貼文後續留言補出的兩項做法也值得採用：要求 agent 在執行前先展示計畫，以便及早發現錯誤假設；並把每一項結論標為「已驗證（附來源）」或「推論」，避免流暢敘述掩蓋證據不足。</p>
+<p>此處的「operator」是作者的任務設計比喻，並非 Meta 對 Muse 的官方產品分類。產品可用性、背景執行、連接器、帳號資格與可授權範圍仍須依當下官方介面與條款確認；無論使用哪一種 agent，付款、寄送、帳號變更與其他高影響行動都應保留人類最終核准。</p>
+<p>原始 Threads 分享連結：</p>
+<p><a href="https://www.threads.com/share/BAWZ_YDLfX/" target="_blank" rel="noopener">https://www.threads.com/share/BAWZ_YDLfX/</a></p>
+<p>解析後貼文：</p>
+<p><a href="https://www.threads.com/@itsabrarhussains/post/DeJu-tJgcDA" target="_blank" rel="noopener">https://www.threads.com/@itsabrarhussains/post/DeJu-tJgcDA</a></p>
+<p>來源擷取紀錄：</p>
+<p>source-archives/2026-10-07-threads-itsabrarhussains-muse-operator-brief.json</p>
 <h2>結論</h2>
 <p>Daniel Wu 的文章最有價值的地方，不是預測 Meta Muse 一定會成為下一個聚合平台，而是指出 agent 商業化的成本結構已經改變：當產品替每位使用者保留一台可執行任務的雲端電腦，AI 就不再只是「回答一次問題」的變動成本。Meta 能否成功，取決於一般人的日常是否有足夠多值得長時間委派的工作，以及使用者是否願意把個人資料、付款能力與行動權限交給它。</p>
 <p>對實作團隊而言，最可複製的答案不是照抄 Muse，而是採用它揭示的工程原則：隔離執行環境、權限裁決元件、秘密不進模型、核准通道獨立、可觀測的成本上限，以及把「agent 出錯」當成設計前提。</p>
