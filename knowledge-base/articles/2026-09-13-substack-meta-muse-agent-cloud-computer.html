@@ -230,6 +230,21 @@
 <p><a href="https://github.com/meta-models/meta-model-cookbook" target="_blank" rel="noopener">https://github.com/meta-models/meta-model-cookbook</a></p>
 <p>來源擷取紀錄：</p>
 <p>source-archive/2026-09-29-threads-bytesundries-muse-five-official-sites.json</p>
+<h2>2026-10-07 補充：繁中台灣情境的第三方 Muse 技能清單</h2>
+<p>GitHub 專案 `mickyyang-1407/muse-skills-tw` 將 Muse 的可能用途整理為 30 則繁體中文、台灣生活情境的提示詞範本，涵蓋發票載具、停班停課、郵件、行事曆、比價、交通、健康資料與報稅提醒等。每則採用「痛點、可直接對話的三步需求、能力邊界」結構，對初次拆解個人 agent 任務很有參考價值。</p>
+<p>此專案在 2026-10-07 擷取時只有 README，未附程式碼、安裝設定、官方串接設定、授權檔或自動化實作。因此它應被理解為第三方的任務設計／提示詞素材庫，而不是 Muse 官方功能清單、可直接安裝的 skill 套件，或已驗證的台灣服務整合。</p>
+<p>幾個實用但需要重新驗證的邊界：</p>
+<ul>
+<li>可把每條範本先改寫成「任務、允許資料、完成標準、人工核准點」四欄，再交給任何可用的 agent 測試；不要只因提示詞看起來自然就直接授予帳號存取權。</li>
+<li>發票、電子郵件、健康、行事曆、購物與報稅都涉及敏感或高影響資料。先用假資料或唯讀／低風險範圍驗證，確認後再逐步擴大權限。</li>
+<li>「自動通知、每日監控、讀取載具、跨平台比價」是否可行，取決於當下 Muse 帳號、地區、連接器、服務條款與資料來源；它們不是此 README 能獨立證明的產品承諾。</li>
+<li>涉及付款、訂票、申報、寄送與帳號變更時，應保留最後的人類確認；尤其不可將登入憑證、一次性驗證碼、付款資料交給不明環境。</li>
+</ul>
+<p>適合作為欒帥未來試驗 Muse 或其他個人 agent 時的「任務需求訪談題庫」：先從天氣、公開交通資訊、行程摘要或文件整理等低風險工作開始；穩定後才評估信箱、健康或金融周邊工作流。</p>
+<p>專案連結：</p>
+<p><a href="https://github.com/mickyyang-1407/muse-skills-tw" target="_blank" rel="noopener">https://github.com/mickyyang-1407/muse-skills-tw</a></p>
+<p>來源擷取紀錄：</p>
+<p>source-archives/2026-10-07-github-mickyyang-muse-skills-tw.json</p>
 <h2>結論</h2>
 <p>Daniel Wu 的文章最有價值的地方，不是預測 Meta Muse 一定會成為下一個聚合平台，而是指出 agent 商業化的成本結構已經改變：當產品替每位使用者保留一台可執行任務的雲端電腦，AI 就不再只是「回答一次問題」的變動成本。Meta 能否成功，取決於一般人的日常是否有足夠多值得長時間委派的工作，以及使用者是否願意把個人資料、付款能力與行動權限交給它。</p>
 <p>對實作團隊而言，最可複製的答案不是照抄 Muse，而是採用它揭示的工程原則：隔離執行環境、權限裁決元件、秘密不進模型、核准通道獨立、可觀測的成本上限，以及把「agent 出錯」當成設計前提。</p>
