@@ -1,5 +1,33 @@
 [
   {
+    "title": "Facebook｜OMP 的 Skill-Wise：把 AI Agent 接入 WhatsApp 的協作構想與授權邊界",
+    "date": "2026-10-08",
+    "source": "https://www.facebook.com/share/1FBWPknBWu/?mibextid=wwXIfr",
+    "author": "OMP 網路行銷玩家",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "AI Agent",
+      "WhatsApp",
+      "協作",
+      "人工核准"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/omp.asia/posts/1649660746790453/",
+      "https://www.facebook.com/share/1FBWPknBWu/?mibextid=wwXIfr",
+      "https://www.facebook.com/omp.asia/posts/1649660746790453/",
+      "https://www.youtube.com/watch?v=5LP5QH8uRLM",
+      "https://developers.facebook.com/docs/whatsapp/cloud-api"
+    ],
+    "excerpt": "這則 OMP 網路行銷玩家貼文介紹名為 Skill-Wise 的自製小工具，主張可把 AI Agent 接到 WhatsApp，供一對一對話或公司群組使用，並可設定「同事的指令需先由主管核准」。其最值得借鏡之處不是特定產品功能，而是把 AI 的工作入口放進既有通訊工具，同時保留人工授權關卡。",
+    "slug": "2026-10-08-facebook-omp-skill-wise-whatsapp-ai-agent",
+    "html": "articles/2026-10-08-facebook-omp-skill-wise-whatsapp-ai-agent.html",
+    "markdown": "articles/2026/10/2026-10-08-facebook-omp-skill-wise-whatsapp-ai-agent.md"
+  },
+  {
     "title": "Facebook｜Swagless：AirCard 與 CardArt 的 Apple Wallet 卡面客製流程",
     "date": "2026-10-08",
     "source": "https://www.facebook.com/share/r/1DvoyVSyLE/?mibextid=wwXIfr",
