@@ -1,5 +1,34 @@
 [
   {
+    "title": "Facebook｜AI 短影音剪輯課：把素材、剪輯需求、字幕與特效整理成可重複流程",
+    "date": "2026-10-09",
+    "source": "Facebook Video",
+    "author": "Vibe Coding 工作術",
+    "type": "course",
+    "topics": [
+      "AI短影音",
+      "AI剪輯",
+      "AI Agent",
+      "內容創作",
+      "課程",
+      "Claude",
+      "Gemini"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61584784287531/videos/2374966349973169/?fs=e&mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2374966349973169/",
+      "https://aiblueprintplan.com/go/ai-video-edit",
+      "https://www.facebook.com/reel/2374966349973169/"
+    ],
+    "excerpt": "這不是單純教「按哪個剪輯按鈕」，而是嘗試把短影音製作拆成可重複的工作流：先整理素材、明確描述想要的剪輯結果，再用 AI 協助字幕、節奏與視覺效果，最後把成果接到社群曝光與留言互動。",
+    "slug": "2026-10-09-facebook-ai-video-edit-course",
+    "html": "articles/2026-10-09-facebook-ai-video-edit-course.html",
+    "markdown": "articles/2026/10/2026-10-09-facebook-ai-video-edit-course.md"
+  },
+  {
     "title": "Facebook｜OpenAI Decisions API：將文字與圖片轉成可程式使用的決策",
     "date": "2026-10-09",
     "source": "Facebook Reel",
