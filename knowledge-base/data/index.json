@@ -58,6 +58,37 @@
     "markdown": "articles/2026/10/2026-10-09-facebook-openai-decisions-api.md"
   },
   {
+    "title": "Instagram｜四個 GitHub AI Agent 工具：用途、授權與導入前檢核",
+    "date": "2026-10-09",
+    "source": "Instagram",
+    "author": "aistart_up",
+    "type": "social-post",
+    "topics": [
+      "AI Agent",
+      "GitHub",
+      "Claude Code",
+      "MCP",
+      "Code Intelligence",
+      "Video Production"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DeMEIRIBTiW/?dlrf=ZWZlczc3OG5xcTM1",
+      "https://www.instagram.com/reel/DeMEIRIBTiW/",
+      "https://www.instagram.com/reel/DeMEIRIBTiW/",
+      "https://github.com/trailhq/Graft",
+      "https://github.com/msitarzewski/agency-agents",
+      "https://github.com/DeusData/codebase-memory-mcp",
+      "https://github.com/calesthio/OpenMontage"
+    ],
+    "excerpt": "這四個專案不是「裝了就自動變強」的萬用工具，而是四種不同的工作流元件：程式碼脈絡層、角色／提示詞庫、程式碼索引 MCP 與影片生產編排。先選對問題、再做小範圍驗證，才有價值。",
+    "slug": "2026-10-09-instagram-four-github-ai-agent-tools",
+    "html": "articles/2026-10-09-instagram-four-github-ai-agent-tools.html",
+    "markdown": "articles/2026/10/2026-10-09-instagram-four-github-ai-agent-tools.md"
+  },
+  {
     "title": "Threads｜把 Notion 旅遊行程做成可愛單頁網站：Prompt、驗收與發佈邊界",
     "date": "2026-10-09",
     "source": "Threads",
