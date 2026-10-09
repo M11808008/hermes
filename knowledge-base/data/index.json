@@ -1,5 +1,34 @@
 [
   {
+    "title": "Threads｜Cue：讓個人 AI Agent 擁有電話、郵件、錢包與工作區",
+    "date": "2026-10-09",
+    "source": "Threads",
+    "author": "sstar.lung",
+    "type": "social-post",
+    "topics": [
+      "AI Agent",
+      "Manus",
+      "Cue",
+      "多代理協作",
+      "雲端電腦",
+      "任務自動化",
+      "AI安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_kD6K2OUF/",
+      "https://www.threads.com/@sstar.lung/post/DeOT8a3mQpM?xmt=AQG0PklBRdBwrg-CtQzXdI1hqdOcXY5FABcG1cyeWYvH75GqJlA9_UqMnuExLtjyoSCQkjnB&slof=1",
+      "https://cue.im",
+      "https://www.threads.com/@sstar.lung/post/DeOT8a3mQpM?xmt=AQG0PklBRdBwrg-CtQzXdI1hqdOcXY5FABcG1cyeWYvH75GqJlA9_UqMnuExLtjyoSCQkjnB&slof=1"
+    ],
+    "excerpt": "Cue 的重要性不只在「會對話的 AI」，而是嘗試替 Agent 配上可執行真實任務的獨立身份與工作環境：電話、電子郵件、支付工具與專屬電腦。這讓多 Agent 分工更接近一個可管理的數位團隊，也同步提高權限、付款與人類覆核的重要性。",
+    "slug": "2026-10-09-threads-sstar-lung-cue-personal-agents",
+    "html": "articles/2026-10-09-threads-sstar-lung-cue-personal-agents.html",
+    "markdown": "articles/2026/10/2026-10-09-threads-sstar-lung-cue-personal-agents.md"
+  },
+  {
     "title": "Facebook｜OMP 的 Skill-Wise：把 AI Agent 接入 WhatsApp 的協作構想與授權邊界",
     "date": "2026-10-08",
     "source": "https://www.facebook.com/share/1FBWPknBWu/?mibextid=wwXIfr",
