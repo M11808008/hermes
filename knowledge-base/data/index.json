@@ -58,6 +58,36 @@
     "markdown": "articles/2026/10/2026-10-09-facebook-openai-decisions-api.md"
   },
   {
+    "title": "Threads｜One：把多個 Coding Agent 的等待、回覆與完成通知收進同一個 Inbox",
+    "date": "2026-10-09",
+    "source": "Threads",
+    "author": "kufutw",
+    "type": "social-post",
+    "topics": [
+      "Coding Agent",
+      "多代理協作",
+      "Claude Code",
+      "Codex",
+      "OpenCode",
+      "macOS",
+      "開發者工具"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAXVq9iQly/",
+      "https://www.threads.com/@kufutw/post/DeOZPNkmfaS?xmt=AQG0eqnc5IdwzIiMHe_Bf_u9MV1LtsHZA1DSzo06lNBVh2X2QyhacKAf1LnwvVCzLUZ3aR9jqA&slof=1",
+      "https://getone.one",
+      "https://x.com/ky__zo/status/2107549434280284460",
+      "https://www.threads.com/@kufutw/post/DeOZPNkmfaS?xmt=AQG0eqnc5IdwzIiMHe_Bf_u9MV1LtsHZA1DSzo06lNBVh2X2QyhacKAf1LnwvVCzLUZ3aR9jqA&slof=1"
+    ],
+    "excerpt": "One 解決的是「Agent 會跑，但人不在終端機前」的協作斷點：讓 Claude Code、Codex、OpenCode 等既有 Agent 的提問與成果集中到一個可回覆的 Inbox，使用者可在 Mac、iPhone 或遠端伺服器情境中維持工作流前進。",
+    "slug": "2026-10-09-threads-one-coding-agent-inbox",
+    "html": "articles/2026-10-09-threads-one-coding-agent-inbox.html",
+    "markdown": "articles/2026/10/2026-10-09-threads-one-coding-agent-inbox.md"
+  },
+  {
     "title": "Threads｜Cue：讓個人 AI Agent 擁有電話、郵件、錢包與工作區",
     "date": "2026-10-09",
     "source": "Threads",
