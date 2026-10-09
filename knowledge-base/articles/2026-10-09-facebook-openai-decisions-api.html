@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜OpenAI Decisions API：將文字與圖片轉成可程式使用的決策</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜OpenAI Decisions API：將文字與圖片轉成可程式使用的決策</h1><figure><img src="../assets/source-images/2026-10-09-openai-decisions-api-facebook-thumbnail.jpg" alt="Facebook 影片縮圖：OpenAI Decisions API" loading="lazy" referrerpolicy="no-referrer"><figcaption>Facebook Reel 擷取縮圖；已保存本機副本</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>Decisions API 的定位不是寫文章或聊天，而是把「這張圖是否破損？」「這筆工單該送往哪個隊列？」「這段內容是否符合規範？」這類問題，轉成可以直接被程式消費的機率、選項或分數，作為自動化流程的快速判斷層。</p>
+<h2>影片的主張</h2>
+<p>影片稱 OpenAI 在 10 月 6 日開放 Decisions API 公開測試，並以輸送帶雞蛋為例：系統判斷其屬於乾淨、髒污或破損。影片也將它放進「決策模型」脈絡，提及 TypeSafe Jev、Cloudflare Clef 與 Claude Haiku。</p>
+<p>其中「不寫文章、不聊天，只交回機率、選項或分數」的核心描述，與 OpenAI 官方文件相符；不過案例的 0.27 秒延遲、每 1,000 次約 US$0.03，以及其他產品名稱與發表時間，未在本次找到足以交叉確認的一手資料，因此不將其當作正式規格。</p>
+<h2>官方文件已確認的能力</h2>
+<p>OpenAI 開發者文件顯示：</p>
+<ul>
+<li>Decisions API 目前為 public beta，使用專用的 POST /v1/decisions 端點。</li>
+<li>輸入可為文字、圖片，或兩者合用。</li>
+<li>回傳的 typed answer 可為：條件為真的機率、固定選項集合中的選擇，或依 rubric 產生的分數。</li>
+<li>適用於內容分類、請求路由與工作優先排序。</li>
+<li>官方稱它相較 Responses API 約快 10 倍。</li>
+<li>當前僅支援 gpt-6-luna。</li>
+</ul>
+<p>這代表它更像一個面向工作流的「判斷介面」，而非要產出長篇自然語言的通用回應端點。</p>
+<h2>成本與案例數字要怎麼看</h2>
+<p>官方頁面列 /v1/decisions 搭配 gpt-6-luna 的輸入價格為每百萬 token US$0.10，且沒有 output token、cache-read 或 cache-write 費用。這是 token 計價，不是固定的每次或每千次請求價格。</p>
+<p>因此影片所說「每 1,000 次約 3 美分」有可能在某個輸入長度與處理條件下成立，但不能直接外推到所有影像、解析度、問題數量或提示內容。導入時應以實際樣本量測 token、延遲、錯誤率與端到端成本。</p>
+<h2>最適合的實作位置</h2>
+<ul>
+<li>先判斷、再生成：先用 Decisions API 將客服信件、表單或圖片分流；只有需要說明、撰寫或對話時，才交給 Responses API 或 Agent。</li>
+<li>固定輸出空間：將結果限制成少量明確選項，例如「通過／人工覆核／拒絕」，避免生成式輸出難以被工作流解析。</li>
+<li>將低信心案例送人工：以機率或分數設定閾值；介於灰區的項目不要自動採取不可逆動作。</li>
+<li>將規則寫成 rubric：品質檢查、內容審核與優先級判斷，需要把業務定義、反例與可接受誤差明確化。</li>
+<li>分離判斷與執行權限：API 判定「可能需退款」不等於它可以退款；付款、封鎖、刪除與對外訊息仍應保留人類或另一道授權關卡。</li>
+</ul>
+<h2>尚待確認的延伸主張</h2>
+<ul>
+<li>TypeSafe Jev 的公開產品資訊與影片所述的 9 月發表。</li>
+<li>Cloudflare Clef 是否為該影片描述的開源決策模型，以及 10 月 1 日推出的說法。</li>
+<li>「Claude Haiku 5.5」與 10 月 7 日發表的說法；本次可取得的 Anthropic 官方產品頁為 Claude Haiku 4.5（2025-10-15）。</li>
+</ul>
+<h2>原始與查核連結</h2>
+<ul>
+<li>Facebook Reel：<a href="https://www.facebook.com/share/v/1CRL3W4mWK/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/1CRL3W4mWK/?mibextid=wwXIfr</a></li>
+<li>OpenAI Decisions API 官方文件：<a href="https://developers.openai.com/api/docs/guides/decisions" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/decisions</a></li>
+<li>Anthropic Claude Haiku 4.5 官方公告：<a href="https://www.anthropic.com/news/claude-haiku-4-5" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-haiku-4-5</a></li>
+<li>本文擷取紀錄：source-archive/2026-10-09-facebook-hinet-openai-decisions-api.json</li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-09 · Facebook Reel · social-post</div><h3>標籤</h3><span class="tag">OpenAI</span><span class="tag">Decisions API</span><span class="tag">結構化輸出</span><span class="tag">視覺分類</span><span class="tag">任務自動化</span><span class="tag">AI工程</span><span class="tag">模型選型</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/v/1CRL3W4mWK/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/v/1CRL3W4mWK/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/hinet/videos/openai-10-%E6%9C%88-6-%E6%97%A5%E9%96%8B%E6%94%BE-decisions-api-%E5%85%AC%E9%96%8B%E6%B8%AC%E8%A9%A6%E9%80%99%E5%80%8B-ai-%E4%B8%8D%E5%AF%AB%E6%96%87%E7%AB%A0%E4%B8%8D%E8%81%8A%E5%A4%A9%E5%8F%AA%E4%BA%A4%E5%9B%9E%E6%A9%9F%E7%8E%87%E9%81%B8%E9%A0%85%E6%88%96%E5%88%86%E6%95%B8%E9%80%99%E9%A1%9E%E7%B5%90%E6%A7%8B%E5%8C%96%E7%AD%94%E6%A1%88%E9%96%8B%E7%99%BC%E8%80%85-erik-kokal/1429862359098670/" target="_blank" rel="noopener">https://www.facebook.com/hinet/videos/openai-10-%E6%9C%88-6-%E6%97%A5%E9%96%8B%E6%94%BE-decisions-api-%E5%85%AC%E9%96%8B%E6%B8%AC%E8%A9%A6%E9%80%99%E5%80%8B-ai-%E4%B8%8D%E5%AF%AB%E6%96%87%E7%AB%A0%E4%B8%8D%E8%81%8A%E5%A4%A9%E5%8F%AA%E4%BA%A4%E5%9B%9E%E6%A9%9F%E7%8E%87%E9%81%B8%E9%A0%85%E6%88%96%E5%88%86%E6%95%B8%E9%80%99%E9%A1%9E%E7%B5%90%E6%A7%8B%E5%8C%96%E7%AD%94%E6%A1%88%E9%96%8B%E7%99%BC%E8%80%85-erik-kokal/1429862359098670/</a></p><p><a href="https://developers.openai.com/api/docs/guides/decisions" target="_blank" rel="noopener">https://developers.openai.com/api/docs/guides/decisions</a></p><p><a href="https://www.facebook.com/hinet/videos/openai-10-%E6%9C%88-6-%E6%97%A5%E9%96%8B%E6%94%BE-decisions-api-%E5%85%AC%E9%96%8B%E6%B8%AC%E8%A9%A6%E9%80%99%E5%80%8B-ai-%E4%B8%8D%E5%AF%AB%E6%96%87%E7%AB%A0%E4%B8%8D%E8%81%8A%E5%A4%A9%E5%8F%AA%E4%BA%A4%E5%9B%9E%E6%A9%9F%E7%8E%87%E9%81%B8%E9%A0%85%E6%88%96%E5%88%86%E6%95%B8%E9%80%99%E9%A1%9E%E7%B5%90%E6%A7%8B%E5%8C%96%E7%AD%94%E6%A1%88%E9%96%8B%E7%99%BC%E8%80%85-erik-kokal/1429862359098670/" target="_blank" rel="noopener">https://www.facebook.com/hinet/videos/openai-10-%E6%9C%88-6-%E6%97%A5%E9%96%8B%E6%94%BE-decisions-api-%E5%85%AC%E9%96%8B%E6%B8%AC%E8%A9%A6%E9%80%99%E5%80%8B-ai-%E4%B8%8D%E5%AF%AB%E6%96%87%E7%AB%A0%E4%B8%8D%E8%81%8A%E5%A4%A9%E5%8F%AA%E4%BA%A4%E5%9B%9E%E6%A9%9F%E7%8E%87%E9%81%B8%E9%A0%85%E6%88%96%E5%88%86%E6%95%B8%E9%80%99%E9%A1%9E%E7%B5%90%E6%A7%8B%E5%8C%96%E7%AD%94%E6%A1%88%E9%96%8B%E7%99%BC%E8%80%85-erik-kokal/1429862359098670/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
