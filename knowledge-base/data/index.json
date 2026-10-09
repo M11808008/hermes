@@ -58,6 +58,34 @@
     "markdown": "articles/2026/10/2026-10-09-facebook-openai-decisions-api.md"
   },
   {
+    "title": "Threads｜多服務 AI 助理整合 CLI：讓 Coding Agent 代轉任務前的安全與可維護性檢核",
+    "date": "2026-10-09",
+    "source": "Threads",
+    "author": "sam_lung2077",
+    "type": "social-post",
+    "topics": [
+      "AI Agent",
+      "CLI",
+      "多代理協作",
+      "OAuth",
+      "權限安全",
+      "開源軟體"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BBL0vBaylD/",
+      "https://www.threads.com/@sam_lung2077/post/DeO6bUtGkH5?xmt=AQG0Evih4hY5xb1CZ4eIH3-ImZN_Spgqj7pH5vFF5wxO9QOh8lvfF7AAY4E9qUJg9xQQwUi_4A&slof=1",
+      "https://www.threads.com/share/BBL0vBaylD/",
+      "https://www.threads.com/@sam_lung2077/post/DeO6bUtGkH5?xmt=AQG0Evih4hY5xb1CZ4eIH3-ImZN_Spgqj7pH5vFF5wxO9QOh8lvfF7AAY4E9qUJg9xQQwUi_4A&slof=1"
+    ],
+    "excerpt": "把多個 AI 助理接到同一個 CLI，再讓 Coding Agent 代為呼叫、取回與轉交結果，可以減少手動切換；但它同時把多個帳戶、雲端工作環境與資料權限集中到一條自動化鏈路，必須先通過供應鏈、安全與可維護性檢查。",
+    "slug": "2026-10-09-threads-multi-service-ai-agent-cli-safety",
+    "html": "articles/2026-10-09-threads-multi-service-ai-agent-cli-safety.html",
+    "markdown": "articles/2026/10/2026-10-09-threads-multi-service-ai-agent-cli-safety.md"
+  },
+  {
     "title": "Threads｜One：把多個 Coding Agent 的等待、回覆與完成通知收進同一個 Inbox",
     "date": "2026-10-09",
     "source": "Threads",
