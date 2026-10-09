@@ -58,6 +58,34 @@
     "markdown": "articles/2026/10/2026-10-09-facebook-openai-decisions-api.md"
   },
   {
+    "title": "Threads｜把 Notion 旅遊行程做成可愛單頁網站：Prompt、驗收與發佈邊界",
+    "date": "2026-10-09",
+    "source": "Threads",
+    "author": "madori452",
+    "type": "social-post",
+    "topics": [
+      "Claude",
+      "Notion",
+      "旅遊規劃",
+      "HTML",
+      "Prompt",
+      "前端設計"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_kYBA9Vxc/",
+      "https://www.threads.com/@madori452/post/DeOd39gDxJn",
+      "https://www.threads.com/share/_kYBA9Vxc/",
+      "https://www.threads.com/@madori452/post/DeOd39gDxJn"
+    ],
+    "excerpt": "把整理好的 Notion 行程交給 Claude，再以明確的版面、色彩、互動與無障礙需求描述，就能快速做出一個可分享的單一 HTML 旅遊網站；真正上線前，仍需要人工驗收資料正確性、隱私與行動裝置體驗。",
+    "slug": "2026-10-09-threads-claude-notion-travel-site-prompt",
+    "html": "articles/2026-10-09-threads-claude-notion-travel-site-prompt.html",
+    "markdown": "articles/2026/10/2026-10-09-threads-claude-notion-travel-site-prompt.md"
+  },
+  {
     "title": "Threads｜多服務 AI 助理整合 CLI：讓 Coding Agent 代轉任務前的安全與可維護性檢核",
     "date": "2026-10-09",
     "source": "Threads",
