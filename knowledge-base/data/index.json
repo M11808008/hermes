@@ -117,6 +117,33 @@
     "markdown": "articles/2026/10/2026-10-09-threads-sstar-lung-cue-personal-agents.md"
   },
   {
+    "title": "Threads｜第三方 AI Agent 讀取雲端知識庫：先確認授權邊界，再談數位分身",
+    "date": "2026-10-09",
+    "source": "Threads",
+    "author": "mileson007",
+    "type": "social-post",
+    "topics": [
+      "AI Agent",
+      "雲端知識庫",
+      "OAuth",
+      "權限安全",
+      "數位分身"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAU5tqo4Mu/",
+      "https://www.threads.com/@mileson007/post/DeQz5fcFMSC?xmt=AQG0_SjLsbvGLZWiuHzobhQMayBfq1z-2JnPADaD9IBYnKxgsWLOF80ktdHC7alCY4abvMyIdA&slof=1",
+      "https://www.threads.com/share/BAU5tqo4Mu/",
+      "https://www.threads.com/@mileson007/post/DeQz5fcFMSC?xmt=AQG0_SjLsbvGLZWiuHzobhQMayBfq1z-2JnPADaD9IBYnKxgsWLOF80ktdHC7alCY4abvMyIdA&slof=1"
+    ],
+    "excerpt": "讓 Agent 認識你的知識庫很有吸引力，但任何要求安裝 CLI、開啟授權頁、登入帳號、讀取雲端文件的第三方工具，都應先被當成高權限整合來評估，而不是單純聊天功能。",
+    "slug": "2026-10-09-threads-third-party-agent-cloud-knowledge-access-risk",
+    "html": "articles/2026-10-09-threads-third-party-agent-cloud-knowledge-access-risk.html",
+    "markdown": "articles/2026/10/2026-10-09-threads-third-party-agent-cloud-knowledge-access-risk.md"
+  },
+  {
     "title": "Facebook｜OMP 的 Skill-Wise：把 AI Agent 接入 WhatsApp 的協作構想與授權邊界",
     "date": "2026-10-08",
     "source": "https://www.facebook.com/share/1FBWPknBWu/?mibextid=wwXIfr",
