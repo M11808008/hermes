@@ -56,6 +56,37 @@
     "markdown": "articles/2026/10/2026-10-10-threads-dankopeng-hermes-muse-grok-notebooklm-collaboration.md"
   },
   {
+    "title": "Threads｜nanoMuse：跨裝置、可自架的開源個人 Agent，將高風險操作置於 Sentinel 授權關卡",
+    "date": "2026-10-10",
+    "source": "Threads / nanoMuse 官方來源",
+    "author": "yuqi._.0313",
+    "type": "open-source-project",
+    "topics": [
+      "AI Agent",
+      "開源",
+      "多裝置協作",
+      "Computer Use",
+      "MCP",
+      "個人記憶",
+      "資安",
+      "自架"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_7SRFK1_M/",
+      "https://www.threads.com/@yuqi._.0313/post/DeUA_xbEyKf",
+      "https://github.com/nano-muse/nanoMuse",
+      "https://nanomuse.cn/",
+      "https://arxiv.org/abs/2610.08699"
+    ],
+    "excerpt": "nanoMuse 想做的不是另一個聊天機器人，而是一個可跨手機與電腦執行、可自行選模型與中繼、且把「能否動手」交給明確授權機制控制的個人 Agent 系統。",
+    "slug": "2026-10-10-threads-yuqi-nanomuse-open-source-personal-agent",
+    "html": "articles/2026-10-10-threads-yuqi-nanomuse-open-source-personal-agent.html",
+    "markdown": "articles/2026/10/2026-10-10-threads-yuqi-nanomuse-open-source-personal-agent.md"
+  },
+  {
     "title": "Facebook｜AI 短影音剪輯課：把素材、剪輯需求、字幕與特效整理成可重複流程",
     "date": "2026-10-09",
     "source": "Facebook Video",
