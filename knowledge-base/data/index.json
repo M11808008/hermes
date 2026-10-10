@@ -28,6 +28,34 @@
     "markdown": "articles/2026/10/2026-10-10-instagram-pomelli-google-labs-brand-marketing-content.md"
   },
   {
+    "title": "Threads｜Hermes、Muse、Grok Bot 協作產出 NotebookLM 風格解說影片：從「模型比武」轉向角色分工",
+    "date": "2026-10-10",
+    "source": "Threads",
+    "author": "dankopeng",
+    "type": "workflow-note",
+    "topics": [
+      "Hermes",
+      "Muse",
+      "Grok Bot",
+      "多代理協作",
+      "NotebookLM",
+      "解說影片",
+      "工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAW_zaQa-C/",
+      "https://www.threads.com/@dankopeng/post/DeUA211ktuX",
+      "https://www.threads.com/@dankopeng/post/DeUA211ktuX"
+    ],
+    "excerpt": "這則貼文把「多個 AI 工具誰勝誰負」轉成更實用的問題：能否讓不同工具各自承擔合適的工作，合力完成一個有驗收標準的影音任務？",
+    "slug": "2026-10-10-threads-dankopeng-hermes-muse-grok-notebooklm-collaboration",
+    "html": "articles/2026-10-10-threads-dankopeng-hermes-muse-grok-notebooklm-collaboration.html",
+    "markdown": "articles/2026/10/2026-10-10-threads-dankopeng-hermes-muse-grok-notebooklm-collaboration.md"
+  },
+  {
     "title": "Facebook｜AI 短影音剪輯課：把素材、剪輯需求、字幕與特效整理成可重複流程",
     "date": "2026-10-09",
     "source": "Facebook Video",
