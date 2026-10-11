@@ -369,6 +369,35 @@
     "markdown": "articles/2026/10/2026-10-09-instagram-four-github-ai-agent-tools.md"
   },
   {
+    "title": "Instagram｜「The cake is a lie」解釋 Attention：從 token 向量、QK 分數到 Transformer Block",
+    "date": "2026-10-09",
+    "source": "https://www.instagram.com/reel/DeR5Ox8Ti-4/?obrf=MXNpdGJmOTNnYW9veQ==",
+    "author": "graduate_ml（GraduateML | Machine Learning Education）",
+    "type": "social-video",
+    "topics": [
+      "Transformer",
+      "Attention",
+      "Self-Attention",
+      "LLM",
+      "機器學習教育",
+      "Deep Learning"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/graduate_ml/reel/DeR5Ox8Ti-4/",
+      "https://www.instagram.com/reel/DeR5Ox8Ti-4/?obrf=MXNpdGJmOTNnYW9veQ==",
+      "https://www.instagram.com/graduate_ml/reel/DeR5Ox8Ti-4/",
+      "https://arxiv.org/abs/1706.03762",
+      "https://research.google/pubs/attention-is-all-you-need/"
+    ],
+    "excerpt": "這支影片以一句梗句把注意力機制視覺化：每個詞不再只看鄰近詞，而是依問題中的位置，衡量序列裡其他詞與自己的關聯，再把重要資訊加權帶回來。這是理解 Transformer 的好入口，但一張圖中的點積分數不等於完整模型：真正的 Transformer 還包含 softmax 正規化、多頭注意力、殘差連接、前饋網路與位置資訊。",
+    "slug": "2026-10-09-instagram-graduate-ml-attention-transformer-explainer",
+    "html": "articles/2026-10-09-instagram-graduate-ml-attention-transformer-explainer.html",
+    "markdown": "articles/2026/10/2026-10-09-instagram-graduate-ml-attention-transformer-explainer.md"
+  },
+  {
     "title": "Threads｜把 Notion 旅遊行程做成可愛單頁網站：Prompt、驗收與發佈邊界",
     "date": "2026-10-09",
     "source": "Threads",
