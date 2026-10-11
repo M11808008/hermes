@@ -1,5 +1,32 @@
 [
   {
+    "title": "Instagram｜把 Claude 接到 LinkedIn？11 個 Skills、自動化敘事與平台規範邊界",
+    "date": "2026-10-11",
+    "source": "https://www.instagram.com/reel/DeNZCx2uINC/",
+    "author": "avigrondin（Avi Grondin；已驗證）",
+    "type": "social-video",
+    "topics": [
+      "Claude",
+      "LinkedIn",
+      "AI Agent",
+      "Skills",
+      "社群自動化",
+      "Human-in-the-loop"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DeNZCx2uINC/",
+      "https://www.instagram.com/reel/DeNZCx2uINC/",
+      "https://www.linkedin.com/legal/user-agreement"
+    ],
+    "excerpt": "這支 Reel 提出的是「以 Claude 協助 LinkedIn 工作」的工作流想像，而不是可由影片直接驗證的完整產品規格。最值得保留的設計原則是 **草稿、審閱、再發佈**；最需要避免的是把未揭露實作的「autopilot」誤解成可直接授權帳號自行抓資料、留言、回覆或發文。",
+    "slug": "2026-10-11-instagram-avigrondin-claude-linkedin-autopilot",
+    "html": "articles/2026-10-11-instagram-avigrondin-claude-linkedin-autopilot.html",
+    "markdown": "articles/2026/10/2026-10-11-instagram-avigrondin-claude-linkedin-autopilot.md"
+  },
+  {
     "title": "Instagram｜147 個「AI 員工」一鍵部署？Agency Agents 的角色庫、安裝方式與導入界線",
     "date": "2026-10-11",
     "source": "https://www.instagram.com/reel/DXPF5GrEjD9/",
