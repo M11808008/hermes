@@ -1,5 +1,33 @@
 [
   {
+    "title": "Instagram｜147 個「AI 員工」一鍵部署？Agency Agents 的角色庫、安裝方式與導入界線",
+    "date": "2026-10-11",
+    "source": "https://www.instagram.com/reel/DXPF5GrEjD9/",
+    "author": "carllee2077",
+    "type": "social-video",
+    "topics": [
+      "AI Agent",
+      "Agency Agents",
+      "Claude Code",
+      "Codex",
+      "GitHub",
+      "Prompt Engineering",
+      "開源"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DXPF5GrEjD9/",
+      "https://www.instagram.com/reel/DXPF5GrEjD9/",
+      "https://github.com/msitarzewski/agency-agents"
+    ],
+    "excerpt": "影片中的「147 個 AI 員工一鍵部署」是吸睛說法；可驗證的核心是：**Agency Agents 提供大量按職能整理的 agent persona／prompt 檔與工作流程，並用腳本轉換成多種 coding-agent 工具所需的格式。** 它可以減少從零撰寫角色指令的摩擦，但不會自動補上資料權限、工具配置、驗收標準或人類責任。",
+    "slug": "2026-10-11-instagram-carllee2077-agency-agents",
+    "html": "articles/2026-10-11-instagram-carllee2077-agency-agents.html",
+    "markdown": "articles/2026/10/2026-10-11-instagram-carllee2077-agency-agents.md"
+  },
+  {
     "title": "Instagram｜OpenClaw、Hermes 與 MausBot：把既有 Agent 編成團隊的定位比較",
     "date": "2026-10-10",
     "source": "https://www.instagram.com/reel/DeUoo5qNMIW/",
