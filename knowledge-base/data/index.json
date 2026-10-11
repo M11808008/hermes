@@ -1,5 +1,33 @@
 [
   {
+    "title": "Instagram｜OpenClaw、Hermes 與 MausBot：把既有 Agent 編成團隊的定位比較",
+    "date": "2026-10-10",
+    "source": "https://www.instagram.com/reel/DeUoo5qNMIW/",
+    "author": "buildwithomkar（Omkar Satpute）",
+    "type": "social-video",
+    "topics": [
+      "AI Agent",
+      "OpenClaw",
+      "Hermes Agent",
+      "MausBot",
+      "多 Agent",
+      "開源"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DeUoo5qNMIW/",
+      "https://www.instagram.com/reel/DeUoo5qNMIW/",
+      "https://mausbot.com/",
+      "https://github.com/milind-soni/OpenMausBot"
+    ],
+    "excerpt": "這支 Reel 的重點不在「誰最好」，而是把角色拆開：聊天入口、可累積脈絡的 agent 與多 agent 編排層可以並存。真正要驗證的是每一層需取得哪些帳號、資料與執行權限，而不是只看同一張比較圖。",
+    "slug": "2026-10-10-instagram-buildwithomkar-openclaw-hermes-mausbot",
+    "html": "articles/2026-10-10-instagram-buildwithomkar-openclaw-hermes-mausbot.html",
+    "markdown": "articles/2026/10/2026-10-10-instagram-buildwithomkar-openclaw-hermes-mausbot.md"
+  },
+  {
     "title": "Instagram｜Pomelli：Google Labs 用品牌網站生成行銷素材的 AI 工具",
     "date": "2026-10-10",
     "source": "Instagram",
