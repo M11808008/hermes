@@ -309,6 +309,33 @@
     "markdown": "articles/2026/10/2026-10-09-facebook-ai-video-edit-course.md"
   },
   {
+    "title": "Facebook｜Gemini Skills 進入一般聊天：把重複工作規則做成可呼叫的 SKILL.md",
+    "date": "2026-10-09",
+    "source": "https://www.facebook.com/share/p/19mNRKPXde/?mibextid=wwXIfr",
+    "author": "數位時代 BusinessNext／蘇柔瑋",
+    "type": "social-post",
+    "topics": [
+      "Google Gemini",
+      "Gemini Skills",
+      "Gems",
+      "SKILL.md",
+      "可重用工作流",
+      "Prompt Engineering"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/92466/gemini-skills-how-to-write-free",
+      "https://www.facebook.com/bnextmedia/posts/gemini%E4%B9%9F%E9%96%8B%E5%A7%8B%E6%8E%A8skills%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E6%89%93%E5%B0%B1%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%8F%AB%E5%87%BA%E4%BE%86%E5%85%8D%E8%B2%BB%E5%B8%B3%E8%99%9F%E4%B9%9F%E8%83%BD%E7%94%A8/1504770095015227/",
+      "https://www.bnext.com.tw/article/92466/gemini-skills-how-to-write-free"
+    ],
+    "excerpt": "這則 Facebook 貼文連到《數位時代》對 Gemini Skills 的整理。它的核心概念不是再寫一段「萬用提示詞」，而是把一類會反覆發生的工作，連同觸發條件、步驟、輸出格式與安全限制，封裝為可重複使用的 `SKILL.md` 工作流。",
+    "slug": "2026-10-09-facebook-bnext-gemini-skills-gems-transition",
+    "html": "articles/2026-10-09-facebook-bnext-gemini-skills-gems-transition.html",
+    "markdown": "articles/2026/10/2026-10-09-facebook-bnext-gemini-skills-gems-transition.md"
+  },
+  {
     "title": "Facebook｜OpenAI Decisions API：將文字與圖片轉成可程式使用的決策",
     "date": "2026-10-09",
     "source": "Facebook Reel",
