@@ -55,6 +55,32 @@
     "markdown": "articles/2026/10/2026-10-11-instagram-carllee2077-agency-agents.md"
   },
   {
+    "title": "Instagram｜ChatGPT 五種視覺化提示詞：時間軸、動漫解說、速查表、爆炸圖與心智圖",
+    "date": "2026-10-11",
+    "source": "https://www.instagram.com/reel/Ddy9jzll3zu/",
+    "author": "sabrina_ramonov（Sabrina Ramonov；已驗證）",
+    "type": "social-video",
+    "topics": [
+      "ChatGPT",
+      "Prompt Engineering",
+      "視覺化",
+      "時間軸",
+      "心智圖",
+      "學習設計"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/Ddy9jzll3zu/",
+      "https://www.instagram.com/reel/Ddy9jzll3zu/"
+    ],
+    "excerpt": "這組 prompt 最有價值的不是斜線指令本身，而是先決定「我要用哪一種認知結構理解資料」：時間順序、記憶鉤子、考前總覽、組成拆解，或概念關係。**請把 `/timelineview` 等視為自訂 prompt 標籤，不是 ChatGPT 已保證支援的內建 slash command。**",
+    "slug": "2026-10-11-instagram-sabrina-ramonov-chatgpt-visual-prompts",
+    "html": "articles/2026-10-11-instagram-sabrina-ramonov-chatgpt-visual-prompts.html",
+    "markdown": "articles/2026/10/2026-10-11-instagram-sabrina-ramonov-chatgpt-visual-prompts.md"
+  },
+  {
     "title": "Instagram｜OpenClaw、Hermes 與 MausBot：把既有 Agent 編成團隊的定位比較",
     "date": "2026-10-10",
     "source": "https://www.instagram.com/reel/DeUoo5qNMIW/",
