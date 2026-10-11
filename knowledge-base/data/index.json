@@ -398,6 +398,33 @@
     "markdown": "articles/2026/10/2026-10-09-instagram-graduate-ml-attention-transformer-explainer.md"
   },
   {
+    "title": "Instagram｜從「今天騎不騎車」理解單一神經元：輸入、權重、偏差與加權和",
+    "date": "2026-10-09",
+    "source": "https://www.instagram.com/reel/DeRNXXMoH--/?dlrf=MTU3NG5hZW9obmtrcw==",
+    "author": "neuron.machinelearning（Neuron. Machine Learning）",
+    "type": "social-video",
+    "topics": [
+      "神經網路",
+      "Neuron",
+      "Deep Learning",
+      "機器學習教育",
+      "Python"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/neuron.machinelearning/reel/DeRNXXMoH--/",
+      "https://www.instagram.com/reel/DeRNXXMoH--/?dlrf=MTU3NG5hZW9obmtrcw==",
+      "https://www.instagram.com/neuron.machinelearning/reel/DeRNXXMoH--/",
+      "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense"
+    ],
+    "excerpt": "這支 45 秒 Reel 用天氣條件示範神經元最核心的數學：把每個輸入乘以對應權重、全部加總後加上偏差。這是理解深度學習的正確起點；不過影片中的 `RIDE` 是教學性的決策標籤，真實模型是否輸出機率、分數或分類，還取決於後續 activation、任務設計與訓練資料。",
+    "slug": "2026-10-09-instagram-neuron-machinelearning-single-neuron-from-scratch",
+    "html": "articles/2026-10-09-instagram-neuron-machinelearning-single-neuron-from-scratch.html",
+    "markdown": "articles/2026/10/2026-10-09-instagram-neuron-machinelearning-single-neuron-from-scratch.md"
+  },
+  {
     "title": "Threads｜把 Notion 旅遊行程做成可愛單頁網站：Prompt、驗收與發佈邊界",
     "date": "2026-10-09",
     "source": "Threads",
