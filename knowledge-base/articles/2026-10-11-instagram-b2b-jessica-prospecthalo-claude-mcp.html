@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Instagram｜Claude 對話式啟動 LinkedIn 外聯？ProspectHalo MCP 的可驗證能力與合規邊界</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Instagram｜Claude 對話式啟動 LinkedIn 外聯？ProspectHalo MCP 的可驗證能力與合規邊界</h1><figure><img src="../assets/source-images/prospecthalo-claude-mcp-og.png" alt="ProspectHalo 官方 Claude MCP 連接頁的視覺圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>ProspectHalo 官方 Open Graph 圖</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這支 Reel 真正值得保存的不是「自動印鈔」式標語，而是較具體的工作流：使用 ProspectHalo 的遠端 MCP，讓 Claude 在對話中建立或管理 ProspectHalo 的銷售外聯工作。第一方文件已說明 OAuth 連接與可做的工作；但成效、帳號安全與 LinkedIn 合規，不能由短影片或產品宣傳直接推論。</p>
+<h2>Reel 可見內容：22.5 秒的畫面式證據</h2>
+<p>Instagram 帳號 `b2b_jessica` 的 Reel 長約 22.48 秒；頁面擷取時可見 961 個讚、318 則留言，文案為 `Comment “Claude” to NOT MISS OUT`，並附 `#aitools #b2bsales #salesstrategy #outreach #leadgeneration`。本次僅在約第 3、10、16 秒取樣，並非完整逐字稿：</p>
+<ul>
+<li>約第 3 秒：畫面以 Claude 的橘色圖示加上 LinkedIn 圖示，寫著 `= MONEY PRINTER`。這是社群作者的宣傳性比喻，不能當作收入或效果保證。</li>
+<li>約第 10 秒：影片字幕寫 `create an account`；螢幕可見 `Login` 與 `Sign up`。沒有顯示帳號建立後的權限、方案或付款內容。</li>
+<li>約第 16 秒：影片覆蓋文字為 `prompt Claude to create an outreach agent using prospecthalo`。Claude 輸入框中可辨識 `Create an outreach agent for my business using prospecthalo mcp`，並顯示 `Chat`、`Cowork` 與被裁切的 `Sonnet 5 · Medi...`。畫面尚未展示送出後的回覆、真正建立的 agent 或任何實際發送成果。</li>
+</ul>
+<figure><img src="../assets/source-images/instagram-b2b-jessica-prospecthalo-claude-16s.png" alt="Reel 約第 16 秒：在 Claude 輸入 ProspectHalo MCP 外聯 agent 指令" loading="lazy" referrerpolicy="no-referrer"><figcaption>畫面擷取，約第 16 秒</figcaption></figure>
+<h2>第一方資料確認：ProspectHalo MCP 實際提供什麼？</h2>
+<p>ProspectHalo 官方的 MCP 頁與 Help Center 說明，它將自己的銷售 agent 工作區以遠端 MCP server 連到 Claude 或其他支援遠端 MCP 與 OAuth 的 AI agent。官方列出的可對話式工作包括：</p>
+<ul>
+<li>依目標客群尋找 prospects、建立合格名單。</li>
+<li>建立與管理 LinkedIn、email 的 outreach。</li>
+<li>建立 LinkedIn content、檢視 agent activity、replies 與結果。</li>
+<li>查詢既有 agent、強勢 leads、已連接帳號的狀態，或協助調整 agent。</li>
+</ul>
+<p>官方 Help Center 的示範使用 Claude，但亦聲稱同一 MCP 連接可用於 ChatGPT、Cursor、OpenClaw 和其他相容 agent。實際可否連線仍取決於使用的 AI app 是否支援遠端 MCP 與自動 OAuth 註冊、帳號的 connector 存取權，以及 ProspectHalo 的工作區／方案狀態。</p>
+<h2>連接方式的關鍵安全界線</h2>
+<p>官方指南指定 MCP endpoint 為：</p>
+<p><a href="https://app.prospecthalo.ai/api/agent/v1/mcp" target="_blank" rel="noopener">https://app.prospecthalo.ai/api/agent/v1/mcp</a></p>
+<p>它要求在 AI app 的 MCP／Connector／Tools 設定中加入遠端 server，使用自動 OAuth 註冊，並在 ProspectHalo 授權頁面審閱後連接。文件特別寫明：不應加入 API key、client secret 或額外 request headers。這是較可控的授權模式，但不表示可以跳過權限審閱：連接前仍應確認資料範圍、可操作帳號、撤銷方式與通知機制。</p>
+<h2>不要把外聯 agent 當成免審核的自動發送器</h2>
+<p>ProspectHalo 的產品頁宣稱可從使用者自有帳號發出 LinkedIn／email 訊息、進行 follow-up，並提供 approval、每日上限與 warmup 等設定；這些皆為供應商的產品敘述。產品條款同時禁止 spam、harassment、unlawful scraping、credential abuse 與違法訊息，且使用者須對使用資料與聯絡人的方式負責。</p>
+<p>更穩妥的導入方式：</p>
+<ul>
+<li>先只建立一個非敏感測試 campaign，讓 AI 協助定義 offer、受眾、渠道與文案，不直接授權大量送出。</li>
+<li>對首封訊息與高風險變更使用人工批准；在確認個資、語氣、主張與目標名單後才發送。</li>
+<li>設定小型每日上限、停止條件與回覆升級規則；不要把「無回應就追蹤」設為無限制循環。</li>
+<li>不將 LinkedIn 密碼、Cookie、長效 token、私訊匯出檔或完整客戶名單貼進 Claude 對話。</li>
+<li>檢查 LinkedIn 的現行 User Agreement、官方 API／已授權 integration 的適用範圍，以及公司所在地的個資與反垃圾訊息義務。</li>
+</ul>
+<h2>證據與限制</h2>
+<ul>
+<li>Reel 證明的是作者的宣傳文案與取樣畫面；它沒有公開完整 prompt、agent 設定、OAuth scope、訊息內容、發送紀錄、成本或營收成效。</li>
+<li>ProspectHalo 的連接、MCP URL 與功能範圍來自其官方網站及 Help Center；供應商的功能、價格與可用性會變動，實作前應再確認。</li>
+<li>本次未建立 ProspectHalo 帳號、未連接任何 LinkedIn 或 email 帳號、未呼叫 MCP，也未測試寄送、資料來源或成效。</li>
+</ul>
+<h2>原始與查核連結</h2>
+<ul>
+<li>Instagram Reel：<a href="https://www.instagram.com/reel/DeT01p8RDM4/?cplk=MTN3c3BnZDh4MjY3cQ==" target="_blank" rel="noopener">https://www.instagram.com/reel/DeT01p8RDM4/?cplk=MTN3c3BnZDh4MjY3cQ==</a></li>
+<li>ProspectHalo MCP：<a href="https://prospecthalo.ai/mcp-server" target="_blank" rel="noopener">https://prospecthalo.ai/mcp-server</a></li>
+<li>ProspectHalo 官方連接指南：<a href="https://help.prospecthalo.ai/en/articles/16744078-connect-prospecthalo-to-claude-and-other-ai-agents-with-mcp" target="_blank" rel="noopener">https://help.prospecthalo.ai/en/articles/16744078-connect-prospecthalo-to-claude-and-other-ai-agents-with-mcp</a></li>
+<li>LinkedIn User Agreement：<a href="https://www.linkedin.com/legal/user-agreement" target="_blank" rel="noopener">https://www.linkedin.com/legal/user-agreement</a></li>
+</ul>
+<p>來源擷取紀錄：`source-archive/2026-10-11-instagram-b2b-jessica-prospecthalo-claude-mcp.json`</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-11 · https://www.instagram.com/reel/DeT01p8RDM4/?cplk=MTN3c3BnZDh4MjY3cQ== · social-video</div><h3>標籤</h3><span class="tag">Claude</span><span class="tag">MCP</span><span class="tag">ProspectHalo</span><span class="tag">LinkedIn</span><span class="tag">銷售自動化</span><span class="tag">AI Agent</span><span class="tag">OAuth</span><h3>原始連結</h3><p><a href="https://www.instagram.com/b2b_jessica/reel/DeT01p8RDM4/" target="_blank" rel="noopener">https://www.instagram.com/b2b_jessica/reel/DeT01p8RDM4/</a></p><p><a href="https://www.instagram.com/reel/DeT01p8RDM4/?cplk=MTN3c3BnZDh4MjY3cQ==" target="_blank" rel="noopener">https://www.instagram.com/reel/DeT01p8RDM4/?cplk=MTN3c3BnZDh4MjY3cQ==</a></p><p><a href="https://www.instagram.com/b2b_jessica/reel/DeT01p8RDM4/" target="_blank" rel="noopener">https://www.instagram.com/b2b_jessica/reel/DeT01p8RDM4/</a></p><p><a href="https://prospecthalo.ai/mcp-server" target="_blank" rel="noopener">https://prospecthalo.ai/mcp-server</a></p><p><a href="https://help.prospecthalo.ai/en/articles/16744078-connect-prospecthalo-to-claude-and-other-ai-agents-with-mcp" target="_blank" rel="noopener">https://help.prospecthalo.ai/en/articles/16744078-connect-prospecthalo-to-claude-and-other-ai-agents-with-mcp</a></p><p><a href="https://www.linkedin.com/legal/user-agreement" target="_blank" rel="noopener">https://www.linkedin.com/legal/user-agreement</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

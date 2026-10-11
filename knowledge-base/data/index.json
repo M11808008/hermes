@@ -27,6 +27,37 @@
     "markdown": "articles/2026/10/2026-10-11-instagram-avigrondin-claude-linkedin-autopilot.md"
   },
   {
+    "title": "Instagram｜Claude 對話式啟動 LinkedIn 外聯？ProspectHalo MCP 的可驗證能力與合規邊界",
+    "date": "2026-10-11",
+    "source": "https://www.instagram.com/reel/DeT01p8RDM4/?cplk=MTN3c3BnZDh4MjY3cQ==",
+    "author": "b2b_jessica（Jessica Miller；已驗證）",
+    "type": "social-video",
+    "topics": [
+      "Claude",
+      "MCP",
+      "ProspectHalo",
+      "LinkedIn",
+      "銷售自動化",
+      "AI Agent",
+      "OAuth"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/b2b_jessica/reel/DeT01p8RDM4/",
+      "https://www.instagram.com/reel/DeT01p8RDM4/?cplk=MTN3c3BnZDh4MjY3cQ==",
+      "https://www.instagram.com/b2b_jessica/reel/DeT01p8RDM4/",
+      "https://prospecthalo.ai/mcp-server",
+      "https://help.prospecthalo.ai/en/articles/16744078-connect-prospecthalo-to-claude-and-other-ai-agents-with-mcp",
+      "https://www.linkedin.com/legal/user-agreement"
+    ],
+    "excerpt": "這支 Reel 真正值得保存的不是「自動印鈔」式標語，而是較具體的工作流：使用 ProspectHalo 的遠端 MCP，讓 Claude 在對話中建立或管理 ProspectHalo 的銷售外聯工作。第一方文件已說明 OAuth 連接與可做的工作；但成效、帳號安全與 LinkedIn 合規，不能由短影片或產品宣傳直接推論。",
+    "slug": "2026-10-11-instagram-b2b-jessica-prospecthalo-claude-mcp",
+    "html": "articles/2026-10-11-instagram-b2b-jessica-prospecthalo-claude-mcp.html",
+    "markdown": "articles/2026/10/2026-10-11-instagram-b2b-jessica-prospecthalo-claude-mcp.md"
+  },
+  {
     "title": "Instagram｜147 個「AI 員工」一鍵部署？Agency Agents 的角色庫、安裝方式與導入界線",
     "date": "2026-10-11",
     "source": "https://www.instagram.com/reel/DXPF5GrEjD9/",
