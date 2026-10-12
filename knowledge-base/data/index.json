@@ -57,6 +57,39 @@
     "markdown": "articles/2026/10/2026-10-12-threads-ai-threads-mlh-cursor-pro-hacktoberfest.md"
   },
   {
+    "title": "Threads｜Skales 本機 AI Agent：可用性、資料路徑與專有授權查核",
+    "date": "2026-10-12",
+    "source": "https://www.threads.com/share/_rvCQuQ_K/",
+    "author": "aiposthub",
+    "type": "article",
+    "topics": [
+      "Skales",
+      "AI Agent",
+      "Local AI",
+      "Computer Use",
+      "Ollama",
+      "AI安全",
+      "軟體授權"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/DeZMTeCEmk8",
+      "https://www.threads.com/share/_rvCQuQ_K/",
+      "https://www.threads.com/@aiposthub/post/DeZMTeCEmk8",
+      "https://www.aiposthub.com/skales-local-ai-agent-setup-privacy-license-guide/",
+      "https://github.com/skalesapp/skales",
+      "https://github.com/skalesapp/skales/blob/main/LICENSE",
+      "https://skales.app/licence",
+      "https://docs.skales.app"
+    ],
+    "excerpt": "Skales 的核心賣點是「不用 Docker 或終端機、以一般桌面 App 安裝，讓 Agent 在你的裝置上操作檔案、瀏覽器與其他工具」。這個方向有官方 README 與發行 repo 可交叉核對；但它不是開源產品，且「本機」不等於所有資料都不會離開裝置。模型選擇、API 金鑰、選用的線上服務、檔案範圍與授權用途，必須在交給 Agent 真實任務前先釐清。",
+    "slug": "2026-10-12-threads-aiposthub-skales-local-ai-agent-license",
+    "html": "articles/2026-10-12-threads-aiposthub-skales-local-ai-agent-license.html",
+    "markdown": "articles/2026/10/2026-10-12-threads-aiposthub-skales-local-ai-agent-license.md"
+  },
+  {
     "title": "Threads｜LINE Cheater：本機整理 iPhone LINE 備份、釋放附件空間的開源工具",
     "date": "2026-10-12",
     "source": "https://www.threads.com/share/_nGNlKTfH/",
