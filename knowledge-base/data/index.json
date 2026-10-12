@@ -121,6 +121,41 @@
     "markdown": "articles/2026/10/2026-10-12-threads-free-com-tw-line-cheater-ios-line-backup-cleanup.md"
   },
   {
+    "title": "Threads｜ManimGX：為 AI Agent 設計的 Rust／wgpu 3D 動畫引擎查核",
+    "date": "2026-10-12",
+    "source": "https://www.threads.com/share/_6tJE69mB/",
+    "author": "kufutw",
+    "type": "article",
+    "topics": [
+      "ManimGX",
+      "Manim",
+      "AI Agent",
+      "3D動畫",
+      "Rust",
+      "WebGPU",
+      "Python",
+      "開源工具"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/DeYrXuAn_tc",
+      "https://www.threads.com/share/_6tJE69mB/",
+      "https://www.threads.com/@kufutw/post/DeYrXuAn_tc",
+      "https://github.com/academa-labs/manimgx",
+      "https://pypi.org/project/manimgx/",
+      "https://manimgx.academa.ai",
+      "https://manimgx.academa.ai/llms.txt",
+      "https://github.com/academa-labs/manimgx/tree/main/benchmarks",
+      "https://github.com/academa-labs/manimgx/blob/main/LICENSE"
+    ],
+    "excerpt": "ManimGX 不是讓模型「直接憑空做動畫」的封閉服務，而是讓人或 AI coding agent 以 Python 撰寫場景、再交由 Rust／wgpu 核心輸出 MP4 的開源動畫引擎。它瞄準的是可程式化、可檢查、可反覆修改的數學與 3D 解說動畫工作流；速度數字很亮眼，但只代表官方列出的特定場景、硬體與設定，不能直接套用到所有動畫。",
+    "slug": "2026-10-12-threads-kufutw-manimgx-agent-3d-animation-engine",
+    "html": "articles/2026-10-12-threads-kufutw-manimgx-agent-3d-animation-engine.html",
+    "markdown": "articles/2026/10/2026-10-12-threads-kufutw-manimgx-agent-3d-animation-engine.md"
+  },
+  {
     "title": "Instagram｜把 Claude 接到 LinkedIn？11 個 Skills、自動化敘事與平台規範邊界",
     "date": "2026-10-11",
     "source": "https://www.instagram.com/reel/DeNZCx2uINC/",
