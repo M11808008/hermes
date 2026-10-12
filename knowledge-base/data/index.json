@@ -28,6 +28,37 @@
     "markdown": "articles/2026/10/2026-10-12-threads-ai-threads-mlh-cursor-pro-hacktoberfest.md"
   },
   {
+    "title": "Threads｜LINE Cheater：本機整理 iPhone LINE 備份、釋放附件空間的開源工具",
+    "date": "2026-10-12",
+    "source": "https://www.threads.com/share/_nGNlKTfH/",
+    "author": "free.com.tw",
+    "type": "social-post",
+    "topics": [
+      "LINE",
+      "iPhone",
+      "iOS",
+      "資料備份",
+      "儲存空間",
+      "開源工具",
+      "隱私"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@free.com.tw/post/DeWLg9TFveF",
+      "https://www.threads.com/share/_nGNlKTfH/",
+      "https://www.threads.com/@free.com.tw/post/DeWLg9TFveF",
+      "https://free.com.tw/line-cheater/",
+      "https://github.com/zeuikli/line-cheater",
+      "https://line-cheater.gginin.de/"
+    ],
+    "excerpt": "如果 iPhone 上的 LINE 因長年累積照片、影片與檔案而占用大量空間，LINE Cheater 提供一個可在本機檢視 iOS LINE 備份附件、人工決定取捨、再另存精簡候選備份的做法。它不是 LINE 官方功能，也不是無風險的一鍵清理；最重要的原則是：**原始備份不覆寫、候選檔先驗證、私人備份不外流。**",
+    "slug": "2026-10-12-threads-free-com-tw-line-cheater-ios-line-backup-cleanup",
+    "html": "articles/2026-10-12-threads-free-com-tw-line-cheater-ios-line-backup-cleanup.html",
+    "markdown": "articles/2026/10/2026-10-12-threads-free-com-tw-line-cheater-ios-line-backup-cleanup.md"
+  },
+  {
     "title": "Instagram｜把 Claude 接到 LinkedIn？11 個 Skills、自動化敘事與平台規範邊界",
     "date": "2026-10-11",
     "source": "https://www.instagram.com/reel/DeNZCx2uINC/",
