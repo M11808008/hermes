@@ -1,5 +1,33 @@
 [
   {
+    "title": "Google Gemini at Work｜從 AI 助理走向具企業身分的數位協作者",
+    "date": "2026-10-13",
+    "source": "https://futureaitw.substack.com/p/google-geminiai",
+    "author": "AI觀察日記｜AI未來週報",
+    "type": "link-archive",
+    "topics": [
+      "Google Cloud",
+      "Gemini",
+      "Gemini at Work",
+      "Enterprise AI",
+      "AI Agent",
+      "Agent Governance",
+      "Digital Coworker"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://futureaitw.substack.com/p/google-geminiai",
+      "https://futureaitw.substack.com/p/google-geminiai",
+      "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026"
+    ],
+    "excerpt": "AI觀察日記將 Google Gemini at Work 2026 解讀為：Google 不只要提供模型或聊天助理，而是想把 Gemini 變成可跨工作入口、長時間執行、連接企業系統並受治理的通用工作代理。Google Cloud 的 2026 年 10 月 9 日官方公告確認了這個產品方向；但可用範圍、成熟度、成本與效益仍必須依企業方案、區域與實際工作負載個別驗證。 ![Gemini at Work 主題封面，呈現 Google Gemini 與企業工作情境](../assets/source-images/2026-10-13-google-gemini-at-work-substack.png \"AI觀察日記 Gemini at Work 封面\")",
+    "slug": "2026-10-13-google-gemini-at-work-digital-coworker",
+    "html": "articles/2026-10-13-google-gemini-at-work-digital-coworker.html",
+    "markdown": "articles/2026/10/2026-10-13-google-gemini-at-work-digital-coworker.md"
+  },
+  {
     "title": "Facebook｜朗廷卓逸會 2027 改制與 Mastercard 會籍快速通道：官方條款查核",
     "date": "2026-10-12",
     "source": "https://www.facebook.com/share/p/1cK4L8c4DJ/?mibextid=wwXIfr",
