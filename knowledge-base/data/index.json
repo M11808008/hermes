@@ -216,6 +216,38 @@
     "markdown": "articles/2026/10/2026-10-12-threads-kufutw-manimgx-agent-3d-animation-engine.md"
   },
   {
+    "title": "X｜AIVideoHub：用 ComfyUI 在本機執行 MiniMax H3 的入門流程與邊界",
+    "date": "2026-10-12",
+    "source": "https://x.com/aivideohub_/status/2109450698048049539/video/1?s=68",
+    "author": "AIVideoHub_（影片教學）；MiniMax / Comfy-Org（官方來源查核）",
+    "type": "social-video",
+    "topics": [
+      "MiniMax H3",
+      "ComfyUI",
+      "本機推論",
+      "AI 影片生成",
+      "Video-to-Video",
+      "Text-to-Video",
+      "X"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/AIVideoHub_/status/2109450698048049539",
+      "https://x.com/aivideohub_/status/2109450698048049539/video/1?s=68",
+      "https://x.com/AIVideoHub_/status/2109450698048049539",
+      "https://github.com/MiniMax-AI/MiniMax-H3",
+      "https://docs.comfy.org/tutorials/video/minimax/minimax-h3",
+      "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_minimax_h3_t2v.json",
+      "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_minimax_h3_r2v.json"
+    ],
+    "excerpt": "這支約 2 分 27 秒的中文短教學把「本機跑 MiniMax H3」拆成五步：安裝 ComfyUI、更新版本、開啟本機 H3 模板並補齊模型、調整虛擬記憶體、輸入提示詞執行。它適合作為入門流程參考，但不是官方最低規格或完整部署指南。",
+    "slug": "2026-10-12-x-aivideohub-minimax-h3-local-comfyui",
+    "html": "articles/2026-10-12-x-aivideohub-minimax-h3-local-comfyui.html",
+    "markdown": "articles/2026/10/2026-10-12-x-aivideohub-minimax-h3-local-comfyui.md"
+  },
+  {
     "title": "Instagram｜把 Claude 接到 LinkedIn？11 個 Skills、自動化敘事與平台規範邊界",
     "date": "2026-10-11",
     "source": "https://www.instagram.com/reel/DeNZCx2uINC/",
