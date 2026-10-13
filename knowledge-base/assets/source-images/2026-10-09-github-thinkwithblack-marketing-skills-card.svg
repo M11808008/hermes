@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ThinkWithBlack 365 個免費 AI 行銷方法包</title>
+  <desc id="desc">深色背景知識卡，說明以索引選擇行銷方法包的工作流程。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#3b1d33"/></linearGradient>
+    <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#f5c451"/><stop offset="1" stop-color="#f08a5d"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1380" cy="160" r="230" fill="#f5c451" opacity=".11"/><circle cx="120" cy="810" r="290" fill="#d946ef" opacity=".10"/>
+  <text x="120" y="145" fill="#f5c451" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="34" font-weight="700" letter-spacing="4">AI 學習雷達｜GITHUB RESOURCE</text>
+  <text x="120" y="290" fill="#ffffff" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="78" font-weight="800">ThinkWithBlack</text>
+  <text x="120" y="378" fill="#ffffff" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="62" font-weight="700">365 個免費 AI 行銷方法包</text>
+  <rect x="120" y="440" width="510" height="8" rx="4" fill="url(#accent)"/>
+  <g font-family="Arial, 'Noto Sans TC', sans-serif">
+    <rect x="120" y="525" width="360" height="126" rx="22" fill="#ffffff" opacity=".09"/><text x="158" y="579" fill="#f5c451" font-size="29" font-weight="700">1. 上傳索引</text><text x="158" y="622" fill="#ffffff" font-size="25">INDEX.md</text>
+    <rect x="525" y="525" width="360" height="126" rx="22" fill="#ffffff" opacity=".09"/><text x="563" y="579" fill="#f5c451" font-size="29" font-weight="700">2. 依題選法</text><text x="563" y="622" fill="#ffffff" font-size="25">讓 AI 找合適方法</text>
+    <rect x="930" y="525" width="460" height="126" rx="22" fill="#ffffff" opacity=".09"/><text x="968" y="579" fill="#f5c451" font-size="29" font-weight="700">3. 補上方法與資料</text><text x="968" y="622" fill="#ffffff" font-size="25">packs/*.md ＋你的素材</text>
+  </g>
+  <text x="120" y="770" fill="#d1d5db" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="31">方法、資料、驗收規則分開管理；結論仍需人工覆核。</text>
+  <text x="120" y="836" fill="#9ca3af" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="25">Source: github.com/backtrue/thinkwithblack-skill</text>
+</svg>

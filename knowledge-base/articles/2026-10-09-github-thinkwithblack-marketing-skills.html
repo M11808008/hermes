@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ThinkWithBlack｜365 個免費 AI 行銷方法包：用索引挑選、按題上傳</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>ThinkWithBlack｜365 個免費 AI 行銷方法包：用索引挑選、按題上傳</h1><h2>一句話摘要</h2>
+<p>這是一套以繁體中文為主的開源行銷方法庫。它不是把 365 份內容一次塞進模型，而是先上傳 `INDEX.md` 請 AI 為眼前問題挑選方法，再補上對應的 `packs/*.md` 與自己的商品、報表或文案資料，讓工作步驟、交付格式與檢核點可以隨題目切換。</p>
+<figure><img src="../assets/source-images/2026-10-09-github-thinkwithblack-marketing-skills-card.svg" alt="ThinkWithBlack 365 個免費 AI 行銷方法包的知識卡" loading="lazy" referrerpolicy="no-referrer"><figcaption>ThinkWithBlack 365 個免費 AI 行銷方法包的知識卡</figcaption></figure>
+<h2>來源脈絡與查核結果</h2>
+<p>GitHub 專案 `backtrue/thinkwithblack-skill` 由 ThinkWithBlack 維護，README 將其描述為「365 個免費 AI 行銷 Skills」。本次以 GitHub API 的遞迴檔案樹核對，`packs/` 內確有 365 個 Markdown 方法包；專案同時提供索引、練習資料、品牌背景範本、測試與發佈相關檔案。</p>
+<p>專案 README 指向 2026-10-09 的免費版教材壓縮檔，並主張免費 GitHub／Google Drive 教材包含同一套公開內容。版本、檔案數、下載入口與內容範圍仍可能隨後續 release 改變，使用前應以儲存庫與 `free-content.json` 的當期內容為準。</p>
+<h2>它解決什麼問題</h2>
+<p>一般「給我一個行銷 prompt」常缺少輸入資料、決策步驟與成果驗收。這套資料庫把常見問題拆為可選的方法包，例如：</p>
+<ul>
+<li>商品事實、賣點與價值主張整理</li>
+<li>單品貢獻毛利、活動預算與獲利估算</li>
+<li>顧客線索、回購週期、一次客再購與會員規則</li>
+<li>電子報主旨、文案與情境設計</li>
+</ul>
+<p>每題的關鍵不是照抄答案，而是讓 AI 先取得該方法的完整規則，再根據使用者提供的原始資料產出可檢查的結果。</p>
+<h2>建議使用方式</h2>
+<ul>
+<li>從 GitHub Release 或儲存庫取得教材，先上傳 `INDEX.md` 到可讀取附件的 AI 對話。</li>
+<li>描述目前唯一要處理的行銷問題，要求 AI 從索引選擇合適方法。</li>
+<li>若 AI 尚未讀到方法全文，依其指定檔名上傳 `packs/*.md`；再提供商品頁、成本表、報表、顧客資料或既有草稿。</li>
+<li>請 AI 在開始前說明已讀到的檔案與假設，並要求輸出中保留資料缺口、計算公式、證據來源與人工覆核點。</li>
+<li>換成不同工作題時，重新從索引選法；不要假設上一題的方法仍適用。</li>
+</ul>
+<h2>值得借鏡的工作流設計</h2>
+<ul>
+<li>索引先行：把大規模方法庫當成路由層，避免每次載入所有內容而造成雜訊與上下文浪費。</li>
+<li>方法與資料分離：方法包提供流程與驗收，使用者資料才是結論的依據；資料不足時，應明確列出缺口，而不是補造數字或顧客事實。</li>
+<li>先完成可驗收的小題：例如一個 SKU 的貢獻毛利、一封已知內容的信件主旨，建立可靠度後再擴大範圍。</li>
+<li>將 AI 視為協作者：價格、促銷、受眾、品牌承諾、帳號操作或對外發布，都應保留人類核准與最終責任。</li>
+</ul>
+<h2>免費教材與進階服務的邊界</h2>
+<p>`PUBLIC_BOUNDARY.md` 表示，免費內容的定位是：手動選方法、上傳資料，完成單一文案、計算、分析或計畫。README 則將帳戶資料連接、跨方法接續、持續追蹤、排程與實際操作系統等工作，列為 ThinkWithBlack MCP 的進階服務方向。</p>
+<p>因此，這個 GitHub 儲存庫適合作為可下載、可閱讀、可改寫的行銷任務範本與教學素材；它本身不是已安裝到任何 agent 平台的即插即用外掛，也不應被視為已取得帳戶資料或能代替人工審核的自動化服務。</p>
+<h2>授權與採用注意事項</h2>
+<p>儲存庫根目錄有 MIT License，授權文字涵蓋該儲存庫中的軟體與文件。但 README 也說明各方法包保留其必要參考與來源；若要將特定內容改作商業教材、再散布或整合進產品，應逐一檢查該方法包的引用、第三方素材與當期授權說明，不能只以根目錄的 MIT 檔案推定所有外部內容都可自由再授權。</p>
+<p>導入時也避免上傳不必要的個資、完整客戶名單、登入資訊或未去識別化銷售資料。先以匿名、唯讀或抽樣資料驗證方法品質，再依組織的資料保護要求擴大使用。</p>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<p>它展示了比單一 prompt 更可維護的 AI 協作方式：以索引選法、以完整方法包約束流程、以使用者資料支撐結論、以交付欄位與核對規則控制品質。對教學、顧問與中小型行銷團隊而言，這可作為建立任務庫與 AI 作業標準的具體參考。</p>
+<h2>原始連結</h2>
+<ul>
+<li>專案首頁：</li>
+</ul>
+<p><a href="https://github.com/backtrue/thinkwithblack-skill" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill</a></p>
+<ul>
+<li>使用說明：</li>
+</ul>
+<p><a href="https://github.com/backtrue/thinkwithblack-skill/blob/main/START_HERE.md" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill/blob/main/START_HERE.md</a></p>
+<ul>
+<li>免費內容與進階服務邊界：</li>
+</ul>
+<p><a href="https://github.com/backtrue/thinkwithblack-skill/blob/main/PUBLIC_BOUNDARY.md" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill/blob/main/PUBLIC_BOUNDARY.md</a></p>
+<ul>
+<li>MIT 授權：</li>
+</ul>
+<p><a href="https://github.com/backtrue/thinkwithblack-skill/blob/main/LICENSE" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill/blob/main/LICENSE</a></p>
+<ul>
+<li>來源擷取紀錄：</li>
+</ul>
+<p>source-archive/2026-10-13-github-backtrue-thinkwithblack-skill.json</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-09 · https://github.com/backtrue/thinkwithblack-skill?fbclid=IwZnRzaAU7DTFleHRuA2FlbQIxMQBwZG9mBWZkaWQWUQMCMLL_3mDsbpZaBZFDsOF0OVxfnXNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR7HhD2VzNJIdVZtD7H4N8QzMkY5OOFLMPkCiMke9R3UhcLOcIgUW9ZfSj1fuQ_aem_rafWo0ExezJz7ThjokWCzA · link-archive</div><h3>標籤</h3><span class="tag">AI Skills</span><span class="tag">AI Marketing</span><span class="tag">Marketing Operations</span><span class="tag">Prompt Workflow</span><span class="tag">GitHub</span><span class="tag">Traditional Chinese</span><h3>原始連結</h3><p><a href="https://github.com/backtrue/thinkwithblack-skill" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill</a></p><p><a href="https://github.com/backtrue/thinkwithblack-skill" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill</a></p><p><a href="https://github.com/backtrue/thinkwithblack-skill/blob/main/INDEX.md" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill/blob/main/INDEX.md</a></p><p><a href="https://github.com/backtrue/thinkwithblack-skill/blob/main/START_HERE.md" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill/blob/main/START_HERE.md</a></p><p><a href="https://github.com/backtrue/thinkwithblack-skill/blob/main/PUBLIC_BOUNDARY.md" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill/blob/main/PUBLIC_BOUNDARY.md</a></p><p><a href="https://github.com/backtrue/thinkwithblack-skill/blob/main/LICENSE" target="_blank" rel="noopener">https://github.com/backtrue/thinkwithblack-skill/blob/main/LICENSE</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

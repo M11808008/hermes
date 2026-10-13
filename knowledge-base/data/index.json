@@ -549,6 +549,36 @@
     "markdown": "articles/2026/10/2026-10-09-facebook-openai-decisions-api.md"
   },
   {
+    "title": "ThinkWithBlack｜365 個免費 AI 行銷方法包：用索引挑選、按題上傳",
+    "date": "2026-10-09",
+    "source": "https://github.com/backtrue/thinkwithblack-skill?fbclid=IwZnRzaAU7DTFleHRuA2FlbQIxMQBwZG9mBWZkaWQWUQMCMLL_3mDsbpZaBZFDsOF0OVxfnXNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR7HhD2VzNJIdVZtD7H4N8QzMkY5OOFLMPkCiMke9R3UhcLOcIgUW9ZfSj1fuQ_aem_rafWo0ExezJz7ThjokWCzA",
+    "author": "ThinkWithBlack／邱煜庭（小黑老師）",
+    "type": "link-archive",
+    "topics": [
+      "AI Skills",
+      "AI Marketing",
+      "Marketing Operations",
+      "Prompt Workflow",
+      "GitHub",
+      "Traditional Chinese"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://github.com/backtrue/thinkwithblack-skill",
+      "https://github.com/backtrue/thinkwithblack-skill",
+      "https://github.com/backtrue/thinkwithblack-skill/blob/main/INDEX.md",
+      "https://github.com/backtrue/thinkwithblack-skill/blob/main/START_HERE.md",
+      "https://github.com/backtrue/thinkwithblack-skill/blob/main/PUBLIC_BOUNDARY.md",
+      "https://github.com/backtrue/thinkwithblack-skill/blob/main/LICENSE"
+    ],
+    "excerpt": "這是一套以繁體中文為主的開源行銷方法庫。它不是把 365 份內容一次塞進模型，而是先上傳 `INDEX.md` 請 AI 為眼前問題挑選方法，再補上對應的 `packs/*.md` 與自己的商品、報表或文案資料，讓工作步驟、交付格式與檢核點可以隨題目切換。 ![ThinkWithBlack 365 個免費 AI 行銷方法包的知識卡](../assets/source-images/2026-10-09-github-thinkwithblack-marketing-skills-card.svg)",
+    "slug": "2026-10-09-github-thinkwithblack-marketing-skills",
+    "html": "articles/2026-10-09-github-thinkwithblack-marketing-skills.html",
+    "markdown": "articles/2026/10/2026-10-09-github-thinkwithblack-marketing-skills.md"
+  },
+  {
     "title": "Instagram｜四個 GitHub AI Agent 工具：用途、授權與導入前檢核",
     "date": "2026-10-09",
     "source": "Instagram",
