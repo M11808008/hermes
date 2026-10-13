@@ -9487,7 +9487,8 @@
       "https://huggingface.co/openai/whisper-large-v3",
       "https://github.com/RVC-Boss/GPT-SoVITS",
       "https://github.com/Comfy-Org/ComfyUI",
-      "https://github.com/openclaw/openclaw"
+      "https://github.com/openclaw/openclaw",
+      "https://youtube.com/shorts/5C9ZZPaE7r4?si=XHoA2Jqmz89prWj1"
     ],
     "excerpt": "# Facebook｜陳盟升：128GB 全地端 Agent 系統模型選擇攻略 來源是陳盟升（darkschen）在 Facebook 分享的「128GB 全地端 Agent 系統模型選擇攻略」。貼文描述他在 GB10 / DGX Spark 類 128GB 本機設備上，經過數個月全地端 Agent 運行後，整理出兩種",
     "slug": "2026-07-26-facebook-darkschen-128gb-local-agent-model-selection",
