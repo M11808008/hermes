@@ -1,5 +1,61 @@
 [
   {
+    "title": "ESP32 iPhone Agent｜用 7 美元硬體讓視覺模型操作真實 iPhone",
+    "date": "2026-10-14",
+    "source": "https://www.threads.com/share/_osWc2O0M/",
+    "author": "leeunhn",
+    "type": "link-archive",
+    "topics": [
+      "AI Agent",
+      "iPhone",
+      "ESP32",
+      "Computer Use",
+      "USB HID",
+      "Vision Model",
+      "Open Source"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@leeunhn/post/DedlpeDCa58",
+      "https://www.threads.com/share/_osWc2O0M/",
+      "https://www.threads.com/@leeunhn/post/DedlpeDCa58",
+      "https://github.com/onehumanbeing/esp32-iphone-agent"
+    ],
+    "excerpt": "開源專案 **esp32-iphone-agent** 提出一條不依賴 Mac、開發者帳號或 jailbreak 的真機控制路徑：iPhone 透過 AirPlay 提供畫面作為 agent 的「眼睛」，ESP32-S3 以 USB HID 模擬鍵盤與滑鼠作為「手」，再由相容 OpenAI API 的視覺模型負責看圖、規劃與輸入操作。 ![esp32-iphone-agent 的 GitHub 專案預覽圖](../assets/source-images/2026-10-14-github-esp32-iphone-agent-social-card.png \"GitHub 專案預覽圖\")",
+    "slug": "2026-10-14-esp32-iphone-agent-real-device-control",
+    "html": "articles/2026-10-14-esp32-iphone-agent-real-device-control.html",
+    "markdown": "articles/2026/10/2026-10-14-esp32-iphone-agent-real-device-control.md"
+  },
+  {
+    "title": "Kylon Agent Team Workspace｜把 Claude Code、Codex 拉進同一個可核准的工作房間",
+    "date": "2026-10-14",
+    "source": "https://www.threads.com/share/BAU2ueYqS-/",
+    "author": "krumjahn",
+    "type": "link-archive",
+    "topics": [
+      "AI Agent",
+      "Claude Code",
+      "Codex",
+      "Agent Workspace",
+      "Agent Governance",
+      "Human-in-the-loop"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@krumjahn/post/Ded54QyjI7q",
+      "https://www.threads.com/share/BAU2ueYqS-/",
+      "https://www.threads.com/@krumjahn/post/Ded54QyjI7q"
+    ],
+    "excerpt": "這則 Threads 貼文把 Kylon 描述成一個讓人與 Claude Code、Codex 等 agent 共用「工作房間」的協作層：agent 有可辨識的身分、可持續的記憶與關鍵操作的核准關卡，理想上可在同一處完成發票追款、招募看板等跨系統任務。由於本次貼文未提供可核驗的官方產品連結，以下將它視為一個值得追蹤的 workflow 設計方向，而非已確認的功能清單。",
+    "slug": "2026-10-14-kylon-agent-team-workspace",
+    "html": "articles/2026-10-14-kylon-agent-team-workspace.html",
+    "markdown": "articles/2026/10/2026-10-14-kylon-agent-team-workspace.md"
+  },
+  {
     "title": "Google Gemini at Work｜從 AI 助理走向具企業身分的數位協作者",
     "date": "2026-10-13",
     "source": "https://futureaitw.substack.com/p/google-geminiai",
