@@ -29,6 +29,34 @@
     "markdown": "articles/2026/10/2026-10-14-esp32-iphone-agent-real-device-control.md"
   },
   {
+    "title": "Instagram Reel｜agent-build.md 個人 AI 夥伴引導：先把人格、記憶與紅線寫清楚",
+    "date": "2026-10-14",
+    "source": "https://www.instagram.com/reel/DedjA9EDULj/?dlrf=MXAzZ2hvdXpzMTI0aQ==",
+    "author": "aistart_up；共同顯示 brec911",
+    "type": "link-archive",
+    "topics": [
+      "Claude Code",
+      "AI Agent",
+      "Personal AI",
+      "Agent Memory",
+      "Agent Governance",
+      "Markdown"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DedjA9EDULj/",
+      "https://www.instagram.com/reel/DedjA9EDULj/?dlrf=MXAzZ2hvdXpzMTI0aQ==",
+      "https://www.instagram.com/reel/DedjA9EDULj/",
+      "https://code.claude.com/docs/en/overview"
+    ],
+    "excerpt": "這支 Reel 把 agent-build.md 描述為一份可拖進 Claude Code 的訪談式引導檔：它詢問名稱、口氣、使用者背景、任務範圍、成功標準與禁止事項，然後產出幾個 Markdown 檔案，作為一個「會記得你」的個人 AI 夥伴設定。這是值得借鏡的設計模式；但原始檔案與作者網站沒有在公開貼文中提供，不能把影片敘述當成已驗證的可安裝工具或功能規格。",
+    "slug": "2026-10-14-instagram-agent-build-personal-companion",
+    "html": "articles/2026-10-14-instagram-agent-build-personal-companion.html",
+    "markdown": "articles/2026/10/2026-10-14-instagram-agent-build-personal-companion.md"
+  },
+  {
     "title": "Instagram Reel｜從公開申報查美國政治人物交易：延遲資料、區間金額與查證關卡",
     "date": "2026-10-14",
     "source": "https://www.instagram.com/reel/DedXpziSuvv/?xtok=MTM5ZTF2NjM0M3h3dA==",
