@@ -29,6 +29,34 @@
     "markdown": "articles/2026/10/2026-10-14-esp32-iphone-agent-real-device-control.md"
   },
   {
+    "title": "Instagram Reel｜從公開申報查美國政治人物交易：延遲資料、區間金額與查證關卡",
+    "date": "2026-10-14",
+    "source": "https://www.instagram.com/reel/DedXpziSuvv/?xtok=MTM5ZTF2NjM0M3h3dA==",
+    "author": "yeye_wan",
+    "type": "link-archive",
+    "topics": [
+      "公開資料",
+      "美國國會",
+      "財務揭露",
+      "投資風險",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DedXpziSuvv/",
+      "https://www.instagram.com/reel/DedXpziSuvv/?xtok=MTM5ZTF2NjM0M3h3dA==",
+      "https://www.instagram.com/reel/DedXpziSuvv/",
+      "https://capafy.ai/zh-hant/",
+      "https://disclosures-clerk.house.gov/FinancialDisclosure"
+    ],
+    "excerpt": "這支 Reel 示範先向聊天式 AI 介面提問「如何查詢美國政治人物的交易紀錄」，再在 Capafy 市集中搜尋名為 Unison 的項目，畫面宣稱可列出買賣紀錄、金額與時間。可以把它當成公開揭露資料的研究入口，但不能把社群影片、聚合工具的結果或延後公開的申報，直接當作即時交易訊號或投資建議。",
+    "slug": "2026-10-14-instagram-congress-trading-public-records",
+    "html": "articles/2026-10-14-instagram-congress-trading-public-records.html",
+    "markdown": "articles/2026/10/2026-10-14-instagram-congress-trading-public-records.md"
+  },
+  {
     "title": "Kylon Agent Team Workspace｜把 Claude Code、Codex 拉進同一個可核准的工作房間",
     "date": "2026-10-14",
     "source": "https://www.threads.com/share/BAU2ueYqS-/",
