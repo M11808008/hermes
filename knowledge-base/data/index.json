@@ -141,6 +141,37 @@
     "markdown": "articles/2026/10/2026-10-14-kylon-agent-team-workspace.md"
   },
   {
+    "title": "Threads｜用 Grok Bot 開單、Claude 實作、Codex 重構：多 Agent 遊戲團隊工作流的治理要點",
+    "date": "2026-10-14",
+    "source": "https://www.threads.com/share/BAALQ6yqiT/",
+    "author": "Tack Lin（tack.lin）",
+    "type": "link-archive",
+    "topics": [
+      "Grok Bot",
+      "Claude",
+      "Codex",
+      "AI Agent",
+      "Multi-Agent",
+      "Issue Management",
+      "Code Review",
+      "Game Development"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@tack.lin/post/DedhgfSIIjZ",
+      "https://www.threads.com/share/BAALQ6yqiT/",
+      "https://www.threads.com/@tack.lin/post/DedhgfSIIjZ",
+      "https://docs.x.ai/overview",
+      "https://code.claude.com/docs/en/overview"
+    ],
+    "excerpt": "Tack Lin 分享一個遊戲專案的多 Agent 分工：先讓 Grok Bot 團隊進入專案進行審查、討論與開 issue，接著交由 Claude 判斷、修改與實作，每完成一個階段再讓 Codex 重構並檢查安全性。真正可複用的不是指定模型名稱，而是「探索與開單 → 實作 → 獨立驗證」的可追蹤交接；前提是每一段都有範圍、權限、驗收標準和人工合併關卡。",
+    "slug": "2026-10-14-threads-grok-bot-claude-codex-game-team",
+    "html": "articles/2026-10-14-threads-grok-bot-claude-codex-game-team.html",
+    "markdown": "articles/2026/10/2026-10-14-threads-grok-bot-claude-codex-game-team.md"
+  },
+  {
     "title": "Google Gemini at Work｜從 AI 助理走向具企業身分的數位協作者",
     "date": "2026-10-13",
     "source": "https://futureaitw.substack.com/p/google-geminiai",
