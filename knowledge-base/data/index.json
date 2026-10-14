@@ -172,6 +172,35 @@
     "markdown": "articles/2026/10/2026-10-14-threads-grok-bot-claude-codex-game-team.md"
   },
   {
+    "title": "Threads｜讓 Grok Bot 經營電商「虛擬公司」：從知識商品到上架的 Agent 商業實驗，先設好金流與發布護欄",
+    "date": "2026-10-14",
+    "source": "https://www.threads.com/share/BAfJ8ONgbf/",
+    "author": "劉基欽（chichinliu）",
+    "type": "link-archive",
+    "topics": [
+      "Grok Bot",
+      "AI Agent",
+      "E-commerce",
+      "AI Business",
+      "Multi-Agent",
+      "Content Marketing",
+      "Agent Governance"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@chichinliu/post/Deeo6J1E4OO",
+      "https://www.threads.com/share/BAfJ8ONgbf/",
+      "https://www.threads.com/@chichinliu/post/Deeo6J1E4OO",
+      "https://docs.x.ai/overview"
+    ],
+    "excerpt": "劉基欽分享一個仍在進行中的 side project：以 Grok Bot 組成「虛擬公司」，替既有電商平台設計知識商品、製作商品頁配色與行銷文案，並自行規畫營運與行銷；實驗成本設定為每月 20 美元，目標是第四季賺進新台幣 5 萬元。它是一個值得觀察的自主商業 Agent 實驗，但成功與否仍取決於人類能否把品牌、金流、定價、發布、客資與績效歸因切成可審核的權限關卡。",
+    "slug": "2026-10-14-threads-grok-bot-virtual-ecommerce-company",
+    "html": "articles/2026-10-14-threads-grok-bot-virtual-ecommerce-company.html",
+    "markdown": "articles/2026/10/2026-10-14-threads-grok-bot-virtual-ecommerce-company.md"
+  },
+  {
     "title": "Google Gemini at Work｜從 AI 助理走向具企業身分的數位協作者",
     "date": "2026-10-13",
     "source": "https://futureaitw.substack.com/p/google-geminiai",
