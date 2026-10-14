@@ -201,6 +201,38 @@
     "markdown": "articles/2026/10/2026-10-14-threads-grok-bot-virtual-ecommerce-company.md"
   },
   {
+    "title": "Threads｜Obsidian 從 0 到 1：用一本書練六個內建功能，先寫出自己的第一條連結",
+    "date": "2026-10-14",
+    "source": "https://www.threads.com/share/BAbZKYBaqK/",
+    "author": "哈利哥｜下班後閱讀寫作（read.by.harry）",
+    "type": "link-archive",
+    "topics": [
+      "Obsidian",
+      "Knowledge Management",
+      "PKM",
+      "Note-taking",
+      "Reading Notes",
+      "Markdown"
+    ],
+    "use": [
+      "個人知識庫",
+      "閱讀筆記"
+    ],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAbZKYBaqK/",
+      "https://www.threads.com/@read.by.harry/post/Deby4mGkylV",
+      "https://www.threads.com/share/BAbZKYBaqK/",
+      "https://www.threads.com/@read.by.harry/post/Deby4mGkylV",
+      "https://obsidian.md/help/Linking+notes+and+files/Internal+links"
+    ],
+    "excerpt": "這串 Obsidian 入門教學的好方法是：先不要把時間花在資料夾、外掛和佈景主題，而是選一本正在讀的書，立刻用內建 Markdown、筆記連結、嵌入、標籤、搜尋、反向連結和畫布完成一個小型知識網。完成後不只會有書摘，還會多出一句由自己連結不同想法後長出來的觀點。",
+    "slug": "2026-10-14-threads-obsidian-book-six-step-practice",
+    "html": "articles/2026-10-14-threads-obsidian-book-six-step-practice.html",
+    "markdown": "articles/2026/10/2026-10-14-threads-obsidian-book-six-step-practice.md"
+  },
+  {
     "title": "Google Gemini at Work｜從 AI 助理走向具企業身分的數位協作者",
     "date": "2026-10-13",
     "source": "https://futureaitw.substack.com/p/google-geminiai",
