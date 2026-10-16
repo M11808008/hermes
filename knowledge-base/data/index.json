@@ -1,5 +1,36 @@
 [
   {
+    "title": "Threads｜Hermes Agent 0.22：本地模型預設啟用與長回合穩定性更新查核",
+    "date": "2026-10-17",
+    "source": "https://www.threads.com/share/BAC6yXguYU/",
+    "author": "AI Threads（it.oppa.twhk）",
+    "type": "link-archive",
+    "topics": [
+      "Hermes Agent",
+      "Nous Research",
+      "Local AI",
+      "Local Models",
+      "AI Agent",
+      "Open Source",
+      "GitHub Release"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@it.oppa.twhk/post/Dei2iyQj2XE",
+      "https://www.threads.com/share/BAC6yXguYU/",
+      "https://www.threads.com/@it.oppa.twhk/post/Dei2iyQj2XE",
+      "https://github.com/NousResearch/hermes-agent",
+      "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2",
+      "https://hermes-agent.nousresearch.com/docs"
+    ],
+    "excerpt": "這則 Threads 把 Hermes Agent 描述為「本機跑 agent 的救星」。可由官方 GitHub 發布確認的是：2026-10-15 發布的 `v0.22.2` 修正了 0.22.1 的錯誤建置，並強化本地模型在筆電上執行長回合時的串流進度、睡眠恢復重試與記憶體處理；release note 亦註明本地模型在 macOS、Windows、Linux 預設啟用。它降低的是啟用本地工作流的摩擦，而不是保證所有電腦都能離線、免費且高品質地完成所有任務。",
+    "slug": "2026-10-17-threads-hermes-agent-022-local-models-release-check",
+    "html": "articles/2026-10-17-threads-hermes-agent-022-local-models-release-check.html",
+    "markdown": "articles/2026/10/2026-10-17-threads-hermes-agent-022-local-models-release-check.md"
+  },
+  {
     "title": "Threads｜Sill：將 Mac 視窗以私有連線帶到 iPhone、iPad 的輕量遠端桌面",
     "date": "2026-10-17",
     "source": "https://www.threads.com/share/_po2_7rQo/",

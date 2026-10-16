@@ -1,0 +1,73 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Hermes Agent 0.22：本地模型預設啟用與長回合穩定性更新查核</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Hermes Agent 0.22：本地模型預設啟用與長回合穩定性更新查核</h1><h2>一句話摘要</h2>
+<p>這則 Threads 把 Hermes Agent 描述為「本機跑 agent 的救星」。可由官方 GitHub 發布確認的是：2026-10-15 發布的 `v0.22.2` 修正了 0.22.1 的錯誤建置，並強化本地模型在筆電上執行長回合時的串流進度、睡眠恢復重試與記憶體處理；release note 亦註明本地模型在 macOS、Windows、Linux 預設啟用。它降低的是啟用本地工作流的摩擦，而不是保證所有電腦都能離線、免費且高品質地完成所有任務。</p>
+<h2>Threads 貼文可直接確認的內容</h2>
+<p>AI Threads（@it.oppa.twhk）於 2026-10-17 的公開貼文，擷取時顯示約 1,959 次瀏覽、19 個讚、2 則回覆與 23 次分享。貼文主張：</p>
+<ul>
+<li>Nous Research 獲 9,000 萬美元融資、估值 15 億美元，並提及 Microsoft 與 NVIDIA 投資。</li>
+<li>Hermes Agent 0.22 可自動偵測本機顯卡，五分鐘開箱即用。</li>
+<li>可更容易本地／離線運作，減少商業 API token 成本，並讓機密資料不必上雲。</li>
+<li>內建瀏覽器自動化與 Notion 串接，可作為個人助理。</li>
+</ul>
+<p>這些是社群貼文的可見敘述；融資、估值、投資方、五分鐘完成設定與特定整合，不能只因社群轉述而升格為官方保證。</p>
+<h2>官方 release 可確認的 0.22.2 重點</h2>
+<p>Nous Research 的 GitHub 官方 release 顯示 `Hermes Agent v0.22.2` 於 2026-10-15 發布；其目的之一是修正從錯誤 commit 建置的 0.22.1。官方列出的實用改進包括：</p>
+<ul>
+<li>Gateway 在重新開機後可正確辨識實際執行中的程序，避免 supervised gateway 因誤判而拒絕啟動。</li>
+<li>本地模型請求會顯示讀取 prompt 的串流進度；筆電休眠時間不再被誤當成 stall timeout。</li>
+<li>本地 server 恢復後可再試一次，不會讓後續每一則訊息都持續被同一個 breaker 失敗狀態阻斷。</li>
+<li>Windows 統一記憶體裝置會依可用記憶體調整模型啟動與 prompt cache。</li>
+<li>release note 明載：Local Models 在 macOS、Windows、Linux 預設啟用。</li>
+</ul>
+<p>因此，「讓本地模型工作流更容易開始與更耐用」有官方依據；但 release note 沒有把它描述成「所有顯卡自動辨識後五分鐘即可完成」，也沒有承諾零成本。</p>
+<h2>本地優先，不等於完全免費或自動離線</h2>
+<p>Hermes Agent 是可自行選擇 provider、模型與工具的 agent framework。本地模型可降低雲端推論與資料外送的需求，但實際成本與能力仍取決於：</p>
+<ul>
+<li>硬體：VRAM／統一記憶體、CPU/GPU、儲存空間、散熱與耗電。</li>
+<li>模型：量化格式、模型大小、上下文長度與推論速度。</li>
+<li>工作流：網路搜尋、瀏覽器、自動化、外部 API、雲端模型與第三方工具仍可能需要網路或帳號。</li>
+<li>資料邊界：本地推論不會自動讓所有資料安全；工具被授權讀檔、操作瀏覽器或呼叫遠端服務時，仍應遵循最小權限與人工審核。</li>
+</ul>
+<p>若目標是敏感資料的本地處理，應先確認主模型與 auxiliary models 都確實指向本地端，並逐項檢查 web、browser、MCP、第三方 plugin 與 messaging gateway 是否仍會傳送資料到外部。</p>
+<h2>「瀏覽器自動化／Notion」如何正確理解</h2>
+<p>官方文件所述 Hermes 能透過 toolsets、MCP、plugins 和外部服務擴充工作流，瀏覽器工具也屬於可選工具集；但可否直接使用、是否需要 API key、OAuth、MCP server、額外 plugin 或平台權限，要看當前安裝和設定，並非每一種安裝都預設可用。</p>
+<p>Notion 導入尤其應檢查 integration token 的資料庫範圍與共享權限。不要為了展示自動化而授予整個 workspace 的讀寫權；先用測試頁面與最低權限 database 驗證。</p>
+<h2>社群數字與產品宣稱的查核結論</h2>
+<p>| 敘述 | 本次查核結論 |</p>
+<p>| --- | --- |</p>
+<p>| Hermes Agent 0.22 系列存在 | 可確認；最新 GitHub stable release 為 `v0.22.2`。 |</p>
+<p>| 本地模型在 macOS／Windows／Linux 預設啟用 | 可確認；官方 release note 明載。 |</p>
+<p>| 長本地模型回合、休眠恢復與 Windows 記憶體處理改善 | 可確認；官方 release note 明載。 |</p>
+<p>| 自動偵測顯卡、5 分鐘必定開箱完成 | 本次未在官方 release／文件取得獨立佐證；視為社群簡化說法。 |</p>
+<p>| 9,000 萬美元融資、15 億美元估值、Microsoft／NVIDIA 投資 | 本次未在官方 release／文件取得可獨立佐證；不要據此作投資或採購判斷。 |</p>
+<p>| 零 token 費／完全不用雲端 | 不成立為通用保證；僅在模型與所有相關工具都在本地執行時，才可能避免雲端推論 token 成本。 |</p>
+<h2>導入與更新清單</h2>
+<ul>
+<li>先執行 `hermes --version` 與 `hermes status --all`，確認版本與服務狀態。</li>
+<li>升級前保留設定、認證、技能與未提交修改；官方 release 指引使用 `hermes update` 或重新執行 installer，Windows Store 則依 Store 更新。</li>
+<li>先以小型本地模型測試：單一文字任務、長 prompt、筆電睡眠／喚醒後恢復、Gateway 重啟後訊息路由。</li>
+<li>用 `hermes tools list` 檢查工具面，僅啟用任務需要的 toolsets；連接 Notion、MCP 或外部 API 前先設定最小權限。</li>
+<li>對敏感資料做端到端測試：確認主模型、auxiliary model、瀏覽器／搜尋、plugin、MCP 與訊息平台的資料出口，而不是只看模型是否本地執行。</li>
+</ul>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<p>這則貼文抓到本地 agent 的真正採用障礙：不是「模型能否跑起來」而已，而是初始設定、睡眠中斷、長任務、Gateway 常駐與權限整合。0.22.2 的價值更適合被理解為把本地工作流的可靠性往前推一步；同時，任何融資數字、性能承諾與「完全免費離線」敘事都應回到官方公告、release note 與自己的硬體實測來判斷。</p>
+<h2>原始與查核連結</h2>
+<ul>
+<li>Threads 原始分享連結：</li>
+</ul>
+<p><a href="https://www.threads.com/share/BAC6yXguYU/" target="_blank" rel="noopener">https://www.threads.com/share/BAC6yXguYU/</a></p>
+<ul>
+<li>Threads canonical URL：</li>
+</ul>
+<p><a href="https://www.threads.com/@it.oppa.twhk/post/Dei2iyQj2XE" target="_blank" rel="noopener">https://www.threads.com/@it.oppa.twhk/post/Dei2iyQj2XE</a></p>
+<ul>
+<li>Hermes Agent GitHub：</li>
+</ul>
+<p><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent</a></p>
+<ul>
+<li>Hermes Agent v0.22.2 官方 release：</li>
+</ul>
+<p><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2</a></p>
+<ul>
+<li>Hermes Agent 官方文件：</li>
+</ul>
+<p><a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-17 · https://www.threads.com/share/BAC6yXguYU/ · link-archive</div><h3>標籤</h3><span class="tag">Hermes Agent</span><span class="tag">Nous Research</span><span class="tag">Local AI</span><span class="tag">Local Models</span><span class="tag">AI Agent</span><span class="tag">Open Source</span><span class="tag">GitHub Release</span><h3>原始連結</h3><p><a href="https://www.threads.com/@it.oppa.twhk/post/Dei2iyQj2XE" target="_blank" rel="noopener">https://www.threads.com/@it.oppa.twhk/post/Dei2iyQj2XE</a></p><p><a href="https://www.threads.com/share/BAC6yXguYU/" target="_blank" rel="noopener">https://www.threads.com/share/BAC6yXguYU/</a></p><p><a href="https://www.threads.com/@it.oppa.twhk/post/Dei2iyQj2XE" target="_blank" rel="noopener">https://www.threads.com/@it.oppa.twhk/post/Dei2iyQj2XE</a></p><p><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent</a></p><p><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2</a></p><p><a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
