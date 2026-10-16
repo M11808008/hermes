@@ -31,6 +31,38 @@
     "markdown": "articles/2026/10/2026-10-17-threads-hermes-agent-022-local-models-release-check.md"
   },
   {
+    "title": "Threads｜Self Agent Vault：讓 AI 代登入與付款，但把真實帳密與卡號留在模型之外",
+    "date": "2026-10-17",
+    "source": "https://www.threads.com/share/_sjgI2em8/",
+    "author": "AI郵報（aiposthub）",
+    "type": "link-archive",
+    "topics": [
+      "AI Agent",
+      "Agentic Commerce",
+      "AI Security",
+      "Credentials",
+      "Payments",
+      "Self Agent Vault",
+      "TEE",
+      "Authorization"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/Dejnkkxgb3D",
+      "https://www.threads.com/share/_sjgI2em8/",
+      "https://www.threads.com/@aiposthub/post/Dejnkkxgb3D",
+      "https://www.aiposthub.com/self-agent-vault-ai-login-payment-credentials/",
+      "https://self.xyz/blog/introducing-agent-vault-a-single-portable-solution-to-prevent-your-agents-from-going-rogue-with-credit-cards-and-login-credentials",
+      "https://self.xyz/"
+    ],
+    "excerpt": "Self Agent Vault 是把「AI 會操作網站」與「AI 必須知道帳密、卡號」拆開的憑證與付款層：Agent 可填入在授權 session 內才有意義的替代標記，真實帳密或卡號則由 Self 的代理與可信執行環境（TEE）在最後階段換入。這能收窄模型直接接觸憑證的資料路徑，但不會自動避免買錯、越權、提示注入、錯誤商家或不當授權；高影響動作仍應保留人類確認。",
+    "slug": "2026-10-17-threads-self-agent-vault-agent-payments-credentials",
+    "html": "articles/2026-10-17-threads-self-agent-vault-agent-payments-credentials.html",
+    "markdown": "articles/2026/10/2026-10-17-threads-self-agent-vault-agent-payments-credentials.md"
+  },
+  {
     "title": "Threads｜Sill：將 Mac 視窗以私有連線帶到 iPhone、iPad 的輕量遠端桌面",
     "date": "2026-10-17",
     "source": "https://www.threads.com/share/_po2_7rQo/",
