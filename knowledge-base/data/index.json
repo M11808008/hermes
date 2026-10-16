@@ -32,6 +32,43 @@
     "markdown": "articles/2026/10/2026-10-16-threads-sas-eurobonus-status-match.md"
   },
   {
+    "title": "Threads｜Meta Muse Spark Open 與 Amazon Bee：把 Agent 模型與「記憶型」個人 AI 帶到桌面與日常",
+    "date": "2026-10-15",
+    "source": "https://www.threads.com/share/_6wsRLDlx/",
+    "author": "ginsengtrycatch",
+    "type": "link-archive",
+    "topics": [
+      "Meta Muse",
+      "Open-weight Model",
+      "Apple Silicon",
+      "AI Agent",
+      "Personal AI",
+      "Amazon Bee",
+      "AI Wearable",
+      "Privacy"
+    ],
+    "use": [
+      "模型選型",
+      "Agent 原型",
+      "個人知識管理",
+      "隱私治理"
+    ],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_6wsRLDlx/",
+      "https://www.threads.com/@ginsengtrycatch/post/Deip3O6liKQ",
+      "https://www.threads.com/share/_6wsRLDlx/",
+      "https://www.threads.com/@ginsengtrycatch/post/Deip3O6liKQ",
+      "https://research.meta.ai/blog/muse-spark-open",
+      "https://www.aboutamazon.com/news/devices/amazon-personal-ai-bee-frontier-bee-eclipse"
+    ],
+    "excerpt": "同一則 Threads 將兩條「個人 AI」路線放在一起：Meta 把可自行部署／客製的 Agent 模型權重推向桌面級硬體；Amazon 則把對話記憶、摘要與待辦做成可穿戴或吸附在手機上的 Bee 裝置。前者重點是模型、算力與執行環境；後者重點是長期蒐集的生活脈絡與資料治理。",
+    "slug": "2026-10-15-threads-muse-spark-open-bee-personal-ai",
+    "html": "articles/2026-10-15-threads-muse-spark-open-bee-personal-ai.html",
+    "markdown": "articles/2026/10/2026-10-15-threads-muse-spark-open-bee-personal-ai.md"
+  },
+  {
     "title": "ESP32 iPhone Agent｜用 7 美元硬體讓視覺模型操作真實 iPhone",
     "date": "2026-10-14",
     "source": "https://www.threads.com/share/_osWc2O0M/",
