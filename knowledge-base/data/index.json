@@ -1,5 +1,37 @@
 [
   {
+    "title": "Threads｜Sill：將 Mac 視窗以私有連線帶到 iPhone、iPad 的輕量遠端桌面",
+    "date": "2026-10-17",
+    "source": "https://www.threads.com/share/_po2_7rQo/",
+    "author": "設計師勞哥（maylogger_designer）",
+    "type": "link-archive",
+    "topics": [
+      "Sill",
+      "Remote Desktop",
+      "macOS",
+      "iPhone",
+      "iPad",
+      "Apple Silicon",
+      "Tailscale",
+      "Open Source"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@maylogger_designer/post/DehxT7HEkC_",
+      "https://www.threads.com/share/_po2_7rQo/",
+      "https://www.threads.com/@maylogger_designer/post/DehxT7HEkC_",
+      "https://getsill.app/",
+      "https://github.com/Saffsanity/sill",
+      "https://apps.apple.com/app/id6816359860"
+    ],
+    "excerpt": "Sill 是一個免費、開源的 Apple 平台遠端視窗工具：Mac 端擷取單一視窗或完整桌面，以 HEVC 串流到 iPhone、iPad；行動端可用觸控、外接鍵盤、觸控板或 Apple Pencil 操作。它不是雲端代管的遠端桌面服務，而是裝置之間的直接連線設計；外出存取應優先走自己管理的 VPN，並將 Mac 的螢幕錄製與輔助使用權限視為高影響權限。",
+    "slug": "2026-10-17-threads-sill-mac-iphone-ipad-remote-desktop",
+    "html": "articles/2026-10-17-threads-sill-mac-iphone-ipad-remote-desktop.html",
+    "markdown": "articles/2026/10/2026-10-17-threads-sill-mac-iphone-ipad-remote-desktop.md"
+  },
+  {
     "title": "Threads｜SAS EuroBonus Status Match 開放申請：先看合資格航空、居住地與官方審核條款",
     "date": "2026-10-16",
     "source": "https://www.threads.com/share/BAbOgRdRBr/",
