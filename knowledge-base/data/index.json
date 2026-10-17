@@ -124,6 +124,36 @@
     "markdown": "articles/2026/10/2026-10-17-threads-sill-mac-iphone-ipad-remote-desktop.md"
   },
   {
+    "title": "Facebook Reel｜TencentDB Agent Memory：用分層、可追溯記憶取代「只塞向量庫」的 Agent 記憶設計",
+    "date": "2026-10-16",
+    "source": "Facebook Reel",
+    "author": "AI懶人報",
+    "type": "social-video",
+    "topics": [
+      "AI Agent",
+      "長期記憶",
+      "SQLite",
+      "向量檢索",
+      "Hermes",
+      "開源"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/r/1Gs7BmvU9k/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2202587343654867",
+      "https://www.facebook.com/share/r/1Gs7BmvU9k/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/2202587343654867",
+      "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "https://raw.githubusercontent.com/TencentCloud/TencentDB-Agent-Memory/feat/server_team/LICENSE"
+    ],
+    "excerpt": "這支 Reel 的可取之處不是「不用向量資料庫」的絕對結論，而是把 agent memory 設計成可分層、可檢視、可回溯的證據鏈：高層只帶入方向與偏好，需要細節時再往下追到情境、事實與原始對話。 ![AI懶人報 Facebook Reel 的 TencentDB Agent Memory 分層記憶與整合畫面截圖拼貼](../assets/source-images/2026-10-16-facebook-ai-lanrenbao-tencentdb-agent-memory-montage.jpg \"AI懶人報 Facebook Reel 的 TencentDB Agent Memory 分層記憶與整合畫面截圖拼貼\")",
+    "slug": "2026-10-16-facebook-ai-lanrenbao-tencentdb-agent-memory",
+    "html": "articles/2026-10-16-facebook-ai-lanrenbao-tencentdb-agent-memory.html",
+    "markdown": "articles/2026/10/2026-10-16-facebook-ai-lanrenbao-tencentdb-agent-memory.md"
+  },
+  {
     "title": "Threads｜SAS EuroBonus Status Match 開放申請：先看合資格航空、居住地與官方審核條款",
     "date": "2026-10-16",
     "source": "https://www.threads.com/share/BAbOgRdRBr/",
