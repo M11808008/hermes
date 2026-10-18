@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">DV-2027 多元化簽證法院命令與官方確認提醒</title>
+  <desc id="desc">深藍色資訊卡，呈現法院時程線索與申請前的官方確認提醒。</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1736"/><stop offset="1" stop-color="#173d65"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1450" cy="110" r="240" fill="#58c4dc" opacity=".12"/><circle cx="90" cy="840" r="300" fill="#ffbf69" opacity=".10"/>
+  <text x="120" y="150" fill="#9ee7f7" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="34" font-weight="700" letter-spacing="4">PRACTICAL INFORMATION ARCHIVE</text>
+  <text x="120" y="250" fill="#fff" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="72" font-weight="800">DV-2027 綠卡抽籤</text>
+  <text x="120" y="330" fill="#dbeafe" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="45" font-weight="600">法院時程線索，不等於官方申請公告</text>
+  <line x1="120" y1="390" x2="1480" y2="390" stroke="#64d4e8" stroke-width="3" opacity=".6"/>
+  <text x="120" y="475" fill="#9ee7f7" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="30" font-weight="700">第三方交叉報導的時程框架</text>
+  <text x="120" y="550" fill="#fff" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="48" font-weight="700">10/29 公告　→　11/1 前開放　→　至少 30 天　→　12/3 通知</text>
+  <rect x="120" y="635" width="1360" height="140" rx="20" fill="#ffffff" opacity=".10" stroke="#9ee7f7" stroke-width="2"/>
+  <text x="160" y="700" fill="#fff" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="35" font-weight="700">行動原則：只從國務院與 dvprogram.state.gov 核對當期規則</text>
+  <text x="160" y="748" fill="#dbeafe" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="28">費用、護照欄位、資格與實際開放時間皆須重新確認；不要交付 OTP、帳密或付款資料。</text>
+  <text x="120" y="845" fill="#a8c6e8" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="25">AI 學習雷達・2026-10-18・社群資訊已標示證據邊界</text>
+</svg>
