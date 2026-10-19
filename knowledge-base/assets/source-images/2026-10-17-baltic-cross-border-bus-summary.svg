@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">波羅的海三國跨國巴士交通筆記</title>
+  <desc id="desc">維爾紐斯、里加、塔林三座城市與兩種跨國交通方式的摘要示意圖</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#102a43"/><stop offset="1" stop-color="#176b87"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><circle cx="1430" cy="120" r="245" fill="#ffffff" opacity=".07"/><circle cx="180" cy="800" r="300" fill="#f6c453" opacity=".10"/>
+  <text x="120" y="160" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="64" font-weight="700" fill="#fff">波羅的海三國跨國交通</text>
+  <text x="120" y="224" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="30" fill="#cdeaf4">把「沿途景點」與「點對點移動」分開規劃</text>
+  <path d="M270 475 H1330" stroke="#8ed1e8" stroke-width="12" stroke-linecap="round"/><path d="M720 475 H1280" stroke="#f6c453" stroke-width="12" stroke-linecap="round"/>
+  <g font-family="Arial, 'Noto Sans TC', sans-serif"><g fill="#fff"><circle cx="270" cy="475" r="34"/><circle cx="800" cy="475" r="34"/><circle cx="1330" cy="475" r="34"/></g><g font-size="38" font-weight="700" fill="#fff"><text x="180" y="555">維爾紐斯</text><text x="748" y="555">里加</text><text x="1268" y="555">塔林</text></g><g font-size="27" fill="#d5f2fb"><text x="218" y="595">Vilnius</text><text x="760" y="595">Riga</text><text x="1268" y="595">Tallinn</text></g></g>
+  <g font-family="Arial, 'Noto Sans TC', sans-serif"><rect x="150" y="305" width="550" height="100" rx="22" fill="#0d3b52"/><text x="190" y="367" font-size="32" font-weight="700" fill="#fff">觀光＋移動：小團景點串接</text><rect x="875" y="605" width="470" height="100" rx="22" fill="#7c5421"/><text x="915" y="667" font-size="32" font-weight="700" fill="#fff">純移動：跨國長途巴士</text></g>
+  <text x="120" y="795" font-family="Arial, 'Noto Sans TC', sans-serif" font-size="27" fill="#d5f2fb">社群旅人經驗整理｜價格、班次、設備與規則請於出發前向官方確認</text>
+</svg>
