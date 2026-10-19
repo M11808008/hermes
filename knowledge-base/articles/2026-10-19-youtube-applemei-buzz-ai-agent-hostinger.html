@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>YouTube｜「3 個 AI 員工會分工交接」？Buzz 的協作平台定位、Hostinger 部署與導入界線</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>YouTube｜「3 個 AI 員工會分工交接」？Buzz 的協作平台定位、Hostinger 部署與導入界線</h1><figure><img src="../assets/source-images/2026-10-19-youtube-applemei-buzz-ai-agent-thumbnail.jpg" alt="影片縮圖：我養了 3 個 AI 員工，它們會自己分工交接" loading="lazy" referrerpolicy="no-referrer"><figcaption>YouTube 影片縮圖</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>「養 3 個 AI 員工、會自行分工交接」是影片標題的吸睛表述；第一方資料能確認的是：**Buzz 是 Block 開源的自架協作工作區，讓人和 agent 在同一個 room 裡用各自身份協作，並把訊息、反應、流程與核准等行為保留為 Nostr 簽章事件。** 它提供 agent 協作的溝通與稽核介面，不等於部署後就必然能自行拆解任務、交接並正確完成工作。</p>
+<h2>影片可確認的資訊與證據邊界</h2>
+<ul>
+<li>YouTube oEmbed 與公開頁面確認影片標題為〈我養了3個AI員工，它們會自己分工交接！｜Buzz AI Agent 教學 Hostinger〉，頻道為「蘋果妹」。</li>
+<li>影片頁面顯示片長約 28 分 13 秒；說明欄提供 `hostinger.com/APPLEMEIBUZZ` 推薦連結及優惠碼 `APPLEMEI`。這屬聯盟／促銷連結，不是中立的產品比較或價格保證。</li>
+<li>本次無法取得可用逐字稿（YouTube 對擷取來源封鎖），因此未將影片內可能展示的 agent 指令、模型、權限、三個角色配置、交接規則、執行成效或費用寫成事實。</li>
+</ul>
+<h2>第一方資料：Buzz 實際是什麼？</h2>
+<p>Block 的 [GitHub repository](<a href="https://github.com/block/buzz)" target="_blank" rel="noopener">https://github.com/block/buzz)</a> 將 Buzz 定義為「人與 agent 在同一個 room 裡共同建造」的自架工作區。其 README 可直接確認：</p>
+<ul>
+<li>每個 workspace／community 由 URL 指向；在目前單 relay 設定中，relay URL 對應一個 community。</li>
+<li>訊息、反應、workflow step、review approval 與 Git event 都以 Nostr 的簽章事件記錄；人與 process 使用相同事件模型，但擁有不同 keypair／身份。</li>
+<li>README 列出的 agent 可做能力包含：開啟 repo、送出 patch、review code、執行 workflow、編輯 canvas、協調其他 agent、建立 channel 等。這是平台提供的互動面，不代表任一 agent 已獲得必要的外部帳號、工具、網路或部署權限。</li>
+<li>專案標示 Apache-2.0 授權；導入時仍須以當前 repository 的 LICENSE 與版本為準。</li>
+</ul>
+<h2>Hostinger 的角色：提供一鍵自架的 VPS 容器環境</h2>
+<p>Hostinger 的 [Buzz 應用頁](<a href="https://www.hostinger.com/applications/buzz)" target="_blank" rel="noopener">https://www.hostinger.com/applications/buzz)</a> 把它定位為「可自架的 Nostr communication platform」，並提供預先設定的一鍵部署。該頁所述部署組合包括 Buzz relay、PostgreSQL（事件與全文搜尋）、Redis（即時 pub/sub）與 MinIO（Blossom 媒體儲存）。</p>
+<p>這代表它降低了啟動基礎設施的摩擦，但仍需自行負責：</p>
+<ul>
+<li>選擇與維護 VPS 地區、費用、備份與更新節奏。</li>
+<li>管理 Nostr keypair、加入者身份、channel 成員與 agent 可做的動作。</li>
+<li>設定模型供應商金鑰、外部工具帳號、CI/CD 與 Git 權限；它們不會因安裝 Buzz 而自動安全地存在。</li>
+<li>對所有會寫入、寄送、發佈、刪除、付款或部署的 agent 動作加上人工核准與可回復措施。</li>
+</ul>
+<p>頁面上的促銷價格、折扣、方案規格與續約條款均可能隨地區、期限與時間變動，應在付款前以 Hostinger 結帳頁與官方條款為準。</p>
+<h2>把「三個 AI 員工」落成可驗收流程</h2>
+<p>如果要測試影片的工作模式，建議不要一開始就交給 agent 自主交接，而應以小型、可回復的工作流驗證：</p>
+<ul>
+<li>**角色分工明文化**：例如研究 agent 只蒐集可引用來源、執行 agent 只產出草稿、審核 agent 只檢查規格與風險；每個角色都有禁止事項。</li>
+<li>**交接物固定化**：使用 ticket、輸入資料版本、輸出摘要、來源 URL、待決問題與下一步，不以聊天室口語當唯一規格。</li>
+<li>**身份與權限分離**：每個 agent 用獨立 key／帳號及最小權限，不共用長效 token、個人 Cookie 或 production root 權限。</li>
+<li>**將核准點放在風險行動前**：agent 可以提出 patch、訊息草稿或部署計畫；合併、寄送、付款、發佈與刪除由人確認。</li>
+<li>**用結果而非角色數量衡量**：先驗證「可重現地完成一個低風險任務、來源可追溯、失敗能回復」，再擴大自動化。</li>
+</ul>
+<h2>來源與查核界線</h2>
+<ul>
+<li>YouTube 僅用於確認影片標題、頻道、頁面可見說明、片長與推薦連結；未取得可用逐字稿。</li>
+<li>Buzz 的產品架構、Nostr 簽章事件、room／community 模型與 agent 互動能力，依 Block 的第一方 GitHub README 整理。</li>
+<li>一鍵部署的容器組合與自架定位，依 Hostinger 的第一方應用頁整理。</li>
+<li>本次未安裝 Buzz、未購買 Hostinger VPS、未建立三個 agent，也未驗證影片所稱的交接品質、成本、資安或實際自動化成果。</li>
+</ul>
+<h2>原始連結</h2>
+<ul>
+<li>YouTube 短網址：<a href="https://youtu.be/kNSHESEOwRw?si=WXua0afGOnvaz2Mt" target="_blank" rel="noopener">https://youtu.be/kNSHESEOwRw?si=WXua0afGOnvaz2Mt</a></li>
+<li>YouTube canonical：<a href="https://www.youtube.com/watch?v=kNSHESEOwRw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=kNSHESEOwRw</a></li>
+<li>Hostinger Buzz：<a href="https://www.hostinger.com/applications/buzz" target="_blank" rel="noopener">https://www.hostinger.com/applications/buzz</a></li>
+<li>Block Buzz GitHub：<a href="https://github.com/block/buzz" target="_blank" rel="noopener">https://github.com/block/buzz</a></li>
+</ul>
+<p>來源擷取紀錄：`source-archive/2026-10-19-youtube-applemei-buzz-ai-agent-hostinger.json`</p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-19 · https://youtu.be/kNSHESEOwRw?si=WXua0afGOnvaz2Mt · youtube-video</div><h3>標籤</h3><span class="tag">AI Agent</span><span class="tag">Buzz</span><span class="tag">Nostr</span><span class="tag">Hostinger</span><span class="tag">自架</span><span class="tag">協作平台</span><span class="tag">AI 員工</span><h3>原始連結</h3><p><a href="https://www.youtube.com/watch?v=kNSHESEOwRw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=kNSHESEOwRw</a></p><p><a href="https://www.youtube.com/watch?v=kNSHESEOwRw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=kNSHESEOwRw</a></p><p><a href="https://www.hostinger.com/applications/buzz" target="_blank" rel="noopener">https://www.hostinger.com/applications/buzz</a></p><p><a href="https://github.com/block/buzz" target="_blank" rel="noopener">https://github.com/block/buzz</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
