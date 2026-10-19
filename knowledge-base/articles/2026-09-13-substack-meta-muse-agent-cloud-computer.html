@@ -301,6 +301,23 @@
 <p><a href="https://www.youtube.com/watch?v=XfdIhd1g6EI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=XfdIhd1g6EI</a></p>
 <p>來源擷取紀錄：</p>
 <p>source-archive/2026-10-14-threads-aiposthub-cheeky-pint-meta-agentic-commerce.json</p>
+<h2>2026-10-19 補充：從「新進員工」到 AI CEO 的五種個人 agent 工作流</h2>
+<figure><img src="../assets/source-images/2026-10-19-youtube-wendell-meta-muse-ceo-five-capabilities-thumbnail.jpg" alt="YouTube 影片縮圖：我讓 Muse 從新進員工變成 CEO" loading="lazy" referrerpolicy="no-referrer"><figcaption>YouTube 影片縮圖：我讓 Muse 從新進員工變成 CEO</figcaption></figure>
+<p>Wei Chang Yu（Wendell）的 YouTube 影片以個人實測說明五個 Muse「做得到或做得較好」的情境：讀取他長年 Facebook 貼文產生人生側寫、作為「AI CEO」統籌 Claude Code 與 ChatGPT Codex、在使用者離線時於雲端電腦持續工作及安排社群貼文、把滑到的內容交給 Muse 轉為行程或照片整理，以及讓 agent 逐步累積個人脈絡。影片約 19 分 37 秒，描述與章節可追溯；但 YouTube 未開放可擷取 transcript，因此本段是依 oEmbed、影片描述／章節及 Muse 官方頁交叉整理，不是逐字稿摘要。</p>
+<p>這支影片最值得帶走的不是「CEO」這個行銷比喻，而是可泛化的任務分層：</p>
+<ul>
+<li>**個人脈絡整理**：把長期內容、筆記或公開貼文濃縮成可回看的人生／工作側寫；這類任務先限定資料來源與時間範圍，避免預設掃描所有私密帳號。</li>
+<li>**跨工具協調**：讓一個上層 agent 拆解目標、分派 Claude Code、Codex 等專門工具，再彙整可驗收輸出。這應被理解為作者的實驗流程，不是 Meta 已承諾的通用原生整合或成本節省保證。</li>
+<li>**持續執行與排程**：對可長時間運行的 agent，重點不是「一直做」，而是要有完成條件、成本／時間上限、失敗通知、可暫停與人類接手點。Muse 官方可確認 Secure VM 與任務執行／核准設計，但個別帳號是否可排程特定社群平台，須以當期介面和條款為準。</li>
+<li>**輕量擷取再整理**：把滑到的資訊交給 agent 做行程、清單或相簿整理，適合從低風險、可回復的資料開始；不得把「自動整理」誤當成可以不經檢查地對外發布。</li>
+<li>**長期個人化**：記憶可以提高連貫性，也會擴大資料治理責任。資料保留、刪除、可見範圍、模型是否能接觸原始內容及對外分享邊界，都應在導入前設定清楚。</li>
+</ul>
+<p>官方產品頁目前可確認 Muse 提供持續存在、隔離的 Secure VM 與瀏覽器；使用者可在寄信、購物等外部行動前核准，並決定 email、calendar、Instagram 等連接服務可被看到與操作的範圍。相對地，影片所稱「5 個獨家能力」、讀取 17 年 Facebook 內容、統籌 Claude Code／ChatGPT Codex、排程發社群貼文、照片自動上傳與長期記憶，均是作者在特定帳號、授權與版本下的實測敘事，不能外推為所有地區或帳號的官方功能保證。</p>
+<p>實作時建議採取三道護欄：先用非敏感、唯讀或可回復資料測試；把任務寫成成果、允許資料、限制、完成標準與核准點；凡涉及社群發布、私人照片、信件、行事曆、登入、付款或帳號變更，一律保留人類最終確認。這比把 agent 直接冠上 CEO 職稱更能降低錯誤授權與錯誤自動化的風險。</p>
+<p>原始影片：</p>
+<p><a href="https://www.youtube.com/watch?v=hRrftyTYuFs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=hRrftyTYuFs</a></p>
+<p>影片擷取紀錄：</p>
+<p>source-archive/2026-10-19-youtube-wendell-meta-muse-ceo-five-capabilities.json</p>
 <h2>結論</h2>
 <p>Daniel Wu 的文章最有價值的地方，不是預測 Meta Muse 一定會成為下一個聚合平台，而是指出 agent 商業化的成本結構已經改變：當產品替每位使用者保留一台可執行任務的雲端電腦，AI 就不再只是「回答一次問題」的變動成本。Meta 能否成功，取決於一般人的日常是否有足夠多值得長時間委派的工作，以及使用者是否願意把個人資料、付款能力與行動權限交給它。</p>
 <p>對實作團隊而言，最可複製的答案不是照抄 Muse，而是採用它揭示的工程原則：隔離執行環境、權限裁決元件、秘密不進模型、核准通道獨立、可觀測的成本上限，以及把「agent 出錯」當成設計前提。</p>
