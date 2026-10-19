@@ -21576,7 +21576,9 @@
       "https://labs.google/opal",
       "https://developers.google.com/opal",
       "https://developers.googleblog.com/introducing-opal/",
-      "https://support.google.com/googleone/answer/16287445"
+      "https://support.google.com/googleone/answer/16287445",
+      "https://www.facebook.com/jackshenadvisor/posts/pfbid0tCgRQV3jKtSbYG83j6TAp5HakETruySR9UZntdHXEydxqnKySzk123u3hcdfAnpl",
+      "https://flow.google.com/"
     ],
     "excerpt": "「每月 440 支 Veo 3 影片」的算法大致是：Opal 10/天 × 30 = 300，加 Gemini 3/天 × 30 = 90，再加 Flow 50/月 = 50，合計 440；但這是社群整理的額度推算法，不等於 Google 官方承諾。實際可用量會受到地區、帳號、Google AI 方案、Flow credits、模型版本、生成成本與風控限制影響。",
     "slug": "2026-06-08-google-veo-3-free-quota-opal-flow-gemini-guide",
