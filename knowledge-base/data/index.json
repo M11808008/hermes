@@ -1026,6 +1026,46 @@
     "markdown": "articles/2026/10/2026-10-10-instagram-pomelli-google-labs-brand-marketing-content.md"
   },
   {
+    "title": "Jambo｜從網頁對話到 Coding Agent：給 R／Python 研究者的九篇實作入門",
+    "date": "2026-10-10",
+    "source": "Jambo",
+    "author": "Jambo Chen",
+    "type": "article",
+    "topics": [
+      "Coding Agent",
+      "R",
+      "Python",
+      "資料分析",
+      "科學計算",
+      "Git",
+      "AGENTS.md",
+      "VS Code"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://jambochen.github.io/blog/coding-agent/?fbclid=IwZnRzaAVC_wZleHRuA2FlbQIxMQBwZG9mBWZkaWQWUQkA9qUUjWPunrv5b09S4RbHA9yh8nNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR5M6w7EfTzlEf99r5LtkcvdJkE8zLHByhpXGsT9ivsyM2C4K1SqN7_vH1SWwg_aem_FWSswXNyZPfqHN8a0VAljw",
+      "https://jambochen.github.io/blog/coding-agent/",
+      "https://jambochen.github.io/blog/coding-agent/",
+      "https://jambochen.github.io/blog/coding-agent/leaving-web-chat/",
+      "https://jambochen.github.io/blog/coding-agent/how-llms-work/",
+      "https://jambochen.github.io/blog/coding-agent/prompting-and-models/",
+      "https://jambochen.github.io/blog/coding-agent/plain-text-workflow/",
+      "https://jambochen.github.io/blog/coding-agent/rules-file-and-skills/",
+      "https://jambochen.github.io/blog/coding-agent/git-checkpoints/",
+      "https://jambochen.github.io/blog/coding-agent/organizing-a-project/",
+      "https://jambochen.github.io/blog/coding-agent/efficient-computing/",
+      "https://jambochen.github.io/blog/coding-agent/moving-to-vscode/",
+      "https://developers.openai.com/codex/guides/agents-md",
+      "https://code.claude.com/docs/en/memory"
+    ],
+    "excerpt": "這是一套少見地把 Coding Agent 放回研究與資料分析脈絡的繁中入門系列：先減少人工複製貼上，再逐步建立純文字、Git、規範檔、驗證與可重現計算的基本功；它不把 Agent 描述成可自動保證正確的黑盒，而是強調人必須保留驗收與權限判斷。",
+    "slug": "2026-10-10-jambo-from-web-chat-to-coding-agent",
+    "html": "articles/2026-10-10-jambo-from-web-chat-to-coding-agent.html",
+    "markdown": "articles/2026/10/2026-10-10-jambo-from-web-chat-to-coding-agent.md"
+  },
+  {
     "title": "板橋新埔美食｜呷雞啦餐館：青菜園第三代白斬雞與熱炒，用餐資訊與點餐重點",
     "date": "2026-10-10",
     "source": "Nash，神之領域",
