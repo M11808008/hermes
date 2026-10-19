@@ -14662,7 +14662,9 @@
       "https://github.com/heygen-com/hyperframes",
       "https://raw.githubusercontent.com/heygen-com/hyperframes/main/.codex-plugin/plugin.json",
       "https://hyperframes.heygen.com/guides/hyperframes-vs-remotion",
-      "https://luma.com/ybz0ofv9"
+      "https://luma.com/ybz0ofv9",
+      "https://www.facebook.com/share/r/1F8H8Bd8rG/?mibextid=wwXIfr",
+      "https://www.facebook.com/reel/1746233959821214"
     ],
     "excerpt": "HyperFrames 把影片製作從傳統剪輯時間軸轉成「HTML + CSS + JS + 可 seek 動畫」的工程問題，再讓 Codex、Claude Code、Cursor、Gemini CLI 等 agent 依專用 skills 建立、預覽、修正並渲染 MP4。",
     "slug": "2026-07-08-aiposthub-hyperframes-codex-video-as-code-quickstart",
