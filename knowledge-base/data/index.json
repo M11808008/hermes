@@ -3025,6 +3025,34 @@
     "markdown": "articles/2026/09/2026-09-17-youtube-lingdu-desktop-ai-girlfriend-comfyui-video-wallpaper.md"
   },
   {
+    "title": "Facebook｜S 的 AI 研究所：用四個指令把 ChatGPT 變成學習輔助工具",
+    "date": "2026-09-16",
+    "source": "https://www.facebook.com/share/r/18J6cLD4p6/",
+    "author": "S 的 AI 研究所（Facebook）",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "ChatGPT",
+      "學習設計",
+      "Flashcards",
+      "Mind Map",
+      "Facebook Reel"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/61556094572479/videos/%E8%AE%93-chatgpt-%E8%AE%8A%E6%88%90%E4%BD%A0%E7%9A%84%E5%B0%88%E5%B1%AC%E5%AE%B6%E6%95%991-cheat-sheet-%E6%9C%83%E5%B9%AB%E4%BD%A0%E6%95%B4%E7%90%86%E6%88%90%E4%B8%80%E9%A0%81%E5%BC%8F%E9%87%8D%E9%BB%9E%E7%AD%86%E8%A8%982-blueprint-%E6%8A%8A%E6%95%B4%E5%80%8B%E4%B8%BB%E9%A1%8C%E6%8B%86%E8%A7%A3%E9%96%8B%E4%BE%863-flashcards-%E7%94%A2/2011196050284377/",
+      "https://www.facebook.com/share/r/18J6cLD4p6/",
+      "https://www.facebook.com/reel/2011196050284377",
+      "https://openai.com/index/chatgpt-study-mode/"
+    ],
+    "excerpt": "這支 Reel 把學習支援拆成四種可重複呼叫的提示詞模式：濃縮、拆解、記憶卡與心智圖。它是一個好用的學習工作流框架，但 `/Cheat Sheet` 等字串屬於社群示範標籤，不是本次可獨立驗證的 ChatGPT 內建指令。",
+    "slug": "2026-09-16-facebook-s-ai-lab-chatgpt-study-commands",
+    "html": "articles/2026-09-16-facebook-s-ai-lab-chatgpt-study-commands.html",
+    "markdown": "articles/2026/09/2026-09-16-facebook-s-ai-lab-chatgpt-study-commands.md"
+  },
+  {
     "title": "Facebook Reel｜Seb Intel：讓 Claude Code 接上即時研究、瀏覽器、爬蟲與創意生成的 5 個 MCP",
     "date": "2026-09-16",
     "source": "https://www.facebook.com/share/r/1DPhMDJKVo/",
