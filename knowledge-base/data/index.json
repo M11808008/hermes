@@ -1,5 +1,32 @@
 [
   {
+    "title": "Threads｜earshot v0.3：為 AI 影片與程式代理補上可程式化音效與同步檢查",
+    "date": "2026-10-20",
+    "source": "https://www.threads.com/@kufutw/post/Des1q9Rjj0Q",
+    "author": "苦夫 (@kufutw)",
+    "type": "article",
+    "topics": [
+      "AI 影片生成",
+      "音效設計",
+      "MCP",
+      "開源工具",
+      "Python",
+      "AI Agent"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@kufutw/post/Des1q9Rjj0Q",
+      "https://github.com/Leonxlnx/earshot",
+      "https://github.com/Leonxlnx/earshot/blob/main/CHANGELOG.md"
+    ],
+    "excerpt": "earshot 想解決「AI agent 能寫出影片或互動作品，卻聽不見自己做出來的聲音」這件事：它將聲音轉成可描述、可比對、可量測的證據，也能以程式生成、檢查並安排影片音效。",
+    "slug": "2026-10-20-threads-kufutw-earshot-v03-film-sound",
+    "html": "articles/2026-10-20-threads-kufutw-earshot-v03-film-sound.html",
+    "markdown": "articles/2026-10-20-threads-kufutw-earshot-v03-film-sound.md"
+  },
+  {
     "title": "Facebook｜朗廷 Brilliant「Ruby」會籍匹配：社群線索與官方方案查核",
     "date": "2026-10-19",
     "source": "https://m.facebook.com/story.php?story_fbid=pfbid02iETsdvAGVSpQkh21AKXL2haxqvjhVJjVk2tnk3pAWKrpexrUiq1NUfgxLoeux99Rl&id=100064806633828&mibextid=wwXIfr",
