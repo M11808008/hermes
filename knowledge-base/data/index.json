@@ -30,6 +30,32 @@
     "markdown": "articles/2026-10-20-threads-beatapi-beatdesign-local-ai-video-workspace.md"
   },
   {
+    "title": "Threads｜Higgsfield Academy：7 堂、90 分鐘的 AI 影片入門課，免費入口不等於生成零成本",
+    "date": "2026-10-20",
+    "source": "https://www.threads.com/@fan__leung/post/DetrU5qE1Lf",
+    "author": "Fan Leung (@fan__leung)",
+    "type": "article",
+    "topics": [
+      "Higgsfield",
+      "AI 影片生成",
+      "AI 學習",
+      "Prompt",
+      "創作者工具",
+      "線上課程"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@fan__leung/post/DetrU5qE1Lf",
+      "https://higgsfield.ai/academy"
+    ],
+    "excerpt": "Higgsfield Academy 是 Higgsfield 官方設計給零基礎使用者的 AI 影片入門路徑：先學會描述畫面、選模型與設定，再用短場景、運鏡與版本迭代做出第一支影片；它值得當作操作導覽，但應把「免費開始」和「平台生成成本」分開評估。",
+    "slug": "2026-10-20-threads-fan-leung-higgsfield-academy",
+    "html": "articles/2026-10-20-threads-fan-leung-higgsfield-academy.html",
+    "markdown": "articles/2026-10-20-threads-fan-leung-higgsfield-academy.md"
+  },
+  {
     "title": "Threads｜earshot v0.3：為 AI 影片與程式代理補上可程式化音效與同步檢查",
     "date": "2026-10-20",
     "source": "https://www.threads.com/@kufutw/post/Des1q9Rjj0Q",
