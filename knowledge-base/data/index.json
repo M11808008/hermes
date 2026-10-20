@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜BeatDesign：開源、本地優先的 AI 影片工作台，讓 MCP Agent 直接操作 Canvas 與時間線",
+    "date": "2026-10-20",
+    "source": "https://www.threads.com/@beatapi_io/post/Des5BnWG3VX",
+    "author": "Eric Kang｜BeatAPI 創辦人 (@beatapi_io)",
+    "type": "article",
+    "topics": [
+      "AI 影片生成",
+      "開源工具",
+      "MCP",
+      "Claude Code",
+      "Codex",
+      "影片剪輯",
+      "Local-first"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@beatapi_io/post/Des5BnWG3VX",
+      "https://github.com/BeatAPI/BeatDesign",
+      "https://design.beatapi.io",
+      "https://github.com/BeatAPI/BeatDesign/blob/main/docs/PRODUCT_PLAN_AND_STATUS.md",
+      "https://github.com/BeatAPI/BeatDesign/blob/main/docs/MCP.md"
+    ],
+    "excerpt": "BeatDesign 想把「構想 → 生成 → 整理素材 → 剪輯 → 匯出」留在一個可自管、可延伸的本機專案裡；它不內建一個聊天 agent，而是以 MCP 讓你慣用的 Claude Code、Codex、Cursor 等 agent 操作同一個 Canvas、Assets 與 Editor。",
+    "slug": "2026-10-20-threads-beatapi-beatdesign-local-ai-video-workspace",
+    "html": "articles/2026-10-20-threads-beatapi-beatdesign-local-ai-video-workspace.html",
+    "markdown": "articles/2026-10-20-threads-beatapi-beatdesign-local-ai-video-workspace.md"
+  },
+  {
     "title": "Threads｜earshot v0.3：為 AI 影片與程式代理補上可程式化音效與同步檢查",
     "date": "2026-10-20",
     "source": "https://www.threads.com/@kufutw/post/Des1q9Rjj0Q",
