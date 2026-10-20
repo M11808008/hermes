@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜Cua Spaces：讓 AI Agent 有自己的桌面，但「自有電腦」仍須看清 relay 資料路徑",
+    "date": "2026-10-20",
+    "source": "https://www.threads.com/@aiposthub/post/Det0osAgVVr",
+    "author": "AI郵報 (@aiposthub)",
+    "type": "article",
+    "topics": [
+      "Cua",
+      "Cua Spaces",
+      "AI Agent",
+      "Computer Use",
+      "Claude Code",
+      "Codex",
+      "MCP",
+      "資安"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/Det0osAgVVr",
+      "https://github.com/trycua/cua",
+      "https://cua.ai/docs/spaces/guides/create-a-space-with-the-sdk",
+      "https://cua.ai/docs/spaces/guides/relay-security"
+    ],
+    "excerpt": "Cua Spaces 的核心不是替 agent 再開一個聊天框，而是提供可觀察、可介入的完整桌面；它很適合把長時間、需要 GUI 的任務移到隔離環境，但「機器是自己的」不代表任何連線方式下資料都不會經過 Cua 的 relay。",
+    "slug": "2026-10-20-threads-aiposthub-cua-spaces-sdk",
+    "html": "articles/2026-10-20-threads-aiposthub-cua-spaces-sdk.html",
+    "markdown": "articles/2026-10-20-threads-aiposthub-cua-spaces-sdk.md"
+  },
+  {
     "title": "Threads｜BeatDesign：開源、本地優先的 AI 影片工作台，讓 MCP Agent 直接操作 Canvas 與時間線",
     "date": "2026-10-20",
     "source": "https://www.threads.com/@beatapi_io/post/Des5BnWG3VX",

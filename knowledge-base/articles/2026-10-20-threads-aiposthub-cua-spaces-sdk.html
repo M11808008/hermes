@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Cua Spaces：讓 AI Agent 有自己的桌面，但「自有電腦」仍須看清 relay 資料路徑</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Cua Spaces：讓 AI Agent 有自己的桌面，但「自有電腦」仍須看清 relay 資料路徑</h1><figure><img src="../assets/source-images/2026-10-20-cua-spaces-og-card.jpg" alt="Cua Spaces 官方宣傳圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>Cua Spaces 官方宣傳圖</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>Cua Spaces 的核心不是替 agent 再開一個聊天框，而是提供可觀察、可介入的完整桌面；它很適合把長時間、需要 GUI 的任務移到隔離環境，但「機器是自己的」不代表任何連線方式下資料都不會經過 Cua 的 relay。</p>
+<h2>Threads 貼文在說什麼</h2>
+<p>AI郵報（@aiposthub）分享 Cua Spaces SDK，將它描述為可讓 Claude Code、Codex 等程式代理在自己的 Mac、Linux 主機或雲端帳號上執行任務的方向；貼文也點出多 agent 跨電腦協作仍需要自行處理任務分配和資源限制。</p>
+<p>這個判斷大致符合官方資料，但應把「可用的底層能力」和「已替你完成的多機調度產品」分開看：官方有建立／連接 Space、桌面串流、agent 整合與自有機器 hosting 的工具；至於要讓多個 agent 如何分工、避免搶檔案、控制預算與排程，仍是使用者或上層編排器的責任。</p>
+<h2>官方可確認的能力</h2>
+<p>Cua 官方 GitHub 將 Spaces 定義為給 agent 使用的完整桌面。Space 可是本機 Mac 上建立的 macOS VM，也可使用 Linux／Omarchy 映像；官方 README 說明它可在自己的 Mac、其他自有機器，或自己的 AWS、Google Cloud、Modal 帳號執行。</p>
+<p>官方的「Use Spaces from code」教學提供 Python 與 TypeScript 範例：</p>
+<ul>
+<li>建立一個本機 Linux Space；</li>
+<li>在 Space 中跑 shell 指令；</li>
+<li>擷取桌面畫面；</li>
+<li>透過 Cua Driver 查詢已開啟視窗；</li>
+<li>在不再需要時刪除 Space。</li>
+</ul>
+<p>範例需要 Docker、Podman 或 Colima 其中之一，以及約 **4 GB 可用記憶體**。第一次執行會下載映像，因此不適合把它誤解為零成本、零設定的雲端服務。</p>
+<p>Cua 也提供 `cua` CLI 與 Python、TypeScript、Swift、Kotlin SDK；官方 README 列出 Claude Code、Codex、Cursor、OpenClaw 等 agent 的整合入口。這讓 agent 可在隔離桌面中處理程式、檔案、瀏覽器和原生應用等混合型工作。</p>
+<h2>何時值得用：把 GUI 工作移出主電腦</h2>
+<p>較合適的情境包括：</p>
+<ul>
+<li>**長時間 agent 任務**：把測試、資料整理、網頁操作或多步驟產出放入可持續觀察的桌面。</li>
+<li>**隔離工作環境**：讓特定任務使用不同的檔案、登入狀態或瀏覽器，而不是直接在主工作桌面亂跑。</li>
+<li>**人機協作**：官方稱為 multiplayer 的互動中，人和 agent 可各有游標；人在需要做決策時介入，再交還任務。</li>
+<li>**閒置主機利用**：Mac mini 或 Linux 主機可充當 Space 的宿主；不過要先評估電力、網路、更新、磁碟與失敗復原。</li>
+</ul>
+<h2>三個不能省略的限制</h2>
+<p>### 1. 多機協作不是自動專案管理</p>
+<p>建立多個 Space 不會自動解決依賴順序、共享檔案、同時修改、模型／API 金鑰配額或成本上限。實務上應先定義每個 agent 的輸入、輸出、可存取目錄、最大執行時間與停止條件，再讓編排器派工。</p>
+<p>### 2. 「本機」與「經 relay」的資料風險不同</p>
+<p>官方的本機建立 Space 範例寫著「Nothing leaves your computer」，這適用於該本機流程；但官方另一份安全文件明確指出，`relay.cua.ai` 是 **TLS 終止的受信任 proxy，而不是盲轉 relay**。在 HTTPS relay 路徑中，它會解析並轉送 shell 輸出、檔案內容、桌面媒體串流、鍵盤與剪貼簿輸入。</p>
+<p>官方提供的端對端加密 mesh 目前是 **beta、選用且預設關閉**；瀏覽器 viewer、網頁端 agent 或 mesh 不可用時仍可能走 HTTPS relay。含機密文件、憑證或登入工作階段的任務，應先讀完官方 relay security 文件，最小化傳送資料，並優先在低敏感測試環境驗證流程。</p>
+<p>### 3. 授權與價格不能籠統稱「完全開源免費」</p>
+<p>官方 README 表示個人可免費使用 Spaces，亦有 Pro 與 Teams 方案；同時 Cua 的不同元件並非相同授權。README 說明 SDK／CLI 等多數部分為 MIT，但 **Cua Spaces app、cua-spacesd、Keyvault、teleport 與串流元件是 FSL-1.1-MIT 的 source-available 授權**。導入組織產品或提供代管服務前，應逐項核對版本、授權與方案條款。</p>
+<h2>建議的安全起步法</h2>
+<ul>
+<li>先在沒有個資、客戶資料與正式登入狀態的主機測試官方範例。</li>
+<li>用容器／本機 Space 跑出「建立 → 指令 → 截圖 → 刪除」的最小閉環，再接 agent。</li>
+<li>為每一個 agent 指定最小權限、獨立工作目錄、時間與用量上限。</li>
+<li>若需遠端存取或 relay，先確認資料流、端對端加密狀態，以及密碼與 session 傳遞的保護條件。</li>
+<li>把能產生副作用的操作（發信、付款、刪資料、部署）改成需人工確認的關卡。</li>
+</ul>
+<h2>來源</h2>
+<ul>
+<li>Threads：&lt;<a href="https://www.threads.com/@aiposthub/post/Det0osAgVVr&gt;" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/Det0osAgVVr&gt;</a></li>
+<li>Cua GitHub README（官方）：&lt;<a href="https://github.com/trycua/cua&gt;" target="_blank" rel="noopener">https://github.com/trycua/cua&gt;</a></li>
+<li>Use Spaces from code（官方文件）：&lt;<a href="https://cua.ai/docs/spaces/guides/create-a-space-with-the-sdk&gt;" target="_blank" rel="noopener">https://cua.ai/docs/spaces/guides/create-a-space-with-the-sdk&gt;</a></li>
+<li>What the relay can see（官方文件）：&lt;<a href="https://cua.ai/docs/spaces/guides/relay-security&gt;" target="_blank" rel="noopener">https://cua.ai/docs/spaces/guides/relay-security&gt;</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-20 · https://www.threads.com/@aiposthub/post/Det0osAgVVr · article</div><h3>標籤</h3><span class="tag">Cua</span><span class="tag">Cua Spaces</span><span class="tag">AI Agent</span><span class="tag">Computer Use</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">MCP</span><span class="tag">資安</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aiposthub/post/Det0osAgVVr" target="_blank" rel="noopener">https://www.threads.com/@aiposthub/post/Det0osAgVVr</a></p><p><a href="https://github.com/trycua/cua" target="_blank" rel="noopener">https://github.com/trycua/cua</a></p><p><a href="https://cua.ai/docs/spaces/guides/create-a-space-with-the-sdk" target="_blank" rel="noopener">https://cua.ai/docs/spaces/guides/create-a-space-with-the-sdk</a></p><p><a href="https://cua.ai/docs/spaces/guides/relay-security" target="_blank" rel="noopener">https://cua.ai/docs/spaces/guides/relay-security</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
