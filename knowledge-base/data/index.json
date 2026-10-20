@@ -169,6 +169,34 @@
     "markdown": "articles/2026-10-20-threads-sapplex-ming-3-tts.md"
   },
   {
+    "title": "Threads｜HGTV Android TV APK：可核對 release 雜湊，但不該跳過非官方服務、帳號與內容風險",
+    "date": "2026-10-20",
+    "source": "https://www.threads.com/@taiwan_ant/post/DeqxiWtkw4M",
+    "author": "螞蟻 (@taiwan_ant)",
+    "type": "article",
+    "topics": [
+      "Android TV",
+      "APK",
+      "GitHub Releases",
+      "資安",
+      "SHA-256",
+      "開源軟體",
+      "影音服務"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@taiwan_ant/post/DeqxiWtkw4M",
+      "https://github.com/pan8664716/HGTV",
+      "https://github.com/pan8664716/HGTV/releases/tag/v1.1.4"
+    ],
+    "excerpt": "從 GitHub Releases 側載 Android TV APK 並非天然不安全，但「允許不明來源」應是最後一步、不是第一步：先確認專案身分、版本、雜湊、簽章、權限、隱私與服務合法性；對這個專案而言，非官方內容介面與帳號登入風險尤其不能略過。",
+    "slug": "2026-10-20-threads-taiwan-ant-hgtv-apk-install-safety",
+    "html": "articles/2026-10-20-threads-taiwan-ant-hgtv-apk-install-safety.html",
+    "markdown": "articles/2026-10-20-threads-taiwan-ant-hgtv-apk-install-safety.md"
+  },
+  {
     "title": "Facebook｜朗廷 Brilliant「Ruby」會籍匹配：社群線索與官方方案查核",
     "date": "2026-10-19",
     "source": "https://m.facebook.com/story.php?story_fbid=pfbid02iETsdvAGVSpQkh21AKXL2haxqvjhVJjVk2tnk3pAWKrpexrUiq1NUfgxLoeux99Rl&id=100064806633828&mibextid=wwXIfr",
