@@ -1,5 +1,31 @@
 [
   {
+    "title": "Threads｜three.js 純程式生成場景：先用 layout.js 鎖定空間，再談鏡頭與 70 秒影片",
+    "date": "2026-10-20",
+    "source": "https://www.threads.com/@ai_cpocoder/post/Det44deGZvB",
+    "author": "Austin ｜Claude 認證 AI 架構師 (@ai_cpocoder)",
+    "type": "article",
+    "topics": [
+      "three.js",
+      "程式化生成",
+      "Procedural Generation",
+      "WebGL",
+      "3D 場景",
+      "AI Coding",
+      "影片製作"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@ai_cpocoder/post/Det44deGZvB"
+    ],
+    "excerpt": "把 AI 交付的三維影片拆成「可驗證的空間規格 → 程式化資產 → 光照與鏡頭 → 離線輸出」：第一步不是畫面，而是一份所有模組都必須服從的 `layout.js`。",
+    "slug": "2026-10-20-threads-ai-cpocoder-threejs-procedural-temple-layout",
+    "html": "articles/2026-10-20-threads-ai-cpocoder-threejs-procedural-temple-layout.html",
+    "markdown": "articles/2026-10-20-threads-ai-cpocoder-threejs-procedural-temple-layout.md"
+  },
+  {
     "title": "Threads｜Cua Spaces：讓 AI Agent 有自己的桌面，但「自有電腦」仍須看清 relay 資料路徑",
     "date": "2026-10-20",
     "source": "https://www.threads.com/@aiposthub/post/Det0osAgVVr",
