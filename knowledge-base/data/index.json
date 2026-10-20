@@ -113,6 +113,36 @@
     "markdown": "articles/2026-10-20-threads-kufutw-earshot-v03-film-sound.md"
   },
   {
+    "title": "Threads｜Ming-3.0-tts：開放權重的多語音 TTS，先分清「評測亮點」與「可直接商用」",
+    "date": "2026-10-20",
+    "source": "https://www.threads.com/@sapplex/post/Det6t-1jwRE",
+    "author": "Song (@sapplex)",
+    "type": "article",
+    "topics": [
+      "Ming-3.0",
+      "TTS",
+      "語音合成",
+      "聲音設計",
+      "Voice Cloning",
+      "開放權重",
+      "Podcast"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@sapplex/post/Det6t-1jwRE",
+      "https://github.com/inclusionAI/Ming-3.0-tts",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-0.5B",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny",
+      "https://artificialanalysis.ai/text-to-speech"
+    ],
+    "excerpt": "Ming-3.0-tts 值得關注的地方是：它把聲音複製、以文字設計聲線、情緒／語速／音高控制與副語言效果放在同一個開放權重工具鏈；不過「5 個模型」是整個 Ming-3.0 聲音系列，不是 5 個 TTS 模型，而評測名次與 MIT 標示也不會自動解決硬體、聲音權利與實際交付品質問題。",
+    "slug": "2026-10-20-threads-sapplex-ming-3-tts",
+    "html": "articles/2026-10-20-threads-sapplex-ming-3-tts.html",
+    "markdown": "articles/2026-10-20-threads-sapplex-ming-3-tts.md"
+  },
+  {
     "title": "Facebook｜朗廷 Brilliant「Ruby」會籍匹配：社群線索與官方方案查核",
     "date": "2026-10-19",
     "source": "https://m.facebook.com/story.php?story_fbid=pfbid02iETsdvAGVSpQkh21AKXL2haxqvjhVJjVk2tnk3pAWKrpexrUiq1NUfgxLoeux99Rl&id=100064806633828&mibextid=wwXIfr",
