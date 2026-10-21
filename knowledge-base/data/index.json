@@ -1,5 +1,35 @@
 [
   {
+    "title": "Grok Bot Marketplace｜從可匯入模板看 Agent 的權限、驗收與安全邊界",
+    "date": "2026-10-21",
+    "source": "https://www.threads.com/share/_1cHN0PZw/",
+    "author": "clouddresslt",
+    "type": "link-archive",
+    "topics": [
+      "Grok Bot",
+      "xAI",
+      "Agent Skills",
+      "Bot Marketplace",
+      "AI Agent",
+      "Automation",
+      "Security",
+      "Human-in-the-loop"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@clouddresslt/post/Devb7J9Gzxr",
+      "https://www.threads.com/share/_1cHN0PZw/",
+      "https://www.threads.com/@clouddresslt/post/Devb7J9Gzxr",
+      "https://x.ai/bot/marketplace/bots/human-copywriter"
+    ],
+    "excerpt": "這串 Threads 的亮點不在「53 個 Bot 清單」本身，而在它揭示了 Agent 模板正在從 prompt 分享，走向可匯入、可帶技能、排程與外部整合的工作單元。越容易一鍵導入，越要在匯入前看清它讀什麼、寫什麼、會不會排程，以及最後是否仍由人確認發送／發布。",
+    "slug": "2026-10-21-threads-clouddresslt-grok-bot-marketplace-templates",
+    "html": "articles/2026-10-21-threads-clouddresslt-grok-bot-marketplace-templates.html",
+    "markdown": "articles/2026/10/2026-10-21-threads-clouddresslt-grok-bot-marketplace-templates.md"
+  },
+  {
     "title": "Tomarigi World｜用可互動地球儀探索全球即時直播鏡頭",
     "date": "2026-10-21",
     "source": "https://tomarigi.me/world",
