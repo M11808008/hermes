@@ -1,5 +1,35 @@
 [
   {
+    "title": "Tomarigi World｜用可互動地球儀探索全球即時直播鏡頭",
+    "date": "2026-10-21",
+    "source": "https://tomarigi.me/world",
+    "author": "株式会社ついのて（Tomarigi）",
+    "type": "article",
+    "topics": [
+      "生活工具",
+      "旅行",
+      "即時影像",
+      "Live Camera",
+      "地圖",
+      "YouTube",
+      "OpenStreetMap",
+      "NASA"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://tomarigi.me/world",
+      "https://tomarigi.me/world",
+      "https://tomarigi.me/world/spots",
+      "https://tomarigi.me/about/en#world"
+    ],
+    "excerpt": "Tomarigi World 把散落在各處的公開鏡頭做成一個「可旋轉、可辨識晝夜」的全球地球儀：想看某個城市當下的街景、海邊、車站、機場或動物棲地時，比逐一搜尋 YouTube 更有探索感。",
+    "slug": "2026-10-21-tomarigi-world-live-camera-map",
+    "html": "articles/2026-10-21-tomarigi-world-live-camera-map.html",
+    "markdown": "articles/2026/10/2026-10-21-tomarigi-world-live-camera-map.md"
+  },
+  {
     "title": "Threads｜three.js 純程式生成場景：先用 layout.js 鎖定空間，再談鏡頭與 70 秒影片",
     "date": "2026-10-20",
     "source": "https://www.threads.com/@ai_cpocoder/post/Det44deGZvB",
