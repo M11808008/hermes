@@ -55,6 +55,17 @@
 <p>本知識庫不保存、轉述或連結其操作做法。Oracle 官方 [Free Tier 頁面](<a href="https://www.oracle.com/cloud/free/)只可支持「新帳號有" target="_blank" rel="noopener">https://www.oracle.com/cloud/free/)只可支持「新帳號有</a> 30 天 US$300 trial credit 與 Always Free services」的公開說明；它不支持「現在很好過」「某規格必定可開」「免費資源永久保留」或任何驗證規避的結論。區域容量、機型、資格、帳戶狀態與費用均應以當下官方 console 和條款為準。</p>
 <p>不要以不實資料、規避資格驗證、多開帳戶或出售帳戶／存取權來取得雲端資源。這可能違反服務條款、帶來帳號與付款風險，也可能構成不當或詐欺性行為。若目標是長期運作自有 Hermes，應使用真實帳戶、可追溯的帳務與最小權限的正式部署，不以「薅資源」作為架構依據。</p>
 <p>補充來源：<a href="https://x.com/_ninetyhe/status/2113119446994997722" target="_blank" rel="noopener">https://x.com/_ninetyhe/status/2113119446994997722</a></p>
+<h2>2026-10-22 補充：Oracle Always Free VPS 資訊圖的可採用與修正處</h2>
+<figure><img src="../assets/source-images/2026-10-22-oracle-cloud-always-free-vps-infographic.jpg" alt="Oracle Cloud Always Free VPS 使用者提供資訊圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>使用者提供；非 Oracle 官方文件</figcaption></figure>
+<p>這張資訊圖正確提醒了幾個原則：以真實身分和有效付款方式註冊、先選擇能接受延遲的區域、建立網路與 instance 前先了解 Always Free 限制、設定成本通知，以及把 VM 基本防護做在部署應用之前。其所列 ARM、記憶體與 block storage 數字則應視為**示意／歷史配額線索**，而非保證；Oracle 官方 [Free Tier](<a href="https://www.oracle.com/cloud/free/)區分" target="_blank" rel="noopener">https://www.oracle.com/cloud/free/)區分</a> 30 天的 US$300 trial credit 與 Always Free 服務，資源規格、區域可用性、容量、public IP 條件與可能費用都以建立當下的官方 console／條款為準。</p>
+<p>圖中有四點需要修正：</p>
+<ul>
+<li>**SSH 不對全網開放**：TCP 22 應只允許自己可信的固定 IP 或 VPN 範圍，採 SSH key 並停用密碼登入；不該照圖開放 `0.0.0.0/0`。</li>
+<li>**公開網站與管理面分離**：80／443 可依需求對外，但 Docker daemon、資料庫、Coolify／Dokku 管理後台與 Hermes 控制面不可直接公開。需要管理時使用 VPN、IP allowlist 或受保護的身份驗證。</li>
+<li>**不要依賴「每 7 天保持執行」**：這類社群經驗不是資源保留承諾；實例回收、閒置規則與 capacity 政策要依現行官方條款，不用人為空轉來賭資源。</li>
+<li>**Budget alert 不是費用煞車**：通知僅是可見性；升級為 Pay As You Go 或新增計費服務前，還要設 quota、看 Cost Analysis、限制可建立的資源，並安排人工處置。</li>
+</ul>
+<p>Coolify 或 Dokku 是可評估的部署工具，不是「一鍵免費」保證。若要讓 Hermes 長時間運作，先從只開必要服務、祕密外置、備份、更新、日誌和可還原性做起；正式公開前應先以非敏感資料壓測與檢查。這也不會改變 Meta Muse 的地區與帳戶資格：自管 VM 是自己的基礎設施，不能用於繞過產品資格限制。</p>
 <h2>原始連結</h2>
 <ul>
 <li>Threads 分享：<a href="https://www.threads.com/share/_3LyTAj3t/" target="_blank" rel="noopener">https://www.threads.com/share/_3LyTAj3t/</a></li>
