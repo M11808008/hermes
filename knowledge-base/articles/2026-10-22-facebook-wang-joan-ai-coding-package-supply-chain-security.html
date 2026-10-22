@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI Coding 的套件供應鏈安全｜別讓 AI 幻覺變成 npm／PyPI 安裝指令</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>AI Coding 的套件供應鏈安全｜別讓 AI 幻覺變成 npm／PyPI 安裝指令</h1><h2>一句話摘要</h2>
+<p>AI 可以很快提出甚至執行 `npm install`、`pip install`，但它不會因此自動完成供應鏈安全審查。把「新增第三方依賴」當成一個需被驗收、有範圍、可回復的變更，才是 AI coding 時代基本的開發衛生。</p>
+<h2>原貼文的核心提醒</h2>
+<p>Wang Joan 以 AI coding 教材為背景說明：npm 是 JavaScript／Node.js 生態的重要套件平台，PyPI 則是 Python 的公開套件索引；這些可重用元件讓開發變快，同時也把外部程式碼帶進本機、CI 或部署環境。</p>
+<p>貼文特別指出兩類名稱風險：</p>
+<ul>
+<li>**Typosquatting**：利用知名套件名稱的拼字相近或誤植，引導使用者裝到錯誤套件。</li>
+<li>**Slopsquatting**：作者用此詞描述 AI 幻覺出不存在、但看似合理的套件名稱；若攻擊者搶先以該名稱發布套件，後續 AI 建議就可能把使用者導向它。</li>
+</ul>
+<p>第二項是貼文的風險模型與術語使用；本次沒有針對特定套件、事件或發生率做實測。但它指出一個實用原則：**AI 說得像真的，不是套件存在、可信或適合安裝的證明。**</p>
+<h2>官方資料可確認的範圍</h2>
+<p>npm 官方文件提供 `npm install` 指令說明，並有獨立的 Threats and Mitigations 文件區；PyPI 官方文件則公開記錄其 Index API，包含列出專案與取得個別專案 distributions 的端點。這些資料支持兩者是公開、可被工具化存取的套件生態。</p>
+<p>然而，平台提供發現、發布與分發機制，不等於每一個套件都替你做了完整安全背書。對使用者而言，最重要的是將「索引中找得到」和「值得在此環境執行」分成兩個不同問題。</p>
+<h2>AI Agent 讓風險從建議升級為執行</h2>
+<p>傳統聊天模型若給錯套件名，最糟常是文件或程式無法執行；有終端機、repo、CI 或雲端權限的 coding agent 則可能直接：</p>
+<ul>
+<li>修改 `package.json`、`requirements.txt` 或 lockfile；</li>
+<li>執行安裝與 post-install／建置腳本；</li>
+<li>在可讀取 `.env`、SSH key、GitHub token 或雲端憑證的環境中跑程式；</li>
+<li>把變更一路帶到測試、提交或部署。</li>
+</ul>
+<p>所以不能只檢查生成的應用程式碼；依賴清單、安裝腳本與 agent 的工具權限，也是程式碼審查的一部分。</p>
+<h2>可立即採用的 7 項檢查</h2>
+<ul>
+<li>**不要把套件名稱當成事實。** 先到官方 registry、官方文件與原始 repo 核對名稱、用途、發布者與維護活動。</li>
+<li>**每一筆新增依賴都要可追蹤。** 在 PR 或變更紀錄中說明：為何需要、替代方案、版本、授權與誰核准。</li>
+<li>**提交並檢閱 lockfile。** 固定可重現的相依版本；它不能保證安全，但能避免不透明的版本漂移。</li>
+<li>**把安裝腳本視為會執行的程式碼。** 對陌生依賴特別查看 install／build／postinstall 與下載行為；不要讓 agent 靜默跳過這一關。</li>
+<li>**以最小權限和隔離環境試裝。** 測試容器、暫時憑證、無正式 secrets 的 sandbox，優先於直接在主力開發機或正式 CI 執行。</li>
+<li>**把 agent 的預設權限降下來。** 新增依賴、寫入 lockfile、跑網路安裝、讀取 secrets、commit 與 deploy 應拆成不同核准關卡。</li>
+<li>**預先設想撤回。** 知道如何移除套件、輪替可能暴露的 token、回復 lockfile 與查閱安裝／CI log。</li>
+</ul>
+<h2>「要先註冊 npm／PyPI 嗎？」的精確說法</h2>
+<p>單純使用公開套件通常不等於必須先註冊帳號；發布或管理自己在 registry 上的套件，才會需要帳號與維護責任。更重要的不是為每個平台都開帳號，而是先分清你是依賴的使用者、套件作者，或負責發布維護的人。</p>
+<p>若擔心自己的產品、品牌或預期套件名稱被冒用，可另行評估名稱／scope 的保護策略；但「搶註冊名稱」不能替代依賴審查、版本治理與環境隔離。</p>
+<h2>對欒帥工作流的建議</h2>
+<p>日後以 AI 協助開發時，可把以下規則放進 agent 指令：**不得自行新增公開依賴或執行安裝；先輸出候選套件的 registry 連結、版本、維護者、用途、替代方案與腳本風險，由人確認後才可在隔離環境安裝。**</p>
+<p>這會稍微犧牲一次到位的流暢感，卻能把最高風險的「下載並執行陌生程式碼」保留在可觀測、可審核的關卡。</p>
+<h2>重要限制</h2>
+<ul>
+<li>本文未安裝或測試貼文提及的任何假設套件，也未驗證任何單一 AI coding 工具的實際安裝行為。</li>
+<li>套件安全性會隨版本、維護權移轉、相依樹、安裝環境與權限改變；本文是工作流程建議，不是對任何套件的安全認證。</li>
+<li>此次未保存 Facebook 圖片：登入牆頁面未提供可穩定保存、可驗證的貼文預覽圖，故避免使用可能失效的社群 CDN 熱連結。</li>
+</ul>
+<h2>來源</h2>
+<ul>
+<li>Facebook 原文：<a href="https://www.facebook.com/share/p/1FVcZ3QF9v/" target="_blank" rel="noopener">https://www.facebook.com/share/p/1FVcZ3QF9v/</a></li>
+<li>npm install 官方文件：<a href="https://docs.npmjs.com/cli/v11/commands/npm-install" target="_blank" rel="noopener">https://docs.npmjs.com/cli/v11/commands/npm-install</a></li>
+<li>npm Threats and Mitigations：<a href="https://docs.npmjs.com/threats-and-mitigations" target="_blank" rel="noopener">https://docs.npmjs.com/threats-and-mitigations</a></li>
+<li>PyPI Index API 官方文件：<a href="https://docs.pypi.org/api/index-api/" target="_blank" rel="noopener">https://docs.pypi.org/api/index-api/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-22 · https://www.facebook.com/share/p/1FVcZ3QF9v/ · link-archive</div><h3>標籤</h3><span class="tag">AI Coding</span><span class="tag">軟體供應鏈安全</span><span class="tag">npm</span><span class="tag">PyPI</span><span class="tag">Dependencies</span><span class="tag">AI Agent</span><span class="tag">Security</span><span class="tag">Lockfile</span><h3>原始連結</h3><p><a href="https://www.facebook.com/wang.joan.888/posts/%E9%82%A3%E5%80%8B%E9%BD%81%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%AF%AB%E7%9A%84%E7%A8%8B%E5%BC%8F%E6%98%8E%E6%98%8E%E6%B2%92%E6%9C%89%E5%95%8F%E9%A1%8C%E7%B5%90%E6%9E%9C%E5%AE%89%E8%A3%9D%E4%B8%80%E5%80%8B%E5%A5%97%E4%BB%B6%E5%B0%B1%E6%8A%8A%E6%95%B4%E5%80%8B%E7%B3%BB%E7%B5%B1%E6%90%9E%E5%A3%9E%E5%8F%AF%E8%83%BD%E6%98%AF%E4%BD%A0%E6%B2%92%E6%8A%8A-npmpypi-%E8%A8%BB%E5%86%8A%E8%B5%B7%E4%BE%86%E5%96%94%E5%9B%A0%E7%82%BA%E4%BB%8A%E5%A4%A9%E5%9C%A8%E7%B7%A8%E5%AF%AB-ai-coding-%E7%9A%84%E8%B3%87%E5%AE%89%E6%95%99%E6%9D%90%E5%AF%AB%E5%88%B0-np/30181876774745609/" target="_blank" rel="noopener">https://www.facebook.com/wang.joan.888/posts/%E9%82%A3%E5%80%8B%E9%BD%81%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%AF%AB%E7%9A%84%E7%A8%8B%E5%BC%8F%E6%98%8E%E6%98%8E%E6%B2%92%E6%9C%89%E5%95%8F%E9%A1%8C%E7%B5%90%E6%9E%9C%E5%AE%89%E8%A3%9D%E4%B8%80%E5%80%8B%E5%A5%97%E4%BB%B6%E5%B0%B1%E6%8A%8A%E6%95%B4%E5%80%8B%E7%B3%BB%E7%B5%B1%E6%90%9E%E5%A3%9E%E5%8F%AF%E8%83%BD%E6%98%AF%E4%BD%A0%E6%B2%92%E6%8A%8A-npmpypi-%E8%A8%BB%E5%86%8A%E8%B5%B7%E4%BE%86%E5%96%94%E5%9B%A0%E7%82%BA%E4%BB%8A%E5%A4%A9%E5%9C%A8%E7%B7%A8%E5%AF%AB-ai-coding-%E7%9A%84%E8%B3%87%E5%AE%89%E6%95%99%E6%9D%90%E5%AF%AB%E5%88%B0-np/30181876774745609/</a></p><p><a href="https://docs.npmjs.com/cli/v11/commands/npm-install" target="_blank" rel="noopener">https://docs.npmjs.com/cli/v11/commands/npm-install</a></p><p><a href="https://docs.npmjs.com/threats-and-mitigations" target="_blank" rel="noopener">https://docs.npmjs.com/threats-and-mitigations</a></p><p><a href="https://docs.pypi.org/api/index-api/" target="_blank" rel="noopener">https://docs.pypi.org/api/index-api/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
