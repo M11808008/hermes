@@ -33,6 +33,11 @@
 <h2>對欒帥工作流的可用啟發</h2>
 <p>可借鏡模板的「一個 Bot 只負責一件事」：例如把社群連結歸檔、文章去 AI 味、課程資料檢核、程式碼 review、每日摘要拆成不同、可審核的 Agent。每個 Agent 都應有：輸入範圍、允許工具、禁止動作、輸出 schema、驗收規則、預算與人工核准點。</p>
 <p>比起直接匯入大量外部模板，更穩健的做法是先以自己的資料邊界與流程，建立少量可看懂、可測試、可停用的工作 Bot。</p>
+<h2>延伸案例（2026-10-22）：用雲端電腦整理私人 LINE 未回覆訊息</h2>
+<p>Facebook 的 M觀點分享一個實作經驗：作者稱其「私人幕僚長」Grok Bot 可在雲端電腦登入私人 LINE，並設為每天約早上 8 點整理前一天的重要未回覆訊息；先前已提醒、尚未回覆的訊息也會持續列出，並送到目前對話與 Telegram。這是一個很具體的「個人助理＋持續例行任務」案例，正好對應 Marketplace 所呈現的 Routines 與 Integrations 概念。</p>
+<p>但這是社群作者的個案敘述，**不是已驗證的 Grok Bot／LINE 官方整合規格**。本次只獨立確認 Grok Bot Marketplace 的 Bot 結構可包含 Memories、Skills、Routines、Integrations，未登入、未授權，也未驗證私人 LINE 控制、雲端電腦、Telegram 同步或排程功能。</p>
+<p>此類流程的風險比「整理公開文章」高得多：私人 LINE 可能含驗證碼、聯絡人、群組內容、工作資料與個資。若要評估，應避免把密碼或二階段驗證碼交給未受控的 agent／遠端桌面；先以測試帳號和低敏感對話測試、縮小可讀範圍、保留人工確認、確認資料留存與遠端存取路徑，並預先演練如何撤銷登入、停用排程和清除工作資料。</p>
+<p>原始案例：<a href="https://www.facebook.com/share/p/19Zqa3aEEG/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/19Zqa3aEEG/?mibextid=wwXIfr</a></p>
 <h2>重要限制</h2>
 <ul>
 <li>「需要 SuperGrok、X Premium+ 或 Cursor 訂閱」、「約 20 美元/月」及額度共用等內容來自貼文與相關 Threads 討論；本次未在官方價格頁完整驗證，且方案、地區與額度可能隨時變動。</li>
