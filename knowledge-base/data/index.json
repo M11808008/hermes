@@ -84,6 +84,36 @@
     "markdown": "articles/2026/10/2026-10-22-facebook-wang-joan-ai-coding-package-supply-chain-security.md"
   },
   {
+    "title": "Meta Muse Atlas 中文開源手冊｜28 章、任務模板與安全邊界的查核",
+    "date": "2026-10-22",
+    "source": "Threads、GitHub",
+    "author": "AI 酋長 Andy（AIPMAndy）",
+    "type": "open-source-resource-review",
+    "topics": [
+      "Meta Muse",
+      "AI Agent",
+      "開源教材",
+      "任務拆解",
+      "權限治理",
+      "安全檢查"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@andyaipm/post/DewzNz9mvVI",
+      "https://www.threads.com/@andyaipm/post/DewzNz9mvVI",
+      "https://github.com/AIPMAndy/muse-guide",
+      "https://aipmandy.github.io/muse-guide/",
+      "https://muse.ai/",
+      "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+    ],
+    "excerpt": "這是一份把「怎麼交辦 agent」拆成任務規格、權限、證據、驗收與復盤的繁中／中文資源；它有實際可檢視的 repo 和安全文件，值得當作**方法論參考**，但不能因為教材完整就推定 Meta Muse 已在所有地區、帳戶與平台可用。",
+    "slug": "2026-10-22-threads-andyaipm-meta-muse-atlas-open-source-guide",
+    "html": "articles/2026-10-22-threads-andyaipm-meta-muse-atlas-open-source-guide.html",
+    "markdown": "articles/2026/10/2026-10-22-threads-andyaipm-meta-muse-atlas-open-source-guide.md"
+  },
+  {
     "title": "letschips ANKS V9｜Obsidian 視覺工作區與 AI 原生知識系統：功能、相容性與導入檢查",
     "date": "2026-10-22",
     "source": "https://www.threads.com/@chidianerhaode/post/DeyAxkcACF1",
