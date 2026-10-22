@@ -29,6 +29,20 @@
 <li>對多 Agent 設預算與停止條件：限制每次任務的 token、執行時間、可觸及的檔案／網域、可建立的 issue 數、可重試次數；發現衝突、機密、外部發送或高風險修改時，強制升級給人類。</li>
 <li>用一小段遊戲垂直切片試點：例如一個 UI 流程或單一關卡，先比較「人類審查」與「Agent 審查」發現的問題品質、誤報率、修復通過率、回歸率與成本，再擴大範圍。</li>
 </ul>
+<h2>2026-10-22 補充：Grok Bot 當 PM、Codex／Claude Code 實作的社群案例</h2>
+<p>Threads 作者 [wowscly](<a href="https://www.threads.com/@wowscly/post/DevUwDWmPna)提出另一種同型分工：把" target="_blank" rel="noopener">https://www.threads.com/@wowscly/post/DevUwDWmPna)提出另一種同型分工：把</a> Grok Bot 當 PM，讓 Codex CLI 或 Claude Code 在雲端工作環境負責 clone repo、改碼與跑測試；PM 再檢查 diff 和測試結果。貼文也描述一個個人股票資料排程修復後 merge 的案例，並稱可將高耗用的 coding 工作移至使用者自己的訂閱額度。</p>
+<p>這可作為「規劃／實作／獨立驗收」的工作流靈感，但不是可保證複製的產品方案：本次未驗證原始 X 作者、完整提示、修復結果、費用／額度、實際雲端規格，亦未證實每個 Grok 帳戶都能安裝第三方 CLI、登入訂閱或存取 repository。xAI 對 Bot 的公開說明支持持久雲端電腦與工具能力，並不等於授予第三方帳戶、私有 repo 或 production 系統的存取權。</p>
+<p>### 可採用的最小安全版委派格式</p>
+<p>把社群 prompt 收斂成可稽核任務卡，而非把長期憑證交給 agent：</p>
+<ul>
+<li>**範圍**：在獨立、一次性、最小權限的工作目錄／測試 clone 操作；明列不可觸及路徑與資料。</li>
+<li>**任務與驗收**：給具體問題、可重現步驟、預期結果與必跑測試；先產生計畫，再實作。</li>
+<li>**禁止直接發布**：只能建立 branch／PR 或回傳 patch；不能 merge、push main、部署、寄信或花費。</li>
+<li>**回報證據**：回傳 diff、測試命令與結果、失敗／未完成項、產物位置；人類在受信任環境自行驗收。</li>
+<li>**憑證與登入**：不要貼 API key、token、密碼或私人 cookie；需額外授權、寫入、外送、付費或存取私有資料時，逐次明確詢問並可撤銷。</li>
+</ul>
+<p>`tmux`、休眠、對話續跑、額度消耗、不同 CLI 的登入機制及「自動 merge」都不在此流程的保證範圍；長工作應有 timeout、checkpoint、人工 stop／resume 與必要時的本機備援。</p>
+<p>來源封存：`source-archive/2026-10-22-threads-wowscly-grok-bot-codex-pm-engineer-workflow.json`</p>
 <h2>為什麼值得收進 AI 學習雷達</h2>
 <p>這篇貼文提供了一個有用的直覺：多 Agent 的價值不一定是讓更多模型同時寫程式，而是將發散式的體驗檢查，轉成有憑據的工作項目，再由不同角色實作與反證。當 issue 品質、變更控制、測試與權限分級到位時，模型替換不會破壞流程；反之，即使模型很多，也可能只是更快產生難以驗收的工作量。</p>
 <h2>原始與查核連結</h2>
