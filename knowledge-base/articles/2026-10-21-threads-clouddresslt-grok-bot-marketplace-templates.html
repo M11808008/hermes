@@ -38,6 +38,21 @@
 <p>但這是社群作者的個案敘述，**不是已驗證的 Grok Bot／LINE 官方整合規格**。本次只獨立確認 Grok Bot Marketplace 的 Bot 結構可包含 Memories、Skills、Routines、Integrations，未登入、未授權，也未驗證私人 LINE 控制、雲端電腦、Telegram 同步或排程功能。</p>
 <p>此類流程的風險比「整理公開文章」高得多：私人 LINE 可能含驗證碼、聯絡人、群組內容、工作資料與個資。若要評估，應避免把密碼或二階段驗證碼交給未受控的 agent／遠端桌面；先以測試帳號和低敏感對話測試、縮小可讀範圍、保留人工確認、確認資料留存與遠端存取路徑，並預先演練如何撤銷登入、停用排程和清除工作資料。</p>
 <p>原始案例：<a href="https://www.facebook.com/share/p/19Zqa3aEEG/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/19Zqa3aEEG/?mibextid=wwXIfr</a></p>
+<h2>延伸案例（2026-10-22）：三 Bot「讀者／館員／檢查員」第二大腦</h2>
+<p>[鏈新聞 ABMedia 的整理](<a href="https://abmedia.io/grok-bot-second-brain-three-bots)轉述" target="_blank" rel="noopener">https://abmedia.io/grok-bot-second-brain-three-bots)轉述</a> X 使用者 Argona 的做法：在同一個群組對話中分配三個角色——**讀者**只收連結、PDF、語音並保持原檔；**館員**根據新資料更新受影響 wiki；**檢查員**每日找出矛盾、過時主張與孤兒頁面。這是使用者設計的工作流，**不是 xAI 的預設第二大腦產品**。</p>
+<figure><img src="../assets/source-images/2026-10-22-abmedia-grok-bot-second-brain-three-bots-cover.jpg" alt="Grok Bot 三角色第二大腦示意" loading="lazy" referrerpolicy="no-referrer"><figcaption>Grok Bot 三角色第二大腦示意</figcaption></figure>
+<p>這個案例最值得借鏡的不是「自動改寫 10～15 頁」這類效果數字，而是四個可稽核規則：</p>
+<ul>
+<li>raw/ 來源不可改寫，整理結果與原始資料分離。</li>
+<li>新舊來源衝突時**標記人判斷**，不由 agent 靜默覆蓋。</li>
+<li>每個 wiki 頁記錄主張、來源和最後確認日期；逾 30 天沒有新佐證可標成未確認。</li>
+<li>先顯示資料夾結構並取得確認，再建立檔案或排程。</li>
+</ul>
+<p>這與欒帥現行 AI 學習雷達的來源歸檔、Markdown 文章、建置與公開部署分層相容；若要採用，建議先以單一低敏感主題和測試 Bot 驗證。不要把私人信件、通訊軟體、帳號登入態或含個資的課程資料直接放入共享雲端電腦。</p>
+<p>xAI [Grok Bot 官方 overview](<a href="https://docs.x.ai/grok-bot/overview)可確認" target="_blank" rel="noopener">https://docs.x.ai/grok-bot/overview)可確認</a> Bot 運行於持久雲端電腦，具 browser、filesystem、terminal，並在需要核准時回到對話；也正因如此，連接器、已登入 app、檔案保留、routine 時間與停用／撤銷流程都必須先審查。官方文件有 Skills and routines、Approvals, security, and privacy 等獨立章節；不應把「可常駐」誤讀成「可無監督處理敏感資料」。</p>
+<p>原文提供的保守起手提示可改為：</p>
+<p>&gt; 用三個 Bot 建一個第二大腦：原始資料原封不動留在 raw/，wiki/ 由館員維護，好的回答另存新頁，每晚只**報告**矛盾。先給我資料夾結構與預計改動清單，在我確認前不得建立檔案、連接帳號或開啟排程。</p>
+<p>來源：<a href="https://abmedia.io/grok-bot-second-brain-three-bots" target="_blank" rel="noopener">https://abmedia.io/grok-bot-second-brain-three-bots</a></p>
 <h2>重要限制</h2>
 <ul>
 <li>「需要 SuperGrok、X Premium+ 或 Cursor 訂閱」、「約 20 美元/月」及額度共用等內容來自貼文與相關 Threads 討論；本次未在官方價格頁完整驗證，且方案、地區與額度可能隨時變動。</li>
