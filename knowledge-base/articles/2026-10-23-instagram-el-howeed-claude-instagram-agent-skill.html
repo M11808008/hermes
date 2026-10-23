@@ -1,0 +1,52 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Instagram Agent Skill｜13 個 Claude 社群內容技能，保留人工發布的工作流</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Instagram Agent Skill｜13 個 Claude 社群內容技能，保留人工發布的工作流</h1><figure><img src="../assets/source-images/2026-10-23-instagram-el-howeed-claude-instagram-agent-skill.jpg" alt="Instagram Reel 的社群來源縮圖：Claude IG 小編技能包" loading="lazy" referrerpolicy="no-referrer"><figcaption>Instagram Reel 的社群來源縮圖：Claude IG 小編技能包</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這支 Instagram Reel 推薦一套面向社群內容工作的 Claude 技能包。原始 GitHub 專案可確認：它把 Reel、caption、留言、私訊、個人檔案健檢、週計畫等工作拆成 13 個技能，並把最重要的外部動作留給人決定：技能會寫草稿，但不會自行發文。</p>
+<h2>Reel 可確認的內容</h2>
+<p>Instagram 帳號 el_howeed 於 2026-10-23 發布此 Reel；擷取時畫面顯示 174 個讚、704 則留言，影片長約 37.27 秒、720×1280。</p>
+<p>貼文文字表示這是一套「十三個給 Claude 用的技能」，可協助撰寫 Reels、貼文、留言、私訊並規劃一週 IG 計畫；並指向原作者 Jake Schincariol、稱其為開源 MIT 專案。貼文用「留言『小編』」作為索取延伸資料的方式；本次沒有互動該留言／私訊漏斗，也不把其中未公開的內容當作已驗證資料。</p>
+<p>以約 4 秒與 12 秒的影片畫面為基礎，可辨識到「你的五個 IG 幫手」、「爆款開頭公式」、「你一定不知道…」、「我花三年才發現…」與「99% 的」等文字。因登入介面與解析度遮蔽，這不是完整影片逐字稿，也不據此推測未清楚顯示的步驟。</p>
+<h2>GitHub 原專案可確認什麼</h2>
+<p>原始專案是 Jake Schincariol 的 Instagram Agent Skill：</p>
+<p><a href="https://github.com/Jakeschincariol/instagram-agent-skill" target="_blank" rel="noopener">https://github.com/Jakeschincariol/instagram-agent-skill</a></p>
+<p>README 與 LICENSE 可確認：</p>
+<ul>
+<li>專案含 13 個技能目錄：ig-reel、ig-viral、ig-caption、ig-carousel、ig-story、ig-profile、ig-plan、ig-human、ig-comment、ig-reply、ig-dm、ig-repurpose、ig-audit。</li>
+<li>它的輸出範圍涵蓋短影音腳本與鉤子、成效研究、caption、輪播貼文、限動、個人檔案檢核、內容週計畫、留言與回覆、私訊、內容再利用及發文後回顧。</li>
+<li>專案附有本機文字處理工具，例如 hookscore.py、beats.py、caption.py、humanize.py、detect.py、swipe.py。README 說明它們處理本機文字，不需網路或上傳內容；實際執行時仍應自行檢查程式碼與資料流。</li>
+<li>專案主張可作為 Claude Code skill、plugin 或把單一 SKILL.md 放進對話使用。不同 Claude 用戶端、版本與外掛機制可能改變可用性，請依當前官方文件與專案 README 操作。</li>
+<li>LICENSE 為 MIT License，版權標示為 2026 Jake Schincariol。MIT 授權允許使用、修改與散布，但需保留授權與版權聲明，且軟體按現狀提供、不含保證。</li>
+</ul>
+<h2>13 個技能如何拆解成可審核的社群流程</h2>
+<ul>
+<li>規劃：ig-plan 將週目標、內容形式與互動帳號整理成工作清單。</li>
+<li>產稿：ig-reel、ig-caption、ig-carousel、ig-story 與 ig-repurpose 生成不同形式的內容草稿。</li>
+<li>品質檢查：ig-human 處理常見 AI 文風與不可見字元；ig-profile、ig-audit 與 ig-viral 支援檢核及回顧。</li>
+<li>互動草稿：ig-comment、ig-reply、ig-dm 將留言或私訊回覆分流成草稿。</li>
+<li>人工核准與發布：確認事實、品牌語氣、著作權、對象、連結與排程後，才由帳號持有人完成對外操作。</li>
+</ul>
+<p>這個拆法的價值在於讓「寫什麼」與「是否送出」分離。原專案 README 的明確立場是：Nothing gets posted until you say yes. These skills write. You post.</p>
+<h2>導入前的安全檢核表</h2>
+<ul>
+<li>從原始 GitHub repo 取得內容，不要只信任社群轉傳版本或留言私訊檔案。</li>
+<li>先讀每個 SKILL.md 與 Python 工具，再決定是否放入全域或專案層級的技能資料夾。</li>
+<li>以公開測試文案、測試帳號或測試 workspace 開始；不要先交出客戶名單、私訊紀錄、API key、cookie 或帳號登入態。</li>
+<li>對外留言、私訊、發文與排程都設為人工最後確認；草稿品質不等於適合立即發布。</li>
+<li>不將「鉤子分數」、「病毒研究」或單一 Reel 的互動數視為內容必然成功的預測。原 README 本身也把某些量化結果定位為限制條件下的測試，而非保證。</li>
+<li>如需蒐集公開內容或分析競品，先檢查 Instagram 現行條款、官方 API 政策與資料使用邊界；避免以未授權的帳號自動化或抓取方式取得資料。</li>
+</ul>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<p>這不是一個「把 IG 帳號全權交給 AI」的宣傳案例，而是一個更實用的 Agent Skills 範本：依工作階段拆分技能、盡可能在本機處理文字，並對每一個公開動作保留人工核准。這種邊界同樣可延伸到課程宣傳、知識庫編輯、電子報草稿與品牌社群工作流。</p>
+<h2>證據與限制</h2>
+<ul>
+<li>本文的 Reel 作者、時間、caption、互動數、長度與尺寸取自登入受限但可渲染的 Instagram DOM／OpenGraph metadata，數字是擷取時快照，會變動。</li>
+<li>影片內容僅保存兩個畫面時間點可辨識文字，未下載或公開重發原影片。</li>
+<li>GitHub README 與 LICENSE 證實專案結構與 MIT 授權；本次未安裝、未連接 Instagram、未測試任何自動化，也不保證社群貼文所稱的實際效果。</li>
+<li>社群貼文要求留言關鍵字以取得技能包；未公開提供的文件、設定、承諾或連結均不納入本文事實。</li>
+</ul>
+<p>來源封存：`source-archive/2026-10-23-instagram-el-howeed-claude-instagram-agent-skill.json`</p>
+<h2>原始連結</h2>
+<ul>
+<li>Instagram Reel：<a href="https://www.instagram.com/reel/De1WH2Vy79A/?obrf=b2VxZGlsc252azM3" target="_blank" rel="noopener">https://www.instagram.com/reel/De1WH2Vy79A/?obrf=b2VxZGlsc252azM3</a></li>
+<li>Instagram canonical URL：<a href="https://www.instagram.com/el_howeed/reel/De1WH2Vy79A/" target="_blank" rel="noopener">https://www.instagram.com/el_howeed/reel/De1WH2Vy79A/</a></li>
+<li>原始 GitHub 專案：<a href="https://github.com/Jakeschincariol/instagram-agent-skill" target="_blank" rel="noopener">https://github.com/Jakeschincariol/instagram-agent-skill</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-23 · https://www.instagram.com/reel/De1WH2Vy79A/?obrf=b2VxZGlsc252azM3 · link-archive</div><h3>標籤</h3><span class="tag">Claude</span><span class="tag">Claude Code</span><span class="tag">Agent Skills</span><span class="tag">Instagram</span><span class="tag">社群內容</span><span class="tag">開源</span><span class="tag">Human-in-the-loop</span><h3>原始連結</h3><p><a href="https://www.instagram.com/el_howeed/reel/De1WH2Vy79A/" target="_blank" rel="noopener">https://www.instagram.com/el_howeed/reel/De1WH2Vy79A/</a></p><p><a href="https://www.instagram.com/reel/De1WH2Vy79A/?obrf=b2VxZGlsc252azM3" target="_blank" rel="noopener">https://www.instagram.com/reel/De1WH2Vy79A/?obrf=b2VxZGlsc252azM3</a></p><p><a href="https://www.instagram.com/el_howeed/reel/De1WH2Vy79A/" target="_blank" rel="noopener">https://www.instagram.com/el_howeed/reel/De1WH2Vy79A/</a></p><p><a href="https://github.com/Jakeschincariol/instagram-agent-skill" target="_blank" rel="noopener">https://github.com/Jakeschincariol/instagram-agent-skill</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
