@@ -101,6 +101,39 @@
     "markdown": "articles/2026/10/2026-10-24-threads-cleanyourtv-android-google-tv-ai-launcher-safety.md"
   },
   {
+    "title": "Threads｜Eleven Realtime Mini／Max：即時語音 Agent 不是「換 URL 就無痛搬家」",
+    "date": "2026-10-24",
+    "source": "Threads",
+    "author": "it.oppa.twhk",
+    "type": "social-post",
+    "topics": [
+      "ElevenLabs",
+      "Eleven Realtime",
+      "Voice Agent",
+      "Speech-to-Speech",
+      "OpenAI Realtime API",
+      "Tool Calling",
+      "API Security"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAXl31L6HZ/",
+      "https://www.threads.com/@it.oppa.twhk/post/De4GEp0CLYy",
+      "https://www.threads.com/share/BAXl31L6HZ/",
+      "https://www.threads.com/@it.oppa.twhk/post/De4GEp0CLYy",
+      "https://www.aiposthub.com/eleven-realtime-mini-max-speech-to-speech-voice-agents/",
+      "https://elevenlabs.io/docs/eleven-agents/customization/realtime-models",
+      "https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility",
+      "https://elevenlabs.io/docs/eleven-agents/overview"
+    ],
+    "excerpt": "Eleven Realtime 把低延遲語音對話與 agent 所需的回合處理打包成可直接使用的模型；選 Mini 或 Max 的關鍵不是「誰比較像真人」，而是任務複雜度、工具權限、延遲、成本與可測試性。尤其在電話、預約、客服或外部 API 情境，先把權限和失敗處理設好，比追逐首音毫秒數更重要。",
+    "slug": "2026-10-24-threads-eleven-realtime-mini-max-voice-agent",
+    "html": "articles/2026-10-24-threads-eleven-realtime-mini-max-voice-agent.html",
+    "markdown": "articles/2026/10/2026-10-24-threads-eleven-realtime-mini-max-voice-agent.md"
+  },
+  {
     "title": "Instagram Agent Skill｜13 個 Claude 社群內容技能，保留人工發布的工作流",
     "date": "2026-10-23",
     "source": "https://www.instagram.com/reel/De1WH2Vy79A/?obrf=b2VxZGlsc252azM3",
