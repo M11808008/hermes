@@ -6334,7 +6334,11 @@
       "https://www.threads.com/@ainxiety.lab/post/DcpfNUFAR48",
       "https://www.cloudflare.com/",
       "https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-29-inside-zeabur-environment-variable-leak-api-keys-stolen.html",
-      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.html"
+      "https://m11808008.github.io/hermes/knowledge-base/articles/2026-08-30-threads-yuwinjhan-zeabur-to-railway-migration.html",
+      "https://www.threads.com/share/BAZ_L3Zdko/",
+      "https://www.threads.com/@selfish995/post/De38h9ACBH2",
+      "https://github.com/alanfeng99/zeabur-to-gcp-guide",
+      "https://zeabur.com/zh-TW/"
     ],
     "excerpt": "Zeabur 事件後，AI 焦慮所分享自己把服務遷移到 Cloudflare 的經驗：原本因為已訂閱 Zeabur 近兩年、花費數百美金而拖延搬家，但在 Claude Code、Codex 與 MCP 協助下，約半小時完成移植，並在 Cloudflare 免費方案內順利運行。",
     "slug": "2026-08-30-threads-ainxiety-lab-zeabur-to-cloudflare-mcp-vibe-coding",
