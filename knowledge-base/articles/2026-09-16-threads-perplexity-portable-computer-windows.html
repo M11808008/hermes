@@ -44,6 +44,23 @@
 <p>新分享的 Threads 來源為 Ai偷偷報（@aihub.tw），同樣聚焦 Portable Computer 登陸 Windows。貼文補充它是雲端 Perplexity Computer 的本地版本，並以「整理資料夾、回覆等待中的信件」說明多步驟任務；也再次列出 NVIDIA GeForce RTX／RTX PRO、至少 24GB VRAM，以及 Qwen 3.8 27B 的說法。</p>
 <p>這些內容與既有文章的「本地模型 + agent 邏輯 + 工具與排程」主軸一致，因此合併為同一產品條目，而非重複建立文章。須特別保留界線：本次無法直接讀取 Perplexity 官方頁面，因其未登入請求回傳 Cloudflare 403；貼文提到的 9/14 上線日、Pro／Max 訂閱資格、Microsoft Store 啟用方式、外部連接器及「資料完全不離開本機」等細節，均應在實際安裝前以官方當前產品頁確認。即使本地模型推論在裝置端進行，連接 Gmail、Outlook、GitHub 或啟用雲端研究時仍可能產生各自的資料傳輸邊界。</p>
 <figure><img src="../assets/source-images/2026-09-16-threads-aihub-perplexity-portable-computer-windows.jpg" alt="Ai偷偷報 Threads 圖卡：Perplexity Portable Computer 在 Windows 本機執行多步驟任務" loading="lazy" referrerpolicy="no-referrer"><figcaption>Ai偷偷報 Threads 圖卡：Perplexity Portable Computer 在 Windows 本機執行多步驟任務</figcaption></figure>
+<h2>2026-10-24 補充：Computer fully local on Mac 已有官方公告</h2>
+<p>新的 Threads 來源（`it.oppa.twhk`）稱 Perplexity Computer 已可在 Apple Silicon Mac 完全本機執行，並將它描述為可離線處理郵件、備忘錄與檔案的 agent。這次可直接查核 Perplexity 於 2026-10-20 發布的第一方公告，因此將它合併到同一篇「本地 Computer」條目，而非另寫一篇薄的 Mac 文章。</p>
+<p>### 官方可確認的 Mac 範圍</p>
+<ul>
+<li>Perplexity Mac app 提供 **fully local** 與 **Hybrid Compute** 兩種模式。fully local 讓模型、harness、規劃與檔案處理留在支援的 Apple Silicon Mac；Hybrid Compute 則會協調雲端推理與本機私有資料處理。</li>
+<li>本機模式可選 **Qwen 3.6** 或 **PPLX Pro**（Perplexity 所述、基於 Qwen 後訓練的版本）。官方建議 **36GB 以上 unified memory**；這是建議門檻，不是所有任務的效能承諾。</li>
+<li>在使用者授權後，Computer 可跨本機檔案和支援的原生 app 工作，官方列出 Notes、Messages、Mail、Numbers。官方同時聲明程式與工具執行位於隔離 sandbox，對檔案與連接 app 採受控存取。</li>
+<li>本機模式目前公告為 **Pro、Max、Enterprise** 訂閱者可用；支援機型、區域、帳號資格與產品條款會更新，實際使用時應以 app 內與官方頁面為準。</li>
+</ul>
+<p>### 「完全本機」的正確邊界</p>
+<p>「本機」描述的是在選擇 fully local 模式時，模型、agent 與任務執行可在裝置上處理，並不表示每一種 Computer 工作永遠不會接觸網路。官方明確提到使用者可授權它升級至雲端以取得即時資訊、使用 browser 或連接 app，也能呼叫 frontier models。因此在含機密資料的任務中，應先選 fully local、確認 app／檔案授權範圍，並把雲端升級看成另一項需批准的資料流。</p>
+<p>對外寄信、建立會議邀請、寫入試算表或修改檔案仍是高影響動作。推薦的導入順序是：指定小範圍來源 → 只讀分析 → 產生草稿 → 人工核准後才寫入或傳送；不要因為資料初步留在本機，就把自動化權限一次開到最大。</p>
+<ul>
+<li>新 Threads 分享：<a href="https://www.threads.com/share/BAbluLMLii/" target="_blank" rel="noopener">https://www.threads.com/share/BAbluLMLii/</a></li>
+<li>新 Threads canonical：<a href="https://www.threads.com/@it.oppa.twhk/post/De1iaeBjO8p" target="_blank" rel="noopener">https://www.threads.com/@it.oppa.twhk/post/De1iaeBjO8p</a></li>
+<li>Perplexity 官方公告：<a href="https://www.perplexity.ai/hub/blog/perplexity-computer-now-runs-fully-local-on-mac" target="_blank" rel="noopener">https://www.perplexity.ai/hub/blog/perplexity-computer-now-runs-fully-local-on-mac</a></li>
+</ul>
 <h2>原始與交叉來源</h2>
 <ul>
 <li>Threads 原始分享：<a href="https://www.threads.com/share/BAWxpaEKdp/" target="_blank" rel="noopener">https://www.threads.com/share/BAWxpaEKdp/</a></li>
