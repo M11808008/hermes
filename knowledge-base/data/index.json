@@ -248,6 +248,39 @@
     "markdown": "articles/2026/10/2026-10-22-facebook-wang-joan-ai-coding-package-supply-chain-security.md"
   },
   {
+    "title": "Threads｜AI郵報：HeyGen Video、Voice 登上 fal，短鏡頭與配音可放進同一條 API 流程",
+    "date": "2026-10-22",
+    "source": "https://www.threads.com/share/BAZXaXBv5J/",
+    "author": "AI郵報（@aiposthub）",
+    "type": "link-archive",
+    "topics": [
+      "HeyGen",
+      "fal",
+      "AI影片",
+      "文字轉影片",
+      "圖片轉影片",
+      "AI配音",
+      "Voice Cloning",
+      "API"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aiposthub/post/De4zxecgel5",
+      "https://www.threads.com/share/BAZXaXBv5J/",
+      "https://www.threads.com/@aiposthub/post/De4zxecgel5",
+      "https://www.aiposthub.com/heygen-video-voice-fal-api-short-clips-cloning/",
+      "https://fal.ai/models/fal-ai/heygen-video/text-to-video/api",
+      "https://fal.ai/models/fal-ai/heygen-video/image-to-video/api",
+      "https://fal.ai/models/fal-ai/heygen-voice/turbo/api"
+    ],
+    "excerpt": "AI郵報在 Threads 分享：HeyGen Video 與 HeyGen Voice 已可透過 fal 的模型 API 串接。適合把幾秒鐘的有聲畫面、獨立旁白，以及既有 avatar／剪輯流程拆成可組裝的內容生產線；它不是一鍵替代分鏡、編輯與品質控管的「完整影片工廠」。",
+    "slug": "2026-10-22-threads-aiposthub-heygen-video-voice-fal",
+    "html": "articles/2026-10-22-threads-aiposthub-heygen-video-voice-fal.html",
+    "markdown": "articles/2026/10/2026-10-22-threads-aiposthub-heygen-video-voice-fal.md"
+  },
+  {
     "title": "Meta Muse Atlas 中文開源手冊｜28 章、任務模板與安全邊界的查核",
     "date": "2026-10-22",
     "source": "Threads、GitHub",
