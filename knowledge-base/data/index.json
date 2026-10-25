@@ -1,5 +1,30 @@
 [
   {
+    "title": "Threads｜VisionState：把既有攝影機變成本地 Home Assistant 感測器，先處理辨識與隱私邊界",
+    "date": "2026-10-26",
+    "source": "https://www.threads.com/share/_9V9_3zu9/",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "[智慧家庭, Home Assistant, 本地 AI, 電腦視覺, 攝影機]"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aigeeknews/post/De6NmgqG-RO",
+      "https://www.threads.com/share/_9V9_3zu9/",
+      "https://www.threads.com/@aigeeknews/post/De6NmgqG-RO",
+      "https://github.com/oleost/VisionState",
+      "https://github.com/oleost/VisionState/blob/main/README.md",
+      "https://github.com/oleost/VisionState/blob/main/SECURITY.md"
+    ],
+    "excerpt": "# Threads｜VisionState：把既有攝影機變成本地 Home Assistant 感測器，先處理辨識與隱私邊界 ![VisionState Dashboard](../assets/source-images/2026-10-26-visionstate-dashboard.png \"VisionStat",
+    "slug": "2026-10-26-threads-aigeeknews-visionstate-local-camera-sensors",
+    "html": "articles/2026-10-26-threads-aigeeknews-visionstate-local-camera-sensors.html",
+    "markdown": "articles/2026/10/2026-10-26-threads-aigeeknews-visionstate-local-camera-sensors.md"
+  },
+  {
     "title": "Facebook｜瑞士自由行社團：ALPINTE 馬特洪峰杯舊款出清與瑞士購買提醒",
     "date": "2026-10-25",
     "source": "https://www.facebook.com/share/p/1DbHUsPcpF/?mibextid=wwXIfr",
