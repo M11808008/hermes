@@ -1,5 +1,31 @@
 [
   {
+    "title": "Agent Use Cases｜以 1,600+ 個公開案例作為 AI Agent 的任務設計參考庫",
+    "date": "2026-10-26",
+    "source": "https://agentusecases.ai/",
+    "author": "Agent Use Cases／Alex Finn",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "Use Cases",
+      "工作流設計",
+      "任務拆解",
+      "參考案例"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://agentusecases.ai/",
+      "https://agentusecases.ai/about",
+      "https://agentusecases.ai/rss"
+    ],
+    "excerpt": "把 https://agentusecases.ai/ 當作 AI Agent 的「案例雷達」很合適：先讓 agent 根據你已明確授權的工作脈絡，搜尋相似任務、擷取原始出處與可衡量成果，再由人判斷哪些做法值得小規模驗證；不要把案例庫當成可不經審查直接自動執行的指令集。",
+    "slug": "2026-10-26-agent-use-cases-ai-agent-reference-directory",
+    "html": "articles/2026-10-26-agent-use-cases-ai-agent-reference-directory.html",
+    "markdown": "articles/2026/10/2026-10-26-agent-use-cases-ai-agent-reference-directory.md"
+  },
+  {
     "title": "Threads｜VisionState：把既有攝影機變成本地 Home Assistant 感測器，先處理辨識與隱私邊界",
     "date": "2026-10-26",
     "source": "https://www.threads.com/share/_9V9_3zu9/",
