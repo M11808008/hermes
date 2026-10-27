@@ -20528,7 +20528,13 @@
       "https://www.facebook.com/share/v/1GTX8dpGMq/?mibextid=wwXIfr",
       "https://www.facebook.com/reel/1670134154174077",
       "https://nvidianews.nvidia.com/news/nvidia-expands-omniverse-with-generative-physical-ai",
-      "https://blogs.nvidia.com/blog/ces-2025-jensen-huang/"
+      "https://blogs.nvidia.com/blog/ces-2025-jensen-huang/",
+      "https://www.threads.com/share/_yBZ-KmiY/",
+      "https://www.threads.com/@kufutw/post/De_jztsmRCN",
+      "https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories",
+      "https://huggingface.co/spaces/nvidia/simready-central",
+      "https://huggingface.co/datasets/nvidia/simready-assets",
+      "https://github.com/NVIDIA/simready-foundation"
     ],
     "excerpt": "這則 Reel 的重點不是單一金句，而是 NVIDIA 正在把 AI 從文字、客服、程式碼等資訊工作，推向製造、物流、倉儲、車輛、機器人與數位孿生；也就是讓 AI 理解物理世界、在模擬中訓練，再部署到真實世界。",
     "slug": "2026-06-19-jensen-huang-physical-ai-50-trillion-industrial-opportunity",
