@@ -1,5 +1,36 @@
 [
   {
+    "title": "InstaBox｜為長時間運行的 AI Agent 準備獨立雲端 Linux VM",
+    "date": "2026-10-28",
+    "source": "https://www.facebook.com/share/19VhqQe8MK/?mibextid=wwXIfr",
+    "author": "一人公司研究所／InstaBox（InsForge AI, Inc.）",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "雲端電腦",
+      "Linux VM",
+      "長時間任務",
+      "Docker",
+      "Sandbox"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/photo.php?fbid=122124654735270258&set=a.122097576981270258&type=3",
+      "https://www.facebook.com/share/19VhqQe8MK/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=122124654735270258&set=a.122097576981270258&type=3",
+      "https://instabox.sh/",
+      "https://instabox.sh/docs",
+      "https://instabox.sh/docs/pricing.md",
+      "https://instabox.sh/docs/limits.md"
+    ],
+    "excerpt": "Facebook 貼文把 InstaBox 描述為「每個 AI Agent 一台自己的電腦」。這個定位有官方產品資料可支持：InstaBox 提供獨立的 Linux microVM、Docker、桌面／Chromium、快照、CLI 與 API，讓長時間 agent 任務不必綁在自己的筆電上；不過應把它視為一個需要控管網路、機密與成本的雲端執行環境，而不是無限制或無風險的背景代理人。",
+    "slug": "2026-10-28-facebook-instabox-cloud-computers-for-ai-agents",
+    "html": "articles/2026-10-28-facebook-instabox-cloud-computers-for-ai-agents.html",
+    "markdown": "articles/2026/10/2026-10-28-facebook-instabox-cloud-computers-for-ai-agents.md"
+  },
+  {
     "title": "Facebook Reel｜台大醫院周邊半日覓食：青島東路、濟南路 5 間可定位店家",
     "date": "2026-10-27",
     "source": "Facebook Reel（智明愛吃愛旅行）＋店址交叉查核",
