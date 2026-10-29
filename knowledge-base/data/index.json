@@ -60,6 +60,36 @@
     "markdown": "articles/2026/10/2026-10-28-facebook-instabox-cloud-computers-for-ai-agents.md"
   },
   {
+    "title": "Facebook｜Google DeepMind Genie 4：可即時探索與改寫的世界模型，官方研究預覽已發布",
+    "date": "2026-10-27",
+    "source": "https://www.facebook.com/share/p/1CCe3TjDnJ/",
+    "author": "AI Daily；Google DeepMind（官方查核）",
+    "type": "link-archive",
+    "topics": [
+      "世界模型",
+      "Google DeepMind",
+      "Genie 4",
+      "互動模擬",
+      "多模態",
+      "AI生成內容"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/aigctw/posts/3443093052541249/",
+      "https://www.facebook.com/share/p/1CCe3TjDnJ/",
+      "https://www.facebook.com/groups/aigctw/permalink/3443093052541249/",
+      "https://www.facebook.com/groups/aigctw/posts/3443093052541249/",
+      "https://deepmind.google/models/genie/",
+      "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+    ],
+    "excerpt": "Genie 4 不是只輸出一段完成影片，而是讓使用者在生成的世界中移動、以文字即時改變事件，並同步生成畫面、環境音、音樂與互動對話。Google DeepMind 將其定位為仍在演進的研究預覽，而不是已普遍可用的消費型產品。",
+    "slug": "2026-10-27-facebook-ai-daily-google-genie4-world-model",
+    "html": "articles/2026-10-27-facebook-ai-daily-google-genie4-world-model.html",
+    "markdown": "articles/2026/10/2026-10-27-facebook-ai-daily-google-genie4-world-model.md"
+  },
+  {
     "title": "Facebook Reel｜台大醫院周邊半日覓食：青島東路、濟南路 5 間可定位店家",
     "date": "2026-10-27",
     "source": "Facebook Reel（智明愛吃愛旅行）＋店址交叉查核",
