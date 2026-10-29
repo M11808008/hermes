@@ -48,6 +48,24 @@
     "markdown": "articles/2026/10/2026-10-30-threads-gariber-openai-chatgpt-api-credits.md"
   },
   {
+    "title": "Zeabur 開源自建版釋出｜不是原服務原地復活，而是 pre-alpha Kubernetes PaaS",
+    "date": "2026-10-30",
+    "source": "Threads／zeabur-oss GitHub",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "[Zeabur, Kubernetes, PaaS, self-hosted, 開源, DevOps]"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [],
+    "excerpt": "Threads 貼文稱 Zeabur 關站後，官方把服務重新打包、以 Apache-2.0 全面開源，可在 Linux 或 Kubernetes 自建。可公開驗證的部分是：`zeabur-oss/zeabur` 是公開、未封存的 GitHub repository，描述為「Self-hosted PaaS on you",
+    "slug": "2026-10-30-threads-zeabur-oss-self-hosted-paas",
+    "html": "articles/2026-10-30-threads-zeabur-oss-self-hosted-paas.html",
+    "markdown": "articles/2026/10/2026-10-30-threads-zeabur-oss-self-hosted-paas.md"
+  },
+  {
     "title": "Facebook｜Sonia老師的「Gemini AI 指令星球島」：以 PARTS 與 UDL 搭建互動課程島",
     "date": "2026-10-29",
     "source": "https://www.facebook.com/share/v/1E72SdS9hP/",
