@@ -1,5 +1,34 @@
 [
   {
+    "title": "Facebook｜Sonia老師的「Gemini AI 指令星球島」：以 PARTS 與 UDL 搭建互動課程島",
+    "date": "2026-10-29",
+    "source": "https://www.facebook.com/share/v/1E72SdS9hP/",
+    "author": "Sonia老師的特師啦",
+    "type": "link-archive",
+    "topics": [
+      "AI教學",
+      "UDL",
+      "提示工程",
+      "Gemini",
+      "Claude",
+      "互動教材",
+      "特教"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/aixedu/posts/1124512337211152/",
+      "https://www.facebook.com/share/v/1E72SdS9hP/",
+      "https://www.facebook.com/groups/aixedu/permalink/1124512337211152/",
+      "https://www.facebook.com/groups/aixedu/posts/1124512337211152/"
+    ],
+    "excerpt": "Sonia老師把 AI 教材提示設計成可探索的「課程島」：透過 PARTS 架構、提示鷹架與 UDL 的可及性思維，讓師生以逐步填寫的方式形成教材需求，再用單一 HTML 互動網頁呈現不同主題島嶼與活動。",
+    "slug": "2026-10-29-facebook-sonia-gemini-course-island",
+    "html": "articles/2026-10-29-facebook-sonia-gemini-course-island.html",
+    "markdown": "articles/2026/10/2026-10-29-facebook-sonia-gemini-course-island.md"
+  },
+  {
     "title": "InstaBox｜為長時間運行的 AI Agent 準備獨立雲端 Linux VM",
     "date": "2026-10-28",
     "source": "https://www.facebook.com/share/19VhqQe8MK/?mibextid=wwXIfr",
