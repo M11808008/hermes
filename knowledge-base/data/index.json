@@ -1,5 +1,35 @@
 [
   {
+    "title": "Facebook｜李佳恩的「微縮宇宙」社團星港：把校園社團資訊做成可探索的介面原型",
+    "date": "2026-10-30",
+    "source": "Facebook",
+    "author": "李佳恩",
+    "type": "social-post",
+    "topics": [
+      "AI 網頁設計",
+      "Vibe Coding",
+      "Antigravity IDE",
+      "Claude",
+      "教育科技",
+      "互動資訊設計",
+      "微縮宇宙"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/1YveRrB1ch/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=29548408898085455&set=a.609168975769499&type=3",
+      "https://www.facebook.com/share/1YveRrB1ch/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=29548408898085455&set=a.609168975769499&type=3",
+      "https://tntcshisland.vercel.app/"
+    ],
+    "excerpt": "這是一個值得拆解的 AI 介面生成案例：不只要求「做一個網站」，而是同時交代參考脈絡、資訊任務、互動元件與視覺世界觀，讓 coding agent 把校園社團訊息做成可導航的太空站場景。 ![Facebook 貼文展示的南大附中社團星港微縮宇宙介面概念圖](../../../../assets/source-images/2026-10-30-facebook-ji-en-li-cosmic-diorama-club-starport.jpg \"Facebook 貼文展示的南大附中社團星港微縮宇宙介面概念圖\")",
+    "slug": "2026-10-30-facebook-ji-en-li-cosmic-diorama-club-starport",
+    "html": "articles/2026-10-30-facebook-ji-en-li-cosmic-diorama-club-starport.html",
+    "markdown": "articles/2026/10/2026-10-30-facebook-ji-en-li-cosmic-diorama-club-starport.md"
+  },
+  {
     "title": "Facebook｜Sonia老師的「Gemini AI 指令星球島」：以 PARTS 與 UDL 搭建互動課程島",
     "date": "2026-10-29",
     "source": "https://www.facebook.com/share/v/1E72SdS9hP/",
