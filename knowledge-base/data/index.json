@@ -48,6 +48,24 @@
     "markdown": "articles/2026/10/2026-10-30-threads-gariber-openai-chatgpt-api-credits.md"
   },
   {
+    "title": "VoiceStudio｜本地開源語音工作站，不等於可直接商用的 ElevenLabs 替代品",
+    "date": "2026-10-30",
+    "source": "Threads／VoiceStudio GitHub",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "[VoiceStudio, AI 配音, voice cloning, 開源, 本地 AI]"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [],
+    "excerpt": "KS Devworks 實測認為 VoiceStudio 可完成聲音生成、換語言與模仿聲音，但本機硬體不足時會很慢；預設模型也不等於可商用。這些使用感受屬實測觀點，不是官方效能或商用保證。 官方 GitHub 將 VoiceStudio 描述為開源、完全本地運行的 ElevenLabs alternative，涵蓋 v",
+    "slug": "2026-10-30-threads-ksdevworks-voicestudio-local-voice-ai",
+    "html": "articles/2026-10-30-threads-ksdevworks-voicestudio-local-voice-ai.html",
+    "markdown": "articles/2026/10/2026-10-30-threads-ksdevworks-voicestudio-local-voice-ai.md"
+  },
+  {
     "title": "Zeabur 開源自建版釋出｜不是原服務原地復活，而是 pre-alpha Kubernetes PaaS",
     "date": "2026-10-30",
     "source": "Threads／zeabur-oss GitHub",
