@@ -29,6 +29,37 @@
     "markdown": "articles/2026/10/2026-10-29-facebook-sonia-gemini-course-island.md"
   },
   {
+    "title": "Scenario｜Island Builder：讓 AI agent 在 Blender 完成 3D 島嶼，再重建成可玩的 Three.js 體驗",
+    "date": "2026-10-29",
+    "source": "https://www.scenario.com/explorations/island-builder/",
+    "author": "Scenario",
+    "type": "link-archive",
+    "topics": [
+      "Scenario",
+      "Agent Skills",
+      "MCP",
+      "Blender",
+      "Three.js",
+      "3D生成",
+      "互動網頁",
+      "AI代理"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.scenario.com/explorations/island-builder/",
+      "https://www.scenario.com/explorations/island-builder/",
+      "https://mcp.scenario.com/",
+      "https://github.com/scenario-labs/skills",
+      "https://iieqkinwjorxrzjp.public.blob.vercel-storage.com/explorations/1ffa8434053e9481b96094a9384aa8028bbc7a369bd55abeadc83e44f4c7cf4c/island-builder-making-of.pdf"
+    ],
+    "excerpt": "這不只是「AI 做了一張島嶼圖」，而是一個可檢視的製作鏈：概念圖生成、image-to-3D、Blender 場景與動畫、材質／聲音、AI 品質檢視、模型壓縮，最後以 Three.js 重建成可讓使用者配置建築與切換日夜的網頁小遊戲。",
+    "slug": "2026-10-29-scenario-island-builder-agentic-3d-threejs",
+    "html": "articles/2026-10-29-scenario-island-builder-agentic-3d-threejs.html",
+    "markdown": "articles/2026/10/2026-10-29-scenario-island-builder-agentic-3d-threejs.md"
+  },
+  {
     "title": "InstaBox｜為長時間運行的 AI Agent 準備獨立雲端 Linux VM",
     "date": "2026-10-28",
     "source": "https://www.facebook.com/share/19VhqQe8MK/?mibextid=wwXIfr",
