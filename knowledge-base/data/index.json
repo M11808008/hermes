@@ -3736,7 +3736,9 @@
       "https://www.facebook.com/groups/1381920156575940/posts/1590902129011074/?mibextid=wwXIfr",
       "https://www.threads.com/share/BAmbO4hV6r/",
       "https://www.darrelltw.com/grok-bot-triggers/",
-      "https://docs.x.ai/grok-bot/overview"
+      "https://docs.x.ai/grok-bot/overview",
+      "https://www.facebook.com/share/p/19n4Y4n2uu/",
+      "https://www.facebook.com/groups/1025166646935100/posts/1125803476871416/"
     ],
     "excerpt": "Grok Bot 的重點不只是更會聊天，而是讓 agent 擁有一台可持續運作、可由人類隨時接手的雲端電腦；真正的落地門檻則是權限隔離、可觀測性與把多 agent 產出收斂成可驗證工作成果的治理能力。",
     "slug": "2026-09-18-aiposthub-grok-bot-agent-fleet-cloud-computer",
