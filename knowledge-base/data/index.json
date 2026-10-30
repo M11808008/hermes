@@ -60,6 +60,37 @@
     "markdown": "articles/2026/10/2026-10-30-facebook-roy-lee-paste-before-ai-governance.md"
   },
   {
+    "title": "Threads｜Scenario Kinetic Film：把動態字卡宣傳片做成可檢查的 Claude Skill",
+    "date": "2026-10-30",
+    "source": "Threads",
+    "author": "AI Threads（@ethansavemoneydairy）",
+    "type": "social-post",
+    "topics": [
+      "Claude Skill",
+      "Scenario",
+      "MCP",
+      "AI 影片",
+      "Motion Design",
+      "Kinetic Typography",
+      "程式化動畫"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAFDJZUWoY/",
+      "https://www.threads.com/@ethansavemoneydairy/post/DfHsx1WAMYU",
+      "https://www.threads.com/@ethansavemoneydairy/post/DfHsx1WAMYU",
+      "https://www.scenario.com/explorations/kinetic-film/",
+      "https://mcp.scenario.com/?referral=experiments-kinetic-film&utm_source=scenario.com&utm_medium=experiment&utm_campaign=kinetic-film&utm_content=scenario-mcp",
+      "https://iieqkinwjorxrzjp.public.blob.vercel-storage.com/explorations/2217ab5dbd452185a5c3c1509994da46b1ac20d2ebeaa888536244372ce73ebf/scenario-kinetic-film-skill.zip?download=1"
+    ],
+    "excerpt": "Scenario 的 Kinetic Film 把高節奏的產品／遊戲宣傳短片，拆成「音樂節拍表 → 程式化動畫 → 渲染與逐格 QA」；Claude 負責依 brief 編排流程，Scenario MCP 則用於音樂、音效與關鍵視覺素材，而不是神奇地自動完成一切。 ![Scenario Kinetic Film 官方展示封面](https://www.scenario.com/exploration-covers/kinetic-film.webp \"Scenario Kinetic Film 官方展示封面\")",
+    "slug": "2026-10-30-threads-ai-threads-scenario-kinetic-film-claude-skill",
+    "html": "articles/2026-10-30-threads-ai-threads-scenario-kinetic-film-claude-skill.html",
+    "markdown": "articles/2026/10/2026-10-30-threads-ai-threads-scenario-kinetic-film-claude-skill.md"
+  },
+  {
     "title": "ChatGPT Pro／Business 可領 API credits｜資格、額度、綁定與不能拿來做什麼",
     "date": "2026-10-30",
     "source": "Threads／OpenAI Developers",

@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Scenario Kinetic Film：把動態字卡宣傳片做成可檢查的 Claude Skill</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Scenario Kinetic Film：把動態字卡宣傳片做成可檢查的 Claude Skill</h1><h2>一句話摘要</h2>
+<p>Scenario 的 Kinetic Film 把高節奏的產品／遊戲宣傳短片，拆成「音樂節拍表 → 程式化動畫 → 渲染與逐格 QA」；Claude 負責依 brief 編排流程，Scenario MCP 則用於音樂、音效與關鍵視覺素材，而不是神奇地自動完成一切。</p>
+<figure><img src="https://www.scenario.com/exploration-covers/kinetic-film.webp" alt="Scenario Kinetic Film 官方展示封面" loading="lazy" referrerpolicy="no-referrer"><figcaption>Scenario Kinetic Film 官方展示封面</figcaption></figure>
+<h2>社群貼文重點</h2>
+<p>Threads 的 AI Threads 分享者 @ethansavemoneydairy 將這套流程描述為把 Higgsfield Katana 類型的動態設計工作拆成可下載的 Claude Skill：輸入產品、遊戲或品牌的幾行 brief 後，由 agent 推進影片製作。</p>
+<p>貼文列出四個方向：腳本與節奏規劃、Scenario MCP 製作音樂與音效、code-driven motion，以及逐格品質檢查。貼文本身的「R.I.P. Higgsfield Katana」是吸睛的修辭，並不是 Higgsfield 服務已終止或被 Scenario 正式替代的可驗證公告。</p>
+<h2>官方查核：Kinetic Film 實際是什麼</h2>
+<p>Scenario 官方 Exploration 頁面明確表示：一支影片由單一網頁組成，以程式逐格渲染；其展示片長 51.8 秒、3,108 格，搭配 174 BPM 音軌。官方稱此流程不使用一般時間軸或「生成式 motion」，每一格由程式碼計算；Scenario 用於生成程式本身無法產生的音樂、音效，以及需要時的圖片素材。</p>
+<p>官方公開 ZIP 內含 `SKILL.md`、JavaScript 動畫 engine、範例 spec、Python／Node 渲染與品質檢查 scripts，以及字型授權檔。這證實它是一個可檢視、可修改的工作流包，而非只有展示頁的宣稱。</p>
+<h2>四個可驗證階段</h2>
+<p>### 1. Brief 變成 beat sheet</p>
+<p>Skill 先把時長、BPM、短句、每段場景 block、drop 與收尾定義成 beat grid。規則是每個 beat 或半拍承載一個想法，讓文字、切鏡與轉場落在節奏點上。這是「影片看起來有節奏」的核心，不是單靠 prompt 的形容詞。</p>
+<p>### 2. Scenario MCP 製作聲音與視覺素材</p>
+<p>官方文件說明，Scenario MCP 可用於指定節奏的配樂、一次性音效組，以及產品圖、角色或 key art。流程先要求 agent `recommend` 合適模型、讀取 schema、以 `dry_run` 估價，向使用者報價並取得同意後才正式執行與下載素材。</p>
+<p>因此，這不是免費也不是無需確認的流程；連接 Scenario 帳戶、選擇 team／project、素材生成成本與使用權，均需在實作前確認。</p>
+<p>### 3. Code-driven motion</p>
+<p>動畫主體以 JavaScript 的 `spec.js` 場景描述和 engine 組成。每個畫面是時間 `t` 的可重現函數，避免 `Math.random`、系統日期或依前一格累積的狀態，這樣渲染器才能做子格取樣產生真正的 motion blur。</p>
+<p>可調整的不是只有文案，還包括 palette、logo、字幕、鏡頭移動、whip pan、文字飛越、色彩切換與音效 cue。好處是可版本控制、可重製；代價是需要懂得讀／改程式與處理渲染環境。</p>
+<p>### 4. 預覽、渲染與可量測 QA</p>
+<p>Skill 要求先產 1080p 檢查版，再產 4K master，並使用 `finish.py` 檢查動態程度、過長靜止畫面、切鏡密度、檔案大小與手機／QuickTime 解碼相容性。官方示範設定包括：end card 前靜止格不超過 40%、不超過 0.6 秒的長停留、每 10 秒約 8.5 個硬切。</p>
+<p>這是最有價值的設計：把「看起來動感」轉成可失敗、可修正的品質門檻，而非只依主觀感受交片。</p>
+<h2>本機執行條件與邊界</h2>
+<p>官方 Skill 的前置需求包括 Node.js 18+、Playwright／Chromium、ffmpeg／ffprobe、Python 3、NumPy 與 OpenCV；它不是只安裝 Claude Skill 就可直接在任何裝置輸出影片。4K 渲染亦會需要足夠的儲存空間、時間與硬體資源。</p>
+<p>若要把真實客戶產品、未公開遊戲、品牌資產或人像交給 MCP／雲端生成服務，應先確認授權、帳戶方案、資料處理規則與可公開範圍；不要因為動畫引擎在本機，就假設所有輸入與生成資產都不會離開本機。</p>
+<h2>對創作者的實用取捨</h2>
+<ul>
+<li>想快速產出節奏型 launch film：這是一個值得測試的可編輯起點。</li>
+<li>想完全不碰程式、環境或付費素材生成：它不會是零摩擦的一鍵方案。</li>
+<li>有既有品牌規範：先準備短句、字型授權、色票、logo、產品截圖與可驗證數據，再寫 brief。</li>
+<li>要公開商用：把音樂、音效、圖片、字型、模型生成素材的授權與來源一併保存在專案交付物中。</li>
+</ul>
+<h2>原始連結與官方資源</h2>
+<ul>
+<li>Threads 原貼：<a href="https://www.threads.com/@ethansavemoneydairy/post/DfHsx1WAMYU" target="_blank" rel="noopener">https://www.threads.com/@ethansavemoneydairy/post/DfHsx1WAMYU</a></li>
+<li>Scenario Kinetic Film 官方頁：<a href="https://www.scenario.com/explorations/kinetic-film/" target="_blank" rel="noopener">https://www.scenario.com/explorations/kinetic-film/</a></li>
+<li>Scenario MCP：<a href="https://mcp.scenario.com/?referral=experiments-kinetic-film&amp;utm_source=scenario.com&amp;utm_medium=experiment&amp;utm_campaign=kinetic-film&amp;utm_content=scenario-mcp" target="_blank" rel="noopener">https://mcp.scenario.com/?referral=experiments-kinetic-film&amp;utm_source=scenario.com&amp;utm_medium=experiment&amp;utm_campaign=kinetic-film&amp;utm_content=scenario-mcp</a></li>
+<li>官方 Skill ZIP：<a href="https://iieqkinwjorxrzjp.public.blob.vercel-storage.com/explorations/2217ab5dbd452185a5c3c1509994da46b1ac20d2ebeaa888536244372ce73ebf/scenario-kinetic-film-skill.zip?download=1" target="_blank" rel="noopener">https://iieqkinwjorxrzjp.public.blob.vercel-storage.com/explorations/2217ab5dbd452185a5c3c1509994da46b1ac20d2ebeaa888536244372ce73ebf/scenario-kinetic-film-skill.zip?download=1</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-30 · Threads · social-post</div><h3>標籤</h3><span class="tag">Claude Skill</span><span class="tag">Scenario</span><span class="tag">MCP</span><span class="tag">AI 影片</span><span class="tag">Motion Design</span><span class="tag">Kinetic Typography</span><span class="tag">程式化動畫</span><h3>原始連結</h3><p><a href="https://www.threads.com/share/BAFDJZUWoY/" target="_blank" rel="noopener">https://www.threads.com/share/BAFDJZUWoY/</a></p><p><a href="https://www.threads.com/@ethansavemoneydairy/post/DfHsx1WAMYU" target="_blank" rel="noopener">https://www.threads.com/@ethansavemoneydairy/post/DfHsx1WAMYU</a></p><p><a href="https://www.threads.com/@ethansavemoneydairy/post/DfHsx1WAMYU" target="_blank" rel="noopener">https://www.threads.com/@ethansavemoneydairy/post/DfHsx1WAMYU</a></p><p><a href="https://www.scenario.com/explorations/kinetic-film/" target="_blank" rel="noopener">https://www.scenario.com/explorations/kinetic-film/</a></p><p><a href="https://mcp.scenario.com/?referral=experiments-kinetic-film&amp;utm_source=scenario.com&amp;utm_medium=experiment&amp;utm_campaign=kinetic-film&amp;utm_content=scenario-mcp" target="_blank" rel="noopener">https://mcp.scenario.com/?referral=experiments-kinetic-film&amp;utm_source=scenario.com&amp;utm_medium=experiment&amp;utm_campaign=kinetic-film&amp;utm_content=scenario-mcp</a></p><p><a href="https://iieqkinwjorxrzjp.public.blob.vercel-storage.com/explorations/2217ab5dbd452185a5c3c1509994da46b1ac20d2ebeaa888536244372ce73ebf/scenario-kinetic-film-skill.zip?download=1" target="_blank" rel="noopener">https://iieqkinwjorxrzjp.public.blob.vercel-storage.com/explorations/2217ab5dbd452185a5c3c1509994da46b1ac20d2ebeaa888536244372ce73ebf/scenario-kinetic-film-skill.zip?download=1</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
