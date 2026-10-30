@@ -30,6 +30,36 @@
     "markdown": "articles/2026/10/2026-10-30-facebook-ji-en-li-cosmic-diorama-club-starport.md"
   },
   {
+    "title": "Facebook｜瑞典封鎖未簽約 AI 與 Johns Hopkins 3,182 名病人事件：把「貼上前三問」變成資料治理",
+    "date": "2026-10-30",
+    "source": "Facebook",
+    "author": "李海碩 Roy H.S. Lee",
+    "type": "social-post",
+    "topics": [
+      "AI 資料治理",
+      "資訊安全",
+      "隱私",
+      "Shadow AI",
+      "教育科技",
+      "風險管理"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1BKBN6fpy3/?mibextid=wwXIfr",
+      "https://www.facebook.com/61575254233664/posts/%E9%80%99%E9%80%B1%E4%B8%80%E8%B5%B7%E7%91%9E%E5%85%B8%E6%94%BF%E5%BA%9C%E7%9A%84%E5%85%AC%E5%8B%99%E9%9B%BB%E8%85%A6%E6%89%93%E4%B8%8D%E9%96%8B-chatgpt-%E5%92%8C-claude%E7%9A%84%E7%B6%B2%E9%A0%81%E7%89%88%E4%BA%86%E5%BE%88%E5%A4%9A%E4%BA%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E5%8F%8D%E6%87%89%E6%98%AF%E6%94%BF%E5%BA%9C%E6%80%95-ai%E6%88%91%E7%9C%8B%E5%88%B0%E7%9A%84%E6%98%AF%E5%8F%A6%E4%B8%80%E4%BB%B6%E4%BA%8B%E5%85%88%E8%AA%AA%E4%BA%8B%E5%AF%A6%E7%91%9E%E5%85%B8%E7%9A%84%E6%94%BF%E5%BA%9C%E8%BE%A6%E5%85%AC%E5%AE%A4%E5%8C%85%E6%8B%AC%E7%B8%BD%E7%90%86%E8%BE%A6%E5%85%AC/122188207346841807/",
+      "https://www.facebook.com/share/p/1BKBN6fpy3/?mibextid=wwXIfr",
+      "https://www.notebookcheck.net/Sweden-s-government-blocks-ChatGPT-and-Claude-keeps-Copilot.1433522.0.html",
+      "https://www.wmar2news.com/local/patients-data-sent-to-ai-tool-johns-hopkins-bayview-medical-center-oct-23-2026",
+      "https://www.beckershospitalreview.com/healthcare-information-technology/ai/johns-hopkins-alerts-3182-patients-after-worker-uploads-data-to-unapproved-ai-tool/"
+    ],
+    "excerpt": "真正的 AI 風險控制，不是只問模型會不會答錯；而是每次貼上檔案、對話或表格前，先確認其中是否含有他人的資料、工具是否經組織核准，以及資料當事人能否合理同意這種使用。",
+    "slug": "2026-10-30-facebook-roy-lee-paste-before-ai-governance",
+    "html": "articles/2026-10-30-facebook-roy-lee-paste-before-ai-governance.html",
+    "markdown": "articles/2026/10/2026-10-30-facebook-roy-lee-paste-before-ai-governance.md"
+  },
+  {
     "title": "ChatGPT Pro／Business 可領 API credits｜資格、額度、綁定與不能拿來做什麼",
     "date": "2026-10-30",
     "source": "Threads／OpenAI Developers",

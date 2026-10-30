@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜瑞典封鎖未簽約 AI 與 Johns Hopkins 3,182 名病人事件：把「貼上前三問」變成資料治理</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜瑞典封鎖未簽約 AI 與 Johns Hopkins 3,182 名病人事件：把「貼上前三問」變成資料治理</h1><h2>一句話摘要</h2>
+<p>真正的 AI 風險控制，不是只問模型會不會答錯；而是每次貼上檔案、對話或表格前，先確認其中是否含有他人的資料、工具是否經組織核准，以及資料當事人能否合理同意這種使用。</p>
+<h2>社群貼文說了什麼</h2>
+<p>李海碩 Roy H.S. Lee 以兩則事件提醒讀者：組織限制特定 AI 入口，不等於「禁止 AI」，而是在界定可被管理、簽約與稽核的資料通道。</p>
+<p>貼文提出可立即採用的「貼上前三問」：</p>
+<ul>
+<li>內容裡是否有別人的姓名、電話、學號／病歷號或其他可識別資訊？</li>
+<li>這個 AI 工具是否為學校、公司或機構明確核准的工具？</li>
+<li>資料裡提到的人若知道其資料被送往該工具，會同意嗎？</li>
+</ul>
+<p>若任一題答不出來，就先不要貼；先以 A／B／C 取代姓名，刪除識別碼欄位，或改用已核准的環境。</p>
+<h2>查核一：瑞典限制的是未簽約入口，不是全面禁用 AI</h2>
+<p>Notebookcheck 於 2026-10-25 報導，瑞典政府辦公室自 10 月 26 日起，在員工公務電腦封鎖 ChatGPT 與 Claude，並導向 Microsoft Copilot。報導將理由歸為欠缺正式契約與資安／資料處理風險，且指出政府辦公室仍允許透過內部服務使用同一類模型。</p>
+<p>因此，貼文的「不是全面禁止 AI，而是決定哪一扇門可以開」是合理的治理解讀。不過，這不表示 Copilot 天然適合所有資料：實際可處理範圍仍取決於租戶設定、資料保留、連接器、帳號權限、合約和組織政策。</p>
+<h2>查核二：Johns Hopkins Bayview 的未核准 AI 上傳事件</h2>
+<p>WMAR 2 News 與 Becker&#x27;s Hospital Review 的報導均指出，Johns Hopkins Bayview Medical Center 通知 3,182 名病人：一名員工把病人資料試算表上傳到院方未核准的 AI 工具。公開報導所述可能涉及姓名、就診日期、病歷號與用藥等資訊；事件於 2026-09-21 被發現，院方已要求刪除對話／資料並提供後續通知與支援。</p>
+<p>可確認的核心不是「AI 一定外洩」，而是：即使員工本意是協助整理工作，只要把含個資或醫療資訊的原始表格送到未核准的第三方服務，就可能觸發隱私、通報、調查與信任成本。本文不臆測該公開 AI 工具的名稱，也不把「已刪除」誤寫成可完全消除一切風險的保證。</p>
+<h2>從口號到可執行規則</h2>
+<p>「不要貼機密資料」太抽象。可以將它轉成下列操作：</p>
+<p>| 情境 | 先做什麼 | 可以交給 AI 的版本 |</p>
+<p>| --- | --- | --- |</p>
+<p>| 成績、輔導或家長聯絡資料 | 移除姓名、學號、聯絡方式與自由文字備註 | 僅保留去識別化欄位與分析目的 |</p>
+<p>| 客戶／病人／學生名單 | 停止使用個人或未核准帳號；確認組織流程 | 經核准環境中的最小必要資料 |</p>
+<p>| 會議逐字稿與內部對話 | 檢查是否含個資、商業機密、第三方內容 | 摘要後的匿名化議題與決策點 |</p>
+<p>| 表格整理與公式協助 | 先刪除唯一識別碼與可連回個人的組合欄位 | 結構相同的假資料或去識別化樣本 |</p>
+<h2>給教師、家長與團隊的最小 SOP</h2>
+<ul>
+<li>建一張「核准工具清單」：帳戶類型、可處理資料等級、禁止輸入項目與負責窗口都要寫清楚。</li>
+<li>把公開、內部、機密、受法規／契約保護資料分級；不能只用「有沒有名字」判斷，組合欄位也可能重新識別個人。</li>
+<li>預設最小化：AI 若只需表格結構或統計分布，就不要提供原始名單。</li>
+<li>對錄音、截圖、對話與雲端連接器同樣套用前三問；它們常含未在表格欄位中出現的敏感脈絡。</li>
+<li>發現誤傳時，立即停止分享、保全時間線與範圍、依組織程序通報，並向供應商提出資料刪除／事件處理請求；不要自行掩蓋或只靠刪除聊天紀錄。</li>
+</ul>
+<h2>重要邊界</h2>
+<ul>
+<li>不要把「未簽約的公開 AI」與所有 AI 服務混為一談；供應商、方案、租戶設定與合約條款會改變資料流向。</li>
+<li>不要把「已去識別化」當成萬靈丹；罕見組合、原始自由文字和連結資料仍可能帶來重新識別風險。</li>
+<li>不要把資料保護責任全壓給個別使用者；組織應提供核准工具、明確規則、訓練與可通報流程。</li>
+</ul>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<p>這是一個把抽象治理落到日常按鍵動作的好案例。「貼上前三問」不能取代法遵、資安與合約審查，但能在高頻、低摩擦的工作現場，阻止最常見的 Shadow AI 風險：把本來不該離開組織邊界的資料，順手貼進一個看似方便的聊天視窗。</p>
+<h2>來源與原始連結</h2>
+<ul>
+<li>Facebook 分享連結：<a href="https://www.facebook.com/share/p/1BKBN6fpy3/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1BKBN6fpy3/?mibextid=wwXIfr</a></li>
+<li>Facebook canonical：<a href="https://www.facebook.com/61575254233664/posts/%E9%80%99%E9%80%B1%E4%B8%80%E8%B5%B7%E7%91%9E%E5%85%B8%E6%94%BF%E5%BA%9C%E7%9A%84%E5%85%AC%E5%8B%99%E9%9B%BB%E8%85%A6%E6%89%93%E4%B8%8D%E9%96%8B-chatgpt-%E5%92%8C-claude%E7%9A%84%E7%B6%B2%E9%A0%81%E7%89%88%E4%BA%86%E5%BE%88%E5%A4%9A%E4%BA%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E5%8F%8D%E6%87%89%E6%98%AF%E6%94%BF%E5%BA%9C%E6%80%95-ai%E6%88%91%E7%9C%8B%E5%88%B0%E7%9A%84%E6%98%AF%E5%8F%A6%E4%B8%80%E4%BB%B6%E4%BA%8B%E5%85%88%E8%AA%AA%E4%BA%8B%E5%AF%A6%E7%91%9E%E5%85%B8%E7%9A%84%E6%94%BF%E5%BA%9C%E8%BE%A6%E5%85%AC%E5%AE%A4%E5%8C%85%E6%8B%AC%E7%B8%BD%E7%90%86%E8%BE%A6%E5%85%AC/122188207346841807/" target="_blank" rel="noopener">https://www.facebook.com/61575254233664/posts/%E9%80%99%E9%80%B1%E4%B8%80%E8%B5%B7%E7%91%9E%E5%85%B8%E6%94%BF%E5%BA%9C%E7%9A%84%E5%85%AC%E5%8B%99%E9%9B%BB%E8%85%A6%E6%89%93%E4%B8%8D%E9%96%8B-chatgpt-%E5%92%8C-claude%E7%9A%84%E7%B6%B2%E9%A0%81%E7%89%88%E4%BA%86%E5%BE%88%E5%A4%9A%E4%BA%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E5%8F%8D%E6%87%89%E6%98%AF%E6%94%BF%E5%BA%9C%E6%80%95-ai%E6%88%91%E7%9C%8B%E5%88%B0%E7%9A%84%E6%98%AF%E5%8F%A6%E4%B8%80%E4%BB%B6%E4%BA%8B%E5%85%88%E8%AA%AA%E4%BA%8B%E5%AF%A6%E7%91%9E%E5%85%B8%E7%9A%84%E6%94%BF%E5%BA%9C%E8%BE%A6%E5%85%AC%E5%AE%A4%E5%8C%85%E6%8B%AC%E7%B8%BD%E7%90%86%E8%BE%A6%E5%85%AC/122188207346841807/</a></li>
+<li>Notebookcheck（瑞典政府辦公室限制 ChatGPT／Claude）：<a href="https://www.notebookcheck.net/Sweden-s-government-blocks-ChatGPT-and-Claude-keeps-Copilot.1433522.0.html" target="_blank" rel="noopener">https://www.notebookcheck.net/Sweden-s-government-blocks-ChatGPT-and-Claude-keeps-Copilot.1433522.0.html</a></li>
+<li>WMAR 2 News（Johns Hopkins Bayview 通知病人）：<a href="https://www.wmar2news.com/local/patients-data-sent-to-ai-tool-johns-hopkins-bayview-medical-center-oct-23-2026" target="_blank" rel="noopener">https://www.wmar2news.com/local/patients-data-sent-to-ai-tool-johns-hopkins-bayview-medical-center-oct-23-2026</a></li>
+<li>Becker&#x27;s Hospital Review（同事件交叉報導）：<a href="https://www.beckershospitalreview.com/healthcare-information-technology/ai/johns-hopkins-alerts-3182-patients-after-worker-uploads-data-to-unapproved-ai-tool/" target="_blank" rel="noopener">https://www.beckershospitalreview.com/healthcare-information-technology/ai/johns-hopkins-alerts-3182-patients-after-worker-uploads-data-to-unapproved-ai-tool/</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-30 · Facebook · social-post</div><h3>標籤</h3><span class="tag">AI 資料治理</span><span class="tag">資訊安全</span><span class="tag">隱私</span><span class="tag">Shadow AI</span><span class="tag">教育科技</span><span class="tag">風險管理</span><h3>原始連結</h3><p><a href="https://www.facebook.com/share/p/1BKBN6fpy3/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1BKBN6fpy3/?mibextid=wwXIfr</a></p><p><a href="https://www.facebook.com/61575254233664/posts/%E9%80%99%E9%80%B1%E4%B8%80%E8%B5%B7%E7%91%9E%E5%85%B8%E6%94%BF%E5%BA%9C%E7%9A%84%E5%85%AC%E5%8B%99%E9%9B%BB%E8%85%A6%E6%89%93%E4%B8%8D%E9%96%8B-chatgpt-%E5%92%8C-claude%E7%9A%84%E7%B6%B2%E9%A0%81%E7%89%88%E4%BA%86%E5%BE%88%E5%A4%9A%E4%BA%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E5%8F%8D%E6%87%89%E6%98%AF%E6%94%BF%E5%BA%9C%E6%80%95-ai%E6%88%91%E7%9C%8B%E5%88%B0%E7%9A%84%E6%98%AF%E5%8F%A6%E4%B8%80%E4%BB%B6%E4%BA%8B%E5%85%88%E8%AA%AA%E4%BA%8B%E5%AF%A6%E7%91%9E%E5%85%B8%E7%9A%84%E6%94%BF%E5%BA%9C%E8%BE%A6%E5%85%AC%E5%AE%A4%E5%8C%85%E6%8B%AC%E7%B8%BD%E7%90%86%E8%BE%A6%E5%85%AC/122188207346841807/" target="_blank" rel="noopener">https://www.facebook.com/61575254233664/posts/%E9%80%99%E9%80%B1%E4%B8%80%E8%B5%B7%E7%91%9E%E5%85%B8%E6%94%BF%E5%BA%9C%E7%9A%84%E5%85%AC%E5%8B%99%E9%9B%BB%E8%85%A6%E6%89%93%E4%B8%8D%E9%96%8B-chatgpt-%E5%92%8C-claude%E7%9A%84%E7%B6%B2%E9%A0%81%E7%89%88%E4%BA%86%E5%BE%88%E5%A4%9A%E4%BA%BA%E7%AC%AC%E4%B8%80%E5%80%8B%E5%8F%8D%E6%87%89%E6%98%AF%E6%94%BF%E5%BA%9C%E6%80%95-ai%E6%88%91%E7%9C%8B%E5%88%B0%E7%9A%84%E6%98%AF%E5%8F%A6%E4%B8%80%E4%BB%B6%E4%BA%8B%E5%85%88%E8%AA%AA%E4%BA%8B%E5%AF%A6%E7%91%9E%E5%85%B8%E7%9A%84%E6%94%BF%E5%BA%9C%E8%BE%A6%E5%85%AC%E5%AE%A4%E5%8C%85%E6%8B%AC%E7%B8%BD%E7%90%86%E8%BE%A6%E5%85%AC/122188207346841807/</a></p><p><a href="https://www.facebook.com/share/p/1BKBN6fpy3/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/p/1BKBN6fpy3/?mibextid=wwXIfr</a></p><p><a href="https://www.notebookcheck.net/Sweden-s-government-blocks-ChatGPT-and-Claude-keeps-Copilot.1433522.0.html" target="_blank" rel="noopener">https://www.notebookcheck.net/Sweden-s-government-blocks-ChatGPT-and-Claude-keeps-Copilot.1433522.0.html</a></p><p><a href="https://www.wmar2news.com/local/patients-data-sent-to-ai-tool-johns-hopkins-bayview-medical-center-oct-23-2026" target="_blank" rel="noopener">https://www.wmar2news.com/local/patients-data-sent-to-ai-tool-johns-hopkins-bayview-medical-center-oct-23-2026</a></p><p><a href="https://www.beckershospitalreview.com/healthcare-information-technology/ai/johns-hopkins-alerts-3182-patients-after-worker-uploads-data-to-unapproved-ai-tool/" target="_blank" rel="noopener">https://www.beckershospitalreview.com/healthcare-information-technology/ai/johns-hopkins-alerts-3182-patients-after-worker-uploads-data-to-unapproved-ai-tool/</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>
