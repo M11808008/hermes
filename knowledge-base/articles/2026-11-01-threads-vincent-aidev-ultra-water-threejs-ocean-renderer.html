@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Ultra Water：可檢視測量方法的 Three.js 即時 FFT 海洋渲染器</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Ultra Water：可檢視測量方法的 Three.js 即時 FFT 海洋渲染器</h1><h2>一句話摘要</h2>
+<p>Ultra Water 是一個以 Three.js 與 WebGL2 製作的即時海洋場景專案。亮點不只在於把多層 FFT 波浪、近岸碎浪、焦散和水下效果放進瀏覽器，更在於 README 留下曾誤測、重新量測與方法修正的紀錄；對即時圖學作品而言，這比單一 fps 標題更值得參考。</p>
+<h2>Threads 貼文可直接確認的內容</h2>
+<p>vincent_aidev 分享 Ultra Water，將它描述為以 WebGL2 即時執行 FFT 海洋渲染的開源專案，提到四層級聯波浪、Jacobain 白沫、依水深計算的近岸碎浪、焦散與浮物效果。貼文也引用 README 的 RTX 3060 與手機測試數字，並指出作者曾修正先前效能測量的同步問題。</p>
+<p>上述是貼文對上游內容的摘要；可見回覆中另有使用者稱以手機開啟達到 60 fps，這是單一使用經驗，不構成跨裝置效能保證。</p>
+<h2>上游專案可確認的範圍</h2>
+<p>GitHub API 擷取時，Humpalumps/Ultra-Water 為公開、未封存 repository，採 MIT License。README 將它定位為 Three.js 的 WebGL2 即時海洋渲染器，提供示範島嶼場景與本機開發指令。</p>
+<p>README 可確認的技術範圍包括：</p>
+<ul>
+<li>Tessendorf FFT 波浪，使用 600／85／12／2.1 公尺的四層級聯；最小尺度處理毛細波相關的斜率。</li>
+<li>JONSWAP 風浪與湧浪、Jacobian 衍生的泡沫，以及以相機為中心的極座標水面網格。</li>
+<li>以行波場、淺水波速、碎浪限制與地形關係處理近岸碎浪；README 也明確說明目前仍是高度場波浪，無法形成真正捲起的管狀浪。</li>
+<li>水面反射、折射、吸收、次表面散射、焦散與水下效果；浮物則有以 GPU 水面查詢驅動的浮力、阻力和落水漣漪。</li>
+<li>專案聲明部分程式改編自其他 MIT 授權來源，並在 THIRD_PARTY_NOTICES.md 列出 three.js、Hash without Sine 與 UnrealEngineSkyAtmosphere 等出處。</li>
+</ul>
+<h2>效能數字應怎麼讀</h2>
+<p>README 的 RTX 3060 數字來自其頁內 benchmark：Chrome／ANGLE-D3D11、4× MSAA、全特效、1954×1692（3.3 MP）。其中公開海景列為 3.30 ms／frame、約 303 fps uncapped；水下視角列為 4.71 ms／frame、約 212 fps uncapped。手機部分則在 OnePlus Nord 4、Chrome 156、424×782 直式測試中，輕量設定下各鏡頭列出 60 fps 的即時結果。</p>
+<p>這些不是一般化承諾。GPU、瀏覽器後端、顯示器刷新率、解析度、溫度、背景負載及品質設定都會改變結果；README 亦明確註記手機測量是在 USB 充電、熱狀態 1 時取得。</p>
+<p>更重要的是，作者明確說明早期 README 的數字曾低估每幀耗時約 2 至 4 倍：原先以 readPixels／finish 同步，但在 ANGLE 上並未如預期等待 GPU 完成；目前改由 fence 完成計時，並提醒 v-sync 限速時 HUD 的 timer-query 讀值會受 GPU 降頻影響。這是可檢查的方法說明，而非只保留漂亮的結果。</p>
+<h2>實務使用與評估檢核</h2>
+<ul>
+<li>把它視為可研究、可改造的 rendering reference，不把示範效能當成專案 SLA。</li>
+<li>先確認目標瀏覽器是否支援專案所需 WebGL2 功能，並在目標裝置、解析度和品質設定下自行測量。</li>
+<li>對行動裝置，留意上游的輕量設定、動態降解析度與 30 fps 降級機制；不要只以桌面 GPU 數字估算。</li>
+<li>若要重用程式碼，閱讀實際 LICENSE 與 THIRD_PARTY_NOTICES；MIT 是程式碼授權，不等於素材、品牌或其他輸出內容自動取得所有權利。</li>
+<li>效能比較要記錄 GPU、瀏覽器版本、渲染尺寸、MSAA、特效開關、v-sync 與測量方法，否則 fps 無法公平比較。</li>
+</ul>
+<h2>為什麼值得收進 AI 學習雷達</h2>
+<p>這個專案把進階即時圖學拆成可閱讀的模組：頻譜波浪、近岸傳播、材質與光線、水下視覺、GPU 查詢與效能面板。更值得借鏡的是測量文化：當作者發現同步機制讓 benchmark 失真時，沒有只更新一個更漂亮的數字，而是保留原因與較可信的量測條件。對任何 AI 協作寫出的互動視覺或 WebGL 專案，這都是重要的驗證標準。</p>
+<h2>原始與查核連結</h2>
+<ul>
+<li>Threads 分享：<a href="https://www.threads.com/share/BAmWJi5BWh/" target="_blank" rel="noopener">https://www.threads.com/share/BAmWJi5BWh/</a></li>
+<li>Threads canonical URL：<a href="https://www.threads.com/@vincent_aidev/post/DfH0i_Kld6E" target="_blank" rel="noopener">https://www.threads.com/@vincent_aidev/post/DfH0i_Kld6E</a></li>
+<li>Ultra Water GitHub repository：<a href="https://github.com/Humpalumps/Ultra-Water" target="_blank" rel="noopener">https://github.com/Humpalumps/Ultra-Water</a></li>
+<li>上游 README：<a href="https://github.com/Humpalumps/Ultra-Water/blob/master/README.md" target="_blank" rel="noopener">https://github.com/Humpalumps/Ultra-Water/blob/master/README.md</a></li>
+<li>第三方授權與致謝：<a href="https://github.com/Humpalumps/Ultra-Water/blob/master/THIRD_PARTY_NOTICES.md" target="_blank" rel="noopener">https://github.com/Humpalumps/Ultra-Water/blob/master/THIRD_PARTY_NOTICES.md</a></li>
+<li>MIT License：<a href="https://github.com/Humpalumps/Ultra-Water/blob/master/LICENSE" target="_blank" rel="noopener">https://github.com/Humpalumps/Ultra-Water/blob/master/LICENSE</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-11-01 · https://www.threads.com/share/BAmWJi5BWh/ · link-archive</div><h3>標籤</h3><span class="tag">Three.js</span><span class="tag">WebGL2</span><span class="tag">Computer Graphics</span><span class="tag">FFT Ocean</span><span class="tag">Real-time Rendering</span><span class="tag">Open Source</span><span class="tag">Benchmarking</span><h3>原始連結</h3><p><a href="https://www.threads.com/@vincent_aidev/post/DfH0i_Kld6E" target="_blank" rel="noopener">https://www.threads.com/@vincent_aidev/post/DfH0i_Kld6E</a></p><p><a href="https://www.threads.com/share/BAmWJi5BWh/" target="_blank" rel="noopener">https://www.threads.com/share/BAmWJi5BWh/</a></p><p><a href="https://www.threads.com/@vincent_aidev/post/DfH0i_Kld6E" target="_blank" rel="noopener">https://www.threads.com/@vincent_aidev/post/DfH0i_Kld6E</a></p><p><a href="https://github.com/Humpalumps/Ultra-Water" target="_blank" rel="noopener">https://github.com/Humpalumps/Ultra-Water</a></p><p><a href="https://github.com/Humpalumps/Ultra-Water/blob/master/README.md" target="_blank" rel="noopener">https://github.com/Humpalumps/Ultra-Water/blob/master/README.md</a></p><p><a href="https://github.com/Humpalumps/Ultra-Water/blob/master/THIRD_PARTY_NOTICES.md" target="_blank" rel="noopener">https://github.com/Humpalumps/Ultra-Water/blob/master/THIRD_PARTY_NOTICES.md</a></p><p><a href="https://github.com/Humpalumps/Ultra-Water/blob/master/LICENSE" target="_blank" rel="noopener">https://github.com/Humpalumps/Ultra-Water/blob/master/LICENSE</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

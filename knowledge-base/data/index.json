@@ -97,6 +97,38 @@
     "markdown": "articles/2026/11/2026-11-01-threads-vanessa-sayhi-four-websites-for-night-exploration.md"
   },
   {
+    "title": "Threads｜Ultra Water：可檢視測量方法的 Three.js 即時 FFT 海洋渲染器",
+    "date": "2026-11-01",
+    "source": "https://www.threads.com/share/BAmWJi5BWh/",
+    "author": "vincent_aidev",
+    "type": "link-archive",
+    "topics": [
+      "Three.js",
+      "WebGL2",
+      "Computer Graphics",
+      "FFT Ocean",
+      "Real-time Rendering",
+      "Open Source",
+      "Benchmarking"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@vincent_aidev/post/DfH0i_Kld6E",
+      "https://www.threads.com/share/BAmWJi5BWh/",
+      "https://www.threads.com/@vincent_aidev/post/DfH0i_Kld6E",
+      "https://github.com/Humpalumps/Ultra-Water",
+      "https://github.com/Humpalumps/Ultra-Water/blob/master/README.md",
+      "https://github.com/Humpalumps/Ultra-Water/blob/master/THIRD_PARTY_NOTICES.md",
+      "https://github.com/Humpalumps/Ultra-Water/blob/master/LICENSE"
+    ],
+    "excerpt": "Ultra Water 是一個以 Three.js 與 WebGL2 製作的即時海洋場景專案。亮點不只在於把多層 FFT 波浪、近岸碎浪、焦散和水下效果放進瀏覽器，更在於 README 留下曾誤測、重新量測與方法修正的紀錄；對即時圖學作品而言，這比單一 fps 標題更值得參考。",
+    "slug": "2026-11-01-threads-vincent-aidev-ultra-water-threejs-ocean-renderer",
+    "html": "articles/2026-11-01-threads-vincent-aidev-ultra-water-threejs-ocean-renderer.html",
+    "markdown": "articles/2026/11/2026-11-01-threads-vincent-aidev-ultra-water-threejs-ocean-renderer.md"
+  },
+  {
     "title": "Facebook｜阿姆斯特丹 Van der Linde：只賣香草鮮奶油冰淇淋的 Nieuwendijk 排隊名店",
     "date": "2026-10-31",
     "source": "Facebook",
