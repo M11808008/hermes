@@ -1,0 +1,53 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜把 Meta Muse Gadgets 裝進 ESP32 圓形螢幕：一則中文介面實作案例與 SDK 邊界</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜把 Meta Muse Gadgets 裝進 ESP32 圓形螢幕：一則中文介面實作案例與 SDK 邊界</h1><figure><img src="../assets/source-images/2026-11-01-muse-gadgets-sdk-official.png" alt="Muse Gadgets 官方 GitHub README 圖片，展示圓形 AMOLED、M5Stack、Muse Home Link、Raspberry Pi 與電子紙裝置" loading="lazy" referrerpolicy="no-referrer"><figcaption>Muse Gadgets 官方 GitHub README 圖片，展示圓形 AMOLED、M5Stack、Muse Home Link、Raspberry Pi 與電子紙裝置</figcaption></figure>
+<h2>一句話摘要</h2>
+<p>這則案例的價值不在於「兩小時做完」，而在於它把雲端個人 Agent 的對話延伸到可按、可看、可聽的自製裝置；真正的工程成本仍落在板子相容性、GPIO、配對、字型、刷寫與可還原的測試流程。</p>
+<h2>Threads 可見內容：一個中文圓形螢幕的個人實作</h2>
+<p>Threads 作者 `pcedison` 表示，他將 Meta 開源的 Muse Gadgets SDK 安裝到 ESP32 圓形螢幕，使用方式是按住按鍵說話、放開後把回答以中文顯示在螢幕上。</p>
+<p>作者同時描述以下個人經驗：</p>
+<ul>
+<li>使用的板子是 ESP32 1.75C，價格約新台幣 1,900 元。</li>
+<li>依 GitHub 安裝指南完成約花兩小時。</li>
+<li>GPIO 腳位、裝置配對，以及反覆 build 與 flash 是最耗時的環節；作者估計占總工時至少 85%。</li>
+<li>首次開機時中文字顯示成方塊，替換中文字型並重新刷寫後才正常。</li>
+<li>作者曾以 Gemini 3.8 與 Claude Opus 5.5 協助解析錯誤訊息，下一步想加入「Hey Muse」語音喚醒。</li>
+</ul>
+<p>這些內容是貼文作者在當時硬體、韌體、網路、帳號與工具設定下的自述；不是 Meta 對價格、語言支援、安裝時間、模型可用性、耗電或相容性所作的保證。</p>
+<h2>上游可驗證：Muse Gadgets 是公開的 ESP32／Linux SDK</h2>
+<p>`facebookincubator/muse-gadget-sdk` 是公開、未封存的 GitHub repository。其 README 將 Muse Gadgets 定位為可自行組裝的開源裝置：使用現成 ESP32 板子或 Raspberry Pi／Linux 裝置，連接螢幕、按鍵、感測器或致動器，再與 Muse 服務配對。</p>
+<p>本次擷取時，上游 README 可確認：</p>
+<ul>
+<li>專案提供 ESP32 Device SDK 與 Linux Device SDK，也含用於手機串流影像至 ESP32 螢幕的測試專案。</li>
+<li>裝置配對需要 SDK token，並須適用於官方 Gadget SDK Terms；開源程式碼不等於可無條件使用相關服務或跳過帳號、資格與條款。</li>
+<li>repository 主體採 Apache License 2.0，但 README 也列出多個保留各自上游授權的第三方檔案；衍生或散布時不能只看單一主授權。</li>
+<li>上游明確提醒自行改裝可能導致板子損壞、保固失效或供電問題，應自行承擔測試風險。</li>
+</ul>
+<h2>為什麼值得關注：Agent 不只存在於手機與瀏覽器</h2>
+<p>與一般聊天介面相比，ESP32 類硬體把互動拆成更直接的訊號：按鍵代表輸入開始或結束、螢幕顯示短答案、喇叭或麥克風負責語音回饋。這很適合作為下列設計題目的原型：</p>
+<ul>
+<li>桌上型快速記錄器：用按鍵取代打開手機後被通知分心。</li>
+<li>家庭資訊面板：只顯示經核准、低風險的提醒或狀態。</li>
+<li>教學型嵌入式專題：讓學生同時理解硬體 I/O、網路配對、模型回覆與錯誤除錯。</li>
+</ul>
+<p>但它不等於離線語音助理。裝置上的韌體、雲端 Muse 服務、SDK token、帳號權限、網路連線與可能連接的第三方服務，是彼此獨立的邊界；應分別檢視資料流向與權限範圍。</p>
+<h2>導入前檢核：先把可還原與資料界線做在前面</h2>
+<ul>
+<li>先在可替換的測試板與非敏感帳號情境中驗證，不把唯一的日常裝置作為第一台實驗機。</li>
+<li>刷寫或接線前保存原始韌體、板型與電源設定，並確認能復原；不要把聊天模型產生的接線、設定或燒錄建議直接當成已驗證步驟。</li>
+<li>SDK token 視同可連接服務的機密資料，避免放進公開 repository、截圖、聊天室或韌體二進位檔。</li>
+<li>先以最小能力開始：單一按鍵、單一顯示頁與無敏感個資的測試內容；要接入行事曆、家庭自動化或其他帳號前，再逐項審查權限與資料傳送目的地。</li>
+<li>語音喚醒、長期收音與家庭環境感測會增加旁人告知、同意、保存期限與誤觸發風險；不應因為裝置小就忽略這些界線。</li>
+</ul>
+<h2>來源、查核與限制</h2>
+<ul>
+<li>原始分享連結與 canonical Threads 貼文均已保存；本文僅使用可見貼文文字與可讀取的上游 GitHub 文件。</li>
+<li>官方 GitHub README 圖片已本地保存為 PNG：1874 × 470、513,016 bytes、SHA-256 `5a76a20ad72b6d5a6cea9dd32f33d77054e9ce095db5efc86c21ecc632d3811d`。</li>
+<li>未安裝、刷寫、配對或測試任何裝置；本文不是硬體安裝、接線、側載或繞過服務資格的操作指南。</li>
+<li>Threads 畫面上的瀏覽與互動數為擷取時觀察值，未列為長期指標。</li>
+</ul>
+<h2>原始連結</h2>
+<ul>
+<li>Threads 貼文：<a href="https://www.threads.com/@pcedison/post/DfHinbDk1NC" target="_blank" rel="noopener">https://www.threads.com/@pcedison/post/DfHinbDk1NC</a></li>
+<li>Muse Gadgets GitHub：<a href="https://github.com/facebookincubator/muse-gadget-sdk" target="_blank" rel="noopener">https://github.com/facebookincubator/muse-gadget-sdk</a></li>
+<li>SDK token 設定頁：<a href="https://gadgets.muse.ai/settings/sdk-tokens" target="_blank" rel="noopener">https://gadgets.muse.ai/settings/sdk-tokens</a></li>
+<li>Gadget SDK Terms：<a href="https://gadgets.muse.ai/sdk-terms" target="_blank" rel="noopener">https://gadgets.muse.ai/sdk-terms</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-11-01 · Threads · social-post</div><h3>標籤</h3><span class="tag">AI學習雷達</span><span class="tag">Meta Muse</span><span class="tag">Muse Gadgets</span><span class="tag">ESP32</span><span class="tag">開源硬體</span><span class="tag">語音介面</span><span class="tag">嵌入式系統</span><h3>原始連結</h3><p><a href="https://www.threads.com/share/BAvLS1EAOV/" target="_blank" rel="noopener">https://www.threads.com/share/BAvLS1EAOV/</a></p><p><a href="https://www.threads.com/@pcedison/post/DfHinbDk1NC" target="_blank" rel="noopener">https://www.threads.com/@pcedison/post/DfHinbDk1NC</a></p><p><a href="https://www.threads.com/share/BAvLS1EAOV/" target="_blank" rel="noopener">https://www.threads.com/share/BAvLS1EAOV/</a></p><p><a href="https://www.threads.com/@pcedison/post/DfHinbDk1NC" target="_blank" rel="noopener">https://www.threads.com/@pcedison/post/DfHinbDk1NC</a></p><p><a href="https://github.com/facebookincubator/muse-gadget-sdk" target="_blank" rel="noopener">https://github.com/facebookincubator/muse-gadget-sdk</a></p><p><a href="https://gadgets.muse.ai/settings/sdk-tokens" target="_blank" rel="noopener">https://gadgets.muse.ai/settings/sdk-tokens</a></p><p><a href="https://gadgets.muse.ai/sdk-terms" target="_blank" rel="noopener">https://gadgets.muse.ai/sdk-terms</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

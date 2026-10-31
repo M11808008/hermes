@@ -33,6 +33,38 @@
     "markdown": "articles/2026/11/2026-11-01-threads-aigeeknews-couch-tv-open-source-google-tv-home-remote.md"
   },
   {
+    "title": "Threads｜把 Meta Muse Gadgets 裝進 ESP32 圓形螢幕：一則中文介面實作案例與 SDK 邊界",
+    "date": "2026-11-01",
+    "source": "Threads",
+    "author": "pcedison",
+    "type": "social-post",
+    "topics": [
+      "AI學習雷達",
+      "Meta Muse",
+      "Muse Gadgets",
+      "ESP32",
+      "開源硬體",
+      "語音介面",
+      "嵌入式系統"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAvLS1EAOV/",
+      "https://www.threads.com/@pcedison/post/DfHinbDk1NC",
+      "https://www.threads.com/share/BAvLS1EAOV/",
+      "https://www.threads.com/@pcedison/post/DfHinbDk1NC",
+      "https://github.com/facebookincubator/muse-gadget-sdk",
+      "https://gadgets.muse.ai/settings/sdk-tokens",
+      "https://gadgets.muse.ai/sdk-terms"
+    ],
+    "excerpt": "這則案例的價值不在於「兩小時做完」，而在於它把雲端個人 Agent 的對話延伸到可按、可看、可聽的自製裝置；真正的工程成本仍落在板子相容性、GPIO、配對、字型、刷寫與可還原的測試流程。",
+    "slug": "2026-11-01-threads-pcedison-meta-muse-gadgets-esp32",
+    "html": "articles/2026-11-01-threads-pcedison-meta-muse-gadgets-esp32.html",
+    "markdown": "articles/2026/11/2026-11-01-threads-pcedison-meta-muse-gadgets-esp32.md"
+  },
+  {
     "title": "Threads｜GBrain × Obsidian：把個人筆記變成多個 AI Agent 可檢索的記憶層，但「本機」與「不外流」要分開驗證",
     "date": "2026-11-01",
     "source": "https://www.threads.com/share/BAaXIGNMpE/",
