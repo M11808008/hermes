@@ -189,6 +189,36 @@
     "markdown": "articles/2026/10/2026-10-31-facebook-amsterdam-van-der-linde-vanilla-ice-cream.md"
   },
   {
+    "title": "Threads｜用 Gemini 把行程資料做成單一 HTML 旅遊網站：可重用提示詞與功能驗收",
+    "date": "2026-10-31",
+    "source": "Threads",
+    "author": "yulan_tseng",
+    "type": "social-post",
+    "topics": [
+      "AI學習雷達",
+      "Gemini",
+      "旅遊規劃",
+      "HTML",
+      "提示詞",
+      "網頁原型"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_0edv3Vpg/",
+      "https://www.threads.com/@yulan_tseng/post/DfJA_vjCXTf",
+      "https://www.threads.com/share/_0edv3Vpg/",
+      "https://www.threads.com/@yulan_tseng/post/DfJA_vjCXTf",
+      "https://gemini.google.com/",
+      "https://support.google.com/gemini/"
+    ],
+    "excerpt": "與其只問 AI「幫我做旅遊網站」，這則貼文提供一份可驗收的規格：將行程內容、視覺 token、功能清單與交付格式寫清楚，再把生成結果當成需要人工測試與修正的 HTML 原型。",
+    "slug": "2026-10-31-threads-yulan-tseng-gemini-travel-itinerary-site-prompt",
+    "html": "articles/2026-10-31-threads-yulan-tseng-gemini-travel-itinerary-site-prompt.html",
+    "markdown": "articles/2026/10/2026-10-31-threads-yulan-tseng-gemini-travel-itinerary-site-prompt.md"
+  },
+  {
     "title": "Facebook｜李佳恩的「微縮宇宙」社團星港：把校園社團資訊做成可探索的介面原型",
     "date": "2026-10-30",
     "source": "Facebook",
