@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Couch TV：自訂 Google TV／Samsung 首頁與手機遙控，但別把「交給 agent」當成無人監管安裝</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Couch TV：自訂 Google TV／Samsung 首頁與手機遙控，但別把「交給 agent」當成無人監管安裝</h1><h2>一句話摘要</h2>
+<p>這則 Threads 分享把 Couch TV 描述成「把 repository 交給 agent 就能裝好」的自製電視桌面與手機遙控方案，並提到可選接 Claude 作為語音／自然語言助理。上游公開資料能確認它是仍在更新的 MIT 授權專案，但它會觸及真實家用裝置的首頁、除錯、網路 bridge 與安裝權限；正確心態是**可審核的自有設備專案**，不是讓 agent 自行決定系統變更。</p>
+<h2>Threads 貼文可直接確認的內容</h2>
+<p>AI 极客新闻（`aigeeknews`）在 Threads 指向 `Seagey/couch-tv`，可見文字為「自己做的电视桌面加手机遥控」，並稱可選擇接 Claude 當語音助手。這是分享者對專案的摘要，不足以證明任一電視型號、語音能力、安裝成功率或功能完整度。</p>
+<p>原串頁面也渲染了多則其他帳號的相關電視改造貼文；它們不是本貼文作者的主張，本文不把它們混入 Couch TV 的功能或相容性證據。</p>
+<h2>上游 repository 可確認的範圍</h2>
+<p>GitHub API 與 repository README 在 2026-11-01 可確認：</p>
+<ul>
+<li>`Seagey/couch-tv` 是公開、未封存的 repository，採 MIT License；它不等於 Google、Samsung、Anthropic 或任何電視品牌的官方產品。</li>
+<li>上游將其定位為 Google TV 的自訂首頁與手機遙控，並描述 Samsung 也有首頁、手機遙控及可選的 Claude 助理整合；LG 則仍屬尚未完成的方向，不能視為支援承諾。</li>
+<li>README 將使用方式分為僅 TV 首頁、由家中電腦運行 bridge 的手機遙控，以及讓 bridge 常駐電視的變體。不同方案的網路與權限風險並不相同。</li>
+<li>對 Google TV／Android TV，README 明示需確認 Android 版本與 Developer options／debugging；對 Samsung，則是以自己的 Samsung 帳號和開發／安裝工具處理。這些均是高影響設定，不應由聊天指令自動略過。</li>
+<li>Claude 助理是選用功能。README 說它依賴使用者在自己的電腦上安裝並登入 Claude Code，設定預設為關閉；這能佐證選用整合存在，不能保證所有語言、語音辨識、串流服務或控制結果。</li>
+</ul>
+<h2>為何「交給 agent 安裝」需要停下來審核</h2>
+<p>repository 的 README 確實鼓勵把資料夾交給 coding agent 協助設定；但 agent 在這種情境不只是寫程式，可能還要掃描內網、建立或使用 ADB 通道、安裝／更新 App、修改首頁行為，或在電腦／電視上留下一個常駐服務。</p>
+<p>特別是 Android TV／Google TV 的網路除錯：一旦授權某部電腦，它可能持有可對電視下達指令的 ADB key。上游 README 也提到首頁切換後，可能影響既有 Home 行為，以及部分 Google Home 或遙控器按鈕。因此，把「能安裝」誤解成「可以完全自動化」會跳過最重要的可回復性檢查。</p>
+<h2>採用前的安全檢核</h2>
+<ul>
+<li>**先確認平台與精確型號。** Google TV、Android TV、Fire TV、Samsung、LG 是不同系統；不要因為同樣是「智慧電視」就套用別人的流程。</li>
+<li>**先讀上游 README、LICENSE、解除安裝文件與 Releases。** 確認來源、版本、是否有可理解的還原路徑；未驗證前，不要側載來路不明的 APK 或把私人帳號交給第三方工具。</li>
+<li>**先做不改動的相容性盤點。** 在自己的可信任 LAN 上確認裝置、韌體與現有 Home／遙控／輸入來源行為；避免讓 agent 直接探索或連到非自有設備。</li>
+<li>**每個高影響動作都需人工核准。** 包含開啟除錯、配對裝置、安裝 App、切換首頁、調整網路服務、設定長駐 bridge 或連接 Claude。先看命令、目的與還原方式，再執行。</li>
+<li>**建立復原證據。** 至少測試實體遙控器、HDMI／輸入來源、Wi‑Fi、串流服務、設定與正常開機；任何首頁切換前都要能回到原本的系統入口。</li>
+<li>**完成後收回權限。** 不再需要時關閉除錯、撤銷 ADB／開發授權、停止不需要的 bridge，並檢查家中網路沒有留下長期開放的高權限控制介面。</li>
+<li>**Claude／帳號資料最小化。** 若使用選用助理，只使用自己的正式帳戶；不交付密碼、2FA、長效 session、付款資訊或全量個人資料，並將外部播放、購買或帳號操作保留人工確認。</li>
+</ul>
+<h2>可複用的 AI Coding 洞見</h2>
+<p>Couch TV 值得關注的不是「一句 prompt 換掉電視」，而是它把家庭設備介面、行動遙控與自然語言輔助整合為一個可閱讀、可修改的開源專案。這正好說明 AI coding 在實體設備上的最佳分工：agent 幫忙理解程式、比對相容性、產生計畫與驗證清單；人類保留裝置發現、安裝、系統切換與高影響動作的核准權。</p>
+<h2>原始與查核連結</h2>
+<ul>
+<li>Threads 分享：<a href="https://www.threads.com/share/_q9LZ6fu6/" target="_blank" rel="noopener">https://www.threads.com/share/_q9LZ6fu6/</a></li>
+<li>Threads canonical URL：<a href="https://www.threads.com/@aigeeknews/post/DfKM98aG4TO" target="_blank" rel="noopener">https://www.threads.com/@aigeeknews/post/DfKM98aG4TO</a></li>
+<li>Couch TV repository：<a href="https://github.com/Seagey/couch-tv" target="_blank" rel="noopener">https://github.com/Seagey/couch-tv</a></li>
+<li>上游 README：<a href="https://github.com/Seagey/couch-tv/blob/main/README.md" target="_blank" rel="noopener">https://github.com/Seagey/couch-tv/blob/main/README.md</a></li>
+<li>上游解除安裝／復原文件：<a href="https://github.com/Seagey/couch-tv/blob/main/docs/UNINSTALL.md" target="_blank" rel="noopener">https://github.com/Seagey/couch-tv/blob/main/docs/UNINSTALL.md</a></li>
+<li>MIT License：<a href="https://github.com/Seagey/couch-tv/blob/main/LICENSE" target="_blank" rel="noopener">https://github.com/Seagey/couch-tv/blob/main/LICENSE</a></li>
+</ul></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-11-01 · https://www.threads.com/share/_q9LZ6fu6/ · link-archive</div><h3>標籤</h3><span class="tag">Couch TV</span><span class="tag">Google TV</span><span class="tag">Android TV</span><span class="tag">Samsung TV</span><span class="tag">Claude Code</span><span class="tag">ADB</span><span class="tag">Device Security</span><span class="tag">Open Source</span><h3>原始連結</h3><p><a href="https://www.threads.com/@aigeeknews/post/DfKM98aG4TO" target="_blank" rel="noopener">https://www.threads.com/@aigeeknews/post/DfKM98aG4TO</a></p><p><a href="https://www.threads.com/share/_q9LZ6fu6/" target="_blank" rel="noopener">https://www.threads.com/share/_q9LZ6fu6/</a></p><p><a href="https://www.threads.com/@aigeeknews/post/DfKM98aG4TO" target="_blank" rel="noopener">https://www.threads.com/@aigeeknews/post/DfKM98aG4TO</a></p><p><a href="https://github.com/Seagey/couch-tv" target="_blank" rel="noopener">https://github.com/Seagey/couch-tv</a></p><p><a href="https://github.com/Seagey/couch-tv/blob/main/README.md" target="_blank" rel="noopener">https://github.com/Seagey/couch-tv/blob/main/README.md</a></p><p><a href="https://github.com/Seagey/couch-tv/blob/main/docs/UNINSTALL.md" target="_blank" rel="noopener">https://github.com/Seagey/couch-tv/blob/main/docs/UNINSTALL.md</a></p><p><a href="https://github.com/Seagey/couch-tv/blob/main/LICENSE" target="_blank" rel="noopener">https://github.com/Seagey/couch-tv/blob/main/LICENSE</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

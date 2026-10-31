@@ -1,5 +1,38 @@
 [
   {
+    "title": "Threads｜Couch TV：自訂 Google TV／Samsung 首頁與手機遙控，但別把「交給 agent」當成無人監管安裝",
+    "date": "2026-11-01",
+    "source": "https://www.threads.com/share/_q9LZ6fu6/",
+    "author": "AI 极客新闻（aigeeknews）",
+    "type": "link-archive",
+    "topics": [
+      "Couch TV",
+      "Google TV",
+      "Android TV",
+      "Samsung TV",
+      "Claude Code",
+      "ADB",
+      "Device Security",
+      "Open Source"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@aigeeknews/post/DfKM98aG4TO",
+      "https://www.threads.com/share/_q9LZ6fu6/",
+      "https://www.threads.com/@aigeeknews/post/DfKM98aG4TO",
+      "https://github.com/Seagey/couch-tv",
+      "https://github.com/Seagey/couch-tv/blob/main/README.md",
+      "https://github.com/Seagey/couch-tv/blob/main/docs/UNINSTALL.md",
+      "https://github.com/Seagey/couch-tv/blob/main/LICENSE"
+    ],
+    "excerpt": "這則 Threads 分享把 Couch TV 描述成「把 repository 交給 agent 就能裝好」的自製電視桌面與手機遙控方案，並提到可選接 Claude 作為語音／自然語言助理。上游公開資料能確認它是仍在更新的 MIT 授權專案，但它會觸及真實家用裝置的首頁、除錯、網路 bridge 與安裝權限；正確心態是**可審核的自有設備專案**，不是讓 agent 自行決定系統變更。",
+    "slug": "2026-11-01-threads-aigeeknews-couch-tv-open-source-google-tv-home-remote",
+    "html": "articles/2026-11-01-threads-aigeeknews-couch-tv-open-source-google-tv-home-remote.html",
+    "markdown": "articles/2026/11/2026-11-01-threads-aigeeknews-couch-tv-open-source-google-tv-home-remote.md"
+  },
+  {
     "title": "Facebook｜阿姆斯特丹 Van der Linde：只賣香草鮮奶油冰淇淋的 Nieuwendijk 排隊名店",
     "date": "2026-10-31",
     "source": "Facebook",
