@@ -33,6 +33,39 @@
     "markdown": "articles/2026/11/2026-11-01-threads-aigeeknews-couch-tv-open-source-google-tv-home-remote.md"
   },
   {
+    "title": "Threads｜GBrain × Obsidian：把個人筆記變成多個 AI Agent 可檢索的記憶層，但「本機」與「不外流」要分開驗證",
+    "date": "2026-11-01",
+    "source": "https://www.threads.com/share/BAaXIGNMpE/",
+    "author": "Ryana! 宮城良田（ryanah1688）",
+    "type": "link-archive",
+    "topics": [
+      "GBrain",
+      "Obsidian",
+      "Personal Knowledge Management",
+      "AI Agent",
+      "MCP",
+      "Semantic Search",
+      "Privacy",
+      "Open Source"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@ryanah1688/post/DfJgTPBkmyT",
+      "https://www.threads.com/share/BAaXIGNMpE/",
+      "https://www.threads.com/@ryanah1688/post/DfJgTPBkmyT",
+      "https://github.com/garrytan/gbrain",
+      "https://github.com/garrytan/gbrain/blob/master/README.md",
+      "https://github.com/garrytan/gbrain/blob/master/SECURITY.md",
+      "https://github.com/garrytan/gbrain/blob/master/LICENSE"
+    ],
+    "excerpt": "這則 Threads 案例展示一個很有價值的方向：把長期累積於 Obsidian 的筆記，轉成 Claude Code、Codex、Hermes 等 agent 可以檢索、引用的共同記憶層。上游 GBrain 能確認它是 Garry Tan 發起的公開 MIT 專案，支援本機 PGLite、Postgres、MCP 與多種 agent 接入；但貼文中的 8,470 篇筆記、bge-m3、PGLite、凌晨同步與「筆記不上雲」皆為作者個人部署描述，不能直接當成預設設定或完整隱私保證。",
+    "slug": "2026-11-01-threads-ryanah1688-gbrain-obsidian-local-memory",
+    "html": "articles/2026-11-01-threads-ryanah1688-gbrain-obsidian-local-memory.html",
+    "markdown": "articles/2026/11/2026-11-01-threads-ryanah1688-gbrain-obsidian-local-memory.md"
+  },
+  {
     "title": "Facebook｜阿姆斯特丹 Van der Linde：只賣香草鮮奶油冰淇淋的 Nieuwendijk 排隊名店",
     "date": "2026-10-31",
     "source": "Facebook",
