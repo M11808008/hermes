@@ -685,7 +685,9 @@
       "https://cleanyour.tv/",
       "https://github.com/Gathin23/cleanyourtv/blob/main/PROMPT.md",
       "https://github.com/Gathin23/cleanyourtv/blob/main/SECURITY.md",
-      "https://github.com/Gathin23/cleanyourtv/blob/main/LICENSE"
+      "https://github.com/Gathin23/cleanyourtv/blob/main/LICENSE",
+      "https://www.threads.com/share/BAWS5kZhMA/",
+      "https://www.threads.com/@spedmix2025/post/DfKBmsZDyHF"
     ],
     "excerpt": "這則 Threads 分享最吸引人的畫面，是把一台原本充滿推薦內容的電視，改成由遙控器探索的「溫暖客廳」首頁；但支撐它的 CleanYourTV 並非只是換一張桌布，而是會透過 Android Debug Bridge（ADB）讀取裝置狀態、備份、停用部分套件與安裝 launcher 的開源工作流。它適合被視為「可審核的個人設備改造專案」，而不是把 repository 或 Prompt 丟給 AI 後完全放手。",
     "slug": "2026-10-24-threads-cleanyourtv-android-google-tv-ai-launcher-safety",
