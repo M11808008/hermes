@@ -535,6 +535,31 @@
     "markdown": "articles/2026/10/2026-10-28-facebook-instabox-cloud-computers-for-ai-agents.md"
   },
   {
+    "title": "Instagram Reel｜Orbit Agents 共享記憶與 Agent 工作台：社群展示及查核邊界",
+    "date": "2026-10-28",
+    "source": "https://www.instagram.com/reel/DfCRr86jGEK/",
+    "author": "blumbuilds",
+    "type": "link-archive",
+    "topics": [
+      "AI Agent",
+      "Agent Memory",
+      "知識管理",
+      "CRM"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DfCRr86jGEK/",
+      "https://www.instagram.com/reel/DfCRr86jGEK/",
+      "https://orbitagents.com/"
+    ],
+    "excerpt": "blumbuilds 的 Reel 以挑釁式文案比較 Obsidian，並用 Orbit Agents 畫面呈現 Agent、共享記憶、知識圖譜與工作台的概念。這是產品行銷展示，不是獨立測試，也不足以證明它全面優於 Obsidian。",
+    "slug": "2026-10-28-instagram-blumbuilds-orbit-agents-shared-memory",
+    "html": "articles/2026-10-28-instagram-blumbuilds-orbit-agents-shared-memory.html",
+    "markdown": "articles/2026/10/2026-10-28-instagram-blumbuilds-orbit-agents-shared-memory.md"
+  },
+  {
     "title": "Facebook｜Google DeepMind Genie 4：可即時探索與改寫的世界模型，官方研究預覽已發布",
     "date": "2026-10-27",
     "source": "https://www.facebook.com/share/p/1CCe3TjDnJ/",
