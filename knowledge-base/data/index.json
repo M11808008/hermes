@@ -1,5 +1,37 @@
 [
   {
+    "title": "Threads｜magpie-muse-web：以瀏覽器帳號連接 coding agent 的非官方外掛",
+    "date": "2026-11-03",
+    "source": "https://www.threads.com/share/_eKXR7Tq5/",
+    "author": "廖北北（@xassxhole）",
+    "type": "link-archive",
+    "topics": [
+      "Magpie",
+      "Muse",
+      "Codex",
+      "OpenCode",
+      "AI Agent",
+      "安全"
+    ],
+    "use": [
+      "工具研究",
+      "帳號風險評估"
+    ],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@xassxhole/post/DfNWK4giP0h",
+      "https://www.threads.com/share/_eKXR7Tq5/",
+      "https://www.threads.com/@xassxhole/post/DfNWK4giP0h",
+      "https://github.com/JohnWangggg/magpie-muse-web",
+      "https://github.com/JohnWangggg/magpie-muse-web/blob/cf08724566477581bfae955058a181cc8a15ffea/README.md"
+    ],
+    "excerpt": "Magpie 的非官方第三方外掛 magpie-muse-web 宣稱以本機瀏覽器操作 muse.ai 網頁帳號，提供 Muse Spark 給 Codex、OpenCode 等 agent；不是官方 API，也不是原生工具呼叫。本文依貼文和專案 README 記錄，並未安裝、登入、送出請求或驗證效果。",
+    "slug": "2026-11-03-threads-magpie-muse-web",
+    "html": "articles/2026-11-03-threads-magpie-muse-web.html",
+    "markdown": "articles/2026/11/2026-11-03-threads-magpie-muse-web.md"
+  },
+  {
     "title": "Visa Infinite × Trip.com 鑽石會員｜Oppa Sharing 貼文與官方資格查核",
     "date": "2026-11-02",
     "source": "https://www.facebook.com/share/p/1Eh9xpo65k/?mibextid=wwXIfr",
