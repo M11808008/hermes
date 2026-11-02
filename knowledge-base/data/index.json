@@ -32,6 +32,33 @@
     "markdown": "articles/2026/11/2026-11-03-threads-magpie-muse-web.md"
   },
   {
+    "title": "Threads｜Hermes 與 Muse 子代理提示詞：任務分流、回報與驗收的版本邊界",
+    "date": "2026-11-03",
+    "source": "Threads",
+    "author": "DWood（@wenston_753）",
+    "type": "workflow-note",
+    "topics": [
+      "Hermes",
+      "Muse",
+      "子代理",
+      "提示詞",
+      "工作流"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BBKhciLjLR/",
+      "https://www.threads.com/@wenston_753/post/DfPodIEG98d",
+      "https://www.threads.com/@wenston_753/post/DfPodIEG98d",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation"
+    ],
+    "excerpt": "可借鑑任務分流、清楚交接與獨立驗收；但「兩步工具一律委派、回覆後結束等待背景回調」是作者建議，不是所有 Hermes 環境都支援的行為。",
+    "slug": "2026-11-03-threads-wenston-hermes-muse-subagent-prompt",
+    "html": "articles/2026-11-03-threads-wenston-hermes-muse-subagent-prompt.html",
+    "markdown": "articles/2026/11/2026-11-03-threads-wenston-hermes-muse-subagent-prompt.md"
+  },
+  {
     "title": "Visa Infinite × Trip.com 鑽石會員｜Oppa Sharing 貼文與官方資格查核",
     "date": "2026-11-02",
     "source": "https://www.facebook.com/share/p/1Eh9xpo65k/?mibextid=wwXIfr",
