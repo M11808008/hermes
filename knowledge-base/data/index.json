@@ -32,6 +32,32 @@
     "markdown": "articles/2026/11/2026-11-03-threads-magpie-muse-web.md"
   },
   {
+    "title": "Threads｜Roboa AI：舊監視器與 Frigate 本地 AI 偵測的可行性與限制",
+    "date": "2026-11-03",
+    "source": "https://www.threads.com/share/_7d3haLM5",
+    "author": "Roboa AI",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Frigate",
+      "影像辨識",
+      "隱私"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@roboa.ai/post/DfRx2oUk-Vv",
+      "https://www.threads.com/@roboa.ai/post/DfRx2oUk-Vv",
+      "https://youtu.be/c0bBVL5cVsA",
+      "https://docs.frigate.video/frigate/hardware/"
+    ],
+    "excerpt": "開源 NVR Frigate 可處理相容的攝影機串流及物件偵測，但「免費軟體」不代表硬體、儲存、電力及維護都免費，也不能保證所有相機或功能均相容。",
+    "slug": "2026-11-03-threads-roboa-frigate-ai-camera",
+    "html": "articles/2026-11-03-threads-roboa-frigate-ai-camera.html",
+    "markdown": "articles/2026/11/2026-11-03-threads-roboa-frigate-ai-camera.md"
+  },
+  {
     "title": "Threads｜Hermes 與 Muse 子代理提示詞：任務分流、回報與驗收的版本邊界",
     "date": "2026-11-03",
     "source": "Threads",
