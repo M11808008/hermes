@@ -18,6 +18,29 @@
 <li>轉換前備份並試還原；資料庫關聯、公式、權限、嵌入內容、區塊類型及附件可能無法完整映射到 Markdown。保留來源 URL 和原始資料，人工抽查，不將有損轉換當作可逆備份。</li>
 <li>Codex 對授權範圍內的暫存副本提出分類、FAQ 與卡片草稿；人工審核差異、來源及隱私，再寫入 vault。先做好版本備份，必要時可回滾。</li>
 </ul>
+<h2>2026-11-03 補充｜小施實測室：Claude 桌面 Code 讀寫 Obsidian</h2>
+<figure><img src="../assets/source-images/2026-11-03-shih-claude-obsidian.jpg" alt="小施實測室主帖公開圖卡：Claude 接上 Obsidian，不用寫程式" loading="lazy" referrerpolicy="no-referrer"><figcaption>小施實測室主帖公開圖卡：Claude 接上 Obsidian，不用寫程式</figcaption></figure>
+<p>這是同一知識流程中的另一個獨立案例，而非王啟樺貼文續篇。小施實測室描述，在 Claude 桌面版的寫程式模式打開 Obsidian 資料夾，用中文交代整理並儲存筆記，再回 Obsidian 看結果。這是作者經驗，不代表本次已連接或實測。主帖可見一張教學圖卡，無明顯個資或人物；上圖為公開壓縮版本。主帖下「相關串文」是推薦區，即使同作者的前一天貼文也不是本文續文。</p>
+<p>作者本人在留言中詢問別人模板細節；另一位使用者分享以 Copilot plugin 接 Claude、製作日誌模板及 Garmin 外掛整合等經驗，屬第三方個人經驗，不是作者的主帖實作，也不是官方確認的預設功能。</p>
+<p>### 官方核對：適用範圍與費用</p>
+<ul>
+<li>Anthropic 的桌面快速入門明列 Code 分頁、選 Local 與 Open folder；目前文件列 Pro、Max、Ultra、Team、Enterprise 訂閱，並非免費方案皆可用。桌面 Code 內建 Claude Code，不必另外安裝 CLI；macOS、Windows 與 Linux beta 的條件、版本及組織政策可能不同。Chat、Cowork、Code、SSH 與 Cloud 不是相同模式，不能把本機路徑假設套用到其他模式。</li>
+<li>Obsidian 官方說 vault 是本機資料夾、筆記為 Markdown 純文字，外部更改會刷新；還可能使用同步服務。本機檔案不等於模型本機運算：Anthropic 文件說本機 Code 工作階段仍把對話及程式碼上下文送往設定的模型供應商，預設 Anthropic API。送出什麼資料、保存及訓練政策依帳號、供應商及設定確認。</li>
+<li>Pro、Max、Ultra 訂閱包含用量但有使用限制；額度、模型及額外用量以帳戶及現行方案為準，額度耗盡不代表必然免費或自動加購。API／第三方供應商可能按 token 或各自合約計費，與訂閱不是同一帳單；企業及團隊方案依合約與管理員規則。官方：</li>
+</ul>
+<p>  - <a href="https://code.claude.com/docs/en/desktop-quickstart" target="_blank" rel="noopener">https://code.claude.com/docs/en/desktop-quickstart</a></p>
+<p>  - <a href="https://code.claude.com/docs/en/desktop" target="_blank" rel="noopener">https://code.claude.com/docs/en/desktop</a></p>
+<p>  - <a href="https://code.claude.com/docs/en/costs" target="_blank" rel="noopener">https://code.claude.com/docs/en/costs</a></p>
+<p>  - <a href="https://claude.com/pricing" target="_blank" rel="noopener">https://claude.com/pricing</a></p>
+<p>  - <a href="https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data" target="_blank" rel="noopener">https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data</a></p>
+<p>### 安全審核與備份建議（僅建議，未變更設定）</p>
+<ul>
+<li>先複製少量無敏感資料到獨立測試 vault 或暫存資料夾，避免直接給整個個人 vault、家目錄、憑證及私人資料；核對實際選擇的 Local 環境、資料夾、額外目錄、作業系統權限與管理政策。目錄選擇不是絕對沙箱，shell、連接器、外掛可能擴大存取或外傳。</li>
+<li>優先手動審核模式，對寫入、刪除、批次改名、命令及網路動作逐項核准；先要求提出計畫與 diff，不啟用 bypass 或自動批准。筆記與網頁內指令可能是提示注入，不應凌駕使用者意圖；檢查外掛、MCP 與第三方連線資料流與撤權方式。</li>
+<li>修改前建立完整、可還原的版本備份：包括 Markdown、附件與必要的 .obsidian 設定；另存獨立位置並定期試還原。同步不是備份；Obsidian File Recovery 可以補救部分文字變更，但不能取代完整備份。敏感內容不要放入公開 Git。</li>
+<li>先產生草稿，人工檢查 diff、連結及來源再合併；若雙邊都改過就保留兩份並標記衝突，刪除須人工確認。不要把 Codex／Notion 工作流說成已連接。</li>
+</ul>
+<p>來源：原始分享 <a href="https://www.threads.com/share/BAXoXF7XmE" target="_blank" rel="noopener">https://www.threads.com/share/BAXoXF7XmE</a> ；固定貼文 <a href="https://www.threads.com/@shih.testlab/post/DfQwE_iH0ho" target="_blank" rel="noopener">https://www.threads.com/@shih.testlab/post/DfQwE_iH0ho</a> 。查核日期 2026-11-03；功能及方案可能變動。</p>
 <h2>相關既有文章</h2>
 <p>[AI 筆記工具比較：Notion、Obsidian 等五款工具](2026-08-14-bnext-ai-notes-tools-notion-obsidian-heptabase-gemini-kuse.html)是較廣的產品比較；本篇是新的資料流與同步安全案例，並非同一篇重複貼文。</p>
 <h2>原始連結</h2>
