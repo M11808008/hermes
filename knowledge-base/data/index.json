@@ -1,5 +1,36 @@
 [
   {
+    "title": "Threads｜王啟樺：ChatGPT、Notion、Codex 與 Obsidian 的知識資料流",
+    "date": "2026-11-03",
+    "source": "https://www.threads.com/share/BAX-y8vmbn",
+    "author": "王啟樺",
+    "type": "article",
+    "topics": [
+      "Threads",
+      "Notion",
+      "Obsidian",
+      "ChatGPT",
+      "Codex",
+      "個人知識管理",
+      "資料同步"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@chihua.wang.3/post/DfRDDM3AsfP",
+      "https://www.threads.com/@chihua.wang.3/post/DfRDDM3AsfP",
+      "https://www.notion.com/help/export-your-content",
+      "https://developers.notion.com/docs/authorization",
+      "https://developers.notion.com/guides/mcp/overview",
+      "https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data"
+    ],
+    "excerpt": "不必把 Notion 與 Obsidian視為二選一：作者主張 Notion 負責捕捉，Obsidian 負責本地知識工作，關鍵是設計資料流與授權邊界。",
+    "slug": "2026-11-03-threads-chihua-chatgpt-notion-codex-obsidian-data-flow",
+    "html": "articles/2026-11-03-threads-chihua-chatgpt-notion-codex-obsidian-data-flow.html",
+    "markdown": "articles/2026/11/2026-11-03-threads-chihua-chatgpt-notion-codex-obsidian-data-flow.md"
+  },
+  {
     "title": "Threads｜magpie-muse-web：以瀏覽器帳號連接 coding agent 的非官方外掛",
     "date": "2026-11-03",
     "source": "https://www.threads.com/share/_eKXR7Tq5/",
