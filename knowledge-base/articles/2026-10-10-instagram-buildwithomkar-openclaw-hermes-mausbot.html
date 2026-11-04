@@ -15,7 +15,7 @@
 <li>每個 bot 可有不同任務、模型與執行環境，在使用者自己的機器上平行執行。</li>
 <li>可從已安裝的 Claude、Codex、Grok CLI 等來源使用既有登入或訂閱；網站稱本機 harness 位於 127.0.0.1，將不同供應商的事件統一處理。</li>
 <li>支援 Gmail、Slack、GitHub、Notion、Linear 等連接情境，但 OAuth、資料存取範圍與每個 connector 的權限仍需逐一檢查。</li>
-<li>GitHub 專案 `milind-soni/OpenMausBot` 在本次擷取時標示 Apache License 2.0；星數、平台支援、模型選項與功能均為會變動的專案資訊。</li>
+<li>GitHub 專案 `milind-soni/OpenMausBot` 的開源部分採 Apache License 2.0；`enterprise/` 有不同授權，見下方 2026-11-04 補充。星數、平台支援、模型選項與功能均會變動。</li>
 </ul>
 <h2>不是「免費就無成本」</h2>
 <p>「開源」描述的是程式碼授權，不等於雲端運算、模型 API、第三方 connector 或帳號訂閱都免費。即使使用既有 CLI 登入，仍要確認所屬訂閱方案是否允許該類自動化與持續背景任務，並留意額度、帳單、資料保留與服務條款。</p>
@@ -27,6 +27,31 @@
 <li>將「影片顯示可以協作」與「你的作業系統、版本、登入權益與 connector 真的相容」分開驗證。</li>
 <li>上線前對寫入、傳送、購買、部署、刪除等不可逆行為保留人工批准。</li>
 </ul>
+<h2>2026-11-04 補充｜Threads：OpenMausBot 的版本與安全邊界</h2>
+<p>Asgard AI 的公開 Threads 介紹原名 OpenGrokBot 的 OpenMausBot，提到 0.1.136 的團隊 bot 分享、閒置摘要及 Just do it，以及 harness、雲端／本機電腦與 Composio。這是不同貼文對同一產品的補充，不另建重複條目。可見渲染主文後即進入「相關串文」推薦區，未取得可確認的作者續文；不代表續文不存在。</p>
+<ul>
+<li>版本：官方 0.1.136 於 2026-10-31 23:27 UTC 發布，release notes 確有逐 bot 指定團隊權限、閒置摘要和 Just do it；後者在「Easier」而非全部列作新功能。2026-11-04 查詢時最新正式版為 0.1.140，GitHub 11,926 星，均會變動。</li>
+<li>授權：GitHub API 偵測 Apache-2.0，但實際 LICENSING 明列 `enterprise/` 另受 source-available 商用條款限制，生產執行企業功能須有效授權；第三方元件另有授權。不能將整個 repo 一概視為 Apache。</li>
+<li>權限不是一律按允許：官方文件稱支援的供應商可顯示核准卡，但 Just do it 不會沿途停下逐項詢問；工具、供應商及模式不同，不能保證所有 shell、檔案修改或外部動作都事前人工核准。觸發器的建立在 README 中描述為不需確認；應另外核對排程、連接器的讀寫及發送授權。</li>
+<li>Local VM 官方實際描述是本機 Docker／Podman 容器化 Linux 桌面，並保留掛載 workspace 和瀏覽器資料；不是對所有工作負載提供完整的獨立虛擬機安全保證。直接控制主機需明確啟用和 OS 授權；目前 README 表示 Ubuntu Wayland 主機控制仍停用。雲端桌面及掛載資料仍有網路、服務商和憑證暴露風險。</li>
+<li>資料流：README 稱本機 harness 在 127.0.0.1、逐執行緒事件與本地紀錄保存在 `~/.openmausbot`；這不是本機模型推理或資料永不外傳。模型提供商、Boat 雲端電腦、Composio OAuth 與連接服務依所選模式處理資料。CLI 文件稱 API key 明文存放於受限權限的 config.json；封裝桌面版對支援項目使用 OS safeStorage，不能混為一談。資料夾讀取權限、截圖、備份與主機入侵仍有風險。</li>
+<li>訂閱與成本：專案稱可使用既有 Claude／Codex CLI 登入；Anthropic 官方說明符合條件的 Pro／Max／Ultra 可使用 Claude Code，但額度及適用條款須看個人方案，API、雲端、第三方服務可能另計費。OpenAI 方案說明本次遭 403 阻擋，無法核實具體 Codex 權益或第三方自動化許可，不保證所有訂閱可合法無限使用。</li>
+<li>本次僅查公開資料，未安裝、登入、連接帳號或執行產品，沒有實測功能、隔離或安全效果。官方現行 main 文件可能超前已發布版本。</li>
+</ul>
+<p>原貼文：<a href="https://www.threads.com/@asgard_ai_platform/post/DfTqym_EcuI" target="_blank" rel="noopener">https://www.threads.com/@asgard_ai_platform/post/DfTqym_EcuI</a></p>
+<p>官方來源：</p>
+<ul>
+<li><a href="https://github.com/milind-soni/OpenMausBot/releases/tag/v0.1.136" target="_blank" rel="noopener">https://github.com/milind-soni/OpenMausBot/releases/tag/v0.1.136</a></li>
+<li><a href="https://github.com/milind-soni/OpenMausBot/releases/tag/v0.1.140" target="_blank" rel="noopener">https://github.com/milind-soni/OpenMausBot/releases/tag/v0.1.140</a></li>
+<li><a href="https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/LICENSING.md" target="_blank" rel="noopener">https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/LICENSING.md</a></li>
+<li><a href="https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/apps/docs/content/docs/computers/local-vm.mdx" target="_blank" rel="noopener">https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/apps/docs/content/docs/computers/local-vm.mdx</a></li>
+<li><a href="https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/apps/docs/content/docs/security/permissions-and-secrets.mdx" target="_blank" rel="noopener">https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/apps/docs/content/docs/security/permissions-and-secrets.mdx</a></li>
+<li><a href="https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/docs/cli-onboarding.md" target="_blank" rel="noopener">https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/docs/cli-onboarding.md</a></li>
+<li><a href="https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/docs/composio.md" target="_blank" rel="noopener">https://github.com/milind-soni/OpenMausBot/blob/87768b5b41348e8b7f4cac31a11d7fbbed9406c7/docs/composio.md</a></li>
+<li><a href="https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-max-or-ultra-plan" target="_blank" rel="noopener">https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-max-or-ultra-plan</a></li>
+<li><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener">https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan</a> （本次 403）</li>
+</ul>
+<p>本條沿用原先已保存的官方產品示意圖，不將 Threads 圖當作開源素材；該貼文圖片權利未確認，且登入遮罩使畫面未能完整檢視。來源紀錄：`source-archive/2026-11-04-threads-asgard-openmausbot.json`。</p>
 <h2>原始與查核連結</h2>
 <ul>
 <li>Instagram Reel：<a href="https://www.instagram.com/reel/DeUoo5qNMIW/" target="_blank" rel="noopener">https://www.instagram.com/reel/DeUoo5qNMIW/</a></li>
