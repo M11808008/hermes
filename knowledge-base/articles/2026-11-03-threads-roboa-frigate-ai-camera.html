@@ -16,6 +16,26 @@
 <li>偵測器：可依硬體選擇 Apple Silicon、OpenVINO、Coral 等；官方不建議以一般 CPU 的 TFLite 模式作實際用途，且同一物件偵測工作不能混用不同偵測器類型。不同模型與加速器須按官方相容清單核對。</li>
 <li>go2rtc：Frigate 文件說它支援多種串流，不只 RTSP，並可用 restream 減少相機連線；新增相機精靈可能已自動設定。是否支援某品牌封閉協定、驗證方式、編碼與韌體需逐型號查證，不是通用破解工具。</li>
 </ul>
+<h2>2026-11-04 補充：takyhill 的 Vocus 圖解實測</h2>
+<p>這是另一位作者的案例，不是 Roboa AI 的續文。使用者分享的是 <a href="https://www.threads.com/share/BAksM3LQo_" target="_blank" rel="noopener">https://www.threads.com/share/BAksM3LQo_</a> ，解析為 <a href="https://www.threads.com/@takyhill/post/DfSJYGcGFzn" target="_blank" rel="noopener">https://www.threads.com/@takyhill/post/DfSJYGcGFzn</a> ；其上層主文 <a href="https://www.threads.com/@takyhill/post/DfSGTk8mmQe" target="_blank" rel="noopener">https://www.threads.com/@takyhill/post/DfSGTk8mmQe</a> 稱舊電腦加約 NT$699 Tapo、無月費，並稱某熱門攝影機接不上，但貼文沒有指出型號。續文指向許哲維的圖文教程 <a href="https://vocus.cc/article/6ae9f056fd8978000135818e" target="_blank" rel="noopener">https://vocus.cc/article/6ae9f056fd8978000135818e</a> 。2026-11-04 未登入可讀到從準備、七個步驟、踩雷、進階到資料來源的全文，未見付費牆；不代表著作權放棄或保證未來免費。</p>
+<figure><img src="../assets/source-images/2026-11-04-frigate-vocus.webp" alt="作者以公開街景測試的 Frigate 偵測截圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>作者以公開街景測試的 Frigate 偵測截圖</figcaption></figure>
+<p>圖：許哲維 Vocus 教程之 Frigate 介面截圖，影像來自 University of Edinburgh 的 Learning, Teaching and Web Services，原作 <a href="https://commons.wikimedia.org/wiki/File:Pedestrians_in_Buchanan_Street,_Glasgow.webm" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:Pedestrians_in_Buchanan_Street,_Glasgow.webm</a> ；作者聲明截圖依 CC BY-SA 3.0 分享，原始素材授權亦見 Commons，授權 <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">https://creativecommons.org/licenses/by-sa/3.0/</a> 。此為網頁提供的 640×360 壓縮副本，未改圖；畫面呈現作者案例，不是本次實測。作者表示 Frigate 介面截圖依同授權分享；其餘圖尚未逐張檢視是否含敏感資料及確認各圖權利鏈，故未公開鏡像。</p>
+<p>### 教程內容與實測範圍</p>
+<ul>
+<li>設備與價格：作者列 TP-Link Tapo C200 插電款，2026-11-03 查 PChome／momo 約 NT$699；為當時參考價，不是現價或整套成本。還需電腦、儲存、網路與電力。C200 與下述小米 C200 為不同品牌型號。</li>
+<li>軟硬體：其案例採 Linux、Docker、Frigate 0.18.2 及 Intel CPU／OpenVINO CPU；作者建議 AVX/AVX2、Intel 內顯與硬碟。不是全部 Frigate 架構的最低要求。Windows 官方非支援環境；顯示卡解碼、OpenVINO GPU 物件推論及 CPU 推論是不同工作負載。</li>
+<li>七步概要：在 Tapo App 設攝影機專用帳號取得 RTSP；以 Docker 啟動；配置偵測、錄影與模型；登入網頁；用 Review／Explore 查看事件；畫 Zones；在 System 查看負載。其配置以低解析串流、5 fps 偵測並錄影，追蹤人、車、腳踏車、狗；模型參數需與所選版本和模型一致。雙串流高畫質錄影、required_zones、GPU 加速、手機通知、Home Assistant、Windows／WSL 與小米轉接皆被作者標註未實測。不要把示範 Compose 當逐字實測：作者實測的是等效 docker run。</li>
+<li>效能與故障僅屬作者案例：八核心機器的 CPU 推論約 2.5–4 ms，偵測器 CPU 約 80–118%；缺 model 設定曾報 buffer too small，街景持續繁忙時曾無偵測，shm 太小可能 Bus error。無法推算其他機器速度，也不能將個案校準現象推成普遍規律。作者的圖為實測介面，但測試影像取自公開街景，不是住家攝影機現場實測。</li>
+<li>通知：主文說只推重要畫面，但 Vocus 將手機推播列為未實測，故不可說這套案例已驗證手機推播。官方 0.18 文件說原生 WebPush 需要 HTTPS、登入、裝置註冊及伺服器連瀏覽器商推播服務；僅 review alerts、非所有 detections；iOS 有主畫面安裝等限制。遠端存取另有安全需求，並非完全離線或自動可用。</li>
+</ul>
+<p>### 型號及官方限制核查</p>
+<ul>
+<li>作者列 Tapo 電池 C410、C420、C425、門鈴 D230 不支援 RTSP。TP-Link 台灣 FAQ 明列這四款不支援，原因為電池和晶片設計；同 FAQ 另列 D235、D225、TD25 在硬線供電、安裝跳線且開啟連續錄製模式時才支援 RTSP。因此不能說所有電池款均不支援，也不能由無原生 RTSP 推論任何第三方方案都絕不可能接入。</li>
+<li>教程進階段概括「小米攝影機沒有原生 RTSP、需 go2rtc」但未指定無法接入的具體小米型號；所引 GitHub 討論為社群詢問 Xiaomi C200（型號識別 chuangmi.camera.046c04）go2rtc 連線問題，並非小米官方全面規格或保證可接入的證據。上層 Threads 的「熱門攝影機」究竟指哪一款無法確認；不能把它認定為任何特定型號，也不能推及所有小米機種。購買前逐型號、硬體版及韌體查原廠規格。</li>
+<li>TP-Link 同一 FAQ 提及部分型號串流數有限，Tapo Care、NVR 與 microSD 三者同時使用時 NVR 錄影會停用；請依機型和官方現行說明確認。</li>
+<li>官方 0.18.2 發布說明列多項安全修補，包括需管理員驗證及 viewer 權限的不同 RCE 情境，不能簡化成所有舊版皆可由未登入遠端直接攻擊；0.18.2 也不是永遠安全，應檢查現行公告並更新。8971 為驗證入口，5000 是無驗證內部埠；自簽憑證警告不等於已建立可信安全連線。</li>
+</ul>
+<p>查核來源：TP-Link <a href="https://www.tp-link.com/tw/support/faq/2680/" target="_blank" rel="noopener">https://www.tp-link.com/tw/support/faq/2680/</a> ；Frigate 通知 <a href="https://docs.frigate.video/configuration/notifications/" target="_blank" rel="noopener">https://docs.frigate.video/configuration/notifications/</a> ；0.18.2 發布 <a href="https://github.com/blakeblackshear/frigate/releases/tag/v0.18.2" target="_blank" rel="noopener">https://github.com/blakeblackshear/frigate/releases/tag/v0.18.2</a> ；小米個案討論 <a href="https://github.com/blakeblackshear/frigate/discussions/21421" target="_blank" rel="noopener">https://github.com/blakeblackshear/frigate/discussions/21421</a> 。本次只查文件，未安裝、設定或測試任何監控。</p>
 <h2>隱私與實作前檢核</h2>
 <ul>
 <li>確認有權拍攝、遵守所在地個資與監視法規，避免拍到鄰居私人空間；人臉和車牌尤其敏感。</li>
