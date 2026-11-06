@@ -1,4 +1,21 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>YouTube｜Claude Code 端到端影片剪輯：Video-use 負責修剪，HyperFrames / Remotion 負責動態圖像</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>YouTube｜Claude Code 端到端影片剪輯：Video-use 負責修剪，HyperFrames / Remotion 負責動態圖像</h1><figure><img src="../assets/source-images/2026-08-04-youtube-nate-herk-claude-code-video-editing-hyperframes-video-use-thumbnail.jpg" alt="YouTube 縮圖：Claude 與影片剪輯 timeline" loading="lazy" referrerpolicy="no-referrer"><figcaption>YouTube 縮圖：Claude 與影片剪輯 timeline</figcaption></figure>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>YouTube｜Claude Code 端到端影片剪輯：Video-use 負責修剪，HyperFrames / Remotion 負責動態圖像</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>YouTube｜Claude Code 端到端影片剪輯：Video-use 負責修剪，HyperFrames / Remotion 負責動態圖像</h1><h2>2026-11-06 補充：Remotion 官方 Agent Skills 與 Blender 社群 MCP</h2>
+<figure><img src="../assets/source-images/2026-11-06-youtube-knpAjH6XPmc.jpg" alt="EP26 影片原始縮圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>EP26 影片原始縮圖</figcaption></figure>
+<p>iPAS陪跑師 X Stan 的 EP26 把 Remotion 程式化影片與 Blender 3D 操作放在同一工作流介紹：<a href="https://www.youtube.com/watch?v=knpAjH6XPmc" target="_blank" rel="noopener">https://www.youtube.com/watch?v=knpAjH6XPmc</a> 。影片長約 5 分 32 秒；以下為影片描述、描述中章節與官方資料整理，不是逐字稿，也不代表已驗證影片每個展示畫面。</p>
+<p>描述所列章節：00:00 開場；00:42 它是什麼；01:22 能做什麼；02:47 5 步開工；03:51 注意事項；04:46 今日三件小事。本次嘗試多語及預設字幕擷取均回報字幕停用，播放器亦顯示未提供字幕，故無法提供帶時間戳逐字稿；這些時間是作者的章節標記，不是逐字內容。</p>
+<p>Remotion 官方文件確認維護供 Claude Code、Codex、Cursor 等 agent 使用的 Skills：best-practices 是總入口；create 建專案或 composition，studio 啟動預覽，render 輸出影片或靜態圖，另有 markup、maps、captions、docs 等。這些是給 agent 的工作指引，不是品質保證或無須審查的一鍵影片生成器；斜線呼叫是否可用仍視 agent 與安裝狀態而定。本次僅查證，未安裝或改設定。</p>
+<p>來源版本：Remotion 主倉庫 main commit cf9430e49025d4f3ec80ceedfe4dc323a4884889；官方 skills 倉庫 commit a2824c67f8b4585c294a8101db9f9f0ad3c643f8；文件中 remotion-license 標示 v4.0.540 起提供。2026-11-06 查詢 GitHub API，Remotion 主倉庫 71,155 星，skills 倉庫 6,445 星；星數會變動，影片標題的 7 萬星指主倉庫而非 skills 倉庫。</p>
+<p>Blender 部分並非 Remotion 官方 skill 直接控制 Blender，也非 Blender 官方外掛。影片描述指向社群專案 MCP for Blender：agent 經 MCP server，再透過 socket 連到 Blender 內的 addon；README 宣稱可建立修改物件、材質、多角度視覺檢查及接入 Poly Haven、Sketchfab 等。這是專案 README 的能力描述和影片作者的工作流主張，非本次獨立實測，也不能推論每次都能自主產出可用場景。查核版本為 2e4b0bc294694b1570d76ed01be657c22e6d02a0，當時 33,443 星。</p>
+<p>安全與限制：README 要求 Blender 3.0+、Python 3.10+；預設可在 Blender 執行任意 Python，先備份並使用練習檔。socket 無驗證或加密，避免對外開放；文件的 safe mode 是額外檢查，不應視為完整沙箱。README 提醒不要讓多個 client 同時啟動同一 MCP server，但也描述不同 Blender instance 可用各自連接埠；不要概括成整台機器絕不能多實例。外部素材有各自授權與服務條款；視覺檢查不保證結果正確。專案提供 telemetry 控制，使用前查閱現行設定與隱私政策。</p>
+<p>授權：Remotion 官方價格頁稱個人及最多 3 人公司可使用 Free License，仍須符合條款；不符合免費資格者須看公司授權與實際用途。不能簡化為所有開源、所有商用或所有功能均無條件免費。API、模型、運算與素材可能另計成本。</p>
+<p>查核來源：</p>
+<ul>
+<li>官方 Agent Skills：<a href="https://www.remotion.dev/docs/ai/skills" target="_blank" rel="noopener">https://www.remotion.dev/docs/ai/skills</a></li>
+<li>固定版本：<a href="https://github.com/remotion-dev/skills/tree/a2824c67f8b4585c294a8101db9f9f0ad3c643f8" target="_blank" rel="noopener">https://github.com/remotion-dev/skills/tree/a2824c67f8b4585c294a8101db9f9f0ad3c643f8</a></li>
+<li>主倉庫：<a href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener">https://github.com/remotion-dev/remotion</a></li>
+<li>授權：<a href="https://www.remotion.dev/license" target="_blank" rel="noopener">https://www.remotion.dev/license</a></li>
+<li>社群 MCP 固定版本：<a href="https://github.com/ahujasid/mcp-for-blender/tree/2e4b0bc294694b1570d76ed01be657c22e6d02a0" target="_blank" rel="noopener">https://github.com/ahujasid/mcp-for-blender/tree/2e4b0bc294694b1570d76ed01be657c22e6d02a0</a></li>
+</ul>
+<figure><img src="../assets/source-images/2026-08-04-youtube-nate-herk-claude-code-video-editing-hyperframes-video-use-thumbnail.jpg" alt="YouTube 縮圖：Claude 與影片剪輯 timeline" loading="lazy" referrerpolicy="no-referrer"><figcaption>YouTube 縮圖：Claude 與影片剪輯 timeline</figcaption></figure>
 <h2>為什麼保存</h2>
 <p>這支影片值得歸檔，因為它不是單純展示「AI 幫你剪影片」的行銷口號，而是把影片剪輯拆成可由 coding agent 協調的管線：</p>
 <ul>
