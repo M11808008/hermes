@@ -1,4 +1,22 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Substack｜Meta Muse：把一台持續運作的雲端電腦交給 AI Agent</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Substack｜Meta Muse：把一台持續運作的雲端電腦交給 AI Agent</h1><figure><img src="../assets/source-images/2026-09-13-substack-meta-muse-agent-cover.jpg" alt="Meta Muse／AI agent 雲端電腦文章封面" loading="lazy" referrerpolicy="no-referrer"><figcaption>Meta Muse／AI agent 雲端電腦文章封面</figcaption></figure>
+<h2>2026-11-08 補充｜Muse、Hermes 與第三方 Telegram connector</h2>
+<p>Threads 作者 @twiceyuan 說自己讓 Muse 製作 Telegram 自訂連接器，並使 Muse 與 Hermes 聊天；作者續文稱將兩者加入群組，每日凌晨把各自記憶提交至倉庫，再將通用部分共享。這是作者個案；截圖呈現兩個具名角色討論同步與拉取，不足以獨立證明完整資料流、使用的帳號類型、定時任務可靠運作或未來持續成功。</p>
+<p>重要限制：Telegram 官方 Bots FAQ 明確說 bot 不論隱私模式為何，都看不到其他 bot 發出的訊息，以防循環；關閉隱私模式或將 bot 設為管理員也不能消除此限制。因此不能由截圖推論「兩個普通 Bot API bot 能直接互相接收訊息」。實際案例是否有其他身分或中介，未獨立核實。專案範例即使包含篩選其他 bot 訊息的程式，也不能保證 Telegram 會送達此類訊息。</p>
+<p>固定查核專案 commit `7d489bb47b0cc6ef977da53ee27a648ecc2b3ae6`：這是 twiceyuan 第三方作品，並非 Meta 或 Hermes 官方連接器；MIT LICENSE 含授權條件與免責。README 描述以 Muse 自訂 connector 呼叫 Telegram Bot API，支援讀取更新、傳訊、聊天資訊與 webhook；範例以排程輪詢並保存 queue 與 offset。官方 Meta 說明有自訂連接器的一般機制，並不證明本專案獲官方認證或安全。Hermes 官方則有 Telegram gateway，但這不等於官方支持此 Muse 橋接。</p>
+<p>程式碼顯示 helper 固定呼叫 Telegram 主機、拒絕重新導向，並引用 Muse 代理憑證介面；其保險庫和替換憑證的行為屬專案描述，本次未能驗證運行時機制或保證絕不洩漏。值得注意：查核版本 `tg.py` 的憑證識別字面值與其 connector descriptor 的 ID 不一致，實際是否可用未測試，不能照 README 保證一鍵部署。getUpdates 與 webhook 互斥，Telegram 未取得的更新最多保留 24 小時；輪詢有延遲與漏訊風險。</p>
+<p>安全：關閉群組隱私模式會擴大 bot 對群內非 bot 訊息的可見範圍；queue 範例會保存訊息文字與識別資訊。不要把 bot token、聊天、私人記憶、驗證碼或其他秘密送入公開倉庫；私有倉庫亦須限制存取、審核提交與歷史、設定保留及撤銷機制。外部訊息可能含提示注入，跨 agent 分享內容先最小化、人工審核；對外傳送、修改或高風險操作需人確認。不要直接讓 agent 執行陌生 README。此次沒有安裝、登入、接入、設定、取得憑證或發送測試。</p>
+<p>作者續文的公開壓縮圖已完整檢視，含群組對話及帳號脈絡，故不公開鏡像；主帖顯示的是 GitHub 連結預覽，不是主帖上傳圖片。原圖的重用授權亦未確認。</p>
+<p>來源（查核 2026-11-08）：</p>
+<ul>
+<li>分享：<a href="https://www.threads.com/share/BBa1SbmLyw" target="_blank" rel="noopener">https://www.threads.com/share/BBa1SbmLyw</a></li>
+<li>主文：<a href="https://www.threads.com/@twiceyuan/post/Dfe8j3cE2Rj" target="_blank" rel="noopener">https://www.threads.com/@twiceyuan/post/Dfe8j3cE2Rj</a></li>
+<li>作者續文：<a href="https://www.threads.com/@twiceyuan/post/Dfe_y2VE452" target="_blank" rel="noopener">https://www.threads.com/@twiceyuan/post/Dfe_y2VE452</a></li>
+<li>固定 commit：<a href="https://github.com/twiceyuan/muse-telegram-connector/tree/7d489bb47b0cc6ef977da53ee27a648ecc2b3ae6" target="_blank" rel="noopener">https://github.com/twiceyuan/muse-telegram-connector/tree/7d489bb47b0cc6ef977da53ee27a648ecc2b3ae6</a></li>
+<li>Telegram 官方：<a href="https://core.telegram.org/bots/faq" target="_blank" rel="noopener">https://core.telegram.org/bots/faq</a> 、<a href="https://core.telegram.org/bots/api" target="_blank" rel="noopener">https://core.telegram.org/bots/api</a></li>
+<li>Meta 官方：<a href="https://www.meta.com/zh-tw/help/superintelligence/1687253048996149/" target="_blank" rel="noopener">https://www.meta.com/zh-tw/help/superintelligence/1687253048996149/</a></li>
+<li>Hermes 官方：<a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram</a></li>
+<li>來源封存：source-archive/2026-11-08-threads-twiceyuan-muse-telegram-hermes.json</li>
+</ul>
 <h2>2026-11-08 補充｜Threads 優惠收集 Space：手動更新與提示詞</h2>
 <p>Threads 作者 @clementtang 分享以 Muse Space 整理台灣繁體中文優惠的個案。以下保留主文完整原文（提示詞為第三段），供參考與修改；引用不代表已執行：</p>
 <p>&gt; 昨天看到有人做了薅羊毛 Muse Space，想說也來試試做一個抓特價的。</p>
