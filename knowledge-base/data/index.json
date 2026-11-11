@@ -1,5 +1,31 @@
 [
   {
+    "title": "X-Ray Mirror｜攝影機擴增實境解剖鏡：功能、隱私與醫療界線",
+    "date": "2026-11-11",
+    "source": "https://masterofvfx2070.github.io/xray-mirror/?fbclid=IwZnRzaAVgxSJkdm10hoVoPGV4dG4DYWVtAjExAHBkb2YFc3J0YwZhcHBfaWQKNjYyODU2ODM3OQABHz1GOZD7WGGnWfivxdzO3IDSpS-h_X_kt23pNqUJ01_klknM6FZxHMrjByfz_aem_4wqlZv3AWREqplW7ZjfqBA",
+    "author": "MasterOfVFX2070",
+    "type": "article",
+    "topics": [
+      "擴增實境",
+      "解剖教育",
+      "MediaPipe",
+      "隱私安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://masterofvfx2070.github.io/xray-mirror/",
+      "https://masterofvfx2070.github.io/xray-mirror/",
+      "https://github.com/MasterOfVFX2070/xray-mirror",
+      "https://github.com/MasterOfVFX2070/xray-mirror/blob/41e241309d2a269e3740c1f013e4f13f234dbf5b/index.html"
+    ],
+    "excerpt": "這是瀏覽器中的擴增實境解剖展示：用攝影機影像與臉手追蹤，將成人頭部與手部的示意結構疊到使用者身上；不是透視或本人醫療影像，不能診斷或量測。",
+    "slug": "2026-11-11-xray-mirror-anatomy-ar",
+    "html": "articles/2026-11-11-xray-mirror-anatomy-ar.html",
+    "markdown": "articles/2026/11/2026-11-11-xray-mirror-anatomy-ar.md"
+  },
+  {
     "title": "Threads｜Obsidian CEO 的第二大腦：kepano 個人 vault 範本與安全邊界",
     "date": "2026-11-10",
     "source": "https://www.threads.com/share/BAEZma9Ltn",
