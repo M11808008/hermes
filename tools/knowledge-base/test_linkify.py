@@ -19,6 +19,7 @@ class LinkifyTests(unittest.TestCase):
         out = builder.linkify('[中文](https://example.com/中文?a=1&b=2) <script>')
         self.assertIn('href="https://example.com/中文?a=1&amp;b=2"', out)
         self.assertTrue(out.endswith('&lt;script&gt;'))
+        self.assertIn('href="https://example.com/[中文]"', builder.linkify('[食記](https://example.com/[中文])'))
     def test_list_and_paragraph(self):
         self.assertIn('>標題</a>後文', builder.mdhtml('- [標題](https://example.com/)後文'))
         self.assertIn('>標題</a>後文', builder.mdhtml('[標題](https://example.com/)後文'))
