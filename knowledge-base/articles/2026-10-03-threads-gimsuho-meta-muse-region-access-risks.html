@@ -46,18 +46,18 @@
 <p>補充來源：<a href="https://www.threads.com/share/BAIuCRBxti/" target="_blank" rel="noopener">https://www.threads.com/share/BAIuCRBxti/</a></p>
 <h2>2026-10-22 補充：Oracle「免費主機」上的 Hermes 與 Muse</h2>
 <p>Facebook Reel「一人公司研究所」以「**愛瑪仕上雲實測／Oracle 免費主機 × 24 小時 AI 夥伴**」為縮圖，描述要用羅達老師的步驟，讓 Hermes 上雲並與 Muse 成為 24 小時不關機的夥伴。影片受 Facebook 登入牆限制，未取得其實際指令、主機規格、網路設定、成本或教學連結，因此本文不重建、也不背書該流程。</p>
-<p>[Oracle 官方 Free Tier](<a href="https://www.oracle.com/cloud/free/)可確認兩個不同概念：新帳號有" target="_blank" rel="noopener">https://www.oracle.com/cloud/free/)可確認兩個不同概念：新帳號有</a> **US$300、30 天**試用 credit；另有 **Always Free** 服務。30 天後若不升級，帳號可繼續使用 Always Free 服務；若改 Pay As You Go，超出 Always Free 月額的資源會收費。這不代表任一區域、任一機型、IP、網路流量或資源保留都保證免費或可取得；應以建立當下的 OCI console 顯示與價格／配額為準。</p>
+<p><a href="https://www.oracle.com/cloud/free/" target="_blank" rel="noopener">Oracle 官方 Free Tier</a>可確認兩個不同概念：新帳號有 **US$300、30 天**試用 credit；另有 **Always Free** 服務。30 天後若不升級，帳號可繼續使用 Always Free 服務；若改 Pay As You Go，超出 Always Free 月額的資源會收費。這不代表任一區域、任一機型、IP、網路流量或資源保留都保證免費或可取得；應以建立當下的 OCI console 顯示與價格／配額為準。</p>
 <p>把自有 Hermes 部署到自己管理的 VM，可以是「長時間、自主可控」的技術選項；但它與 Meta Muse 的官方地區資格是兩件事。**不得**把 OCI 公開 IP、VPN、雲端瀏覽器或遠端桌面用作繞過 Muse 的地區、帳號、付款或身分資格限制。</p>
 <p>若未來評估自有 VM，最低安全基線應是：SSH key（不開密碼登入）、限制入站 port、OCI security list 與主機防火牆雙層控管、定期更新、備份與還原演練、日誌、資源／費用告警、祕密不寫入 repo／對話，並將公開服務入口與 agent 控制面分離。含聊天、課程或個資的資料不可因「免費主機」而直接公開暴露。</p>
 <p>補充來源：<a href="https://www.facebook.com/reel/1431941529154237" target="_blank" rel="noopener">https://www.facebook.com/reel/1431941529154237</a></p>
 <h2>2026-10-22 補充：以帳號「放水」與轉售包裝的 OCI 貼文</h2>
 <p>X 帳號 `@_ninetyhe` 的貼文宣稱 Oracle Cloud 近期較容易申請，並以 Always Free ARM 資源為賣點；同時鼓吹用非真實或替代資料／網路環境處理資格驗證，並把帳號或月付服務轉售。這已不是正常的 Free Tier 評估或自有 VM 部署，而是涉及資格規避與帳戶濫用的主張。</p>
-<p>本知識庫不保存、轉述或連結其操作做法。Oracle 官方 [Free Tier 頁面](<a href="https://www.oracle.com/cloud/free/)只可支持「新帳號有" target="_blank" rel="noopener">https://www.oracle.com/cloud/free/)只可支持「新帳號有</a> 30 天 US$300 trial credit 與 Always Free services」的公開說明；它不支持「現在很好過」「某規格必定可開」「免費資源永久保留」或任何驗證規避的結論。區域容量、機型、資格、帳戶狀態與費用均應以當下官方 console 和條款為準。</p>
+<p>本知識庫不保存、轉述或連結其操作做法。Oracle 官方 <a href="https://www.oracle.com/cloud/free/" target="_blank" rel="noopener">Free Tier 頁面</a>只可支持「新帳號有 30 天 US$300 trial credit 與 Always Free services」的公開說明；它不支持「現在很好過」「某規格必定可開」「免費資源永久保留」或任何驗證規避的結論。區域容量、機型、資格、帳戶狀態與費用均應以當下官方 console 和條款為準。</p>
 <p>不要以不實資料、規避資格驗證、多開帳戶或出售帳戶／存取權來取得雲端資源。這可能違反服務條款、帶來帳號與付款風險，也可能構成不當或詐欺性行為。若目標是長期運作自有 Hermes，應使用真實帳戶、可追溯的帳務與最小權限的正式部署，不以「薅資源」作為架構依據。</p>
 <p>補充來源：<a href="https://x.com/_ninetyhe/status/2113119446994997722" target="_blank" rel="noopener">https://x.com/_ninetyhe/status/2113119446994997722</a></p>
 <h2>2026-10-22 補充：Oracle Always Free VPS 資訊圖的可採用與修正處</h2>
 <figure><img src="../assets/source-images/2026-10-22-oracle-cloud-always-free-vps-infographic.jpg" alt="Oracle Cloud Always Free VPS 使用者提供資訊圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>使用者提供；非 Oracle 官方文件</figcaption></figure>
-<p>這張資訊圖正確提醒了幾個原則：以真實身分和有效付款方式註冊、先選擇能接受延遲的區域、建立網路與 instance 前先了解 Always Free 限制、設定成本通知，以及把 VM 基本防護做在部署應用之前。其所列 ARM、記憶體與 block storage 數字則應視為**示意／歷史配額線索**，而非保證；Oracle 官方 [Free Tier](<a href="https://www.oracle.com/cloud/free/)區分" target="_blank" rel="noopener">https://www.oracle.com/cloud/free/)區分</a> 30 天的 US$300 trial credit 與 Always Free 服務，資源規格、區域可用性、容量、public IP 條件與可能費用都以建立當下的官方 console／條款為準。</p>
+<p>這張資訊圖正確提醒了幾個原則：以真實身分和有效付款方式註冊、先選擇能接受延遲的區域、建立網路與 instance 前先了解 Always Free 限制、設定成本通知，以及把 VM 基本防護做在部署應用之前。其所列 ARM、記憶體與 block storage 數字則應視為**示意／歷史配額線索**，而非保證；Oracle 官方 <a href="https://www.oracle.com/cloud/free/" target="_blank" rel="noopener">Free Tier</a>區分 30 天的 US$300 trial credit 與 Always Free 服務，資源規格、區域可用性、容量、public IP 條件與可能費用都以建立當下的官方 console／條款為準。</p>
 <p>圖中有四點需要修正：</p>
 <ul>
 <li>**SSH 不對全網開放**：TCP 22 應只允許自己可信的固定 IP 或 VPN 範圍，採 SSH key 並停用密碼登入；不該照圖開放 `0.0.0.0/0`。</li>
@@ -67,7 +67,7 @@
 </ul>
 <p>Coolify 或 Dokku 是可評估的部署工具，不是「一鍵免費」保證。若要讓 Hermes 長時間運作，先從只開必要服務、祕密外置、備份、更新、日誌和可還原性做起；正式公開前應先以非敏感資料壓測與檢查。這也不會改變 Meta Muse 的地區與帳戶資格：自管 VM 是自己的基礎設施，不能用於繞過產品資格限制。</p>
 <h2>2026-10-22 補充：以「六個詞」理解 Muse 的社群說法</h2>
-<p>Threads 作者 [aakashg0](<a href="https://www.threads.com/@aakashg0/post/DemmDBLmrKt)把" target="_blank" rel="noopener">https://www.threads.com/@aakashg0/post/DemmDBLmrKt)把</a> Muse 濃縮成六個詞：`SOUL.md`、Goals、Chief of Staff、Approval card、Library、Connections。其白話教學值得作為理解 agent 設計的心智模型，但此處各項具體行為仍是**作者轉述**：本次未取得可逐條對照的 Meta 一手文件或登入帳戶測試，不能直接視為產品規格。</p>
+<p>Threads 作者 <a href="https://www.threads.com/@aakashg0/post/DemmDBLmrKt" target="_blank" rel="noopener">aakashg0</a>把 Muse 濃縮成六個詞：`SOUL.md`、Goals、Chief of Staff、Approval card、Library、Connections。其白話教學值得作為理解 agent 設計的心智模型，但此處各項具體行為仍是**作者轉述**：本次未取得可逐條對照的 Meta 一手文件或登入帳戶測試，不能直接視為產品規格。</p>
 <p>| 詞彙 | 作者的解讀 | 應採取的安全邊界 |</p>
 <p>|---|---|---|</p>
 <p>| `SOUL.md` | 可編輯的行為規則檔；可寫「花錢或送出前先問我」 | 將「詢問」做成硬性核准門檻；勿把密碼、token 或帳務資料寫進檔案。 |</p>

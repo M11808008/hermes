@@ -5,7 +5,7 @@
 <p>「傑森創工 - AI 科技新知」的圖文主張：可用 Ollama 的 Anthropic 相容 API，讓終端機中的 Claude Code 改接本機或 Ollama 雲端開源模型；貼文列出以下概念：</p>
 <ul>
 <li>需要 Ollama 與 Claude Code；貼文稱 Ollama 要 v0.14 以上。</li>
-<li>將 `ANTHROPIC_AUTH_TOKEN` 設為 `ollama`，並將 `ANTHROPIC_BASE_URL` 指向 `<a href="http://localhost:11434`。" target="_blank" rel="noopener">http://localhost:11434`。</a></li>
+<li>將 `ANTHROPIC_AUTH_TOKEN` 設為 `ollama`，並將 `ANTHROPIC_BASE_URL` 指向 `<a href="http://localhost:11434" target="_blank" rel="noopener">http://localhost:11434</a>`。</li>
 <li>用 `claude --model 模型名` 選取模型；圖例可見 `qwen3-coder`。</li>
 <li>貼文另提到 `ollama launch claude` 與「coding 至少約 32K context」的建議。</li>
 </ul>
@@ -16,7 +16,7 @@
 <p>export ANTHROPIC_AUTH_TOKEN=ollama  # 必填，但本機 server 會忽略</p>
 <p>export ANTHROPIC_BASE_URL=<a href="http://localhost:11434" target="_blank" rel="noopener">http://localhost:11434</a></p>
 <p>```</p>
-<p>官方也示範以模型名稱（例如 `qwen3-coder`）向本機 `<a href="http://localhost:11434/v1/messages`" target="_blank" rel="noopener">http://localhost:11434/v1/messages`</a> 發送請求。若工具依賴既有 Anthropic 模型名稱，文件提到可用 `ollama cp` 為已下載模型建立別名；這只是名稱映射，不會改變底層模型能力。</p>
+<p>官方也示範以模型名稱（例如 `qwen3-coder`）向本機 `<a href="http://localhost:11434/v1/messages" target="_blank" rel="noopener">http://localhost:11434/v1/messages</a>` 發送請求。若工具依賴既有 Anthropic 模型名稱，文件提到可用 `ollama cp` 為已下載模型建立別名；這只是名稱映射，不會改變底層模型能力。</p>
 <h2>關鍵差異：不是所有 Claude API 功能都會無縫可用</h2>
 <p>官方文件列出這個相容層的限制，導入前尤其要注意：</p>
 <ul>

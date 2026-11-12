@@ -26,7 +26,7 @@
 <li>註冊 Agnes AI 帳號。</li>
 <li>在 API 金鑰頁面建立新的 API Key。</li>
 <li>將 provider 設為 custom / OpenAI-compatible。</li>
-<li>Base URL 使用 `<a href="https://apihub.agnes-ai.com/v1`。" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1`。</a></li>
+<li>Base URL 使用 `<a href="https://apihub.agnes-ai.com/v1" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1</a>`。</li>
 <li>Model Name 使用 `agnes-2.0-flash` 或官方文件列出的模型名稱。</li>
 </ul>
 <p>對 Hermes 類 runtime 來說，Agnes AI 的意義在於可快速測試 agent 工作流：讓模型使用工具、整理網頁資料、輸出 CSV、生成圖片或觸發影片模型。文章實測 `Agnes-2.0-Flash` 可完成「到電腦王阿達網站整理當日新文章並在桌面儲存 CSV」這類工具型任務。</p>
@@ -74,7 +74,7 @@
 <h1>建議後續測試</h1>
 <p>| 測試 | 做法 | 觀察點 |</p>
 <p>|---|---|---|</p>
-<p>| Hermes Agent 基本串接 | custom provider + `<a href="https://apihub.agnes-ai.com/v1`" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1`</a> + `agnes-2.0-flash` | 是否能穩定出現在模型選單並完成一般對話 |</p>
+<p>| Hermes Agent 基本串接 | custom provider + `<a href="https://apihub.agnes-ai.com/v1" target="_blank" rel="noopener">https://apihub.agnes-ai.com/v1</a>` + `agnes-2.0-flash` | 是否能穩定出現在模型選單並完成一般對話 |</p>
 <p>| Tool calling | 讓模型整理本機資料或網頁資料 | 函式呼叫格式、錯誤修復能力、是否亂編檔案 |</p>
 <p>| Structured output | 要求固定 JSON schema | 格式遵循率與重試後成功率 |</p>
 <p>| 圖片生成 | 同 prompt 與其他模型比較 | 品質、延遲、失敗率 |</p>

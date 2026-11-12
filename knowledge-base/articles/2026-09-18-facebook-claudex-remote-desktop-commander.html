@@ -16,7 +16,7 @@
 <h2>Remote Desktop Commander：把遠端 MCP 接到實體電腦</h2>
 <p>Remote Desktop Commander 是 Desktop Commander 的 hosted remote MCP server，目前標示 beta。目標電腦需持續執行：</p>
 <p>`npx @wonderwhy-er/desktop-commander@latest remote`</p>
-<p>首次啟動會經 OAuth device flow 配對；AI 用戶端再連到 `<a href="https://mcp.desktopcommander.app/mcp`。官方" target="_blank" rel="noopener">https://mcp.desktopcommander.app/mcp`。官方</a> README 介紹 Claude.ai／Claude Desktop、Claude Code、ChatGPT、Cursor、VS Code 與 Gemini CLI 等連接方式。</p>
+<p>首次啟動會經 OAuth device flow 配對；AI 用戶端再連到 `<a href="https://mcp.desktopcommander.app/mcp" target="_blank" rel="noopener">https://mcp.desktopcommander.app/mcp</a>`。官方 README 介紹 Claude.ai／Claude Desktop、Claude Code、ChatGPT、Cursor、VS Code 與 Gemini CLI 等連接方式。</p>
 <p>可提供的能力包含讀寫／搜尋檔案、啟動與管理 terminal process、建立目錄、改寫 PDF，以及列出或關閉已配對裝置。這些操作以配對電腦的使用者權限執行，且只在 device agent 還在運行時可連線；停止 agent 或從 dashboard 撤銷裝置即可中斷存取。</p>
 <h2>為何兩者可以搭配，但不應混為一談</h2>
 <p>一種合理工作流是：用 Claudex 先把較高風險的變更計畫交由 Claude／Codex 交叉審查，再使用 Remote Desktop Commander 從手機或其他 AI App 連到指定開發機器執行後續工作。這能提升遠端工作彈性，但並不會自動降低電腦控制風險。</p>

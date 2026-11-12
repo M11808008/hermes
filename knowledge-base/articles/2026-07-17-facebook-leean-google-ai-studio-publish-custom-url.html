@@ -13,7 +13,7 @@
 <li>類型：Facebook Reel / video.other</li>
 <li>標題 / caption：AI Studio 可以直接發布網站</li>
 <li>文字：透過 Vibe coding 製作完的網頁，可以自訂網域發布在網路上，這樣就不用依賴其他平台部署了。</li>
-<li>canonical video URL：`<a href="https://www.facebook.com/bboyanlee/videos/.../1051930197805040/`" target="_blank" rel="noopener">https://www.facebook.com/bboyanlee/videos/.../1051930197805040/`</a></li>
+<li>canonical video URL：`<a href="https://www.facebook.com/bboyanlee/videos/.../1051930197805040/" target="_blank" rel="noopener">https://www.facebook.com/bboyanlee/videos/.../1051930197805040/</a>`</li>
 </ul>
 <p>---</p>
 <h2>官方文件交叉驗證</h2>
@@ -23,12 +23,12 @@
 <li>AI Studio 支援建置 web apps、full-stack runtimes、Firebase Firestore / Authentication、Google Workspace integrations 等功能。</li>
 <li>Build mode 中的 app 可分享、展示，準備好後可部署到 Cloud Run。</li>
 <li>Google AI Studio Deploying 文件說明，每次 AI Studio deployment 會建立對應的 Cloud Run service。</li>
-<li>發布時可設定 `<a href="https://your-app-name.ai.studio`" target="_blank" rel="noopener">https://your-app-name.ai.studio`</a> 這類 memorable subdomain；subdomain 全域唯一、先到先得；若取消發布或刪除 app，該 URL 會釋放。</li>
+<li>發布時可設定 `<a href="https://your-app-name.ai.studio" target="_blank" rel="noopener">https://your-app-name.ai.studio</a>` 這類 memorable subdomain；subdomain 全域唯一、先到先得；若取消發布或刪除 app，該 URL 會釋放。</li>
 </ul>
 <p>---</p>
 <h2>需要精準表述的地方</h2>
 <p>Reel 的「自訂網域」可理解為「可自訂發布網址」，但官方文件目前明確描述的是 AI Studio 發布時可設定 `ai.studio` 底下的自訂子網域，例如：</p>
-<p>`<a href="https://your-app-name.ai.studio`" target="_blank" rel="noopener">https://your-app-name.ai.studio`</a></p>
+<p>`<a href="https://your-app-name.ai.studio" target="_blank" rel="noopener">https://your-app-name.ai.studio</a>`</p>
 <p>若要綁定自己購買的裸網域或公司網域，通常會牽涉 Cloud Run / DNS / Google Cloud domain mapping 等額外設定，與 AI Studio 內建的 `ai.studio` custom URL 不是同一層能力。</p>
 <p>---</p>
 <h2>對 AI 學習雷達的保存價值</h2>

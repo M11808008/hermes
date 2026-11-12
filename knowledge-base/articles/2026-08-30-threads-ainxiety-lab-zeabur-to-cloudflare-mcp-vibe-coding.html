@@ -46,7 +46,7 @@
 </ul>
 <p>三則合起來形成一條完整脈絡：平台憑證外洩 → 使用者輪替與撤離 → 使用者重新比較 Railway / Cloudflare 等替代部署方案 → AI coding agent 降低遷移門檻。</p>
 <h2>2026-10-24 補充：從「搬得快」改為「可驗證、可回復地遷移」</h2>
-<p>新的 Threads 來源 `selfish995` 連到公開的 [Zeabur → GCP 遷移指南](<a href="https://github.com/alanfeng99/zeabur-to-gcp-guide)。指南以" target="_blank" rel="noopener">https://github.com/alanfeng99/zeabur-to-gcp-guide)。指南以</a> GCE VM + Docker Compose 為具體案例，涵蓋前台、API、背景 worker、Postgres、Redis、物件儲存、Terraform 與切換 runbook，也附上讓 AI agent 讀取的 `AGENTS.md`。它是有實作細節的社群資源，不是 Zeabur、GCP、AWS 或 Railway 的官方遷移保證。</p>
+<p>新的 Threads 來源 `selfish995` 連到公開的 <a href="https://github.com/alanfeng99/zeabur-to-gcp-guide" target="_blank" rel="noopener">Zeabur → GCP 遷移指南</a>。指南以 GCE VM + Docker Compose 為具體案例，涵蓋前台、API、背景 worker、Postgres、Redis、物件儲存、Terraform 與切換 runbook，也附上讓 AI agent 讀取的 `AGENTS.md`。它是有實作細節的社群資源，不是 Zeabur、GCP、AWS 或 Railway 的官方遷移保證。</p>
 <p>### 可確認的緊迫性與不能直接推論的部分</p>
 <p>Zeabur 官方首頁目前公告：**將於 2026-12-31 停止營運，部分服務自 12-01 起陸續停止**。因此把服務、資料與 DNS 盤點列為優先工作是合理的。但 Threads 提到 Railway 的 config 外洩，本次尚未取得 Railway 第一方事件公告，故只記錄為社群線索，不據此比較平台安全性。</p>
 <p>同樣地，指南作者提到的月費、五分鐘切換、資料零差異與零失敗，都是單一架構的經驗。大型雲端也不會自動帶來安全：IAM、service account、network、秘密管理、備份、修補、日誌與變更控制仍由團隊負責。</p>

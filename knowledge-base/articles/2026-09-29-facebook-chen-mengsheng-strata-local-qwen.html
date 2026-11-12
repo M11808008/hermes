@@ -8,7 +8,7 @@
 <li>硬體前提：README 的安裝段落要求 NVIDIA RTX 30／40／50 系列、至少 12GB VRAM、依量化版本而定的系統 RAM、約 80GB 可用磁碟空間，以及 Windows 10/11 或 Linux。SSD 能縮短首次啟動時間。</li>
 <li>64GB RAM 的意義：它能容納 README 列出的四種原始模型量化大小；其中 IQ3_S 約需 54.8GB RAM＋VRAM，且需幾乎不開其他大型程式。48GB RAM 時，README 建議只選 Q2_0 或 IQ2_XS。</li>
 <li>架構：專案解釋模型有 24,576 個 experts，每個 token 只使用其中 10 個；GPU 保留常用 experts，RAM 保存全部 experts，CPU 與 GPU 並行處理，SSD 保存大型查表資料。這是降低 GPU 記憶體需求的關鍵，但也表示 RAM、CPU、PCIe、SSD 與背景程式都會影響體驗。</li>
-<li>本機 API：服務預設在 <a href="http://127.0.0.1:8080，可提供" target="_blank" rel="noopener">http://127.0.0.1:8080，可提供</a> OpenAI 相容的 /v1 端點與 Anthropic 相容的 /v1/messages 端點。README 同時說明，若以 --host 0.0.0.0 開放給其他裝置，必須設定 API key；不應把未加防護的本機推理服務暴露到網際網路。</li>
+<li>本機 API：服務預設在 <a href="http://127.0.0.1:8080" target="_blank" rel="noopener">http://127.0.0.1:8080</a>，可提供 OpenAI 相容的 /v1 端點與 Anthropic 相容的 /v1/messages 端點。README 同時說明，若以 --host 0.0.0.0 開放給其他裝置，必須設定 API key；不應把未加防護的本機推理服務暴露到網際網路。</li>
 <li>單一請求：README 明示目前一次處理一個 request，因此較適合個人或低併發工作流，不是多使用者高吞吐服務的直接替代品。</li>
 </ul>
 <h2>速度數字要怎麼讀</h2>

@@ -8,7 +8,7 @@
 <li>本次無法取得可用逐字稿（YouTube 對擷取來源封鎖），因此未將影片內可能展示的 agent 指令、模型、權限、三個角色配置、交接規則、執行成效或費用寫成事實。</li>
 </ul>
 <h2>第一方資料：Buzz 實際是什麼？</h2>
-<p>Block 的 [GitHub repository](<a href="https://github.com/block/buzz)" target="_blank" rel="noopener">https://github.com/block/buzz)</a> 將 Buzz 定義為「人與 agent 在同一個 room 裡共同建造」的自架工作區。其 README 可直接確認：</p>
+<p>Block 的 <a href="https://github.com/block/buzz" target="_blank" rel="noopener">GitHub repository</a> 將 Buzz 定義為「人與 agent 在同一個 room 裡共同建造」的自架工作區。其 README 可直接確認：</p>
 <ul>
 <li>每個 workspace／community 由 URL 指向；在目前單 relay 設定中，relay URL 對應一個 community。</li>
 <li>訊息、反應、workflow step、review approval 與 Git event 都以 Nostr 的簽章事件記錄；人與 process 使用相同事件模型，但擁有不同 keypair／身份。</li>
@@ -16,7 +16,7 @@
 <li>專案標示 Apache-2.0 授權；導入時仍須以當前 repository 的 LICENSE 與版本為準。</li>
 </ul>
 <h2>Hostinger 的角色：提供一鍵自架的 VPS 容器環境</h2>
-<p>Hostinger 的 [Buzz 應用頁](<a href="https://www.hostinger.com/applications/buzz)" target="_blank" rel="noopener">https://www.hostinger.com/applications/buzz)</a> 把它定位為「可自架的 Nostr communication platform」，並提供預先設定的一鍵部署。該頁所述部署組合包括 Buzz relay、PostgreSQL（事件與全文搜尋）、Redis（即時 pub/sub）與 MinIO（Blossom 媒體儲存）。</p>
+<p>Hostinger 的 <a href="https://www.hostinger.com/applications/buzz" target="_blank" rel="noopener">Buzz 應用頁</a> 把它定位為「可自架的 Nostr communication platform」，並提供預先設定的一鍵部署。該頁所述部署組合包括 Buzz relay、PostgreSQL（事件與全文搜尋）、Redis（即時 pub/sub）與 MinIO（Blossom 媒體儲存）。</p>
 <p>這代表它降低了啟動基礎設施的摩擦，但仍需自行負責：</p>
 <ul>
 <li>選擇與維護 VPS 地區、費用、備份與更新節奏。</li>

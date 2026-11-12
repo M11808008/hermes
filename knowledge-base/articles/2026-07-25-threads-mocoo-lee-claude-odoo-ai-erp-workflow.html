@@ -1,7 +1,7 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Moco Lee：Claude + Odoo + Zeabur 組出低成本 AI ERP 中台的實作流程與風險邊界</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Moco Lee：Claude + Odoo + Zeabur 組出低成本 AI ERP 中台的實作流程與風險邊界</h1><p>來源是 Moco Lee（@mocoo.lee）在 Threads 分享的一串實作心得：用 Claude 協助部署與串接 Odoo，把開源 ERP 當成公司中台，再用 Claude 讀訂單、報價、採購、盤點等資料並更新系統。這則貼文的價值在於把「AI Agent + 現成 ERP」當作比從零刻系統更務實的路徑；同時也需要清楚標註 ERP、財務、庫存與權限的風險邊界。</p>
 <figure><img src="../assets/source-images/2026-07-25-threads-mocoo-lee-claude-odoo-ai-erp-workflow.jpg" alt="Moco Lee 的 Threads 作者頭像：黃色背景上的藍色摔角面具卡通角色；此貼文沒有公開主圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>Moco Lee Threads 作者頭像</figcaption></figure>
 <h1>公開 Threads 內容</h1>
-<p>Threads 可見 canonical URL 為 `<a href="https://www.threads.com/@mocoo.lee/post/DbKb2rpmvHH`，頁面擷取時主串顯示約" target="_blank" rel="noopener">https://www.threads.com/@mocoo.lee/post/DbKb2rpmvHH`，頁面擷取時主串顯示約</a> 3,704 次瀏覽。作者分享的流程大致如下：</p>
+<p>Threads 可見 canonical URL 為 `<a href="https://www.threads.com/@mocoo.lee/post/DbKb2rpmvHH" target="_blank" rel="noopener">https://www.threads.com/@mocoo.lee/post/DbKb2rpmvHH</a>`，頁面擷取時主串顯示約 3,704 次瀏覽。作者分享的流程大致如下：</p>
 <ul>
 <li>先用 Zeabur 伺服器安裝 Odoo。作者認為 Zeabur 的 AI 支援程度高，安裝 Zeabur skill 給 Claude 後，可以讓 AI 協助開伺服器與專案。</li>
 <li>讓 Zeabur 安裝 Odoo 社區版模板。作者描述過程中只要同意資料 / 權限，安裝就能完成。</li>

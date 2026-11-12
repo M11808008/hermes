@@ -1,5 +1,5 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜VisionState：把既有攝影機變成本地 Home Assistant 感測器，先處理辨識與隱私邊界</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜VisionState：把既有攝影機變成本地 Home Assistant 感測器，先處理辨識與隱私邊界</h1><figure><img src="../assets/source-images/2026-10-26-visionstate-dashboard.png" alt="VisionState Dashboard" loading="lazy" referrerpolicy="no-referrer"><figcaption>VisionState Dashboard</figcaption></figure>
-<p>AI 极客新闻分享的 [VisionState](<a href="https://github.com/oleost/VisionState)" target="_blank" rel="noopener">https://github.com/oleost/VisionState)</a> 是一個 Home Assistant add-on：把既有攝影機、RTSP／HTTP snapshot 或 ESP32-CAM 的影像，轉為可供自動化使用的感測器。官方 README 主打車庫門開關、物件與人員、以及水／瓦斯／電表讀值，並稱模型在本機 CPU 上運作。</p>
+<p>AI 极客新闻分享的 <a href="https://github.com/oleost/VisionState" target="_blank" rel="noopener">VisionState</a> 是一個 Home Assistant add-on：把既有攝影機、RTSP／HTTP snapshot 或 ESP32-CAM 的影像，轉為可供自動化使用的感測器。官方 README 主打車庫門開關、物件與人員、以及水／瓦斯／電表讀值，並稱模型在本機 CPU 上運作。</p>
 <h2>官方文件可確認的工作方式</h2>
 <p>VisionState 的架構是「攝影機畫面 → 自選區域 → 本地預訓練模型與每感測器的小型分類器 → 防抖與檢核 → MQTT → Home Assistant」。它列出三類感測器：</p>
 <ul>

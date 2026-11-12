@@ -37,7 +37,7 @@
 <p>| 模型與 provider 可切換 | Providers docs 說明可用 `hermes model` 互動切換，也可在 `.env` 設 API key；支援 Nous Portal、OpenAI Codex、Anthropic、OpenRouter、Gemini、DeepSeek、MiniMax、Ollama/OpenAI-compatible endpoint 等 | 影片中的模型串接方向成立，但各 provider 的帳號/額度需分開管理 |</p>
 <p>| 排程任務 | Cron docs 說明可用自然語言或 cron expression 建立 recurring/one-shot job，並可送回 origin chat、local files 或其他平台 | 「每日股市監控」是典型 Cron 用例，但應設定資料來源與輸出格式 |</p>
 <p>| Web 管理介面 | Web Dashboard docs 說明可用 `hermes dashboard` 在本機瀏覽器管理 config、API keys、sessions、MCP、models 等 | 桌面版與 web dashboard 都是降低 YAML/SSH 門檻的 surface |</p>
-<p>| 本地模型 | 官方 provider / custom endpoint 架構支援 OpenAI-compatible endpoints；Ollama 常見位址為 `<a href="http://127.0.0.1:11434/v1`" target="_blank" rel="noopener">http://127.0.0.1:11434/v1`</a> | 影片用 Ollama 對接本地模型合理；實際模型可用性取決於 Ollama 端模型與硬體 |</p>
+<p>| 本地模型 | 官方 provider / custom endpoint 架構支援 OpenAI-compatible endpoints；Ollama 常見位址為 `<a href="http://127.0.0.1:11434/v1" target="_blank" rel="noopener">http://127.0.0.1:11434/v1</a>` | 影片用 Ollama 對接本地模型合理；實際模型可用性取決於 Ollama 端模型與硬體 |</p>
 <h1>欒帥可直接採用的導入清單</h1>
 <p>| 目標 | 建議做法 | 注意事項 |</p>
 <p>|---|---|---|</p>
@@ -67,7 +67,7 @@
 <p>| 步驟 | 做法 |</p>
 <p>|---|---|</p>
 <p>| 1 | 安裝 Ollama 並下載模型 |</p>
-<p>| 2 | 確認 endpoint，例如 `<a href="http://127.0.0.1:11434/v1`" target="_blank" rel="noopener">http://127.0.0.1:11434/v1`</a> |</p>
+<p>| 2 | 確認 endpoint，例如 `<a href="http://127.0.0.1:11434/v1" target="_blank" rel="noopener">http://127.0.0.1:11434/v1</a>` |</p>
 <p>| 3 | 在 Hermes provider/custom endpoint 設定 base URL 與模型名稱 |</p>
 <p>| 4 | 先測純文字問答，再測工具調用與長文摘要 |</p>
 <p>| 5 | 把低風險任務交給本地模型，高價值推理仍保留雲端模型 |</p>

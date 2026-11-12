@@ -2,7 +2,7 @@
 <p>開源專案 **esp32-iphone-agent** 提出一條不依賴 Mac、開發者帳號或 jailbreak 的真機控制路徑：iPhone 透過 AirPlay 提供畫面作為 agent 的「眼睛」，ESP32-S3 以 USB HID 模擬鍵盤與滑鼠作為「手」，再由相容 OpenAI API 的視覺模型負責看圖、規劃與輸入操作。</p>
 <figure><img src="../assets/source-images/2026-10-14-github-esp32-iphone-agent-social-card.png" alt="esp32-iphone-agent 的 GitHub 專案預覽圖" loading="lazy" referrerpolicy="no-referrer"><figcaption>GitHub 專案預覽圖</figcaption></figure>
 <h2>已查核的專案資訊</h2>
-<p>GitHub repository 為 [onehumanbeing/esp32-iphone-agent](<a href="https://github.com/onehumanbeing/esp32-iphone-agent)，描述與原始貼文一致：使用約" target="_blank" rel="noopener">https://github.com/onehumanbeing/esp32-iphone-agent)，描述與原始貼文一致：使用約</a> 7 美元的 ESP32、AirPlay 畫面與 USB HID 輸入，將真實 iPhone 交給任一 OpenAI-compatible vision model 操作。擷取時專案為 Python、MIT License，約 1,930 GitHub stars、254 forks；這些數字會隨時間變動，應回到 repository 即時確認。</p>
+<p>GitHub repository 為 <a href="https://github.com/onehumanbeing/esp32-iphone-agent" target="_blank" rel="noopener">onehumanbeing/esp32-iphone-agent</a>，描述與原始貼文一致：使用約 7 美元的 ESP32、AirPlay 畫面與 USB HID 輸入，將真實 iPhone 交給任一 OpenAI-compatible vision model 操作。擷取時專案為 Python、MIT License，約 1,930 GitHub stars、254 forks；這些數字會隨時間變動，應回到 repository 即時確認。</p>
 <p>它的關鍵不在於繞過 iOS 安全模型，而是利用系統本來接受的兩種外部介面：螢幕投放與有線 HID 輸入。因此它並不等同取得 iOS 系統權限，也不應被解讀為能存取受保護內容。</p>
 <h2>工作架構：眼睛、手與大腦</h2>
 <ul>

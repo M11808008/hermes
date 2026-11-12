@@ -16,7 +16,7 @@
 <h1>它實際做什麼</h1>
 <p>README 主張 FCC 可：</p>
 <ul>
-<li>啟動 `fcc-server`，在本機提供 Admin UI，預設 log 顯示 `<a href="http://127.0.0.1:8082/admin`。" target="_blank" rel="noopener">http://127.0.0.1:8082/admin`。</a></li>
+<li>啟動 `fcc-server`，在本機提供 Admin UI，預設 log 顯示 `<a href="http://127.0.0.1:8082/admin" target="_blank" rel="noopener">http://127.0.0.1:8082/admin</a>`。</li>
 <li>透過 `fcc-claude` 啟動 Claude Code。</li>
 <li>透過 `fcc-codex` 啟動 Codex CLI。</li>
 <li>透過 `fcc-pi` 啟動 Pi。</li>
@@ -38,7 +38,7 @@
 <h2>3. 安裝指令有典型 curl pipe shell 風險</h2>
 <p>README 建議：</p>
 <p>```bash</p>
-<p>curl -fsSL &quot;<a href="https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh&quot;" target="_blank" rel="noopener">https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh&quot;</a> | sh</p>
+<p>curl -fsSL &quot;<a href="https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh</a>&quot; | sh</p>
 <p>```</p>
 <p>檢查 `install.sh` 可見它會下載 repo archive，並在缺少工具時呼叫 Claude、Codex、Pi、uv 的官方安裝腳本 URL。這類 one-liner 很方便，但在安全實務上應先下載審閱、固定 commit SHA，或至少用 `--dry-run` 查看會執行哪些步驟。</p>
 <h2>4. API key 集中管理需小心</h2>

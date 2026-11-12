@@ -6,7 +6,7 @@
 <ul>
 <li>官網標題：`Twinkle Hub — MCP service for Taiwan data`。</li>
 <li>Meta description：聚合 Taiwan data sources into a single MCP endpoint；one virtual API key；deterministic per-call billing；Taiwan-hosted；首發 data.gov.tw 52,960 datasets。</li>
-<li>MCP endpoint：`<a href="https://api.twinkleai.tw/mcp/`。" target="_blank" rel="noopener">https://api.twinkleai.tw/mcp/`。</a></li>
+<li>MCP endpoint：`<a href="https://api.twinkleai.tw/mcp/" target="_blank" rel="noopener">https://api.twinkleai.tw/mcp/</a>`。</li>
 <li>Transport：streamable-http（HTTP POST + SSE-style framed responses）。</li>
 <li>Auth：Bearer token / Twinkle Hub virtual key，從 dashboard 取得。</li>
 <li>2026-08-11 再查：首頁顯示 Free 方案每日 30 credits、每日 00:00（台北）自動回滿；進階語意搜尋與全文件取回屬即將推出的 Pro 方案。</li>
@@ -82,7 +82,7 @@
 <p>Twinkle Hub 是台灣在地 AI infrastructure 的代表案例：它把 data catalog、MCP protocol、agent skills、台灣規則工具與 pricing / API key 模型包在一起。這符合近期 AI agent 生態的方向：未來不是每個 agent 都自己寫爬蟲，而是透過可信工具層取得資料；誰能把資料整理成好用、可查、可授權、可稽核的 MCP server，誰就掌握了垂直 AI 的底層燃料。</p>
 <h1>Caveats</h1>
 <ul>
-<li>官網 `llms.txt` 宣稱程式碼在 `<a href="https://github.com/lianghsun/twinkle-hub`，但本次以" target="_blank" rel="noopener">https://github.com/lianghsun/twinkle-hub`，但本次以</a> GitHub API 查詢該 repo 回覆 404；可能是尚未公開、改名、私有或暫時不可見，需後續再查。</li>
+<li>官網 `llms.txt` 宣稱程式碼在 `<a href="https://github.com/lianghsun/twinkle-hub" target="_blank" rel="noopener">https://github.com/lianghsun/twinkle-hub</a>`，但本次以 GitHub API 查詢該 repo 回覆 404；可能是尚未公開、改名、私有或暫時不可見，需後續再查。</li>
 <li>免費額度、工具數、Pro 方案與 pricing 會變動；2026-08-11 官網顯示 Free 方案每日 30 credits，進階語意搜尋與全文件取回為即將推出的 Pro 方案。</li>
 <li>MCP endpoint 需要 Bearer token；本次未登入 dashboard，也未實際呼叫需要 auth 的 tools。</li>
 <li>資料授權 metadata 會透傳，但下游使用者仍需自行確認每筆資料的 license、更新頻率、欄位品質與可商用性。</li>

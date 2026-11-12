@@ -38,12 +38,12 @@
 <p>Modal Billing Docs 確認：所有 Workspaces are billed monthly；每個 billing cycle 結束會 auto-charge 該週期用量，扣除 credits 與 incremental usage charges 後收費；若在週期中首次超過特定 threshold，也可能在週期內自動收取 incremental usage。</p>
 <p>同一頁也確認 Modal 支援 Workspace-level 與 Environment-level spend budgets。這和 AK 的提醒一致：註冊後應先設定 Workspace Budget，避免 project、agent loop、batch job 或測試程式把 $30 credits 跑完後繼續產生費用。</p>
 <h1>Kimi 官方 API 也支援 OpenAI SDK，但 provider 邏輯不同</h1>
-<p>Kimi API Platform 官方文件確認 Kimi Open Platform 提供 OpenAI-compatible HTTP APIs，可直接使用 OpenAI SDK，將 `base_url` 設為 `<a href="https://api.moonshot.ai/v1`。Kimi" target="_blank" rel="noopener">https://api.moonshot.ai/v1`。Kimi</a> K3 Quickstart 也使用 Python OpenAI SDK：</p>
+<p>Kimi API Platform 官方文件確認 Kimi Open Platform 提供 OpenAI-compatible HTTP APIs，可直接使用 OpenAI SDK，將 `base_url` 設為 `<a href="https://api.moonshot.ai/v1" target="_blank" rel="noopener">https://api.moonshot.ai/v1</a>`。Kimi K3 Quickstart 也使用 Python OpenAI SDK：</p>
 <p>```python</p>
 <p>from openai import OpenAI</p>
 <p>client = OpenAI(</p>
 <p>    api_key=os.environ[&quot;MOONSHOT_API_KEY&quot;],</p>
-<p>    base_url=&quot;<a href="https://api.moonshot.ai/v1&quot;," target="_blank" rel="noopener">https://api.moonshot.ai/v1&quot;,</a></p>
+<p>    base_url=&quot;<a href="https://api.moonshot.ai/v1" target="_blank" rel="noopener">https://api.moonshot.ai/v1</a>&quot;,</p>
 <p>)</p>
 <p>completion = client.chat.completions.create(</p>
 <p>    model=&quot;kimi-k3&quot;,</p>

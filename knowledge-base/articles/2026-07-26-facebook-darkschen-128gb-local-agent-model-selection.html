@@ -1,7 +1,7 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Facebook｜陳盟升：128GB 全地端 Agent 系統模型選擇攻略</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Facebook｜陳盟升：128GB 全地端 Agent 系統模型選擇攻略</h1><p>來源是陳盟升（darkschen）在 Facebook 分享的「128GB 全地端 Agent 系統模型選擇攻略」。貼文描述他在 GB10 / DGX Spark 類 128GB 本機設備上，經過數個月全地端 Agent 運行後，整理出兩種主要平衡組合與一個極限方案：日常 Agent 用較快的 MoE / MTP 模型，夜間工作流用 122B 級模型，單機極限則嘗試 DeepSeek V4 Flash Q2。</p>
 <figure><img src="../assets/source-images/2026-07-26-facebook-darkschen-128gb-local-agent-model-selection.jpg" alt="陳盟升 Facebook 資訊圖：128GB 全地端 Agent 系統模型選擇攻略，分成日常 Agent、夜間 122B 工作流與 DeepSeek V4 Flash 三方案" loading="lazy" referrerpolicy="no-referrer"><figcaption>128GB 全地端 Agent 系統模型選擇攻略</figcaption></figure>
 <h1>公開 Facebook 內容</h1>
-<p>Facebook 分享連結解析後為 photo URL：`<a href="https://www.facebook.com/photo.php?fbid=1569317608163069&amp;set=a.118972106530967&amp;type=3`。頁面擷取時可見作者為陳盟升，發文約" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=1569317608163069&amp;set=a.118972106530967&amp;type=3`。頁面擷取時可見作者為陳盟升，發文約</a> 2 小時，互動約 26 個心情、1 則留言、7 次分享；這些數字會隨時間變動。</p>
+<p>Facebook 分享連結解析後為 photo URL：`<a href="https://www.facebook.com/photo.php?fbid=1569317608163069&amp;set=a.118972106530967&amp;type=3" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=1569317608163069&amp;set=a.118972106530967&amp;type=3</a>`。頁面擷取時可見作者為陳盟升，發文約 2 小時，互動約 26 個心情、1 則留言、7 次分享；這些數字會隨時間變動。</p>
 <p>貼文核心重點：</p>
 <ul>
 <li>設備是 GB10 / DGX Spark，作者認為顯存速度較慢，約等於 RTX 5060 Ti，因此優先選 MoE 模型來保證速度。</li>

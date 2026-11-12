@@ -4,7 +4,7 @@
 <p>HeyGen 首頁標題是「Free AI Video Generator: Create Stunning Videos with AI」。Meta description 寫明可從 text、image 或 audio 生成完整影片，包含 narration、captions、visuals 與 animations。首頁主視覺宣傳 Avatar V，文案是「Say hello to Avatar V, the most lifelike avatar ever made」。</p>
 <p>官網 schema 與首頁文字把 HeyGen 定位為 AI video generation platform：不用 camera、actors 或 studio，即可用 AI avatars、voiceovers 與 localization 建立訓練、行銷、簡報、社群短影音等內容。首頁的 structured data 也列出功能：AI avatars、talking photo、lip sync、text-to-speech、voice cloning、video translation/dubbing、subtitles、templates、custom avatars、team workspace、brand assets、API/integrations，以及 HD / Full HD / 4K export 等。</p>
 <h1>官方機器可讀資料</h1>
-<p>HeyGen 提供 `<a href="https://www.heygen.com/llms.txt`，其中把產品面整理成：" target="_blank" rel="noopener">https://www.heygen.com/llms.txt`，其中把產品面整理成：</a></p>
+<p>HeyGen 提供 `<a href="https://www.heygen.com/llms.txt" target="_blank" rel="noopener">https://www.heygen.com/llms.txt</a>`，其中把產品面整理成：</p>
 <ul>
 <li>Core platform：首頁、定價、Enterprise、Enterprise API。</li>
 <li>Developers &amp; API：developer portal、API reference、SDK、CLI、MCP、webhooks、examples。</li>
@@ -15,7 +15,7 @@
 <p>`/.well-known/mcp.json` 在擷取時沒有回傳公開 MCP discovery JSON，而是 Next.js 404 頁。因此本文以官方 developer MCP 文件為主，不把 `.well-known` 當成可用 discovery endpoint。</p>
 <h1>開發者與 Agentic Video 能力</h1>
 <p>HeyGen Developers 頁面標題是「HeyGen Developers - AI Video API for Developers」。官方描述：可用 API 建立 avatar videos、translations 與 interactive sessions；從一支影片到 thousands of videos 的 HeyGen Cloud 批次化生產，並支援 `/videos`、`/avatars`、`/voices`、`/video-agents`、`/video-translations`、`/lipsyncs` 等 API 族群。</p>
-<p>Quick Start 文件確認 API base URL 是 `<a href="https://api.heygen.com`，驗證使用" target="_blank" rel="noopener">https://api.heygen.com`，驗證使用</a> `X-Api-Key` header。第一次產生影片的建議路徑是呼叫 `POST /v3/video-agents`，由 Video Agent 根據 prompt 處理腳本、avatar、voice 與 render。</p>
+<p>Quick Start 文件確認 API base URL 是 `<a href="https://api.heygen.com" target="_blank" rel="noopener">https://api.heygen.com</a>`，驗證使用 `X-Api-Key` header。第一次產生影片的建議路徑是呼叫 `POST /v3/video-agents`，由 Video Agent 根據 prompt 處理腳本、avatar、voice 與 render。</p>
 <p>開發者 `llms.txt` 對 agent workflow 給出很清楚的 auth ladder：</p>
 <ul>
 <li>若環境已有 `mcp__heygen__*` tools，先用 Remote MCP OAuth。</li>
@@ -23,7 +23,7 @@
 <li>原始 API 呼叫需 `HEYGEN_API_KEY` / `X-Api-Key`，適合 production、batch 與可重複流程。</li>
 <li>OAuth / MCP 適合初次小規模測試，會消耗使用者既有 HeyGen plan credits；大規模或正式流量應改 API key。</li>
 </ul>
-<p>MCP Overview 文件確認遠端 MCP endpoint 是 `<a href="https://mcp.heygen.com/mcp/v1/`，透過" target="_blank" rel="noopener">https://mcp.heygen.com/mcp/v1/`，透過</a> OAuth 連接，無需本機 server 或 API key。文件列出的 MCP tools 包含 Video Agent、avatar / voice / translation / lipsync 等方向；本文未登入 HeyGen 帳號，也未執行 runtime generation，所以只歸檔文件層級能力。</p>
+<p>MCP Overview 文件確認遠端 MCP endpoint 是 `<a href="https://mcp.heygen.com/mcp/v1/" target="_blank" rel="noopener">https://mcp.heygen.com/mcp/v1/</a>`，透過 OAuth 連接，無需本機 server 或 API key。文件列出的 MCP tools 包含 Video Agent、avatar / voice / translation / lipsync 等方向；本文未登入 HeyGen 帳號，也未執行 runtime generation，所以只歸檔文件層級能力。</p>
 <h1>定價與成本邊界</h1>
 <p>一般 pricing 頁面宣稱可從 Free $0/mo 開始，適合個人、創作者、團隊與企業。頁面 FAQ 表示 free plan 每月最多 3 支影片，付費 Creator plan 起價 $29/mo，Pro 起價 $49/mo；信用額度會依功能消耗。</p>
 <p>開發者 self-serve API pricing 文件則是另一套 API tier / Pay-As-You-Go wallet：API key 驗證時會從 prepaid USD wallet 扣款。擷取時文件列出範例價格：</p>
