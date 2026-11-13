@@ -1,5 +1,32 @@
 [
   {
+    "title": "Instagram｜用臉部脈搏抓 Deepfake？rPPG 的原理與判讀限制",
+    "date": "2026-11-13",
+    "source": "Instagram",
+    "author": "davidafterwork、daweimarketing",
+    "type": "social-post",
+    "topics": [
+      "Deepfake",
+      "rPPG",
+      "AI安全",
+      "防詐"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/Dfleq8pvkK5/",
+      "https://www.instagram.com/davidafterwork/reel/Dfleq8pvkK5/",
+      "https://www.instagram.com/reel/Dfleq8pvkK5/",
+      "https://link.springer.com/chapter/10.1007/978-3-031-43153-1_20",
+      "https://doi.org/10.1109/TPAMI.2020.3009287"
+    ],
+    "excerpt": "![原創概念圖：臉部、脈搏與不可作為真偽證明](/hermes/knowledge-base/assets/source-images/rppg-deepfake-concept.svg) *原創概念示意圖，並非原影片截圖或實際檢測介面。* ## 貼文內容與取得範圍 2026-11-10 的 Instagram Ree",
+    "slug": "2026-11-13-instagram-rppg-deepfake-detection",
+    "html": "articles/2026-11-13-instagram-rppg-deepfake-detection.html",
+    "markdown": "articles/2026/11/2026-11-13-instagram-rppg-deepfake-detection.md"
+  },
+  {
     "title": "學術研究者 AI 工作區｜ChatGPT Academic Researchers 與 Claude 科學家 Team 計畫查證",
     "date": "2026-11-11",
     "source": "https://www.threads.com/@vet.cytology.tw/post/DflcG1kID9z",
