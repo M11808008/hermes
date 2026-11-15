@@ -1,5 +1,30 @@
 [
   {
+    "title": "HermesWatcher 精選九個 Agent 延伸應用：用途與安裝前查核",
+    "date": "2026-11-15",
+    "source": "https://x.com/HermesWatcher/status/2121800406322078018",
+    "author": "Hermes Release Watch（@HermesWatcher）",
+    "type": "article",
+    "topics": [
+      "Hermes Agent",
+      "Plugin",
+      "AI Agent",
+      "自動化"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://x.com/HermesWatcher/status/2121800406322078018",
+      "https://hermeswatcher.com/",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/skills"
+    ],
+    "excerpt": "## 貼文重點 2026-11-15，非官方 Hermes Release Watch 選出九項 Hermes 延伸應用，鼓勵挑一項週末嘗試。以下功能為貼文及原圖的描述，並非本次獨立實測： - Phone Harness：操作 iPhone 或 Android。 - Home Assistant：連接智慧家庭。 - H",
+    "slug": "2026-11-15-hermeswatcher-nine-plugins",
+    "html": "articles/2026-11-15-hermeswatcher-nine-plugins.html",
+    "markdown": "articles/2026/11/2026-11-15-hermeswatcher-nine-plugins.md"
+  },
+  {
     "title": "Instagram｜用臉部脈搏抓 Deepfake？rPPG 的原理與判讀限制",
     "date": "2026-11-13",
     "source": "Instagram",
