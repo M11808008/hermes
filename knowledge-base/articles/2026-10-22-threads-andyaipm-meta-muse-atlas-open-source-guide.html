@@ -1,4 +1,19 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Meta Muse Atlas 中文開源手冊｜28 章、任務模板與安全邊界的查核</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Meta Muse Atlas 中文開源手冊｜28 章、任務模板與安全邊界的查核</h1><figure><img src="../assets/source-images/2026-10-22-aipmandy-muse-guide-cover.svg" alt="Muse Atlas 中文開源手冊封面" loading="lazy" referrerpolicy="no-referrer"><figcaption>Muse Atlas 專案封面</figcaption></figure>
+<h2>2026-11-17 補充：MuseAI-Skills 與 wide-research</h2>
+<p>Threads 帳號 dailyaionly 推薦另一個由 win4r 發布的 MuseAI-Skills 非官方快照，稱有 68 項技能，wide-research 可拆分來源、逐一檢查並列出失敗，並聲稱找免費 VPS 省了數小時；這是分享者的個人經驗，未提供可重複測試，不代表保證省時或找到可用服務。它不是本篇原有 AIPMAndy 手冊，授權亦不可混同。</p>
+<p>本次固定查核 commit e222ba4391b6270ba394cd2b8c3809ff959ab609：README 自述為非官方文件和執行環境部分快照，並非完整原始碼或一鍵可部署套件，也未獨立驗證材料來源。Git 樹統計 opt/hatch/skills 下有 68 個直屬實體目錄；遞迴 SKILL.md 有 72 條，其中 68 個一般檔案、4 個符號連結別名。這是不同口徑，不能將 72 條均稱獨立技能。spaces 無頂層 SKILL.md，artifacts 的多個技能則在子目錄。</p>
+<p>wide-research 的實際文本要求單一 manager 協調，輸入先去重正規化、每個獨立項目交一個 worker，採共同 schema，回傳 total、success_count、failure_count、results、failures、notes；必要且可行時失敗項重試一次，最後報覆蓋率與缺口。文件也寫開始時立即通知、不等待完成；這是原環境的工作流程指令，不保證其他 agent 的工具支援非同步、背景執行或相同委派層級。單一項目或互相依賴的任務不適用。文件本身沒有保證自動查證每個來源、成果正確或省時；本次未安裝、未執行該專案或技能，未測 VPS、成功率或成本。</p>
+<p>授權界線：固定 commit 根目錄沒有 LICENSE（直接查詢為 404）；README 明言未提供涵蓋全部快照的統一開源授權。npm 及依賴子目錄有各自 LICENSE，不等於整個專案獲其授權；不得將本篇 Muse Atlas 的 MIT 授權套到此快照。複製 Markdown 也不會自動取得工具、連接器或權限；工作流涉及網路、外部資料和 worker 成本，採用前須人工審核指令、最小權限及資料外傳風險。</p>
+<p>來源：</p>
+<ul>
+<li>分享連結：<a href="https://www.threads.com/share/BAPa1-Csnc" target="_blank" rel="noopener">https://www.threads.com/share/BAPa1-Csnc</a></li>
+<li>原帖：<a href="https://www.threads.com/@dailyaionly/post/DfzJCNniqqG" target="_blank" rel="noopener">https://www.threads.com/@dailyaionly/post/DfzJCNniqqG</a></li>
+<li>固定版本 README：<a href="https://github.com/win4r/MuseAI-Skills/blob/e222ba4391b6270ba394cd2b8c3809ff959ab609/README.md" target="_blank" rel="noopener">https://github.com/win4r/MuseAI-Skills/blob/e222ba4391b6270ba394cd2b8c3809ff959ab609/README.md</a></li>
+<li>固定版本 Git 樹：<a href="https://api.github.com/repos/win4r/MuseAI-Skills/git/trees/e222ba4391b6270ba394cd2b8c3809ff959ab609?recursive=1" target="_blank" rel="noopener">https://api.github.com/repos/win4r/MuseAI-Skills/git/trees/e222ba4391b6270ba394cd2b8c3809ff959ab609?recursive=1</a></li>
+<li>wide-research 原文：<a href="https://github.com/win4r/MuseAI-Skills/blob/e222ba4391b6270ba394cd2b8c3809ff959ab609/opt/hatch/skills/wide-research/SKILL.md" target="_blank" rel="noopener">https://github.com/win4r/MuseAI-Skills/blob/e222ba4391b6270ba394cd2b8c3809ff959ab609/opt/hatch/skills/wide-research/SKILL.md</a></li>
+<li>子套件授權例：<a href="https://github.com/win4r/MuseAI-Skills/blob/e222ba4391b6270ba394cd2b8c3809ff959ab609/opt/hatch-image/bin/npm-package/LICENSE" target="_blank" rel="noopener">https://github.com/win4r/MuseAI-Skills/blob/e222ba4391b6270ba394cd2b8c3809ff959ab609/opt/hatch-image/bin/npm-package/LICENSE</a></li>
+</ul>
+<p>圖片檢查：原帖可見 GitHub 自動連結預覽與頭像，未辨識到獨立上傳圖片；登入遮罩使未載入素材不能完全排除。未將預覽圖或頭像冒充原帖圖，未保存或公開圖片。公開素材的再利用授權未確認。</p>
 <h2>一句話摘要</h2>
 <p>這是一份把「怎麼交辦 agent」拆成任務規格、權限、證據、驗收與復盤的繁中／中文資源；它有實際可檢視的 repo 和安全文件，值得當作**方法論參考**，但不能因為教材完整就推定 Meta Muse 已在所有地區、帳戶與平台可用。</p>
 <h2>這次可公開核對到什麼？</h2>
