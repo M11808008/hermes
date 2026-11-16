@@ -1,5 +1,32 @@
 [
   {
+    "title": "Threads｜MuseBubbleWin：非官方 Windows 懸浮視窗、授權與安全查核",
+    "date": "2026-11-17",
+    "source": "Threads",
+    "author": "Ian P（@baliboyish）",
+    "type": "social-archive",
+    "topics": [
+      "Muse",
+      "Windows",
+      "GitHub",
+      "隱私安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAbYvMhtSj",
+      "https://www.threads.com/@baliboyish/post/Dfz0RHlkh4H",
+      "https://github.com/baliboyish/MuseBubbleWin",
+      "https://github.com/baliboyish/MuseBubbleWin/releases/tag/v0.7.0",
+      "https://muse.ai/"
+    ],
+    "excerpt": "MuseBubbleWin 是獨立社群開發的 Windows WebView2 懸浮視窗，並非 Muse 官方程式；開源授權不等於服務免費或程式安全已獲驗證。",
+    "slug": "2026-11-17-threads-baliboyish-musebubblewin-windows",
+    "html": "articles/2026-11-17-threads-baliboyish-musebubblewin-windows.html",
+    "markdown": "articles/2026/11/2026-11-17-threads-baliboyish-musebubblewin-windows.md"
+  },
+  {
     "title": "Gemini 登上 Apple CarPlay：台灣、設定與個人化限制查核",
     "date": "2026-11-16",
     "source": "https://www.threads.com/@dada3c.tw/post/DfyetHFnZ6O",
