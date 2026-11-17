@@ -27,6 +27,32 @@
     "markdown": "articles/2026/11/2026-11-17-threads-baliboyish-musebubblewin-windows.md"
   },
   {
+    "title": "數位時代｜Gemini Notebook 把資料變互動網站：HYROX 實測與官方查核",
+    "date": "2026-11-17",
+    "source": "數位時代",
+    "author": "黃若彤",
+    "type": "article",
+    "topics": [
+      "AI學習雷達",
+      "Google",
+      "Gemini Notebook",
+      "NotebookLM",
+      "互動網站",
+      "教學"
+    ],
+    "use": [],
+    "importance": "high",
+    "status": "archived",
+    "links": [
+      "https://www.bnext.com.tw/article/93090/gemini-notebook-interactive-sites-hyrox?utm_source=Facebook&utm_medium=text_post&fbclid=IwZnRzaAVpbftleHRuA2FlbQIxMQBwZG9mBWZkaWQWUSbhXkJ-QH-1TgvSrf5gQZW0_ftsgXNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR9PNDY8jhM82rho9znbE21iwPI52vmas1pGncc_o2sJQ-Ro1mtLmA4Ekb7ZVw_aem_kNEKICqrYzgSn1DHZR0f-w",
+      "https://www.bnext.com.tw/article/93090/gemini-notebook-interactive-sites-hyrox"
+    ],
+    "excerpt": "Google 宣布 Gemini Notebook 可根據筆記本來源生成互動網站；《數位時代》以 HYROX 訓練資料示範繁體中文網頁，展示關卡切換與 HTML 下載。這是媒體個案，不代表每次生成均相同或內容自動正確。",
+    "slug": "2026-11-17-bnext-gemini-notebook-interactive-sites-hyrox",
+    "html": "articles/2026-11-17-bnext-gemini-notebook-interactive-sites-hyrox.html",
+    "markdown": "articles/2026/11/2026-11-17-bnext-gemini-notebook-interactive-sites-hyrox.md"
+  },
+  {
     "title": "Gemini 登上 Apple CarPlay：台灣、設定與個人化限制查核",
     "date": "2026-11-16",
     "source": "https://www.threads.com/@dada3c.tw/post/DfyetHFnZ6O",
