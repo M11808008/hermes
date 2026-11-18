@@ -1,5 +1,29 @@
 [
   {
+    "title": "Nod｜n8n 團隊的個人 AI Agent 與自動化：公開教學來源整理",
+    "date": "2026-11-18",
+    "source": "Facebook / n8n 官方",
+    "author": "",
+    "type": "article",
+    "topics": [
+      "Nod",
+      "n8n",
+      "AI Agent",
+      "Automation"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1Hkgi854xt/?mibextid=wwXIfr",
+      "https://www.facebook.com/groups/n8ngroups/posts/1662856575391937/?mibextid=wwXIfr"
+    ],
+    "excerpt": "Nod 是 n8n 團隊開發的獨立個人代理程式；社群分享示範連接資料與 n8n 的工作流程，官方則明列研究預覽、模型費用、資料流及安全邊界。",
+    "slug": "2026-11-18-n8n-nod-personal-agent-facebook",
+    "html": "articles/2026-11-18-n8n-nod-personal-agent-facebook.html",
+    "markdown": "articles/2026/11/2026-11-18-n8n-nod-personal-agent-facebook.md"
+  },
+  {
     "title": "Threads｜MuseBubbleWin：非官方 Windows 懸浮視窗、授權與安全查核",
     "date": "2026-11-17",
     "source": "Threads",
