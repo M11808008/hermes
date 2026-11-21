@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Threads｜Cloudhaven 棉花雲天空之城：平面配置與多 Agent 3D 建模</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="wrap"><div class="layout"><article class="article"><h1>Threads｜Cloudhaven 棉花雲天空之城：平面配置與多 Agent 3D 建模</h1><h2>一句話摘要</h2><p>Luka 分享以公尺配置統一多 Agent 分工、共用材質與迭代建模的 Three.js 浮島案例；已保存四則留言串接的建模提示詞，附件與影片提示詞未取得。</p><h2>方法與限制</h2><p>Luka（@luka_cc_haha）分享的作法是先畫平面圖，作為多個 agent 的共同配置，再依物件分工、集中共用材質，參照設計稿多次迭代模型。這是作者的個案與主張，並非本次實測結果。</p><p>重點是把位置、尺寸、光源及鏡位當作共同契約，先驗收品質樣板，再擴大施工；畫面與近景要比較差異、實際修改及重拍。作者提示使用座標東 +X、南 +Z、上 +Y，尺寸順序為 [X寬,Z深,Y高]，不可直接視為 Three.js BoxGeometry 的 width、height、depth。</p><p>原文參照的 actual-scene.png、actual-detail.png、layout-resolved.json 與可能提供的 layout-source.mjs 均未取得；影片製作另用提示詞亦未取得。不能據此聲稱重現原作或驗證影片效果。兩段主帖影片未完整觀看或逐格檢驗，未擷取圖片；續文可能仍有未載入內容。Three.js 與 Vite 版本為作者提示所載，版本端點可查不代表實際執行。</p><h2>作者建模提示詞（四則可見留言串接）</h2><p>以下按可見順序連接，精確分段及是否有未載入續文未確認；僅為引用，未執行。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere">可愛天空之城
+
+請直接在目前可寫入的工作目錄建立一個可執行、可編輯的 Three.js 3D 場景專案，完成實際程式與本機預覽。這是建模與場景實作任務，交付真正的三維幾何。
+
+參考附件分工：actual-scene.png是現有3D全景成果，actual-detail.png是細節比對；layout-resolved.json是既有公尺配置。先讀圖片和JSON再建模；若提供layout-source.mjs原始快照，也一併讀取，只有JSON時已足以提供配置。若缺圖片或配置，依下方文字做近似重建並清楚記錄缺少項目，不能聲稱完全重現。
+
+工具：原專案使用Three.js 0.186.1、Vite 8.3.4。重建時記錄並鎖定實際依賴版本，另建自己的package.json與安裝環境，禁止引用作者電腦的絕對路徑或node_modules符號連結。需截圖時可用可用的本機瀏覽器；工具無法執行就明確回報限制。
+
+工作順序：
+1. 先確認主題、素材模式與附件；把現有配置保留為唯一座標來源，畫有公尺標註的平面圖，列設施中心、底部Y、尺寸、方向、門口、道路淨空、橋端、光源與鏡位。新增資料也回寫同一配置。
+2. 先做下方指定的一個品質樣板，實際渲染全貌和近景；確認輪廓、厚度、窗內深度、材質與光向後才擴城。
+3. 分區施工，共用layout與materials。可用多agent時，依可用名額拆互不重疊檔案，整合者管理共用檔案與依序GPU截圖；只有單agent也照相同步驟分批完成。先主量體，再結構／功能，再生活道具與表面細節。
+4. 每區留俯視、人物眼高及近景，與附件相近鏡位比對。列出「特徵→目前差異→具體修正→新截圖」，優先修最大三項。不是只寫修正建議，要實作並重拍；尚未做到的部分列明。
+5. 交互動預覽、源碼、啟動說明、配置、平面圖、全景／近景截圖及已知差異。支援拖曳旋轉、縮放、固定鏡位、暫停和乾淨畫面輸出。先完成場景與靜幀，影片依另外的提示製作。
+
+座標和動態：東+X、南+Z、上+Y，1單位=1公尺。常見配置的at是底部中心、size順序是[X寬,Z深,Y高]；舊schema以附件為準。
+
+不要把size直接當BoxGeometry的XYZ。隨機只在建置時以固定seed決定，update(t)從絕對時間求狀態；同一鏡位做A→B→A跳時比對。相同seed只約束相同生成程式，不等於不同程式會長成相同幾何。
+
+品質：真實厚度、接縫、倒角、支架、透視與接地；室內不做不透明窗貼片。全景與近景使用同一世界光源，反射來源與材質模式照主題要求。保留近景英雄物件，重複小物可實例化；任何畫質縮減都明示。生成參考圖不能當作實際3D完成截圖。
+
+下方為本次城市的固定設計條件：
+請建立「Cloudhaven／棉花雲天空之城」：可愛而精工的原創浮島小鎮，奶油白灰泥、珊瑚陶瓦、薄荷氧化銅屋頂、少量金飾、青綠池水，鼠尾草綠與粉色植栽。目標是有生活細節的童話微縮建築。
+
+基地150×120公尺、seed=20261023；主光方位220°、仰角25°。主島中心[0,0,0]、半徑29公尺、岩壁深30公尺；麵包島[-44,-3,19]、半徑12公尺；風車島[40,5,-22]、半徑12公尺；花園島[-34,6,-38]、半徑7公尺。保持附件全部標高、橋端及尺寸。
+
+主島放奶油鐘塔（約25.6公尺高）、薄荷圓頂市民館、六間不同的小屋、廣場、噴泉與蜿蜒石板小路。低處麵包島有珊瑚屋頂麵包店、戶外咖啡座、條紋棚、小桌椅、花盆；高處風車島有奶油風車、薄荷錐頂及四片木帆。兩座象牙石拱橋、青銅欄杆分別連接主島；另有木棧碼頭、小飛艇和少量遠景熱氣球。
+
+浮島下部是連續凸起、向下收束的厚岩層，白堊／石灰岩風化色、垂藤、根系和苔蘚；避免薄刃岩片與整齊倒錐。青綠池水從島邊落成完整瀑布，水面、崖頂、落差和水霧互相連續。
+
+建築有深窗、窗簾、花箱、煙囪、真瓦片搭接與可讀的屋簷厚度；薄荷銅屋頂使用立邊接縫，木紋沿木件長軸。鋪面採低對比石灰岩、錯縫和小倒角。植栽有分枝、葉叢大小與疏密差異。兩橋採連續拱體，兩端步面對齊島嶼，不能用旋轉錯亂石塊充當拱橋。
+
+雲海使用程序密度與體積渲染，有不規則雲瓣、冷暖散射及疏密空隙；不要用棉球堆滿畫面。模型、材質、雲海均程序生成；概念參考圖不進正式場景，沒有下載模型、材質圖或HDRI。
+
+先完成主島鐘塔＋一間小屋品質樣板，再做麵包島、風車和雲海。相機至少有全景、麵包咖啡座、廣場、風車、瀑布及俯視。</pre><h2>來源</h2><p><a href="https://www.threads.com/@luka_cc_haha/post/De4My6CiY5k" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4My6CiY5k</a></p><p><a href="https://www.threads.com/@luka_cc_haha/post/De4NAjZCbab" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4NAjZCbab</a></p><p><a href="https://www.threads.com/@luka_cc_haha/post/De4NAk5iSzG" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4NAk5iSzG</a></p><p><a href="https://www.threads.com/@luka_cc_haha/post/De4NAlSCS1E" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4NAlSCS1E</a></p><p><a href="https://www.threads.com/@luka_cc_haha/post/De4NAhyicOp" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4NAhyicOp</a></p><p><a href="https://raw.githubusercontent.com/mrdoob/three.js/dev/src/geometries/BoxGeometry.js" rel="noopener">https://raw.githubusercontent.com/mrdoob/three.js/dev/src/geometries/BoxGeometry.js</a></p></article><aside class="side"><p><a href="../index.html">← 回首頁</a></p><div class="meta">2026-10-24 · Threads · article</div><h3>標籤</h3><span class="tag">Three.js</span><span class="tag">AI Agent</span><span class="tag">3D 場景</span><h3>原始連結</h3><p><a href="https://www.threads.com/@luka_cc_haha/post/De4My6CiY5k" target="_blank" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4My6CiY5k</a></p><p><a href="https://www.threads.com/@luka_cc_haha/post/De4NAjZCbab" target="_blank" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4NAjZCbab</a></p><p><a href="https://www.threads.com/@luka_cc_haha/post/De4NAk5iSzG" target="_blank" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4NAk5iSzG</a></p><p><a href="https://www.threads.com/@luka_cc_haha/post/De4NAlSCS1E" target="_blank" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4NAlSCS1E</a></p><p><a href="https://www.threads.com/@luka_cc_haha/post/De4NAhyicOp" target="_blank" rel="noopener">https://www.threads.com/@luka_cc_haha/post/De4NAhyicOp</a></p></aside></div><div class="footer">Luarn-Pin Knowledge Base · Generated by Hermes Agent</div></div></body></html>

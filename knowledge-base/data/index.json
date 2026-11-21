@@ -1725,6 +1725,32 @@
     "markdown": "articles/2026/10/2026-10-24-threads-eleven-realtime-mini-max-voice-agent.md"
   },
   {
+    "title": "Threads｜Cloudhaven 棉花雲天空之城：平面配置與多 Agent 3D 建模",
+    "date": "2026-10-24",
+    "source": "Threads",
+    "author": "Luka (@luka_cc_haha)",
+    "type": "article",
+    "topics": [
+      "Three.js",
+      "AI Agent",
+      "3D 場景"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/@luka_cc_haha/post/De4My6CiY5k",
+      "https://www.threads.com/@luka_cc_haha/post/De4NAjZCbab",
+      "https://www.threads.com/@luka_cc_haha/post/De4NAk5iSzG",
+      "https://www.threads.com/@luka_cc_haha/post/De4NAlSCS1E",
+      "https://www.threads.com/@luka_cc_haha/post/De4NAhyicOp"
+    ],
+    "excerpt": "Luka 分享以公尺配置統一多 Agent 分工、共用材質與迭代建模的 Three.js 浮島案例；已保存四則留言串接的建模提示詞，附件與影片提示詞未取得。",
+    "slug": "2026-10-24-threads-luka-cloudhaven-threejs-multi-agent",
+    "html": "articles/2026-10-24-threads-luka-cloudhaven-threejs-multi-agent.html",
+    "markdown": "articles/2026/10/2026-10-24-threads-luka-cloudhaven-threejs-multi-agent.md"
+  },
+  {
     "title": "Instagram Agent Skill｜13 個 Claude 社群內容技能，保留人工發布的工作流",
     "date": "2026-10-23",
     "source": "https://www.instagram.com/reel/De1WH2Vy79A/?obrf=b2VxZGlsc252azM3",
