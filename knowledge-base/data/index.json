@@ -1,5 +1,30 @@
 [
   {
+    "title": "Threads｜SimuLab 與 Anatomy：互動式工程實驗室構想",
+    "date": "2026-11-21",
+    "source": "Threads",
+    "author": "ethansavemoneydairy",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "Claude Skill"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAXOuWujHw",
+      "https://www.threads.com/@ethansavemoneydairy/post/Df83Ar_APXp",
+      "https://github.com/ecapri-dev/simulab-skill",
+      "https://github.com/wheresryan22/anatomy",
+      "https://robotips.app/"
+    ],
+    "excerpt": "Threads 作者介紹 SimuLab 的互動實驗室，並構想結合 Anatomy 的等角結構圖，用於可操作、可觀察數據的工程教學；這是設計構想，並非已驗證的整合成果。",
+    "slug": "2026-11-21-threads-simulab-anatomy-interactive-labs",
+    "html": "articles/2026-11-21-threads-simulab-anatomy-interactive-labs.html",
+    "markdown": "articles/2026/11/2026-11-21-threads-simulab-anatomy-interactive-labs.md"
+  },
+  {
     "title": "Threads｜迷幻空間與翻轉世界：50 組電影劇照提示詞",
     "date": "2026-11-20",
     "source": "Threads",
