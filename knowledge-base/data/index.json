@@ -1,5 +1,36 @@
 [
   {
+    "title": "Threads｜阿凱老師教育工具與 AIsland：從教師需求到 AI 協作",
+    "date": "2026-11-21",
+    "source": "Threads",
+    "author": "阿凱老師（@18888kkkkkk）；T+ Studio（@tplusstudio.tw）",
+    "type": "article",
+    "topics": [
+      "教學",
+      "AI工具",
+      "隱私",
+      "Claude Code"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAbJBOkdnZ",
+      "https://www.threads.com/@tplusstudio.tw/post/Df_IrPMkalf",
+      "https://www.threads.com/@18888kkkkkk/post/Df_AfHyj7sf",
+      "https://www.threads.com/@18888kkkkkk/post/Df_Afthj-TZ",
+      "https://cagoooo.github.io/Akai/",
+      "https://cagoooo.github.io/class/",
+      "https://cagoooo.github.io/counseling/",
+      "https://cagoooo.github.io/Akai/wish/",
+      "https://aisland.tw/"
+    ],
+    "excerpt": "阿凱老師用 Claude Code 回應老師的現場需求；T+ Studio 轉貼後邀請其工具集加入 AIsland 展示。137 款與免費是查核當日工具集首頁的宣稱，免登入及學生資料安全則須逐項確認。",
+    "slug": "2026-11-21-threads-akai-teacher-tools-aisland",
+    "html": "articles/2026-11-21-threads-akai-teacher-tools-aisland.html",
+    "markdown": "articles/2026/11/2026-11-21-threads-akai-teacher-tools-aisland.md"
+  },
+  {
     "title": "Threads｜SimuLab 與 Anatomy：互動式工程實驗室構想",
     "date": "2026-11-21",
     "source": "Threads",
