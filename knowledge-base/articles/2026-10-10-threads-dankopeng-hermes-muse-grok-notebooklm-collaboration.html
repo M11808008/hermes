@@ -28,6 +28,21 @@
 <li>記錄模型／工具版本、訂閱費、額外 API 或雲端執行成本。</li>
 <li>先以 30–60 秒樣片驗證腳本、旁白、字幕與畫面，再擴大到完整影片。</li>
 </ul>
+<h2>2026-11-22 補充：aki.survival 的 Muse → Gemini 與 NotebookLM 工作流</h2>
+<p>另一作者 aki.survival 分享不同的多 Agent 實例：據其本人描述，Muse 透過 Gemini API 交辦影片分析及語音生成，透過 NotebookLM MCP 建立與填入知識庫，並以 Gmail Hub 接收其他 AI 的結果。這是作者自述，不代表上述 dankopeng 案例使用相同配置；公開內容未揭露連接器實作、程式碼、完整設定、模型精確 ID 或執行紀錄，無法核實實際整合及可靠性。</p>
+<p>作者稱一次分析 10 分鐘影片約 55,000 tokens、生成約 30 秒粵語 WAV，並稱當時 TTS 每日 10 次、Antigravity 每日 100 次；這些是單一帳號與時間點的觀察，並非一般保證。作者另提其 Gemini 3.x 免費 Search Grounding 額度為零，建議耗時工作非同步及避免同時派單；是否支援非同步，須以實際介面為準。作者未公開完整可複製提示詞或可重現的連接配置，不可將摘要冒充原始指令。</p>
+<p>Google 官方文件於 2026-11-22 查核：Gemini 3.1 Flash-Lite 的 API 免費層列有免費輸入、輸出，但 Google Search Grounding 免費層不提供；AI Studio 可供測試不等同免費 API 支援。Google 表示限額按專案而非金鑰、按模型及方案而異，日額依太平洋時間午夜重置，實際額度須看帳戶；無法由影片 token 或作者數字推定所有人的額度。台灣列於 Google AI Studio 和 Gemini API 支援地區；香港未列在該清單，這不代表 Muse 或其他 Google 產品全部不可用，也不能推定個人資格。</p>
+<p>依 Google API 條款，非付費服務的輸入及輸出可能用於產品和模型改進，人工審查前會與帳號、金鑰和專案解除關聯；不應提交敏感、機密或個人資料。已啟用 Cloud Billing 與特定地區另有不同資料條款，不等於零保留；Google 搜尋接地另有 30 天留存規則。Gmail、NotebookLM、Muse 和第三方 MCP 各有獨立權限與政策，需逐一核對；郵件與寫入操作保留人工核准，勿將金鑰貼到聊天或公開文件。</p>
+<p>原帖圖片是作者 AI 內容圖卡，顯示三條接駁線及四項作者聲稱的能力；已檢視可取得的 1086×1448 公開壓縮圖，未見明顯個資或憑證；重用授權未確認。圖卡不是實際接通紀錄。本次未安裝、設定、登入、取得金鑰、授權或實測。</p>
+<figure><img src="../assets/source-images/2026-11-22-aki-muse-gemini.jpg" alt="作者的 Muse 與 Gemini 多工具工作流圖卡，重用授權未確認" loading="lazy" referrerpolicy="no-referrer"><figcaption>作者的 Muse 與 Gemini 多工具工作流圖卡，重用授權未確認</figcaption></figure>
+<p>原帖：<a href="https://www.threads.com/@aki.survival/post/DgCaj_ZkTk2" target="_blank" rel="noopener">https://www.threads.com/@aki.survival/post/DgCaj_ZkTk2</a></p>
+<p>作者續文：<a href="https://www.threads.com/@aki.survival/post/DgCaj8iEfJd" target="_blank" rel="noopener">https://www.threads.com/@aki.survival/post/DgCaj8iEfJd</a></p>
+<p>作者測試續文：<a href="https://www.threads.com/@aki.survival/post/DgCaj94EXrq" target="_blank" rel="noopener">https://www.threads.com/@aki.survival/post/DgCaj94EXrq</a></p>
+<p>作者限制續文：<a href="https://www.threads.com/@aki.survival/post/DgCaj8MkRMa" target="_blank" rel="noopener">https://www.threads.com/@aki.survival/post/DgCaj8MkRMa</a></p>
+<p>Google 價格：<a href="https://aistudio.google.com/docs/pricing" target="_blank" rel="noopener">https://aistudio.google.com/docs/pricing</a></p>
+<p>Google 限額：<a href="https://aistudio.google.com/docs/rate-limits" target="_blank" rel="noopener">https://aistudio.google.com/docs/rate-limits</a></p>
+<p>Google 地區：<a href="https://aistudio.google.com/docs/available-regions" target="_blank" rel="noopener">https://aistudio.google.com/docs/available-regions</a></p>
+<p>Google 條款：<a href="https://aistudio.google.com/docs/terms" target="_blank" rel="noopener">https://aistudio.google.com/docs/terms</a></p>
 <h2>原始與擷取紀錄</h2>
 <ul>
 <li>Threads 原貼文：<a href="https://www.threads.com/@dankopeng/post/DeUA211ktuX" target="_blank" rel="noopener">https://www.threads.com/@dankopeng/post/DeUA211ktuX</a></li>
