@@ -1,5 +1,31 @@
 [
   {
+    "title": "Threads｜Pocket City：以真實地圖構想手繪小城市",
+    "date": "2026-11-21",
+    "source": "Threads",
+    "author": "Austin（@ai_cpocoder）",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "地圖",
+      "Claude Skill"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/__poiEb5x",
+      "https://www.threads.com/@ai_cpocoder/post/DgAIaT7H6bi",
+      "https://www.threads.com/@ai_cpocoder/post/DgAKXMNn9TI",
+      "https://www.openstreetmap.org/copyright",
+      "https://operations.osmfoundation.org/policies/nominatim/"
+    ],
+    "excerpt": "Austin 分享以地址和真實地圖製作手繪小城市的個人案例；作者續文表示追蹤留言後私訊 skill，本次未取得公開技能檔或安裝連結，效果與涵蓋範圍均未獨立實測。",
+    "slug": "2026-11-21-threads-pocket-city-map-skill",
+    "html": "articles/2026-11-21-threads-pocket-city-map-skill.html",
+    "markdown": "articles/2026/11/2026-11-21-threads-pocket-city-map-skill.md"
+  },
+  {
     "title": "Threads｜阿凱老師教育工具與 AIsland：從教師需求到 AI 協作",
     "date": "2026-11-21",
     "source": "Threads",
