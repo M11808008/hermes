@@ -1,5 +1,27 @@
 [
   {
+    "title": "Facebook｜提示詞注入與 AI 代理安全：權限、人工審核和原創提示詞",
+    "date": "2026-11-23",
+    "source": "Facebook",
+    "author": "數位時代",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "資訊安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/p/1517ERqimJZ/",
+      "https://www.bnext.com.tw/article/93134/prompt-injection-ai-security-prevention-tips"
+    ],
+    "excerpt": "外部網頁或文件可能夾帶誘導 AI 偏離任務的指令；提示詞只是提醒，真正降低風險仍需限制權限、隔離資料並在高風險操作前實際審核。",
+    "slug": "2026-11-23-facebook-bnext-prompt-injection",
+    "html": "articles/2026-11-23-facebook-bnext-prompt-injection.html",
+    "markdown": "articles/2026/11/2026-11-23-facebook-bnext-prompt-injection.md"
+  },
+  {
     "title": "Threads｜賭場會籍、郵輪優惠與飯店快速升等：資格與成本查核",
     "date": "2026-11-23",
     "source": "Threads",
