@@ -1,5 +1,30 @@
 [
   {
+    "title": "Threads｜浮空台北：Three.js 單一 HTML 互動場景完整提示詞",
+    "date": "2026-11-22",
+    "source": "https://www.threads.com/share/_7YuF_1VE",
+    "author": "我是龐德（pound0423）",
+    "type": "article",
+    "topics": [
+      "Three.js",
+      "Claude",
+      "互動3D",
+      "提示詞"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_7YuF_1VE",
+      "https://www.threads.com/@pound0423/post/DgCx-EWCfyJ",
+      "https://www.threads.com/@pound0423/post/DgCyRmwmUF7"
+    ],
+    "excerpt": "作者分享浮空台北互動 3D 的完整提示詞，包含台北 101、街景、龍、錦鯉和多種視角；保留作者原文並區分示範與官方文件。",
+    "slug": "2026-11-22-threads-pound-floating-taipei-threejs",
+    "html": "articles/2026-11-22-threads-pound-floating-taipei-threejs.html",
+    "markdown": "articles/2026/11/2026-11-22-threads-pound-floating-taipei-threejs.md"
+  },
+  {
     "title": "Threads｜Pocket City：以真實地圖構想手繪小城市",
     "date": "2026-11-21",
     "source": "Threads",
