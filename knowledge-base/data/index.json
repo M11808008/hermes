@@ -1,5 +1,32 @@
 [
   {
+    "title": "Threads｜Skillry 上市風宣傳片 Skill：素材、費用與授權界線",
+    "date": "2026-11-23",
+    "source": "Threads",
+    "author": "yihui_indie",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "影片製作",
+      "Skill"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BApv8bev4-",
+      "https://www.threads.com/@yihui_indie/post/DgEf8oZADNQ",
+      "https://www.threads.com/@yihui_indie/post/DgEf9pTAIwU",
+      "https://skillry.dev/zh-tw/skills/bs-anthropic-ipo-style-film?utm_source=threads_personal&utm_medium=social&utm_campaign=anthropic_ipo_film_202611",
+      "https://skillry.dev/zh-tw/terms",
+      "https://aistudio.google.com/docs/models"
+    ],
+    "excerpt": "作者分享用預製影音素材組合產品宣傳片的 Skill；「不消耗影片生成點數」不等於 Skill、模型或整體製作免費，實際套件與素材授權仍需核對。",
+    "slug": "threads-skillry-anthropic-ipo-style-film",
+    "html": "articles/threads-skillry-anthropic-ipo-style-film.html",
+    "markdown": "articles/2026/11/threads-skillry-anthropic-ipo-style-film.md"
+  },
+  {
     "title": "Facebook｜提示詞注入與 AI 代理安全：權限、人工審核和原創提示詞",
     "date": "2026-11-23",
     "source": "Facebook",
