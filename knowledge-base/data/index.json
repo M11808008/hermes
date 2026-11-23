@@ -1,5 +1,35 @@
 [
   {
+    "title": "Threads｜Muse 接 Grok 搜尋 X：功能、費用與安全界線",
+    "date": "2026-11-24",
+    "source": "Threads",
+    "author": "ai_chill_ltd",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "Muse",
+      "Grok",
+      "X 搜尋",
+      "資訊安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BCSHRNtRJw",
+      "https://www.threads.com/@ai_chill_ltd/post/DgFMP8ZATXa",
+      "https://github.com/kgmkm/muse-grok-x-search/tree/17f02991c19d5394a4a78722e333c1f697bc8d83",
+      "https://docs.x.ai/build/overview",
+      "https://docs.x.ai/build/features/permissions",
+      "https://docs.x.ai/developers/tools/x-search",
+      "https://docs.x.ai/x-subscription/pricing",
+      "https://muse.ai/"
+    ],
+    "excerpt": "作者分享以 Grok Build CLI 的 X 搜尋補足 Muse 工作流程；工具與權限、登入差異、訂閱及 API 費用均須分開核對，尚未實測。",
+    "slug": "threads-ai-chill-muse-grok-x-search",
+    "html": "articles/threads-ai-chill-muse-grok-x-search.html"
+  },
+  {
     "title": "Threads｜Skillry 上市風宣傳片 Skill：素材、費用與授權界線",
     "date": "2026-11-23",
     "source": "Threads",
