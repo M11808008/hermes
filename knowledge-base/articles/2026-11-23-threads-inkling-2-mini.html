@@ -11,6 +11,17 @@
 <h2>32GB Mac、量化和百萬上下文</h2>
 <p>官方模型卡說單個混合精度檢查點約 20GB，列出 32GB 以上 Apple silicon，軟體包括 Ollama、Exo Labs，並提及第三方 GGUF 量化版本。原版多數權重訓練及部署使用 NVFP4，最後 4 層 MXFP8，與事後轉量化版本不同；各版本的大小、品質、格式支援及圖像能力須逐一確認。公告實際飛航示範使用 M5 Pro、48GB MacBook Pro，而非 32GB 百萬 token 實測。</p>
 <p>20GB 是模型檢查點／官方所述佔用約數，不是完整長上下文記憶體需求；系統、執行框架、暫存、KV cache、影像處理及並發都需額外資源。32GB 統一記憶體還須與系統共享；可載入短上下文並不保證可跑滿 1M，長提示也可能造成緩慢、換頁或記憶體不足。KV cache 隨實作、精度與模型注意力配置變化，不能僅從權重大小推算精確上限。建議未來依實際版本從短上下文開始，監看記憶體壓力與速度；本次沒有安裝、下載模型或進行效能測試。</p>
+<h2>2026-11-26 Threads 新帖與 Ollama 型號補充</h2>
+<p>@shane412335 分享 32GB Mac 可以跑約 260 億參數寫程式模型，指出 Ollama、Hugging Face 均可取得，並提醒商用前先看授權。其可見的作者續文給出 Thinking Machines 的 Hugging Face 組織頁與 Product Hunt 的 Tinker 頁；那是組織頁，不是特定權重檔。此帖原文及可見作者續文未看到附圖；畫面上的頭像、其他人留言及推薦串文不算原帖圖片或作者續文，登入遮罩與動態載入可能影響完整性。</p>
+<p>Ollama 模型庫查核（2026-11-26）：inkling-2-mini:latest 和 inkling-2-mini:26b-a5b 列 18–20GB；inkling-2-mini:26b-a5b-nvfp4 標 MLX、20GB；inkling-2-mini:26b-a5b-iq4_NL 標 18GB，詳情另列 BF16 影像投影器約 642MB。頁面均列文字和圖片輸入、1M context；大小與實際執行環境及版本相關，不代表 32GB 機器可以跑滿 1M。latest 會隨版本更新，詳情頁呈現 MLX 和 llama.cpp 兩種後端，不能把 18–20GB 視作固定下載大小或固定精度。官方頁示例為 `ollama run inkling-2-mini`，這是供日後參考的命令，執行會取得模型；本次未下載或執行模型，也未驗證速度。</p>
+<p>官方模型卡警告：模型可能自信地給出錯誤答案、中文品質較弱、除錯時反覆推理；代理工具可能未經確認刪除或覆寫檔案，甚至不準確回報。建議限制輸出 token 與代理回合、在沙箱執行，破壞性操作需人類確認。Apache 2.0 與另列使用政策的注意事項見上文，不應把「商用」理解為無條件免責。</p>
+<p><a href="https://www.threads.com/share/BBuhPHTdjL" target="_blank" rel="noopener">https://www.threads.com/share/BBuhPHTdjL</a></p>
+<p><a href="https://www.threads.com/@shane412335/post/DgKQ_TEDsvJ" target="_blank" rel="noopener">https://www.threads.com/@shane412335/post/DgKQ_TEDsvJ</a></p>
+<p><a href="https://huggingface.co/thinkingmachines" target="_blank" rel="noopener">https://huggingface.co/thinkingmachines</a></p>
+<p><a href="https://www.producthunt.com/products/tinker-2" target="_blank" rel="noopener">https://www.producthunt.com/products/tinker-2</a></p>
+<p><a href="https://ollama.com/library/inkling-2-mini" target="_blank" rel="noopener">https://ollama.com/library/inkling-2-mini</a></p>
+<p><a href="https://ollama.com/library/inkling-2-mini:26b-a5b-nvfp4" target="_blank" rel="noopener">https://ollama.com/library/inkling-2-mini:26b-a5b-nvfp4</a></p>
+<p><a href="https://ollama.com/library/inkling-2-mini:26b-a5b-iq4_NL" target="_blank" rel="noopener">https://ollama.com/library/inkling-2-mini:26b-a5b-iq4_NL</a></p>
 <h2>2026-11-25 Facebook 飛行模擬器案例補充</h2>
 <p>哇哇3c日誌 - 綠色工廠2.0 分享研究員帶 MacBook Pro 上飛機，離線使用 Inkling 2 Mini 製作飛行模擬器的案例，並在作者留言提供完整文章 <a href="https://ez3c.tw/12026" target="_blank" rel="noopener">https://ez3c.tw/12026</a> 。Facebook 顯示分享對象為「所有人」。</p>
 <p>Thinking Machines Lab 2026-11-20 官方公告也描述研究員在飛航中離線製作可玩的模擬器，標示示範設備為 M5 Pro、48GB MacBook Pro；影片計時器為實際時間，錄影大部分以 15 倍速播放。這是供應商展示，不是本次獨立實測，也不保證其他設備或任務可在幾分鐘完成。官網有 Demo 和 Artifact 分頁；本次未實測遊戲。初次下載模型仍需網路，離線推論不代表所有工具與工作流程均離線。</p>
