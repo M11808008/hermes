@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-11-25 +0800",
+  "author": "@hsu_wenyen",
+  "original_date": "2026-10-30",
+  "links": [
+    "https://www.threads.com/share/BARlew45tO",
+    "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX",
+    "https://www.threads.com/@hsu_wenyen/post/DfFrDE_EhCi",
+    "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX/media",
+    "https://x.com/flowbygoogle/status/2115828293291388990",
+    "https://support.google.com/flow/answer/16353334?hl=en",
+    "https://support.google.com/flow/answer/16352836?hl=en",
+    "https://support.google.com/flow/answer/16526234?hl=en",
+    "https://support.google.com/flow/answer/16353544?hl=en",
+    "https://support.google.com/flow/answer/16353333?hl=en",
+    "https://support.google.com/flow/answer/16935718?hl=en",
+    "https://one.google.com/about/google-ai-plans/"
+  ],
+  "visible_author_posts": [
+    {
+      "url": "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX",
+      "scope": "主帖，角色、Aoede、道具及五場景示範"
+    },
+    {
+      "url": "https://www.threads.com/@hsu_wenyen/post/DfFrDE_EhCi",
+      "scope": "可讀作者續文，步驟4–6及作者當時點數"
+    }
+  ],
+  "media": {
+    "original_post": "一則約44秒合輯影片；作者稱五支，未逐一驗證",
+    "thumbnail": "assets/source-images/2026-11-25-threads-hsu-wenyen-google-flow-aqua-run.jpg",
+    "complete_five_prompts": "未取得",
+    "independent_videos": "未取得"
+  },
+  "official_notes": "查核官方模型、聲音、點數及地區；X 未獨立核讀",
+  "account_changes": false
+}

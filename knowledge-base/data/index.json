@@ -1,5 +1,42 @@
 [
   {
+    "title": "Threads｜Google Flow 角色、聲音與道具：AQUA RUN 五場景示範",
+    "date": "2026-11-25",
+    "source": "Threads",
+    "author": "@hsu_wenyen",
+    "type": "article",
+    "topics": [
+      "Threads",
+      "Google Flow",
+      "AI影片"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BARlew45tO",
+      "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX",
+      "https://www.threads.com/@hsu_wenyen/post/DfFrDE_EhCi",
+      "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX/media",
+      "https://x.com/flowbygoogle/status/2115828293291388990",
+      "https://support.google.com/flow/answer/16353334?hl=en",
+      "https://support.google.com/flow/answer/16352836?hl=en",
+      "https://support.google.com/flow/answer/16526234?hl=en",
+      "https://support.google.com/flow/answer/16353544?hl=en",
+      "https://support.google.com/flow/answer/16353333?hl=en",
+      "https://support.google.com/flow/answer/16935718?hl=en",
+      "https://one.google.com/about/google-ai-plans/"
+    ],
+    "excerpt": "作者以五場景示範角色、聲音與道具參考；核對 Google 官方模型、區域限制及新舊點數。完整提示詞及五支獨立影片未取得。",
+    "slug": "2026-11-25-threads-hsu-wenyen-google-flow-aqua-run",
+    "html": "articles/2026-11-25-threads-hsu-wenyen-google-flow-aqua-run.html",
+    "markdown": "articles/2026/11/2026-11-25-threads-hsu-wenyen-google-flow-aqua-run.md",
+    "source_json": "data/sources/2026-11-25-threads-hsu-wenyen-google-flow-aqua-run.json",
+    "image_files": [
+      "assets/source-images/2026-11-25-threads-hsu-wenyen-google-flow-aqua-run.jpg"
+    ]
+  },
+  {
     "title": "Threads｜像素戰機飛行玩具：WebGL2 原始提示詞",
     "date": "2026-11-25",
     "source": "Threads",
