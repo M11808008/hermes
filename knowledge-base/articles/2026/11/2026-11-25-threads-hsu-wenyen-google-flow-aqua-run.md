@@ -2,6 +2,10 @@
 
 查核：2026-11-25（台灣時間）。作者 @hsu_wenyen，原帖 2026-10-30。[原帖](https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX)｜[作者續文](https://www.threads.com/@hsu_wenyen/post/DfFrDE_EhCi)｜[影片](https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX/media)
 
+兩次提供的分享網址 [BARlew45tO](https://www.threads.com/share/BARlew45tO) 與 [_hCbsWCZL](https://www.threads.com/share/_hCbsWCZL) 在 2026-11-25 均解析至上述同一主帖；分享連結日後是否持續如此不保證。
+
+![原帖影片公開壓縮縮圖：河畔道路、局部手持瓶子，含平台播放符號](../assets/source-images/2026-11-25-threads-hsu-wenyen-google-flow-aqua-run.jpg "原帖影片縮圖，非獨立影片；來源 @hsu_wenyen，重用授權未確認。")
+
 ## 作者內容與可讀範圍
 
 作者示範虛構運動飲料 AQUA RUN：同角色、同瓶子、五個場景與日文口白；在 Flow 建立角色（例 @はな），選擇聲音（例 Aoede），加入瓶子參考圖，再描述場景、光線、服裝、動作與指定語言台詞，提示看鏡頭說話。作者使用 Omni、9:16、每支 10 秒，並說兩段影片接續的背景、動作需反覆嘗試。
@@ -18,7 +22,7 @@
 
 ## 點數與費用：作者當時 vs 官方目前
 
-作者當時寫 Omni 720p：4／6／8／10 秒分別 7／10／12／15 點，每次出兩支加倍；另每天 50 點、不累積。[Google 點數官方頁](https://support.google.com/flow/answer/16526234?hl=en)將此表列為即將退役的 Omni Flash 1.1，而非 Omni 1.2 的現價。
+作者在 2026-10-30 續文寫 Omni 720p：4／6／8／10 秒分別 7／10／12／15 點，每次出兩支加倍；另每天 50 點、不累積。[Google 點數官方頁](https://support.google.com/flow/answer/16526234?hl=en)將此表列為即將退役的 Omni Flash 1.1，而非 Omni 1.2 的現價。
 
 官網查核時：每日 50 點，當日未用不滾存；Plus、Pro、Ultra $100、Ultra $200 每月另給 200、1,000、10,000、25,000 點，每月未用不滾存。上述美元是官網對 Ultra 級別的標記，不應推成台灣實際訂閱價格。官網公開方案頁未能可靠取得 Plus／Pro／台灣在地訂閱金額；購買前應以帳戶所在區顯示之價格、稅費、促銷及條款為準，未登入或更改任何帳號。
 

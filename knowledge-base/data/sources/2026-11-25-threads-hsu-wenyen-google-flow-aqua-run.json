@@ -4,6 +4,7 @@
   "original_date": "2026-10-30",
   "links": [
     "https://www.threads.com/share/BARlew45tO",
+    "https://www.threads.com/share/_hCbsWCZL",
     "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX",
     "https://www.threads.com/@hsu_wenyen/post/DfFrDE_EhCi",
     "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX/media",
@@ -30,8 +31,35 @@
     "original_post": "一則約44秒合輯影片；作者稱五支，未逐一驗證",
     "thumbnail": "assets/source-images/2026-11-25-threads-hsu-wenyen-google-flow-aqua-run.jpg",
     "complete_five_prompts": "未取得",
-    "independent_videos": "未取得"
+    "independent_videos": "未取得",
+    "thumbnail_details": {
+      "type": "image/jpeg",
+      "width": 361,
+      "height": 640,
+      "bytes": 23685,
+      "sha256": "ad37985c8cb1b2068b1f1a8aefdfb0e3575ede5a4baac04efb640dd053748ce8",
+      "status": "公開壓縮影片首格，已檢視、保存、公開；畫面含局部人物、瓶子與道路，未見憑證或帳號資料；來源 @hsu_wenyen，重用授權未確認；不是已觀看影片",
+      "exact_cdn_url": "前次保存時未記錄，無法還原"
+    }
   },
   "official_notes": "查核官方模型、聲音、點數及地區；X 未獨立核讀",
-  "account_changes": false
+  "account_changes": false,
+  "share_resolution": [
+    {
+      "share": "https://www.threads.com/share/BARlew45tO",
+      "resolved": "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX?xmt=AQG0ari68rrukcHDuvLhTJDLPrKMoFwhSIxlI0YEJSRKqiGP_oHVSPVf7YItWZ7g0dRl62xc&slof=1",
+      "checked_at": "2026-11-25 +0800"
+    },
+    {
+      "share": "https://www.threads.com/share/_hCbsWCZL",
+      "resolved": "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX?xmt=AQG0k4H2E6lriTuxnkkQGaEQpcRf-rDZRFECj336vyY1X_4mSe3iUid-pLvtTGLMa86xFVo&slof=1",
+      "checked_at": "2026-11-25 +0800"
+    }
+  ],
+  "canonical": "https://www.threads.com/@hsu_wenyen/post/DfFq4QAigUX",
+  "limitations": [
+    "未登入、未生成、未逐支驗證影片或完整提示詞",
+    "此次識別一張原帖影片縮圖；不將相關串文圖或作者頭像視為原帖圖",
+    "分享連結的解析在查核當下相同，未保證未來不變"
+  ]
 }
