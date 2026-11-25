@@ -226,6 +226,34 @@
     "markdown": "articles/2026/11/2026-11-23-threads-yfc3709-casino-cruise-hotel-status.md"
   },
   {
+    "title": "Threads｜Inkling 2 Mini：開放權重、循環架構與 32GB Mac 的限制",
+    "date": "2026-11-23",
+    "source": "Threads",
+    "author": "it.oppa.twhk",
+    "type": "article",
+    "topics": [
+      "AI Model",
+      "本機推論",
+      "Coding"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAenTZKIa9",
+      "https://www.threads.com/@it.oppa.twhk/post/DgC--GMCPIc",
+      "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "https://www.facebook.com/share/1FJhCbfUpz/?mibextid=wwXIfr",
+      "https://ez3c.tw/12026"
+    ],
+    "excerpt": "Thinking Machines Lab 的 Inkling 2 Mini 確實是 2026 年 11 月 20 日發布的多模態開放權重模型；32GB Apple silicon 是官方列出的硬體選項，但不代表百萬 token 圖文情境在此記憶體容量下可順暢執行。 補充 Facebook 離線飛行模擬器案例。",
+    "slug": "2026-11-23-threads-inkling-2-mini",
+    "html": "articles/2026-11-23-threads-inkling-2-mini.html",
+    "markdown": "articles/2026/11/2026-11-23-threads-inkling-2-mini.md"
+  },
+  {
     "title": "Threads｜浮空台北：Three.js 單一 HTML 互動場景完整提示詞",
     "date": "2026-11-22",
     "source": "https://www.threads.com/share/_7YuF_1VE",

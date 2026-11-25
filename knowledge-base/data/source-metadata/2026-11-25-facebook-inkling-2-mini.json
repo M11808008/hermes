@@ -1,0 +1,20 @@
+{
+  "capture_date": "2026-11-25",
+  "source": "https://www.facebook.com/photo.php?fbid=1642850443879112",
+  "author": "哇哇3c日誌 - 綠色工廠2.0",
+  "audience": "所有人",
+  "image": {
+    "dimensions": "1080x864",
+    "sha256": "a635397e77dabc2732205c273e50a5700a9b9481159141c35c7aab815955a047",
+    "description": "機艙中的人物與筆電飛行遊戲插畫，非實機畫面",
+    "privacy": "未見明顯帳號、憑證或可辨識真實人物",
+    "saved_locally": true,
+    "published": false,
+    "reuse": "重用授權未確認，未公開鏡像"
+  },
+  "limitations": [
+    "可能有未載入素材",
+    "未實測官網 Artifact 或影片",
+    "圖卡已本機保存；重用授權未確認，未公開鏡像"
+  ]
+}

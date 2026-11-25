@@ -11,6 +11,16 @@
 <h2>32GB Mac、量化和百萬上下文</h2>
 <p>官方模型卡說單個混合精度檢查點約 20GB，列出 32GB 以上 Apple silicon，軟體包括 Ollama、Exo Labs，並提及第三方 GGUF 量化版本。原版多數權重訓練及部署使用 NVFP4，最後 4 層 MXFP8，與事後轉量化版本不同；各版本的大小、品質、格式支援及圖像能力須逐一確認。公告實際飛航示範使用 M5 Pro、48GB MacBook Pro，而非 32GB 百萬 token 實測。</p>
 <p>20GB 是模型檢查點／官方所述佔用約數，不是完整長上下文記憶體需求；系統、執行框架、暫存、KV cache、影像處理及並發都需額外資源。32GB 統一記憶體還須與系統共享；可載入短上下文並不保證可跑滿 1M，長提示也可能造成緩慢、換頁或記憶體不足。KV cache 隨實作、精度與模型注意力配置變化，不能僅從權重大小推算精確上限。建議未來依實際版本從短上下文開始，監看記憶體壓力與速度；本次沒有安裝、下載模型或進行效能測試。</p>
+<h2>2026-11-25 Facebook 飛行模擬器案例補充</h2>
+<p>哇哇3c日誌 - 綠色工廠2.0 分享研究員帶 MacBook Pro 上飛機，離線使用 Inkling 2 Mini 製作飛行模擬器的案例，並在作者留言提供完整文章 <a href="https://ez3c.tw/12026" target="_blank" rel="noopener">https://ez3c.tw/12026</a> 。Facebook 顯示分享對象為「所有人」。</p>
+<p>Thinking Machines Lab 2026-11-20 官方公告也描述研究員在飛航中離線製作可玩的模擬器，標示示範設備為 M5 Pro、48GB MacBook Pro；影片計時器為實際時間，錄影大部分以 15 倍速播放。這是供應商展示，不是本次獨立實測，也不保證其他設備或任務可在幾分鐘完成。官網有 Demo 和 Artifact 分頁；本次未實測遊戲。初次下載模型仍需網路，離線推論不代表所有工具與工作流程均離線。</p>
+<p>Facebook 圖卡印有「飛機上沒網路／用 AI 做出飛行模擬器／MacBook Pro 離線執行 AI 模型」，是插畫而非實機畫面。本次完整檢視已載入的一張圖，未見明顯帳號、憑證或可辨識真實人物；圖卡已保存於本機來源檔案；重用授權未確認，故未公開鏡像，亦不排除其他素材未載入。</p>
+<p><a href="https://www.facebook.com/share/1FJhCbfUpz/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/1FJhCbfUpz/?mibextid=wwXIfr</a></p>
+<p><a href="https://www.facebook.com/photo.php?fbid=1642850443879112" target="_blank" rel="noopener">https://www.facebook.com/photo.php?fbid=1642850443879112</a></p>
+<p><a href="https://ez3c.tw/12026" target="_blank" rel="noopener">https://ez3c.tw/12026</a></p>
+<p><a href="https://thinkingmachines.ai/news/inkling-2-mini/
+" target="_blank" rel="noopener">https://thinkingmachines.ai/news/inkling-2-mini/
+</a></p>
 <h2>圖片及來源</h2>
 <p>原帖頁面 DOM 載入三張輪播圖候選；尚未完成各原圖逐張隱私檢視及授權核對，未公開鏡像，圖片數不應被當成完整盤點。來源可由原帖查看。</p>
 <p><a href="https://www.threads.com/share/BAenTZKIa9" target="_blank" rel="noopener">https://www.threads.com/share/BAenTZKIa9</a></p>
