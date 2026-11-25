@@ -1,5 +1,34 @@
 [
   {
+    "title": "Threads｜像素戰機飛行玩具：WebGL2 原始提示詞",
+    "date": "2026-11-25",
+    "source": "Threads",
+    "author": "我是龐德（@pound0423）",
+    "type": "article",
+    "topics": [
+      "Threads",
+      "WebGL",
+      "Prompt Engineering"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BBkpfOiwAH",
+      "https://www.threads.com/@pound0423/post/DgKp_XfGbFU",
+      "https://www.threads.com/@pound0423/post/DgKp_XfGbFU/media",
+      "https://registry.khronos.org/webgl/specs/latest/2.0/"
+    ],
+    "excerpt": "作者續文提出單一 HTML 像素戰機飛行玩具規格；保存展開的完整可讀文字，不執行提示詞。上層主文及其媒體未能取得。",
+    "slug": "2026-11-25-threads-pound-pixel-flight-webgl2-prompt",
+    "html": "articles/2026-11-25-threads-pound-pixel-flight-webgl2-prompt.html",
+    "image_files": [],
+    "source_observations": {
+      "scope": "展開頁可讀的此則提示詞；主文、其他回覆及媒體不可讀",
+      "execution": "未執行"
+    }
+  },
+  {
     "title": "Threads｜LINE 電子名片與 Flex Message：範例、分享方式與費用界線",
     "date": "2026-11-25",
     "source": "Threads",
