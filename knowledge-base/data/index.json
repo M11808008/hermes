@@ -1,5 +1,45 @@
 [
   {
+    "title": "Threads｜AstrBot：LINE 串接、授權、費用與安全界線",
+    "date": "2026-11-26",
+    "source": "Threads",
+    "author": "@aiposthub",
+    "type": "article",
+    "topics": [
+      "Threads",
+      "AI Agent",
+      "LINE",
+      "AstrBot",
+      "資訊安全"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAYLrYbxOV",
+      "https://www.threads.com/@aiposthub/post/DgMuu0dAdfz",
+      "https://www.threads.com/@aiposthub/post/DgMuvWfAcYA",
+      "https://www.threads.com/@aiposthub/post/DgMuv4ZgVrf",
+      "https://www.aiposthub.com/astrbot-47k-stars-multi-platform-im-ai-agent-framework-guide-20261126/",
+      "https://github.com/AstrBotDevs/AstrBot/blob/57415b79e03d1d8585417d7fd9f8da5a5b4586fe/README.md",
+      "https://github.com/AstrBotDevs/AstrBot/blob/57415b79e03d1d8585417d7fd9f8da5a5b4586fe/LICENSE",
+      "https://github.com/AstrBotDevs/AstrBot/blob/57415b79e03d1d8585417d7fd9f8da5a5b4586fe/dashboard/LICENSE",
+      "https://github.com/AstrBotDevs/AstrBot/blob/57415b79e03d1d8585417d7fd9f8da5a5b4586fe/EULA.md",
+      "https://github.com/AstrBotDevs/AstrBot/blob/57415b79e03d1d8585417d7fd9f8da5a5b4586fe/docs/zh/platform/line.md",
+      "https://github.com/AstrBotDevs/AstrBot/blob/57415b79e03d1d8585417d7fd9f8da5a5b4586fe/astrbot/core/platform/sources/line/line_adapter.py",
+      "https://developers.line.biz/en/docs/messaging-api/pricing/",
+      "https://tw.linebiz.com/service/account-solutions/line-official-account/",
+      "https://tw.linebiz.com/faq/oa-price/",
+      "https://github.com/openclaw/openclaw"
+    ],
+    "excerpt": "核對作者可見續文、官方 LINE 適配、AGPL／MIT 與 EULA、計費及 OpenClaw 比較；未安裝或實測。",
+    "slug": "2026-11-26-threads-aiposthub-astrbot-line",
+    "html": "articles/2026-11-26-threads-aiposthub-astrbot-line.html",
+    "markdown": "articles/2026/11/2026-11-26-threads-aiposthub-astrbot-line.md",
+    "source_json": "data/sources/2026-11-26-threads-aiposthub-astrbot-line.json",
+    "image_files": []
+  },
+  {
     "title": "Threads｜Google Flow 角色、聲音與道具：AQUA RUN 五場景示範",
     "date": "2026-11-25",
     "source": "Threads",
