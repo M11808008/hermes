@@ -1,5 +1,47 @@
 [
   {
+    "title": "Facebook｜十種本機模型配置：量化、作者測速與授權查核",
+    "date": "2026-11-26",
+    "source": "Facebook",
+    "author": "陳盟升",
+    "type": "article",
+    "topics": [
+      "Facebook",
+      "Local LLM",
+      "量化",
+      "模型授權",
+      "DGX Spark"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/groups/1270451518569482/permalink/1478963534384945/",
+      "https://huggingface.co/SC117/Inkling-2-Mini-abliterated-Strata",
+      "https://huggingface.co/SC117/occamy-1.0-abliterated-FIT-GGUF",
+      "https://huggingface.co/BoldingBuilds/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-Abliterated-24GB-GGUF",
+      "https://huggingface.co/SC117/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF",
+      "https://huggingface.co/SC117/Qwen3.8-Flash-Next-abliterated-UD-GGUF",
+      "https://huggingface.co/ARC4NUM/Qwen3.8-Flash-Next-Uncensored-MLX-Serve-4bit",
+      "https://huggingface.co/mlx-community/Qwen3.8-Flash-Next-Uncensored-oQ5e-mtp",
+      "https://huggingface.co/SmokeyPete/Qwen3.8-27B-Heretic-NVFP4-DGX-Spark",
+      "https://huggingface.co/strata-engine/Hy4-Flash-Strata",
+      "https://huggingface.co/alesha-pro/Hy4-flash-Uncensored-GGUF",
+      "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "https://huggingface.co/Accio-Lab/occamy-1.0",
+      "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "https://huggingface.co/tencent/Hy4-flash"
+    ],
+    "excerpt": "六個模型家族十種量化配置：區分貼文作者測速與模型卡授權，記錄未核實與授權衝突。",
+    "slug": "2026-11-26-facebook-ten-local-model-configurations",
+    "html": "articles/2026-11-26-facebook-ten-local-model-configurations.html",
+    "markdown": "articles/2026/11/2026-11-26-facebook-ten-local-model-configurations.md",
+    "source_json": "data/sources/2026-11-26-facebook-ten-local-model-configurations.json",
+    "image_files": []
+  },
+  {
     "title": "Threads｜AstrBot：LINE 串接、授權、費用與安全界線",
     "date": "2026-11-26",
     "source": "Threads",

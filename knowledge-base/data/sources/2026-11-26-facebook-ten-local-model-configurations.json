@@ -1,0 +1,423 @@
+{
+  "checked_at": "2026-11-27 +0800",
+  "post": "https://www.facebook.com/groups/1270451518569482/permalink/1478963534384945/",
+  "group_rules": "https://www.facebook.com/groups/1270451518569482/about/",
+  "hf_model_api_metadata": [
+    {
+      "id": "SC117/Inkling-2-Mini-abliterated-Strata",
+      "http_status": 200,
+      "revision": "ae324ac3676b97a3f67b475ffc2534c7521ff7c4",
+      "cardData": {
+        "base_model": "thinkingmachines/Inkling-2-Mini",
+        "base_model_relation": "quantized",
+        "license": "apache-2.0",
+        "license_link": "https://www.apache.org/licenses/LICENSE-2.0",
+        "pipeline_tag": "image-text-to-text",
+        "language": [
+          "en",
+          "zh",
+          "multilingual"
+        ],
+        "tags": [
+          "strata",
+          "strata-v1.1",
+          "inkling-2-mini",
+          "inkling2_loop",
+          "moe",
+          "mixture-of-experts",
+          "looped-transformer",
+          "dspark",
+          "quantization",
+          "abliterated",
+          "uncensored",
+          "multimodal",
+          "vision",
+          "reasoning",
+          "long-context",
+          "agent"
+        ]
+      }
+    },
+    {
+      "id": "SC117/occamy-1.0-abliterated-FIT-GGUF",
+      "http_status": 200,
+      "revision": "3601d771885f8985aaabaeeedf7b64790fbf9b9c",
+      "cardData": {
+        "base_model": "Accio-Lab/occamy-1.0",
+        "base_model_relation": "quantized",
+        "license": "apache-2.0",
+        "library_name": "gguf",
+        "pipeline_tag": "image-text-to-text",
+        "language": [
+          "en",
+          "zh",
+          "es",
+          "fr",
+          "de",
+          "pt",
+          "it",
+          "ru",
+          "ja",
+          "ko",
+          "vi",
+          "th",
+          "ar"
+        ],
+        "tags": [
+          "gguf",
+          "llama-cpp",
+          "quantization",
+          "moe",
+          "mixture-of-experts",
+          "qwen35moe",
+          "fit-gguf",
+          "imatrix",
+          "abliterated",
+          "uncensored",
+          "multimodal",
+          "vision",
+          "reasoning",
+          "long-context",
+          "agent"
+        ]
+      }
+    },
+    {
+      "id": "BoldingBuilds/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-Abliterated-24GB-GGUF",
+      "http_status": 200,
+      "revision": "b6360e7379899484c800116f6bcf85448fc4925b",
+      "cardData": {
+        "base_model": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+        "base_model_relation": "quantized",
+        "license": "other",
+        "license_name": "openmdw-1.1",
+        "license_link": "https://openmdw.ai/license/1-1/",
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "gguf",
+        "language": [
+          "en",
+          "es",
+          "fr",
+          "de",
+          "it",
+          "ja"
+        ],
+        "tags": [
+          "gguf",
+          "llama.cpp",
+          "nemotron-3.5",
+          "latent-moe",
+          "moe",
+          "mixture-of-experts",
+          "mamba",
+          "hybrid",
+          "multimodal",
+          "abliterated",
+          "uncensored"
+        ]
+      }
+    },
+    {
+      "id": "SC117/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF",
+      "http_status": 200,
+      "revision": "3db919a964b1f0ae0d1000ba7be90b3e38b1f7a3",
+      "cardData": {
+        "base_model": "ukisai/Swift-Qwen3.8-Flash-Next",
+        "base_model_relation": "quantized",
+        "license": "other",
+        "license_name": "swift-open-license-1.0",
+        "license_link": "https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF/blob/main/LICENSE",
+        "library_name": "gguf",
+        "pipeline_tag": "image-text-to-text",
+        "language": [
+          "en",
+          "zh"
+        ],
+        "tags": [
+          "gguf",
+          "llama-cpp",
+          "abliterated",
+          "uncensored",
+          "quantization",
+          "tensor-transplant",
+          "gsq",
+          "rco",
+          "moe",
+          "mixture-of-experts",
+          "qwen3.8",
+          "flash-next",
+          "long-context",
+          "reasoning",
+          "reasoning-efficient",
+          "token-efficient",
+          "red-teaming"
+        ]
+      }
+    },
+    {
+      "id": "SC117/Qwen3.8-Flash-Next-abliterated-UD-GGUF",
+      "http_status": 200,
+      "revision": "2eb0ef18bfb05164030b5559539bc1e183fa977f",
+      "cardData": {
+        "base_model": "unsloth/Qwen3.8-Flash-Next-GGUF",
+        "base_model_relation": "quantized",
+        "license": "apache-2.0",
+        "library_name": "gguf",
+        "pipeline_tag": "image-text-to-text",
+        "language": [
+          "en",
+          "zh"
+        ],
+        "tags": [
+          "gguf",
+          "llama-cpp",
+          "abliterated",
+          "uncensored",
+          "quantization",
+          "tensor-transplant",
+          "unsloth",
+          "dynamic",
+          "moe",
+          "mixture-of-experts",
+          "qwen3.8",
+          "flash-next",
+          "long-context",
+          "reasoning",
+          "red-teaming"
+        ]
+      }
+    },
+    {
+      "id": "ARC4NUM/Qwen3.8-Flash-Next-Uncensored-MLX-Serve-4bit",
+      "http_status": 401,
+      "revision": null,
+      "cardData": null
+    },
+    {
+      "id": "mlx-community/Qwen3.8-Flash-Next-Uncensored-oQ5e-mtp",
+      "http_status": 200,
+      "revision": "c7d915c693e37fa11810d600b617adb4c36ff596",
+      "cardData": {
+        "license": "other",
+        "license_name": "qwen-community-1.0",
+        "license_link": "LICENSE",
+        "base_model": "orcarouter/Qwen3.8-Flash-Next-Uncensored",
+        "base_model_relation": "quantized",
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "mlx",
+        "language": [
+          "en",
+          "zh"
+        ],
+        "tags": [
+          "mlx",
+          "oq",
+          "oqe",
+          "quantized",
+          "5-bit",
+          "mixed-precision",
+          "imatrix",
+          "qwen4_exp",
+          "qwen3.8",
+          "flash-next",
+          "moe",
+          "mtp",
+          "vision-language",
+          "uncensored",
+          "abliterated",
+          "apple-silicon"
+        ]
+      }
+    },
+    {
+      "id": "SmokeyPete/Qwen3.8-27B-Heretic-NVFP4-DGX-Spark",
+      "http_status": 200,
+      "revision": "892cd27e598f1a52b927b7b8419430ef0568413e",
+      "cardData": {
+        "license": "apache-2.0",
+        "base_model": [
+          "Qwen/Qwen3.8-27B"
+        ],
+        "pipeline_tag": "image-text-to-text",
+        "tags": [
+          "qwen3.8",
+          "heretic",
+          "abliterated",
+          "uncensored",
+          "nvfp4",
+          "fp4",
+          "modelopt",
+          "quantized",
+          "sglang",
+          "dgx-spark",
+          "gb10"
+        ]
+      }
+    },
+    {
+      "id": "strata-engine/Hy4-Flash-Strata",
+      "http_status": 200,
+      "revision": "995bac227ab7e0d221772be641e2b5954a9fac06",
+      "cardData": {
+        "license": "other",
+        "license_name": "tencent-hy-license",
+        "license_link": "https://huggingface.co/tencent/Hy4-flash/blob/main/LICENSE",
+        "base_model": "tencent/Hy4-flash",
+        "base_model_relation": "quantized",
+        "pipeline_tag": "image-text-to-text",
+        "tags": [
+          "strata",
+          "hy4-flash",
+          "moe",
+          "quantization",
+          "latent-moe",
+          "engram",
+          "dfly2"
+        ]
+      }
+    },
+    {
+      "id": "alesha-pro/Hy4-flash-Uncensored-GGUF",
+      "http_status": 200,
+      "revision": "239e9f9b7edf36c96eebe3d17ccdb83302bf228d",
+      "cardData": {
+        "base_model": "tencent/Hy4-flash",
+        "base_model_relation": "quantized",
+        "quantized_by": "alesha-pro",
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "gguf",
+        "license": "other",
+        "license_name": "tencent-hy-license",
+        "license_link": "LICENSE",
+        "tags": [
+          "gguf",
+          "hunyuan",
+          "hy4-flash",
+          "moe",
+          "uncensored",
+          "abliterated",
+          "project-maya",
+          "rtx3090",
+          "vision"
+        ]
+      }
+    },
+    {
+      "id": "thinkingmachines/Inkling-2-Mini",
+      "http_status": 200,
+      "revision": "c9d028302cd0f035fdf8e7e91f089a4ce94d2195",
+      "cardData": {
+        "license": "apache-2.0",
+        "license_link": "https://www.apache.org/licenses/LICENSE-2.0",
+        "pipeline_tag": "image-text-to-text",
+        "tags": [
+          "conversational",
+          "image-text-to-text",
+          "moe"
+        ],
+        "library_name": "transformers"
+      }
+    },
+    {
+      "id": "Accio-Lab/occamy-1.0",
+      "http_status": 200,
+      "revision": "72ca96031d8d11650882b5fae8dad88412a76155",
+      "cardData": {
+        "license": "apache-2.0",
+        "library_name": "transformers",
+        "pipeline_tag": "image-text-to-text",
+        "base_model": "Qwen/Qwen3.6-35B-A3B",
+        "tags": [
+          "agent",
+          "agentic",
+          "co-work",
+          "tool-use",
+          "long-context",
+          "mixture-of-experts",
+          "coding"
+        ]
+      }
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "http_status": 200,
+      "revision": "e09a4cedb1787db1760375ee5539f222cae0c672",
+      "cardData": {
+        "library_name": "transformers",
+        "license": "other",
+        "license_name": "openmdw-1.1",
+        "license_link": "https://openmdw.ai/license/1-1/",
+        "pipeline_tag": "image-text-to-text",
+        "language": [
+          "en",
+          "es",
+          "fr",
+          "de",
+          "it",
+          "ja"
+        ],
+        "tags": [
+          "nvidia",
+          "pytorch",
+          "nemotron-3.5"
+        ],
+        "base_model": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+        "datasets": [
+          "nvidia/nemotron-post-training-v3",
+          "nvidia/nemotron-pre-training-datasets"
+        ],
+        "track_downloads": true
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "http_status": 200,
+      "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+      "cardData": {
+        "library_name": "transformers",
+        "license": "apache-2.0",
+        "pipeline_tag": "image-text-to-text"
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.8-Flash-Next",
+      "http_status": 200,
+      "revision": "812d96e10a0dd82b69d749e68693698cf6c36daa",
+      "cardData": {
+        "library_name": "transformers",
+        "license": "other",
+        "license_name": "qwen-community-1.0",
+        "license_link": "LICENSE",
+        "pipeline_tag": "image-text-to-text"
+      }
+    },
+    {
+      "id": "tencent/Hy4-flash",
+      "http_status": 200,
+      "revision": "1e3e4005da28b6ef7f53c1298b09c8e00bfc659e",
+      "cardData": {
+        "license": "other",
+        "license_name": "tencent-hy-license",
+        "license_link": "https://huggingface.co/tencent/Hy4-flash/blob/main/LICENSE",
+        "library_name": "transformers",
+        "pipeline_tag": "image-text-to-text",
+        "tags": [
+          "hunyuan",
+          "hy4-flash",
+          "moe",
+          "multimodal",
+          "instruct"
+        ]
+      }
+    }
+  ],
+  "media": {
+    "description": "original chart, attribution 陳盟升 Darks; copyright unclear, retained locally only",
+    "sha256": "c46a41f8dfd1a58768f54441eeb17d18fe91fd50d334c173089a39c5989a4d8a"
+  },
+  "limitations": [
+    "model cards metadata only, not complete license interpretation",
+    "no model downloads or inference",
+    "original author performance figures not independently reproduced"
+  ]
+}
