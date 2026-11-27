@@ -30,6 +30,30 @@
     ]
   },
   {
+    "title": "Threads｜Veo 臉部特寫：27,000 字元逐秒提示詞與參考圖",
+    "date": "2026-11-27",
+    "source": "Threads",
+    "author": "terrydjony",
+    "type": "article",
+    "topics": [
+      "AI影片",
+      "Gemini",
+      "Veo",
+      "提示詞"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/_ysfFuTh9",
+      "https://www.threads.com/@terrydjony/post/DgNDfqeiRRp"
+    ],
+    "excerpt": "作者分享 Veo 在 Gemini 產生的人像特寫，以及構圖、光線、微表情、逐秒動作與負面限制組成的長提示詞；成果和重現性未經本次實測。",
+    "slug": "2026-11-27-threads-terrydjony-veo-close-up-portrait",
+    "html": "articles/2026-11-27-threads-terrydjony-veo-close-up-portrait.html",
+    "markdown": "articles/2026/11/2026-11-27-threads-terrydjony-veo-close-up-portrait.md"
+  },
+  {
     "title": "Facebook｜十種本機模型配置：量化、作者測速與授權查核",
     "date": "2026-11-26",
     "source": "Facebook",
