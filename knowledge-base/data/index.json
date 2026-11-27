@@ -1,5 +1,35 @@
 [
   {
+    "title": "Cloud Pass 無限騎行：Three.js 魚眼、視差與粒子天空三項 Agent 技能",
+    "date": "2026-11-27",
+    "source": "Threads / Meng To",
+    "author": "prompt_case / Meng To",
+    "type": "case-study",
+    "topics": [
+      "Three.js",
+      "AI Agent",
+      "GitHub"
+    ],
+    "use": [
+      "互動設計",
+      "技術參考"
+    ],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAcdQ-TBMF",
+      "https://www.threads.com/@prompt_case/post/DgOjnvgDaJ4"
+    ],
+    "excerpt": "Meng To 分享 Cloud Pass 無限騎行作品及三份 Three.js 技能文件，分別處理視差場景、主體鎖定的魚眼推拉鏡頭，以及受光照影響的粒子與雲層；本次僅讀取公開文件，沒有安裝、執行技能或測試作品。 ![Threads 主帖影片的公開壓縮首格，非完整影片](../assets/source-images/threads-cloud-pass-first-frame.jpg \"Threads 主帖影片公開壓縮首格；作者 prompt_case，畫面作品 Cloud Pass；重用授權未確認\")",
+    "slug": "2026-11-27-threads-mengto-cloud-pass-riding-skills",
+    "html": "articles/2026-11-27-threads-mengto-cloud-pass-riding-skills.html",
+    "markdown": "articles/2026-11-27-threads-mengto-cloud-pass-riding-skills.md",
+    "source_json": "data/sources/2026-11-27-threads-mengto-cloud-pass.json",
+    "image_files": [
+      "assets/source-images/threads-cloud-pass-first-frame.jpg"
+    ]
+  },
+  {
     "title": "Facebook｜十種本機模型配置：量化、作者測速與授權查核",
     "date": "2026-11-26",
     "source": "Facebook",

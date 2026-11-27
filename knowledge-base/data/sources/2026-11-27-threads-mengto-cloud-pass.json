@@ -1,0 +1,20 @@
+{
+  "captured_date": "2026-11-27",
+  "original_url": "https://www.threads.com/share/BAcdQ-TBMF",
+  "resolved_url": "https://www.threads.com/@prompt_case/post/DgOjnvgDaJ4",
+  "canonical_url": "https://www.threads.com/@prompt_case/post/DgOjnvgDaJ4",
+  "author": "prompt_case",
+  "visible_text": "太美了！有人用 GPT-6.2 Astra 做了一個無限騎行的 Three.js 網頁，並把其中的魚眼鏡頭、視差和粒子天空，開源成三項可供 Agent 使用的技能！遊戲中角色會在一條不會走到盡頭的山路騎行，可以用拖曳環視，用滾輪拉闊鏡頭，雲層也會由日出轉到夜晚。三項技能以 MIT 授權公開，分別說明怎樣用滾輪把鏡頭拉成魚眼、讓近景和遠山以不同速度移動，以及讓粒子和雲層跟著光線變化。每項都有具體步驟和檢查方法，可交給 Codex、Claude 或 Cursor 等程式 Agent 跟隨。技能倉庫連結放在留言:",
+  "author_reply": "https://www.threads.com/@prompt_case/post/DgOjzGpnCqs",
+  "original_creator_post": "https://x.com/MengTo/status/2125995984400654658",
+  "creator_post_read_via": "https://api.fxtwitter.com/MengTo/status/2125995984400654658",
+  "creator_post_claim": "I built an endless three.js motorcycle ride with GPT-6.2 Astra. I used parallax and fisheye camera tricks to achieve this.",
+  "work_url": "https://threeui.com/cloud-pass",
+  "inspiration_url": "https://x.com/hi_personality/status/2123931908027646007",
+  "repository": "https://github.com/MengTo/Skills",
+  "commit": "3a8517e09e9a258a8b8a1dfdb71579abe75f1c22",
+  "license": "MIT, Copyright (c) 2026 Meng To; repository root LICENSE checked; not proof of image or third-party rights",
+  "skills": ["agent-skills/3d/endless-riding-parallax/SKILL.md", "agent-skills/3d/scroll-fisheye-dolly-zoom/SKILL.md", "agent-skills/3d/ride-particles-and-clouds/SKILL.md"],
+  "media": [{"role":"Threads original post video first-frame thumbnail", "filename":"assets/source-images/threads-cloud-pass-first-frame.jpg", "mime":"image/jpeg", "width":640, "height":360, "bytes":43711, "sha256":"ab89952926591ef1b00fb6174c421eb11b19d4686a8b599614f5aec2ec3876bc", "inspected":true, "published":true, "rights":"reuse permission unconfirmed", "source":"https://www.threads.com/@prompt_case/post/DgOjnvgDaJ4"}],
+  "limitations": ["No complete video viewed", "X direct page inaccessible; creator text obtained through third-party mirror", "Model and creation process are creator claims", "No skills or check scripts installed or run", "Interactive work not tested", "No independent rights determination for depicted artwork"]
+}
