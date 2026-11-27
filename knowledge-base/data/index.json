@@ -1,5 +1,28 @@
 [
   {
+    "title": "Threads｜AIOS、爬蟲、Obsidian 與 Ollama 的 Agentic Workflow 案例",
+    "date": "2026-11-27",
+    "source": "Threads / Obsidian / Ollama",
+    "author": "sdrmsung",
+    "type": "social-post",
+    "topics": [
+      "AI Agent",
+      "Obsidian",
+      "Ollama"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAMC044xOJ",
+      "https://www.threads.com/@sdrmsung/post/DgNFD8ADXPT"
+    ],
+    "excerpt": "作者提出在 AIOS 下整合爬蟲、Obsidian 與 Ollama，以真實資料呈現視覺化 agent 工作流；這是尚未獨立驗證的社群案例，AIOS 指涉不明。",
+    "slug": "2026-11-27-threads-sdrmsung-aios-agentic-workflow",
+    "html": "articles/2026-11-27-threads-sdrmsung-aios-agentic-workflow.html",
+    "markdown": "articles/2026/11/2026-11-27-threads-sdrmsung-aios-agentic-workflow.md"
+  },
+  {
     "title": "Threads｜500 AI Agents Projects：案例索引、實作與授權查核",
     "date": "2026-11-27",
     "source": "Threads",
