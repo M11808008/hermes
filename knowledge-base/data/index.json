@@ -1,5 +1,27 @@
 [
   {
+    "title": "Threads｜500 AI Agents Projects：案例索引、實作與授權查核",
+    "date": "2026-11-27",
+    "source": "Threads",
+    "author": "aiposthub",
+    "type": "article",
+    "topics": [
+      "AI Agent",
+      "GitHub"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.threads.com/share/BAP7gtBwZu",
+      "https://www.threads.com/@aiposthub/post/DgPESGyARkr"
+    ],
+    "excerpt": "500 AI Agents Projects 主要是跨框架、跨產業的外部案例索引，另有少量倉庫內的代理範例；500 多個案例不等於 500 個已驗證能直接執行的程式。",
+    "slug": "2026-11-27-threads-aiposthub-500-ai-agent-projects",
+    "html": "articles/2026-11-27-threads-aiposthub-500-ai-agent-projects.html",
+    "markdown": "articles/2026/11/2026-11-27-threads-aiposthub-500-ai-agent-projects.md"
+  },
+  {
     "title": "Cloud Pass 無限騎行：Three.js 魚眼、視差與粒子天空三項 Agent 技能",
     "date": "2026-11-27",
     "source": "Threads / Meng To",
