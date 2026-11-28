@@ -1,5 +1,26 @@
 [
   {
+    "title": "Instagram｜Python 車輛追蹤與速度估測：影片展示與查核",
+    "date": "2026-11-28",
+    "source": "Instagram",
+    "author": "mohcinale",
+    "type": "social-video",
+    "topics": [
+      "Python",
+      "電腦視覺"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/DgPM1kqDFqj/"
+    ],
+    "excerpt": "@mohcinale 展示以 Python 處理預錄公路影片，追蹤車輛並估測速度；畫面中的數字是否準確尚未驗證。 ![原影片頁面封面：道路車輛方框及速度標籤](../assets/source-images/instagram-mohcinale-DgPM1kqDFqj-cover.jpg \"Instagram @mohcinale 原影片頁面封面\") 圖片是原影片頁面封面，不代表已檢視完整影片；著作權屬原權利人，公開轉載授權未確認。封面內看不到可辨識的人臉或車牌。",
+    "slug": "2026-11-28-instagram-mohcinale-vehicle-speed-estimation",
+    "html": "articles/2026-11-28-instagram-mohcinale-vehicle-speed-estimation.html",
+    "markdown": "articles/2026/11/2026-11-28-instagram-mohcinale-vehicle-speed-estimation.md"
+  },
+  {
     "title": "Instagram｜iPhone 照片備份硬碟與分類：產品名稱待確認",
     "date": "2026-11-28",
     "source": "Instagram",
