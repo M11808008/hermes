@@ -1,5 +1,28 @@
 [
   {
+    "title": "Instagram｜ARGOS ATLAS 全球地圖：攝影機、航班、船舶與 GPS 干擾",
+    "date": "2026-11-28",
+    "source": "Instagram",
+    "author": "theroguecoder",
+    "type": "article",
+    "topics": [
+      "地圖",
+      "OSINT",
+      "生活資料"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.instagram.com/reel/Dfei9AwD5lE/",
+      "https://argosatlas.com/map/"
+    ],
+    "excerpt": "@theroguecoder 分享 ARGOS ATLAS 全球地圖；官網列出公開攝影機、航班、船舶、衝突及 GPS 干擾等資訊，但攝影機總數不等於直播影片數，數據與即時性均未經本次獨立驗證。 ![自行繪製的全球地圖資訊示意圖：攝影機、航班、船舶和 GPS 干擾](../assets/source-images/argos-atlas-map-summary.svg \"自行繪製的資訊示意圖，非產品畫面\")",
+    "slug": "2026-11-28-instagram-theroguecoder-argos-atlas",
+    "html": "articles/2026-11-28-instagram-theroguecoder-argos-atlas.html",
+    "markdown": "articles/2026/11/2026-11-28-instagram-theroguecoder-argos-atlas.md"
+  },
+  {
     "title": "Threads｜Muse 購物 $25 回饋：Amazon 禮品卡個案與官方條款",
     "date": "2026-11-28",
     "source": "Threads",
