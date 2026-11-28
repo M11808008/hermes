@@ -1,5 +1,28 @@
 [
   {
+    "title": "Facebook｜Gemini API CLI：讓既有 Agent 使用多模態 API，費用與 Skill 查核",
+    "date": "2026-11-28",
+    "source": "Facebook",
+    "author": "一人公司研究所",
+    "type": "article",
+    "topics": [
+      "Gemini",
+      "API",
+      "Agent"
+    ],
+    "use": [],
+    "importance": "medium",
+    "status": "archived",
+    "links": [
+      "https://www.facebook.com/share/1FMKKqpZEe/?mibextid=wwXIfr",
+      "https://www.facebook.com/photo.php?fbid=122127386031270258"
+    ],
+    "excerpt": "一人公司研究所分享 Gemini API CLI；官方文件支持其 API 與 dry-run 描述，但現行版本已有內嵌 Skill，不同模型與介面費率、額度不能一概而論。",
+    "slug": "2026-11-28-facebook-one-person-gemini-api-cli",
+    "html": "articles/2026-11-28-facebook-one-person-gemini-api-cli.html",
+    "markdown": "articles/2026/11/2026-11-28-facebook-one-person-gemini-api-cli.md"
+  },
+  {
     "title": "Instagram｜Python 車輛追蹤與速度估測：影片展示與查核",
     "date": "2026-11-28",
     "source": "Instagram",
